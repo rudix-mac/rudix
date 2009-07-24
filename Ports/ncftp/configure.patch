@@ -1,0 +1,11 @@
+--- configure.orig	2008-11-06 00:04:51.000000000 -0200
++++ configure	2008-11-06 00:05:00.000000000 -0200
+@@ -2506,7 +2506,7 @@
+ 	ac_cv_macosx_cflags=no
+ 	ac_cv_macosx_ldflags=no
+ 	if test "${use_macosx_universal}" != no ; then
+-		macosx_sdk_path="/Developer/SDKs/MacOSX10.4u.sdk"
++		macosx_sdk_path="/Developer/SDKs/MacOSX10.5.sdk"
+ 		macosx_arch_flags="-arch i386 -arch ppc"
+ 		case "$CFLAGS" in
+ 			*"-isysroot"*"-arch"*|*"-arch"*"-isysroot"*)

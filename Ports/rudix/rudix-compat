@@ -1,0 +1,203 @@
+#!/usr/bin/perl
+#
+# Rudix Package Manager
+# Copyright (c) 2005-2008 Ruda Moura <ruda@rudix.org>
+#
+
+use warnings;
+use strict;
+use File::Basename;
+use Getopt::Std;
+use Foundation;
+use Scalar::Util qw(blessed);
+
+my $Receipts = "/Library/Receipts";
+my $LsBom = "lsbom -pf -f -l";
+my $ProgName = basename $0;
+my $Version = '1.8';
+
+sub version {
+	print "Rudix package manager version $Version\n";
+	print "Copyright (c) 2005-2008 Ruda Moura <ruda\@rudix.org>\n";
+}
+
+sub usage() {
+	print <<EOF;
+Usage: $ProgName [-h|-l|-I <package.pkg>|-L <package.pkg>|-i <package.pkg>|-r <package.pkg>|-R|-S <pattern>|-v]
+List all installed packages unless options are given, like:
+  -h	This help message
+  -l	List all installed packages with version and description
+  -I	Print package information
+  -L	List package content
+  -i	Install a package
+  -r	Remove a package
+  -R	Remove *all* Rudix packages installed
+  -S	Search for <pattern> in all packages and print if matched
+  -v	Print version
+EOF
+	exit 0;
+}
+
+sub root_required() {
+	$< == 0 or die "$ProgName: this operation requires root privileges\n";
+}
+
+sub is_rudix_package {
+	my $pkg = shift;
+	my $info_plist = "$Receipts/$pkg/Contents/Info.plist";
+	my $info = NSDictionary->dictionaryWithContentsOfFile_($info_plist);
+	my $id = $info->objectForKey_("CFBundleIdentifier");
+	# vendor is org.rudix
+	return (blessed $id and $id->UTF8String() =~ /^org\.rudix/);
+}
+
+sub validate_package {
+	my $pkg = shift;
+	my $archive = "$Receipts/$pkg/Contents/Archive.bom";
+	my $info_plist = "$Receipts/$pkg/Contents/Info.plist";;
+	my $desc_plist = "$Receipts/$pkg/Contents/Resources/en.lproj/Description.plist";
+	-d "$Receipts/$pkg" or die "$ProgName: package '$pkg' not found or name mismatched.\n";
+	-f $archive or die "$ProgName: could not find BOM archive for package '$pkg'.\n";
+	-f $info_plist or die "$ProgName: could not find meta-information for package '$pkg'";
+}
+
+sub get_packages() {
+	opendir(PKGS, "$Receipts");
+	my @pkgs = grep /\.pkg$/ , readdir PKGS;
+	closedir PKGS;
+	# Apple has decided BSD.pkg is just an empty file on Leopard, great.
+	@pkgs = grep { -d "$Receipts/$_" } @pkgs;
+	# Filter by Rudix packages
+	@pkgs = grep { is_rudix_package $_ } @pkgs;
+	return @pkgs;
+}
+
+# http://www.macdevcenter.com/pub/a/mac/2005/07/29/plist.html
+sub get_package_info {
+	my $pkg = shift;
+	validate_package $pkg;
+	my $info_plist = "$Receipts/$pkg/Contents/Info.plist";
+	my $info_dic = NSDictionary->dictionaryWithContentsOfFile_($info_plist);
+	my $version = $info_dic->objectForKey_("CFBundleShortVersionString");
+	my $desc_plist = "$Receipts/$pkg/Contents/Resources/en.lproj/Description.plist";
+	if (!-f $desc_plist) {
+	  $desc_plist = "$Receipts/$pkg/Contents/Resources/English.lproj/Description.plist"
+	}
+	my $desc_dic = NSDictionary->dictionaryWithContentsOfFile_($desc_plist);
+	my $title = $desc_dic->objectForKey_("IFPkgDescriptionTitle");
+	my $desc = $desc_dic->objectForKey_("IFPkgDescriptionDescription");
+	return $version->UTF8String(), $title->UTF8String(), $desc->UTF8String();
+}
+
+sub get_package_content {
+	my $pkg = shift;
+	validate_package $pkg;
+	my @content = ();
+	my $archive = "$Receipts/$pkg/Contents/Archive.bom";
+	open(CONTENT, "$LsBom \"$archive\"|");
+	while (<CONTENT>) {
+		chomp;
+		s/^\.//;
+		push @content, $_;
+	}
+	close CONTENT;
+	return @content;
+}
+
+sub print_package_info {
+	my $pkg = shift;
+	(my $name = $pkg) =~ s/\.pkg//;
+	# (my $versionrev, my $description) = get_package_info $pkg;
+	(my $version, my $title, my $desc) = get_package_info $pkg;
+	print "$title version $version\n";
+	print "\t$desc\n" if $desc;
+}
+
+sub list_all_packages() {
+	foreach my $pkg (get_packages) {
+		print "$pkg\n";
+	}
+}
+
+sub list_all_packages_info() {
+	foreach my $pkg (get_packages) {
+		print_package_info $pkg;
+	}
+}
+
+sub list_package_files {
+	my $pkg = shift;
+	my @content = get_package_content $pkg;
+	foreach my $file (@content) {
+		print "$file\n";
+	}
+}
+
+sub install_package {
+	my $pkg = shift;
+	root_required;
+	system "installer -pkg $pkg -target /";
+}
+
+sub remove_package {
+	my $pkg = shift;
+	my @content = get_package_content $pkg;
+	my $cnt = 0;
+	root_required;
+	foreach my $file (@content) {
+		$cnt += unlink $file;
+	}
+	#print "Removed $cnt file(s)\n";
+	system "rm -rf \"$Receipts/$pkg\"";
+}
+
+sub remove_all_packages() {
+	root_required;
+	print "Using this option will remove *all* Rudix's packages!\n";
+	print "Are you sure you want to proceed? (answer 'yes' or 'y' to confirm)\n";
+	chop(my $answer = <STDIN>);
+	if ($answer ne "yes" and $answer ne "y") { 
+		print "Good!\n";
+		return;
+	}
+	print "Removing packages...\n";
+	foreach my $pkg (get_packages) {
+		print "$pkg\n";
+		remove_package $pkg;
+	}
+	print "Cry a little tear because Rudix was removed\n";
+}
+
+sub search_in_packages {
+	my $pattern = shift;
+	foreach my $pkg (get_packages) {
+		my $archive = "$Receipts/$pkg/Contents/Archive.bom";
+		open(CONTENT, "$LsBom \"$archive\"|");
+		while (<CONTENT>) {
+			s/^\.//;
+			print "$pkg: $_" if /$pattern/;
+	 	}
+		close CONTENT;
+	}
+}
+
+sub append_suffix {
+	my $pkg = shift;
+	return $pkg =~ /\.pkg$/ ? $pkg : "$pkg.pkg";
+}
+
+if ($#ARGV == -1) {
+	list_all_packages;
+	exit 0;
+}
+my %options;
+getopts("hI:lL:i:r:RS:vZ", \%options);
+usage if not %options or $options{"h"};
+version if $options{"v"};
+print_package_info append_suffix $options{"I"} if $options{"I"};
+list_all_packages_info if $options{"l"};
+list_package_files append_suffix $options{"L"} if $options{"L"};
+install_package $options{"i"} if $options{"i"};
+remove_package append_suffix $options{"r"} if $options{"r"};
+remove_all_packages if $options{"R"};
+search_in_packages $options{"S"} if $options{"S"};

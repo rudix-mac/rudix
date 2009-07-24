@@ -1,0 +1,22 @@
+In file included from /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:29,
+                 from /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/DriverServices.h:32,
+                 from /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:125,
+                 from /System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:21,
+                 from /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h:20,
+                 from audio_carbon.c:28:
+/usr/lib/gcc/i686-apple-darwin8/4.0.1/include/xmmintrin.h:35:3: error: #error "SSE instruction set not enabled"
+In file included from /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/DriverServices.h:32,
+                 from /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:125,
+                 from /System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:21,
+                 from /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h:20,
+                 from audio_carbon.c:28:
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:254: error: parse error before '__m128'
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:256: error: parse error before 'sd'
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:258: error: parse error before '}' token
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:261: error: array type has incomplete element type
+audio_carbon.c: In function 'queue':
+audio_carbon.c:189: warning: pointer targets in passing argument 2 of 'init_header' differ in signedness
+make[3]: *** [audio_carbon.o] Error 1
+make[2]: *** [all-recursive] Error 1
+make[1]: *** [all] Error 2
+make: *** [build] Error 2

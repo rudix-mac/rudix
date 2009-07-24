@@ -1,0 +1,4 @@
+# dict.conf
+
+server	dict.org
+#pager	less

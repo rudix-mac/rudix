@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ ! -f /usr/local/etc/lighttpd/lighttpd.conf ] && \
+cp -f /usr/local/etc/lighttpd/lighttpd.conf.default /usr/local/etc/lighttpd/lighttpd.conf
+
+exit 0

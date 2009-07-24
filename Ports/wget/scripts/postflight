@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ ! -f /usr/local/etc/wgetrc ] && cp -f /usr/local/etc/wgetrc.default /usr/local/etc/wgetrc
+
+exit 0

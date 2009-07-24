@@ -1,0 +1,190 @@
+diff -Naur otp_src_R12B-5/erts/emulator/beam/erl_gc.c otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_gc.c
+--- otp_src_R12B-5/erts/emulator/beam/erl_gc.c	2008-11-04 11:51:44.000000000 +0100
++++ otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_gc.c	2009-01-14 10:03:47.000000000 +0100
+@@ -341,7 +341,6 @@
+ {
+     Uint reclaimed_now = 0;
+     int done = 0;
+-    Uint saved_status = p->status;
+     Uint ms1, s1, us1;
+ 
+     if (IS_TRACED_FL(p, F_TRACE_GC)) {
+@@ -349,6 +348,7 @@
+     }
+ 
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
++    p->gcstatus = p->status;
+     p->status = P_GARBING;
+     if (erts_system_monitor_long_gc != 0) {
+ 	get_now(&ms1, &s1, &us1);
+@@ -384,7 +384,7 @@
+     ErtsGcQuickSanityCheck(p);
+ 
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
+-    p->status = saved_status;
++    p->status = p->gcstatus;
+     erts_smp_proc_unlock(p, ERTS_PROC_LOCK_STATUS);
+     if (IS_TRACED_FL(p, F_TRACE_GC)) {
+         trace_gc(p, am_gc_end);
+@@ -449,7 +449,6 @@
+ void
+ erts_garbage_collect_hibernate(Process* p)
+ {
+-    Uint saved_status = p->status;
+     Uint heap_size;
+     Eterm* heap;
+     Eterm* htop;
+@@ -466,6 +465,7 @@
+      * Preliminaries.
+      */
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
++    p->gcstatus = p->status;
+     p->status = P_GARBING;
+     erts_smp_proc_unlock(p, ERTS_PROC_LOCK_STATUS);
+     erts_smp_locked_activity_begin(ERTS_ACTIVITY_GC);
+@@ -580,7 +580,7 @@
+     ErtsGcQuickSanityCheck(p);
+ 
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
+-    p->status = saved_status;
++    p->status = p->gcstatus;
+     erts_smp_proc_unlock(p, ERTS_PROC_LOCK_STATUS);
+     erts_smp_locked_activity_end(ERTS_ACTIVITY_GC);
+ }
+@@ -589,7 +589,6 @@
+ void
+ erts_garbage_collect_literals(Process* p, Eterm* literals, Uint lit_size)
+ {
+-    Uint saved_status = p->status;
+     Uint byte_lit_size = sizeof(Eterm)*lit_size;
+     Uint old_heap_size;
+     Eterm* temp_lit;
+@@ -605,6 +604,7 @@
+      * Set GC state.
+      */
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
++    p->gcstatus = p->status;
+     p->status = P_GARBING;
+     erts_smp_proc_unlock(p, ERTS_PROC_LOCK_STATUS);
+     erts_smp_locked_activity_begin(ERTS_ACTIVITY_GC);
+@@ -708,7 +708,7 @@
+      * Restore status.
+      */
+     erts_smp_proc_lock(p, ERTS_PROC_LOCK_STATUS);
+-    p->status = saved_status;
++    p->status = p->gcstatus;
+     erts_smp_proc_unlock(p, ERTS_PROC_LOCK_STATUS);
+     erts_smp_locked_activity_end(ERTS_ACTIVITY_GC);
+ }
+diff -Naur otp_src_R12B-5/erts/emulator/beam/erl_message.c otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_message.c
+--- otp_src_R12B-5/erts/emulator/beam/erl_message.c	2008-09-01 14:51:20.000000000 +0200
++++ otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_message.c	2009-01-14 10:03:47.000000000 +0100
+@@ -295,10 +295,27 @@
+ 
+     ACTIVATE(receiver);
+ 
+-    if (receiver->status == P_WAITING) {
+-	add_to_schedule_q(receiver);
+-    } else if (receiver->status == P_SUSPENDED) {
++    switch (receiver->status) {
++    case P_GARBING:
++	switch (receiver->gcstatus) {
++	case P_SUSPENDED:
++	    goto suspended;
++	case P_WAITING:
++	    goto waiting;
++	default:
++	    break;
++	}
++	break;
++    case P_SUSPENDED:
++    suspended:
+ 	receiver->rstatus = P_RUNABLE;
++	break;
++    case P_WAITING:
++    waiting:
++	add_to_schedule_q(receiver);
++	break;
++    default:
++	break;
+     }
+ 
+     if (IS_TRACED_FL(receiver, F_TRACE_RECEIVE)) {
+diff -Naur otp_src_R12B-5/erts/emulator/beam/erl_process.c otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_process.c
+--- otp_src_R12B-5/erts/emulator/beam/erl_process.c	2008-11-04 11:51:10.000000000 +0100
++++ otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_process.c	2009-01-14 10:03:47.000000000 +0100
+@@ -473,21 +473,33 @@
+ static ERTS_INLINE void
+ resume_process(Process *p)
+ {
++    Uint32 *statusp;
+     ERTS_SMP_LC_ASSERT(ERTS_PROC_LOCK_STATUS & erts_proc_lc_my_proc_locks(p));
+-    /* We may get called from trace([suspend], false) */
+-    if (p->status != P_SUSPENDED)
++    switch (p->status) {
++    case P_SUSPENDED:
++	statusp = &p->status;
++	break;
++    case P_GARBING:
++	if (p->gcstatus == P_SUSPENDED) {
++	    statusp = &p->gcstatus;
++	    break;
++	}
++	/* Fall through */
++    default:
+ 	return;
++    }
++
+     ASSERT(p->rcount > 0);
+ 
+     if (--p->rcount > 0)  /* multiple suspend i.e trace and busy port */
+ 	return;
+     switch(p->rstatus) {
+     case P_RUNABLE:
+-	p->status = P_WAITING;  /* make add_to_schedule_q work */
++	*statusp = P_WAITING;  /* make add_to_schedule_q work */
+ 	add_to_schedule_q(p);
+ 	break;
+     case P_WAITING:
+-	p->status = P_WAITING;
++	*statusp = P_WAITING;
+ 	break;
+     default:
+ 	erl_exit(1, "bad state in resume_process()\n");
+@@ -1548,8 +1560,16 @@
+     else
+ 	sq->last->next = p;
+     sq->last = p;
+-    if (p->status != P_EXITING) {
++
++    switch (p->status) {
++    case P_EXITING:
++	break;
++    case P_GARBING:
++	p->gcstatus = P_RUNABLE;
++	break;
++    default:
+ 	p->status = P_RUNABLE;
++	break;
+     }
+ 
+     runq_len++;
+@@ -2925,6 +2945,7 @@
+     p->max_gen_gcs = 0;
+     p->min_heap_size = 0;
+     p->status = P_RUNABLE;
++    p->gcstatus = P_RUNABLE;
+     p->rstatus = P_RUNABLE;
+     p->rcount = 0;
+     p->id = ERTS_INVALID_PID;
+diff -Naur otp_src_R12B-5/erts/emulator/beam/erl_process.h otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_process.h
+--- otp_src_R12B-5/erts/emulator/beam/erl_process.h	2008-11-04 11:51:11.000000000 +0100
++++ otp_src_R12B-5_OTP-7738/erts/emulator/beam/erl_process.h	2009-01-14 10:03:47.000000000 +0100
+@@ -207,6 +207,7 @@
+ 				 * Only valid for the current process.
+ 				 */
+     Uint32 status;		/* process STATE */
++    Uint32 gcstatus;		/* process gc STATE */
+     Uint32 rstatus;		/* process resume STATE */
+     Uint32 rcount;		/* suspend count */
+     Eterm id;			/* The pid of this process */

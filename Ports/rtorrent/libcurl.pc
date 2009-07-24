@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libcurl
+Description: Get files from FTP, Gopher, HTTP or HTTPS servers
+Version: 7.13.1
+Libs: -L${libdir} -lcurl
+Cflags: -I${includedir}/curl

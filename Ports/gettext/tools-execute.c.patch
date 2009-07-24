@@ -1,0 +1,14 @@
+--- execute.c.orig	2008-11-13 21:48:22.000000000 -0200
++++ execute.c	2008-11-13 21:48:36.000000000 -0200
+@@ -58,6 +58,11 @@
+ extern char **environ;
+ #endif
+ 
++#ifdef __APPLE__
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#endif
++
+ #ifndef STDIN_FILENO
+ # define STDIN_FILENO 0
+ #endif

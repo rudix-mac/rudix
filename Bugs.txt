@@ -1,0 +1,5 @@
+KNOWN BUGS IN THE BUILD SYSTEM
+
+Prior to Rudix 2009 the variable DESCRIPTION in Makefiles should conform to
+valid XML/RTF characters and it is recommended to not include
+anything like & (ampersand) nor non-ASCII.

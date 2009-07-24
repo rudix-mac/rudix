@@ -1,0 +1,27 @@
+--- configure.orig	2008-06-08 10:52:27.000000000 -0300
++++ configure	2008-06-08 10:53:09.000000000 -0300
+@@ -17590,20 +17590,20 @@
+     arch="fat-${target_os}"
+ 
+     cat >>confdefs.h <<_ACEOF
+-#define RUBY_THIN_ARCHLIB "${RUBY_LIB_PATH}/" __ARCHITECTURE__ "-${target_os}"
++#define RUBY_THIN_ARCHLIB "${RUBY_LIB_PATH}/" "-${target_os}"
+ _ACEOF
+ 
+ 
+     cat >>confdefs.h <<_ACEOF
+-#define RUBY_SITE_THIN_ARCHLIB "${RUBY_SITE_LIB_PATH}/" __ARCHITECTURE__ "-${target_os}"
++#define RUBY_SITE_THIN_ARCHLIB "${RUBY_SITE_LIB_PATH}/" "-${target_os}"
+ _ACEOF
+ 
+     cat >>confdefs.h <<_ACEOF
+-#define RUBY_VENDOR_THIN_ARCHLIB "${RUBY_VENDOR_LIB_PATH}/" __ARCHITECTURE__ "-${target_os}"
++#define RUBY_VENDOR_THIN_ARCHLIB "${RUBY_VENDOR_LIB_PATH}/" "-${target_os}"
+ _ACEOF
+ 
+     cat >>confdefs.h <<_ACEOF
+-#define RUBY_PLATFORM __ARCHITECTURE__ "-${target_os}"
++#define RUBY_PLATFORM "-${target_os}"
+ _ACEOF
+ 
+ else

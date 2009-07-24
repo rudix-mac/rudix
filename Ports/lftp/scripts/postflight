@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ ! -f /usr/local/etc/lftp.conf ] && cp -f /usr/local/etc/lftp.conf.default /usr/local/etc/lftp.conf
+
+exit 0

@@ -1,0 +1,3 @@
+Mpeg audio 1/2 layer 1, 2 and 3 player
+
+Mpg123 reads one or more files (or standard input if "-" is specified) or URLs and plays them on the audio device (default) or outputs them to stdout.  The file or URL is assumed to be an MPEG-1/2 audio bit stream.

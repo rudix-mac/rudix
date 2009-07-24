@@ -1,0 +1,177 @@
+#!/usr/bin/perl
+#
+# Rudix Package Manager
+# Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
+#
+
+use warnings;
+use strict;
+use File::Basename;
+use Getopt::Std;
+
+my $ProgName = basename $0;
+my $Version = '@VERSION@';
+
+sub version {
+	print "Rudix package manager version $Version\n";
+	print "Copyright (c) 2005-2009 Ruda Moura <ruda\@rudix.org>\n";
+}
+
+sub usage() {
+	print <<EOF;
+Usage: $ProgName [-h|-v|-l|-R] [-I <package.pkg>|-L <packageid>|-i <packageid>|-r <packageid>|-S <path>]
+List all installed packages unless options are given, like:
+  -h	This help message
+  -v	Print version
+  -l	List all installed packages with version and description
+  -I	Print package information
+  -L	List package content
+  -i	Install a package
+  -r	Remove a package
+  -R	Remove *all* Rudix packages installed
+  -S	Search for <patch> in all packages and print if matched
+EOF
+	exit 0;
+}
+
+sub root_required() {
+	$< == 0 or die "$ProgName: this operation requires root privileges\n";
+}
+
+sub get_packages() {
+	my @pkgs;
+	open(PKGS, "pkgutil --pkgs=org.rudix.pkg|");
+	while (<PKGS>) {
+		chop;
+		push @pkgs, $_;
+	}
+	close(PKGS);
+	return @pkgs;
+}
+
+sub get_package_info {
+	my $pkg = shift;
+	my $version = "None";
+	my $install_date = "None";
+
+	open(INFO, "pkgutil -v --pkg-info $pkg|");
+	while (<INFO>) {
+		if ($_ =~ /version: (.*)$/) {
+			$version = $1;
+		}
+		if ($_ =~ /install-time: (.*)$/) {
+			$install_date = $1;
+		}
+	}
+	close INFO;
+	
+	return ($version, $install_date);
+}
+
+sub get_package_content {
+	my $pkg = shift;
+	my @content = ();
+	open(CONTENT, "pkgutil --files $pkg --only-files|");
+	while (<CONTENT>) {
+		chomp;
+		push @content, "/" . $_;
+	}
+	close CONTENT;
+	return @content;
+}
+
+sub print_package_info {
+	my $pkg = shift;
+	(my $name = $pkg) =~ s/\.pkg//;
+	(my $version, my $install_date) = get_package_info $pkg;
+	if ($install_date ne "None") {
+		print "$pkg version $version (install: $install_date)\n";
+	} else {
+		print "No receipt for '$pkg' found at '/'.\n"; # pretend we are pkgutil
+	}
+}
+
+sub list_all_packages() {
+	foreach my $pkg (get_packages) {
+		print "$pkg\n";
+	}
+}
+
+sub list_all_packages_info() {
+	foreach my $pkg (get_packages) {
+		print_package_info $pkg;
+	}
+}
+
+sub list_package_files {
+	my $pkg = shift;
+	my @content = get_package_content $pkg;
+	foreach my $file (@content) {
+		print "$file\n";
+	}
+}
+
+sub install_package {
+	my $pkg = shift;
+	root_required;
+	system "installer -pkg $pkg -target /";
+}
+
+sub remove_package {
+	my $pkg = shift;
+	root_required;
+	system "pkgutil --unlink $pkg -f 2>/dev/null";
+	system "pkgutil --forget $pkg";
+}
+
+sub remove_all_packages() {
+	root_required;
+	print "Using this option will remove *all* Rudix's packages!\n";
+	print "Are you sure you want to proceed? (answer 'yes' or 'y' to confirm)\n";
+	chop(my $answer = <STDIN>);
+	if ($answer ne "yes" and $answer ne "y") { 
+		print "Good!\n";
+		return;
+	}
+	print "Removing packages...\n";
+	foreach my $pkg (get_packages) {
+		print "$pkg\n";
+		remove_package $pkg;
+	}
+	print "Cry a little tear because Rudix was removed\n";
+}
+
+sub search_in_packages {
+	my $path = shift;
+	my $pkg;
+	
+	open(INFO, "pkgutil --file-info $path|");
+	while (<INFO>) {
+		if (/pkgid: (.*)$/) {
+			$pkg = $1;
+			print "$pkg\n";
+		}
+	}
+	close INFO;
+}
+
+sub normalize {
+	my $pkg = shift;
+	return $pkg =~ /^org.rudix.pkg./ ? $pkg : "org.rudix.pkg.$pkg";
+}
+
+if ($#ARGV == -1) {
+	list_all_packages;
+	exit 0;
+}
+my %options;
+getopts("hI:lL:i:r:RS:v", \%options) or usage;
+usage if $options{"h"};
+version if $options{"v"};
+print_package_info normalize $options{"I"} if $options{"I"};
+list_all_packages_info if $options{"l"};
+list_package_files normalize $options{"L"} if $options{"L"};
+install_package $options{"i"} if $options{"i"};
+remove_package normalize $options{"r"} if $options{"r"};
+remove_all_packages if $options{"R"};
+search_in_packages $options{"S"} if $options{"S"};

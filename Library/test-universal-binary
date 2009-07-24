@@ -1,0 +1,30 @@
+#!/usr/bin/expect -f
+# -*- Mode: TCL -*-
+
+set status 0
+
+foreach lib [glob $argv ] {
+	spawn -noecho lipo -i $lib
+	expect {
+		-re "Architectures in the fat file:.*are: i386 ppc" {
+			puts "\tPASS"
+		}
+		-re "input file .* is not a fat file" {
+			puts "\tFAIL"
+			incr status
+		}
+		-re "Non-fat file: .* is architecture:" {
+			puts "\tFAIL"
+			incr status
+		}
+		"lipo: can't figure out the architecture type of:" {
+			puts "\tUNSUPPORTED"
+		}
+		"lipo: Can't map input file:" {
+			puts "\tUNSUPPORTED"
+                }
+	}
+	close
+}
+
+exit $status

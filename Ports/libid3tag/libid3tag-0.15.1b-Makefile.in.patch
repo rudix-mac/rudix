@@ -1,0 +1,13 @@
+--- Makefile.in.orig	2008-03-21 19:27:42.000000000 -0300
++++ Makefile.in	2008-03-21 19:28:16.000000000 -0300
+@@ -300,8 +300,8 @@
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	    echo " $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$f"; \
+-	    $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$f; \
++	    echo " $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $(LDFLAGS) $$p $(DESTDIR)$(libdir)/$$f"; \
++	    $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $(LDFLAGS) $$p $(DESTDIR)$(libdir)/$$f; \
+ 	  else :; fi; \
+ 	done
+ 

@@ -1,0 +1,10 @@
+--- rtsp.c.orig	Sat Feb 17 19:09:54 2007
++++ rtsp.c	Sat Feb 17 19:11:07 2007
+@@ -21,6 +21,7 @@
+ #include "avformat.h"
+ 
+ #include <unistd.h> /* for select() prototype */
++#include <sys/time.h> /* for struct tv */
+ #include "network.h"
+ 
+ #include "rtp_internal.h"

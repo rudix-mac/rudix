@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2008-10-25 18:01:00.000000000 -0200
++++ Makefile.in	2008-10-25 18:01:10.000000000 -0200
+@@ -72,7 +72,7 @@
+ 	rm -f Makefile config.*
+ 	for d in $(SUBDIRS); do (cd $$d; $(MAKE) distclean); done
+ 
+-install: $(TARGET) install-nls
++install: $(TARGET)
+ 	@echo "Creating directories..."
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL) -d $(DESTDIR)$(man1dir)

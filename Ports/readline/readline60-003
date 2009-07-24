@@ -1,0 +1,58 @@
+			   READLINE PATCH REPORT
+			   =====================
+
+Readline-Release: 6.0
+Patch-ID: readline60-003
+
+Bug-Reported-by: Andreas Schwab <schwab@linux-m68k.org>
+Bug-Reference-ID: <m21vrhhx08.fsf@igel.home>
+Bug-Reference-URL: http://lists.gnu.org/archive/html/bug-bash/2009-04/msg00160.html
+
+Bug-Description:
+
+If the prompt length exactly matches the screen width, and the prompt ends
+with invisible characters, readline positions the cursor incorrectly.
+
+Patch:
+
+*** ../readline-6.0/display.c	2009-01-04 14:32:32.000000000 -0500
+--- display.c	2009-04-25 21:42:18.000000000 -0400
+***************
+*** 1895,1898 ****
+--- 1897,1904 ----
+    woff = WRAP_OFFSET (_rl_last_v_pos, wrap_offset);
+    cpos = _rl_last_c_pos;
++ 
++   if (cpos == 0 && cpos == new)
++     return;
++ 
+  #if defined (HANDLE_MULTIBYTE)
+    /* If we have multibyte characters, NEW is indexed by the buffer point in
+***************
+*** 1908,1914 ****
+  	 desired display position. */
+        if ((new > prompt_last_invisible) ||		/* XXX - don't use woff here */
+! 	  (prompt_physical_chars > _rl_screenwidth &&
+  	   _rl_last_v_pos == prompt_last_screen_line &&
+! 	   wrap_offset >= woff &&
+  	   new > (prompt_last_invisible-(_rl_screenwidth*_rl_last_v_pos)-wrap_offset)))
+  	   /* XXX last comparison might need to be >= */
+--- 1914,1920 ----
+  	 desired display position. */
+        if ((new > prompt_last_invisible) ||		/* XXX - don't use woff here */
+! 	  (prompt_physical_chars >= _rl_screenwidth &&
+  	   _rl_last_v_pos == prompt_last_screen_line &&
+! 	   wrap_offset >= woff && dpos >= woff &&
+  	   new > (prompt_last_invisible-(_rl_screenwidth*_rl_last_v_pos)-wrap_offset)))
+  	   /* XXX last comparison might need to be >= */
+*** ../readline-6.0/patchlevel	2008-11-18 11:01:14.000000000 -0500
+--- patchlevel	2009-05-09 12:01:06.000000000 -0400
+***************
+*** 1,3 ****
+  # Do not edit -- exists only for use by patch
+  
+! 2
+--- 1,3 ----
+  # Do not edit -- exists only for use by patch
+  
+! 3

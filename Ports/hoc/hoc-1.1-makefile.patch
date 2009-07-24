@@ -1,0 +1,23 @@
+--- makefile.orig	2008-04-21 08:43:00.000000000 -0300
++++ makefile	2008-04-21 08:44:49.000000000 -0300
+@@ -5,7 +5,7 @@
+ OBJS = hoc.o code.o init.o math.o symbol.o
+ 
+ hoc:	$(OBJS)
+-	$(CC) $(CFLAGS) $(OBJS) -lstdio -lm -o hoc
++	$(CC) $(CFLAGS) $(OBJS) -lm -o hoc
+ 
+ hoc.o code.o init.o symbol.o:	hoc.h
+ 
+@@ -19,8 +19,9 @@
+ 	@touch pr
+ 
+ install:	hoc
+-	cp hoc /usr/bin
+-	strip /usr/bin/hoc
++	install -d $(DESTDIR)/usr/local/bin $(DESTDIR)/usr/local/share/man/man1
++	cp hoc $(DESTDIR)/usr/local/bin
++	cp hoc.1 $(DESTDIR)/usr/local/share/man/man1
+ 
+ clean:
+ 	rm -f $(OBJS) [xy].tab.[ch]  hoc

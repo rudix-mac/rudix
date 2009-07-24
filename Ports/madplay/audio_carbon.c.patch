@@ -1,0 +1,20 @@
+--- audio_carbon.c.orig	2007-10-11 00:45:31.000000000 -0300
++++ audio_carbon.c	2007-10-11 00:45:46.000000000 -0300
+@@ -94,7 +94,7 @@
+ }
+ 
+ static
+-int wait(struct buffer *buffer)
++int my_wait(struct buffer *buffer)
+ {
+   if (MPWaitOnSemaphore(buffer->semaphore, kDurationForever) != noErr) {
+     audio_error = _("MPWaitOnSemaphore() failed");
+@@ -263,7 +263,7 @@
+   /* wait for block to finish playing */
+ 
+   if (buffer->pcm_nsamples == 0) {
+-    if (wait(buffer) == -1)
++    if (my_wait(buffer) == -1)
+       return -1;
+ 
+     buffer->pcm_length = 0;

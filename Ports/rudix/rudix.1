@@ -1,0 +1,53 @@
+.\"- $Id: rudix.1,v 1.2 2009/03/27 01:10:51 ruda Exp $
+.\" Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
+.\"
+.Dd March 26, 2009
+.Dt RUDIX 1
+.Os
+.Sh NAME
+.Nm rudix
+.Nd Rudix package manager command line tool
+.Sh SYNOPSIS
+.Nm
+.Op Fl h | l | R | v
+.Op Fl i Ar package.pkg
+.Op Fl r Ar org.rudix.pkg.name
+.Op Fl I Ar org.rudix.pkg.name
+.Op Fl L Ar org.rudix.pkg.name
+.Op Fl S Ar path
+.Sh DESCRIPTION
+The
+.Nm
+utility can install, remove, print information and search files under Rudix domain. Every package has a unique identification and you can refer to Rudix packages with its full ID (org.rudix.pkg.name) or with its short ID (name).
+.Pp
+Without any options provided
+.Nm
+prints a list of packages installed.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl h
+Print help on screen and exit.
+.It Fl v
+Print version and copyright information.
+.It Fl l
+Print a list of packages with package id, version and install date.
+.It Fl i Ar package.pkg
+Install package. This operation requires root privileges.
+.It Fl r Ar org.rudix.pkg.name
+Remove package. This operation requires root privileges.
+.It Fl R
+Remove all installed packages. This operation requires root privileges.
+.It Fl I Ar org.rudix.pkg.name
+Print package id, version and install date. 
+.It Fl L Ar org.rudix.pkg.name
+List package files.
+.It Fl S Ar path
+Print all packages that contais path.
+.El
+.Sh HISTORY
+The
+.Nm
+command has first incarnation in 2006 to allow removing packages.
+.Sh BUGS
+None reported.

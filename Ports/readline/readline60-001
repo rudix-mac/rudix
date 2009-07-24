@@ -1,0 +1,79 @@
+			   READLINE PATCH REPORT
+			   =====================
+
+Readline-Release: 6.0
+Patch-ID: readline60-001
+
+Bug-Reported-by: Nicolai Lissner <nlissne@linux01.org>
+Bug-Reference-ID: <20090412020510.GA29658@lilith>
+Bug-Reference-URL: http://lists.gnu.org/archive/html/bug-bash/2009-04/msg00104.html
+
+Bug-Description:
+
+If a SIGWINCH arrives while bash is performing redisplay, multi-line prompts
+are displayed incorrectly due to the display code being called recursively.
+
+Patch:
+
+*** ../readline-6.0/readline.h	2009-01-04 14:32:33.000000000 -0500
+--- readline.h	2009-04-13 08:47:00.000000000 -0400
+***************
+*** 815,820 ****
+  #define RL_STATE_MULTIKEY	0x200000	/* reading multiple-key command */
+  #define RL_STATE_VICMDONCE	0x400000	/* entered vi command mode at least once */
+  
+! #define RL_STATE_DONE		0x800000	/* done; accepted line */
+  
+  #define RL_SETSTATE(x)		(rl_readline_state |= (x))
+--- 815,821 ----
+  #define RL_STATE_MULTIKEY	0x200000	/* reading multiple-key command */
+  #define RL_STATE_VICMDONCE	0x400000	/* entered vi command mode at least once */
++ #define RL_STATE_REDISPLAYING	0x800000	/* updating terminal display */
+  
+! #define RL_STATE_DONE		0x1000000	/* done; accepted line */
+  
+  #define RL_SETSTATE(x)		(rl_readline_state |= (x))
+*** ../readline-6.0/display.c	2009-01-04 14:32:32.000000000 -0500
+--- display.c	2009-04-13 08:29:54.000000000 -0400
+***************
+*** 513,516 ****
+--- 513,517 ----
+       data structures. */
+    _rl_block_sigint ();  
++   RL_SETSTATE (RL_STATE_REDISPLAYING);
+  
+    if (!rl_display_prompt)
+***************
+*** 1237,1240 ****
+--- 1238,1242 ----
+    }
+  
++   RL_UNSETSTATE (RL_STATE_REDISPLAYING);
+    _rl_release_sigint ();
+  }
+*** ../readline-6.0/terminal.c	2009-01-04 14:32:34.000000000 -0500
+--- terminal.c	2009-04-13 08:43:00.000000000 -0400
+***************
+*** 356,360 ****
+        if (CUSTOM_REDISPLAY_FUNC ())
+  	rl_forced_update_display ();
+!       else
+  	_rl_redisplay_after_sigwinch ();
+      }
+--- 356,360 ----
+        if (CUSTOM_REDISPLAY_FUNC ())
+  	rl_forced_update_display ();
+!       else if (RL_ISSTATE(RL_STATE_REDISPLAYING) == 0)
+  	_rl_redisplay_after_sigwinch ();
+      }
+*** ../readline-6.0/patchlevel	2008-11-18 11:01:14.000000000 -0500
+--- patchlevel	2009-05-09 12:01:06.000000000 -0400
+***************
+*** 1,3 ****
+  # Do not edit -- exists only for use by patch
+  
+! 0
+--- 1,3 ----
+  # Do not edit -- exists only for use by patch
+  
+! 1

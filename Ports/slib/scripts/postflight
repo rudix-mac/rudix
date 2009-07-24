@@ -1,0 +1,4 @@
+#!/bin/sh
+[ -d /usr/local/share/guile/1.8 ] && \
+    ln -sf /usr/local/lib/slib /usr/local/share/guile/1.8/slib
+exit 0

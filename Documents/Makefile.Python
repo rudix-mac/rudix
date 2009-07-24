@@ -1,0 +1,36 @@
+# $Id: Makefile.Python,v 1.2 2009/07/24 00:55:36 ruda Exp $
+
+include ../../Library/Rules.mk
+
+# http://python.org/
+# Python
+
+NAME=		python-module
+VERSION=	1.2.3
+REVISION=	0
+URL=		http://path/to/download/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+PYTHON=		/usr/bin/python
+SITEPACKAGES=	/Library/Python/2.5/site-packages
+
+prep: retrieve
+	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
+	$(TOUCH) prep
+
+build: prep $(DEPENDS)
+	cd $(BUILDDIR) ; $(PYTHON) setup.py build
+	$(TOUCH) build
+
+install: build
+	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+		--no-compile \
+                --home=$(INSTALLDIR)/usr/local \
+		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+	$(PYTHON) -m compileall -d / $(INSTALLDIR)
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
+	$(TOUCH) install
+
+test: install
+	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*/*.so"
+	$(TOUCH) test

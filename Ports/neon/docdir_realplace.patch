@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2007-03-22 22:47:50.000000000 -0300
++++ Makefile.in	2007-03-22 22:48:04.000000000 -0300
+@@ -21,7 +21,7 @@
+ man1dir = $(mandir)/man1
+ man3dir = $(mandir)/man3
+ datadir = @datadir@
+-docdir = $(datadir)/doc/neon-@NEON_VERSION@
++docdir = $(datadir)/doc/neon
+ includedir = @includedir@
+ neonincludes = $(includedir)/neon
+ pkgconfigdir = $(libdir)/pkgconfig

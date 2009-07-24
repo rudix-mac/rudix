@@ -1,0 +1,11 @@
+--- Makefile.orig	Sat Oct 21 23:46:13 2006
++++ Makefile	Sat Oct 21 23:46:23 2006
+@@ -105,7 +105,7 @@
+ CFLAGS       := -O2 -s
+ ALL_CFLAGS   := $(PKG_CFLAGS) $(CFLAGS)
+ 
+-PKG_LDFLAGS  := -Wl,-warn-common
++PKG_LDFLAGS  := -Wl
+ LDFLAGS      :=
+ ALL_LDFLAGS  := $(PKG_LDFLAGS) $(LDFLAGS)
+ 

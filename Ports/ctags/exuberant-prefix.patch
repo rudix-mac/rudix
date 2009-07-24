@@ -1,0 +1,37 @@
+--- Makefile.in.orig	Sun Jul 27 19:09:58 2003
++++ Makefile.in	Sat Mar 25 01:29:22 2006
+@@ -84,12 +84,12 @@
+ #
+ CTAGS_EXEC	= $(CTAGS_PROG)$(EXEEXT)
+ ETAGS_EXEC	= $(ETAGS_PROG)$(EXEEXT)
+-DEST_CTAGS	= $(bindir)/$(CTAGS_EXEC)
+-DEST_ETAGS	= $(bindir)/$(ETAGS_EXEC)
++DEST_CTAGS	= $(bindir)/exuberant-$(CTAGS_EXEC)
++DEST_ETAGS	= $(bindir)/exuberant-$(ETAGS_EXEC)
+ DEST_READ_LIB	= $(libdir)/$(READ_LIB)
+ DEST_READ_INC	= $(incdir)/$(READ_INC)
+-DEST_CMAN	= $(man1dir)/$(CMAN)
+-DEST_EMAN	= $(man1dir)/$(EMAN)
++DEST_CMAN	= $(man1dir)/exuberant-$(CMAN)
++DEST_EMAN	= $(man1dir)/exuberant-$(EMAN)
+ 
+ #
+ # primary rules
+@@ -142,7 +142,7 @@
+ 
+ $(DEST_ETAGS):
+ 	- if [ -x $(DEST_CTAGS) ]; then \
+-	    cd $(bindir) && $(SLINK) $(CTAGS_EXEC) $(ETAGS_EXEC); \
++	    cd $(bindir) && $(SLINK) exuberant-$(CTAGS_EXEC) exuberant-$(ETAGS_EXEC); \
+ 	fi
+ 
+ #
+@@ -157,7 +157,7 @@
+ 
+ $(DEST_EMAN):
+ 	- if [ -f $(DEST_CMAN) ]; then \
+-	    cd $(man1dir) && $(SLINK) $(CMAN) $(EMAN); \
++	    cd $(man1dir) && $(SLINK) exuberant-$(CMAN) exuberant-$(EMAN); \
+ 	fi
+ 
+ #

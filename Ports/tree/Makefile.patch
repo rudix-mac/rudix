@@ -1,0 +1,11 @@
+--- Makefile.orig	2009-03-22 19:24:14.000000000 -0300
++++ Makefile	2009-03-22 19:25:58.000000000 -0300
+@@ -45,7 +45,7 @@
+ #CC=cc
+ #CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
+ #LDFLAGS=
+-#XOBJS=strverscmp.o
++XOBJS=strverscmp.o
+ 
+ # Uncomment for HP/UX:
+ #CC=cc

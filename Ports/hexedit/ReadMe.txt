@@ -1,0 +1,3 @@
+View and edit files in hexadecimal or ASCII
+
+Hexedit view and edit files in hexadecimal or in ASCII.  hexedit shows a file both in ASCII and in hexadecimal.  The file can be a device as the file is not whole read.  You can modify the file and search through it.  You have also copy&paste, and save to file functions.  Modifications are shown in bold.

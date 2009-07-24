@@ -1,0 +1,3 @@
+From Kernighan & Pike: High Order Calculator
+
+Hoc interprets a simple language for floating point arithmetic, at about the level of Basic, with C-like syntax and functions. Hoc was written by Kernighan & Pike and published in their 1984 classic UNIX book "The UNIX Programming Environment" (Prentice-Hall, ISBN 0-13-937681-X).

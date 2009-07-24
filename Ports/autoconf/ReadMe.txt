@@ -1,0 +1,3 @@
+Automatically configure source code on many Un*x platforms
+
+Autoconf is an extensible package of m4 macros that produce shell scripts to automatically configure software source code packages. These scripts allegedly can adapt the packages to many kinds of UNIX-like systems without manual user intervention.  Autoconf creates a configuration script for a package from a template file that lists the operating system features that the package can use, in the form of m4 macro calls.

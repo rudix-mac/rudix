@@ -1,0 +1,14 @@
+--- setenv.c.orig	2008-11-13 21:47:13.000000000 -0200
++++ setenv.c	2008-11-13 21:47:28.000000000 -0200
+@@ -43,6 +43,11 @@
+ # endif
+ #endif
+ 
++#ifdef __APPLE__
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#endif
++
+ #if _LIBC
+ /* This lock protects against simultaneous modifications of `environ'.  */
+ # include <bits/libc-lock.h>

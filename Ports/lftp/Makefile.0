@@ -1,0 +1,38 @@
+# $Id: Makefile.0,v 1.1.1.1 2009/03/01 15:03:58 ruda Exp $
+
+# Shell-like command line ftp and sftp client
+
+HOMEPAGE=	http://lftp.yar.ru/
+
+NAME=		lftp
+VERSION=	3.7.6
+REVISION=	0
+URL=		http://ftp.yars.free.net/pub/source/lftp/
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+include ../../Library/Rules.mk
+
+prep: retrieve
+	tar jxvf $(SOURCE)
+	$(TOUCH) prep
+
+build: prep $(DEPENDS)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" $(configure) \
+		--disable-dependency-tracking \
+		--with-openssl ; $(make)
+	$(TOUCH) build
+
+install: build
+	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
+	mv $(INSTALLDIR)/usr/local/etc/lftp.conf $(INSTALLDIR)/usr/local/etc/lftp.conf.default
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FAQ,FEATURES,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(TOUCH) install
+
+test: install
+	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	$(TOUCH) test

@@ -1,0 +1,3 @@
+Cross-platform multimedia library
+
+Simple DirectMedia Layer is a cross-platform multimedia library designed to provide fast access to the graphics framebuffer and audio device. It is used by MPEG playback software, emulators, and many popular games.

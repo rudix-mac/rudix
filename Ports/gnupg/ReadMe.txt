@@ -1,0 +1,3 @@
+GNU privacy guard - a free PGP replacement
+
+GnuPG is a complete and free replacement for PGP. Because it does not use IDEA or RSA it can be used without any restrictions. GnuPG is nearly in compliance with RFC2440 (OpenPGP).

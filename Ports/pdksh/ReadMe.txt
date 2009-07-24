@@ -1,0 +1,4 @@
+The Public Domain Korn Shell
+
+PDKSH is the Public Domain Korn Shell. Its command language is a superset of the sh(1) shell language.
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+cd /usr/local/lib/tomcat/conf || exit 0
+for x in catalina.* *.xml ; do
+    cp -p $x $x.backup
+done
+
+exit 0

@@ -1,0 +1,9 @@
+Analyze C source files and print a call graph
+
+GNU cflow analyzes a collection of C source files and prints a graph, charting control flow within the program.
+
+GNU cflow is able to produce both direct and inverted flowgraphs for C sources. Optionally a cross-reference listing can be generated. Two output formats are implemented: POSIX and GNU (extended).
+
+Input files can optionally be preprocessed before analyzing.
+
+The package also provides Emacs major mode for examining the produced flowcharts in Emacs.

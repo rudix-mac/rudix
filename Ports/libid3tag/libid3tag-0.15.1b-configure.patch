@@ -1,0 +1,72 @@
+--- configure.orig	2008-03-21 19:33:05.000000000 -0300
++++ configure	2008-03-21 19:33:38.000000000 -0300
+@@ -7073,11 +7073,11 @@
+ 	;;
+       *) # Darwin 1.3 on
+       if test -z ${MACOSX_DEPLOYMENT_TARGET} ; then
+-      	allow_undefined_flag='-flat_namespace -undefined suppress'
++      	allow_undefined_flag="$LDFLAGS -flat_namespace -undefined suppress"
+       else
+         case ${MACOSX_DEPLOYMENT_TARGET} in
+           10.[012])
+-            allow_undefined_flag='-flat_namespace -undefined suppress'
++            allow_undefined_flag="$LDFLAGS -flat_namespace -undefined suppress"
+             ;;
+           10.*)
+             allow_undefined_flag='-undefined dynamic_lookup'
+@@ -8949,11 +8949,11 @@
+       ;;
+     *) # Darwin 1.3 on
+       if test -z ${MACOSX_DEPLOYMENT_TARGET} ; then
+-      	allow_undefined_flag='-flat_namespace -undefined suppress'
++      	allow_undefined_flag="$LDFLAGS -flat_namespace -undefined suppress"
+       else
+         case ${MACOSX_DEPLOYMENT_TARGET} in
+           10.[012])
+-            allow_undefined_flag='-flat_namespace -undefined suppress'
++            allow_undefined_flag="$LDFLAGS -flat_namespace -undefined suppress"
+             ;;
+           10.*)
+             allow_undefined_flag='-undefined dynamic_lookup'
+@@ -10027,11 +10027,11 @@
+       ;;
+     *) # Darwin 1.3 on
+       if test -z ${MACOSX_DEPLOYMENT_TARGET} ; then
+-      	allow_undefined_flag_CXX='-flat_namespace -undefined suppress'
++      	allow_undefined_flag_CXX="$LDFLAGS -flat_namespace -undefined suppress"
+       else
+         case ${MACOSX_DEPLOYMENT_TARGET} in
+           10.[012])
+-            allow_undefined_flag_CXX='-flat_namespace -undefined suppress'
++            allow_undefined_flag_CXX="$LDFLAGS -flat_namespace -undefined suppress"
+             ;;
+           10.*)
+             allow_undefined_flag_CXX='-undefined dynamic_lookup'
+@@ -13902,11 +13902,11 @@
+ 	;;
+       *) # Darwin 1.3 on
+       if test -z ${MACOSX_DEPLOYMENT_TARGET} ; then
+-      	allow_undefined_flag_F77='-flat_namespace -undefined suppress'
++      	allow_undefined_flag_F77="$LDFLAGS -flat_namespace -undefined suppress"
+       else
+         case ${MACOSX_DEPLOYMENT_TARGET} in
+           10.[012])
+-            allow_undefined_flag_F77='-flat_namespace -undefined suppress'
++            allow_undefined_flag_F77="$LDFLAGS -flat_namespace -undefined suppress"
+             ;;
+           10.*)
+             allow_undefined_flag_F77='-undefined dynamic_lookup'
+@@ -16247,11 +16247,11 @@
+ 	;;
+       *) # Darwin 1.3 on
+       if test -z ${MACOSX_DEPLOYMENT_TARGET} ; then
+-      	allow_undefined_flag_GCJ='-flat_namespace -undefined suppress'
++      	allow_undefined_flag_GCJ="$LDFLAGS -flat_namespace -undefined suppress"
+       else
+         case ${MACOSX_DEPLOYMENT_TARGET} in
+           10.[012])
+-            allow_undefined_flag_GCJ='-flat_namespace -undefined suppress'
++            allow_undefined_flag_GCJ="$LDFLAGS -flat_namespace -undefined suppress"
+             ;;
+           10.*)
+             allow_undefined_flag_GCJ='-undefined dynamic_lookup'

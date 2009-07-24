@@ -1,0 +1,4 @@
+Command-line WebDAV client
+
+Cadaver is a command-line WebDAV client for Unix. It supports file upload, download, on-screen display, namespace operations (move/copy), collection creation and deletion, and locking operations.
+

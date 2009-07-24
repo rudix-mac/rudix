@@ -1,0 +1,34 @@
+# scheme r5 library
+# http://people.csail.mit.edu/jaffer/SLIB
+# BSD
+
+NAME=		slib
+VERSION=	3b1
+REVISION=	0
+URL=		http://groups.csail.mit.edu/mac/ftpdir/scm/
+SOURCE=		$(NAME)-$(VERSION).zip
+
+include ../../Library/Rules.mk
+
+prep: retrieve
+	unzip $(SOURCE)
+	mv slib $(NAME)-$(VERSION)
+	$(TOUCH) prep
+
+build: prep $(DEPENDS)
+	$(TOUCH) build
+
+install: build
+	install -d $(INSTALLDIR)/usr/local/lib/slib
+	install -m 644 $(BUILDDIR)/{*.scm,*.init,*.xyz,*.txt,grapheps.ps} \
+		$(INSTALLDIR)/usr/local/lib/slib
+	install -d $(INSTALLDIR)/usr/local/share/man/man1
+	install -m 644 $(BUILDDIR)/slib.1 $(INSTALLDIR)/usr/local/share/man/man1
+	install -d $(INSTALLDIR)/usr/local/share/info
+	install -m 644 $(BUILDDIR)/slib.info $(INSTALLDIR)/usr/local/share/man/man1
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{ANNOUNCE,README,FAQ} $(INSTALLDOCDIR)
+	$(TOUCH) install
+
+test: install
+	$(TOUCH) test

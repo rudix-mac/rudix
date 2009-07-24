@@ -1,0 +1,35 @@
+--- lynx.cfg.orig	Sat Oct  1 17:17:21 2005
++++ lynx.cfg	Sat Oct  1 17:24:43 2005
+@@ -92,12 +92,12 @@
+ #
+ # Normally we expect you will connect to a remote site, e.g., the Lynx starting
+ # site:
+-STARTFILE:http://lynx.isc.org/
++#STARTFILE:http://lynx.isc.org/
+ #
+ # As an alternative, you may want to use a local URL.  A good choice for this is
+ # the user's home directory:
+ .ex
+-#STARTFILE:file://localhost/~/
++STARTFILE:file://localhost/~/
+ #
+ # Your choice of STARTFILE should reflect your site's needs, and be a URL that
+ # you can connect to reliably.  Otherwise users will become confused and think
+@@ -393,7 +393,7 @@
+ # Lynx (case insensitive).
+ # Find RFC 1345 at http://www.ics.uci.edu/pub/ietf/uri/rfc1345.txt .
+ #
+-#CHARACTER_SET:iso-8859-1
++CHARACTER_SET:utf-8
+ 
+ .h2 LOCALE_CHARSET
+ # LOCALE_CHARSET overrides CHARACTER_SET if true, using the current locale to
+@@ -1294,7 +1294,7 @@
+ # in the .lynxrc file via an o(ptions) screen setting.  It may also be
+ # toggled via the -accept_all_cookies command line switch.
+ #
+-#ACCEPT_ALL_COOKIES:FALSE
++ACCEPT_ALL_COOKIES:TRUE
+ 
+ 
+ .h2 COOKIE_ACCEPT_DOMAINS

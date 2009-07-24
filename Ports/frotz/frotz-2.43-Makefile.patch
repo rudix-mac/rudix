@@ -1,0 +1,53 @@
+--- Makefile.orig	2008-05-23 21:07:48.000000000 -0300
++++ Makefile	2008-05-23 21:10:23.000000000 -0300
+@@ -16,8 +16,8 @@
+ # Define where you want Frotz installed.  Usually this is /usr/local
+ PREFIX = /usr/local
+ 
+-MAN_PREFIX = $(PREFIX)
+-#MAN_PREFIX = /usr/local/share
++#MAN_PREFIX = $(PREFIX)
++MAN_PREFIX = /usr/local/share
+ 
+ CONFIG_DIR = $(PREFIX)/etc
+ #CONFIG_DIR = /etc
+@@ -171,7 +171,7 @@
+ dumb:		$(NAME)-dumb
+ d$(NAME):	$(NAME)-dumb
+ $(NAME)-dumb:		$(COMMON_TARGET) $(DUMB_TARGET)
+-	$(CC) -o d$(BINNAME)$(EXTENSION) $(COMMON_TARGET) \
++	$(CC) $(LDFLAGS) -o d$(BINNAME)$(EXTENSION) $(COMMON_TARGET) \
+ 		$(DUMB_TARGET) $(LIB)
+ 
+ .SUFFIXES:
+--- Makefile.orig	2008-05-23 21:19:52.000000000 -0300
++++ Makefile	2008-05-23 21:20:21.000000000 -0300
+@@ -163,7 +163,7 @@
+ $(NAME): $(NAME)-curses
+ 
+ $(NAME)-curses:		soundcard.h  $(COMMON_TARGET) $(CURSES_TARGET)
+-	$(CC) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
++	$(CC) $(LDFLAGS) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
+ 		$(SOUND_LIB)
+ 
+ all:	$(NAME) d$(NAME)
+--- Makefile.orig	2008-05-23 21:27:14.000000000 -0300
++++ Makefile	2008-05-23 21:27:53.000000000 -0300
+@@ -213,7 +213,7 @@
+ 	fi
+ 
+ install: $(NAME)
+-	strip $(BINNAME)$(EXTENSION)
++	#strip $(BINNAME)$(EXTENSION)
+ 	install -d $(PREFIX)/bin
+ 	install -d $(MAN_PREFIX)/man/man6
+ 	install -c -m 755 $(BINNAME)$(EXTENSION) $(PREFIX)/bin
+@@ -226,7 +226,7 @@
+ deinstall: uninstall
+ 
+ install_dumb: d$(NAME)
+-	strip d$(BINNAME)$(EXTENSION)
++	#strip d$(BINNAME)$(EXTENSION)
+ 	install -d $(PREFIX)/bin
+ 	install -d $(MAN_PREFIX)/man/man6
+ 	install -c -m 755 d$(BINNAME)$(EXTENSION) $(PREFIX)/bin

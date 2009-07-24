@@ -1,0 +1,20 @@
+--- constants.h.orig	2007-03-12 13:39:34.000000000 -0300
++++ constants.h	2007-03-12 13:43:10.000000000 -0300
+@@ -121,17 +121,6 @@
+ #  define	KEY_BACKSPACE	0402
+ # endif
+ 
+-# if !sun
+-#  define cbreak()	crmode()			/* name change */
+-# endif
+-
+-# if UNIXPC
+-#  define erasechar() (_tty.c_cc[VERASE])		/* equivalent */
+-#  define killchar()  (_tty.c_cc[VKILL])		/* equivalent */
+-# else
+-#  define erasechar() (_tty.sg_erase)			/* equivalent */
+-#  define killchar()  (_tty.sg_kill)			/* equivalent */
+-# endif /* if UNIXPC */
+ #endif	/* if !TERMINFO */
+ 
+ #endif /* CSCOPE_CONSTANTS_H */

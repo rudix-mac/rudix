@@ -1,0 +1,3 @@
+Binary visual display editor, based on vi
+
+Bvi (binary visual) is a display oriented binary editor based on the vi(1) text editor.  It uses commands similar to the commands of vi(1), with some changes due to their different tasks.

@@ -1,0 +1,49 @@
+# $Id: Makefile.0,v 1.1.1.1 2009/03/01 15:03:59 ruda Exp $
+
+# Matt's traceroute - network diagnostic tool
+
+HOMEPAGE=	http://www.bitwizard.nl/mtr/
+
+NAME=		mtr
+VERSION=	0.75
+REVISION=	0
+URL=		ftp://ftp.bitwizard.nl/mtr/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+include ../../Library/Rules.mk
+
+prep: retrieve
+	tar zxvf $(SOURCE)
+	rm -rf $(BUILDDIR)/autom4te.cache $(BUILDDIR)/{.deps,Makefile}
+	$(TOUCH) prep
+
+build: prep
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS_PPC)" $(configure) \
+		--cache-file=$(PORTDIR)/config.cache.ppc \
+		--without-gtk ; make clean ;  $(make)
+	cd $(BUILDDIR) ; mv mtr mtr-ppc ; make clean
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS_INTEL)" $(configure) \
+		--cache-file=$(PORTDIR)/config.cache.i386 \
+		--without-gtk ; $(make)
+	lipo -create \
+		-arch i386 $(BUILDDIR)/mtr -arch ppc $(BUILDDIR)/mtr-ppc \
+		-output $(BUILDDIR)/mtr
+	$(TOUCH) build
+
+install: build
+	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
+	install -d $(INSTALLDOCDIR)
+	install $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FORMATS,NEWS,README,SECURITY,TODO} $(INSTALLDOCDIR)
+	strip $(INSTALLDIR)/usr/local/sbin/*
+	$(TOUCH) install
+
+test: install
+	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
+	$(TOUCH) test
+
+permgroup: contents
+	chown -R root:wheel $(CONTENTS)
+	chmod +s $(CONTENTS)/usr/local/sbin/mtr
+	$(TOUCH) permgroup
