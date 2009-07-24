@@ -32,6 +32,7 @@ List all installed packages unless options are given, like:
   -R	Remove *all* Rudix packages installed (ask to confirm)
   -S	Search for <patch> in all packages and print if matched
   -V	Verify package
+  -K	Verify all installed packages
   -f	Fix (repair) package
 EOF
 	exit 0;
@@ -141,6 +142,7 @@ sub remove_all_packages() {
 		print "$pkg\n";
 		remove_package $pkg;
 	}
+	# remember LinuxConf...
 	print "Cry a little tear because Rudix was removed\n";
 }
 
@@ -163,6 +165,12 @@ sub verify_package {
 	system "pkgutil --verify $pkg";
 }
 
+sub verify_all_packages() {
+	foreach my $pkg (get_packages) {
+		verify_package $pkg;
+	}
+}
+
 sub fix_package {
 	my $pkg = shift;
 	root_required;
@@ -179,7 +187,7 @@ if ($#ARGV == -1) {
 	exit 0;
 }
 my %options;
-getopts("hI:lL:i:r:RS:vV:f:", \%options) or usage;
+getopts("hI:lL:i:r:RS:vV:Kf:", \%options) or usage;
 usage if $options{"h"};
 version if $options{"v"};
 print_package_info normalize $options{"I"} if $options{"I"};
@@ -190,4 +198,5 @@ remove_package normalize $options{"r"} if $options{"r"};
 remove_all_packages if $options{"R"};
 search_in_packages $options{"S"} if $options{"S"};
 verify_package normalize $options{"V"} if $options{"V"};
+verify_all_packages if $options{"K"};
 fix_package normalize $options{"f"} if $options{"f"};

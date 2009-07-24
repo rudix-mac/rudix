@@ -1,7 +1,7 @@
 .\"- $Id: rudix.1,v 1.2 2009/03/27 01:10:51 ruda Exp $
 .\" Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 .\"
-.Dd July 24, 2009
+.Dd July 25, 2009
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -9,7 +9,7 @@
 .Nd Rudix Package Manager
 .Sh SYNOPSIS
 .Nm
-.Op Fl h | l | R | v
+.Op Fl h | l | R | v | K
 .Op Fl i Ar pkg-path
 .Op Fl r Ar package-id
 .Op Fl I Ar package-id
@@ -50,6 +50,8 @@ List package files.
 Print all packages that contais path.
 .It Fl V Ar package-id
 Verify package-id.
+.It Fl K
+Verify all installed packages.
 .It Fl f Ar package-id
 Fix (repair) package-id. This operation requires root privileges.
 .El
