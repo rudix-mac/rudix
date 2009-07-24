@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 #
 # Rudix Package Manager
+#
 # Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 #
 
@@ -19,17 +20,19 @@ sub version {
 
 sub usage() {
 	print <<EOF;
-Usage: $ProgName [-h|-v|-l|-R] [-I <package.pkg>|-L <packageid>|-i <packageid>|-r <packageid>|-S <path>]
+Usage: $ProgName [-h|-v|-l|-R] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>]
 List all installed packages unless options are given, like:
   -h	This help message
   -v	Print version
-  -l	List all installed packages with version and description
+  -l	List all installed packages (with version and description)
   -I	Print package information
   -L	List package content
-  -i	Install a package
-  -r	Remove a package
-  -R	Remove *all* Rudix packages installed
+  -i	Install package
+  -r	Remove package
+  -R	Remove *all* Rudix packages installed (ask to confirm)
   -S	Search for <patch> in all packages and print if matched
+  -V	Verify package
+  -f	Fix (repair) package
 EOF
 	exit 0;
 }
@@ -155,6 +158,17 @@ sub search_in_packages {
 	close INFO;
 }
 
+sub verify_package {
+	my $pkg = shift;
+	system "pkgutil --verify $pkg";
+}
+
+sub fix_package {
+	my $pkg = shift;
+	root_required;
+	system "pkgutil --repair $pkg";
+}
+
 sub normalize {
 	my $pkg = shift;
 	return $pkg =~ /^org.rudix.pkg./ ? $pkg : "org.rudix.pkg.$pkg";
@@ -165,7 +179,7 @@ if ($#ARGV == -1) {
 	exit 0;
 }
 my %options;
-getopts("hI:lL:i:r:RS:v", \%options) or usage;
+getopts("hI:lL:i:r:RS:vV:f:", \%options) or usage;
 usage if $options{"h"};
 version if $options{"v"};
 print_package_info normalize $options{"I"} if $options{"I"};
@@ -175,3 +189,5 @@ install_package $options{"i"} if $options{"i"};
 remove_package normalize $options{"r"} if $options{"r"};
 remove_all_packages if $options{"R"};
 search_in_packages $options{"S"} if $options{"S"};
+verify_package normalize $options{"V"} if $options{"V"};
+fix_package normalize $options{"f"} if $options{"f"};
