@@ -1,14 +1,14 @@
 # $Id: Makefile,v 1.3 2009/03/27 01:26:56 ruda Exp $
 
-HOMEPAGE=	http://rudix.org/
-
-NAME=		rudix
-VERSION=	2.0
-REVISION=	0
-LICENSE=	BSD
-DESCRIPTION=	Rudix package manager command line tool
-
 include ../../Library/Rules.mk
+
+# http://rudix.org/
+# BSD
+
+TITLE=		Rudix Package Manager $(VERSION)
+NAME=		rudix
+VERSION=	2.1
+REVISION=	0
 
 build: rudix.pdf
 	$(TOUCH) build
