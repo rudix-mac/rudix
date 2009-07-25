@@ -1,15 +1,16 @@
 # $Id: Makefile,v 1.2 2009/03/22 21:10:44 ruda Exp $
 
+include ../../Library/Rules.mk
+
 # Java servlet 2.5 and Java server pages 2.1 server
 # http://tomcat.apache.org/
 
+TITLE=		Apache Tomcat $(VERSION)
 NAME=		apache-tomcat
-VERSION=	6.0.18
-REVISION=	2
+VERSION=	6.0.20
+REVISION=	0
 URL=		http://archive.apache.org/dist/tomcat/tomcat-6/v$(VERSION)/bin/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	$(TOUCH) prep
