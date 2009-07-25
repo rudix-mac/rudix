@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Rudix Package Manager $(VERSION)
 NAME=		rudix
-VERSION=	2.1
+VERSION=	2.1.1
 REVISION=	0
 
 build: rudix.pdf

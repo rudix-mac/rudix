@@ -20,11 +20,11 @@ sub version {
 
 sub usage() {
 	print <<EOF;
-Usage: $ProgName [-h|-v|-l|-R] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>]
+Usage: $ProgName [-h|-v|-l|-R|-K] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>]
 List all installed packages unless options are given, like:
   -h	This help message
   -v	Print version
-  -l	List all installed packages (with version and description)
+  -l	List all installed packages (print version and install date)
   -I	Print package information
   -L	List package content
   -i	Install package

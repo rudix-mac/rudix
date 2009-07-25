@@ -20,9 +20,15 @@
 .Sh DESCRIPTION
 The
 .Nm
-utility is a package manager therefore you can install, remove, print information about packages and search files under the Rudix domain. There are options to verify the integrity of packages and to fix (repair) packages.
+utility is a package manager therefore you can install, remove,
+print information about packages and search files under the Rudix
+domain. Also, it is possible to verify the integrity of installed
+packages and to fix (repair) packages.
 .Pp
-Every package has a unique identification (called package-id) and you may refer to Rudix packages using its full package-id or with its alias. For example, org.rudix.pkg.ccache is a package-id and ccache is an alias.
+Every package has a unique identification (called package-id) and
+you may refer to Rudix packages by using its full package-id or
+with its alias. For example, org.rudix.pkg.ccache is a package-id
+and ccache is an alias.
 .Pp
 Without any arguments
 .Nm
@@ -43,7 +49,7 @@ Remove package. This operation requires root privileges.
 .It Fl R
 Remove all installed packages. This operation requires root privileges.
 .It Fl I Ar package-id
-Print package-id version and install date. 
+Print package-id version and install date.
 .It Fl L Ar package-id
 List package files.
 .It Fl S Ar path
