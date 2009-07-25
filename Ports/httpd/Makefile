@@ -1,14 +1,16 @@
 # $Id: Makefile,v 1.2 2009/03/21 14:47:30 ruda Exp $
 
-HOMEPAGE=	http://httpd.apache.org/
+include ../../Library/Rules.mk
 
+# http://httpd.apache.org/
+# Apache
+
+TITLE=		Apache HTTP Server $(VERSION)
 NAME=		httpd
 VERSION=	2.2.11
 REVISION=	1
 URL=		http://www.apache.org/dist/httpd/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -28,14 +30,13 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	cd $(INSTALLDIR)/usr/local/bin ; mv ../sbin/{ab,htdbm,htdigest,htpasswd,logresolve} .
-	cd $(INSTALLDIR)/usr/local/etc/httpd ; \
-	mv httpd.conf httpd.conf.default ; mv magic magic.default ; mv mime.types mime.types.default
+	cd $(INSTALLDIR)/usr/local/etc/httpd ; mv httpd.conf httpd.conf.default ; mv magic magic.default ; mv mime.types mime.types.default
 	rm -f $(INSTALLDIR)/usr/local/var/www/html/index.html
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ABOUT_APACHE,CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/sbin/*
-	strip -x -S  $(INSTALLDIR)/usr/local/libexec/httpd/*.so
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/sbin/*
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/libexec/httpd/*.so
 	$(TOUCH) install
 
 test: install
