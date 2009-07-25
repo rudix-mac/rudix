@@ -1,8 +1,9 @@
 # $Id: Makefile,v 1.4 2009/07/24 00:55:36 ruda Exp $
-# http://ccache.samba.org/
-# GPL
 
 include ../../Library/Rules.mk
+
+# http://ccache.samba.org/
+# GPL
 
 TITLE=		Compiler Cache $(VERSION)
 NAME=		ccache
