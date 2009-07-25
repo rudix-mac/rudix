@@ -21,7 +21,7 @@ install: build
 	install -d $(INSTALLDIR)/usr/local/share/man/man1
 	install -m 644 rudix.1 $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)
-	install -m 644 rudix.pdf $(INSTALLDOCDIR)
+	install -m 644 ReadMe.txt License.txt rudix.pdf $(INSTALLDOCDIR)
 	$(TOUCH) install
 
 test: install
