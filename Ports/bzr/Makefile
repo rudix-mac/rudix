@@ -1,19 +1,18 @@
-# $Id: Makefile,v 1.3 2009/05/04 02:11:31 ruda Exp $
+include ../../Library/Rules.mk
 
 # Distributed version control system
 # http://bazaar-vcs.org/
 # GPL
 
+TITLE=		Bazaar $(VERSION)
 NAME=		bzr
-VERSION=	1.14.1
+VERSION=	1.17
 REVISION=	0
-URL=		https://launchpad.net/bzr/1.14/1.14.1/+download/
+URL=		http://launchpad.net/bzr/1.17/1.17/+download
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
