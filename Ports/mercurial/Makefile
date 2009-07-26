@@ -1,15 +1,14 @@
-# $Id: Makefile,v 1.3 2009/05/04 02:32:17 ruda Exp $
+include ../../Library/Rules.mk
 
 # Fast, lightweight source control management
 # http://www.selenic.com/mercurial/
 
+TITLE=		Mercurial $(VERSION)
 NAME=		mercurial
-VERSION=	1.2.1
+VERSION=	1.3.1
 REVISION=	0
 URL=		http://www.selenic.com/mercurial/release/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
@@ -36,6 +35,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR)/tests ; $(PYTHON) run-tests.py
 	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so"
+	cd $(BUILDDIR)/tests ; $(PYTHON) run-tests.py
 	$(TOUCH) test
