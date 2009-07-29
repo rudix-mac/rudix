@@ -3,9 +3,10 @@
 # HTTP and WebDAV client library, with C interface
 # http://www.webdav.org/neon/
 
+TITLE=		neon $(VERSION)
 NAME=		neon
-VERSION=	0.28.4
-REVISION=	1
+VERSION=	0.28.5
+REVISION=	0
 URL=		http://www.webdav.org/neon/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -15,7 +16,15 @@ ifdef WITHOUT_NLS
 NLS=		--disable-nls
 else
 NLS=		--enable-nls
-DEPENDS=	/usr/local/lib/libintl.dylib
+DEPENDS=	/usr/local/lib/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+
+ifdef STATIC_ONLY
+STATIC=		--enable-static --disable-shared
 endif
 
 prep: retrieve
@@ -24,9 +33,9 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) \
 		--enable-threadsafe-ssl \
-		--enable-shared \
 		--with-ssl --with-expat $(NLS); $(make)
 	$(TOUCH) build
 
@@ -35,12 +44,16 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,BUGS,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/html/* $(INSTALLDOCDIR)
+ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
+endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR)/test ; make check
+ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
+endif
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
+	#cd $(BUILDDIR)/test ; make check
 	$(TOUCH) test
