@@ -1,23 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/05 19:39:14 ruda Exp $
-
 # The Django framework
 # http://www.djangoproject.com/
 # BSD
 
-NAME=		django
-VERSION=	1.0.2
-REVISION=	0
-URL=		http://media.djangoproject.com/releases/$(VERSION)/
-SOURCE=		Django-$(VERSION)-final.tar.gz
-
 include ../../Library/Rules.mk
+
+TITLE=		Django $(VERSION)
+NAME=		django
+VERSION=	1.1
+REVISION=	0
+URL=		http://media.djangoproject.com/releases/$(VERSION)
+SOURCE=		Django-$(VERSION).tar.gz
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	mv Django-$(VERSION)-final Django-$(VERSION)
+	#mv Django-$(VERSION)-final Django-$(VERSION)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
@@ -27,8 +26,10 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; \
 	$(PYTHON) setup.py install \
+		--no-compile \
 		--home=$(INSTALLDIR)/usr/local \
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,LICENSE,README} $(INSTALLDOCDIR)
 	$(TOUCH) install
