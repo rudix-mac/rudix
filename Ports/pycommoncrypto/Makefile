@@ -1,16 +1,15 @@
-# $Id: Makefile.Python,v 1.1 2009/05/03 14:35:03 ruda Exp $
-
 # Common Crypto for Python
 # http://code.google.com/p/pycommoncrypto/
 # BSD
 
+include ../../Library/Rules.mk
+
+TITLE=		PyCommonCrypto $(VERSION)
 NAME=		pycommoncrypto
 VERSION=	0.2
 REVISION=	0
 URL=		http://pycommoncrypto.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
