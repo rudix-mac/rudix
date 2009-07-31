@@ -1,17 +1,16 @@
-# $Id: Makefile,v 1.2 2009/07/24 00:55:36 ruda Exp $
-
 # cryptographic tools for Python
 # http://www.amk.ca/python/code/crypto.html
 # Public Domain?
 
+include ../../Library/Rules.mk
+
+TITLE=		PyCrypto $(VERSION)
 NAME=		pycrypto
 VERSION=	2.0.1
 REVISION=	0
 URL=		http://www.amk.ca/files/python/crypto/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-DEPENDS=	/usr/local/lib/libgmp.a
-
-include ../../Library/Rules.mk
+DEPENDS=	/usr/local/lib/libgmp.la
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
@@ -36,6 +35,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR) ; $(PYTHON) test.py
 	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/Crypto/*/*.so"
+	cd $(BUILDDIR) ; $(PYTHON) test.py
 	$(TOUCH) test
