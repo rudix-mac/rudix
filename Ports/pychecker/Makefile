@@ -2,13 +2,14 @@
 # http://pychecker.sourceforge.net/
 # BSD
 
+include ../../Library/Rules.mk
+
+TITLE=		PyChecker $(VERSION)
 NAME=		pychecker
 VERSION=	0.8.18
 REVISION=	0
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
