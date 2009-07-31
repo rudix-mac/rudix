@@ -1,9 +1,8 @@
-# $Id: Makefile,v 1.4 2009/07/18 04:08:47 ruda Exp $
-
 # Library for arbitrary precision arithmetic
 # http://gmplib.org/
 # LGPL
 
+TITLE=		GMP $(VERSION)
 NAME=		gmp
 VERSION=	4.3.1
 REVISION=	1
