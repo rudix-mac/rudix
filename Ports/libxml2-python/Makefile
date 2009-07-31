@@ -1,14 +1,13 @@
 # Python bindings for libxml2
 # http://xmlsoft.org/python.html
-# XXX
+
+include ../../Library/Rules.mk
 
 NAME=		libxml2-python
 VERSION=	2.6.9
 REVISION=	0
 URL=		ftp://xmlsoft.org/libxml2/python/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
@@ -29,7 +28,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{README,TODO,*.xml,*.txt} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
 	$(TOUCH) install
 
 test: install
