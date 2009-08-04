@@ -1,26 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/06 02:00:39 ruda Exp $
-
 # Ftp replacement with advanced user interface
 # http://www.ncftp.com/
 # The Clarified Artistic License
 
+include ../../Library/Rules.mk
+
+TITLE=		NcFTP Client $(VERSION)
 NAME=		ncftp
-VERSION=	3.2.2
-REVISION=	2
+VERSION=	3.2.3
+REVISION=	0
 SOURCE=		$(NAME)-$(VERSION)-src.tar.bz2
 URL=		ftp://ftp.ncftp.com/ncftp
-#URL=		ftp://ftp.mirror.ac.uk/mirror/ftp.ncftp.com/ncftp
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/configure.patch
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
