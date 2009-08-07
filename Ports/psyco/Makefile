@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/05 14:16:00 ruda Exp $
-
 # Extension module to speed up the execution of Python code
 # http://psyco.sourceforge.net/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		Psyco $(VERSION)
 NAME=		psyco
 VERSION=	1.6
 REVISION=	5
 URL=		$(SOURCEFORGE)psyco
 SOURCE=		$(NAME)-$(VERSION)-src.tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
@@ -26,11 +25,13 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; \
 	$(PYTHON) setup.py install \
+		--no-compile \
 		--home=$(INSTALLDIR)/usr/local \
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING.txt,README.txt} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/psyco/*.so
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/psyco/*.so
 	$(TOUCH) install
 
 test: install
