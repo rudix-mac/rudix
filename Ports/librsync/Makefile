@@ -1,8 +1,8 @@
-# $Id: Makefile,v 1.2 2009/03/08 03:39:24 ruda Exp $
-
 # Library that implements the rsync remote-delta algorithm
 # http://librsync.sourceforge.net/
 # LGPL
+
+include ../../Library/Rules.mk
 
 NAME=		librsync
 VERSION=	0.9.7
@@ -10,7 +10,11 @@ REVISION=	7
 URL=		$(SOURCEFORGE)librsync
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
+ifdef STATIC_ONLY
+CONFIGURE_OPTS+=	--disable-shared --enable-static
+else
+CONFIGURE_OPTS+=	--enable-shared --enable-static
+endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -19,9 +23,8 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking \
-		--enable-shared ; $(make) LDFLAGS="$(LDFLAGS)"
+	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIGURE_OPTS) \
+		--disable-dependency-tracking ; $(make) LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
@@ -29,12 +32,16 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,README,THANKS,TODO} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
+ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
+endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
+endif
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
 	$(TOUCH) test
