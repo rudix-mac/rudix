@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.1 2009/07/24 00:55:36 ruda Exp $
-
 # Twisted Python
 # http://twistedmatrix.com/trac/
 # License
 
+include ../../Library/Rules.mk
+
+TITLE=		Twisted Python $(VERSION)
 NAME=		twisted
 VERSION=	8.2.0
 REVISION=	0
 URL=		http://tmrc.mit.edu/mirror/twisted/Twisted/8.2
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
+SOURCE=		Twisted-$(VERSION).tar.bz2
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
@@ -30,7 +29,7 @@ install: build
                 --home=$(INSTALLDIR)/usr/local \
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so
 	$(TOUCH) install
 
 test: install
