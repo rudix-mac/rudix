@@ -2,13 +2,14 @@
 # http://www.scons.org/
 # BSD
 
+include ../../Library/Rules.mk
+
+TITLE=		SCons $(VERSION)
 NAME=		scons
 VERSION=	1.2.0.d20090223
 REVISION=	0
 URL=		$(SOURCEFORGE)scons
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 PYTHON=		/usr/bin/python
 SITEPACKAGES=	/Library/Python/2.5/site-packages
