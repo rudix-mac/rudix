@@ -1,9 +1,7 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Powerful, light-weight programming language
 # http://www.lua.org/
+
+include ../../Library/Rules.mk
 
 TITLE=		Lua $(VERSION)
 NAME=		lua
