@@ -1,9 +1,8 @@
-# $Id: Makefile,v 1.5 2009/06/28 17:18:05 ruda Exp $
+# Summary
+# http://rudix.org/
+# GPL, LGPL, BSD, Apache, etc.
 
 include ../../Library/Rules.mk
-
-# http://rudix.org/
-# License here (GPL, LGPL, BSD, Apache, etc.)
 
 TITLE=		Some Library $(VERSION)
 NAME=		libtemplate
@@ -21,9 +20,6 @@ ifdef STATIC_ONLY
 STATIC=		--enable-static --disable-shared
 endif
 
-#
-# Preparing to build: extract source and apply patches
-#
 prep: retrieve
 	tar zxvf $(SOURCE)
 	#tar jxvf $(SOURCE)
@@ -31,9 +27,6 @@ prep: retrieve
 	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
 	$(TOUCH) prep
 
-#
-# Configure and build
-#
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
 	env CFLAGS="$(CFLAGS)" $(configure) $(STATIC) ; $(make)
@@ -41,9 +34,6 @@ build: prep $(DEPENDS)
 	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
 	$(TOUCH) build
 
-#
-# Install in a self-contained directory root
-#
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	#cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local install
@@ -55,8 +45,6 @@ install: build
 	#install -d $(INSTALLDOCDIR)
 	#install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
 ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
@@ -64,8 +52,6 @@ endif
 	$(TOUCH) install
 
 test: install
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
 ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 endif

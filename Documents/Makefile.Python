@@ -1,9 +1,8 @@
-# $Id: Makefile.Python,v 1.2 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# Summary
 # http://python.org/
 # Python
+
+include ../../Library/Rules.mk
 
 NAME=		python-module
 VERSION=	1.2.3

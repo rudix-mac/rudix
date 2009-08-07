@@ -1,9 +1,8 @@
-# $Id: Makefile.GNU,v 1.3 2009/07/24 00:55:36 ruda Exp $
+# Summary
+# http://homepage/
+# License
 
 include ../../Library/Rules.mk
-
-# http://homepage
-# GPL LGPL
 
 TITLE=		GNU Application $(VERSION)
 NAME=		gnutemplate
@@ -23,6 +22,10 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #else
 #DEPENDS+=	/usr/local/lib/libintl.dylib
 #NLS=		--enable-nls
+#endif
+
+#ifdef WITH_STATIC_NLS
+#LDFLAGS+=	-framework CoreFoundation -liconv
 #endif
 
 prep: retrieve

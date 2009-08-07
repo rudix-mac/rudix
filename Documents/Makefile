@@ -1,10 +1,8 @@
-# $Id: Makefile,v 1.6 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Makefile for a new port
 # http://rudix.org/
 # License here (GPL, LGPL, BSD, Apache, etc.)
+
+include ../../Library/Rules.mk
 
 TITLE=		Template $(VERSION)
 NAME=		template
