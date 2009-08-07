@@ -1,25 +1,24 @@
-# $Id: Makefile,v 1.2 2009/03/15 19:15:44 ruda Exp $
-
 # Mirroring/synchronization over low bandwidth links
 # http://samba.org/rsync/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		rsync
-VERSION=	3.0.5
+VERSION=	3.0.6
 REVISION=	0
 URL=		http://samba.org/ftp/rsync/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-DEPENDS=	/usr/local/lib/libpopt.0.0.0.dylib
-
-include ../../Library/Rules.mk
+DEPENDS=	/usr/local/lib/libpopt.la
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" $(configure) \
 		--with-rsyncd-conf=/usr/local/etc ; $(make)
 	$(TOUCH) build
 
