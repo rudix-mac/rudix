@@ -1,6 +1,8 @@
 # http://apr.apache.org/
 # Apache License
 
+include ../../Library/Rules.mk
+
 TITLE=		APR Utility $(VERSION)
 NAME=		apr-util
 VERSION=	1.3.9
@@ -8,8 +10,6 @@ REVISION=	0
 URL=		http://www.apache.org/dist/apr/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 DEPENDS=	/usr/local/bin/apr-1-config
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
