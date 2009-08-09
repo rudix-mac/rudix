@@ -1,13 +1,11 @@
-# $Id: Makefile,v 1.2 2009/07/22 00:18:40 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # http://apr.apache.org/
 # Apache License
 
+include ../../Library/Rules.mk
+
 TITLE=		Apache Portable Runtime $(VERSION)
 NAME=		apr
-VERSION=	1.3.6
+VERSION=	1.3.8
 REVISION=	0
 URL=		http://www.apache.org/dist/apr/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -29,12 +27,14 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README.dev} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/* $(INSTALLDOCDIR)
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.dylib
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.a
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR)/test ; make all ; ./testall -v
 	$(TOUCH) test
