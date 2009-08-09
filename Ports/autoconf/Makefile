@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/04 00:36:31 ruda Exp $
-
 # Automatically configure source code on many Un*x platforms
 # http://www.gnu.org/software/autoconf/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Autoconf $(VERSION)
 NAME=		autoconf
-VERSION=	2.63
-REVISION=	1
+VERSION=	2.64
+REVISION=	0
 URL=		$(GNU)/gnu/autoconf/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
