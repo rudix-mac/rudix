@@ -1,17 +1,15 @@
-# $Id: Makefile,v 1.3 2009/07/22 00:42:17 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # http://apr.apache.org/
 # Apache License
 
 TITLE=		APR Utility $(VERSION)
 NAME=		apr-util
-VERSION=	1.3.8
+VERSION=	1.3.9
 REVISION=	0
 URL=		http://www.apache.org/dist/apr/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 DEPENDS=	/usr/local/bin/apr-1-config
+
+include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -27,7 +25,7 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README.MySQL} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.a
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so
@@ -35,9 +33,13 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/apr-util-1/*.so"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/apr-util-1/*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do  \
+		lipo $$x -verify_arch i386 ppc ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR)/test ; make all ; ./testall -v
 	$(TOUCH) test
