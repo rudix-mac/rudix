@@ -1,17 +1,15 @@
-# $Id: Makefile,v 1.2 2009/07/24 00:55:36 ruda Exp $
-
-# http://danga.com/memcached
+# http://tangent.org/552/libmemcached.html
 # BSD
 
+include ../../Library/Rules.mk
+
 NAME=		libmemcached
-VERSION=	0.28
+VERSION=	0.31
 REVISION=	0
 URL=		http://download.tangent.org/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
-
-DEPENDS=	/usr/local/bin/memcached
+DEPENDS=	/usr/local/include/memcached/protocol_binary.h
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -26,14 +24,17 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR) ; make test
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
 	$(TOUCH) test
