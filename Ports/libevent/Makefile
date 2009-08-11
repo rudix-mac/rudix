@@ -1,17 +1,19 @@
-# $Id: Makefile,v 1.3 2009/07/22 02:46:10 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # An event notification library
 # http://monkey.org/~provos/libevent/
 # BSD
 
+include ../../Library/Rules.mk
+
 TITLE=		libevent $(VERSION)
 NAME=		libevent
-VERSION=	1.4.11
+VERSION=	1.4.12
 REVISION=	0
 URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
+
+ifdef STATIC_ONLY
+CONFIGURE_OPTS=	--enable-static --disable-shared
+endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -19,19 +21,26 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIGURE_OPTS); $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ChangeLog,README} $(INSTALLDOCDIR)
+ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+ifndef STATIC_ONLY
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+endif
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR) ; make verify
 	$(TOUCH) test
