@@ -1,10 +1,8 @@
-# $Id: Makefile,v 1.4 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Distributed memory object caching system
 # http://www.danga.com/memcached/
 # BSD
+
+include ../../Library/Rules.mk
 
 TITLE=		memcached $(VERSION)
 NAME=		memcached
@@ -12,6 +10,7 @@ VERSION=	1.4.0
 REVISION=	0
 URL=		http://www.danga.com/memcached/dist/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
 DEPENDS=	/usr/local/lib/libevent.la
 
 prep: retrieve
@@ -32,6 +31,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	lipo $(INSTALLDIR)/usr/local/bin/memcached -verify_arch i386 ppc7400
 	cd $(BUILDDIR) ; make test
 	$(TOUCH) test
