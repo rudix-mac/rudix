@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/04 00:36:47 ruda Exp $
-
 # Binary visual display editor, based on vi
 # http://bvi.sourceforge.net/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		bvi $(VERSION)
 NAME=		bvi
 VERSION=	1.3.2
 REVISION=	5
 URL=		$(SOURCEFORGE)bvi
 SOURCE=		$(NAME)-$(VERSION).src.tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -26,9 +25,10 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,CREDITS,README} $(INSTALLDOCDIR)
 	rsync -av $(BUILDDIR)/html/ $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
 	$(TOUCH) test
