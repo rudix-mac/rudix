@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/04 01:21:02 ruda Exp $
-
 # Extracts files from Microsoft CAB archives
 # http://www.cabextract.org.uk/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		cabextract $(VERSION)
 NAME=		cabextract
 VERSION=	1.2
 REVISION=	6
 URL=		http://www.cabextract.org.uk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -26,9 +25,10 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/{magic,*.html} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
 	$(TOUCH) test
