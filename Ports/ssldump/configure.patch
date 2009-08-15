@@ -1,0 +1,22 @@
+--- configure~	2001-11-26 20:38:13.000000000 -0200
++++ configure	2009-08-15 11:47:22.000000000 -0300
+@@ -1049,8 +1049,8 @@
+ 
+ RECORD_MOD="dummy"
+ 
+-ac_pcap_inc_dir="/usr/include /usr/include/pcap /usr/local/include"
+-ac_pcap_lib_dir="/usr/lib /usr/local/lib"
++ac_pcap_inc_dir="/Developer/SDKs/MacOSX10.5.sdk/usr/include /usr/include /usr/include/pcap /usr/local/include"
++ac_pcap_lib_dir="/Developer/SDKs/MacOSX10.5.sdk/usr/lib /usr/lib /usr/local/lib"
+ 
+ # Check whether --with-pcap or --without-pcap was given.
+ if test "${with_pcap+set}" = set; then
+@@ -1103,7 +1103,7 @@
+ echo "configure:1104: checking for PCAP library" >&5
+ ac_found_pcap_lib_dir="no"
+ for dir in $ac_pcap_lib_dir; do
+-	if test -f $dir/libpcap.a; then
++	if test -f $dir/libpcap.dylib; then
+ 				save_LIBS=$LIBS
+ 		save_LDFLAGS=$LDFLAGS
+ 		LIBS="-lpcap $LIBS"
