@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/21 18:17:48 ruda Exp $
-
 # Library for handling page faults in user mode
 # http://libsigsegv.sourceforge.net/
 # GPL
 
-NAME=		libsigsegv
-VERSION=	2.6
-REVISION=	1
-URL=		$(GNU)/gnu/libsigsegv
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
+
+TITLE=		GNU libsigsegv $(VERSION)
+NAME=		libsigsegv
+VERSION=	2.7
+REVISION=	0
+URL=		http://ftp.gnu.org/gnu/libsigsegv/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -25,8 +24,8 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog*,NEWS,README} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
