@@ -1,20 +1,17 @@
-# $Id: Makefile,v 1.2 2009/03/13 00:36:40 ruda Exp $
-
 # Client-side implementation of the rsync algorithm
 # http://zsync.moria.org.uk/
-# GPL
+# Artistic License
+
+include ../../Library/Rules.mk
 
 NAME=		zsync
-VERSION=	0.6
+VERSION=	0.6.1
 REVISION=	0
 URL=		http://zsync.moria.org.uk/download/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-include ../../Library/Rules.mk
-
 prep: retrieve
 	tar jxvf $(SOURCE)
-	cd $(BUILDDIR)/libzsync ; patch < $(PORTDIR)/sha1.c.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
@@ -26,9 +23,11 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,NEWS,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
