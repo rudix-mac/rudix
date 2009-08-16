@@ -17,10 +17,10 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).zip
 
 #ifdef WITHOUT_NLS
-#NLS=		--disable-nls
+#CONFIGURE_OPTS=	--disable-nls
 #else
 #DEPENDS+=	/usr/local/lib/libintl.la
-#NLS=		--enable-nls
+#CONFIGURE_OPTS=	--enable-nls
 #endif
 
 #ifdef WITH_STATIC_NLS
@@ -41,12 +41,12 @@ prep: retrieve
 	$(TOUCH) prep
 
 #
-# Configure and build
+# Configure and build from sources
 #
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
-	#env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(NLS) ; $(make)
-	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) ; $(make)
+	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="($LDFLAGS)"
 	$(TOUCH) build
 
 #
@@ -55,11 +55,6 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	#cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local install
-        #$(PYTHON) setup.py install \
-		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-                --install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
-	#$(PYTHON) -m compileall -d / $(INSTALLDIR)
 
 	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
 	#rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
@@ -68,18 +63,20 @@ install: build
 	#install -d $(INSTALLDOCDIR)
 	#install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 
-	#$(STRIP) $(INSTALLDIR)/usr/local/bin/*
-	#$(STRIP) $(INSTALLDIR)/usr/local/sbin/*
+	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
 	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	#$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
 	$(TOUCH) install
 
 test: install
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	#$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*/*.so"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \ 
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \ 
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test

@@ -1,9 +1,10 @@
-# Summary
+# A Python module
 # http://python.org/
 # Python
 
 include ../../Library/Rules.mk
 
+TITLE=		Python Module $(VERSION)
 NAME=		python-module
 VERSION=	1.2.3
 REVISION=	0
@@ -31,5 +32,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*/*.so"
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
 	$(TOUCH) test
