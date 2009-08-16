@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 NAME=		msmtp
 VERSION=	1.4.17
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/msmtp/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -28,7 +28,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-		$(configure) --disable-dependency-tracking $(NLS) ; $(make)
+	$(configure) --disable-dependency-tracking $(NLS) ; $(make)
 	$(TOUCH) build
 
 install: build
