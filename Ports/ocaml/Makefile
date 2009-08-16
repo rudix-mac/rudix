@@ -2,13 +2,13 @@
 # http://www.ocaml.org/
 # LGPL
 
+include ../../Library/Rules.mk
+
 NAME=		ocaml
-VERSION=	3.11.0
+VERSION=	3.11.1
 REVISION=	0intel
 URL=		http://caml.inria.fr/pub/distrib/ocaml-3.11/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)

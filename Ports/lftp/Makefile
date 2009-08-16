@@ -1,22 +1,25 @@
-# $Id: Makefile,v 1.2 2009/03/26 00:23:07 ruda Exp $
-
 # Shell-like command line ftp and sftp client
 # http://lftp.yar.ru/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		lftp
-VERSION=	3.7.11
+VERSION=	3.7.15
 REVISION=	0
 URL=		http://ftp.yars.free.net/pub/source/lftp/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-include ../../Library/Rules.mk
-
 ifdef WITHOUT_NLS
-NLS=		--disable-nls
+CONFIGURE_OPTS=	--disable-nls
 else
-NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.dylib
+CONFIGURE_OPTS=	--enable-nls
+DEPENDS+=	/usr/local/lib/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+DEPENDS+=	/usr/local/lib/libintl.la
 endif
 
 retrieve:
@@ -31,15 +34,15 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	# Oh great lftp guys...
-	cd $(BUILDDIR)/readline-4.3 ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking \
-		--cache-file=$(PORTDIR)/config.cache.readline \
-		--disable-shared ; $(make)
+	#cd $(BUILDDIR)/readline-4.3 ; \
+	#env CFLAGS="$(CFLAGS)" $(configure) \
+	#	--disable-dependency-tracking \
+	#	--cache-file=$(PORTDIR)/config.cache.readline \
+	#	--disable-shared ; $(make)
 	cd $(BUILDDIR) ; \
 	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" $(configure) \
 		--disable-dependency-tracking \
-		--with-openssl $(NLS) ; $(make)
+		--with-openssl $(CONFIGURE_OPTS) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -47,8 +50,8 @@ install: build
 	mv $(INSTALLDIR)/usr/local/etc/lftp.conf $(INSTALLDIR)/usr/local/etc/lftp.conf.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FAQ,FEATURES,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install

@@ -1,19 +1,18 @@
-# $Id: Makefile,v 1.4 2009/07/15 02:18:22 ruda Exp $
-
 # GNU Readline library
 # http://tiswww.case.edu/php/chet/readline/rltop.html
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Readline $(VERSION)
 NAME=		readline
 VERSION=	6.0
 REVISION=	1
 URL=		ftp://ftp.cwru.edu/pub/bash/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
-
 ifdef STATIC_ONLY
-STATIC=		--enable-static --disable-shared
+CONFIGURE_OPTS=	--enable-static --disable-shared
 endif
 
 prep: retrieve
@@ -23,9 +22,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) \
-		--with-curses ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) --with-curses ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -37,9 +35,9 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/*.html $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	chmod u+w $(INSTALLDIR)/usr/local/lib/*.dylib
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.dylib
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.a
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install

@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/04 00:56:01 ruda Exp $
-
 # GNU standards-compliant Makefile generator
 # http://www.gnu.org/software/automake/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Automake $(VERSION)
 NAME=		automake
-VERSION=	1.10.2
+VERSION=	1.11
 REVISION=	0
 URL=		$(GNU)/gnu/automake/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)

@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.4 2009/07/15 03:19:11 ruda Exp $
-
 # Retrieve files from the web via HTTP, HTTPS and FTP
 # http://www.gnu.org/software/wget/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Wget $(VERSION)
 NAME=		wget
 VERSION=	1.11.4
 REVISION=	4
 URL=		http://ftp.gnu.org/gnu/wget/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls

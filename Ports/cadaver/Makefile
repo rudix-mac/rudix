@@ -1,22 +1,25 @@
-# $Id: Makefile,v 1.4 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Command-line WebDAV client
 # http://www.webdav.org/cadaver/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		cadaver $(VERSION)
 NAME=		cadaver
 VERSION=	0.23.2
-REVISION=	4
+REVISION=	5
 URL=		http://www.webdav.org/cadaver/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 ifdef WITHOUT_NLS
-NLS=		--disable-nls
+CONFIGURE_OPTS=	--disable-nls
 else
 DEPENDS+=	/usr/local/lib/libintl.la
-NLS=		--enable-nls
+CONFIGURE-OPTS=	--enable-nls
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 prep: retrieve
@@ -24,9 +27,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--with-ssl $(NLS) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) --with-ssl ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -39,5 +41,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
 	$(TOUCH) test

@@ -1,5 +1,3 @@
-# $Id: Makefile,v 1.4 2009/07/18 14:05:34 ruda Exp $
-
 # GNU's Ubiquitous Intelligent Language for Extension
 # http://www.gnu.org/software/guile/
 # LGPL

@@ -1,6 +1,6 @@
-# $Id: Rules.mk,v 1.4 2009/07/24 00:55:36 ruda Exp $
 # -*- mode: makefile -*-
 #
+# Common Rules and Macros
 # Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 #
 
@@ -54,6 +54,12 @@ CXXFLAGS_DEBUG=	-g
 # Popular web sites
 SOURCEFORGE=	http://downloads.sourceforge.net/
 GNU=		http://ftp.gnu.org/
+
+ifdef INTEL_ONLY
+CFLAGS=		$(CFLAGS_INTEL)
+CXXFLAGS=	$(CXXFLAGS_INTEL)
+LDLFLAGS=	$(LDFLAGS_INTEL)
+endif
 
 # Common rules
 
@@ -118,7 +124,7 @@ realdistclean: distclean
 	rm -f retrieve $(SOURCE)
 
 tag:
-	@echo cvs tag -R $(NAME)-$(VERSION)-$(REVISION) | sed 's/\./_/g'
+	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)-$(VERSION)-$(REVISION) -m "Tagging version $(VERSION) revision $(REVISION)"
 
 about:
 	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"
@@ -134,8 +140,4 @@ endef
 
 define make
 make -j $(NCPU)
-endef
-
-define test-universal-binary
-../../Library/test-universal-binary
 endef

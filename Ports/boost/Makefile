@@ -2,13 +2,13 @@
 # http://www.boost.org/
 # MIT-like 
 
+include ../../Library/Rules.mk
+
 NAME=		boost
 VERSION=	1.39.0
 REVISION=	0intel
 URL=		$(SOURCEFORGE)boost
 SOURCE=		$(NAME)_1_39_0.tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -30,14 +30,14 @@ install: build
 	cd $(BUILDDIR) ; find boost ! -name \*.orig -type f -exec install -m 644 {} $(INSTALLDIR)/usr/local/include/{} \;
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE_1_0.txt,README.txt} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test

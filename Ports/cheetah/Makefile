@@ -1,9 +1,7 @@
-# $Id: Makefile,v 1.2 2009/03/05 02:18:58 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Python-powered template engine and code generator
 # http://www.cheetahtemplate.org/
+
+include ../../Library/Rules.mk
 
 TITLE=		Cheetah $(VERSION)
 NAME=		cheetah

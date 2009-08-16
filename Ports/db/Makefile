@@ -1,9 +1,8 @@
-# $Id: Makefile,v 1.3 2009/07/22 01:29:57 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# Berkeley DB
 # http://www.oracle.com/technology/products/berkeley-db/
 # BSD
+
+include ../../Library/Rules.mk
 
 TITLE=		Berkeley DB $(VERSION)
 NAME=		db
