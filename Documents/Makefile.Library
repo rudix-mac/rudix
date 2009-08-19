@@ -17,7 +17,9 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).zip
 
 ifdef STATIC_ONLY
-STATIC=		--enable-static --disable-shared
+CONFIGURE_OPTS=		--enable-static --disable-shared
+else
+CONFIGURE_OPTS=		--enable-static --enable-shared
 endif
 
 prep: retrieve
@@ -29,8 +31,8 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) $(STATIC) ; $(make)
-	#env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) ; $(make)
+	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIGURE_OPTS) ; $(make)
+	#env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(CONFIGURE_OPTS) ; $(make)
 	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
 	$(TOUCH) build
 
@@ -53,8 +55,10 @@ endif
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
