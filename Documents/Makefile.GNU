@@ -1,6 +1,6 @@
-# Summary
+# Summary for a GNU software
 # http://homepage/
-# License
+# GPL, LGPL
 
 include ../../Library/Rules.mk
 
@@ -9,9 +9,8 @@ NAME=		gnutemplate
 VERSION=	1.2.3
 REVISION=	0
 URL=		http://path/to/download/
-#URL=		$(HOMEPAGE)/download/
-#URL=		$(GNU)/gnu/template/
-#URL=		$(SOURCEFORGE)template
+#URL=		http://downloads.sourceforge.net/template
+#URL=		http://ftp.gnu.org/gnu/template
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).tar.bz2
 #SOURCE=	$(NAME)-$(VERSION).tar.Z
