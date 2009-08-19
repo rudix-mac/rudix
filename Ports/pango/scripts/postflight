@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f /usr/local/etc/pango/pangox.aliases ] && \
+install -m 644 /usr/local/etc/pango/pangox.aliases.default \
+	/usr/local/etc/pango/pangox.aliases
+exit 0
