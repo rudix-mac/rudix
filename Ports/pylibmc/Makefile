@@ -1,0 +1,37 @@
+# Libmemcached wrapper
+# http://pypi.python.org/pypi/pylibmc
+# Python
+
+include ../../Library/Rules.mk
+
+TITLE=		pylibmc $(VERSION)
+NAME=		pylibmc
+VERSION=	0.6.1
+REVISION=	0
+URL=		http://pypi.python.org/packages/source/p/pylibmc/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+PYTHON=		/usr/bin/python
+SITEPACKAGES=	/Library/Python/2.5/site-packages
+
+prep: retrieve
+	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
+	$(TOUCH) prep
+
+build: prep $(DEPENDS)
+	cd $(BUILDDIR) ; $(PYTHON) setup.py build
+	$(TOUCH) build
+
+install: build
+	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+		--no-compile \
+                --home=$(INSTALLDIR)/usr/local \
+		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+	$(PYTHON) -m compileall -d / $(INSTALLDIR)
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	$(TOUCH) install
+
+test: install
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*.so) ; do \
+		lipo $$x -verify_arch i386 ppc7400 ; done
+	$(TOUCH) test
