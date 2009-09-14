@@ -2,13 +2,13 @@
 # http://nih.at/libzip/
 #
 
+include ../../Library/Rules.mk
+
 NAME=		libzip
 VERSION=	0.9
 REVISION=	0
 URL=		http://nih.at/libzip/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)

@@ -2,15 +2,13 @@
 # http://www.erlang.org/
 # ERLANG PUBLIC LICENSE
 
-HOMEPAGE=	http://erlang.org/
+include ../../Library/Rules.mk
 
 NAME=		erlang
 VERSION=	R13B01
 REVISION=	0
 URL=		http://www.erlang.org/download/
 SOURCE=		otp_src_$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
@@ -54,5 +52,5 @@ test: install
 
 realdistclean: distclean
 	rm -f retrieve $(SOURCE)
-	rm -f otp_doc_html_($VERSION).tar.gz
+	rm -f otp_doc_html_$(VERSION).tar.gz
 	rm -f otp_doc_man_$(VERSION).tar.gz
