@@ -1,14 +1,13 @@
-# $Id: Makefile,v 1.4 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# Compiler cache
 # http://ccache.samba.org/
 # GPL
+
+include ../../Library/Rules.mk
 
 TITLE=		Compiler Cache $(VERSION)
 NAME=		ccache
 VERSION=	2.4
-REVISION=	17
+REVISION=	18
 URL=		http://samba.org/ftp/ccache/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -33,10 +32,10 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/web/*.html $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	lipo $(INSTALLDIR)/usr/local/bin/ccache -verify_arch i386 x86_64
 	cd $(BUILDDIR) ; make test
 	$(TOUCH) test
