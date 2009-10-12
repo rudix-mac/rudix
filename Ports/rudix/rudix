@@ -44,7 +44,7 @@ sub root_required() {
 
 sub get_packages() {
 	my @pkgs;
-	open(PKGS, "pkgutil --pkgs=org.rudix.pkg|");
+	open(PKGS, "pkgutil --pkgs=org.rudix.pkg.*|");
 	while (<PKGS>) {
 		chop;
 		push @pkgs, $_;
