@@ -4,7 +4,7 @@
 # Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	1
+BUILDSYSTEM=	2
 
 VENDOR=		org.rudix.pkg
 PORTDIR:=	$(shell pwd)
@@ -27,39 +27,30 @@ STRIP_LIB=	strip -x -S
 ARCH:=		$(shell arch)
 NCPU:=		$(shell sysctl -n hw.ncpu)
 
-# Universal Binary build flags
-CFLAGS=		-arch i386 -arch ppc -Os
-CXXFLAGS=	-arch i386 -arch ppc -Os
-LDFLAGS=	-arch i386 -arch ppc
+# Universal Binary build flags on Snow Leopard
+CFLAGS_FAT=	-arch i386 -arch x86_64 -Os
+CXXFLAGS_FAT=	-arch i386 -arch x86_64 -Os
+LDFLAGS_FAT=	-arch i386 -arch x86_64
 
-# Uncomment this to build Universal Binaries on PowerPC machines
-#CFLAGS=	-arch i386 -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk
-#CXXFLAGS=	-arch i386 -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk
-#LDFLAGS=	-arch i386 -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk
+# i386 build flags
+CFLAGS_32=	-arch i386 -Os
+CXXFLAGS_32=	-arch i386 -Os
+LDFLAGS_32=	-arch i386
 
-# Intel build flags
-CFLAGS_INTEL=	-arch i386 -Os
-CXXFLAGS_INTEL=	-arch i386 -Os
-LDFLAGS_INTEL=	-arch i386
-
-# PowerPC build flags
-CFLAGS_PPC=	-arch ppc -Os
-CXXFLAGS_PPC=	-arch ppc -Os
-LDFLAGS_PPC=	-arch ppc
+# x86_64 build flags
+CFLAGS_64=	-arch x86_64 -Os
+CXXFLAGS_64=	-arch x86_64 -Os
+LDFLAGS_64=	-arch x86_64
 
 # Debugging flags
 CFLAGS_DEBUG=	-g
 CXXFLAGS_DEBUG=	-g
+LDFLAGS_DEBUG=
 
-# Popular web sites
-SOURCEFORGE=	http://downloads.sourceforge.net/
-GNU=		http://ftp.gnu.org/
-
-ifdef INTEL_ONLY
-CFLAGS=		$(CFLAGS_INTEL)
-CXXFLAGS=	$(CXXFLAGS_INTEL)
-LDLFLAGS=	$(LDFLAGS_INTEL)
-endif
+# Default build flags
+CFLAGS=		$(CFLAGS_FAT)
+CXXFLAGS=	$(CXXFLAGS_FAT)
+LDFLAGS=	$(LDFLAGS_FAT)
 
 # Common rules
 
