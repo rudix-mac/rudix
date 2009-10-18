@@ -6,17 +6,16 @@ include ../../Library/Rules.mk
 
 TITLE=		Django $(VERSION)
 NAME=		django
-VERSION=	1.1
+VERSION=	1.1.1
 REVISION=	0
 URL=		http://media.djangoproject.com/releases/$(VERSION)
 SOURCE=		Django-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	#mv Django-$(VERSION)-final Django-$(VERSION)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
