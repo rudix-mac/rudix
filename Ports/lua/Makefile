@@ -1,5 +1,6 @@
 # Powerful, light-weight programming language
 # http://www.lua.org/
+# MIT
 
 include ../../Library/Rules.mk
 
