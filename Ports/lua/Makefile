@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 TITLE=		Lua $(VERSION)
 NAME=		lua
 VERSION=	5.1.4
-REVISION=	1
+REVISION=	2
 URL=		http://www.lua.org/ftp/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -35,7 +35,9 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make test
 	$(TOUCH) test

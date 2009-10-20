@@ -1,3 +1,0 @@
-Powerful, light-weight programming language
-
-Lua is a powerful, light-weight programming language designed for extending applications.  Lua is also frequently used as a general-purpose, stand-alone language.
