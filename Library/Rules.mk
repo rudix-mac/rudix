@@ -77,7 +77,7 @@ retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	$(TOUCH) retrieve
 
-# prep, build, install are provided by the port's Makefile
+# Include prep, build, install in your Makefile
 
 pkg: install
 	$(PACKAGEMAKER) \
@@ -112,9 +112,10 @@ distclean: clean pkgclean dmgclean
 	rm -f config.cache*
 
 realdistclean: distclean
-	rm -f retrieve $(SOURCE)
+	rm -f retrieve $(tag)
 
 tag:
+	svn update
 	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)-$(VERSION)-$(REVISION) -m "Tagging version $(VERSION) revision $(REVISION)"
 
 about:
