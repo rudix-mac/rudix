@@ -24,8 +24,9 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) \
+	cd $(BUILDDIR) ; env \
+		CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(STATIC) \
 		--enable-threads \
 		--disable-csharp ; $(make)
 	$(TOUCH) build
