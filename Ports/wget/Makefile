@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Wget $(VERSION)
 NAME=		wget
-VERSION=	1.11.4
-REVISION=	4
+VERSION=	1.12
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/wget/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -28,7 +28,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-		$(configure) $(NLS) ; $(make)
+		$(configure) --disable-dependency-tracking $(NLS) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -37,10 +37,11 @@ install: build
 		$(INSTALLDIR)/usr/local/etc/wgetrc.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	cd $(BUILDDIR) ; make test
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
