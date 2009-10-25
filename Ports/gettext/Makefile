@@ -1,15 +1,14 @@
-# $Id: Makefile,v 1.5 2009/07/22 01:39:51 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# GNU GetText
 # http://www.gnu.org/software/gettext/
 # GPL
+
+include ../../Library/Rules.mk
 
 TITLE=		GNU gettext $(VERSION)
 NAME=		gettext
 VERSION=	0.17
-REVISION=	5
-URL=		$(GNU)/gnu/gettext/
+REVISION=	6
+URL=		http://ftp.gnu.org/gnu/gettext/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 ifdef STATIC_ONLY
@@ -39,17 +38,19 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS} $(INSTALLDOCDIR)
 	rm -rf $(INSTALLDIR)/usr/local/share/doc/gettext/examples
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.dylib
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
-	strip -x -S  $(INSTALLDIR)/usr/local/lib/*.a
+	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
