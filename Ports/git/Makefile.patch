@@ -1,6 +1,6 @@
---- Makefile.orig	2009-03-21 09:38:24.000000000 -0300
-+++ Makefile	2009-03-21 09:38:57.000000000 -0300
-@@ -1169,7 +1169,6 @@
+--- Makefile~	2009-10-10 22:42:04.000000000 -0300
++++ Makefile	2009-10-28 20:57:47.000000000 -0200
+@@ -1413,7 +1413,6 @@
  
  $(BUILT_INS): git$X
  	$(QUIET_BUILT_IN)$(RM) $@ && \
@@ -8,11 +8,11 @@
  	ln -s git$X $@ 2>/dev/null || \
  	cp git$X $@
  
-@@ -1472,7 +1471,6 @@
- 		cp "$$bindir/git$X" "$$execdir/git-add$X"; } && \
- 	{ for p in $(filter-out git-add$X,$(BUILT_INS)); do \
+@@ -1744,7 +1743,6 @@
+ 		cp "$$bindir/git$X" "$$execdir/git$X"; } ; } && \
+ 	{ for p in $(BUILT_INS); do \
  		$(RM) "$$execdir/$$p" && \
--		ln "$$execdir/git-add$X" "$$execdir/$$p" 2>/dev/null || \
- 		ln -s "git-add$X" "$$execdir/$$p" 2>/dev/null || \
- 		cp "$$execdir/git-add$X" "$$execdir/$$p" || exit; \
- 	  done } && \
+-		ln "$$execdir/git$X" "$$execdir/$$p" 2>/dev/null || \
+ 		ln -s "git$X" "$$execdir/$$p" 2>/dev/null || \
+ 		cp "$$execdir/git$X" "$$execdir/$$p" || exit; \
+ 	  done; } && \

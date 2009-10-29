@@ -1,16 +1,14 @@
-# $Id: Makefile,v 1.5 2009/07/24 00:55:36 ruda Exp $
-
 # GIT - Tree History Storage Tool
 # http://git.or.cz/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		git
-VERSION=	1.6.3.3
-REVISION=	1
+VERSION=	1.6.5
+REVISION=	0
 URL=		http://www.kernel.org/pub/software/scm/git/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -31,6 +29,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/git"
-	cd $(BUILDDIR) ; make check
+	lipo $(INSTALLDIR)/usr/local/bin/git -verify_arch i386 x86_64
+	#cd $(BUILDDIR) ; make check
 	$(TOUCH) test
