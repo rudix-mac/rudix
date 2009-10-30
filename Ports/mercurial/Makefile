@@ -1,17 +1,18 @@
-include ../../Library/Rules.mk
-
 # Fast, lightweight source control management
-# http://www.selenic.com/mercurial/
+# http://mercurial.selenic.com/
+# GPL
+
+include ../../Library/Rules.mk
 
 TITLE=		Mercurial $(VERSION)
 NAME=		mercurial
 VERSION=	1.3.1
-REVISION=	0
+REVISION=	1
 URL=		http://www.selenic.com/mercurial/release/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -31,10 +32,11 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CONTRIBUTORS,COPYING,README} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so
+	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so"
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so) ; do \
+		lipo  $$x -verify_arch i386 x86_64 ppc7400 ; done
 	cd $(BUILDDIR)/tests ; $(PYTHON) run-tests.py
 	$(TOUCH) test
