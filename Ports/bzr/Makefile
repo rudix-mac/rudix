@@ -1,18 +1,18 @@
-include ../../Library/Rules.mk
-
 # Distributed version control system
 # http://bazaar-vcs.org/
 # GPL
 
+include ../../Library/Rules.mk
+
 TITLE=		Bazaar $(VERSION)
 NAME=		bzr
-VERSION=	1.17
+VERSION=	2.1.0b1
 REVISION=	0
-URL=		http://launchpad.net/bzr/1.17/1.17/+download
+URL=		http://launchpad.net/bzr/2.1/2.1.0b1/+download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -33,9 +33,10 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING.txt,NEWS,README,TODO} $(INSTALLDOCDIR)
 	rsync -a $(BUILDDIR)/doc/ $(INSTALLDOCDIR)
-	strip -x -S  $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so
+	$(STRIP_LIB)  $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so"
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so) ; do \
+		lipo  $$x -verify_arch i386 x86_64 ppc7400 ; done
 	$(TOUCH) test
