@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Rudix Package Manager
+# Rudix Package Manager - RPM ;)
 #
 # Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 #
@@ -44,7 +44,7 @@ sub root_required() {
 
 sub get_packages() {
 	my @pkgs;
-	open(PKGS, "pkgutil --pkgs=org.rudix.pkg.*|");
+	open(PKGS, "pkgutil --pkgs=org.rudix.pkg.* 2>/dev/null|");
 	while (<PKGS>) {
 		chop;
 		push @pkgs, $_;
@@ -58,7 +58,7 @@ sub get_package_info {
 	my $version = "None";
 	my $install_date = "None";
 
-	open(INFO, "pkgutil -v --pkg-info $pkg|");
+	open(INFO, "pkgutil -v --pkg-info $pkg 2>/dev/null|");
 	while (<INFO>) {
 		if ($_ =~ /version: (.*)$/) {
 			$version = $1;
@@ -75,7 +75,7 @@ sub get_package_info {
 sub get_package_content {
 	my $pkg = shift;
 	my @content = ();
-	open(CONTENT, "pkgutil --files $pkg --only-files|");
+	open(CONTENT, "pkgutil --files $pkg --only-files 2>/dev/null|");
 	while (<CONTENT>) {
 		chomp;
 		push @content, "/" . $_;
@@ -125,7 +125,7 @@ sub remove_package {
 	my $pkg = shift;
 	root_required;
 	system "pkgutil --unlink $pkg -f 2>/dev/null";
-	system "pkgutil --forget $pkg";
+	system "pkgutil --forget $pkg 2>/dev/null";
 }
 
 sub remove_all_packages() {
@@ -150,7 +150,7 @@ sub search_in_packages {
 	my $path = shift;
 	my $pkg;
 	
-	open(INFO, "pkgutil --file-info $path|");
+	open(INFO, "pkgutil --file-info $path 2>/dev/null|");
 	while (<INFO>) {
 		if (/pkgid: (.*)$/) {
 			$pkg = $1;
@@ -162,7 +162,7 @@ sub search_in_packages {
 
 sub verify_package {
 	my $pkg = shift;
-	system "pkgutil --verify $pkg";
+	system "pkgutil --verify $pkg 2>/dev/null";
 }
 
 sub verify_all_packages() {
@@ -174,7 +174,7 @@ sub verify_all_packages() {
 sub fix_package {
 	my $pkg = shift;
 	root_required;
-	system "pkgutil --repair $pkg";
+	system "pkgutil --repair $pkg 2>/dev/null";
 }
 
 sub normalize {
