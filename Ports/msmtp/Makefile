@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 NAME=		msmtp
 VERSION=	1.4.17
-REVISION=	1
+REVISION=	2
 URL=		http://downloads.sourceforge.net/msmtp/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -19,7 +19,6 @@ endif
 
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
-DEPENDS=	/usr/local/lib/libintl.la
 endif
 
 prep: retrieve
@@ -41,5 +40,5 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
