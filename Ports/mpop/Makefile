@@ -4,8 +4,9 @@
 
 include ../../Library/Rules.mk
 
+TITLE=		mpop $(VERSION)
 NAME=		mpop
-VERSION=	1.0.17
+VERSION=	1.0.19
 REVISION=	0
 URL=		http://downloads.sourceforge.net/mpop/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -19,7 +20,6 @@ endif
 
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
-DEPENDS=	/usr/local/lib/libintl.la
 endif
 
 prep: retrieve
@@ -42,5 +42,5 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
