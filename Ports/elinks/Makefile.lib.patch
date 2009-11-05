@@ -1,0 +1,11 @@
+--- Makefile.lib.orig	2009-11-04 23:39:34.000000000 -0200
++++ Makefile.lib	2009-11-04 23:40:20.000000000 -0200
+@@ -43,7 +43,7 @@
+ 
+ # Rule to compile a set of .o files into one .o file
+ quiet_cmd_ld_objs = "      [$(LD_COLOR)LD$(END_COLOR)]   $(RELPATH)$@"
+-      cmd_ld_objs = $(LD) -r -o $@ $(filter $(OBJS), $^) \
++      cmd_ld_objs = gcc -arch i386 -arch x86_64 -nostdlib -r -o $@ $(filter $(OBJS), $^) \
+       		    $(foreach subdir,$(sort $(filter-out src,$(SUBDIRS))), \
+ 			    `test -e $(subdir)/$(LIB_O_NAME) && echo $(subdir)/$(LIB_O_NAME)`)
+ 

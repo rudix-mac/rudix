@@ -1,35 +1,35 @@
-# $Id: Makefile,v 1.2 2009/03/05 20:00:40 ruda Exp $
-
 # Full-featured text WWW browser
 # http://elinks.cz/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		ELinks $(version)
 NAME=		elinks
-VERSION=	0.11.5
-REVISION=	1
+VERSION=	0.11.7
+REVISION=	0
 URL=		http://elinks.or.cz/download/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-include ../../Library/Rules.mk
+ifdef WITHOUT_NLS
+NLS=		--disable-nls
+else
+NLS=		--enable-nls
+DEPENDS+=	/usr/local/lib/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
+	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.lib.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS_PPC)" $(configure) \
-		--cache-file=$(PORTDIR)/config.cache.ppc \
-		--without-x ; $(make)
-	cd $(BUILDDIR) ; mv src/elinks src/elinks-ppc ; make clean
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS_INTEL)" $(configure) \
-		--cache-file=$(PORTDIR)/config.cache.i386 \
-		--without-x ; $(make)
-	lipo -create \
-		-arch ppc $(BUILDDIR)/src/elinks-ppc \
-		-arch i386 $(BUILDDIR)/src/elinks \
-		-o $(BUILDDIR)/src/elinks
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(NLS) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -42,6 +42,7 @@ install: build
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make test
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(TOUCH) test
