@@ -56,13 +56,13 @@ install: build
 	$(TOUCH) install
 
 test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \ 
-		lipo $$x -verify_arch i386 ppc7400 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \ 
-		lipo $$x -verify_arch i386 ppc7400 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
