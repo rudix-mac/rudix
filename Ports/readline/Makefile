@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		GNU Readline $(VERSION)
 NAME=		readline
 VERSION=	6.0
-REVISION=	1
+REVISION=	2
 URL=		ftp://ftp.cwru.edu/pub/bash/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -42,7 +42,9 @@ endif
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) install
