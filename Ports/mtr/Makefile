@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
 # Matt's traceroute - network diagnostic tool
 # http://www.bitwizard.nl/mtr/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		MTR $(VERSION)
 NAME=		mtr
 VERSION=	0.75
-REVISION=	2
+REVISION=	3
 URL=		ftp://ftp.bitwizard.nl/mtr/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -18,9 +17,9 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking \
-		--without-gtk ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS) -lresolv" \
+	$(configure) \
+		--disable-dependency-tracking --without-gtk ; $(make)
 	$(TOUCH) build
 
 install: build
