@@ -1,26 +1,23 @@
-# $Id: Makefile,v 1.2 2009/03/22 20:51:42 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # High-performance HTTP accelerator
 # http://varnish.projects.linpro.no/
+
+include ../../Library/Rules.mk
 
 TITLE=		Varnish $(VERSION)
 NAME=		varnish
 VERSION=	2.0.4
-REVISION=	0
-URL=		$(SOURCEFORGE)varnish
+REVISION=	1
+URL=		http://downloads.sourceforge.net/project/varnish/varnish/$(VERSION)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch -p0 < $(PORTDIR)/daemonize.patch
+	patch -d $(BUILDDIR) -p0 < $(PORTDIR)/daemonize.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -36,9 +33,13 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	cd $(BUIDDIR) ; make check
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
