@@ -4,9 +4,10 @@
 
 include ../../Library/Rules.mk
 
+TITLE=		pkg-config $(VERSION)
 NAME=		pkg-config
 VERSION=	0.23
-REVISION=	3
+REVISION=	4
 URL=		http://pkgconfig.freedesktop.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -16,8 +17,8 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking; $(make)
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking; $(make)
 	$(TOUCH) build
 
 install: build
@@ -28,5 +29,5 @@ install: build
 	$(TOUCH) install
 
 test: install
-	lipo $(INSTALLDIR)/usr/local/bin/pkg-config -verify_arch i386 ppc7400
+	lipo $(INSTALLDIR)/usr/local/bin/pkg-config -verify_arch i386 x86_64
 	$(TOUCH) test
