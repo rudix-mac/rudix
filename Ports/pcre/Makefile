@@ -1,13 +1,11 @@
-# $Id: Makefile,v 1.2 2009/03/16 02:30:40 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # Perl-compatible regular expression library
 # http://www.pcre.org/
 
+include ../../Library/Rules.mk
+
 TITLE=		PCRE $(VERSION)
 NAME=		pcre
-VERSION=	7.9
+VERSION=	8.00
 REVISION=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -17,22 +15,25 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" \
+	$(configure) \
 		--disable-dependency-tracking \
 		--enable-utf8 ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; ./RunTest
 	$(TOUCH) test
