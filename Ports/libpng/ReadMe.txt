@@ -1,3 +1,0 @@
-Library for manipulating PNG images
-
-Libpng (PNG library) is a collection of routines used to create and manipulate PNG format graphics files. The PNG format was designed as a replacement for GIF and, to a lesser extent, TIFF, with many improvements and extensions.

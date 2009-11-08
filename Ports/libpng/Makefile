@@ -1,13 +1,12 @@
-# $Id: Makefile,v 1.3 2009/07/12 21:16:06 ruda Exp $
-
 # Library for manipulating PNG images
 # http://www.libpng.org/pub/png/
 # ?
 
+TITLE=		PNG library $(VERSION)
 NAME=		libpng
-VERSION=	1.2.37
+VERSION=	1.2.40
 REVISION=	0
-URL=		$(SOURCEFORGE)libpng
+URL=		ftp://ftp.simplesystems.org/pub/libpng/png/src
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 include ../../Library/Rules.mk
@@ -17,20 +16,22 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking  ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking  ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ANNOUNCE,CHANGES,KNOWNBUG,LICENSE,README,TODO} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
