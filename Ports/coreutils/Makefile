@@ -1,22 +1,21 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
 # GNU core utilities
 # http://www.gnu.org/software/coreutils/
 # GPL
 
-NAME=		coreutils
-VERSION=	7.4
-REVISION=	0
-URL=		$(GNU)/gnu/coreutils/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
 
+TITLE=		GNU Core Utilities $(VERSION)
+NAME=		coreutils
+VERSION=	7.6
+REVISION=	0
+URL=		http://ftp.gnu.org/gnu/coreutils/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
 ifdef WITHOUT_NLS
-NLS=		--disable-nls
+CONFIGURE_OPTS=		--disable-nls
 else
-DEPENDS+=	/usr/local/lib/libintl.dylib
-NLS=		--enable-nls
+CONFIGURE_OPTS=		--enable-nls
+DEPENDS+=		/usr/local/lib/libintl.la
 endif
 
 ifdef WITH_STATIC_NLS
@@ -29,10 +28,10 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
+	$(configure) $(CONFIGURE_OPTS) \
 		jm_cv_func_svid_putenv=yes \
 		--disable-dependency-tracking \
-		--program-prefix=gnu $(NLS) ; $(make)
+		--program-prefix=gnu ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -44,10 +43,11 @@ install: build
 	$(PORTDIR)/mklinks.sh $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/gnu*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/gnu*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
