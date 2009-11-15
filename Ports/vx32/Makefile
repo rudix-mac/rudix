@@ -7,12 +7,13 @@ include ../../Library/Rules.mk
 TITLE=		Vx32 $(VERSION)
 NAME=		vx32
 VERSION=	0.12
-REVISION=	0intel
+REVISION=	1
 URL=		http://pdos.csail.mit.edu/~baford/vm/release/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
+	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/snowleopard.patch
 	$(TOUCH) prep
 
 build: prep
