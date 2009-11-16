@@ -1,23 +1,34 @@
-# $Id: Makefile,v 1.2 2009/03/06 13:52:29 ruda Exp $
-
 # Finds and then operates on files
 # http://www.gnu.org/software/findutils/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Find Utilities $(VERSION)
 NAME=		findutils
-VERSION=	4.4.0
-REVISION=	4
-URL=		$(GNU)/gnu/findutils/
+VERSION=	4.4.2
+REVISION=	0
+URL=		http://ftp.gnu.org/gnu/findutils/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
+ifdef WITHOUT_NLS
+NLS=		--disable-nls
+else
+DEPENDS+=	/usr/local/lib/libintl.la
+NLS=		--enable-nls
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) \
 		--disable-dependency-tracking \
 		--program-prefix=gnu \
 		--with-included-regex ; $(make)
@@ -33,12 +44,14 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip $(INSTALLDIR)/usr/local/libexec/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/libexec/*
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/*"
 	$(TOUCH) test
