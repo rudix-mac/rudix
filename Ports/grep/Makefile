@@ -1,22 +1,25 @@
-# $Id: Makefile,v 1.2 2009/03/05 23:32:25 ruda Exp $
-
 # GNU versions of grep pattern matching utilities
 # http://www.gnu.org/software/grep/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Grep $(VERSION)
 NAME=		grep
 VERSION=	2.5.4
-REVISION=	0
-URL=		$(GNU)/gnu/grep/
+REVISION=	1
+URL=		http://ftp.gnu.org/gnu/grep/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
 else
-DEPENDS+=	/usr/local/lib/libintl.dylib
+DEPENDS+=	/usr/local/lib/libintl.la
 NLS=		--enable-nls
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 prep: retrieve
@@ -25,8 +28,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) \
 		--disable-dependency-tracking \
 		--program-prefix=gnu ; $(make)
 	$(TOUCH) build
@@ -41,10 +44,11 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	#cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(TOUCH) install
