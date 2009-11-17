@@ -4,22 +4,22 @@
 
 include ../../Library/Rules.mk
 
+TITLE=		Rsync $(VERSION)
 NAME=		rsync
 VERSION=	3.0.6
-REVISION=	0
+REVISION=	1
 URL=		http://samba.org/ftp/rsync/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-DEPENDS=	/usr/local/lib/libpopt.la
+#DEPENDS=	/usr/local/lib/libpopt.la
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--with-rsyncd-conf=/usr/local/etc ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --with-rsyncd-conf=/usr/local/etc ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -34,5 +34,6 @@ install: build
 
 test: install
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
