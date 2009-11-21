@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		libevent $(VERSION)
 NAME=		libevent
-VERSION=	1.4.12
+VERSION=	1.4.13
 REVISION=	0
 URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
@@ -21,8 +21,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIGURE_OPTS); $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS); $(make)
 	$(TOUCH) build
 
 install: build
@@ -38,9 +38,9 @@ endif
 test: install
 ifndef STATIC_ONLY
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make verify
 	$(TOUCH) test
