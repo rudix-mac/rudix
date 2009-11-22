@@ -6,9 +6,9 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Autoconf $(VERSION)
 NAME=		autoconf
-VERSION=	2.64
+VERSION=	2.65
 REVISION=	0
-URL=		$(GNU)/gnu/autoconf/
+URL=		http://ftp.gnu.org/gnu/autoconf/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
@@ -16,7 +16,7 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; $(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
