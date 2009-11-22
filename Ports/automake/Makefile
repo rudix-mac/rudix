@@ -7,16 +7,20 @@ include ../../Library/Rules.mk
 TITLE=		GNU Automake $(VERSION)
 NAME=		automake
 VERSION=	1.11
-REVISION=	0
-URL=		$(GNU)/gnu/automake/
+REVISION=	1
+URL=		http://ftp.gnu.org/gnu/automake/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+# Autoconf 2.61a-341 or better is required.
+DEPENDS+=	/usr/local/bin/autoconf
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env AUTOCONF=/usr/local/bin/autoconf \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
