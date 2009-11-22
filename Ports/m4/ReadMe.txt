@@ -1,3 +1,0 @@
-GNU m4
-
-GNU m4 is an implementation of the traditional UNIX macro processor.  It is mostly SVR4 compatible, although it has some extensions (for example, handling more than 9 positional parameters to macros).  m4 also has builtin functions for including files, running shell commands, doing arithmetic, etc.  Autoconf needs GNU m4 for generating configure scripts, but not for running them.

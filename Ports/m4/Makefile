@@ -1,25 +1,25 @@
-# $Id: Makefile,v 1.3 2009/05/08 01:33:11 ruda Exp $
-
 # GNU m4
 # http://www.gnu.org/software/m4/
 # GPL
 
-NAME=		m4
-VERSION=	1.4.13
-REVISION=	0
-URL=		$(GNU)/gnu/m4/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+# NOTE: GNU m4 doesn't requires gettext
 
 include ../../Library/Rules.mk
+
+TITLE=		GNU M4 $(VERSION)
+NAME=		m4
+VERSION=	1.4.13
+REVISION=	1
+URL=		http://ftp.gnu.org/gnu/m4/
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -30,10 +30,11 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(TOUCH) install
