@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.3 2009/03/01 22:43:41 ruda Exp $
-
 # Code browsing program
 # http://cscope.sourceforge.net/
 # BSD
 
-NAME=		cscope
-VERSION=	15.7
-REVISION=	0
-URL=		$(SOURCEFORGE)cscope
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
 include ../../Library/Rules.mk
+
+TITLE=		Cscope $(VERSION)
+NAME=		cscope
+VERSION=	15.7a
+REVISION=	0
+URL=		http://downloads.sourceforge.net/project/cscope/cscope/$(VERSION)
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -18,14 +17,17 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure)  \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure)  --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
+
+test: install
+	lipo $(INSTALLDIR)/usr/local/bin/cscope -verify_arch i386 x86_64
+	$(TOUCH) test
