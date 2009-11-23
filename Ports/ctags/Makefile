@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/05 02:34:46 ruda Exp $
-
 # Multilanguage implementation of ctags
 # http://ctags.sourceforge.net/
 # GPL
 
-NAME=		ctags
-VERSION=	5.7
-REVISION=	4
-URL=		$(SOURCEFORGE)ctags
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
+
+TITLE=		Exuberant Ctags $(VERSION)
+NAME=		ctags
+VERSION=	5.8
+REVISION=	0
+URL=		http://prdownloads.sourceforge.net/ctags/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -18,25 +17,25 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) \
-		--program-prefix=exuberant- ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --program-prefix=exuberant- ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; \
 	make	prefix=$(INSTALLDIR)/usr/local \
 		mandir=$(INSTALLDIR)/usr/local/share/man install
-	cd $(INSTALLDIR)/usr/local/bin/ ; ln -sf exuberant-ctags ctags ; \
-	ln -sf exuberant-ctags etags
+	cd $(INSTALLDIR)/usr/local/bin/ ; \
+	ln -sf exuberant-ctags ctags ; ln -sf exuberant-ctags etags
 	cd $(INSTALLDIR)/usr/local/share/man/man1 ; \
 	ln -sf exuberant-ctags.1 ctags.1 ; ln -sf exuberant-ctags.1 etags.1
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,FAQ,NEWS,README} $(INSTALLDOCDIR)
 	install	-m 644 $(BUILDDIR)/*.html $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
