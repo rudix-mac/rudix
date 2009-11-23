@@ -1,34 +1,36 @@
 # Unit test framework for C programs
-# http://check.sf.net/
+# http://check.sourceforge.net/
 # LGPL
 
-NAME=		check
-VERSION=	0.9.6
-REVISION=	0
-URL=		$(SOURCEFORGE)check
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
+
+TITLE=		Check $(VERSION)
+NAME=		check
+VERSION=	0.9.8
+REVISION=	0
+URL=		http://prdownloads.sourceforge.net/check
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking  ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking  ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	#cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
