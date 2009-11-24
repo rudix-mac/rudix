@@ -1,3 +1,4 @@
+# Apache Portable Runtime library
 # http://apr.apache.org/
 # Apache License
 
@@ -5,9 +6,9 @@ include ../../Library/Rules.mk
 
 TITLE=		Apache Portable Runtime $(VERSION)
 NAME=		apr
-VERSION=	1.3.8
+VERSION=	1.3.9
 REVISION=	0
-URL=		http://www.apache.org/dist/apr/
+URL=		http://www.apache.org/dist/apr
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
@@ -15,8 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAG)" \
+	$(configure) \
 		--prefix=/usr/local \
 		--with-installbuilddir=/usr/local/share/apr-1/build-1 \
 		--enable-threads ; $(make)
@@ -33,8 +34,8 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR)/test ; make all ; ./testall -v
 	$(TOUCH) test
