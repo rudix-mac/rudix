@@ -1,3 +1,0 @@
-Companion library to APR
-
-The APR-util provides a number of helpful abstractions on top of APR.

@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 TITLE=		APR Utility $(VERSION)
 NAME=		apr-util
 VERSION=	1.3.9
-REVISION=	0
+REVISION=	1
 URL=		http://www.apache.org/dist/apr/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 DEPENDS=	/usr/local/bin/apr-1-config
@@ -16,8 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) \
 		--prefix=/usr/local \
 		--with-apr=/usr/local/bin/apr-1-config ; $(make)
 	$(TOUCH) build
@@ -34,12 +34,12 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do  \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.a) ; do \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR)/test ; make all ; ./testall -v
 	$(TOUCH) test
