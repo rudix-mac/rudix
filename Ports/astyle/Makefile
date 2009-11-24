@@ -7,18 +7,19 @@ include ../../Library/Rules.mk
 TITLE=		Artistic Style $(VERSION)
 NAME=		astyle
 VERSION=	1.23
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)_$(VERSION)_macosx.tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME) $(NAME)-$(VERSION)
-	cd $(BUILDDIR)/buildmac ; patch < $(PORTDIR)/makefile.patch
+	patch -d $(BUILDDIR)/buildmac < $(PORTDIR)/makefile.patch
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR)/buildmac ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+	cd $(BUILDDIR)/buildmac ; \
+	$(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
@@ -29,5 +30,5 @@ install: build
 	$(TOUCH) install
 
 test: build
-	lipo $(INSTALLDIR)/usr/local/bin/astyle -verify_arch i386 ppc7400
+	lipo $(INSTALLDIR)/usr/local/bin/astyle -verify_arch i386 x86_64
 	$(TOUCH) test
