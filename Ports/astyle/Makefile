@@ -1,6 +1,6 @@
 # Indenter and formatter of C/C++/Java source files
 # http://astyle.sourceforge.net/
-# GPL
+# LGPL
 
 include ../../Library/Rules.mk
 
