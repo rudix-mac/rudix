@@ -1,3 +1,0 @@
-Extracts files from Microsoft CAB archives
-
-Cabextract is Free Software for extracting Microsoft cabinet files, also called .CAB files, on UNIX or UNIX-like systems. cabextract is distributed under the GPL license. It is based on the portable LGPL libmspack library. cabextract supports all special features and all compression formats of Microsoft cabinet files.

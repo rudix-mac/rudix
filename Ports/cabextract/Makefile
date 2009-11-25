@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		cabextract $(VERSION)
 NAME=		cabextract
 VERSION=	1.2
-REVISION=	6
+REVISION=	7
 URL=		http://www.cabextract.org.uk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -16,7 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -30,5 +31,5 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
