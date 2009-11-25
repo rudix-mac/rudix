@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		cadaver $(VERSION)
 NAME=		cadaver
 VERSION=	0.23.2
-REVISION=	5
+REVISION=	6
 URL=		http://www.webdav.org/cadaver/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -42,5 +42,5 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
