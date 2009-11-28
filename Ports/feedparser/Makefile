@@ -6,12 +6,12 @@ include ../../Library/Rules.mk
 TITLE=		Universal Feed Parser $(VERSION)
 NAME=		feedparser
 VERSION=	4.1
-REVISION=	4
+REVISION=	5
 URL=		http://feedparser.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).zip
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	mkdir -p $(BUILDDIR) ; cd $(BUILDDIR) ; unzip $(PORTDIR)/$(SOURCE)
@@ -25,8 +25,9 @@ install: build
 	cd $(BUILDDIR) ; \
 	$(PYTHON) setup.py install \
 		--no-compile \
-		--home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE,README} $(INSTALLDOCDIR)
