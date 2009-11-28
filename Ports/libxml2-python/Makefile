@@ -4,13 +4,13 @@
 include ../../Library/Rules.mk
 
 NAME=		libxml2-python
-VERSION=	2.6.9
+VERSION=	2.6.21
 REVISION=	0
 URL=		ftp://xmlsoft.org/libxml2/python/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
@@ -21,10 +21,12 @@ build: prep $(DEPENDS)
 	$(TOUCH) build
 
 install: build
-	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+	cd $(BUILDDIR) ; \
+	$(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-                --install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{README,TODO,*.xml,*.txt} $(INSTALLDOCDIR)
@@ -32,5 +34,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*.so"
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*.so) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
