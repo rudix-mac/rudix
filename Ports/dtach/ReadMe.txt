@@ -1,3 +1,0 @@
-Tiny program emulating the detach feature of screen
-
-Dtach is a tiny program that emulates the detach feature of screen, allowing you to run a program in an environment that is protected from the controlling terminal and attach to it later. dtach does not keep track of the contents of the screen, and thus works best with programs that know how to redraw themselves.

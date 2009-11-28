@@ -1,24 +1,23 @@
-# $Id: Makefile,v 1.2 2009/03/05 19:39:00 ruda Exp $
-
 # Tiny program emulating the detach feature of screen
 # http://dtach.sourceforge.net
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		dtach $(VERSION)
 NAME=		dtach
 VERSION=	0.8
-REVISION=	3
-URL=		$(SOURCEFORGE)dtach
+REVISION=	4
+URL=		http://downloads.sourceforge.net/dtach
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -28,9 +27,10 @@ install: build
 	install -m 644 $(BUILDDIR)/dtach.1 $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
