@@ -1,5 +1,6 @@
 # Python bindings for libxml2
 # http://xmlsoft.org/python.html
+# MIT
 
 include ../../Library/Rules.mk
 
