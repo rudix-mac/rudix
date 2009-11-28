@@ -11,8 +11,8 @@ REVISION=	0
 URL=		http://path/to/download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
@@ -23,10 +23,12 @@ build: prep $(DEPENDS)
 	$(TOUCH) build
 
 install: build
-	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+	cd $(BUILDDIR) ; \
+	$(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+                --root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
 	$(TOUCH) install
