@@ -25,8 +25,9 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR)
+		--prefix=/usr/local
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(TOUCH) install
 
