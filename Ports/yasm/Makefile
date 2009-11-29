@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		Yasm $(VERSION)
 NAME=		yasm
 VERSION=	0.8.0
-REVISION=	0intel
+REVISION=	1
 URL=		http://www.tortall.net/projects/yasm/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -16,7 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
