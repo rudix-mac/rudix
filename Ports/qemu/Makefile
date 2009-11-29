@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		QEMU $(VERSION)
 NAME=		qemu
-VERSION=	0.10.5
-REVISION=	0intel
+VERSION=	0.10.6
+REVISION=	0
 URL=		http://download.savannah.gnu.org/releases/qemu/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -16,8 +16,11 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./configure --enable-cocoa \
-		--disable-darwin-user --disable-bsd-user ; $(make)
+	cd $(BUILDDIR) ; \
+	./configure \
+		--enable-cocoa \
+		--disable-darwin-user \
+		--disable-bsd-user ; $(make)
 	$(TOUCH) build
 
 install: build
