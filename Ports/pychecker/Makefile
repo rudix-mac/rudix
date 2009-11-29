@@ -7,12 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		PyChecker $(VERSION)
 NAME=		pychecker
 VERSION=	0.8.18
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar xvf $(SOURCE)
@@ -25,8 +25,9 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDIR)/usr/local/share/doc/$(NAME)
 	install -m 644 $(BUILDDIR)/{COPYRIGHT,ChangeLog,KNOWN_BUGS,MAINTAINERS,NEWS,README,TODO,VERSION} $(INSTALLDIR)/usr/local/share/doc/$(NAME)
