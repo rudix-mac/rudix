@@ -1,0 +1,13 @@
+--- setup.py.orig	2009-11-30 21:24:39.000000000 -0200
++++ setup.py	2009-11-30 21:25:07.000000000 -0200
+@@ -97,8 +97,8 @@
+         else:
+             extra_compile_args.append(e)
+     libs = split_quoted(
+-        os.popen("'%s' --libs" % CURL_CONFIG).read()+\
+-        os.popen("'%s' --static-libs" % CURL_CONFIG).read())
++        os.popen("'%s' --libs" % CURL_CONFIG).read()
++    )
+     for e in libs:
+         if e[:2] == "-l":
+             libraries.append(e[2:])
