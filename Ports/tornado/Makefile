@@ -1,6 +1,6 @@
 # Scalable, non-blocking web server 
-# http://python.org/
-# Python
+# http://www.tornadoweb.org/
+# Python License
 
 include ../../Library/Rules.mk
 
