@@ -1,3 +1,0 @@
-Client-side implementation of the rsync algorith
-
-A file transfer program to download files from remote web servers. If a previous version of a file is available locally, zsync will only download changed parts and hereby minimise the download volume. The algorithm is the same as used by rsync(1), but zsync does not require any server software (apart from a web server), nor does it need shell access. Instead, it uses a control file (.zsync file) that describes the file to be downloaded, which it uses to determine the blocks to fetch. This file is created once on the server (and not for each request) and sits next to actual file to download.
