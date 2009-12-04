@@ -1,23 +1,21 @@
-# $Id: Makefile,v 1.2 2009/03/21 20:59:56 ruda Exp $
-
 # Mpeg audio 1/2 layer 1, 2 and 3 player
 # http://www.mpg123.de/
-
-NAME=		mpg123
-VERSION=	1.6.4
-REVISION=	0
-URL=		$(SOURCEFORGE)mpg123
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+# 
 
 include ../../Library/Rules.mk
+
+NAME=		mpg123
+VERSION=	1.9.2
+REVISION=	0
+URL=		http://downloads.sourceforge.net/mpg123
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
