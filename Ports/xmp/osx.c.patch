@@ -1,0 +1,10 @@
+--- osx.c.orig	2009-12-05 00:43:39.000000000 -0200
++++ osx.c	2009-12-05 00:54:50.000000000 -0200
+@@ -12,6 +12,7 @@
+ #endif
+ 
+ #include <CoreAudio/CoreAudio.h>
++#include <CoreServices/CoreServices.h>
+ #include <AudioUnit/AudioUnit.h>
+ #include <AudioToolbox/AudioToolbox.h>
+ #include <unistd.h>
