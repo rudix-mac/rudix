@@ -1,24 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/05 22:22:38 ruda Exp $
-
 # Gnuplot is a command-driven interactive function plotting program
 # http://www.gnuplot.info/
 # GPL
 
-NAME=		gnuplot
-VERSION=	4.2.4
-REVISION=	1
-URL=		$(SOURCEFORGE)gnuplot
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
+
+NAME=		gnuplot
+VERSION=	4.2.6
+REVISION=	0
+URL=		http://downloads.sourceforge.net/gnuplot
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" \
+	$(configure) \
 		--disable-dependency-tracking \
 		--with-readline=builtin ; $(make)
 	$(TOUCH) build
