@@ -1,31 +1,23 @@
-# $Id: Makefile,v 1.2 2009/03/17 01:00:22 ruda Exp $
-
 # Extended module player
 # http://xmp.sourceforge.net/
 # GPL
 
+TITLE=		XMP $(VERSION)
 NAME=		xmp
-VERSION=	2.5.1
-REVISION=	3
-URL=		$(SOURCEFORGE)xmp
+VERSION=	2.7.1
+REVISION=	0
+URL=		http://downloads.sourceforge.net/xmp
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
+	patch -d $(BUILDDIR)/src/drivers < $(PORTDIR)/osx.c.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS_PPC)" $(configure) \
-		--cache-file=$(PORTDIR)/config.cache.ppc ; \
-	make LDFLAGS="$(LDFLAGS_PPC)"
-	cd $(BUILDDIR) ; mv src/main/a.out src/main/xmp-ppc ; make clean
-	cd $(BUILDDIR) ; env FLAGS="$(CFLAGS_INTEL)" $(configure) \
-		--cache-file=$(PORTDIR)/config.cache.i386 ; \
-	make
-	cd $(BUILDDIR)/src/main ; \
-	lipo -create -arch i386 xmp -arch ppc xmp-ppc -o xmp
+	cd $(BUILDDIR) ; $(configure) ; make
 	$(TOUCH) build
 
 install: build

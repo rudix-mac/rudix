@@ -1,3 +1,0 @@
-Extended module player
-
-Xmp is a multi-format module player for UNIX.  It supports more than 40 module formats, such as Soundtracker, Impulse Tracker, etc.
