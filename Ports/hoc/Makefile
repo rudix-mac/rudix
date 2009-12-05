@@ -1,11 +1,9 @@
-# $Id: Makefile,v 1.2 2009/03/05 23:52:09 ruda Exp $
-
 # From Kernighan and Pike: High Order Calculator
 # http://cm.bell-labs.com/cm/cs/upe/index.html
 
 NAME=		hoc
 VERSION=	1.1
-REVISION=	4
+REVISION=	5
 URL=		http://netlib.bell-labs.com/~bwk/
 SOURCE=		$(NAME).sh
 
@@ -19,7 +17,7 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; make CFLAGS="$(CFLAGS)"
+	cd $(BUILDDIR) ; make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
@@ -30,5 +28,5 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	lipo $(INSTALLDIR)/usr/local/bin/hoc -verify_arch i386 x86_64
 	$(TOUCH) test
