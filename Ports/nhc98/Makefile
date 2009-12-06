@@ -24,14 +24,11 @@ build: prep $(DEPENDS)
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
+	perl -pi -e "s!$(BUILDDIR)/script/nhc98!/usr/local/bin/nhc98! ; s!$(BUILDDIR)/include!/usr/local/include/nhc98!" \
+		$(INSTALLDIR)/usr/local/lib/hmake/ix86-Darwin-10.2.0/hmakerc
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYRIGHT,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
