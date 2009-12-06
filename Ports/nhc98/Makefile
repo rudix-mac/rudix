@@ -18,7 +18,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure \
-		--mandir=/usr/local/share/man \
+		--mandir=/usr/local/share/man/man1 \
 		--docdir=/usr/local/share/doc/nhc98 ; make
 	$(TOUCH) build
 
