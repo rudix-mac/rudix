@@ -1,10 +1,11 @@
+# C/C++ client library to the memcached server 
 # http://tangent.org/552/libmemcached.html
 # BSD
 
 include ../../Library/Rules.mk
 
 NAME=		libmemcached
-VERSION=	0.31
+VERSION=	0.35
 REVISION=	0
 URL=		http://download.tangent.org/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -13,11 +14,12 @@ DEPENDS=	/usr/local/include/memcached/protocol_binary.h
 
 prep: retrieve
 	tar zxvf $(SOURCE)
+	patch -d $(BUILDDIR)/tests < $(PORTDIR)/testscxx.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure)  \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure)  --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -31,10 +33,10 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 ppc ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make test
 	$(TOUCH) test
