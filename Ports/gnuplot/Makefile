@@ -6,16 +6,18 @@ include ../../Library/Rules.mk
 
 NAME=		gnuplot
 VERSION=	4.2.6
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/gnuplot
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+DEPENDS=	/usr/local/bin/gdlib-config
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--disable-dependency-tracking \
 		--with-readline=builtin ; $(make)
