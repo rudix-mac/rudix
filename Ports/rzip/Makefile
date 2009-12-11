@@ -6,7 +6,7 @@
 
 NAME=		rzip
 VERSION=	2.1
-REVISION=	12
+REVISION=	13
 URL=		http://rzip.samba.org/ftp/rzip/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -17,7 +17,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
