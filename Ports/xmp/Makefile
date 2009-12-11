@@ -4,7 +4,7 @@
 
 TITLE=		XMP $(VERSION)
 NAME=		xmp
-VERSION=	2.7.1
+VERSION=	3.0.0
 REVISION=	0
 URL=		http://downloads.sourceforge.net/xmp
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -13,11 +13,12 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR)/src/drivers < $(PORTDIR)/osx.c.patch
+	#patch -d $(BUILDDIR)/src/drivers < $(PORTDIR)/osx.c.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) ; make
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make) LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
