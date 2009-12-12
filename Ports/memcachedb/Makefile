@@ -1,8 +1,7 @@
-# $Id: Makefile,v 1.2 2009/03/14 00:18:42 ruda Exp $
-
 # Distributed key-value storage system
+# http://memcachedb.org/
 
-HOMEPAGE=	http://memcachedb.org/
+include ../../Library/Rules.mk
 
 NAME=		memcachedb
 VERSION=	1.2.0
@@ -10,19 +9,16 @@ REVISION=	0
 URL=		http://memcachedb.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-DEPENDS=	/usr/local/lib/libevent.dylib
-DEPENDS+=	/usr/local/lib/libdb.dylib
-
-include ../../Library/Rules.mk
+DEPENDS=	/usr/local/lib/libevent.la
+DEPENDS+=	/usr/local/lib/libdb.a
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking  \
-		--with-bdb=/usr/local ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
