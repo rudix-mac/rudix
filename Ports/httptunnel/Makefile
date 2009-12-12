@@ -2,20 +2,22 @@
 # http://www.nocrew.org/software/httptunnel/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU httptunnel $(VERSION)
 NAME=		httptunnel
 VERSION=	3.3
-REVISION=	0
+REVISION=	1
 URL=		http://www.nocrew.org/software/httptunnel/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
