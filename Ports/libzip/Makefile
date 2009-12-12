@@ -1,12 +1,12 @@
 # C library for zip archives
 # http://nih.at/libzip/
-#
+# 
 
 include ../../Library/Rules.mk
 
 NAME=		libzip
 VERSION=	0.9
-REVISION=	0
+REVISION=	1
 URL=		http://nih.at/libzip/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -15,7 +15,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) --disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -29,7 +30,4 @@ install: build
 
 test: build
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
 	$(TOUCH) test
