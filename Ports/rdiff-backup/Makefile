@@ -1,3 +1,4 @@
+# Convenient and transparent local/remote incremental mirror/backup
 # http://rdiff-backup.nongnu.org/
 # GPL
 
@@ -5,14 +6,14 @@ include ../../Library/Rules.mk
 
 NAME=		rdiff-backup
 VERSION=	1.2.8
-REVISION=	0
+REVISION=	1
 URL=		http://savannah.nongnu.org/download/rdiff-backup/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 DEPENDS=	/usr/local/lib/librsync.la
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -26,8 +27,9 @@ install: build
 	cd $(BUILDDIR) ; \
 	$(PYTHON) setup.py install \
 		--no-compile \
-		--home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	rm -rf $(INSTALLDIR)/usr/local/share/doc/$(NAME)-$(VERSION)
 	install -d $(INSTALLDOCDIR)
