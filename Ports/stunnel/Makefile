@@ -2,22 +2,21 @@
 # http://www.stunnel.org/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		stunnel
-VERSION=	4.27
+VERSION=	4.29
 REVISION=	0
 URL=		http://www.stunnel.org/download/stunnel/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
