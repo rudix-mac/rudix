@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 NAME=		librsync
 VERSION=	0.9.7
-REVISION=	7
-URL=		$(SOURCEFORGE)librsync
+REVISION=	8
+URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 ifdef STATIC_ONLY
@@ -22,8 +22,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIGURE_OPTS) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) \
 		--disable-dependency-tracking ; $(make) LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
