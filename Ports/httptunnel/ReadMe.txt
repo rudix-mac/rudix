@@ -1,3 +1,0 @@
-httptunnel creates a bidirectional virtual data path tunneled in HTTP requests. The requests can be sent via an HTTP proxy if so desired.
-
-This can be useful for users behind restrictive firewalls.  If WWW access is allowed through an HTTP proxy, it's possible to use httptunnel and, say, telnet or PPP to connect to a computer outside the firewall.
