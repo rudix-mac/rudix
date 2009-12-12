@@ -1,12 +1,10 @@
-# $Id: Makefile,v 1.1 2009/05/12 02:05:05 ruda Exp $
-
 # Small, fast s-expression library
 # http://sexpr.sourceforge.net/
 # LGPL
 
 NAME=		sexpr
 VERSION=	1.2
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/sexpr
 SOURCE=		$(NAME)_$(VERSION).tar.gz
 
@@ -18,7 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) ; $(make) CFLAGS="$(CFLAGS)"
+	cd $(BUILDDIR) ; $(configure) ; \
+	$(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
