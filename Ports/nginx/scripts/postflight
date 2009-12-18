@@ -1,0 +1,17 @@
+#!/bin/sh
+
+install -d /usr/local/nginx/html
+[ ! -f /usr/local/nginx/html/index.html ] && \
+  install -m 644 /usr/local/nginx/html/index.html.default \
+    /usr/local/nginx/html/index.html
+[ ! -f /usr/local/nginx/html/50x.html ] && \
+  install -m 644 /usr/local/nginx/html/50x.html.default \
+    /usr/local/nginx/html/50x.html
+
+for x in fastcgi_params mime.types nginx.conf ; do \
+  [ ! -f /usr/local/nginx/conf/$x ] && \
+    install -m 644 /usr/local/nginx/conf/$x.default \
+                   /usr/local/nginx/conf/$x
+done
+
+exit 0
