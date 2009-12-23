@@ -1,12 +1,10 @@
-# $Id: Makefile,v 1.2 2009/03/22 21:57:46 ruda Exp $
-
 # GNU watch command
 # http://procps.sourceforge.net/
 # GPL
 
 NAME=		watch
 VERSION=	3.2.7
-REVISION=	11
+REVISION=	12
 URL=		http://procps.sourceforge.net/
 SOURCE=		procps-$(VERSION).tar.gz
 
