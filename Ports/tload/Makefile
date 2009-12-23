@@ -1,11 +1,10 @@
-# $Id: Makefile,v 1.2 2009/03/22 22:41:46 ruda Exp $
-
 # A gentle spin-off of procps's tload for Mac OS X
 # http://code.google.com/p/tload-macosx/
+# GPL
 
 NAME=		tload
 VERSION=	3.2.7
-REVISION=	4
+REVISION=	5
 URL=		http://tload-macosx.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -16,7 +15,7 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
+	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
