@@ -1,23 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/06 00:46:11 ruda Exp $
-
 # University of Washington IMAP4rev1/POP2/POP3 mail servers
 # http://www.washington.edu/imap/
-# Apache License
-
-NAME=		imap
-VERSION=	2007e
-REVISION=	0
-URL=		ftp://ftp.cac.washington.edu/mail/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+# Apache License 2.0
 
 include ../../Library/Rules.mk
 
+NAME=		imap
+VERSION=	2007e
+REVISION=	2
+URL=		ftp://ftp.cac.washington.edu/mail/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
 prep: retrieve
 	tar zxvf $(SOURCE)
+	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/pam.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(make) EXTRACFLAGS="$(CFLAGS)" oxp
+	cd $(BUILDDIR) ; make EXTRACFLAGS="$(CFLAGS)" oxp
 	$(TOUCH) build
 
 install: build
