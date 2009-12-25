@@ -1,14 +1,13 @@
-# $Id: Makefile,v 1.2 2009/03/21 14:47:30 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# 
 # http://httpd.apache.org/
 # Apache
 
+include ../../Library/Rules.mk
+
 TITLE=		Apache HTTP Server $(VERSION)
 NAME=		httpd
-VERSION=	2.2.11
-REVISION=	1
+VERSION=	2.2.14
+REVISION=	0
 URL=		http://www.apache.org/dist/httpd/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -18,8 +17,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) \
 		--enable-layout=Rudix \
 		--enable-ssl \
 		--enable-modules=all \
