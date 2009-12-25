@@ -1,16 +1,14 @@
-# $Id: Makefile,v 1.2 2009/03/05 23:43:53 ruda Exp $
-
 # View and edit files in hexadecimal or ASCII
 # http://www.chez.com/prigaux/hexedit.html
-# 
+# GPL
+
+include ../../Library/Rules.mk
 
 NAME=		hexedit
 VERSION=	1.2.12
-REVISION=	3
+REVISION=	4
 URL=		http://www.chez.com/prigaux/
 SOURCE=		$(NAME)-$(VERSION).src.tgz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -18,8 +16,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
