@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/06 01:10:13 ruda Exp $
-
 # Lame ain't an MP3 encoder
 # http://lame.sourceforge.net/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		LAME $(VERSION)
 NAME=		lame
 VERSION=	3.98.2
-REVISION=	2intel
-URL=		$(SOURCEFORGE)lame
+REVISION=	3
+URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-398-2.tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -18,8 +17,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS_INTEL)" $(configure) \
-		--disable-dependency-tracking  ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking  ; $(make)
 	$(TOUCH) build
 
 install: build
