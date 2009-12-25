@@ -1,11 +1,9 @@
-# $Id: Makefile,v 1.2 2009/03/06 00:55:38 ruda Exp $
-
 # Simple DYNAMIC DNS client
 # http://www.dyndns.com/support/clients/unix.html
 
 NAME=		inadyn
 VERSION=	1.96.2
-REVISION=	8
+REVISION=	9
 URL=		http://cdn.dyndns.com
 SOURCE=		$(NAME).zip
 
