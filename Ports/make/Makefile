@@ -1,21 +1,34 @@
-# $Id: Makefile,v 1.2 2009/03/21 20:13:17 ruda Exp $
-
-HOMEPAGE=	http://www.gnu.org/software/make/
-
-NAME=		make
-VERSION=	3.81
-REVISION=	2
-URL=		$(GNU)/gnu/make/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+# GNU Make
+# http://www.gnu.org/software/make/
+# GPLv3
 
 include ../../Library/Rules.mk
+
+TITLE=		GNU Make $(VERSION)
+NAME=		make
+VERSION=	3.81
+REVISION=	3
+URL=		http://ftp.gnu.org/gnu/make/
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+ifdef WITHOUT_NLS
+CONFIG_OPTS=	--disable-nls
+else
+CONFIG_OPTS=	--enable-nls
+DEPENDS+=	/usr/local/lib/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--program-prefix="gnu" ; $(make)
 	$(TOUCH) build
@@ -31,6 +44,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	#cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
