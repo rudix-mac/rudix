@@ -1,21 +1,20 @@
-# $Id: Makefile,v 1.3 2009/05/10 15:49:40 ruda Exp $
-
 # HTTP and WebDAV client library, with C interface
 # http://www.webdav.org/neon/
+# LGPL
+
+include ../../Library/Rules.mk
 
 TITLE=		neon $(VERSION)
 NAME=		neon
-VERSION=	0.28.5
+VERSION=	0.29.1
 REVISION=	0
 URL=		http://www.webdav.org/neon/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
-
 ifdef WITHOUT_NLS
-NLS=		--disable-nls
+CONFIG_OPTS=	--disable-nls
 else
-NLS=		--enable-nls
+CONFIG_OPTS=	--enable-nls
 DEPENDS=	/usr/local/lib/libintl.la
 endif
 
@@ -24,7 +23,9 @@ LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 ifdef STATIC_ONLY
-STATIC=		--enable-static --disable-shared
+CONFIG_OPTS=	--enable-static --disable-shared
+else
+CONFIG_OPTS=	--enable-static --enable-shared
 endif
 
 prep: retrieve
@@ -33,10 +34,11 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) \
 		--enable-threadsafe-ssl \
-		--with-ssl --with-expat $(NLS); $(make)
+		--with-ssl \
+		--with-expat ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -52,8 +54,10 @@ endif
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
-	#cd $(BUILDDIR)/test ; make check
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR)/test ; make check
 	$(TOUCH) test
