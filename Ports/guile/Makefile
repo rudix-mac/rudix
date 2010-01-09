@@ -2,13 +2,13 @@
 # http://www.gnu.org/software/guile/
 # LGPL
 
+include ../../Library/Rules.mk
+
 NAME=		guile
 VERSION=	1.8.7
-REVISION=	1
-URL=		$(GNU)/gnu/guile/
+REVISION=	2
+URL=		http://ftp.gnu.org/gnu/guile/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
 NLS=            --disable-nls
@@ -23,21 +23,20 @@ endif
 
 ifdef WITH_STATIC_GMP
 # http://www.mail-archive.com/guile-devel@gnu.org/msg03413.html
-LDFLAGS+=	-Wl,-read_only_relocs -Wl,suppress
+LDFLAGS+=	-read_only_relocs suppress
 endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR)/libguile ; \
-		patch < $(PORTDIR)/libguile-Makefile.in.patch
-	cd $(BUILDDIR)/guile-readline ; \
-		patch < $(PORTDIR)/readline-Makefile.in.patch
+	#cd $(BUILDDIR)/libguile ; \
+	#	patch < $(PORTDIR)/libguile-Makefile.in.patch
+	#cd $(BUILDDIR)/guile-readline ; \
+	#	patch < $(PORTDIR)/readline-Makefile.in.patch
+	patch -d $(BUILDDIR)/guile-readline < $(PORTDIR)/libedit.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(NLS) \
-		--disable-dependency-tracking ; make
+	cd $(BUILDDIR) ; $(configure) $(NLS) --disable-dependency-tracking ; make
 	$(TOUCH) build
 
 install: build
