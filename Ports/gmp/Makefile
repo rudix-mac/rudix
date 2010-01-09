@@ -19,14 +19,13 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	#patch -d $(BUILDDIR) < $(PORTDIR)/configure.patch
-	#patch -d $(BUILDDIR) < $(PORTDIR)/patch-config.guess.diff
-	#patch -d $(BUILDDIR) < $(PORTDIR)/patch-gmp-h.in.diff
+ifdef STATIC_ONLY
+	patch -d $(BUILDDIR)/tests < $(PORTDIR)/gmp-4.2.1-static-IntelMac.patch
+endif
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	$(configure) $(CONFIGURE_OPTS) --enable-cxx ; $(make)
+	cd $(BUILDDIR) ; $(configure) $(CONFIG_OPTS) --enable-cxx ; $(make)
 	$(TOUCH) build
 
 install: build
