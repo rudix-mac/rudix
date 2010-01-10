@@ -23,20 +23,19 @@ endif
 
 ifdef WITH_STATIC_GMP
 # http://www.mail-archive.com/guile-devel@gnu.org/msg03413.html
-LDFLAGS+=	-read_only_relocs suppress
+LDFLAGS=	-Wl,-read_only_relocs -Wl,suppress
 endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	#cd $(BUILDDIR)/libguile ; \
-	#	patch < $(PORTDIR)/libguile-Makefile.in.patch
-	#cd $(BUILDDIR)/guile-readline ; \
-	#	patch < $(PORTDIR)/readline-Makefile.in.patch
+	patch -d $(BUILDDIR)/libguile < $(PORTDIR)/libguile-Makefile.in.patch
+	patch -d $(BUILDDIR)/guile-readline < $(PORTDIR)/readline-Makefile.in.patch
 	patch -d $(BUILDDIR)/guile-readline < $(PORTDIR)/libedit.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) $(NLS) --disable-dependency-tracking ; make
+	cd $(BUILDDIR) ; env LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(NLS) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -50,8 +49,5 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
