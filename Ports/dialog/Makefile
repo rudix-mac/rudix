@@ -1,24 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/05 19:09:19 ruda Exp $
-
 # Display dialog boxes from shell scripts
 # http://invisible-island.net/dialog/dialog.html
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		dialog
 VERSION=	1.1-20080819
-REVISION=	1
+REVISION=	2
 URL=		ftp://invisible-island.net/dialog/
 SOURCE=		$(NAME)-$(VERSION).tgz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -30,5 +28,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
