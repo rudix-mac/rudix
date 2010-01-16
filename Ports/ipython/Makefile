@@ -1,5 +1,5 @@
 # The iPython framework
-# http://www.ipythonproject.com/
+# http://ipython.scipy.org/moin/
 # BSD
 
 # Packager: Osvaldo Santana <osantana@gmail.com>
