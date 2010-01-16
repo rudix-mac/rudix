@@ -3,9 +3,9 @@
 # LGPL
 
 NAME=		libmaa
-VERSION=	1.1.1
+VERSION=	1.2.0
 REVISION=	0
-URL=		$(SOURCEFORGE)dict
+URL=		http://downloads.sourceforge.net/dict
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 include ../../Library/Rules.mk
@@ -15,8 +15,9 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; env LIBTOOL=glibtool \
-		CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; \
+	env LIBTOOL=glibtool CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
