@@ -1,24 +1,23 @@
-# $Id: Makefile,v 1.2 2009/03/20 01:06:34 ruda Exp $
-
 # Dictionary Server Protocol client and server
 # http://sourceforge.net/projects/dict/
 # GPL
 
-NAME=		dictd
-VERSION=	1.11.1
-REVISION=	0
-URL=		$(SOURCEFORGE)dict
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
+
+NAME=		dictd
+VERSION=	1.11.2
+REVISION=	0
+URL=		http://downloads.sourceforge.net/dict
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; env LIBTOOL=glibtool \
-		CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; \
+	env LIBTOOL=glibtool CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
