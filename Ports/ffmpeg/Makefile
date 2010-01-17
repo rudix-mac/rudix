@@ -1,30 +1,27 @@
-# $Id: Makefile,v 1.2 2009/03/27 01:54:28 ruda Exp $
-
 # Audio/video converter and streamer
 # http://ffmpeg.mplayerhq.hu/
+# GPL
 
 NAME=		ffmpeg
-VERSION=	0.5
-REVISION=	0intel
+VERSION=	snapshot
+REVISION=	1.i386
 URL=		http://ffmpeg.org/releases/
-SOURCE=		ffmpeg-$(VERSION).tar.bz2
+SOURCE=		ffmpeg-export-snapshot.tar.bz2
 
 include ../../Library/Rules.mk
 
-#DEPENDS=	$(RECEIPTS)/lame.pkg
-#DEPENDS+=	$(RECEIPTS)/SDL.pkg
-
 prep: retrieve
 	tar jxvf $(SOURCE)
+	mv ffmpeg-export-????-??-?? ffmpeg-snapshot
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS_INTEL)" ./configure \
+	cd $(BUILDDIR) ; ./configure \
+		--cc="gcc-4.0" \
 		--enable-gpl \
 		--enable-shared \
 		--enable-pthreads \
-		--mandir=/usr/share/man ; $(make)
+		--mandir=/usr/local/share/man ; $(make)
 	$(TOUCH) build
 
 install: build
