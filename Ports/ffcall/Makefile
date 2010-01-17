@@ -4,7 +4,7 @@
 
 NAME=		ffcall
 VERSION=	1.10
-REVISION=	0
+REVISION=	1
 URL=		http://www.haible.de/bruno/gnu/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -15,8 +15,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) ; make # $(make) fails in install
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; make
 	$(TOUCH) build
 
 install: build
@@ -30,6 +30,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	#cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	cd $(BUILDDIR) ; make check
+	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
 	$(TOUCH) test
