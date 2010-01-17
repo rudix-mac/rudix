@@ -1,15 +1,13 @@
-# $Id: Makefile,v 1.3 2009/07/22 01:37:08 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # The Expat XML parser
 # http://expat.sourceforge.net/
+
+include ../../Library/Rules.mk
 
 TITLE=		Expat $(VERSION)
 NAME=		expat
 VERSION=	2.0.1
-REVISION=	5
-URL=		$(SOURCEFORGE)expat
+REVISION=	6
+URL=		http://downloads.sourceforge.net/expat
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
@@ -17,7 +15,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
