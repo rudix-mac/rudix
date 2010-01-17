@@ -1,15 +1,13 @@
-# $Id: Makefile,v 1.2 2009/03/06 14:20:03 ruda Exp $
-
 # Curses-based interpreter for Infocom-compatible games
 # http://frotz.sourceforge.net/
 
+include ../../Library/Rules.mk
+
 NAME=		frotz
 VERSION=	2.43
-REVISION=	4
-URL=		$(SOURCEFORGE)frotz
+REVISION=	5
+URL=		http://downloads.sourceforge.net/frotz
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
