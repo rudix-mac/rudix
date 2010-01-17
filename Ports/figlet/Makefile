@@ -2,22 +2,22 @@
 # http://www.figlet.org/
 # The Academic Free License
 
+include ../../Library/Rules.mk
+
 NAME=		figlet
 VERSION=	2.2.2
-REVISION=	0
+REVISION=	1
 URL=		ftp://ftp.figlet.org/pub/figlet/program/unix/
 SOURCE=		$(NAME)222.tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME)222 $(NAME)-$(VERSION)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/figlet-2.2.2-Makefile.patch
+	patch -d $(BUILDDIR) < $(PORTDIR)/figlet-2.2.2-Makefile.patch
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
+	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 	$(TOUCH) build
 
 install: build
