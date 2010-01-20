@@ -2,13 +2,14 @@
 # http://www.gnu.org/software/sed/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		GNU Sed $(VERSION)
 NAME=		sed
 VERSION=	4.2.1
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/sed/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
 CONFIG_OPTS=	--disable-nls
@@ -17,12 +18,16 @@ CONFIG_OPTS=	--enable-nls
 DEPENDS+=	/usr/local/lib/libintl.la
 endif
 
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--program-prefix=gnu ; $(make)
