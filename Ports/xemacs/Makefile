@@ -1,29 +1,34 @@
-# $Id: Makefile,v 1.2 2009/03/17 01:28:20 ruda Exp $
-
 # Heavily customizable and extensible editor
 # http://www.xemacs.org/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		xemacs
 VERSION=	21.4.22
-REVISION=	0
+REVISION=	1.i386
 URL=		http://ftp.xemacs.org/pub/xemacs/stable/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-include ../../Library/Rules.mk
+CFLAGS=		-arch i386 -Os
+LDFLAGS=	-arch i386
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
 else
 NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.dylib
+DEPENDS+=	/usr/local/lib/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 ifdef WITHOUT_DB
 DB=		--with-database=no
 else
 DB=		--with-database=db
-DEPENDS+=	/usr/local/lib/libdb.dylib
+#DEPENDS+=	/usr/local/lib/libdb.la
 endif
 
 ifdef WITHOUT_X11
@@ -38,8 +43,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--with-mule $(DB) $(X11) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --with-mule $(DB) $(X11) ; $(make)
 	$(TOUCH) build
 
 install: build
