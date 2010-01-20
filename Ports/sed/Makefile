@@ -1,29 +1,29 @@
-# $Id: Makefile,v 1.2 2009/03/22 00:29:08 ruda Exp $
-
-HOMEPAGE=	http://www.gnu.org/software/sed/
+# GNU Stream Editor
+# http://www.gnu.org/software/sed/
+# GPL
 
 NAME=		sed
-VERSION=	4.1.5
-REVISION=	12
-URL=		$(GNU)/gnu/sed/
+VERSION=	4.2.1
+REVISION=	0
+URL=		http://ftp.gnu.org/gnu/sed/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
-NLS=		--disable-nls
+CONFIG_OPTS=	--disable-nls
 else
-NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.dylib
+CONFIG_OPTS=	--enable-nls
+DEPENDS+=	/usr/local/lib/libintl.la
 endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/gettext-fix-hack.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; CFLAGS="$(CFLAGS)" $(configure) \
+	cd $(BUILDDIR) ; CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--program-prefix=gnu ; $(make)
 	$(TOUCH) build
@@ -40,6 +40,7 @@ install: build
 	$(TOUCH) install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(TOUCH) test
