@@ -1,23 +1,23 @@
-# $Id: Makefile,v 1.2 2009/03/27 01:34:40 ruda Exp $
-
 # Embedded SQL implementation
 # http://www.sqlite.org/
+# Public Domain
 
+include ../../Library/Rules.mk
+
+TITLE=		SQLite $(VERSION)
 NAME=		sqlite
-VERSION=	3.6.11
+VERSION=	3.6.22
 REVISION=	0
 URL=		http://www.sqlite.org/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env MACOSX_DEPLOYMENT_TARGET=10.3 \
-		CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-tcl ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -30,7 +30,7 @@ install: build
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
-	strip -x -S $(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib
+	#strip -x -S $(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib
 	$(TOUCH) install
 
 test: install
@@ -38,5 +38,5 @@ test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
-	$(test-universal-binary) "$(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib"
+	#$(test-universal-binary) "$(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib"
 	$(TOUCH) test
