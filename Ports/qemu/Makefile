@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		QEMU $(VERSION)
 NAME=		qemu
 VERSION=	0.12.2
-REVISION=	0
+REVISION=	0.i386
 URL=		http://download.savannah.gnu.org/releases/qemu/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
