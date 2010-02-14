@@ -6,18 +6,19 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU libsigsegv $(VERSION)
 NAME=		libsigsegv
-VERSION=	2.7
+VERSION=	2.8
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/libsigsegv/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
+	patch -d $(BUILDDIR)/src < $(PORTDIR)/mach_vm_region.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--enable-shared ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --enable-shared ; $(make)
 	$(TOUCH) build
 
 install: build
