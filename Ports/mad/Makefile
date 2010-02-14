@@ -1,16 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/21 19:41:50 ruda Exp $
-
 # High-quality MPEG audio decoder
 # http://www.underbit.com/products/mad/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		MAD $(VERSION)
 NAME=		libmad
 VERSION=	0.15.1b
-REVISION=	13
-URL=		$(SOURCEFORGE)mad
+REVISION=	14
+URL=		ftp://ftp.mars.org/pub/mpeg/
 SOURCE=		libmad-$(VERSION).tar.gz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -18,16 +17,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS_PPC)" LDFLAGS="$(LDFLAGS_PPC)" $(configure) --cache-file=$(PORTDIR)/config.cache.ppc --enable-fpm=ppc ; \
-	$(make)
-	cd $(BUILDDIR) ; mv .libs .libs-ppc
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS_INTEL)" LDFLAGS="$(LDFLAGS_INTEL)" $(configure) --cache-file=$(PORTDIR)/config.cache.i386 --enable-fpm=intel ; \
-	$(make)
-	cd $(BUILDDIR) ; \
-	lipo -create -arch i386 .libs/libmad.0.2.1.dylib -arch ppc .libs-ppc/libmad.0.2.1.dylib -o .libs/libmad.0.2.1.dylib ; \
-	lipo -create -arch i386 .libs/libmad.a -arch ppc .libs-ppc/libmad.a -o .libs/libmad.a
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
