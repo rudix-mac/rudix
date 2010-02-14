@@ -3,6 +3,12 @@
 # GPL
 
 # FIXME: can't compile with /usr/lib/libreadline.dylib present
+# FIXME: strip binaries needs investigation due:
+# $ lftp
+# dyld: Symbol not found: _program_name
+#   Referenced from: /usr/local/lib/liblftp-tasks.0.dylib
+#   Expected in: flat namespace
+# in /usr/local/lib/liblftp-tasks.0.dylib
 
 include ../../Library/Rules.mk
 
@@ -44,9 +50,15 @@ install: build
 	mv $(INSTALLDIR)/usr/local/etc/lftp.conf $(INSTALLDIR)/usr/local/etc/lftp.conf.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FAQ,FEATURES,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	#strip $(INSTALLDIR)/usr/local/bin/*
+	#strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	$(TOUCH) install
 
 test: install
+	lipo $(INSTALLDIR)/usr/local/bin/lftp -verify_arch i386 x86_64
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
