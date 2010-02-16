@@ -6,13 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		PyCommonCrypto $(VERSION)
 NAME=		pycommoncrypto
-VERSION=	0.2
+VERSION=	0.9
 REVISION=	0
 URL=		http://pycommoncrypto.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar xvf $(SOURCE)
@@ -23,15 +23,15 @@ build: prep $(DEPENDS)
 	$(TOUCH) build
 
 install: build
-	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+	cd $(BUILDDIR) ; \
+	$(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*.so
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR) ; $(PYTHON) CC.py
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*.so"
 	$(TOUCH) test
