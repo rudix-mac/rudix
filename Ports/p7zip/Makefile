@@ -1,23 +1,24 @@
-# $Id: Makefile,v 1.2 2009/03/21 21:56:53 ruda Exp $
-
-HOMEPAGE=	http://p7zip.sourceforge.net/
-
-NAME=		p7zip
-VERSION=	4.65
-REVISION=	0
-URL=		$(SOURCEFORGE)p7zip
-SOURCE=		$(NAME)_$(VERSION)_src_all.tar.bz2
+# P7ZIP
+# http://p7zip.sourceforge.net/
+# LGPL
 
 include ../../Library/Rules.mk
+
+TITLE=		P7ZIP $(VERSION)
+NAME=		p7zip
+VERSION=	9.04
+REVISION=	0.i386
+URL=		http://downloads.sourceforge.net/$(NAME)
+SOURCE=		$(NAME)_$(VERSION)_src_all.tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	mv $(NAME)_$(VERSION) $(NAME)-$(VERSION)
-	cd $(BUILDDIR) ; cp makefile.macosx makefile.machine
+	cd $(BUILDDIR) ; cp makefile.macosx_32bits makefile.machine
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; $(make) OPTFLAGS="$(CXXFLAGS)" all3
+	cd $(BUILDDIR) ; $(make) all3
 	$(TOUCH) build
 
 install: build
