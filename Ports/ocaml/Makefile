@@ -5,8 +5,8 @@
 include ../../Library/Rules.mk
 
 NAME=		ocaml
-VERSION=	3.11.1
-REVISION=	0intel
+VERSION=	3.11.2
+REVISION=	0.i386
 URL=		http://caml.inria.fr/pub/distrib/ocaml-3.11/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -28,7 +28,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{Changes,LICENSE,README,VERSION} $(INSTALLDOCDIR)
 	#strip $(INSTALLDIR)/usr/local/bin/*
-	#strip -x -S $(INSTALLDIR)/usr/local/lib/ocaml/*.so
+	#strip -x $(INSTALLDIR)/usr/local/lib/ocaml/*.so
 	$(TOUCH) install
 
 test: install
