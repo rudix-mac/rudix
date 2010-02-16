@@ -1,15 +1,15 @@
-# $Id: Makefile,v 1.2 2009/03/21 21:50:28 ruda Exp $
-
 # The Public Domain Korn Shell
 # http://web.cs.mun.ca/~michael/pdksh/
-
-NAME=		pdksh
-VERSION=	5.2.14
-REVISION=	13
-URL=		http://ftp.at.gnucash.org/utils/shells/pdksh/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+# Public Domain
 
 include ../../Library/Rules.mk
+
+TITLE=		PD-ksh $(VERSION)
+NAME=		pdksh
+VERSION=	5.2.14
+REVISION=	14
+URL=		http://ftp.at.gnucash.org/utils/shells/pdksh/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -20,8 +20,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -35,5 +35,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
