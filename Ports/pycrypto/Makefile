@@ -1,19 +1,19 @@
 # cryptographic tools for Python
-# http://www.amk.ca/python/code/crypto.html
-# Public Domain?
+# http://www.dlitz.net/software/pycrypto/
+# Public Domain
 
 include ../../Library/Rules.mk
 
 TITLE=		PyCrypto $(VERSION)
 NAME=		pycrypto
-VERSION=	2.0.1
+VERSION=	2.1.0
 REVISION=	0
-URL=		http://www.amk.ca/files/python/crypto/
+URL=		http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 DEPENDS=	/usr/local/lib/libgmp.la
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar xvf $(SOURCE)
@@ -24,17 +24,20 @@ build: prep $(DEPENDS)
 	$(TOUCH) build
 
 install: build
-	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
+	cd $(BUILDDIR) ; \
+	$(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+                --root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{ACKS,ChangeLog,LICENSE,README,TODO} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/Crypto/*/*.so
+	install -m 644 $(BUILDDIR)/{ACKS,ChangeLog,COPYRIGHT,README,TODO} $(INSTALLDOCDIR)
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/Crypto/*/*.so
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/Crypto/*/*.so"
-	cd $(BUILDDIR) ; $(PYTHON) test.py
+	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/Crypto/*/*.so) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(BUILDDIR) ; $(PYTHON) setup.py test
 	$(TOUCH) test
