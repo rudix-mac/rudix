@@ -6,13 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		pylibmc $(VERSION)
 NAME=		pylibmc
-VERSION=	0.6.1
+VERSION=	1.0-alpha
 REVISION=	0
 URL=		http://pypi.python.org/packages/source/p/pylibmc/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
@@ -25,13 +25,14 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
 		--no-compile \
-                --home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
+		--root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
 	$(TOUCH) install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*.so) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
