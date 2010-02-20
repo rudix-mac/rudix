@@ -1,36 +1,46 @@
-# $Id: Makefile,v 1.3 2009/07/12 21:13:19 ruda Exp $
-
 # The pixman library (version 1)
 # http://cairographics.org/
 # BSD
 
+include ../../Library/Rules.mk
+
 NAME=		pixman
-VERSION=	0.15.14
+VERSION=	0.17.6
 REVISION=	0
 URL=		http://www.cairographics.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
+ifdef STATIC_ONLY
+CONFIG_OPTS=	--enable-static --disable-shared
+else
+CONFIG_OPTS=	--enable-static --enable-shared
+endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+ifndef STATIC_ONLY
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+endif
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+ifndef STATIC_ONLY
+	for x in $(wildcard "$(INSTALLDIR)/usr/local/lib/lib*.dylib") ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+endif
+	for x in $(wildcard "$(INSTALLDIR)/usr/local/lib/lib*.a") ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
