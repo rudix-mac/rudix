@@ -13,15 +13,20 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 DEPENDS=	/usr/local/bin/pkg-config
 DEPENDS+=	/usr/local/lib/libpixman-1.la
 
+ifdef STATIC_ONLY
+CONFIG_OPTS=	--enable-static --disable-shared
+else
+CONFIG_OPTS=	--enable-static --enable-shared
+endif
+
 prep: retrieve
 	tar zxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" \
-	PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/X11R6/lib/pkgconfig" \
-	$(configure) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	  PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/X11R6/lib/pkgconfig" \
+	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--with-html-dir=/usr/local/share/doc/cairo ;  $(make)
 	$(TOUCH) build
@@ -30,7 +35,9 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,BIBLIOGRAPHY,BUGS,COPYING*,ChangeLog,HACKING,NEWS,README} $(INSTALLDOCDIR)
+ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
+endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
