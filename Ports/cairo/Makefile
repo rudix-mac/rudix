@@ -1,40 +1,17 @@
-# $Id: Makefile,v 1.3 2009/07/12 21:12:37 ruda Exp $
 # Vector graphics library
 # http://cairographics.org/
 # LGPL
 
+include ../../Library/Rules.mk
+
 NAME=		cairo
-VERSION=	1.8.8
+VERSION=	1.8.10
 REVISION=	0
 URL=		http://www.cairographics.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 DEPENDS=	/usr/local/bin/pkg-config
-DEPENDS+=	/usr/local/lib/libpixman-1.dylib
-
-WITHOUT_X11=	1
-WITHOUT_FT=	1
-WITH_RUDIX_PNG= 1
-
-ifdef WITHOUT_X11
-X11=		--without-x --enable-xlib=no
-else
-DEPENDS+=	/usr/X11
-X11=		--with-x --enable-xlib=yes
-endif
-
-ifdef WITHOUT_FT
-FREETYPE=	--enable-ft=no
-else
-FREETYPE=	--enable-ft=yes
-DEPENDS+=	/usr/X11/lib/libfreetype.dylib
-endif
-
-ifdef WITH_RUDIX_PNG
-DEPENDS+=	/usr/local/bin/libpng-config
-endif
-
-include ../../Library/Rules.mk
+DEPENDS+=	/usr/local/lib/libpixman-1.la
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -42,10 +19,11 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/X11R6/lib/pkgconfig" $(configure) \
+	env CFLAGS="$(CFLAGS)" \
+	PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/X11R6/lib/pkgconfig" \
+	$(configure) \
 		--disable-dependency-tracking \
-		--with-html-dir=/usr/local/share/doc/cairo \
-		$(X11) $(FREETYPE) ; $(make)
+		--with-html-dir=/usr/local/share/doc/cairo ;  $(make)
 	$(TOUCH) build
 
 install: build
@@ -57,7 +35,5 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	#cd $(BUILDDIR) ; make check
+	cd $(BUILDDIR) ; make test
 	$(TOUCH) test
