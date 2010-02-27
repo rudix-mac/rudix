@@ -1,30 +1,27 @@
-# $Id: Makefile,v 1.2 2009/03/21 19:53:23 ruda Exp $
-
 # Command-line MPEG audio decoder and player
 # http://www.underbit.com/products/mad/
 # GPL
 
-NAME=		madplay
-VERSION=	0.15.2b
-REVISION=	13intel
-URL=		$(SOURCEFORGE)mad
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
 
-DEPENDS=	/usr/local/lib/libmad.dylib
-DEPENDS+=	/usr/local/lib/libid3tag.dylib
+TITLE=		MAD Player $(VERSION)
+NAME=		madplay
+VERSION=	0.15.2b
+REVISION=	14.i386
+URL=		ftp://ftp.mars.org/pub/mpeg/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+DEPENDS=	/usr/local/lib/libmad.la
+DEPENDS+=	/usr/local/lib/libid3tag.la
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; \
-	patch < $(PORTDIR)/madplay-0.15.2b-configure.patch ; \
-	patch < $(PORTDIR)/madplay-0.15.2b-audio_carbon.c.patch
+	patch -d $(BUILDDIR) < $(PORTDIR)/madplay-0.15.2b-configure.patch ; \
+	patch -d $(BUILDDIR) < $(PORTDIR)/madplay-0.15.2b-audio_carbon.c.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS_INTEL)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
