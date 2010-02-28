@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 NAME=		cflow
 VERSION=	1.3
-REVISION=	0.i386
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/cflow/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
