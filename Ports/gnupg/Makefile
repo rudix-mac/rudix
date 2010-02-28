@@ -1,23 +1,22 @@
-# $Id: Makefile,v 1.2 2009/03/21 21:24:30 ruda Exp $
-
-HOMEPAGE=	http://gnupg.org/
-
-NAME=		gnupg
-VERSION=	1.4.9
-REVISION=	4
-URL=		ftp://ftp.gnupg.org/gcrypt/gnupg/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+# The GNU Privacy Guard
+# http://gnupg.org/
+# GPL
 
 include ../../Library/Rules.mk
+
+TITLE=		GnuPG $(VERSION)
+NAME=		gnupg
+VERSION=	1.4.10
+REVISION=	0.i386
+URL=		ftp://ftp.gnupg.org/gcrypt/gnupg/
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) \
-		--disable-dependency-tracking \
-		--disable-asm ; $(make)
+	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
