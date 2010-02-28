@@ -2,17 +2,21 @@
 # http://clisp.cons.org/
 # GPL
 
-NAME=		clisp
-VERSION=	2.47
-REVISION=	0intel
-URL=		$(SOURCEFORGE)clisp
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
 include ../../Library/Rules.mk
 
-DEPENDS=	/usr/local/lib/libreadline.dylib
-DEPENDS+=	/usr/local/lib/libintl.dylib
-DEPENDS+=	/usr/local/lib/libsigsegv.dylib
+TITLE=		CLISP $(VERSION)
+NAME=		clisp
+VERSION=	2.48
+REVISION=	0.i386
+URL=		http://downloads.sourceforge.net/$(NAME)
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+#DEPENDS=	/usr/local/lib/libreadline.la
+DEPENDS+=	/usr/local/lib/libintl.la
+DEPENDS+=	/usr/local/lib/libsigsegv.la
 DEPENDS+=	/usr/local/lib/libavcall.a
 
 prep: retrieve
