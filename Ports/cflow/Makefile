@@ -1,34 +1,34 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
 # Analyze C source files and print a call graph
 # http://www.gnu.org/software/cflow/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		cflow
-VERSION=	1.2
-REVISION=	0
-URL=		$(GNU)/gnu/cflow/
+VERSION=	1.3
+REVISION=	0.i386
+URL=		http://ftp.gnu.org/gnu/cflow/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
 else
-DEPENDS=	/usr/local/lib/libintl.a
 NLS=		--enable-nls
+DEPENDS=	/usr/local/lib/libintl.la
 endif
 
-include ../../Library/Rules.mk
-
+ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
+endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
+	patch -d $(BUILDDIR)/lib < $(PORTDIR)/argp-pv.c.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) \
-		--disable-dependency-tracking $(NLS) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking $(NLS) ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -36,9 +36,10 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/share/info/dir
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
