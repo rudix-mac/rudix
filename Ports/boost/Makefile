@@ -5,25 +5,25 @@
 include ../../Library/Rules.mk
 
 NAME=		boost
-VERSION=	1.39.0
-REVISION=	0intel
-URL=		$(SOURCEFORGE)boost
-SOURCE=		$(NAME)_1_39_0.tar.bz2
+VERSION=	1.42.0
+REVISION=	0.i386
+URL=		http://downloads.sourceforge.net/boost
+SOURCE=		$(NAME)_1_42_0.tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	mv $(NAME)_1_39_0 $(NAME)-$(VERSION)
+	mv $(NAME)_1_42_0 $(NAME)-$(VERSION)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./bootstrap.sh ; ./bjam
+	cd $(BUILDDIR) ; ./bootstrap.sh ; ./bjam toolset=darwin 
 	$(TOUCH) build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/bin
 	install -m 755 $(BUILDDIR)/tools/jam/src/bin.*/bjam $(INSTALLDIR)/usr/local/bin
 	install -d $(INSTALLDIR)/usr/local/lib
-	#install -m 644 $(BUILDDIR)/stage/lib/lib*.dylib $(INSTALLDIR)/usr/local/lib
+	install -m 644 $(BUILDDIR)/stage/lib/lib*.dylib $(INSTALLDIR)/usr/local/lib
 	cd $(BUILDDIR)/stage/lib ; (tar -cv lib*.dylib | tar -xv -C $(INSTALLDIR)/usr/local/lib)
 	install -m 644 $(BUILDDIR)/stage/lib/lib*.a $(INSTALLDIR)/usr/local/lib
 	cd $(BUILDDIR) ; find boost -type d -exec install -d $(INSTALLDIR)/usr/local/include/{} \;
@@ -36,8 +36,15 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+ifdef 0
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+endif
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
