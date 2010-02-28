@@ -4,6 +4,7 @@
 
 include ../../Library/Rules.mk
 
+TITLE=		GNU cflow $(VERSION)
 NAME=		cflow
 VERSION=	1.3
 REVISION=	0
