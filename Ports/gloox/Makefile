@@ -1,14 +1,13 @@
-# $Id: Makefile,v 1.2 2009/07/22 02:01:27 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# Full-featured Jabber/XMPP client library written in C++ 
 # http://camaya.net/gloox
 # GPL
 
+include ../../Library/Rules.mk
+
 TITLE=		Gloox $(VERSION)
 NAME=		gloox
-VERSION=	1.0-beta7
-REVISION=	1
+VERSION=	1.0
+REVISION=	0
 URL=		http://camaya.net/download/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -17,20 +16,22 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CXXFLAGS="$(CXXFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; env CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,LICENSE,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
