@@ -1,33 +1,39 @@
-# $Id: Makefile,v 1.4 2009/07/22 01:41:07 ruda Exp $
-
-include ../../Library/Rules.mk
-
+# General-purpose utility library
 # http://www.gtk.org/
 # GPL
 
-TITLE=		GLib
+include ../../Library/Rules.mk
+
+TITLE=		GLib $(VERSION)
 NAME=		glib
-VERSION=	2.20.4
+VERSION=	2.23.3
 REVISION=	0
-URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.20/
+URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.23
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-DEPENDS=	/usr/local/bin/pkg-config
+DEPENDS+=	/usr/local/bin/pkg-config
 DEPENDS+=	/usr/local/lib/libintl.la
 
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+
 ifdef STATIC_ONLY
-STATIC=		--enable-static --disable-shared
+CONFIG_OPTS+=	--enable-static --disable-shared
+else
+CONFIG_OPTS+=	--enable-static --enable-shared
 endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
+	patch -d $(BUILDDIR)/glib < $(PORTDIR)/gconvert.c.patch
+	patch -d $(BUILDDIR)/po < $(PORTDIR)/Makefile.in.in.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) $(STATIC) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
-		--enable-static \
 		--with-html-dir=/usr/local/share/doc ; $(make)
 	$(TOUCH) build
 
@@ -35,17 +41,20 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,HACKING,MAINTAINERS,NEWS,README} $(INSTALLDOCDIR)
+	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR)/tests ; ./testglib
 	$(TOUCH) test

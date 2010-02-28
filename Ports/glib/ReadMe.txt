@@ -1,3 +1,0 @@
-General-purpose utility library
-
-General-purpose library in it's second version from the GTK+ team, includes support routines for C such as lists, trees, hashes, memory allocation, and many other things.
