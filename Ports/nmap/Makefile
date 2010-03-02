@@ -1,32 +1,24 @@
-# $Id: Makefile,v 1.3 2009/07/17 23:31:13 ruda Exp $
-
 # Scan ports and fingerprint stack of network hosts
 # http://nmap.org/
 # GPL
 
-NAME=		nmap
-VERSION=	5.00
-REVISION=	0intel
-URL=		http://nmap.org/dist/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
-
 include ../../Library/Rules.mk
 
-ifdef WITH_EXTERNAL_PCRE
-PCRE=		--with-libpcre=/usr/local
-DEPENDS+=	/usr/local/lib/libpcre.la
-else
-PCRE=		--with-libpcre=included
-endif
+TITLE=		Nmap $(VERSION)
+NAME=		nmap
+VERSION=	5.20
+REVISION=	0
+URL=		http://nmap.org/dist/
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) \
-		--disable-dependency-tracking \
-		--without-zenmap $(PCRE) ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)"  \
+	$(configure) --disable-dependency-tracking --without-zenmap ; $(make)
 	$(TOUCH) build
 
 install: build
@@ -38,5 +30,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
