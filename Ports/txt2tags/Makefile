@@ -1,15 +1,13 @@
-# $Id: Makefile,v 1.2 2009/03/22 22:19:20 ruda Exp $
-
 # Utility to turn simply formatted text into markup
 # http://txt2tags.sourceforge.net/
 
+include ../../Library/Rules.mk
+
 NAME=		txt2tags
 VERSION=	2.5
-REVISION=	2
-URL=		$(SOURCEFORGE)txt2tags
+REVISION=	3
+URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tgz
-
-include ../../Library/Rules.mk
 
 DEPENDS=	/usr/local/bin/msgfmt
 
@@ -34,5 +32,5 @@ install: build
 	$(TOUCH) install
 
 test: install
-	cd $(BUILDDIR)/test ; python run.py
+	cd $(BUILDDIR)/test ; ./run.py
 	$(TOUCH) test
