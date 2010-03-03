@@ -1,12 +1,14 @@
-# $Id: Makefile,v 1.2 2009/03/22 22:30:03 ruda Exp $
+# Depth-indented directory listing program
+# ftp://mama.indstate.edu/linux/tree/
+# GPL
+
+include ../../Library/Rules.mk
 
 NAME=		tree
-VERSION=	1.5.2.2
+VERSION=	1.5.3
 REVISION=	0
 URL=		ftp://mama.indstate.edu/linux/tree/
 SOURCE=		$(NAME)-$(VERSION).tgz
-
-include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
