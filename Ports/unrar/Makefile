@@ -1,14 +1,12 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
-include ../../Library/Rules.mk
-
 # http://www.rarlab.com/
 # Freeware
+
+include ../../Library/Rules.mk
 
 TITLE=		unRAR $(VERSION)
 NAME=		unrar
 VERSION=	3.7.8
-REVISION=	4
+REVISION=	5
 URL=		http://www.rarlab.com/rar/
 SOURCE=		$(NAME)src-$(VERSION).tar.gz
 
