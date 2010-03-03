@@ -1,5 +1,8 @@
 # eXtensible ARchiver
 # http://code.google.com/p/xar/
+#
+
+include ../../Library/Rules.mk
 
 NAME=		xar
 VERSION=	1.5.2
@@ -7,16 +10,14 @@ REVISION=	1
 URL=		http://xar.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
-
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR)/lib ; patch < $(PORTDIR)/xmlDictCleanup.patch
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 install: build

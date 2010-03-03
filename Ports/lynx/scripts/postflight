@@ -1,7 +1,4 @@
 #!/bin/sh
-#
-# $Id: postflight,v 1.1.1.1 2009/03/01 15:03:59 ruda Exp $
-#
 
 [ ! -f /usr/local/etc/lynx.cfg ] && cp -f /usr/local/etc/lynx.cfg.default /usr/local/etc/lynx.cfg
 [ ! -f /usr/local/etc/lynx.lss ] && cp -f /usr/local/etc/lynx.lss.default /usr/local/etc/lynx.lss

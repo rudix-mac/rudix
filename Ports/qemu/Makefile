@@ -1,5 +1,5 @@
 # multi system emulator
-# http://www.nongnu.org/qemu/
+# http://wiki.qemu.org/
 # GPL
 
 include ../../Library/Rules.mk
@@ -16,11 +16,7 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	./configure \
-		--enable-cocoa \
-		--disable-darwin-user \
-		--disable-bsd-user ; $(make)
+	cd $(BUILDDIR) ; ./configure --enable-cocoa ; make
 	$(TOUCH) build
 
 install: build

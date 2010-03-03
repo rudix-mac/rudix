@@ -3,7 +3,7 @@
 # GPL
 
 NAME=		rrdtool
-VERSION=	1.3.7
+VERSION=	1.4.1
 REVISION=	0
 URL=		http://oss.oetiker.ch/rrdtool/pub/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -15,7 +15,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) ; $(make)
 	$(TOUCH) build
 
 #

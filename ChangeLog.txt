@@ -1,3 +1,11 @@
+CHANGES FROM RUDIX 2009 TO RUDIX 2010
+
+- Everything built on Snow Leopard.
+
+CHANGES FROM RUDIX 2008r3 TO RUDIX 2009
+
+- Everything built on Leopard.
+
 CHANGES FROM RUDIX 2008r2 TO RUDIX 2008r3
 
 * Build System

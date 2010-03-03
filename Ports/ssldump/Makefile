@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		ssldump $(VERSION)
 NAME=		ssldump
 VERSION=	0.9b3
-REVISION=	0
+REVISION=	1
 URL=		http://www.rtfm.com/ssldump/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -18,14 +18,14 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --host=none-apple-darwin; $(make)
+	cd $(BUILDDIR) ; $(configure) --host=i386-freebsd ; $(make)
 	$(TOUCH) build
 
 install: build
-# pass -B optin to make due an INSTALL file in the same directory
-# and Mac OS X with HLS+ is case insensitive. -B force rules
-	cd $(BUILDDIR) ; make -B prefix=$(INSTALLDIR)/usr/local \
+# pass -B option to make due an INSTALL file in the same directory
+# Mac OS X with HLS+ is case insensitive. -B force rules
+	cd $(BUILDDIR) ; \
+	make -B prefix=$(INSTALLDIR)/usr/local \
 		MANDIR=$(INSTALLDIR)/usr/local/share/man install
 
 	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
@@ -40,5 +40,5 @@ install: build
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 ppc7400 ; done
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test

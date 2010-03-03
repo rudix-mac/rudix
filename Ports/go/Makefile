@@ -26,7 +26,7 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(INSTALLDIR)/$(GOROOT_386)/src ; export GOROOT="$(INSTALLDIR)/$(GOROOT_386)" GOOS="darwin" GOARCH="386" GOBIN="$(INSTALLDIR)/$(GOROOT_386)/bin" PATH="$$PATH:$(INSTALLDIR)/$(GOROOT_386)/bin" LC_ALL="C" ; ./all.bash
+	cd $(INSTALLDIR)/$(GOROOT_386)/src ; export GOROOT="$(INSTALLDIR)/$(GOROOT_386)" GOOS="darwin" GOARCH="amd64" GOBIN="$(INSTALLDIR)/$(GOROOT_386)/bin" PATH="$$PATH:$(INSTALLDIR)/$(GOROOT_386)/bin" LC_ALL="C" ; ./all.bash
 	$(TOUCH) build
 
 install: build

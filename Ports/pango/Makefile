@@ -6,13 +6,12 @@ include ../../Library/Rules.mk
 
 TITLE=		Pango $(VERSION)
 NAME=		pango
-VERSION=	1.25.4
+VERSION=	1.27.1
 REVISION=	0
-URL=		http://ftp.gnome.org/pub/GNOME/sources/pango/1.25/
+URL=		http://ftp.gnome.org/pub/GNOME/sources/pango/1.27
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 DEPENDS=	/usr/local/lib/libglib-2.0.la
-DEPENDS+=	/usr/local/lib/libpng.la
 DEPENDS+=	/usr/local/lib/libpixman-1.la
 DEPENDS+=	/usr/local/lib/libcairo.la
 
@@ -59,5 +58,5 @@ endif
 		lipo $$x -verify_arch i386 ppc ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.a) ; do \
 		lipo $$x -verify_arch i386 ppc ; done
-	#cd $(BUILDDIR) ; make check
+	cd $(BUILDDIR) ; make check
 	$(TOUCH) test

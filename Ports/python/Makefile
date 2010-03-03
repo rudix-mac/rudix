@@ -1,25 +1,22 @@
-# $Id: Makefile,v 1.3 2009/07/24 00:55:36 ruda Exp $
-
 # Interpreted object-oriented programming language
 # http://www.python.org/
 # Python License
 
 NAME=		Python
-VERSION=	3.1
+VERSION=	3.1.1
 REVISION=	0
-URL=		http://www.python.org/ftp/python/3.1/
+URL=		http://www.python.org/ftp/python/$(VERSION)
 SOURCE=		Python-$(VERSION).tar.bz2
 
 include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	#mv Python-$(VERSION) $(NAME)-$(VERSION)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) \
-		--enable-universalsdk --enable-framework ; $(make)
+	cd $(BUILDDIR) ; env CC="/Developer/usr/bin/llvm-gcc" \
+	$(configure) --enable-universalsdk --enable-framework ; $(make)
 	$(TOUCH) build
 
 install: build

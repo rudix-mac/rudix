@@ -1,6 +1,6 @@
 # Wine
 # http://wiki.winehq.org/
-# ?
+# LGPL
 
 include ../../Library/Rules.mk
 
@@ -16,7 +16,10 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) --disable-win16 ; $(make)
+	cd $(BUILDDIR) ; \
+	env FREETYPEINCL="-I/usr/X11/include/freetype2 -I/usr/X11/include" \
+	    FREETYPELIBS="-L/usr/X11/lib -lfreetype" \
+	$(configure) --disable-win16 ; $(make)
 	$(TOUCH) build
 
 install: build

@@ -14,6 +14,7 @@ INSTALLDOCDIR=	$(INSTALLDIR)/usr/local/share/doc/$(NAME)
 TITLE=		$(NAME) $(VERSION)
 PKGNAME=	$(PORTDIR)/$(NAME).pkg
 DMGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).dmg
+
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
 CREATEDMG=	/usr/bin/hdiutil create
 TOUCH=		touch
@@ -21,11 +22,12 @@ TOUCH=		touch
 FETCH=		curl -f -O -C - -L
 #FETCH=		wget -c
 STRIP_BIN=	strip
-STRIP_LIB=	strip -x -S
+STRIP_LIB=	strip -x
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
 ARCH:=		$(shell arch)
 NCPU:=		$(shell sysctl -n hw.ncpu)
+CPU64BIT:=	$(shell sysctl -n hw.cpu64bit_capable)
 
 # Universal Binary build flags on Snow Leopard
 CFLAGS_FAT=	-arch i386 -arch x86_64 -Os
@@ -116,7 +118,7 @@ realdistclean: distclean
 
 tag:
 	svn update
-	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)-$(VERSION)-$(REVISION) -m "Tagging version $(VERSION) revision $(REVISION)"
+	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)/$(NAME)-$(VERSION)-$(REVISION) -m "Tag: $(NAME) version $(VERSION) revision $(REVISION)"
 
 about:
 	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"

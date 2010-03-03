@@ -1,22 +1,21 @@
-# $Id: Makefile,v 1.3 2009/07/16 00:59:11 ruda Exp $
-
 # Text mode  World Wide Web (WWW) client
 # http://lynx.isc.org/
 # GPL
 
+include ../../Library/Rules.mk
+
+TITLE=		Lynx $(VERSION)
 NAME=		lynx
 VERSION=	2.8.7
-REVISION=	0
+REVISION=	1
 URL=		http://lynx.isc.org/release/
 SOURCE=		$(NAME)$(VERSION).tar.bz2
-
-include ../../Library/Rules.mk
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
 else
 NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.dylib
+DEPENDS+=	/usr/local/lib/libintl.la
 endif
 
 ifdef WITH_STATIC_NLS
@@ -30,8 +29,8 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(STATIC) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(STATIC) \
 		--enable-ipv6 \
 		--with-ssl $(NLS) ; $(make)
 	$(TOUCH) build
@@ -42,9 +41,10 @@ install: build
 	mv $(INSTALLDIR)/usr/local/etc/lynx.lss $(INSTALLDIR)/usr/local/etc/lynx.lss.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,CHANGES,COPYHEADER*,COPYING*,PROBLEMS,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
+	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test

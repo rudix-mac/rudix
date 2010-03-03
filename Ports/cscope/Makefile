@@ -8,7 +8,7 @@ TITLE=		Cscope $(VERSION)
 NAME=		cscope
 VERSION=	15.7a
 REVISION=	0
-URL=		http://downloads.sourceforge.net/project/cscope/cscope/$(VERSION)
+URL=		http://prdownloads.sourceforge.net/cscope
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve

@@ -1,15 +1,14 @@
-# $Id: Makefile,v 1.4 2009/05/10 15:50:33 ruda Exp $
+# Subversion revision control system
+# http://subversion.tigris.org/
+# ?
 
 include ../../Library/Rules.mk
 
-# http://subversion.tigris.org/
-# Subversion revision control system
-
 TITLE=		Subversion $(VERSION)
 NAME=		subversion
-VERSION=	1.6.3
+VERSION=	1.6.6
 REVISION=	0
-URL=		http://subversion.tigris.org/tarballs/
+URL=		http://subversion.tigris.org/downloads/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 ifdef WITHOUT_NLS
@@ -17,16 +16,15 @@ NLS=		--disable-nls
 else
 DEPENDS=	/usr/local/lib/libintl.la
 endif
-
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
-ifdef WITHOUT_NEON
-NEON=		--disable-neon
-else
-DEPENDS+=	/usr/local/lib/libneon.la
-endif
+#ifdef WITHOUT_NEON
+#NEON=		--disable-neon
+#else
+#DEPENDS+=	/usr/local/lib/libneon.la
+#endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
