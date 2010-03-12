@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		GLib $(VERSION)
 NAME=		glib
-VERSION=	2.23.3
+VERSION=	2.23.5
 REVISION=	0
 URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.23
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -44,9 +44,9 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
