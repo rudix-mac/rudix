@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ ! -d $3/usr/local/etc/mc ] && install -d $3/usr/local/etc/mc
+
+for x in $3/usr/local/etc/mc.default/* ; do \
+    [ ! -f $3/usr/local/etc/mc/$x ] && install -m 644 $x $3/usr/local/etc/mc/
+done
+
+exit 0
