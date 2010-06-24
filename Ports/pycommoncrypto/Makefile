@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		PyCommonCrypto $(VERSION)
 NAME=		pycommoncrypto
-VERSION=	0.9
+VERSION=	0.9.1
 REVISION=	0
 URL=		http://pycommoncrypto.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
