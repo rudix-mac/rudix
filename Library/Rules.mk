@@ -114,7 +114,7 @@ distclean: clean pkgclean dmgclean
 	rm -f config.cache*
 
 realdistclean: distclean
-	rm -f retrieve $(tag)
+	rm -f retrieve $(SOURCE)
 
 tag:
 	svn update
