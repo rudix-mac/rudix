@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Apache Portable Runtime $(VERSION)
 NAME=		apr
-VERSION=	1.3.9
+VERSION=	1.4.2
 REVISION=	0
 URL=		http://www.apache.org/dist/apr
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -26,7 +26,7 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README.dev} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/* $(INSTALLDOCDIR)
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
