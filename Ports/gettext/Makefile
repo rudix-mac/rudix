@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU gettext $(VERSION)
 NAME=		gettext
-VERSION=	0.17
-REVISION=	6
+VERSION=	0.18.1.1
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/gettext/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -17,18 +17,15 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR)/gettext-runtime/gnulib-lib ; \
-		patch < $(PORTDIR)/runtime-setenv.c.patch
-	cd $(BUILDDIR)/gettext-tools/gnulib-lib ; \
-		patch < $(PORTDIR)/tools-environ.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env \
-		CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(STATIC) \
 		--enable-threads \
-		--disable-csharp ; $(make)
+		--disable-csharp \
+		--with-included-glib ; $(make)
 	$(TOUCH) build
 
 install: build
