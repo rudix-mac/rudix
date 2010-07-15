@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Automake $(VERSION)
 NAME=		automake
-VERSION=	1.11
-REVISION=	1
+VERSION=	1.11.1
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/automake/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
