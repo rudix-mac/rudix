@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Autoconf $(VERSION)
 NAME=		autoconf
-VERSION=	2.65
+VERSION=	2.66
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/autoconf/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
