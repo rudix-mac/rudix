@@ -6,9 +6,9 @@ include ../../Library/Rules.mk
 
 TITLE=		Bazaar $(VERSION)
 NAME=		bzr
-VERSION=	2.1.0b1
+VERSION=	2.1.2
 REVISION=	0
-URL=		http://launchpad.net/bzr/2.1/2.1.0b1/+download/
+URL=		http://launchpad.net/bzr/2.1/$(VERSION)/+download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 PYTHON=		/usr/bin/python2.6
