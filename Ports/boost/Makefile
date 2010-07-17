@@ -4,19 +4,21 @@
 
 include ../../Library/Rules.mk
 
+TITLE=		Boost C++ Libraries
 NAME=		boost
-VERSION=	1.42.0
-REVISION=	0.i386
+VERSION=	1.43.0
+REVISION=	0
 URL=		http://downloads.sourceforge.net/boost
-SOURCE=		$(NAME)_1_42_0.tar.bz2
+SOURCE=		$(NAME)_1_43_0.tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	mv $(NAME)_1_42_0 $(NAME)-$(VERSION)
+	mv $(NAME)_1_43_0 $(NAME)-$(VERSION)
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./bootstrap.sh ; ./bjam toolset=darwin 
+	cd $(BUILDDIR) ; ./bootstrap.sh ; \
+	./bjam toolset=darwin architecture=x86 address-model=32_64
 	$(TOUCH) build
 
 install: build
@@ -29,22 +31,17 @@ install: build
 	cd $(BUILDDIR) ; find boost -type d -exec install -d $(INSTALLDIR)/usr/local/include/{} \;
 	cd $(BUILDDIR) ; find boost ! -name \*.orig -type f -exec install -m 644 {} $(INSTALLDIR)/usr/local/include/{} \;
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{LICENSE_1_0.txt,README.txt} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{LICENSE_1_0.txt,index.*} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
-ifdef 0
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
+	#for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+	#	lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
