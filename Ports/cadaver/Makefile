@@ -6,13 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		cadaver $(VERSION)
 NAME=		cadaver
-VERSION=	0.23.2
-REVISION=	6
+VERSION=	0.23.3
+REVISION=	0
 URL=		http://www.webdav.org/cadaver/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 ifdef WITHOUT_NLS
-CONFIGURE_OPTS=	--disable-nls
+CONFIGURE_OPTS=	--disable-nls --without-libintl-prefix
 else
 DEPENDS+=	/usr/local/lib/libintl.la
 CONFIGURE-OPTS=	--enable-nls
@@ -27,8 +27,10 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) --with-ssl ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIGURE_OPTS) \
+		--with-ssl ; $(make)
 	$(TOUCH) build
 
 install: build
