@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Core Utilities $(VERSION)
 NAME=		coreutils
-VERSION=	7.6
+VERSION=	8.5
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/coreutils/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
