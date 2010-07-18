@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Cheetah $(VERSION)
 NAME=		cheetah
-VERSION=	2.4.0
+VERSION=	2.4.2.1
 REVISION=	0
 URL=		http://pypi.python.org/packages/source/C/Cheetah/
 SOURCE=		Cheetah-$(VERSION).tar.gz
