@@ -1,8 +1,0 @@
-Compiler cache
-
-Ccache is a compiler cache.  It acts as a caching pre-processor to C/C++ compilers, utilizing compiler output and a hash to detect when a compilation can be satisfied from cache.  This often results in a 5 to 10 times speedup in common compilations.
-
-The most important aspect of ccache is to _always_ produce exactly the same output that the real compiler would produce.  This includes providing exactly the same object files and exactly the same compiler warnings that would be produced if you use the real compiler.
-
-Ccache typically adds a little bit of a slowdown to uncached compiles, but makes up for it with drastic speedups in already-seen compiles that it has cached.
-

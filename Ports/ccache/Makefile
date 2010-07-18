@@ -4,18 +4,15 @@
 
 include ../../Library/Rules.mk
 
-TITLE=		Compiler Cache $(VERSION)
+TITLE=		ccache $(VERSION)
 NAME=		ccache
-VERSION=	2.4
-REVISION=	18
+VERSION=	3.0.1
+REVISION=	0
 URL=		http://samba.org/ftp/ccache/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
-	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; \
-	patch < $(PORTDIR)/universal-binary-support.patch ; \
-	patch < $(PORTDIR)/patch-util_c
+	tar jxvf $(SOURCE)
 	$(TOUCH) prep
 
 build: prep
@@ -30,8 +27,7 @@ install: build
 		ln -sf /usr/local/bin/ccache $$x ; \
 	done
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/web/*.html $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{COPYING,INSTALL.*,NEWS.*,README.*} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
