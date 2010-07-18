@@ -95,7 +95,7 @@ dmg: pkg
 	$(CREATEDMG) -srcfolder $(PKGNAME) $(DMGNAME)
 	$(TOUCH) dmg
 
-installpkg:
+installpkg: pkg
 	installer -pkg $(PKGNAME) -target /
 
 installclean:
