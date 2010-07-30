@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Yasm $(VERSION)
 NAME=		yasm
-VERSION=	0.8.0
-REVISION=	1
+VERSION=	1.0.1
+REVISION=	0
 URL=		http://www.tortall.net/projects/yasm/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
