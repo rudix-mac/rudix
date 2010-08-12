@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		neon $(VERSION)
 NAME=		neon
-VERSION=	0.29.1
+VERSION=	0.29.3
 REVISION=	0
 URL=		http://www.webdav.org/neon/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
