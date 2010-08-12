@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Mercurial $(VERSION)
 NAME=		mercurial
-VERSION=	1.3.1
-REVISION=	1
+VERSION=	1.6.2
+REVISION=	0
 URL=		http://www.selenic.com/mercurial/release/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -26,8 +26,9 @@ install: build
 	cd $(BUILDDIR) ; \
 	$(PYTHON) setup.py install \
 		--no-compile \
-		--home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES) ; \
+                --root=$(INSTALLDIR) \
+		--prefix=/usr/local \
+		--install-lib=$(SITEPACKAGES) ; \
 	make install-doc PREFIX="$(INSTALLDIR)/usr/local"
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
