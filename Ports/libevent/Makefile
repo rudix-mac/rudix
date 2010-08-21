@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		libevent $(VERSION)
 NAME=		libevent
-VERSION=	1.4.13
+VERSION=	1.4.14b
 REVISION=	0
 URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
