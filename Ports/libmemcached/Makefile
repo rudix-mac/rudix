@@ -1,11 +1,11 @@
 # C/C++ client library to the memcached server 
-# http://tangent.org/552/libmemcached.html
+# http://libmemcached.org/libMemcached.html
 # BSD
 
 include ../../Library/Rules.mk
 
 NAME=		libmemcached
-VERSION=	0.35
+VERSION=	0.43
 REVISION=	0
 URL=		http://download.tangent.org/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -20,11 +20,10 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR)/tests < $(PORTDIR)/testscxx.patch
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure)  $(CONFIG_OPTS) --disable-dependency-tracking ; $(make)
 	$(TOUCH) build
 
