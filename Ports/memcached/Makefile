@@ -1,12 +1,12 @@
 # Distributed memory object caching system
-# http://www.danga.com/memcached/
+# http://memcached.org/
 # BSD
 
 include ../../Library/Rules.mk
 
 TITLE=		memcached $(VERSION)
 NAME=		memcached
-VERSION=	1.4.3
+VERSION=	1.4.5
 REVISION=	0
 URL=		http://memcached.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
