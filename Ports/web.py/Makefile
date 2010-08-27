@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		web.py $(VERSION)
 NAME=		web.py
-VERSION=	0.33
+VERSION=	0.34
 REVISION=	0
 URL=		http://webpy.org/static/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
