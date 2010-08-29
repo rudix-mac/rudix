@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Rsync $(VERSION)
 NAME=		rsync
-VERSION=	3.0.6
-REVISION=	1
+VERSION=	3.0.7
+REVISION=	0
 URL=		http://samba.org/ftp/rsync/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
