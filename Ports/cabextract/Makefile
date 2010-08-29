@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		cabextract $(VERSION)
 NAME=		cabextract
-VERSION=	1.2
-REVISION=	7
+VERSION=	1.3
+REVISION=	0
 URL=		http://www.cabextract.org.uk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
