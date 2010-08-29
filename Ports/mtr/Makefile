@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		MTR $(VERSION)
 NAME=		mtr
-VERSION=	0.75
-REVISION=	3
+VERSION=	0.80
+REVISION=	0
 URL=		ftp://ftp.bitwizard.nl/mtr/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -30,5 +30,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
