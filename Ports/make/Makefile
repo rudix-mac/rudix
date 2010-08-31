@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Make $(VERSION)
 NAME=		make
-VERSION=	3.81
-REVISION=	3
+VERSION=	3.82
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/make/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -44,6 +44,7 @@ install: build
 	$(TOUCH) install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
 	$(TOUCH) test
