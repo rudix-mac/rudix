@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU AWK $(VERSION)
 NAME=		gawk
-VERSION=	3.1.7
+VERSION=	3.1.8
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/gawk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
