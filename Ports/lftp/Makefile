@@ -3,7 +3,7 @@
 # GPL
 
 # FIXME: can't compile with /usr/lib/libreadline.dylib present
-# FIXME: strip binaries needs investigation due:
+# FIXME: stripping binaries needs investigation due:
 # $ lftp
 # dyld: Symbol not found: _program_name
 #   Referenced from: /usr/local/lib/liblftp-tasks.0.dylib
@@ -14,7 +14,7 @@ include ../../Library/Rules.mk
 
 TITLE=		LFTP $(VERSION)
 NAME=		lftp
-VERSION=	4.0.5
+VERSION=	4.0.10
 REVISION=	0
 URL=		http://ftp.yars.free.net/pub/source/lftp
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
