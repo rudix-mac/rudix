@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		pkg-config $(VERSION)
 NAME=		pkg-config
-VERSION=	0.23
-REVISION=	4
+VERSION=	0.25
+REVISION=	0
 URL=		http://pkgconfig.freedesktop.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
