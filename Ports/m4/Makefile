@@ -8,7 +8,7 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU M4 $(VERSION)
 NAME=		m4
-VERSION=	1.4.14
+VERSION=	1.4.15
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/m4/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
