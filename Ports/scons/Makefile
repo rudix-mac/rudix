@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		SCons $(VERSION)
 NAME=		scons
-VERSION=	1.2.0.d20090919
+VERSION=	2.0.1
 REVISION=	0
 URL=		http://downloads.sourceforge.net/scons
 SOURCE=		$(NAME)-$(VERSION).tar.gz
