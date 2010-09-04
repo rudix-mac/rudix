@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		NcFTP Client $(VERSION)
 NAME=		ncftp
-VERSION=	3.2.3
-REVISION=	1
+VERSION=	3.2.4
+REVISION=	0
 SOURCE=		$(NAME)-$(VERSION)-src.tar.bz2
 URL=		ftp://ftp.ncftp.com/ncftp
 
