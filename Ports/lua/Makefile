@@ -7,13 +7,14 @@ include ../../Library/Rules.mk
 TITLE=		Lua $(VERSION)
 NAME=		lua
 VERSION=	5.1.4
-REVISION=	2
+REVISION=	3
 URL=		http://www.lua.org/ftp/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	cd $(BUILDDIR)/etc ; patch < $(PORTDIR)/lua.pc.patch
+	patch -d $(BUILDDIR)/etc < $(PORTDIR)/lua.pc.patch
+	patch -d $(BUILDDIR)/src < $(PORTDIR)/patch-lua-5.1.4-2.patch
 	$(TOUCH) prep
 
 build: prep
