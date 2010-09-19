@@ -5,12 +5,10 @@
 include ../../Library/Rules.mk
 
 NAME=		vim
-VERSION=	7.2
-REVISION=	3
+VERSION=	7.3
+REVISION=	0
 URL=		http://ftp.vim.org/pub/vim/unix/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-URL_EXTRA=	http://ftp.vim.org/pub/vim/extra/
-SOURCE_EXTRA=	vim-7.2-extra.tar.gz
 
 ifdef WITHOUT_X11
 X11=		--enable-gui=carbon --without-x
@@ -21,12 +19,12 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	tar zxvf $(SOURCE_EXTRA)
-	mv vim72 $(NAME)-$(VERSION)
+	mv vim73 $(NAME)-$(VERSION)
 	$(TOUCH) prep
 
 build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--enable-multibyte --enable-cscope $(X11) ; $(make)
 	$(TOUCH) build
