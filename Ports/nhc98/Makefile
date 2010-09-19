@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		nhc98 $(VERSION)
 NAME=		nhc98
 VERSION=	1.22
-REVISION=	0
+REVISION=	0.i386
 URL=		http://www.haskell.org/nhc98/
 SOURCE=		$(NAME)src-$(VERSION).tar.gz
 
