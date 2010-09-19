@@ -5,7 +5,7 @@
 include ../../Library/Rules.mk
 
 NAME=		stunnel
-VERSION=	4.29
+VERSION=	4.33
 REVISION=	0
 URL=		http://www.stunnel.org/download/stunnel/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -33,5 +33,6 @@ install: build
 
 test: install
 	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	$(TOUCH) test
