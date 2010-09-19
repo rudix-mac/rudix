@@ -1,13 +1,13 @@
 # ML language based on complete class-based objective system
-# http://www.ocaml.org/
+# http://caml.inria.fr/
 # LGPL
 
 include ../../Library/Rules.mk
 
 NAME=		ocaml
-VERSION=	3.11.2
+VERSION=	3.12.0
 REVISION=	0.i386
-URL=		http://caml.inria.fr/pub/distrib/ocaml-3.11/
+URL=		http://caml.inria.fr/pub/distrib/ocaml-3.12/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
