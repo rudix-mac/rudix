@@ -98,7 +98,7 @@ digraph Dependencies {
 	madplay
 	make
 	mc
-	memcached
+	memcached->libevent
 	memcachedb
 	mercurial
 	mongodb
