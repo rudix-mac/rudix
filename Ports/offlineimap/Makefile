@@ -17,7 +17,7 @@ PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
-	cd $(NAME) ; tar zxvf $(SOURCE)
+	tar zxvf $(SOURCE)
 	# http://www.mail-archive.com/fink-users@lists.sourceforge.net/msg31539.html
 	/usr/bin/sed -i -e 's/^from/import locale; from/' $(NAME)/bin/offlineimap
 	$(TOUCH) prep
