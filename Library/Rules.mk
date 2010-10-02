@@ -1,19 +1,19 @@
 # -*- mode: makefile -*-
 #
 # Common Rules and Macros
-# Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
+# Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	2
+BUILDSYSTEM=	3
 
 VENDOR=		org.rudix.pkg
 PORTDIR:=	$(shell pwd)
 BUILDDIR=	$(PORTDIR)/$(NAME)-$(VERSION)
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)/usr/local/share/doc/$(NAME)
-TITLE=		$(NAME) $(VERSION)
 PKGNAME=	$(PORTDIR)/$(NAME).pkg
 DMGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).dmg
+TITLE=		$(NAME) $(VERSION)
 
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
 CREATEDMG=	/usr/bin/hdiutil create
@@ -21,71 +21,60 @@ TOUCH=		touch
 #TOUCH=		@date >
 FETCH=		curl -f -O -C - -L
 #FETCH=		wget -c
-STRIP_BIN=	strip
-STRIP_LIB=	strip -x
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
 ARCH:=		$(shell arch)
 NCPU:=		$(shell sysctl -n hw.ncpu)
 CPU64BIT:=	$(shell sysctl -n hw.cpu64bit_capable)
 
-# Universal Binary build flags on Snow Leopard
-CFLAGS_FAT=	-arch i386 -arch x86_64 -Os
-CXXFLAGS_FAT=	-arch i386 -arch x86_64 -Os
-LDFLAGS_FAT=	-arch i386 -arch x86_64
+# Build flags on Snow Leopard
+CFLAGS=		-arch i386 -arch x86_64 -Os
+CXXFLAGS=	-arch i386 -arch x86_64 -Os
+LDFLAGS=	-arch i386 -arch x86_64
 
-# i386 build flags
-CFLAGS_32=	-arch i386 -Os
-CXXFLAGS_32=	-arch i386 -Os
-LDFLAGS_32=	-arch i386
+## Build flags on Leopard
+#CFLAGS=	-arch i386 -arch x86_64 -arch ppc -Os
+#CXXFLAGS=	-arch i386 -arch x86_64 -arch ppc -Os
+#LDFLAGS=	-arch i386 -arch x86_64 -arch ppc
 
-# x86_64 build flags
-CFLAGS_64=	-arch x86_64 -Os
-CXXFLAGS_64=	-arch x86_64 -Os
-LDFLAGS_64=	-arch x86_64
+## Debug flags:
+#CFLAGS=	-g
+#CXXFLAGS=	-g
+#LDFLAGS=
 
-# Debugging flags
-CFLAGS_DEBUG=	-g
-CXXFLAGS_DEBUG=	-g
-LDFLAGS_DEBUG=
-
-# Default build flags
-CFLAGS=		$(CFLAGS_FAT)
-CXXFLAGS=	$(CXXFLAGS_FAT)
-LDFLAGS=	$(LDFLAGS_FAT)
-
-# Common rules
-
+#
+# Build rules
+#
 all: install
 
 help:
 	@echo "make <action> where action is:"
-	@echo "  help		this help"
-	@echo "  retrieve	retrieve all files necessary to compile"
+	@echo "  help		this help message"
+	@echo "  retrieve	retrieve files necessary to compile"
 	@echo "  prep		explode source, apply patches, etc"
 	@echo "  build		configure software and then build it"
 	@echo "  install	install software into directory $(INTALLDIR)"
 	@echo "  pkg		create a package (.pkg)"
 	@echo "  dmg		create a disk image (.dmg)"
-	@echo "  installpkg	install a package (.pkg) created"
-	@echo "  all		executes prep, build and then install"
-	@echo "  installclean	(local) install clean-up"
-	@echo "  clean		build and install clean-up"
-	@echo "  distclean	remove many things but keep sources"
-	@echo "  realdistclean	remove everything else"
+	@echo "  installpkg	install the package created"
+	@echo "  all		do prep, build and install"
+	@echo "  installclean	local installation clean-up"
+	@echo "  clean		build and local installation clean-up"
+	@echo "  distclean	clean-up  many things but keep sources"
+	@echo "  realdistclean	clean-up everything else"
 	@echo "make without any action does 'make all'"
 
 retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	$(TOUCH) retrieve
 
-# Include prep, build, install in your Makefile
+# Note: rules prep, build, install must be defined in your Makefile!
 
 pkg: install
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).$(NAME) \
-		--version $(VERSION) \
+		--version $(VERSION)-$(REVISION) \
 		--title "$(TITLE)" \
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
 		--out $(PKGNAME)
@@ -102,7 +91,7 @@ installclean:
 	rm -rf install $(INSTALLDIR)
 
 pkgclean:
-	rm -rf  pkg *.pkg
+	rm -rf pkg *.pkg
 
 dmgclean:
 	rm -rf dmg *.dmg
@@ -123,8 +112,9 @@ tag:
 about:
 	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"
 
+#
 # Handful macros
-
+#
 define configure
 ./configure \
 	--cache-file=$(PORTDIR)/config.cache \
