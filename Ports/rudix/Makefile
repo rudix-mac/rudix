@@ -1,4 +1,4 @@
-# Rudix Package Manager (almost RPM ;D)
+# Rudix Package Manager -- RPM ;D
 # http://rudix.org/
 # BSD
 
@@ -14,7 +14,7 @@ build: rudix.pdf
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/sbin
-	sed "s/@VERSION@/$(VERSION)/" $(PORTDIR)/rudix > $(INSTALLDIR)/usr/local/sbin/rudix
+	sed "s/@VERSION@/$(VERSION)/" $(PORTDIR)/rudix.py > $(INSTALLDIR)/usr/local/sbin/rudix
 	chmod 755 $(INSTALLDIR)/usr/local/sbin/rudix
 	install -d $(INSTALLDIR)/usr/local/share/man/man1
 	install -m 644 rudix.1 $(INSTALLDIR)/usr/local/share/man/man1
@@ -23,7 +23,6 @@ install: build
 	$(TOUCH) install
 
 test: install
-	perl -c $(INSTALLDIR)/usr/local/sbin/rudix
 	$(TOUCH) test
 
 rudix.pdf: rudix.1
