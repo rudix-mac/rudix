@@ -23,6 +23,7 @@ List all installed packages unless options are given, like:
 import sys
 import os
 import getopt
+import tempfile
 from subprocess import Popen, PIPE, call
 
 __author__ = 'Ruda Moura'
@@ -152,20 +153,27 @@ def find_net_info(pkg):
 def net_install_package(pkg, net_info):
     root_required()
     net_url, net_filename, net_version = net_info
-    print 'Downloading package %s, version %s'%(pkg, net_version)
-    call(['curl', '-O', net_url])
-    print 'Mounting downloaded image', net_filename
-    out = communicate(['hdiutil', 'attach', net_filename])
-    for l in out:
-        if 'Apple_partition_scheme' in l:
-            disk_path = l.split()[0]
-        if 'Apple_HFS' in l:
-            volume_path = l.split()[2]
+    print 'Downloading', net_url
+    tempf, file_path = tempfile.mkstemp()
+    try:
+        call(['curl', '-f', '-o', file_path, '-C', '-', '-L', '-#', net_url])
+        print 'Mounting downloaded image file', file_path
+        out = communicate(['hdiutil', 'attach', file_path])
+        for l in out:
+            if 'Apple_partition_scheme' in l:
+                disk_path = l.split()[0]
+            if 'Apple_HFS' in l:
+                volume_path = l.split()[2]
 
-    install_package(os.path.join(volume_path, pkg+'.pkg'))
-    print 'Unmounting image', net_filename
-    call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
-    
+        version, install_date = get_package_info(pkg)
+        if install_date is not None:
+            remove_package(pkg)
+        install_package(os.path.join(volume_path, denormalize(pkg)+'.pkg'))
+        print 'Unmounting image', volume_path
+        call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
+    finally:
+        os.close(tempf)
+
 def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
     net_info = find_net_info(pkg)
@@ -197,7 +205,7 @@ def update_all_packages():
     for net_info in to_update:
         net_install_package(pkg, net_info)
     print 'All done'
-    
+
 def normalize(pkg):
     if not pkg.startswith(PREFIX):
         pkg = PREFIX + pkg
