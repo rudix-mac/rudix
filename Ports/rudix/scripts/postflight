@@ -1,5 +1,3 @@
 #!/bin/sh
-
 [ -d /etc/paths.d ] && echo "/usr/local/sbin" > /etc/paths.d/rudix
-
 exit 0
