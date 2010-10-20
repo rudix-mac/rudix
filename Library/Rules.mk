@@ -6,7 +6,7 @@
 
 BUILDSYSTEM=	3
 
-VENDOR=		org.rudix.pkg
+VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
 BUILDDIR=	$(PORTDIR)/$(NAME)-$(VERSION)
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
@@ -33,13 +33,13 @@ CXXFLAGS=	-arch i386 -arch x86_64 -Os
 LDFLAGS=	-arch i386 -arch x86_64
 
 ## Build flags on Leopard
-#CFLAGS=	-arch i386 -arch x86_64 -arch ppc -Os
-#CXXFLAGS=	-arch i386 -arch x86_64 -arch ppc -Os
-#LDFLAGS=	-arch i386 -arch x86_64 -arch ppc
+#CFLAGS=	-arch i386 -arch ppc -Os
+#CXXFLAGS=	-arch i386 -arch ppc -Os
+#LDFLAGS=	-arch i386 -arch ppc
 
 ## Debug flags:
-#CFLAGS=	-g
-#CXXFLAGS=	-g
+#CFLAGS=	-ggdb
+#CXXFLAGS=	-ggdb
 #LDFLAGS=
 
 #
@@ -73,7 +73,7 @@ retrieve:
 pkg: install
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
-		--id $(VENDOR).$(NAME) \
+		--id $(VENDOR).pkg.$(NAME) \
 		--version $(VERSION)-$(REVISION) \
 		--title "$(TITLE)" \
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
@@ -118,6 +118,7 @@ about:
 define configure
 ./configure \
 	--cache-file=$(PORTDIR)/config.cache \
+	--disable-dependency-tracking \
 	--mandir=/usr/local/share/man \
 	--infodir=/usr/local/share/info
 endef
