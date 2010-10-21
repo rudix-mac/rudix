@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="AFE19ED9-6E05-42D9-A2D4-C821174B9993"><config><identifier>org.rudix.pkg.yasm</identifier><version>1</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">yasm-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installFrom.path</mod><mod>parent</mod><mod>identifier</mod><mod>installTo</mod></config><contents><file-list>01yasm-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="EF93268B-0F5D-46DE-8426-BA05C34BB1F2">
+  <config>
+    <identifier>org.rudix.pkg.yasm</identifier>
+    <version>1.1.0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">yasm-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>installTo</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01yasm-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

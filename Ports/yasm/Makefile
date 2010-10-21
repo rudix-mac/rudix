@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Yasm $(VERSION)
 NAME=		yasm
-VERSION=	1.0.1
+VERSION=	1.1.0
 REVISION=	0
 URL=		http://www.tortall.net/projects/yasm/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
@@ -16,16 +16,16 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,GNU*,*.txt,ChangeLog,NEWS,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
