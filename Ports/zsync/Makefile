@@ -5,8 +5,8 @@
 include ../../Library/Rules.mk
 
 NAME=		zsync
-VERSION=	0.6.1
-REVISION=	1
+VERSION=	0.6.2
+REVISION=	0
 URL=		http://zsync.moria.org.uk/download/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -15,15 +15,15 @@ prep: retrieve
 	$(TOUCH) prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --disable-dependency-tracking ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
 	$(TOUCH) build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,NEWS,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	install -m 644 $(BUILDDIR)/{COPYING,INSTALL,NEWS,README} $(INSTALLDOCDIR)
+	strip $(INSTALLDIR)/usr/local/bin/*
 	$(TOUCH) install
 
 test: install
