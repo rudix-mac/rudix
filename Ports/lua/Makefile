@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		Lua $(VERSION)
 NAME=		lua
 VERSION=	5.1.4
-REVISION=	3
+REVISION=	4
 URL=		http://www.lua.org/ftp/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -29,11 +29,11 @@ install: build
 	install -d $(INSTALLDIR)/usr/local/lib/pkgconfig
 	install -m 644 $(BUILDDIR)/etc/lua.pc $(INSTALLDIR)/usr/local/lib/pkgconfig
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,HISTORY,README} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{COPYRIGHT,HISTORY,INSTALL,README} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
 	rm -f $(INSTALLDOCDIR)/*.1
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.a
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install
