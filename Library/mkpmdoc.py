@@ -23,12 +23,13 @@ def make_pmdocdir(name):
     try:
         os.mkdir(name + '.pmdoc')
     except OSError:
-        pass
+        return False
+    return True
 
 def save_to_file(filename, content):
     f = open(filename, 'w')
     f.write(content)
-    close(filename)
+    f.close()
 
 def get_permissions(filename):
     pass
@@ -73,7 +74,8 @@ def make_pkmkdoc(name, title, description, license, readme):
         'readme': readme,
         'organization': VENDOR,
     }
-    return xml.format(**args)
+    filename = name + '.pmdoc/index.xml'
+    save_to_file(filename, xml.format(**args))
 
 def make_pkgref(name, version):
     xml = '''<?xml version="1.0"?>
@@ -90,11 +92,6 @@ def make_pkgref(name, version):
     		<followSymbolicLinks/>
     	</flags>
     	<packageStore type="internal"/>
-    	<mod>identifier</mod>
-    	<mod>installFrom.path</mod>
-    	<mod>parent</mod>
-    	<mod>installTo</mod>
-    	<mod>version</mod>
     </config>
     <contents>
     	<file-list>01{name}-contents.xml</file-list>
@@ -112,7 +109,8 @@ def make_pkgref(name, version):
         'uuid': UUID,
         'organization': VENDOR,
     }
-    return xml.format(**args)
+    filename = name + '.pmdoc/' + '01' + name + '.xml'
+    save_to_file(filename, xml.format(**args))
 
 def make_pkgcontents(top):
     xml = '''<?xml version="1.0"?>
@@ -149,9 +147,9 @@ def make_pkgcontents(top):
     return xml.format(**args)
 
 def make_pmdoc(name, version, title, description, license, readme, top):
-    #print make_pkmkdoc(name, title, description, license, readme)
-    #print make_pkgref(name, version)
-    print make_pkgcontents(top)
+    make_pmdocdir(name)
+    make_pkmkdoc(name, title, description, license, readme)
+    make_pkgref(name, version)
 
 def main(argv=None):
     name = version = title = description = license = readme = None
