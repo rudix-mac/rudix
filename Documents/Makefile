@@ -1,10 +1,10 @@
-# Makefile for a new port
+# Makefile for a new generic port
 # http://rudix.org/
 # License (GPL, LGPL, BSD, Apache, etc.)
 
 include ../../Library/Rules.mk
 
-TITLE=		Template $(VERSION)
+TITLE=		Generic Template $(VERSION)
 NAME=		template
 VERSION=	1.2.3
 REVISION=	0
@@ -17,10 +17,10 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).zip
 
 #ifdef WITHOUT_NLS
-#CONFIGURE_OPTS=	--disable-nls
+#CONFIG_OPTS=	--disable-nls
 #else
 #DEPENDS+=	/usr/local/lib/libintl.la
-#CONFIGURE_OPTS=	--enable-nls
+#CONFIG_OPTS=	--enable-nls
 #endif
 
 #ifdef WITH_STATIC_NLS
@@ -38,16 +38,17 @@ prep: retrieve
 	#tar jxvf $(SOURCE)
 	#unzip $(SOURCE)
 	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
-	$(TOUCH) prep
+	touch prep
 
 #
 # Configure and build from sources
 #
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) ; $(make)
+	cd $(BUILDDIR) ; \
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) ; $(make)
 	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="($LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 #
 # Install in a self-contained directory root
@@ -56,18 +57,18 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	#cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local install
 
-	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	#rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
-	#rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
+	rm -f $(INSTALLDIR)/usr/local/share/info/dir
+	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
+	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
 
-	#install -d $(INSTALLDOCDIR)
-	#install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/sbin/*
+	strip -x $(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -79,4 +80,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

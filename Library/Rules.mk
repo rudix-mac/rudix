@@ -66,7 +66,7 @@ help:
 
 retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
-	$(TOUCH) retrieve
+	touch retrieve
 
 # Note: rules prep, build, install must be defined in your Makefile!
 
@@ -78,11 +78,11 @@ pkg: install
 		--title "$(TITLE)" \
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
 		--out $(PKGNAME)
-	$(TOUCH) pkg
+	touch pkg
 
 dmg: pkg
 	$(CREATEDMG) -srcfolder $(PKGNAME) $(DMGNAME)
-	$(TOUCH) dmg
+	touch dmg
 
 installpkg: pkg
 	installer -pkg $(PKGNAME) -target /
