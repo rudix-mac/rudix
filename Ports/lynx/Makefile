@@ -41,7 +41,7 @@ install: build
 	mv $(INSTALLDIR)/usr/local/etc/lynx.lss $(INSTALLDIR)/usr/local/etc/lynx.lss.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,CHANGES,COPYHEADER*,COPYING*,PROBLEMS,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

@@ -33,7 +33,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING.txt,NEWS,README,TODO} $(INSTALLDOCDIR)
 	rsync -a $(BUILDDIR)/doc/ $(INSTALLDOCDIR)
-	$(STRIP_LIB)  $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so
+	strip -x  $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so
 	touch install
 
 test: install

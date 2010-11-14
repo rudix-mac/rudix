@@ -33,7 +33,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,README*,TODO} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/Cheetah/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/Cheetah/*.so
 	touch install
 
 test: install

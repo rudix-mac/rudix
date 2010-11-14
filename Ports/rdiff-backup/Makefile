@@ -34,7 +34,7 @@ install: build
 	rm -rf $(INSTALLDIR)/usr/local/share/doc/$(NAME)-$(VERSION)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGELOG,COPYING,FAQ.html,README,examples.html} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/rdiff_backup/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/rdiff_backup/*.so
 	touch install
 
 test: install

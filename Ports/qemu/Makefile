@@ -21,7 +21,7 @@ build: prep $(DEPENDS)
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

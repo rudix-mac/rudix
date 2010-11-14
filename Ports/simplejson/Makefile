@@ -30,7 +30,7 @@ install: build
 		--prefix=/usr/local \
 		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE.txt,PKG-INFO} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/{*.html,*.json} $(INSTALLDOCDIR)

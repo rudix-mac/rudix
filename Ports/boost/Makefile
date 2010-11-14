@@ -32,9 +32,9 @@ install: build
 	cd $(BUILDDIR) ; find boost ! -name \*.orig -type f -exec install -m 644 {} $(INSTALLDIR)/usr/local/include/{} \;
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE_1_0.txt,index.*} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
 test: install

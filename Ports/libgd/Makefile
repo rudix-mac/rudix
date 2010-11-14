@@ -31,11 +31,11 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,NEWS,README*} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
 test: install

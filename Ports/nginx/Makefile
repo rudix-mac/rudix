@@ -31,7 +31,7 @@ install: build
 	for x in index.html 50x.html ; do \
 		mv $(INSTALLDIR)/usr/local/nginx/html/$$x \
 		   $(INSTALLDIR)/usr/local/nginx/html/$$x.default ; done
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/nginx/sbin/*
+	strip $(INSTALLDIR)/usr/local/nginx/sbin/*
 	touch install
 
 test: install

@@ -33,7 +33,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CONTRIBUTORS,COPYING,README} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/mercurial/*.so
 	touch install
 
 test: install

@@ -36,13 +36,13 @@ install: build
 		$(INSTALLDIR)/usr/local/etc/pango/pangox.aliases.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.so
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.so
 endif
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.a
 	touch install
 
 test: install

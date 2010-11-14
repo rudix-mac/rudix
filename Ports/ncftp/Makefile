@@ -27,7 +27,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{DONATE.txt,README.txt} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/{CHANGELOG.txt,what_changed_between_v2_v3.txt,FIREWALLS_AND_PROXIES.txt} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/html/* $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

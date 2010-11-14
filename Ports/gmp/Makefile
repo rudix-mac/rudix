@@ -34,9 +34,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/*.a
 	touch install
 
 test: install

@@ -42,7 +42,7 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{NEWS,README*,TODO,VERSION} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

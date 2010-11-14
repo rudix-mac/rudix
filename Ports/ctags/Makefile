@@ -32,7 +32,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,FAQ,NEWS,README} $(INSTALLDOCDIR)
 	install	-m 644 $(BUILDDIR)/*.html $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

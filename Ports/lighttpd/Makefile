@@ -34,9 +34,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,NEWS,README,doc/[a-z]*} $(INSTALLDOCDIR)
 	rm -f $(INSTALLDOCDIR)/doc/*.1
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lighttpd/lib*.dylib
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lighttpd/mod_*.so
+	strip $(INSTALLDIR)/usr/local/sbin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lighttpd/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lighttpd/mod_*.so
 	touch install
 
 test: install

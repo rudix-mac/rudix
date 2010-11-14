@@ -35,7 +35,7 @@ install: build
 	install -d $(INSTALLDOCDIR)                                            
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,doc/msmtp*} $(INSTALLDOCDIR)  
 	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

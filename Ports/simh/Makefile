@@ -28,7 +28,7 @@ install: build
 	install -m 755 $(BUILDDIR)/BIN/* $(INSTALLDIR)/usr/local/bin
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/*.txt $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

@@ -33,9 +33,9 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/var/www/html/index.html
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ABOUT_APACHE,CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/sbin/*
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/libexec/httpd/*.so
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/sbin/*
+	strip -x  $(INSTALLDIR)/usr/local/libexec/httpd/*.so
 	touch install
 
 test: install

@@ -28,7 +28,7 @@ install: build
 	done
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,INSTALL.*,NEWS.*,README.*} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

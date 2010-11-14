@@ -35,7 +35,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYRIGHT,CREDITS,ChangeLog,README} $(INSTALLDOCDIR)
 
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
+	strip $(INSTALLDIR)/usr/local/sbin/*
 	touch install
 
 test: install

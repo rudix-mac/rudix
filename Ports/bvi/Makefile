@@ -25,7 +25,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,CREDITS,README} $(INSTALLDOCDIR)
 	cp -a $(BUILDDIR)/html $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

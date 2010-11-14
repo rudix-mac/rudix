@@ -32,7 +32,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING.txt,README.txt} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/psyco/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/psyco/*.so
 	touch install
 
 test: install

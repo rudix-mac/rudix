@@ -35,9 +35,9 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/*.html $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	chmod u+w $(INSTALLDIR)/usr/local/lib/*.dylib
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
+	strip -x  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
+	strip -x  $(INSTALLDIR)/usr/local/lib/*.a
 	touch install
 
 test: install

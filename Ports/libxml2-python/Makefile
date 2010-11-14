@@ -31,7 +31,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{README,TODO,*.xml,*.txt} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*.so
 	touch install
 
 test: install

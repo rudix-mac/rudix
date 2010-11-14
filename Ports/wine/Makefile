@@ -26,8 +26,8 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ANNOUNCE,AUTHORS,COPYING.LIB,LICENSE,README} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	touch install
 
 test: install

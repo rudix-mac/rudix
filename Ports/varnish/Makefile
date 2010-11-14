@@ -26,10 +26,10 @@ install: build
 		mv default.vcl default.vcl.default
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ChangeLog,LICENSE,README} $(INSTALLDOCDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/sbin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/sbin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
 test: install

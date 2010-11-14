@@ -36,11 +36,11 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS} $(INSTALLDOCDIR)
 	rm -rf $(INSTALLDIR)/usr/local/share/doc/gettext/examples
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
+	strip -x  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
+	strip -x  $(INSTALLDIR)/usr/local/lib/*.a
 	touch install
 
 test: install

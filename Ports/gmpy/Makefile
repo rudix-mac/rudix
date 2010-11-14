@@ -37,7 +37,7 @@ install: build
 		--prefix=/usr/local \
 		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*.so
 	touch install
 
 test: install

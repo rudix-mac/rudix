@@ -39,7 +39,7 @@ install: build
 		mandir=$(INSTALLDIR)/usr/local/share/man  install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{BUGS,COPYING,ChangeLog,FAQ,INTEROP,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
 test: install

@@ -29,7 +29,7 @@ install: build
                 --home=$(INSTALLDIR)/usr/local \
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so
+	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so
 	touch install
 
 test: install

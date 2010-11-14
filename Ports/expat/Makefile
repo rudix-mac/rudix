@@ -24,9 +24,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,Changes,README,doc/*} $(INSTALLDOCDIR)
 	rm $(INSTALLDIR)/usr/local/share/doc/expat/*.1
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
 test: install
