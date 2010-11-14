@@ -40,12 +40,12 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --with-mule $(DB) $(X11) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make \
@@ -58,9 +58,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{BUGS,COPYING,ChangeLog,PROBLEMS,README*} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

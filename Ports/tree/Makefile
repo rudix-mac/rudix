@@ -14,11 +14,11 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.patch
 	cp strverscmp.c $(BUILDDIR)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -27,8 +27,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644  $(BUILDDIR)/{CHANGES,LICENSE,README} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

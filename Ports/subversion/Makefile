@@ -28,12 +28,12 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --enable-shared ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build $(DEPENDS)
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -43,7 +43,7 @@ install: build $(DEPENDS)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -54,4 +54,4 @@ test: install
 		lipo $$x -verify_arch i386 x86_64 ; done
 	otool -L $(INSTALLDIR)/usr/local/lib/libsvn_ra_neon-1.dylib | grep -v '/usr/lib/libneon.26.dylib' > /dev/null
 	#cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

@@ -13,12 +13,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -27,7 +27,7 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/html/* $(INSTALLDOCDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
@@ -35,4 +35,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

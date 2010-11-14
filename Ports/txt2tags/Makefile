@@ -14,11 +14,11 @@ DEPENDS=	/usr/local/bin/msgfmt
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cp $(PORTDIR)/txt2tags.Makefile $(BUILDDIR)/Makefile
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -29,8 +29,8 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
 	install -d $(INSTALLDIR)/usr/local/lib/txt2tags
 	install -m 644 $(BUILDDIR)/extras/* $(INSTALLDIR)/usr/local/lib/txt2tags
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR)/test ; ./run.py
-	$(TOUCH) test
+	touch test

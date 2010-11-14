@@ -14,19 +14,19 @@ prep: retrieve
 	cd $(BUILDDIR) ; sh $(PORTDIR)/hoc.sh ; \
 	patch < $(PORTDIR)/hoc-1.1-makefile.patch ; \
 	patch < $(PORTDIR)/hoc.y.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/README $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	lipo $(INSTALLDIR)/usr/local/bin/hoc -verify_arch i386 x86_64
-	$(TOUCH) test
+	touch test

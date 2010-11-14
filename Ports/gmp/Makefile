@@ -22,11 +22,11 @@ prep: retrieve
 ifdef STATIC_ONLY
 	patch -d $(BUILDDIR)/tests < $(PORTDIR)/gmp-4.2.1-static-IntelMac.patch
 endif
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(configure) $(CONFIG_OPTS) --enable-cxx ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -37,8 +37,8 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

@@ -12,11 +12,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/frotz-2.43-Makefile.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" all
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -27,8 +27,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,HOW_TO_PLAY,README,TODO,doc/*.conf*} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

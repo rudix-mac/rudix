@@ -14,13 +14,13 @@ DEPENDS=	/usr/local/bin/pkg-config
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--disable-dependency-tracking --enable-static ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -32,7 +32,7 @@ install: build
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	strip -x $(INSTALLDIR)/usr/local/lib/ao/plugins-2/*.so
 	strip -x $(INSTALLDIR)/usr/local/lib/ao/plugins-2/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

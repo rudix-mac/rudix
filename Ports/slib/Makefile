@@ -13,11 +13,11 @@ include ../../Library/Rules.mk
 prep: retrieve
 	unzip $(SOURCE)
 	mv slib $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -28,7 +28,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{*.txt,*.xyz,*.ps} $(INSTALLDIR)/usr/local/lib/slib
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ANNOUNCE,COPYING,README,FAQ} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

@@ -11,32 +11,33 @@ URL=		http://ftp.vim.org/pub/vim/unix/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 ifdef WITHOUT_X11
-X11=		--enable-gui=carbon --without-x
+CONFIG_OPTS=	--without-x
 else
 DEPENDS+=	/usr/X11R6
-X11=		--enable-gui=carbon --with-x
+CONFIG_OPTS=	--with-x
 endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	mv vim73 $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; \
 	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--enable-multibyte --enable-cscope $(X11) ; $(make)
-	$(TOUCH) build
+	$(configure) $(CONFIG_OPTS) \
+		--enable-multibyte --enable-cscope ; $(make)
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/README.txt $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR)/src ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

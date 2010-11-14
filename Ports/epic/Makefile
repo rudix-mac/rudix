@@ -21,12 +21,12 @@ LDFLAGS+=	-arch ppc
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make IP=$(INSTALLDIR) install
@@ -36,9 +36,9 @@ install: build
 	install -m 644 $(BUILDDIR)/{BUG_FORM,COPYRIGHT,KNOWNBUGS,README,UPDATES,VOTES} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/libexec/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/*"
-	$(TOUCH) test
+	touch test

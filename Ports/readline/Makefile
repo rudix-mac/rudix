@@ -19,12 +19,12 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; for x in $(PORTDIR)/readline*-00? ; do \
 		patch < $$x ; done
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(CONFIGURE_OPTS) --with-curses ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install install-doc
@@ -38,7 +38,7 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 ifndef STATIC_ONLY
@@ -47,4 +47,4 @@ ifndef STATIC_ONLY
 endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) install
+	touch install

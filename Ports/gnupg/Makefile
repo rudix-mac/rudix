@@ -13,11 +13,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -29,10 +29,10 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/{DETAILS,FAQ,HACKING,*.html,*.txt} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip $(INSTALLDIR)/usr/local/libexec/gnupg/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/gnupg/*"
-	$(TOUCH) test
+	touch test

@@ -14,14 +14,14 @@ DEPENDS=	/usr/local/bin/gdlib-config
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--disable-dependency-tracking \
 		--with-readline=builtin ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -30,10 +30,10 @@ install: build
 	install -m 644 $(BUILDDIR)/{BUGS,ChangeLog,Copyright,FAQ,NEWS,README,TODO} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip $(INSTALLDIR)/usr/local/libexec/gnuplot/4.2/gnuplot_x11
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/gnuplot/4.2/gnuplot_x11"
-	$(TOUCH) test
+	touch test

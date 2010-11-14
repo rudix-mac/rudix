@@ -13,7 +13,7 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -21,7 +21,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--disable-gomp \
 		--with-png=/usr/X11 ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -30,8 +30,8 @@ install: build
 	strip -x $(INSTALLDIR)/usr/local/bin/*
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR)/src ; sh tests.sh
-	$(TOUCH) test
+	touch test

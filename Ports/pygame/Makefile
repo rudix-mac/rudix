@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
 	mv $(NAME)-$(VERSION)release $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
@@ -30,8 +30,8 @@ install: build
                 --install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*/*.so"
-	$(TOUCH) test
+	touch test

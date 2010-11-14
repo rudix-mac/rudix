@@ -13,12 +13,12 @@ include ../../Library/Rules.mk
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME)_$(VERSION) $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(configure) ; \
 	$(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/include/sexpr
@@ -28,9 +28,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE*,README.txt,state_machine.txt} $(INSTALLDOCDIR)
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

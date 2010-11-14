@@ -14,12 +14,12 @@ SOURCE=		$(NAME)-398-2.tar.gz
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv lame-398-2 $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking  ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -29,10 +29,10 @@ install: build
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

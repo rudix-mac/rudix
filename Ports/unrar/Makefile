@@ -14,11 +14,11 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	mv unrar $(NAME)-$(VERSION)
 	install -m 644 $(PORTDIR)/makefile.macosx $(BUILDDIR)/Makefile
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(make) CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(CFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/bin
@@ -26,8 +26,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{license.txt,readme.txt} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

@@ -13,13 +13,13 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
 	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)"  \
 	$(configure) --disable-dependency-tracking --without-zenmap ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -27,9 +27,9 @@ install: build
 	install -m 644 $(BUILDDIR)/{COPYING,HACKING} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/*.txt $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

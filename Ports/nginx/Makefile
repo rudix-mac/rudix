@@ -18,12 +18,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	./configure ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -32,10 +32,10 @@ install: build
 		mv $(INSTALLDIR)/usr/local/nginx/html/$$x \
 		   $(INSTALLDIR)/usr/local/nginx/html/$$x.default ; done
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/nginx/sbin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/nginx/sbin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

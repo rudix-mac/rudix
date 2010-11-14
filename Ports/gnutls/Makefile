@@ -20,11 +20,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -40,7 +40,7 @@ install: build
 	#strip $(INSTALLDIR)/usr/local/sbin/*
 	#strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	#strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
@@ -48,4 +48,4 @@ test: install
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

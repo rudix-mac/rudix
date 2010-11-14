@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.5/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/$(SITEPACKAGES)
@@ -30,8 +30,8 @@ install: build
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*.egg/twisted/*/*.so"
-	$(TOUCH) test
+	touch test

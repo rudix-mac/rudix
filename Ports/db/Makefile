@@ -19,7 +19,7 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR)/build_unix ; \
@@ -30,7 +30,7 @@ build: prep $(DEPENDS)
 		--enable-compat185 --enable-dump185 	\
 		--enable-cxx ;				\
 	$(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR)/build_unix ; \
@@ -43,7 +43,7 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -54,4 +54,4 @@ ifndef STATIC_ONLY
 endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

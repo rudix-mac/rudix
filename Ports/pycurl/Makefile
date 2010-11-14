@@ -17,11 +17,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR) < $(PORTDIR)/setup.py.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -32,9 +32,9 @@ install: build
 		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*.so) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

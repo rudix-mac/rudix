@@ -20,12 +20,12 @@ endif
 prep: retrieve
 	tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR)/src < $(PORTDIR)/mach_vm_region.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --enable-shared $(CONFIG_OPTS) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -35,8 +35,8 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

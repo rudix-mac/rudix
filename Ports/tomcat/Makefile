@@ -14,10 +14,10 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 
 prep: retrieve
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
-	$(TOUCH) build
+	touch build
 
 install: retrieve
 	install -d $(INSTALLDIR)/usr/local/lib
@@ -31,7 +31,7 @@ install: retrieve
 	cd $(INSTALLDIR)/usr/local/sbin ; \
 	ln -sf /usr/local/lib/tomcat/bin/startup.sh tomcat-startup.sh ; \
 	ln -sf /usr/local/lib/tomcat/bin/shutdown.sh tomcat-shutdown.sh
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

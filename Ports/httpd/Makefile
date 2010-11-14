@@ -14,7 +14,7 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 prep: retrieve
 	tar jxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/config_layout.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -24,7 +24,7 @@ build: prep $(DEPENDS)
 		--enable-modules=all \
 		--enable-mods-shared=all \
 		--enable-proxy ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -36,10 +36,10 @@ install: build
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/sbin/*
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/libexec/httpd/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/httpd/*.so"
-	$(TOUCH) test
+	touch test

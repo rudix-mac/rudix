@@ -14,12 +14,12 @@ SOURCE=		$(NAME)_1_43_0.tar.bz2
 prep: retrieve
 	tar jxvf $(SOURCE)
 	mv $(NAME)_1_43_0 $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./bootstrap.sh ; \
 	./bjam toolset=darwin architecture=x86 address-model=32_64
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/bin
@@ -35,7 +35,7 @@ install: build
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	#for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -44,4 +44,4 @@ test: install
 		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar xvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
@@ -31,8 +31,8 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDIR)/usr/local/share/doc/$(NAME)
 	install -m 644 $(BUILDDIR)/{COPYRIGHT,ChangeLog,KNOWN_BUGS,MAINTAINERS,NEWS,README,TODO,VERSION} $(INSTALLDIR)/usr/local/share/doc/$(NAME)
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; ./test_check.sh
-	$(TOUCH) test
+	touch test

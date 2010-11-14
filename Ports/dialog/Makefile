@@ -12,12 +12,12 @@ SOURCE=		$(NAME)-$(VERSION).tgz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -25,9 +25,9 @@ install: build
 	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,README} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/samples/*.rc $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

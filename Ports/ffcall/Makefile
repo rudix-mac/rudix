@@ -12,12 +12,12 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/share/doc
@@ -27,9 +27,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,NEWS,README} $(INSTALLDOCDIR)
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

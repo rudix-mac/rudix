@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
@@ -31,7 +31,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES.txt,LICENSE.txt,README.txt,RELEASE.txt} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

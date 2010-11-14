@@ -34,7 +34,7 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
@@ -43,7 +43,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--with-modules \
 		--with-openssl $(CONFIG_OPTS) ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -52,7 +52,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FAQ,FEATURES,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 	#strip $(INSTALLDIR)/usr/local/bin/*
 	#strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	$(TOUCH) install
+	touch install
 
 test: install
 	lipo $(INSTALLDIR)/usr/local/bin/lftp -verify_arch i386 x86_64
@@ -61,4 +61,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

@@ -17,7 +17,7 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
@@ -26,7 +26,7 @@ build: prep $(DEPENDS)
 		--enable-threads \
 		--disable-csharp \
 		--with-included-glib ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -41,7 +41,7 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
 	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 ifndef STATIC_ONLY
@@ -51,4 +51,4 @@ endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

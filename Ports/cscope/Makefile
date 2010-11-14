@@ -14,20 +14,20 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 prep: retrieve
 	tar jxvf $(SOURCE)
 	cd $(BUILDDIR)/src ; patch < $(PORTDIR)/constants.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure)  --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	lipo $(INSTALLDIR)/usr/local/bin/cscope -verify_arch i386 x86_64
-	$(TOUCH) test
+	touch test

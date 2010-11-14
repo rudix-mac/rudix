@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	#install -d $(INSTALLDIR)/Library/Python/2.6/site-packages/
@@ -34,9 +34,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,README*,TODO} $(INSTALLDOCDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/Cheetah/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/Cheetah/*.so) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

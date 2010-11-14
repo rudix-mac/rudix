@@ -22,12 +22,12 @@ endif
 
 prep: retrieve
 	cd $(BUILDDIR) ; unzip $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -38,8 +38,8 @@ install: build
 		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; $(PYTHON) test/gmpy_test.py
-	$(TOUCH) test
+	touch test

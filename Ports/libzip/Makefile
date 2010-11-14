@@ -12,12 +12,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -26,8 +26,8 @@ install: build
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: build
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

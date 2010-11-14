@@ -12,11 +12,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(configure) --enable-nasm ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -24,7 +24,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{BUGS,COPYING,CREDITS,README,README-SDL.txt,README.MacOSX} $(INSTALLDOCDIR)
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

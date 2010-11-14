@@ -14,12 +14,12 @@ include ../../Library/Rules.mk
 prep: retrieve
 	tar zxvf $(SOURCE)
 	#patch -d $(BUILDDIR)/src/drivers < $(PORTDIR)/osx.c.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; $(make) LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -28,8 +28,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/README $(BUILDDIR)/docs/{COPYING,CREDITS,ChangeLog} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

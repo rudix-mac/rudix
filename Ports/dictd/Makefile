@@ -12,13 +12,13 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; \
 	env LIBTOOL=glibtool CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -29,10 +29,10 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/{rfc2229.txt,security.doc} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip $(INSTALLDIR)/usr/local/sbin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
-	$(TOUCH) test
+	touch test

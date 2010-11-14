@@ -31,7 +31,7 @@ endif
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/docdir_realplace.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -39,7 +39,7 @@ build: prep $(DEPENDS)
 		--enable-threadsafe-ssl \
 		--with-ssl \
 		--with-expat ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -50,7 +50,7 @@ ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 ifndef STATIC_ONLY
@@ -60,4 +60,4 @@ endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR)/test ; make check
-	$(TOUCH) test
+	touch test

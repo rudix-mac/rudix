@@ -12,12 +12,12 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) ; $(make)
-	$(TOUCH) build
+	touch build
 
 #
 # Install in a self-contained directory root
@@ -41,7 +41,7 @@ install: build
 	#strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	#strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
 	#strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
@@ -50,4 +50,4 @@ test: install
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
 	#$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/*/*.so"
-	$(TOUCH) test
+	touch test

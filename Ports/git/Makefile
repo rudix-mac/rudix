@@ -5,7 +5,7 @@
 include ../../Library/Rules.mk
 
 NAME=		git
-VERSION=	1.7.2.1
+VERSION=	1.7.3.1
 REVISION=	0
 URL=		http://www.kernel.org/pub/software/scm/git/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -13,12 +13,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 prep: retrieve
 	tar jxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make configure ; \
 	env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install #install-doc
@@ -42,9 +42,9 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
 	find $(INSTALLDIR)/usr/local/bin -type f -exec strip {} \;
-	$(TOUCH) install
+	touch install
 
 test: install
 	lipo $(INSTALLDIR)/usr/local/bin/git -verify_arch i386 x86_64
 	#cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

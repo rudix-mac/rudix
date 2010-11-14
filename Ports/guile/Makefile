@@ -31,12 +31,12 @@ prep: retrieve
 	patch -d $(BUILDDIR)/libguile < $(PORTDIR)/libguile-Makefile.in.patch
 	patch -d $(BUILDDIR)/guile-readline < $(PORTDIR)/readline-Makefile.in.patch
 	patch -d $(BUILDDIR)/guile-readline < $(PORTDIR)/libedit.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(NLS) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -46,8 +46,8 @@ install: build
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

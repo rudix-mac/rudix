@@ -21,17 +21,17 @@ DEPENDS+=	/usr/local/lib/libavcall.a
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure ; $(make) -C src
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make -C src DESTDIR=$(INSTALLDIR) install
 	rm -rf $(INSTALLDIR)/usr/local/bin/clisp.dSYM
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make -C src check
-	$(TOUCH) test
+	touch test

@@ -14,12 +14,12 @@ DEPENDS+=	/usr/local/lib/libdb.a
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -27,8 +27,8 @@ install: build
 	install -m 644 $(BUILDDIR)/{AUTHORS,CREDITS,ChangeLog,LICENSE,README,TODO,doc/*.txt} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/tools/*.py $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

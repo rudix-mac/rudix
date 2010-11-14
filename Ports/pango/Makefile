@@ -23,12 +23,12 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking $(CONFIGURE_OPTS) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -43,7 +43,7 @@ ifndef STATIC_ONLY
 endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -59,4 +59,4 @@ endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/pango/*/modules/*.a) ; do \
 		lipo $$x -verify_arch i386 ppc ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

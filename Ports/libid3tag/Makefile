@@ -14,12 +14,12 @@ SOURCE=		libid3tag-$(VERSION).tar.gz
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/libid3tag-0.15.1b-configure.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking ; $(make) 
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -27,9 +27,9 @@ install: build
 	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,COPYRIGHT,CREDITS,README,TODO} $(INSTALLDOCDIR)
 	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
-	$(TOUCH) test
+	touch test

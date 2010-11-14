@@ -14,11 +14,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 prep: retrieve
 	tar jxvf $(SOURCE)
 	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/snowleopard.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR)/src ;  $(make) libvx32/libvx32.a 9vx/9vx vxrun/vxrun
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/lib
@@ -33,4 +33,4 @@ install: build
 	install -m 644 $(BUILDDIR)/ADVENTURE $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/*.pdf $(INSTALLDOCDIR)
 	install -m 644 $(PORTDIR)/LICENSE $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install

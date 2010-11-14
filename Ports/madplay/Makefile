@@ -18,18 +18,18 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR) < $(PORTDIR)/madplay-0.15.2b-configure.patch ; \
 	patch -d $(BUILDDIR) < $(PORTDIR)/madplay-0.15.2b-audio_carbon.c.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,COPYRIGHT,CREDITS,README,TODO} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

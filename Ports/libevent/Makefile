@@ -18,12 +18,12 @@ endif
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME)-$(VERSION)-stable $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(CONFIGURE_OPTS); $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -33,7 +33,7 @@ ifndef STATIC_ONLY
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 ifndef STATIC_ONLY
@@ -43,4 +43,4 @@ endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make verify
-	$(TOUCH) test
+	touch test

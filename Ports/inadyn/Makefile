@@ -12,11 +12,11 @@ include ../../Library/Rules.mk
 prep: retrieve
 	unzip $(SOURCE)
 	mv $(NAME) $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" TARGET_ARCH=macosx
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/sbin
@@ -27,8 +27,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/readme.html $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/sbin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
-	$(TOUCH) test
+	touch test

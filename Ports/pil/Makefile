@@ -16,11 +16,11 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -31,7 +31,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{CHANGES,README} $(INSTALLDOCDIR)
 	rsync -av $(BUILDDIR)/Docs/* $(INSTALLDOCDIR)
 	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/PIL/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

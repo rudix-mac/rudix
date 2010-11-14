@@ -19,13 +19,13 @@ endif
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/librsync-0.9.7-universal.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(CONFIGURE_OPTS) \
 		--disable-dependency-tracking ; $(make) LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -36,7 +36,7 @@ ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
@@ -44,4 +44,4 @@ ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 endif
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

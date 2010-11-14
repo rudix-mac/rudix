@@ -17,23 +17,23 @@ retrieve:
 	hg clone -r release $(URL) go-$(VERSION)
 	tar zcvf go-$(VERSION).tar.gz go-$(VERSION)
 	rm -rf go-$(VERSION)
-	$(TOUCH) retrieve
+	touch retrieve
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	install -d $(INSTALLDIR)/$(GOROOT_386)/bin
 	cd $(BUILDDIR) ; hg archive $(INSTALLDIR)/$(GOROOT_386)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(INSTALLDIR)/$(GOROOT_386)/src ; export GOROOT="$(INSTALLDIR)/$(GOROOT_386)" GOOS="darwin" GOARCH="amd64" GOBIN="$(INSTALLDIR)/$(GOROOT_386)/bin" PATH="$$PATH:$(INSTALLDIR)/$(GOROOT_386)/bin" LC_ALL="C" ; ./all.bash
-	$(TOUCH) build
+	touch build
 
 install: build
 	rm -rf $(INSTALLDIR)/$(GOROOT_386)/include
 	rm -rf $(INSTALLDIR)/$(GOROOT_386)/src
 	rm -rf $(INSTALLDIR)/$(GOROOT_386)/test
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

@@ -15,12 +15,12 @@ retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	$(FETCH) $(URL)/otp_doc_html_$(VERSION).tar.gz
 	$(FETCH) $(URL)/otp_doc_man_$(VERSION).tar.gz
-	$(TOUCH) retrieve
+	touch retrieve
 
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv otp_src_$(VERSION) $(NAME)-$(VERSION)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(configure) \
@@ -29,7 +29,7 @@ build: prep
 		--enable-smp-support \
 		--enable-hipe \
 		--enable-darwin-universal ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make INSTALL_PREFIX=$(INSTALLDIR) install
@@ -38,11 +38,11 @@ install: build
 	tar zxvf $(PORTDIR)/otp_doc_man_$(VERSION).tar.gz
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,EPLICENCE,README.*} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/erlang/bin/*"
-	$(TOUCH) test
+	touch test
 
 realdistclean: distclean
 	rm -f retrieve $(SOURCE)

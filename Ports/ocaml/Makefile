@@ -12,12 +12,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure ; \
 	$(make) world && $(make) bootstrap && $(make) opt && $(make) opt.opt
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make \
@@ -29,7 +29,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{Changes,LICENSE,README,VERSION} $(INSTALLDOCDIR)
 	#strip $(INSTALLDIR)/usr/local/bin/*
 	#strip -x $(INSTALLDIR)/usr/local/lib/ocaml/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
-	cd $(BUILDDIR) ; $(TOUCH) test
+	cd $(BUILDDIR) ; touch test

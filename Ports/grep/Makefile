@@ -25,14 +25,14 @@ endif
 prep: retrieve
 	tar jxvf $(SOURCE)
 	cd $(BUILDDIR)/po ; patch < $(PORTDIR)/Makefile.in.in.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--disable-dependency-tracking \
 		--program-prefix=gnu ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -44,11 +44,11 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	#cd $(BUILDDIR) ; make check
-	$(TOUCH) install
+	touch install

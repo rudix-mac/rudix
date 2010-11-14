@@ -16,11 +16,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -33,7 +33,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{PKG-INFO,README} $(INSTALLDOCDIR)
 	cp -a $(BUILDDIR)/demos $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

@@ -13,13 +13,13 @@ SOURCE=		$(NAME)src-$(VERSION).tar.gz
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure \
 		--mandir=/usr/local/share/man/man1 \
 		--docdir=/usr/local/share/doc/nhc98 ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -33,8 +33,8 @@ install: build
 		$(INSTALLDIR)/usr/local/lib/nhc98/ix86-Darwin10/config
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYRIGHT,README} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test

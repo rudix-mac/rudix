@@ -21,7 +21,7 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
@@ -31,7 +31,7 @@ build: prep $(DEPENDS)
 	$(configure) $(CONFIGURE_OPTS) \
 			--disable-dependency-tracking \
 			--with-openssl ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -41,11 +41,11 @@ ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 endif
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

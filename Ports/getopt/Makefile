@@ -16,12 +16,12 @@ LDFLAGS+=	-framework CoreFoundation -liconv -lintl
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
 	$(make) LIBCGETOPT=0 CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -31,4 +31,4 @@ install: build
 
 test: install
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test

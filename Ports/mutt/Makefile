@@ -24,7 +24,7 @@ endif
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch -b < $(PORTDIR)/Makefile.in.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" \
@@ -32,7 +32,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--with-docdir=/usr/local/share/doc/mutt  \
 		--enable-pop --enable-imap --with-ssl $(NLS) ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -43,14 +43,14 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{NEWS,README*,TODO,VERSION} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	lipo $(INSTALLDIR)/usr/local/bin/mutt -verify_arch i386 x86_64
 	lipo $(INSTALLDIR)/usr/local/bin/mutt_dotlock -verify_arch i386 x86_64
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/pgp*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test
 
 # WARNING: Put this on mutt.pmdoc
 # chown root:mail	/usr/local/bin/mutt_dotlock

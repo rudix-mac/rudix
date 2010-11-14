@@ -13,11 +13,11 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 prep: retrieve
 	tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/pam.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make EXTRACFLAGS="$(CFLAGS)" oxp
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/sbin
@@ -46,10 +46,10 @@ install: build
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip $(INSTALLDIR)/usr/local/sbin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

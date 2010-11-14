@@ -17,11 +17,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env LIBRSYNC_DIR=/usr/local $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -35,8 +35,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGELOG,COPYING,FAQ.html,README,examples.html} $(INSTALLDOCDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/$(SITEPACKAGES)/rdiff_backup/*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/$(SITEPACKAGES)/rdiff_backup/*.so"
-	$(TOUCH) test
+	touch test

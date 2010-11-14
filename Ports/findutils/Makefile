@@ -24,7 +24,7 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -32,7 +32,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--program-prefix=gnu \
 		--with-included-regex ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -46,7 +46,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/libexec/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -54,4 +54,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

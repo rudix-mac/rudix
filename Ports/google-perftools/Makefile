@@ -11,23 +11,23 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar -zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
 	env MACOSX_DEPLOYMENT_TARGET=10.3 \
 		CXXFLAGS="$(CXXFLAGS)" $(configure) \
 		--disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	mv $(INSTALLDIR)/usr/local/share/doc/$(NAME)-$(VERSION) \
 		$(INSTALLDIR)/usr/local/share/doc/$(NAME)
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

@@ -14,11 +14,11 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	mv procps-$(VERSION) $(NAME)-$(VERSION)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/nowarncommon.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" watch
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/bin
@@ -28,8 +28,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,NEWS} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

@@ -13,7 +13,7 @@ include ../../Library/Rules.mk
 prep: retrieve
 	tar jxvf $(SOURCE)
 	mv ffmpeg-export-????-??-?? ffmpeg-snapshot
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure \
@@ -22,7 +22,7 @@ build: prep $(DEPENDS)
 		--enable-shared \
 		--enable-pthreads \
 		--mandir=/usr/local/share/man ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -32,9 +32,9 @@ install: build
 	install -m 644 $(BUILDDIR)/{COPYING*,CREDITS,ChangeLog,MAINTAINERS,README,doc/TODO,doc/*.txt} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*
-	$(TOUCH) install
+	touch install
 
 test: install
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
 	#$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*"
-	$(TOUCH) test
+	touch test

@@ -15,11 +15,11 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
 	mkdir -p $(BUILDDIR) ; cd $(BUILDDIR) ; unzip $(PORTDIR)/$(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -32,7 +32,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{LICENSE,README} $(INSTALLDOCDIR)
 	rsync -av $(BUILDDIR)/docs/* $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

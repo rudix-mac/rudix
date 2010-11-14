@@ -15,11 +15,11 @@ prep: retrieve
 	tar jxvf $(SOURCE)
 	mv $(NAME)_$(VERSION) $(NAME)-$(VERSION)
 	cd $(BUILDDIR) ; cp makefile.macosx_32bits makefile.machine
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(make) all3
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)
@@ -34,9 +34,9 @@ install: build
 	strip -x -S $(INSTALLDIR)/usr/local/lib/p7zip/7z*
 	chmod +w $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*
 	strip -x -S $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/p7zip/7z*"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*"
-	$(TOUCH) test
+	touch test

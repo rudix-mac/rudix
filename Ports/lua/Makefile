@@ -15,13 +15,13 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR)/etc < $(PORTDIR)/lua.pc.patch
 	patch -d $(BUILDDIR)/src < $(PORTDIR)/patch-lua-5.1.4-2.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; \
 	$(make)	CFLAGS="$(CFLAGS) -DLUA_USE_MACOSX -DLUA_USE_READLINE" \
 		MYLDFLAGS="$(LDFLAGS)" macosx
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
@@ -34,7 +34,7 @@ install: build
 	rm -f $(INSTALLDOCDIR)/*.1
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x $(INSTALLDIR)/usr/local/lib/*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
@@ -42,4 +42,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test

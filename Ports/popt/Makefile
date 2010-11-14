@@ -28,14 +28,14 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		$(STATIC) $(NLS) \
 		--disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -45,7 +45,7 @@ ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; ./testit.sh
@@ -53,4 +53,4 @@ ifndef STATIC_ONLY
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
 endif
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	$(TOUCH) test
+	touch test

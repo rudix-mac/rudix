@@ -11,7 +11,7 @@ include ../../Library/Rules.mk
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; \
@@ -19,7 +19,7 @@ build: prep $(DEPENDS)
 	$(configure) \
 		--prefix=/usr/local \
 		--bindir=/usr/local/bin ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make \
@@ -29,8 +29,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES.txt,COPYING.txt,README.txt,htmldoc.eula} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

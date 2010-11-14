@@ -20,11 +20,11 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	# http://www.mail-archive.com/fink-users@lists.sourceforge.net/msg31539.html
 	/usr/bin/sed -i -e 's/^from/import locale; from/' $(NAME)/bin/offlineimap
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(NAME) ; $(PYTHON) setup.py build
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(NAME) ; \
@@ -36,7 +36,7 @@ install: build
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(NAME)/{UPGRADING,COPYING,COPYRIGHT,FAQ.html,offlineimap.conf*} $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: install
-	$(TOUCH) test
+	touch test

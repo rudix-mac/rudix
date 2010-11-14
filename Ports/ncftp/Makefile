@@ -13,12 +13,12 @@ URL=		ftp://ftp.ncftp.com/ncftp
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-universal --disable-precomp ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/share/man/man1
@@ -28,9 +28,9 @@ install: build
 	install -m 644 $(BUILDDIR)/doc/{CHANGELOG.txt,what_changed_between_v2_v3.txt,FIREWALLS_AND_PROXIES.txt} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/html/* $(INSTALLDOCDIR)
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	$(TOUCH) test
+	touch test

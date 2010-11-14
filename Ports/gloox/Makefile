@@ -13,12 +13,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-dependency-tracking ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -26,7 +26,7 @@ install: build
 	install -m 644 $(BUILDDIR)/{AUTHORS,LICENSE,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
@@ -34,4 +34,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

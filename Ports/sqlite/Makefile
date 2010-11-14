@@ -6,19 +6,19 @@ include ../../Library/Rules.mk
 
 TITLE=		SQLite $(VERSION)
 NAME=		sqlite
-VERSION=	3.6.22
+VERSION=	3.7.3
 REVISION=	0
 URL=		http://www.sqlite.org/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) --disable-tcl ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -31,7 +31,7 @@ install: build
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x -S $(INSTALLDIR)/usr/local/lib/*.a
 	#strip -x -S $(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test
@@ -39,4 +39,4 @@ test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.dylib"
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/*.a"
 	#$(test-universal-binary) "$(INSTALLDIR)/System/Library/Frameworks/Tcl.framework/Versions/8.4/Resources/Scripts/sqlite3/*.dylib"
-	$(TOUCH) test
+	touch test

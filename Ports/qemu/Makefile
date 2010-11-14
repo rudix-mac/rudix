@@ -6,24 +6,24 @@ include ../../Library/Rules.mk
 
 TITLE=		QEMU $(VERSION)
 NAME=		qemu
-VERSION=	0.12.2
+VERSION=	0.13.0
 REVISION=	0.i386
 URL=		http://download.savannah.gnu.org/releases/qemu/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; ./configure --enable-cocoa ; make
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test

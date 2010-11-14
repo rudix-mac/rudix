@@ -14,19 +14,19 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 prep: retrieve
 	tar zxvf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep
 	cd $(BUILDDIR) ; $(make) CFLAGS_EXTRA="$(CFLAGS)"
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make PREFIX=$(INSTALLDIR)/usr/local install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{README,LICENSE} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
-	$(TOUCH) install
+	touch install
 
 test: install
 	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(TOUCH) test
+	touch test

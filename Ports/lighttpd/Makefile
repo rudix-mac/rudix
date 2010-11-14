@@ -16,7 +16,7 @@ DEPENDS=	/usr/local/lib/libpcre.la
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -24,7 +24,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--libdir=/usr/local/lib/lighttpd \
 		--with-openssl ; $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -37,7 +37,7 @@ install: build
 	$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lighttpd/lib*.dylib
 	$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lighttpd/mod_*.so
-	$(TOUCH) install
+	touch install
 
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lighttpd/lib*.dylib) ; do \
@@ -45,4 +45,4 @@ test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lighttpd/mod_*.so) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	cd $(BUILDDIR) ; make check
-	$(TOUCH) test
+	touch test

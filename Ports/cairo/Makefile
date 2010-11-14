@@ -21,7 +21,7 @@ endif
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
@@ -29,7 +29,7 @@ build: prep $(DEPENDS)
 	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--with-html-dir=/usr/local/share/doc/cairo ;  $(make)
-	$(TOUCH) build
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -39,8 +39,8 @@ ifndef STATIC_ONLY
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	$(TOUCH) install
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test
