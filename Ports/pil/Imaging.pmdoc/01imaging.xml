@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="B56280D3-414E-41C4-912B-EBBF34DD3E8C"><config><identifier>org.rudix.pkg.pil</identifier><version>1.1.6</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">Imaging-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>parent</mod><mod>version</mod><mod>installFrom.path</mod><mod>identifier</mod><mod>installTo</mod></config><contents><file-list>01imaging-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="B56280D3-414E-41C4-912B-EBBF34DD3E8C">
+  <config>
+    <identifier>org.rudix.pkg.pil</identifier>
+    <version>1.1.6</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">Imaging-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>parent</mod>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01imaging-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

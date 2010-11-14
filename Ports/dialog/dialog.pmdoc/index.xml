@@ -1,1 +1,31 @@
-<pkmkdoc spec="1.12"><properties><title>Dialog</title><build>/Users/ruda/Desktop/Dialog.pkg</build><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Display dialog boxes from shell scripts</description><contents><choice title="dialog-install" id="dialog" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.dialog"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">dialog-1.1-20080819/COPYING</resource><resource relative="true" mod="true" type="readme">dialog-1.1-20080819/README</resource></locale></resources><flags/><item type="file">01dialog.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>Dialog</title>
+    <build>/Users/ruda/Desktop/Dialog.pkg</build>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Display dialog boxes from shell scripts</description>
+  <contents>
+    <choice title="dialog-install" id="dialog" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.dialog"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">dialog-1.1-20080819/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">dialog-1.1-20080819/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01dialog.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

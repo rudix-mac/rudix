@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="7259B004-BF41-49F9-9ACC-525A5CB01346"><config><identifier>org.rudix.pkg.git.git-install.pkg</identifier><version>1.0</version><description></description><post-install type="none"/><requireAuthorization/><installFrom>/Users/ruda/Work/rudix.svn/Ports/git/git-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>parent</mod></config><contents><component id="cz.or.repo.git-gui" path="/Users/ruda/Work/rudix.svn/Ports/git/git-install/Applications/Git Gui.app" version="0.12.0.64.g89d6" isRelocatable="true"><locator-info><token title="pkmk-token-0"/></locator-info></component><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="7259B004-BF41-49F9-9ACC-525A5CB01346">
+  <config>
+    <identifier>org.rudix.pkg.git.git-install.pkg</identifier>
+    <version>1.0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom>/Users/ruda/Work/rudix.svn/Ports/git/git-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>parent</mod>
+  </config>
+  <contents>
+    <component id="cz.or.repo.git-gui" path="/Users/ruda/Work/rudix.svn/Ports/git/git-install/Applications/Git Gui.app" version="0.12.0.64.g89d6" isRelocatable="true">
+      <locator-info>
+        <token title="pkmk-token-0"/>
+      </locator-info>
+    </component>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

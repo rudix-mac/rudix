@@ -1,1 +1,102 @@
-<pkg-contents spec="1.12"><f n="simh-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/simh/simh-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16893"><f n="bin" o="root" g="wheel" p="16893"><f n="altair" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="altairz80" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="eclipse" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="gri" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="h316" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="hp2100" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="i1401" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="i1620" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="i7094" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ibm1130" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="id16" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="id32" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="lgp" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="nova" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp1" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp10" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp11" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp15" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp4" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp7" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp8" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pdp9" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="sds" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="vax" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="vax780" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="simh" o="root" g="wheel" p="16893"><f n="0readme_38.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="0readme_ethernet.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="simh-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/simh/simh-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="altair" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="altairz80" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="eclipse" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gri" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="h316" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hp2100" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="i1401" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="i1620" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="i7094" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ibm1130" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="id16" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="id32" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="lgp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="nova" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp1" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp10" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp11" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp15" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp4" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp7" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp8" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pdp9" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="s3" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="sds" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="vax" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="vax780" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="simh" o="root" g="wheel" p="16893">
+              <f n="0readme_38.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="0readme_ethernet.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

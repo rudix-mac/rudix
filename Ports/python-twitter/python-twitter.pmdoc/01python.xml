@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="04738F20-4F57-4235-8552-37E8EAD11297"><config><identifier>org.rudix.pkg.python-twitter</identifier><version>1.0</version><description/><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">python-twitter-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"/><mod>installFrom.path</mod><mod>parent</mod><mod>installTo</mod><mod>identifier</mod></config><contents><file-list>01python-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="04738F20-4F57-4235-8552-37E8EAD11297">
+  <config>
+    <identifier>org.rudix.pkg.python-twitter</identifier>
+    <version>1.0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">python-twitter-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>installTo</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01python-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

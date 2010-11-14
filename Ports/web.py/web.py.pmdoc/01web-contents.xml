@@ -1,1 +1,60 @@
-<pkg-contents spec="1.12"><f n="web.py-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/web.py/web.py-install" m="false" t="file"><f n="Library" o="root" g="admin" p="17405"><f n="Python" o="root" g="admin" p="16893"><f n="2.6" o="root" g="admin" p="16893"><f n="site-packages" o="root" g="admin" p="16893"><f n="web" o="root" g="admin" p="16893"><f n="__init__.py" o="root" g="admin" p="33277"/><f n="__init__.pyc" o="root" g="admin" p="33204"/><f n="application.py" o="root" g="admin" p="33277"/><f n="application.pyc" o="root" g="admin" p="33204"/><f n="browser.py" o="root" g="admin" p="33277"/><f n="browser.pyc" o="root" g="admin" p="33204"/><f n="contrib" o="root" g="admin" p="16893"><f n="__init__.py" o="root" g="admin" p="33204"/><f n="__init__.pyc" o="root" g="admin" p="33204"/><f n="template.py" o="root" g="admin" p="33277"/><f n="template.pyc" o="root" g="admin" p="33204"/></f><f n="db.py" o="root" g="admin" p="33277"/><f n="db.pyc" o="root" g="admin" p="33204"/><f n="debugerror.py" o="root" g="admin" p="33277"/><f n="debugerror.pyc" o="root" g="admin" p="33204"/><f n="form.py" o="root" g="admin" p="33277"/><f n="form.pyc" o="root" g="admin" p="33204"/><f n="http.py" o="root" g="admin" p="33277"/><f n="http.pyc" o="root" g="admin" p="33204"/><f n="httpserver.py" o="root" g="admin" p="33204"/><f n="httpserver.pyc" o="root" g="admin" p="33204"/><f n="net.py" o="root" g="admin" p="33277"/><f n="net.pyc" o="root" g="admin" p="33204"/><f n="session.py" o="root" g="admin" p="33277"/><f n="session.pyc" o="root" g="admin" p="33204"/><f n="template.py" o="root" g="admin" p="33277"/><f n="template.pyc" o="root" g="admin" p="33204"/><f n="test.py" o="root" g="admin" p="33277"/><f n="test.pyc" o="root" g="admin" p="33204"/><f n="utils.py" o="root" g="admin" p="33277"/><f n="utils.pyc" o="root" g="admin" p="33204"/><f n="webapi.py" o="root" g="admin" p="33277"/><f n="webapi.pyc" o="root" g="admin" p="33204"/><f n="webopenid.py" o="root" g="admin" p="33277"/><f n="webopenid.pyc" o="root" g="admin" p="33204"/><f n="wsgi.py" o="root" g="admin" p="33277"/><f n="wsgi.pyc" o="root" g="admin" p="33204"/><f n="wsgiserver" o="root" g="admin" p="16893"><f n="__init__.py" o="root" g="admin" p="33277"/><f n="__init__.pyc" o="root" g="admin" p="33204"/></f></f><f n="web.py-0.34-py2.6.egg-info" o="root" g="admin" p="33204"><mod>mode</mod></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="web.py-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/web.py/web.py-install" m="false" t="file">
+    <f n="Library" o="root" g="admin" p="17405">
+      <f n="Python" o="root" g="admin" p="16893">
+        <f n="2.6" o="root" g="admin" p="16893">
+          <f n="site-packages" o="root" g="admin" p="16893">
+            <f n="web" o="root" g="admin" p="16893">
+              <f n="__init__.py" o="root" g="admin" p="33277"/>
+              <f n="__init__.pyc" o="root" g="admin" p="33204"/>
+              <f n="application.py" o="root" g="admin" p="33277"/>
+              <f n="application.pyc" o="root" g="admin" p="33204"/>
+              <f n="browser.py" o="root" g="admin" p="33277"/>
+              <f n="browser.pyc" o="root" g="admin" p="33204"/>
+              <f n="contrib" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33204"/>
+                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
+                <f n="template.py" o="root" g="admin" p="33277"/>
+                <f n="template.pyc" o="root" g="admin" p="33204"/>
+              </f>
+              <f n="db.py" o="root" g="admin" p="33277"/>
+              <f n="db.pyc" o="root" g="admin" p="33204"/>
+              <f n="debugerror.py" o="root" g="admin" p="33277"/>
+              <f n="debugerror.pyc" o="root" g="admin" p="33204"/>
+              <f n="form.py" o="root" g="admin" p="33277"/>
+              <f n="form.pyc" o="root" g="admin" p="33204"/>
+              <f n="http.py" o="root" g="admin" p="33277"/>
+              <f n="http.pyc" o="root" g="admin" p="33204"/>
+              <f n="httpserver.py" o="root" g="admin" p="33204"/>
+              <f n="httpserver.pyc" o="root" g="admin" p="33204"/>
+              <f n="net.py" o="root" g="admin" p="33277"/>
+              <f n="net.pyc" o="root" g="admin" p="33204"/>
+              <f n="session.py" o="root" g="admin" p="33277"/>
+              <f n="session.pyc" o="root" g="admin" p="33204"/>
+              <f n="template.py" o="root" g="admin" p="33277"/>
+              <f n="template.pyc" o="root" g="admin" p="33204"/>
+              <f n="test.py" o="root" g="admin" p="33277"/>
+              <f n="test.pyc" o="root" g="admin" p="33204"/>
+              <f n="utils.py" o="root" g="admin" p="33277"/>
+              <f n="utils.pyc" o="root" g="admin" p="33204"/>
+              <f n="webapi.py" o="root" g="admin" p="33277"/>
+              <f n="webapi.pyc" o="root" g="admin" p="33204"/>
+              <f n="webopenid.py" o="root" g="admin" p="33277"/>
+              <f n="webopenid.pyc" o="root" g="admin" p="33204"/>
+              <f n="wsgi.py" o="root" g="admin" p="33277"/>
+              <f n="wsgi.pyc" o="root" g="admin" p="33204"/>
+              <f n="wsgiserver" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33277"/>
+                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
+              </f>
+            </f>
+            <f n="web.py-0.34-py2.6.egg-info" o="root" g="admin" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

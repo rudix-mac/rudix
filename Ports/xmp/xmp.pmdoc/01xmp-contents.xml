@@ -1,1 +1,27 @@
-<pkg-contents spec="1.12"><f n="xmp-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/xmp/xmp-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="xmp" o="root" g="wheel" p="33277"/></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="xmp" o="root" g="wheel" p="16893"><f n="ChangeLog" o="root" g="wheel" p="33204"/><f n="COPYING" o="root" g="wheel" p="33204"/><f n="CREDITS" o="root" g="wheel" p="33204"/><f n="README" o="root" g="wheel" p="33204"/></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="xmp.1" o="root" g="wheel" p="33204"/></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="xmp-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/xmp/xmp-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="xmp" o="root" g="wheel" p="33277"/>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="xmp" o="root" g="wheel" p="16893">
+              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
+              <f n="COPYING" o="root" g="wheel" p="33204"/>
+              <f n="CREDITS" o="root" g="wheel" p="33204"/>
+              <f n="README" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="xmp.1" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

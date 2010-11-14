@@ -1,1 +1,30 @@
-<pkmkdoc spec="1.12"><properties><title>pdksh</title><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>The Public Domain Korn Shell</description><contents><choice title="pdksh-install" id="pdksh" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.pdksh"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">pdksh-5.2.14/LEGAL</resource><resource relative="true" mod="true" type="readme">pdksh-5.2.14/README</resource></locale></resources><flags/><item type="file">01pdksh.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>pdksh</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>The Public Domain Korn Shell</description>
+  <contents>
+    <choice title="pdksh-install" id="pdksh" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.pdksh"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">pdksh-5.2.14/LEGAL</resource>
+      <resource relative="true" mod="true" type="readme">pdksh-5.2.14/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01pdksh.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

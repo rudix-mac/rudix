@@ -1,1 +1,30 @@
-<pkmkdoc spec="1.12"><properties><title>pylibmc</title><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Libmemcached wrapper</description><contents><choice title="pylibmc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.pylibmc"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">pylibmc-1.1.1/LICENSE</resource><resource relative="true" mod="true" type="readme">pylibmc-1.1.1/README.rst</resource></locale></resources><flags/><item type="file">01pylibmc.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>pylibmc</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Libmemcached wrapper</description>
+  <contents>
+    <choice title="pylibmc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.pylibmc"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">pylibmc-1.1.1/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">pylibmc-1.1.1/README.rst</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01pylibmc.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

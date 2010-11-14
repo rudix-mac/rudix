@@ -1,1 +1,309 @@
-<pkg-contents spec="1.12"><f n="asciidoc-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="a2x" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="a2x.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="asciidoc" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="asciidoc.py" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="etc" o="root" g="wheel" p="16893"><f n="asciidoc" o="root" g="wheel" p="16893"><f n="asciidoc.conf.orig" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dblatex" o="root" g="wheel" p="16893"><f n="asciidoc-dblatex.sty" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="asciidoc-dblatex.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="docbook-xsl" o="root" g="wheel" p="16893"><f n="chunked.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="common.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="epub.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="fo.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="htmlhelp.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="manpage.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="text.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml.xsl" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="docbook.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="filters" o="root" g="wheel" p="16893"><f n="code" o="root" g="wheel" p="16893"><f n="code-filter.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="code-filter.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="graphviz" o="root" g="wheel" p="16893"><f n="graphviz-filter.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="graphviz2png.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="music" o="root" g="wheel" p="16893"><f n="music-filter.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="music2png.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="source" o="root" g="wheel" p="16893"><f n="source-highlight-filter.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="help.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="html4.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="images" o="root" g="wheel" p="16893"><f n="icons" o="root" g="wheel" p="16893"><f n="callouts" o="root" g="wheel" p="16893"><f n="1.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="10.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="11.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="12.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="13.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="14.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="15.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="2.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="3.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="4.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="5.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="6.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="7.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="9.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="caution.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="example.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="home.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="important.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="next.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="note.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="prev.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tip.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="up.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="warning.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="javascripts" o="root" g="wheel" p="16893"><f n="asciidoc-xhtml11.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ASCIIMathML.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="LaTeXMathML.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="toc.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="lang-de.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-en.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-es.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-fr.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-hu.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-it.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-pt-BR.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lang-ru.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="latex.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="stylesheets" o="root" g="wheel" p="16893"><f n="docbook-xsl.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml11-manpage.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml11-quirks.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml11.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="text.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="wordpress.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml11-quirks.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xhtml11.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="asciidoc" o="root" g="wheel" p="16893"><f n="BUGS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="BUGS.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="CHANGELOG" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="CHANGELOG.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYRIGHT" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="a2x.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="asciidoc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="asciidoc-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="a2x" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="a2x.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="asciidoc" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="asciidoc.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="asciidoc" o="root" g="wheel" p="16893">
+            <f n="asciidoc.conf.orig" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dblatex" o="root" g="wheel" p="16893">
+              <f n="asciidoc-dblatex.sty" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="asciidoc-dblatex.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="docbook-xsl" o="root" g="wheel" p="16893">
+              <f n="chunked.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="common.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="epub.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fo.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="htmlhelp.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manpage.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="text.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xhtml.xsl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="docbook.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="filters" o="root" g="wheel" p="16893">
+              <f n="code" o="root" g="wheel" p="16893">
+                <f n="code-filter.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="code-filter.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="graphviz" o="root" g="wheel" p="16893">
+                <f n="graphviz-filter.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="graphviz2png.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="music" o="root" g="wheel" p="16893">
+                <f n="music-filter.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="music2png.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="source" o="root" g="wheel" p="16893">
+                <f n="source-highlight-filter.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="help.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="html4.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="images" o="root" g="wheel" p="16893">
+              <f n="icons" o="root" g="wheel" p="16893">
+                <f n="callouts" o="root" g="wheel" p="16893">
+                  <f n="1.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="11.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="12.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="13.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="14.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="15.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="2.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="3.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="4.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="5.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="6.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="7.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="8.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="9.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="caution.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="example.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="home.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="important.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="next.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="note.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="prev.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="README" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="tip.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="up.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="warning.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="javascripts" o="root" g="wheel" p="16893">
+              <f n="asciidoc-xhtml11.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ASCIIMathML.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LaTeXMathML.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="toc.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="lang-de.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-en.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-es.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-fr.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-hu.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-it.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-pt-BR.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang-ru.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="latex.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stylesheets" o="root" g="wheel" p="16893">
+              <f n="docbook-xsl.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xhtml11-manpage.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xhtml11-quirks.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xhtml11.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="text.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wordpress.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="xhtml11-quirks.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="xhtml11.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="asciidoc" o="root" g="wheel" p="16893">
+              <f n="BUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BUGS.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGELOG" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGELOG.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="a2x.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="asciidoc.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

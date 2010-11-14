@@ -1,4 +1,25 @@
-<pkmkdoc spec="1.12"><properties><title>QEMU</title><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Multi system emulator</description><contents><choice title="qemu-install" id="qemu" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.qemu"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource mime-type="text/rtf" kind="embedded" type="license"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>QEMU</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Multi system emulator</description>
+  <contents>
+    <choice title="qemu-install" id="qemu" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.qemu"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource mime-type="text/rtf" kind="embedded" type="license"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
 {\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
@@ -16,7 +37,8 @@ In particular, the QEMU virtual CPU core library (libqemu.a) is released under t
 4) QEMU is a trademark of Fabrice Bellard.\
 \
 Fabrice Bellard.\
-}]]></resource><resource mime-type="text/rtf" kind="embedded" type="readme"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
+}]]></resource>
+      <resource mime-type="text/rtf" kind="embedded" type="readme"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf250
 {\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
@@ -25,4 +47,11 @@ Fabrice Bellard.\
 \
 When used as a machine emulator, QEMU can run OSes and programs made for one machine (e.g. an ARM board) on a different machine (e.g. your own PC). By using dynamic translation, it achieves very good performances.\
 \
-When used as a virtualizer, QEMU achieves near native performances by executing the guest code directly on the host CPU. A host driver called the QEMU accelerator (also known as KQEMU) is needed in this case. The virtualizer mode requires that both the host and guest machine use x86 compatible processors.}]]></resource></locale></resources><flags/><item type="file">01qemu.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+When used as a virtualizer, QEMU achieves near native performances by executing the guest code directly on the host CPU. A host driver called the QEMU accelerator (also known as KQEMU) is needed in this case. The virtualizer mode requires that both the host and guest machine use x86 compatible processors.}]]></resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01qemu.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

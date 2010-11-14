@@ -1,1 +1,31 @@
-<pkmkdoc spec="1.12"><properties><title>pkg-config</title><build>/Users/ruda/Desktop/Pkg-Config.pkg</build><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Tool for managing library compile/link flags</description><contents><choice title="pkg-config-install" id="pkg-config" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.pkgconfig"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">pkg-config-0.25/COPYING</resource><resource relative="true" mod="true" type="readme">pkg-config-0.25/README</resource></locale></resources><flags/><item type="file">01pkg.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>pkg-config</title>
+    <build>/Users/ruda/Desktop/Pkg-Config.pkg</build>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Tool for managing library compile/link flags</description>
+  <contents>
+    <choice title="pkg-config-install" id="pkg-config" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.pkgconfig"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">pkg-config-0.25/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">pkg-config-0.25/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01pkg.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

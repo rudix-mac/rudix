@@ -1,1 +1,210 @@
-<pkg-contents spec="1.12"><f n="libzip-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/libzip/libzip-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="zipcmp" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="zipmerge" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ziptorrent" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="include" o="root" g="wheel" p="16893"><f n="zip.h" o="root" g="wheel" p="33204"><mod>mode</mod></f></f><f n="lib" o="root" g="wheel" p="16893"><f n="libzip.1.0.0.dylib" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libzip.1.dylib" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="libzip.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libzip.dylib" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="libzip.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="pkgconfig" o="root" g="wheel" p="16893"><f n="libzip.pc" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="libzip" o="root" g="wheel" p="16893"><f n="AUTHORS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="NEWS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="THANKS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="TODO" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="zipcmp.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zipmerge.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ziptorrent.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f><f n="man3" o="root" g="wheel" p="16893"><f n="libzip.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_add.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_add_dir.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_close.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_delete.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_error_clear.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_error_get.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_error_get_sys_type.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_error_to_str.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_errors.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_fclose.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_file_error_clear.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_file_error_get.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_file_strerror.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_fopen.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_fopen_index.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_fread.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_get_archive_comment.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_get_archive_flag.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_get_file_comment.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_get_name.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_get_num_files.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_name_locate.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_open.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_rename.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_replace.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_set_archive_comment.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_set_archive_flag.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_set_file_comment.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_buffer.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_file.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_filep.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_free.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_function.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_source_zip.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_stat.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_stat_index.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_stat_init.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_strerror.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_unchange.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_unchange_all.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zip_unchange_archive.3" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="libzip-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/libzip/libzip-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="zipcmp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="zipmerge" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ziptorrent" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="zip.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libzip.1.0.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libzip.1.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libzip.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libzip.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libzip.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libzip.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="libzip" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="THANKS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="zipcmp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zipmerge.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ziptorrent.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="man3" o="root" g="wheel" p="16893">
+              <f n="libzip.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_add.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_add_dir.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_close.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_delete.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_error_clear.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_error_get.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_error_get_sys_type.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_error_to_str.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_errors.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_fclose.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_file_error_clear.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_file_error_get.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_file_strerror.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_fopen.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_fopen_index.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_fread.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_archive_comment.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_archive_flag.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_file_comment.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_name.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_num_files.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_name_locate.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_open.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_rename.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_replace.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_set_archive_comment.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_set_archive_flag.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_set_file_comment.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_buffer.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_file.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_filep.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_free.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_function.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_source_zip.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_stat.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_stat_index.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_stat_init.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_strerror.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_unchange.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_unchange_all.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_unchange_archive.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

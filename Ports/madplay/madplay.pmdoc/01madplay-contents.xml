@@ -1,1 +1,91 @@
-<pkg-contents spec="1.12"><f n="madplay-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/Rudix-2009/Ports/madplay/madplay-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="abxtest" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="madplay" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="share" o="root" g="wheel" p="16877"><f n="doc" o="root" g="wheel" p="16877"><f n="madplay" o="root" g="wheel" p="16893"><f n="CHANGES" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYRIGHT" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="CREDITS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="TODO" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="locale" o="root" g="wheel" p="16877"><f n="en" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="madplay.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="es" o="root" g="wheel" p="16877"><f n="LC_MESSAGES" o="root" g="wheel" p="16877"><f n="madplay.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="fr" o="root" g="wheel" p="16877"><f n="LC_MESSAGES" o="root" g="wheel" p="16877"><f n="madplay.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="hr" o="root" g="wheel" p="16877"><f n="LC_MESSAGES" o="root" g="wheel" p="16877"><f n="madplay.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="no" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="madplay.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f><f n="man" o="root" g="wheel" p="16877"><f n="man1" o="root" g="wheel" p="16877"><f n="abxtest.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="madplay.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="madplay-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/Rudix-2009/Ports/madplay/madplay-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="abxtest" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="madplay" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16877">
+          <f n="doc" o="root" g="wheel" p="16877">
+            <f n="madplay" o="root" g="wheel" p="16893">
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CREDITS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="locale" o="root" g="wheel" p="16877">
+            <f n="en" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="madplay.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="es" o="root" g="wheel" p="16877">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16877">
+                <f n="madplay.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fr" o="root" g="wheel" p="16877">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16877">
+                <f n="madplay.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="hr" o="root" g="wheel" p="16877">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16877">
+                <f n="madplay.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="no" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="madplay.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16877">
+            <f n="man1" o="root" g="wheel" p="16877">
+              <f n="abxtest.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="madplay.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

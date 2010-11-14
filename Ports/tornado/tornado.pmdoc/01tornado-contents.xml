@@ -1,1 +1,648 @@
-<pkg-contents spec="1.12"><f n="tornado-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/tornado/tornado-install" m="false" t="file"><f n="Library" o="root" g="admin" p="17405"><f n="Python" o="root" g="admin" p="16893"><f n="2.6" o="root" g="admin" p="16893"><f n="site-packages" o="root" g="admin" p="16893"><f n="tornado" o="root" g="admin" p="16893"><f n="__init__.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="__init__.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="auth.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="auth.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="autoreload.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="autoreload.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="database.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="database.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="escape.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="escape.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="httpclient.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="httpclient.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="httpserver.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="httpserver.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="ioloop.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="ioloop.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="iostream.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="iostream.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="locale.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="locale.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="options.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="options.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="s3server.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="s3server.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="template.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="template.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="web.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="web.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><f n="wsgi.py" o="root" g="admin" p="33277"><mod>mode</mod></f><f n="wsgi.pyc" o="root" g="admin" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="tornado-0.2-py2.6.egg-info" o="root" g="admin" p="33204"><mod>mode</mod></f></f></f></f></f><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="tornado" o="root" g="wheel" p="16893"><f n="demos" o="root" g="wheel" p="16893"><f n="appengine" o="root" g="wheel" p="16893"><f n="app.yaml" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="blog.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="index.yaml" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="markdown.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="static" o="root" g="wheel" p="16893"><f n="blog.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="templates" o="root" g="wheel" p="16893"><f n="archive.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="base.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="compose.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="entry.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="feed.xml" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="home.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="modules" o="root" g="wheel" p="16893"><f n="entry.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="tornado" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="auth.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="autoreload.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="database.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="escape.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpclient.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ioloop.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iostream.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="locale.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="options.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3server.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="web.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="auth" o="root" g="wheel" p="16893"><f n="authdemo.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="tornado" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="auth.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="autoreload.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="database.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="escape.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpclient.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ioloop.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iostream.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="locale.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="options.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3server.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="web.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="blog" o="root" g="wheel" p="16893"><f n="blog.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="markdown.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="schema.sql" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="static" o="root" g="wheel" p="16893"><f n="blog.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="templates" o="root" g="wheel" p="16893"><f n="archive.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="base.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="compose.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="entry.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="feed.xml" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="home.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="modules" o="root" g="wheel" p="16893"><f n="entry.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="chat" o="root" g="wheel" p="16893"><f n="chatdemo.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="static" o="root" g="wheel" p="16893"><f n="chat.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="chat.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="templates" o="root" g="wheel" p="16893"><f n="index.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="message.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="django" o="root" g="wheel" p="16893"><f n="testdjango" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="manage.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="settings.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="testapp" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="models.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="tests.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="views.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="urls.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="testwsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="tornado" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="auth.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="autoreload.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="database.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="escape.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpclient.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ioloop.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iostream.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="locale.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="options.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3server.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="web.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="facebook" o="root" g="wheel" p="16893"><f n="facebook.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="static" o="root" g="wheel" p="16893"><f n="facebook.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="facebook.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="templates" o="root" g="wheel" p="16893"><f n="modules" o="root" g="wheel" p="16893"><f n="post.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="stream.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="uimodules.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="helloworld" o="root" g="wheel" p="16893"><f n="helloworld.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="tornado" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="auth.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="autoreload.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="database.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="escape.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpclient.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ioloop.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iostream.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="locale.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="options.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3server.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="web.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="wsgi" o="root" g="wheel" p="16893"><f n="testweb.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="testwsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="tornado" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="auth.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="autoreload.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="database.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="escape.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpclient.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ioloop.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iostream.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="locale.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="options.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3server.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="web.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="web" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="application.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="browser.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="contrib" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="db.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="debugerror.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="form.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="http.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="httpserver.py" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="net.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="session.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="template.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="test.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="utils.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="webapi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="webopenid.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgi.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="wsgiserver" o="root" g="wheel" p="16893"><f n="__init__.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="PKG-INFO" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="tornado-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/tornado/tornado-install" m="false" t="file">
+    <f n="Library" o="root" g="admin" p="17405">
+      <f n="Python" o="root" g="admin" p="16893">
+        <f n="2.6" o="root" g="admin" p="16893">
+          <f n="site-packages" o="root" g="admin" p="16893">
+            <f n="tornado" o="root" g="admin" p="16893">
+              <f n="__init__.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="auth.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="auth.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoreload.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="autoreload.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="database.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="database.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="escape.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="escape.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="httpclient.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="httpclient.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="httpserver.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="httpserver.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ioloop.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ioloop.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="iostream.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="iostream.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="locale.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="locale.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="options.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="options.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="s3server.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="s3server.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="template.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="template.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="web.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="web.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wsgi.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="wsgi.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="tornado-0.2-py2.6.egg-info" o="root" g="admin" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="tornado" o="root" g="wheel" p="16893">
+              <f n="demos" o="root" g="wheel" p="16893">
+                <f n="appengine" o="root" g="wheel" p="16893">
+                  <f n="app.yaml" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="blog.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.yaml" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="markdown.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="README" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="static" o="root" g="wheel" p="16893">
+                    <f n="blog.css" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="templates" o="root" g="wheel" p="16893">
+                    <f n="archive.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="base.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="compose.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="entry.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="feed.xml" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="home.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="modules" o="root" g="wheel" p="16893">
+                      <f n="entry.html" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tornado" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="auth.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="autoreload.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="database.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="escape.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpclient.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ioloop.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iostream.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="locale.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="options.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="s3server.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="web.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="auth" o="root" g="wheel" p="16893">
+                  <f n="authdemo.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tornado" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="auth.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="autoreload.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="database.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="escape.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpclient.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ioloop.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iostream.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="locale.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="options.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="s3server.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="web.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="blog" o="root" g="wheel" p="16893">
+                  <f n="blog.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="markdown.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="README" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="schema.sql" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="static" o="root" g="wheel" p="16893">
+                    <f n="blog.css" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="templates" o="root" g="wheel" p="16893">
+                    <f n="archive.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="base.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="compose.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="entry.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="feed.xml" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="home.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="modules" o="root" g="wheel" p="16893">
+                      <f n="entry.html" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="chat" o="root" g="wheel" p="16893">
+                  <f n="chatdemo.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="static" o="root" g="wheel" p="16893">
+                    <f n="chat.css" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="chat.js" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="templates" o="root" g="wheel" p="16893">
+                    <f n="index.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="message.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="django" o="root" g="wheel" p="16893">
+                  <f n="testdjango" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="manage.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="settings.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="testapp" o="root" g="wheel" p="16893">
+                      <f n="__init__.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="models.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="tests.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="views.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <f n="urls.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="testwsgi.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tornado" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="auth.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="autoreload.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="database.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="escape.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpclient.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ioloop.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iostream.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="locale.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="options.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="s3server.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="web.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="facebook" o="root" g="wheel" p="16893">
+                  <f n="facebook.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="README" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="static" o="root" g="wheel" p="16893">
+                    <f n="facebook.css" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="facebook.js" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="templates" o="root" g="wheel" p="16893">
+                    <f n="modules" o="root" g="wheel" p="16893">
+                      <f n="post.html" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <f n="stream.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="uimodules.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="helloworld" o="root" g="wheel" p="16893">
+                  <f n="helloworld.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tornado" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="auth.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="autoreload.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="database.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="escape.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpclient.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ioloop.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iostream.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="locale.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="options.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="s3server.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="web.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="wsgi" o="root" g="wheel" p="16893">
+                  <f n="testweb.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="testwsgi.py" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tornado" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="auth.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="autoreload.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="database.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="escape.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpclient.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ioloop.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iostream.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="locale.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="options.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="s3server.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="web.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="web" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="application.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="browser.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="contrib" o="root" g="wheel" p="16893">
+                      <f n="__init__.py" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="template.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <f n="db.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="debugerror.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="form.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="http.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="httpserver.py" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="net.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="session.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="template.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="test.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="utils.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="webapi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="webopenid.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgi.py" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="wsgiserver" o="root" g="wheel" p="16893">
+                      <f n="__init__.py" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

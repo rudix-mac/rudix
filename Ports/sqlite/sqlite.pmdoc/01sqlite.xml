@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="04D5DA8C-115D-4EEE-BC55-6DE9FB6DD9A9"><config><identifier>org.rudix.pkg.sqlite</identifier><version>1.0</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">sqlite-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installFrom.path</mod><mod>parent</mod><mod>installTo</mod><mod>identifier</mod></config><contents><file-list>01sqlite-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="04D5DA8C-115D-4EEE-BC55-6DE9FB6DD9A9">
+  <config>
+    <identifier>org.rudix.pkg.sqlite</identifier>
+    <version>1.0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">sqlite-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>installTo</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01sqlite-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

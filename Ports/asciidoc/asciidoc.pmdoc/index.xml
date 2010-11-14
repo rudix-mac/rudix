@@ -1,1 +1,28 @@
-<pkmkdoc spec="1.12"><properties><title>AsciiDoc</title><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><contents><choice title="asciidoc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.asciidoc.asciidoc-install.pkg"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource mod="true" type="license">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/COPYING</resource><resource mod="true" type="readme">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/README</resource></locale></resources><flags/><item type="file">01asciidoc.xml</item><mod>properties.title</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>AsciiDoc</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <contents>
+    <choice title="asciidoc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.asciidoc.asciidoc-install.pkg"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource mod="true" type="license">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/COPYING</resource>
+      <resource mod="true" type="readme">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01asciidoc.xml</item>
+  <mod>properties.title</mod>
+</pkmkdoc>

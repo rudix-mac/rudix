@@ -1,1 +1,30 @@
-<pkmkdoc spec="1.12"><properties><title>HTMLDOC</title><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Convert HTML pages to PDF/PS format</description><contents><choice title="htmldoc-install" id="htmldoc" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.htmldoc"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">htmldoc-1.8.27/COPYING.txt</resource><resource relative="true" mod="true" type="readme">htmldoc-1.8.27/README.txt</resource></locale></resources><flags/><item type="file">01htmldoc.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>HTMLDOC</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Convert HTML pages to PDF/PS format</description>
+  <contents>
+    <choice title="htmldoc-install" id="htmldoc" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.htmldoc"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">htmldoc-1.8.27/COPYING.txt</resource>
+      <resource relative="true" mod="true" type="readme">htmldoc-1.8.27/README.txt</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01htmldoc.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

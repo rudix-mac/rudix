@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="AB998079-7171-4C61-933C-3EC2DCDF327C"><config><identifier>org.rudix.pkg.jsonc</identifier><version>1</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">json-c-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installFrom.path</mod><mod>identifier</mod><mod>parent</mod><mod>installTo</mod></config><contents><file-list>01json-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="AB998079-7171-4C61-933C-3EC2DCDF327C">
+  <config>
+    <identifier>org.rudix.pkg.jsonc</identifier>
+    <version>1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">json-c-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01json-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

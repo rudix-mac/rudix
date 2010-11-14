@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="1F19BB90-88F5-442A-97AD-54EC717D6FDE"><config><identifier>org.rudix.pkg.figlet</identifier><version>2.2.2</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">figlet-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installTo</mod><mod>installFrom.path</mod><mod>parent</mod><mod>version</mod><mod>identifier</mod></config><contents><file-list>01figlet-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="1F19BB90-88F5-442A-97AD-54EC717D6FDE">
+  <config>
+    <identifier>org.rudix.pkg.figlet</identifier>
+    <version>2.2.2</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">figlet-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01figlet-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

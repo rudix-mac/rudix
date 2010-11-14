@@ -1,1 +1,31 @@
-<pkmkdoc spec="1.12"><properties><title>GIT</title><build>/Users/santagada/projects/rudix/Ports/git/git-1.7.2.pkg</build><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>GIT - Tree History Storage Tool</description><contents><choice title="git-install" id="choice4" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.git.git-install.pkg"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">git-1.7.2.1/COPYING</resource><resource relative="true" mod="true" type="readme">git-1.7.2.1/README</resource></locale></resources><flags/><item type="file">01git.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>GIT</title>
+    <build>/Users/santagada/projects/rudix/Ports/git/git-1.7.2.pkg</build>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>GIT - Tree History Storage Tool</description>
+  <contents>
+    <choice title="git-install" id="choice4" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.git.git-install.pkg"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">git-1.7.2.1/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">git-1.7.2.1/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01git.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

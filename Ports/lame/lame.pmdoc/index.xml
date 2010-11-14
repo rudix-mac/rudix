@@ -1,1 +1,31 @@
-<pkmkdoc spec="1.12"><properties><title>LAME</title><build>/Users/ruda/Desktop/LAME.pkg</build><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Lame ain't an MP3 encoder</description><contents><choice title="lame-install" id="lame" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.lame"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">lame-3.98.2/COPYING</resource><resource relative="true" mod="true" type="readme">lame-3.98.2/README</resource></locale></resources><flags/><item type="file">01lame.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>LAME</title>
+    <build>/Users/ruda/Desktop/LAME.pkg</build>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Lame ain't an MP3 encoder</description>
+  <contents>
+    <choice title="lame-install" id="lame" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.lame"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">lame-3.98.2/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">lame-3.98.2/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01lame.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

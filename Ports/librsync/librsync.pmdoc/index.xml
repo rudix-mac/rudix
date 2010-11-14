@@ -1,1 +1,30 @@
-<pkmkdoc spec="1.12"><properties><title>librsync</title><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Library that implements the rsync remote-delta algorithm</description><contents><choice title="librsync-install" id="librsync" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.librsync"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">librsync-0.9.7/COPYING</resource><resource relative="true" mod="true" type="readme">librsync-0.9.7/README</resource></locale></resources><flags/><item type="file">01librsync.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>librsync</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Library that implements the rsync remote-delta algorithm</description>
+  <contents>
+    <choice title="librsync-install" id="librsync" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.librsync"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">librsync-0.9.7/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">librsync-0.9.7/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01librsync.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

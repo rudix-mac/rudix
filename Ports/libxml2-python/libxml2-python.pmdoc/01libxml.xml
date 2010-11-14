@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="7D4A4CC9-01E6-4D98-A035-2080655B2E1D"><config><identifier>org.rudix.pkg.libxml2-python</identifier><version>2.6.9</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">libxml2-python-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>identifier</mod><mod>installFrom.path</mod><mod>parent</mod><mod>version</mod><mod>installTo</mod></config><contents><file-list>01libxml-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="7D4A4CC9-01E6-4D98-A035-2080655B2E1D">
+  <config>
+    <identifier>org.rudix.pkg.libxml2-python</identifier>
+    <version>2.6.9</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">libxml2-python-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>identifier</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01libxml-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="08E233C1-D669-44FB-A2B9-0C7C8BFF5368"><config><identifier>org.rudix.pkg.mutt</identifier><version>1</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">mutt-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installTo</mod><mod>installFrom.path</mod><mod>parent</mod><mod>version</mod><mod>identifier</mod></config><contents><file-list>01mutt-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="08E233C1-D669-44FB-A2B9-0C7C8BFF5368">
+  <config>
+    <identifier>org.rudix.pkg.mutt</identifier>
+    <version>1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">mutt-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01mutt-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

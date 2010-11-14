@@ -1,1 +1,107 @@
-<pkg-contents spec="1.12"><f n="offlineimap-install" o="caio1982" g="staff" p="16877" pt="/Users/caio1982/rudix-read-only/Ports/offlineimap/offlineimap-install" m="false" t="file"><f n="Library" o="caio1982" g="staff" p="16877"><f n="Python" o="caio1982" g="staff" p="16877"><f n="2.6" o="caio1982" g="staff" p="16877"><f n="site-packages" o="caio1982" g="staff" p="16877"><f n="offlineimap" o="caio1982" g="staff" p="16877"><f n="__init__.py" o="caio1982" g="staff" p="33188"/><f n="__init__.pyc" o="caio1982" g="staff" p="33188"/><f n="accounts.py" o="caio1982" g="staff" p="33188"/><f n="accounts.pyc" o="caio1982" g="staff" p="33188"/><f n="CustomConfig.py" o="caio1982" g="staff" p="33188"/><f n="CustomConfig.pyc" o="caio1982" g="staff" p="33188"/><f n="folder" o="caio1982" g="staff" p="16877"><f n="__init__.py" o="caio1982" g="staff" p="33188"/><f n="__init__.pyc" o="caio1982" g="staff" p="33188"/><f n="Base.py" o="caio1982" g="staff" p="33188"/><f n="Base.pyc" o="caio1982" g="staff" p="33188"/><f n="Gmail.py" o="caio1982" g="staff" p="33188"/><f n="Gmail.pyc" o="caio1982" g="staff" p="33188"/><f n="IMAP.py" o="caio1982" g="staff" p="33188"/><f n="IMAP.pyc" o="caio1982" g="staff" p="33188"/><f n="LocalStatus.py" o="caio1982" g="staff" p="33188"/><f n="LocalStatus.pyc" o="caio1982" g="staff" p="33188"/><f n="Maildir.py" o="caio1982" g="staff" p="33188"/><f n="Maildir.pyc" o="caio1982" g="staff" p="33188"/><f n="UIDMaps.py" o="caio1982" g="staff" p="33188"/><f n="UIDMaps.pyc" o="caio1982" g="staff" p="33188"/></f><f n="imaplibutil.py" o="caio1982" g="staff" p="33188"/><f n="imaplibutil.pyc" o="caio1982" g="staff" p="33188"/><f n="imapserver.py" o="caio1982" g="staff" p="33188"/><f n="imapserver.pyc" o="caio1982" g="staff" p="33188"/><f n="imaputil.py" o="caio1982" g="staff" p="33188"/><f n="imaputil.pyc" o="caio1982" g="staff" p="33188"/><f n="init.py" o="caio1982" g="staff" p="33188"/><f n="init.pyc" o="caio1982" g="staff" p="33188"/><f n="localeval.py" o="caio1982" g="staff" p="33188"/><f n="localeval.pyc" o="caio1982" g="staff" p="33188"/><f n="mbnames.py" o="caio1982" g="staff" p="33188"/><f n="mbnames.pyc" o="caio1982" g="staff" p="33188"/><f n="repository" o="caio1982" g="staff" p="16877"><f n="__init__.py" o="caio1982" g="staff" p="33188"/><f n="__init__.pyc" o="caio1982" g="staff" p="33188"/><f n="Base.py" o="caio1982" g="staff" p="33188"/><f n="Base.pyc" o="caio1982" g="staff" p="33188"/><f n="Gmail.py" o="caio1982" g="staff" p="33188"/><f n="Gmail.pyc" o="caio1982" g="staff" p="33188"/><f n="IMAP.py" o="caio1982" g="staff" p="33188"/><f n="IMAP.pyc" o="caio1982" g="staff" p="33188"/><f n="LocalStatus.py" o="caio1982" g="staff" p="33188"/><f n="LocalStatus.pyc" o="caio1982" g="staff" p="33188"/><f n="Maildir.py" o="caio1982" g="staff" p="33188"/><f n="Maildir.pyc" o="caio1982" g="staff" p="33188"/></f><f n="syncmaster.py" o="caio1982" g="staff" p="33188"/><f n="syncmaster.pyc" o="caio1982" g="staff" p="33188"/><f n="threadutil.py" o="caio1982" g="staff" p="33188"/><f n="threadutil.pyc" o="caio1982" g="staff" p="33188"/><f n="ui" o="caio1982" g="staff" p="16877"><f n="__init__.py" o="caio1982" g="staff" p="33188"/><f n="__init__.pyc" o="caio1982" g="staff" p="33188"/><f n="Blinkenlights.py" o="caio1982" g="staff" p="33188"/><f n="Blinkenlights.pyc" o="caio1982" g="staff" p="33188"/><f n="Curses.py" o="caio1982" g="staff" p="33188"/><f n="Curses.pyc" o="caio1982" g="staff" p="33188"/><f n="debuglock.py" o="caio1982" g="staff" p="33188"/><f n="debuglock.pyc" o="caio1982" g="staff" p="33188"/><f n="detector.py" o="caio1982" g="staff" p="33188"/><f n="detector.pyc" o="caio1982" g="staff" p="33188"/><f n="Machine.py" o="caio1982" g="staff" p="33188"/><f n="Machine.pyc" o="caio1982" g="staff" p="33188"/><f n="Noninteractive.py" o="caio1982" g="staff" p="33188"/><f n="Noninteractive.pyc" o="caio1982" g="staff" p="33188"/><f n="TTY.py" o="caio1982" g="staff" p="33188"/><f n="TTY.pyc" o="caio1982" g="staff" p="33188"/><f n="UIBase.py" o="caio1982" g="staff" p="33188"/><f n="UIBase.pyc" o="caio1982" g="staff" p="33188"/></f><f n="version.py" o="caio1982" g="staff" p="33188"/><f n="version.pyc" o="caio1982" g="staff" p="33188"/></f><f n="offlineimap-6.2.0-py2.6.egg-info" o="caio1982" g="staff" p="33188"/></f></f></f></f><f n="usr" o="caio1982" g="staff" p="16877"><f n="local" o="caio1982" g="staff" p="16877"><f n="bin" o="caio1982" g="staff" p="16877"><f n="offlineimap" o="caio1982" g="staff" p="33261"/></f><f n="share" o="caio1982" g="staff" p="16877"><f n="doc" o="caio1982" g="staff" p="16877"><f n="offlineimap" o="caio1982" g="staff" p="16877"><f n="COPYING" o="caio1982" g="staff" p="33188"/><f n="COPYRIGHT" o="caio1982" g="staff" p="33188"/><f n="FAQ.html" o="caio1982" g="staff" p="33188"/><f n="UPGRADING" o="caio1982" g="staff" p="33188"/></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="offlineimap-install" o="caio1982" g="staff" p="16877" pt="/Users/caio1982/rudix-read-only/Ports/offlineimap/offlineimap-install" m="false" t="file">
+    <f n="Library" o="caio1982" g="staff" p="16877">
+      <f n="Python" o="caio1982" g="staff" p="16877">
+        <f n="2.6" o="caio1982" g="staff" p="16877">
+          <f n="site-packages" o="caio1982" g="staff" p="16877">
+            <f n="offlineimap" o="caio1982" g="staff" p="16877">
+              <f n="__init__.py" o="caio1982" g="staff" p="33188"/>
+              <f n="__init__.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="accounts.py" o="caio1982" g="staff" p="33188"/>
+              <f n="accounts.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="CustomConfig.py" o="caio1982" g="staff" p="33188"/>
+              <f n="CustomConfig.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="folder" o="caio1982" g="staff" p="16877">
+                <f n="__init__.py" o="caio1982" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Base.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Base.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Gmail.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Gmail.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="IMAP.py" o="caio1982" g="staff" p="33188"/>
+                <f n="IMAP.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="LocalStatus.py" o="caio1982" g="staff" p="33188"/>
+                <f n="LocalStatus.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Maildir.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Maildir.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="UIDMaps.py" o="caio1982" g="staff" p="33188"/>
+                <f n="UIDMaps.pyc" o="caio1982" g="staff" p="33188"/>
+              </f>
+              <f n="imaplibutil.py" o="caio1982" g="staff" p="33188"/>
+              <f n="imaplibutil.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="imapserver.py" o="caio1982" g="staff" p="33188"/>
+              <f n="imapserver.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="imaputil.py" o="caio1982" g="staff" p="33188"/>
+              <f n="imaputil.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="init.py" o="caio1982" g="staff" p="33188"/>
+              <f n="init.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="localeval.py" o="caio1982" g="staff" p="33188"/>
+              <f n="localeval.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="mbnames.py" o="caio1982" g="staff" p="33188"/>
+              <f n="mbnames.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="repository" o="caio1982" g="staff" p="16877">
+                <f n="__init__.py" o="caio1982" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Base.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Base.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Gmail.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Gmail.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="IMAP.py" o="caio1982" g="staff" p="33188"/>
+                <f n="IMAP.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="LocalStatus.py" o="caio1982" g="staff" p="33188"/>
+                <f n="LocalStatus.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Maildir.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Maildir.pyc" o="caio1982" g="staff" p="33188"/>
+              </f>
+              <f n="syncmaster.py" o="caio1982" g="staff" p="33188"/>
+              <f n="syncmaster.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="threadutil.py" o="caio1982" g="staff" p="33188"/>
+              <f n="threadutil.pyc" o="caio1982" g="staff" p="33188"/>
+              <f n="ui" o="caio1982" g="staff" p="16877">
+                <f n="__init__.py" o="caio1982" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Blinkenlights.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Blinkenlights.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Curses.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Curses.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="debuglock.py" o="caio1982" g="staff" p="33188"/>
+                <f n="debuglock.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="detector.py" o="caio1982" g="staff" p="33188"/>
+                <f n="detector.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Machine.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Machine.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="Noninteractive.py" o="caio1982" g="staff" p="33188"/>
+                <f n="Noninteractive.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="TTY.py" o="caio1982" g="staff" p="33188"/>
+                <f n="TTY.pyc" o="caio1982" g="staff" p="33188"/>
+                <f n="UIBase.py" o="caio1982" g="staff" p="33188"/>
+                <f n="UIBase.pyc" o="caio1982" g="staff" p="33188"/>
+              </f>
+              <f n="version.py" o="caio1982" g="staff" p="33188"/>
+              <f n="version.pyc" o="caio1982" g="staff" p="33188"/>
+            </f>
+            <f n="offlineimap-6.2.0-py2.6.egg-info" o="caio1982" g="staff" p="33188"/>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="caio1982" g="staff" p="16877">
+      <f n="local" o="caio1982" g="staff" p="16877">
+        <f n="bin" o="caio1982" g="staff" p="16877">
+          <f n="offlineimap" o="caio1982" g="staff" p="33261"/>
+        </f>
+        <f n="share" o="caio1982" g="staff" p="16877">
+          <f n="doc" o="caio1982" g="staff" p="16877">
+            <f n="offlineimap" o="caio1982" g="staff" p="16877">
+              <f n="COPYING" o="caio1982" g="staff" p="33188"/>
+              <f n="COPYRIGHT" o="caio1982" g="staff" p="33188"/>
+              <f n="FAQ.html" o="caio1982" g="staff" p="33188"/>
+              <f n="UPGRADING" o="caio1982" g="staff" p="33188"/>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="ED703FBC-C400-44A4-95C8-E677AB73AC52"><config><identifier>org.rudix.pkg.lame</identifier><version>3.98.2</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">lame-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installTo</mod><mod>installFrom.path</mod><mod>parent</mod><mod>version</mod><mod>identifier</mod></config><contents><file-list>01lame-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="ED703FBC-C400-44A4-95C8-E677AB73AC52">
+  <config>
+    <identifier>org.rudix.pkg.lame</identifier>
+    <version>3.98.2</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">lame-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+    <mod>identifier</mod>
+  </config>
+  <contents>
+    <file-list>01lame-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

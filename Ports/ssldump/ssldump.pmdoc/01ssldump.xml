@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="9A3322DA-B09A-4E15-BDEA-F2E21BD2A0B6"><config><identifier>org.rudix.pkg.ssldump</identifier><version>1</version><description/><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">ssldump-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"/><mod>parent</mod><mod>installFrom.path</mod><mod>identifier</mod><mod>installTo</mod></config><contents><file-list>01ssldump-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="9A3322DA-B09A-4E15-BDEA-F2E21BD2A0B6">
+  <config>
+    <identifier>org.rudix.pkg.ssldump</identifier>
+    <version>1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">ssldump-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>parent</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01ssldump-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

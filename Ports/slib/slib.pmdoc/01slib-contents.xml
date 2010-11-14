@@ -1,1 +1,599 @@
-<pkg-contents spec="1.12"><f n="slib-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/Rudix-CVS/Ports/slib/slib-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="slib" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="lib" o="root" g="wheel" p="16877"><f n="slib" o="root" g="wheel" p="16893"><f n="alist.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="alistab.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="array.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="arraymap.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="batch.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Bev2slib.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bigloo.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="break.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="byte.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bytenumb.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="chap.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="charplot.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="chez.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cie1931.xyz" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cie1964.xyz" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="clrnamdb.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cltime.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="coerce.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="collect.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="collectx.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="color.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="colornam.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="colorspc.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="comlist.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="comparse.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="crc.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cring.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cvs.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="daylight.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="db2html.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dbcom.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dbinterp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dbrowse.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dbsyn.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dbutil.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="debug.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="defmacex.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="determ.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dft.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="differ.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dirs.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dynamic.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dynwind.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="elk.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="eval.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="factor.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="fluidlet.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="format.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gambit.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="genwrite.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="getopt.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="getparam.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="glob.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="grapheps.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="grapheps.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="guile.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hash.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashtab.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="html4each.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="htmlform.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="http-cgi.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="jscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="kawa.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="limit.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lineio.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="linterp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="logical.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="macscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="macwork.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="manifest.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="matfile.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="math-integer.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="math-real.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mbe.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="minimize.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mitscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mkclrnam.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mklibcat.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mkpltcat.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="modular.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mulapply.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mularg.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mwdenote.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mwexpand.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mwsynrul.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mzscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="nbs-iscc.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ncbi-dna.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="null.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="obj2str.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="object.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="paramlst.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="peanosfc.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="phil-spc.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pnm.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ppfile.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="prec.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="printf.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="priorque.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="process.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="promise.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="psxtime.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="qp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="queue.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="r4rsyn.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="randinex.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="random.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ratize.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rdms.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="recobj.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="record.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="repl.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="require.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="resenecolours.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="root.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="RScheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="saturate.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sc2.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sc4opt.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sc4sc3.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scaexpp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scaglob.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scainit.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scamacr.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scanf.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scaoutp.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scheme2c.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scheme48.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="schmooz.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scm.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scmacro.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scsh.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="selfset.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sierpinski.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="simetrix.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sisc.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="slib.nsi" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="slib.sh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="slib.spec" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="solid.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sort.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="soundex.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-1.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-11.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-2.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-23.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-61.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-8.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi-9.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="srfi.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="stdio.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="STk.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strcase.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strport.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strsrch.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="structure.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="subarray.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="syncase.sh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="synchk.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="synclo.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="synrul.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="t3.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Template.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="timecore.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="timezone.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="top-refs.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="trace.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="transact.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tree.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="trnscrpt.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tsort.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tzfile.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="umbscheme.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="uri.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="values.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="vet.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="vscm.init" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="withfile.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="wttest.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="wttree.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xml-parse.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="yasyn.scm" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="slib" o="root" g="wheel" p="16893"><f n="ANNOUNCE" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="FAQ" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="slib.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="slib-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/Rudix-CVS/Ports/slib/slib-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="slib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16877">
+          <f n="slib" o="root" g="wheel" p="16893">
+            <f n="alist.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="alistab.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="array.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="arraymap.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="batch.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Bev2slib.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bigloo.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="break.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="byte.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bytenumb.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="chap.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="charplot.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="chez.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cie1931.xyz" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cie1964.xyz" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="clrnamdb.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cltime.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="coerce.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="collect.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="collectx.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="color.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="colornam.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="colorspc.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="comlist.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="comparse.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="crc.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cring.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cvs.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="daylight.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="db2html.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbcom.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbinterp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbrowse.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbsyn.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbutil.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="debug.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="defmacex.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="determ.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dft.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="differ.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dirs.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dynamic.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dynwind.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="elk.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="eval.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="factor.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fluidlet.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="format.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gambit.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="genwrite.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="getopt.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="getparam.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="glob.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="grapheps.ps" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="grapheps.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hashtab.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="html4each.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="htmlform.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="http-cgi.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="jscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="kawa.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="limit.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lineio.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="linterp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="logical.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="macscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="macwork.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Makefile" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="manifest.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="matfile.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="math-integer.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="math-real.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbe.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="minimize.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mitscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkclrnam.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mklibcat.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkpltcat.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="modular.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mulapply.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mularg.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mwdenote.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mwexpand.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mwsynrul.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mzscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="nbs-iscc.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ncbi-dna.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="null.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="obj2str.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="object.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="paramlst.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="peanosfc.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="phil-spc.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pnm.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ppfile.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="prec.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="printf.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="priorque.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="process.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="promise.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="psxtime.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="qp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="queue.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="r4rsyn.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="randinex.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="random.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ratize.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rdms.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="recobj.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="record.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="repl.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="require.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="resenecolours.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="root.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="RScheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="saturate.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sc2.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sc4opt.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sc4sc3.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scaexpp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scaglob.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scainit.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scamacr.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scanf.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scaoutp.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scheme2c.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scheme48.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="schmooz.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scm.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scmacro.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scsh.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="selfset.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sierpinski.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="simetrix.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sisc.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="slib.nsi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="slib.sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="slib.spec" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="solid.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sort.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="soundex.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-1.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-11.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-2.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-23.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-61.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-8.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-9.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stdio.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="STk.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strcase.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strport.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strsrch.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="structure.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="subarray.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="syncase.sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="synchk.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="synclo.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="synrul.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="t3.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Template.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="timecore.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="timezone.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="top-refs.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="trace.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="transact.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tree.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="trnscrpt.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tsort.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tzfile.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="umbscheme.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="uri.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="values.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vet.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vscm.init" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="withfile.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wttest.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wttree.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="xml-parse.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="yasyn.scm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="slib" o="root" g="wheel" p="16893">
+              <f n="ANNOUNCE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="slib.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

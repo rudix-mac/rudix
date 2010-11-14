@@ -1,1 +1,25 @@
-<pkgref spec="1.12" uuid="B4A5C8BA-17E8-4EBC-8F98-F29A633CC494"><config><identifier>org.rudix.pkg.webpy.web.pkg</identifier><version>1.0</version><description/><post-install type="none"/><requireAuthorization/><installFrom>/Users/ruda/Work/rudix.svn/Ports/web.py/web.py-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"/><mod>parent</mod></config><contents><file-list>01web-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="B4A5C8BA-17E8-4EBC-8F98-F29A633CC494">
+  <config>
+    <identifier>org.rudix.pkg.webpy.web.pkg</identifier>
+    <version>1.0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom>/Users/ruda/Work/rudix.svn/Ports/web.py/web.py-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>parent</mod>
+  </config>
+  <contents>
+    <file-list>01web-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

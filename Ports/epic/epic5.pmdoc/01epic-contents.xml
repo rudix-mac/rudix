@@ -1,1 +1,103 @@
-<pkg-contents spec="1.12"><f n="epic5-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/epic/epic5-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16893"><f n="bin" o="root" g="wheel" p="16893"><f n="epic5" o="root" g="wheel" p="33277"/><f n="epic5-1.0" o="root" g="wheel" p="33277"/></f><f n="libexec" o="root" g="wheel" p="16893"><f n="epic5-wserv4" o="root" g="wheel" p="33277"/></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="epic5" o="root" g="wheel" p="16893"><f n="BUG_FORM" o="root" g="wheel" p="33204"/><f n="COPYRIGHT" o="root" g="wheel" p="33204"/><f n="KNOWNBUGS" o="root" g="wheel" p="33204"/><f n="README" o="root" g="wheel" p="33204"/><f n="UPDATES" o="root" g="wheel" p="33204"/><f n="VOTES" o="root" g="wheel" p="33204"/></f></f><f n="epic5" o="root" g="wheel" p="16893"><f n="help" o="root" g="wheel" p="16893"/><f n="script" o="root" g="wheel" p="16893"><f n="2.8script" o="root" g="wheel" p="33204"/><f n="activity" o="root" g="wheel" p="33204"/><f n="addset" o="root" g="wheel" p="33204"/><f n="altchan" o="root" g="wheel" p="33204"/><f n="autoget" o="root" g="wheel" p="33204"/><f n="autojoin" o="root" g="wheel" p="33204"/><f n="autoquery" o="root" g="wheel" p="33204"/><f n="builtins" o="root" g="wheel" p="33204"/><f n="chanmonitor" o="root" g="wheel" p="33204"/><f n="commandqueues" o="root" g="wheel" p="33204"/><f n="country" o="root" g="wheel" p="33204"/><f n="data_array" o="root" g="wheel" p="33204"/><f n="data_struct" o="root" g="wheel" p="33204"/><f n="dcc_ports" o="root" g="wheel" p="33204"/><f n="debug.irc" o="root" g="wheel" p="33204"/><f n="dump" o="root" g="wheel" p="33204"/><f n="edit_topic" o="root" g="wheel" p="33204"/><f n="epic-crypt-gpg" o="root" g="wheel" p="33277"/><f n="epic-crypt-gpg-aa" o="root" g="wheel" p="33277"/><f n="files" o="root" g="wheel" p="33204"/><f n="floodprot" o="root" g="wheel" p="33204"/><f n="functions" o="root" g="wheel" p="33204"/><f n="global" o="root" g="wheel" p="33204"/><f n="grep" o="root" g="wheel" p="33204"/><f n="guh" o="root" g="wheel" p="33204"/><f n="help" o="root" g="wheel" p="33204"/><f n="highlight" o="root" g="wheel" p="33204"/><f n="history" o="root" g="wheel" p="33204"/><f n="hold_mode" o="root" g="wheel" p="33204"/><f n="ison" o="root" g="wheel" p="33204"/><f n="less" o="root" g="wheel" p="33204"/><f n="less-pipe" o="root" g="wheel" p="33204"/><f n="loadformats" o="root" g="wheel" p="33204"/><f n="local.examp" o="root" g="wheel" p="33204"/><f n="mail" o="root" g="wheel" p="33204"/><f n="man" o="root" g="wheel" p="33204"/><f n="map" o="root" g="wheel" p="33204"/><f n="meta-compat" o="root" g="wheel" p="33204"/><f n="motd" o="root" g="wheel" p="33204"/><f n="netsplit" o="root" g="wheel" p="33204"/><f n="newaway" o="root" g="wheel" p="33204"/><f n="newnick" o="root" g="wheel" p="33204"/><f n="nickcomp" o="root" g="wheel" p="33204"/><f n="nopaste" o="root" g="wheel" p="33204"/><f n="notify" o="root" g="wheel" p="33204"/><f n="paste" o="root" g="wheel" p="33204"/><f n="pipe" o="root" g="wheel" p="33204"/><f n="reconnect" o="root" g="wheel" p="33204"/><f n="renumber" o="root" g="wheel" p="33204"/><f n="revdcc" o="root" g="wheel" p="33204"/><f n="save" o="root" g="wheel" p="33204"/><f n="scan" o="root" g="wheel" p="33204"/><f n="screen" o="root" g="wheel" p="33204"/><f n="screen.e" o="root" g="wheel" p="33204"/><f n="setmail" o="root" g="wheel" p="33204"/><f n="slowcat" o="root" g="wheel" p="33204"/><f n="snip" o="root" g="wheel" p="33204"/><f n="sping" o="root" g="wheel" p="33204"/><f n="suppressmotd" o="root" g="wheel" p="33204"/><f n="tabkey.ce" o="root" g="wheel" p="33204"/><f n="tabkey.jm" o="root" g="wheel" p="33204"/><f n="topicbar" o="root" g="wheel" p="33204"/><f n="topicbar.bj" o="root" g="wheel" p="33204"/><f n="url.irc" o="root" g="wheel" p="33204"/><f n="utime" o="root" g="wheel" p="33204"/></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="epic5.1" o="root" g="wheel" p="33204"/></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="epic5-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/epic/epic5-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="epic5" o="root" g="wheel" p="33277"/>
+          <f n="epic5-1.0" o="root" g="wheel" p="33277"/>
+        </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="epic5-wserv4" o="root" g="wheel" p="33277"/>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="epic5" o="root" g="wheel" p="16893">
+              <f n="BUG_FORM" o="root" g="wheel" p="33204"/>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204"/>
+              <f n="KNOWNBUGS" o="root" g="wheel" p="33204"/>
+              <f n="README" o="root" g="wheel" p="33204"/>
+              <f n="UPDATES" o="root" g="wheel" p="33204"/>
+              <f n="VOTES" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+          <f n="epic5" o="root" g="wheel" p="16893">
+            <f n="help" o="root" g="wheel" p="16893"/>
+            <f n="script" o="root" g="wheel" p="16893">
+              <f n="2.8script" o="root" g="wheel" p="33204"/>
+              <f n="activity" o="root" g="wheel" p="33204"/>
+              <f n="addset" o="root" g="wheel" p="33204"/>
+              <f n="altchan" o="root" g="wheel" p="33204"/>
+              <f n="autoget" o="root" g="wheel" p="33204"/>
+              <f n="autojoin" o="root" g="wheel" p="33204"/>
+              <f n="autoquery" o="root" g="wheel" p="33204"/>
+              <f n="builtins" o="root" g="wheel" p="33204"/>
+              <f n="chanmonitor" o="root" g="wheel" p="33204"/>
+              <f n="commandqueues" o="root" g="wheel" p="33204"/>
+              <f n="country" o="root" g="wheel" p="33204"/>
+              <f n="data_array" o="root" g="wheel" p="33204"/>
+              <f n="data_struct" o="root" g="wheel" p="33204"/>
+              <f n="dcc_ports" o="root" g="wheel" p="33204"/>
+              <f n="debug.irc" o="root" g="wheel" p="33204"/>
+              <f n="dump" o="root" g="wheel" p="33204"/>
+              <f n="edit_topic" o="root" g="wheel" p="33204"/>
+              <f n="epic-crypt-gpg" o="root" g="wheel" p="33277"/>
+              <f n="epic-crypt-gpg-aa" o="root" g="wheel" p="33277"/>
+              <f n="files" o="root" g="wheel" p="33204"/>
+              <f n="floodprot" o="root" g="wheel" p="33204"/>
+              <f n="functions" o="root" g="wheel" p="33204"/>
+              <f n="global" o="root" g="wheel" p="33204"/>
+              <f n="grep" o="root" g="wheel" p="33204"/>
+              <f n="guh" o="root" g="wheel" p="33204"/>
+              <f n="help" o="root" g="wheel" p="33204"/>
+              <f n="highlight" o="root" g="wheel" p="33204"/>
+              <f n="history" o="root" g="wheel" p="33204"/>
+              <f n="hold_mode" o="root" g="wheel" p="33204"/>
+              <f n="ison" o="root" g="wheel" p="33204"/>
+              <f n="less" o="root" g="wheel" p="33204"/>
+              <f n="less-pipe" o="root" g="wheel" p="33204"/>
+              <f n="loadformats" o="root" g="wheel" p="33204"/>
+              <f n="local.examp" o="root" g="wheel" p="33204"/>
+              <f n="mail" o="root" g="wheel" p="33204"/>
+              <f n="man" o="root" g="wheel" p="33204"/>
+              <f n="map" o="root" g="wheel" p="33204"/>
+              <f n="meta-compat" o="root" g="wheel" p="33204"/>
+              <f n="motd" o="root" g="wheel" p="33204"/>
+              <f n="netsplit" o="root" g="wheel" p="33204"/>
+              <f n="newaway" o="root" g="wheel" p="33204"/>
+              <f n="newnick" o="root" g="wheel" p="33204"/>
+              <f n="nickcomp" o="root" g="wheel" p="33204"/>
+              <f n="nopaste" o="root" g="wheel" p="33204"/>
+              <f n="notify" o="root" g="wheel" p="33204"/>
+              <f n="paste" o="root" g="wheel" p="33204"/>
+              <f n="pipe" o="root" g="wheel" p="33204"/>
+              <f n="reconnect" o="root" g="wheel" p="33204"/>
+              <f n="renumber" o="root" g="wheel" p="33204"/>
+              <f n="revdcc" o="root" g="wheel" p="33204"/>
+              <f n="save" o="root" g="wheel" p="33204"/>
+              <f n="scan" o="root" g="wheel" p="33204"/>
+              <f n="screen" o="root" g="wheel" p="33204"/>
+              <f n="screen.e" o="root" g="wheel" p="33204"/>
+              <f n="setmail" o="root" g="wheel" p="33204"/>
+              <f n="slowcat" o="root" g="wheel" p="33204"/>
+              <f n="snip" o="root" g="wheel" p="33204"/>
+              <f n="sping" o="root" g="wheel" p="33204"/>
+              <f n="suppressmotd" o="root" g="wheel" p="33204"/>
+              <f n="tabkey.ce" o="root" g="wheel" p="33204"/>
+              <f n="tabkey.jm" o="root" g="wheel" p="33204"/>
+              <f n="topicbar" o="root" g="wheel" p="33204"/>
+              <f n="topicbar.bj" o="root" g="wheel" p="33204"/>
+              <f n="url.irc" o="root" g="wheel" p="33204"/>
+              <f n="utime" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="epic5.1" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

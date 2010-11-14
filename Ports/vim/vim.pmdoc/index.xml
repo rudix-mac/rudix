@@ -1,1 +1,29 @@
-<pkmkdoc spec="1.12"><properties><title>Vim</title><organization>org.rudix.pkg</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>Vi clone, many additional features</description><contents><choice title="vim-install" id="vim" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.vim"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="readme">ReadMe.txt</resource></locale></resources><flags/><item type="file">01vim.xml</item><mod>description</mod><mod>properties.title</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>Vim</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Vi clone, many additional features</description>
+  <contents>
+    <choice title="vim-install" id="vim" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.vim"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="readme">ReadMe.txt</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01vim.xml</item>
+  <mod>description</mod>
+  <mod>properties.title</mod>
+</pkmkdoc>

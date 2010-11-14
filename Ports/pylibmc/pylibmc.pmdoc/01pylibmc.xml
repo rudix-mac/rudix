@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="B090F6BF-339A-407F-93E3-23F49DD0AB73"><config><identifier>org.rudix.pkg.pylibmc</identifier><version>1</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">pylibmc-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>installFrom.path</mod><mod>parent</mod><mod>identifier</mod><mod>installTo</mod></config><contents><file-list>01pylibmc-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="B090F6BF-339A-407F-93E3-23F49DD0AB73">
+  <config>
+    <identifier>org.rudix.pkg.pylibmc</identifier>
+    <version>1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">pylibmc-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01pylibmc-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="A1DF8C4C-EB2C-4921-8FE8-11C4DBF1BD5E"><config><identifier>org.rudix.pkg.xmp</identifier><version>2.5.1</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">xmp-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>version</mod><mod>installFrom.path</mod><mod>parent</mod><mod>identifier</mod><mod>installTo</mod></config><contents><file-list>01xmp-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="A1DF8C4C-EB2C-4921-8FE8-11C4DBF1BD5E">
+  <config>
+    <identifier>org.rudix.pkg.xmp</identifier>
+    <version>2.5.1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">xmp-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>parent</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+  </config>
+  <contents>
+    <file-list>01xmp-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

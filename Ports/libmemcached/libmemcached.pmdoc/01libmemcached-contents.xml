@@ -1,1 +1,364 @@
-<pkg-contents spec="1.12"><f n="libmemcached-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/libmemcached/libmemcached-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="memcapable" o="root" g="wheel" p="33277"/><f n="memcat" o="root" g="wheel" p="33277"/><f n="memcp" o="root" g="wheel" p="33277"/><f n="memdump" o="root" g="wheel" p="33277"/><f n="memerror" o="root" g="wheel" p="33277"/><f n="memflush" o="root" g="wheel" p="33277"/><f n="memrm" o="root" g="wheel" p="33277"/><f n="memslap" o="root" g="wheel" p="33277"/><f n="memstat" o="root" g="wheel" p="33277"/></f><f n="include" o="root" g="wheel" p="16893"><f n="libhashkit" o="root" g="wheel" p="16893"><f n="algorithm.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="behavior.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="configure.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="digest.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="function.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strerror.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="types.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="visibility.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="libmemcached" o="root" g="wheel" p="16893"><f n="allocators.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="analyze.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="auto.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="behavior.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="callback.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="configure.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="constants.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="delete.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dump.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="exception.hpp" o="root" g="wheel" p="33204"/><f n="fetch.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="flush.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="flush_buffers.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="get.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hash.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached" o="root" g="wheel" p="16893"><f n="protocol_binary.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="memcached.h" o="root" g="wheel" p="33204"/><f n="memcached.hpp" o="root" g="wheel" p="33204"/><f n="memcached_util.h" o="root" g="wheel" p="33204"/><f n="parse.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="platform.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="protocol" o="root" g="wheel" p="16893"><f n="cache.h" o="root" g="wheel" p="33204"/><f n="callback.h" o="root" g="wheel" p="33204"/></f><f n="protocol_handler.h" o="root" g="wheel" p="33204"/><f n="quit.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="result.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sasl.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="server.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="server_list.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="stats.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="storage.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strerror.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="string.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="types.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="util" o="root" g="wheel" p="16893"><f n="ping.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pool.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="version.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="util.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="verbosity.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="version.h" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="visibility.h" o="root" g="wheel" p="33204"/><f n="watchpoint.h" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="lib" o="root" g="wheel" p="16893"><f n="libhashkit.0.dylib" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libhashkit.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libhashkit.dylib" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="libhashkit.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libmemcached.5.dylib" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libmemcached.a" o="root" g="wheel" p="33204"/><f n="libmemcached.dylib" o="root" g="wheel" p="33277"/><f n="libmemcached.la" o="root" g="wheel" p="33277"/><f n="libmemcachedprotocol.0.dylib" o="root" g="wheel" p="33277"/><f n="libmemcachedprotocol.a" o="root" g="wheel" p="33204"/><f n="libmemcachedprotocol.dylib" o="root" g="wheel" p="33277"/><f n="libmemcachedprotocol.la" o="root" g="wheel" p="33277"/><f n="libmemcachedutil.1.dylib" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libmemcachedutil.a" o="root" g="wheel" p="33204"/><f n="libmemcachedutil.dylib" o="root" g="wheel" p="33277"/><f n="libmemcachedutil.la" o="root" g="wheel" p="33277"/><f n="pkgconfig" o="root" g="wheel" p="16893"><f n="libmemcached.pc" o="root" g="wheel" p="33204"/></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="libmemcached" o="root" g="wheel" p="16893"><f n="AUTHORS" o="root" g="wheel" p="33204"/><f n="ChangeLog" o="root" g="wheel" p="33204"/><f n="COPYING" o="root" g="wheel" p="33204"/><f n="NEWS" o="root" g="wheel" p="33204"/><f n="README" o="root" g="wheel" p="33204"/><f n="THANKS" o="root" g="wheel" p="33204"/><f n="TODO" o="root" g="wheel" p="33204"/></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="memcapable.1" o="root" g="wheel" p="33204"/><f n="memcat.1" o="root" g="wheel" p="33204"/><f n="memcp.1" o="root" g="wheel" p="33204"/><f n="memdump.1" o="root" g="wheel" p="33204"/><f n="memerror.1" o="root" g="wheel" p="33204"/><f n="memflush.1" o="root" g="wheel" p="33204"/><f n="memrm.1" o="root" g="wheel" p="33204"/><f n="memslap.1" o="root" g="wheel" p="33204"/><f n="memstat.1" o="root" g="wheel" p="33204"/></f><f n="man3" o="root" g="wheel" p="16893"><f n="hashkit_clone.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_crc32.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_create.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_fnv1_32.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_fnv1_64.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_fnv1a_32.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_fnv1a_64.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_free.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_functions.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_hsieh.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_is_allocated.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_jenkins.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_md5.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_murmur.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hashkit_value.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libmemcached.3" o="root" g="wheel" p="33204"/><f n="libmemcached_examples.3" o="root" g="wheel" p="33204"/><f n="libmemcachedutil.3" o="root" g="wheel" p="33204"/><f n="memcached_add.3" o="root" g="wheel" p="33204"/><f n="memcached_add_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_analyze.3" o="root" g="wheel" p="33204"/><f n="memcached_append.3" o="root" g="wheel" p="33204"/><f n="memcached_append_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_behavior_get.3" o="root" g="wheel" p="33204"/><f n="memcached_behavior_set.3" o="root" g="wheel" p="33204"/><f n="memcached_callback_get.3" o="root" g="wheel" p="33204"/><f n="memcached_callback_set.3" o="root" g="wheel" p="33204"/><f n="memcached_cas.3" o="root" g="wheel" p="33204"/><f n="memcached_cas_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_clone.3" o="root" g="wheel" p="33204"/><f n="memcached_create.3" o="root" g="wheel" p="33204"/><f n="memcached_decrement.3" o="root" g="wheel" p="33204"/><f n="memcached_decrement_with_initial.3" o="root" g="wheel" p="33204"/><f n="memcached_delete.3" o="root" g="wheel" p="33204"/><f n="memcached_delete_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_destroy_sasl_auth_data.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_dump.3" o="root" g="wheel" p="33204"/><f n="memcached_fetch.3" o="root" g="wheel" p="33204"/><f n="memcached_fetch_execute.3" o="root" g="wheel" p="33204"/><f n="memcached_fetch_result.3" o="root" g="wheel" p="33204"/><f n="memcached_flush_buffers.3" o="root" g="wheel" p="33204"/><f n="memcached_free.3" o="root" g="wheel" p="33204"/><f n="memcached_generate_hash_value.3" o="root" g="wheel" p="33204"/><f n="memcached_get.3" o="root" g="wheel" p="33204"/><f n="memcached_get_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_get_memory_allocators.3" o="root" g="wheel" p="33204"/><f n="memcached_get_sasl_callbacks.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_get_user_data.3" o="root" g="wheel" p="33204"/><f n="memcached_increment.3" o="root" g="wheel" p="33204"/><f n="memcached_increment_with_initial.3" o="root" g="wheel" p="33204"/><f n="memcached_lib_version.3" o="root" g="wheel" p="33204"/><f n="memcached_mget.3" o="root" g="wheel" p="33204"/><f n="memcached_mget_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_mget_execute.3" o="root" g="wheel" p="33204"/><f n="memcached_mget_execute_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_behavior_get.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_behavior_set.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_create.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_destroy.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_pop.3" o="root" g="wheel" p="33204"/><f n="memcached_pool_push.3" o="root" g="wheel" p="33204"/><f n="memcached_prepend.3" o="root" g="wheel" p="33204"/><f n="memcached_prepend_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_quit.3" o="root" g="wheel" p="33204"/><f n="memcached_replace.3" o="root" g="wheel" p="33204"/><f n="memcached_replace_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_sasl_set_auth_data.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_server_add.3" o="root" g="wheel" p="33204"/><f n="memcached_server_count.3" o="root" g="wheel" p="33204"/><f n="memcached_server_cursor.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_server_list.3" o="root" g="wheel" p="33204"/><f n="memcached_server_list_append.3" o="root" g="wheel" p="33204"/><f n="memcached_server_list_count.3" o="root" g="wheel" p="33204"/><f n="memcached_server_list_free.3" o="root" g="wheel" p="33204"/><f n="memcached_server_push.3" o="root" g="wheel" p="33204"/><f n="memcached_servers_parse.3" o="root" g="wheel" p="33204"/><f n="memcached_set.3" o="root" g="wheel" p="33204"/><f n="memcached_set_by_key.3" o="root" g="wheel" p="33204"/><f n="memcached_set_memory_allocators.3" o="root" g="wheel" p="33204"/><f n="memcached_set_sasl_callbacks.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_set_user_data.3" o="root" g="wheel" p="33204"/><f n="memcached_stat.3" o="root" g="wheel" p="33204"/><f n="memcached_stat_execute.3" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="memcached_stat_get_keys.3" o="root" g="wheel" p="33204"/><f n="memcached_stat_get_value.3" o="root" g="wheel" p="33204"/><f n="memcached_stat_servername.3" o="root" g="wheel" p="33204"/><f n="memcached_strerror.3" o="root" g="wheel" p="33204"/><f n="memcached_verbosity.3" o="root" g="wheel" p="33204"/><f n="memcached_version.3" o="root" g="wheel" p="33204"/></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="libmemcached-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/libmemcached/libmemcached-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="memcapable" o="root" g="wheel" p="33277"/>
+          <f n="memcat" o="root" g="wheel" p="33277"/>
+          <f n="memcp" o="root" g="wheel" p="33277"/>
+          <f n="memdump" o="root" g="wheel" p="33277"/>
+          <f n="memerror" o="root" g="wheel" p="33277"/>
+          <f n="memflush" o="root" g="wheel" p="33277"/>
+          <f n="memrm" o="root" g="wheel" p="33277"/>
+          <f n="memslap" o="root" g="wheel" p="33277"/>
+          <f n="memstat" o="root" g="wheel" p="33277"/>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="libhashkit" o="root" g="wheel" p="16893">
+            <f n="algorithm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="behavior.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="configure.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="digest.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="function.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hashkit.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strerror.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="types.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="visibility.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libmemcached" o="root" g="wheel" p="16893">
+            <f n="allocators.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="analyze.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auto.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="behavior.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="callback.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="configure.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="constants.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="delete.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dump.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="exception.hpp" o="root" g="wheel" p="33204"/>
+            <f n="fetch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="flush.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="flush_buffers.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="get.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="memcached" o="root" g="wheel" p="16893">
+              <f n="protocol_binary.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="memcached.h" o="root" g="wheel" p="33204"/>
+            <f n="memcached.hpp" o="root" g="wheel" p="33204"/>
+            <f n="memcached_util.h" o="root" g="wheel" p="33204"/>
+            <f n="parse.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="platform.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="protocol" o="root" g="wheel" p="16893">
+              <f n="cache.h" o="root" g="wheel" p="33204"/>
+              <f n="callback.h" o="root" g="wheel" p="33204"/>
+            </f>
+            <f n="protocol_handler.h" o="root" g="wheel" p="33204"/>
+            <f n="quit.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="result.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sasl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="server.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="server_list.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stats.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strerror.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="string.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="types.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="util" o="root" g="wheel" p="16893">
+              <f n="ping.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pool.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="version.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="verbosity.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="visibility.h" o="root" g="wheel" p="33204"/>
+            <f n="watchpoint.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libhashkit.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libhashkit.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libhashkit.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libhashkit.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libmemcached.5.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libmemcached.a" o="root" g="wheel" p="33204"/>
+          <f n="libmemcached.dylib" o="root" g="wheel" p="33277"/>
+          <f n="libmemcached.la" o="root" g="wheel" p="33277"/>
+          <f n="libmemcachedprotocol.0.dylib" o="root" g="wheel" p="33277"/>
+          <f n="libmemcachedprotocol.a" o="root" g="wheel" p="33204"/>
+          <f n="libmemcachedprotocol.dylib" o="root" g="wheel" p="33277"/>
+          <f n="libmemcachedprotocol.la" o="root" g="wheel" p="33277"/>
+          <f n="libmemcachedutil.1.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libmemcachedutil.a" o="root" g="wheel" p="33204"/>
+          <f n="libmemcachedutil.dylib" o="root" g="wheel" p="33277"/>
+          <f n="libmemcachedutil.la" o="root" g="wheel" p="33277"/>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libmemcached.pc" o="root" g="wheel" p="33204"/>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="libmemcached" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
+              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
+              <f n="COPYING" o="root" g="wheel" p="33204"/>
+              <f n="NEWS" o="root" g="wheel" p="33204"/>
+              <f n="README" o="root" g="wheel" p="33204"/>
+              <f n="THANKS" o="root" g="wheel" p="33204"/>
+              <f n="TODO" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="memcapable.1" o="root" g="wheel" p="33204"/>
+              <f n="memcat.1" o="root" g="wheel" p="33204"/>
+              <f n="memcp.1" o="root" g="wheel" p="33204"/>
+              <f n="memdump.1" o="root" g="wheel" p="33204"/>
+              <f n="memerror.1" o="root" g="wheel" p="33204"/>
+              <f n="memflush.1" o="root" g="wheel" p="33204"/>
+              <f n="memrm.1" o="root" g="wheel" p="33204"/>
+              <f n="memslap.1" o="root" g="wheel" p="33204"/>
+              <f n="memstat.1" o="root" g="wheel" p="33204"/>
+            </f>
+            <f n="man3" o="root" g="wheel" p="16893">
+              <f n="hashkit_clone.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_crc32.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_create.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_fnv1_32.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_fnv1_64.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_fnv1a_32.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_fnv1a_64.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_free.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_functions.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_hsieh.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_is_allocated.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_jenkins.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_md5.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_murmur.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hashkit_value.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libmemcached.3" o="root" g="wheel" p="33204"/>
+              <f n="libmemcached_examples.3" o="root" g="wheel" p="33204"/>
+              <f n="libmemcachedutil.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_add.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_add_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_analyze.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_append.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_append_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_behavior_get.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_behavior_set.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_callback_get.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_callback_set.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_cas.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_cas_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_clone.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_create.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_decrement.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_decrement_with_initial.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_delete.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_delete_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_destroy_sasl_auth_data.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_dump.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_fetch.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_fetch_execute.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_fetch_result.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_flush_buffers.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_free.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_generate_hash_value.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_get.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_get_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_get_memory_allocators.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_get_sasl_callbacks.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_get_user_data.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_increment.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_increment_with_initial.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_lib_version.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_mget.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_mget_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_mget_execute.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_mget_execute_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_behavior_get.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_behavior_set.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_create.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_destroy.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_pop.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_pool_push.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_prepend.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_prepend_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_quit.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_replace.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_replace_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_sasl_set_auth_data.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_server_add.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_count.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_cursor.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_server_list.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_list_append.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_list_count.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_list_free.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_server_push.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_servers_parse.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_set.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_set_by_key.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_set_memory_allocators.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_set_sasl_callbacks.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_set_user_data.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_stat.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_stat_execute.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached_stat_get_keys.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_stat_get_value.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_stat_servername.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_strerror.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_verbosity.3" o="root" g="wheel" p="33204"/>
+              <f n="memcached_version.3" o="root" g="wheel" p="33204"/>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

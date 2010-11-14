@@ -1,1 +1,31 @@
-<pkmkdoc spec="1.12"><properties><title>SoX</title><build>/Users/ruda/Desktop/SoX.pkg</build><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>SOund eXchange - universal sound sample translator</description><contents><choice title="sox-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.sox.sox-install.pkg"/></choice></contents><resources bg-scale="none" bg-align="topleft"><locale lang="en"><resource relative="true" mod="true" type="license">sox-14.3.0/COPYING</resource><resource relative="true" mod="true" type="readme">sox-14.3.0/README</resource></locale></resources><flags/><item type="file">01sox.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>SoX</title>
+    <build>/Users/ruda/Desktop/SoX.pkg</build>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>SOund eXchange - universal sound sample translator</description>
+  <contents>
+    <choice title="sox-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.sox.sox-install.pkg"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">sox-14.3.0/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">sox-14.3.0/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01sox.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

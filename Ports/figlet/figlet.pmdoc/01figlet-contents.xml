@@ -1,1 +1,224 @@
-<pkg-contents spec="1.12"><f n="figlet-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/figlet/figlet-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16893"><f n="bin" o="root" g="wheel" p="16893"><f n="chkfont" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="figlet" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="figlist" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="showfigfonts" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="figlet" o="root" g="wheel" p="16893"><f n="CHANGES" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="FAQ" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="LICENSE" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="figlet" o="root" g="wheel" p="16893"><f n="646-ca.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-ca2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-cn.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-cu.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-de.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-dk.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-es.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-es2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-fr.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-gb.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-hu.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-irv.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-it.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-jp.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-kr.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-no.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-no2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-pt.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-pt2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-se.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-se2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="646-yu.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-2.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-3.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-4.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-5.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-7.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-8.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-9.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="banner.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="big.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="block.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bubble.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="digital.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="frango.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hz.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ilhebrew.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ivrit.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="jis0201.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="koi8r.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lean.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mini.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mnemonic.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="moscow.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="script.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="shadow.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="slant.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="small.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="smscript.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="smshadow.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="smslant.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="standard.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="term.flf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="upper.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ushebrew.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="uskata.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="utf8.flc" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="man" o="root" g="wheel" p="16893"><f n="man6" o="root" g="wheel" p="16893"><f n="figlet.6" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="figlet-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/figlet/figlet-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="chkfont" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="figlet" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="figlist" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="showfigfonts" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="figlet" o="root" g="wheel" p="16893">
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="figlet" o="root" g="wheel" p="16893">
+            <f n="646-ca.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-ca2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-cn.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-cu.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-de.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-dk.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-es.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-es2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-fr.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-gb.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-hu.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-irv.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-it.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-jp.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-kr.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-no.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-no2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-pt.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-pt2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-se.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-se2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="646-yu.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-2.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-3.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-4.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-5.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-7.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-8.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="8859-9.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="banner.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="big.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="block.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bubble.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="digital.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="frango.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hz.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ilhebrew.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ivrit.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="jis0201.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="koi8r.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lean.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mini.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mnemonic.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="moscow.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="script.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="shadow.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="slant.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="small.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="smscript.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="smshadow.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="smslant.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="standard.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="term.flf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="upper.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ushebrew.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="uskata.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="utf8.flc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man6" o="root" g="wheel" p="16893">
+              <f n="figlet.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

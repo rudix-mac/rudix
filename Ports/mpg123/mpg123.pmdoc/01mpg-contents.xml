@@ -1,1 +1,142 @@
-<pkg-contents spec="1.12"><f n="mpg123-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/mpg123/mpg123-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="mpg123" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="include" o="root" g="wheel" p="16893"><f n="mpg123.h" o="root" g="wheel" p="33204"><mod>mode</mod></f></f><f n="lib" o="root" g="wheel" p="16893"><f n="libmpg123.0.dylib" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="libmpg123.dylib" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="libmpg123.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mpg123" o="root" g="wheel" p="16893"><f n="output_coreaudio.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="output_coreaudio.so" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="output_dummy.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="output_dummy.so" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="output_openal.la" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="output_openal.so" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="pkgconfig" o="root" g="wheel" p="16893"><f n="libmpg123.pc" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="mpg123" o="root" g="wheel" p="16893"><f n="ACCURACY" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="AUTHORS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="BENCHMARKING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="BUGS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ChangeLog" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="CONTACT" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="doxy_examples.c" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="doxygen.conf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="doxyhead.xhtml" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libmpg123_speed.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="LICENSE" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile.am" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile.in" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="NEWS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="PATENTS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README.3DNOW" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README.gain" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README.remote" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ROAD_TO_LGPL" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="THANKS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="TODO" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mpg123.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="mpg123-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/mpg123/mpg123-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="mpg123" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="mpg123.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libmpg123.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libmpg123.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libmpg123.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="mpg123" o="root" g="wheel" p="16893">
+            <f n="output_coreaudio.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="output_coreaudio.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="output_dummy.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="output_dummy.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="output_openal.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="output_openal.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libmpg123.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="mpg123" o="root" g="wheel" p="16893">
+              <f n="ACCURACY" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BENCHMARKING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CONTACT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doxy_examples.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doxygen.conf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doxyhead.xhtml" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libmpg123_speed.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile.in" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PATENTS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.3DNOW" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.gain" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.remote" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ROAD_TO_LGPL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="THANKS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="mpg123.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

@@ -1,1 +1,844 @@
-<pkg-contents spec="1.12"><f n="mc-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/mc/mc-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16893"><f n="bin" o="root" g="wheel" p="16893"><f n="mc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mcedit" o="root" g="wheel" p="41469"><mod>mode</mod></f><f n="mcmfmt" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mcview" o="root" g="wheel" p="41469"><mod>mode</mod></f></f><f n="etc" o="root" g="wheel" p="16893"><f n="mc" o="root" g="wheel" p="16893"><mod>mode</mod></f><f n="mc.default" o="root" g="wheel" p="16893"><f n="cedit.menu" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="edit.indent.rc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="edit.spell.rc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="filehighlight.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.charsets" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.ext" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.keymap" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.keymap.default" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.keymap.emacs" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.lib" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.menu" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.menu.sr" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sfs.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="libexec" o="root" g="wheel" p="16893"><f n="mc" o="root" g="wheel" p="16893"><f n="extfs.d" o="root" g="wheel" p="16893"><f n="a+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="apt+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="audio" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="bpp" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="deb" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="deba" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="debd" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="dpkg+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="hp48+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="iso9660" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="lslR" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mailfs" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="patchfs" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README.extfs" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rpm" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="rpms+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="s3+" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="trpm" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="u7z" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uace" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ualz" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uar" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uarc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uarj" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uc1541" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ucab" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uha" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ulha" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="urar" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uzip" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="uzoo" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="mc-wrapper.csh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mc-wrapper.sh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mc.csh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="mc.sh" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f></f><f n="sbin" o="root" g="wheel" p="16893"/><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="mc" o="root" g="wheel" p="16893"><f n="AUTHORS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ChangeLog" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="COPYING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="FAQ" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="HACKING" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="NEWS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="TODO" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="locale" o="root" g="wheel" p="16893"><f n="az" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="be" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="be-tarask" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="bg" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ca" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="cs" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="da" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="de" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="el" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="es" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="eu" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="fi" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="fr" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="hu" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="it" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ja" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ko" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="lt" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="lv" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="mn" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="nb" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="nl" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="pl" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="pt" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="pt_BR" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ro" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ru" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="sk" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="sl" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="sr" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="sv" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="ta" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="tr" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="uk" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="vi" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="wa" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="zh_CN" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="zh_TW" o="root" g="wheel" p="16893"><f n="LC_MESSAGES" o="root" g="wheel" p="16893"><f n="mc.mo" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f><f n="man" o="root" g="wheel" p="16893"><f n="es" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="hu" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="it" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mcedit.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mcview.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f><f n="man8" o="root" g="wheel" p="16893"/><f n="pl" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="ru" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="sr" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="mc.1" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="man8" o="root" g="wheel" p="16893"><mod>mode</mod></f><mod>mode</mod></f></f><f n="mc" o="root" g="wheel" p="16893"><f n="mc.hint" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.cs" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.es" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.hu" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.it" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.nl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.pl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.ru" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.sr" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.uk" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hint.zh" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.es" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.hu" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.it" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.pl" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.ru" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mc.hlp.sr" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="skins" o="root" g="wheel" p="16893"><f n="darkfar.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="default.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="double-lines.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="featured.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gotar.ini" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="syntax" o="root" g="wheel" p="16893"><f n="ada95.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="aspx.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="assembler.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="awk.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="c.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cabal.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="changelog.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cs.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="css.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cxx.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="d.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="debian-changelog.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="debian-control.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="debian-description.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="debian-sources-list.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="diff.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="dos.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ebuild.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="eiffel.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="erlang.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="f90.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="filehighlight.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="fortran.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="haskell.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="html.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="idl.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="j.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="java.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="js.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="latex.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lisp.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lsm.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lua.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="m4.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="mail.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="makefile.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ml.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="named.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="nemerle.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="nroff.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="octave.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pascal.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="perl.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="php.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="PKGBUILD.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="po.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="povray.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="procmail.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="properties.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="python.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ruby.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sh.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="slang.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="smalltalk.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="spec.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sql.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strace.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="swig.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="syntax.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tcl.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="texinfo.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tt.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="unknown.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="verilog.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="vhdl.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xml.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="yum-repo.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="yxx.syntax" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="mc-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/mc/mc-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="mc" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="mcedit" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mcmfmt" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="mcview" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="mc" o="root" g="wheel" p="16893">
+            <mod>mode</mod>
+          </f>
+          <f n="mc.default" o="root" g="wheel" p="16893">
+            <f n="cedit.menu" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="edit.indent.rc" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="edit.spell.rc" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="filehighlight.ini" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.charsets" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.ext" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.keymap" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.keymap.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.keymap.emacs" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.lib" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.menu" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.menu.sr" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sfs.ini" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Syntax" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="mc" o="root" g="wheel" p="16893">
+            <f n="extfs.d" o="root" g="wheel" p="16893">
+              <f n="a+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="apt+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="audio" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="bpp" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="deb" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="deba" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="debd" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="dpkg+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hp48+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="iso9660" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lslR" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="mailfs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="patchfs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.extfs" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rpm" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="rpms+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="s3+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="trpm" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="u7z" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uace" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ualz" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uar" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uarc" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uarj" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uc1541" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ucab" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uha" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ulha" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="urar" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uzip" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="uzoo" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="mc-wrapper.csh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mc-wrapper.sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.csh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="sbin" o="root" g="wheel" p="16893"/>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="mc" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="HACKING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="locale" o="root" g="wheel" p="16893">
+            <f n="az" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="be" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="be-tarask" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="bg" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ca" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="cs" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="da" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="de" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="el" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="es" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="eu" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="hu" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="it" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ja" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ko" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="lt" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="lv" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="mn" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="nb" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="nl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="pl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="pt" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="pt_BR" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ro" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ru" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sv" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ta" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="tr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="uk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="vi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="wa" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="zh_CN" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="zh_TW" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="es" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="hu" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="it" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="mc.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mcedit.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mcview.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="man8" o="root" g="wheel" p="16893"/>
+            <f n="pl" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="ru" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="sr" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="mc.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="man8" o="root" g="wheel" p="16893">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="mc" o="root" g="wheel" p="16893">
+            <f n="mc.hint" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.cs" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.es" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.hu" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.it" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.nl" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.pl" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.ru" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.sr" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.uk" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hint.zh" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.es" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.hu" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.it" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.pl" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.ru" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mc.hlp.sr" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="skins" o="root" g="wheel" p="16893">
+              <f n="darkfar.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="default.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="double-lines.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="featured.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gotar.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="syntax" o="root" g="wheel" p="16893">
+              <f n="ada95.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="aspx.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="assembler.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="awk.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="c.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cabal.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="changelog.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cs.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="css.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cxx.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="d.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="debian-changelog.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="debian-control.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="debian-description.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="debian-sources-list.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="diff.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dos.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ebuild.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="eiffel.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="erlang.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="f90.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filehighlight.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fortran.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="haskell.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="html.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="idl.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="j.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="java.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="js.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="latex.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsm.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lua.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="m4.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="makefile.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ml.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="named.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nemerle.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nroff.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="octave.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pascal.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="perl.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="php.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKGBUILD.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="povray.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="procmail.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="properties.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="python.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ruby.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sh.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="slang.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="smalltalk.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="spec.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sql.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="strace.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="swig.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="syntax.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcl.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="texinfo.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tt.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="unknown.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="verilog.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vhdl.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xml.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yum-repo.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yxx.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

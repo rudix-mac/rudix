@@ -1,1 +1,671 @@
-<pkg-contents spec="1.12"><f n="go-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/go/go-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="lib" o="root" g="wheel" p="16893"><f n="go-32" o="root" g="wheel" p="16893"><f n=".hg_archival.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n=".hgignore" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n=".hgtags" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="AUTHORS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bin" o="root" g="wheel" p="16893"><f n="6nm" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="8a" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="8c" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="8g" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="8l" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="cgo" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="ebnflint" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="godefs" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="godoc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="gofmt" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="gopack" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="gotest" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="goyacc" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="hgpatch" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="quietgcc" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="CONTRIBUTORS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="doc" o="root" g="wheel" p="16893"><f n="contribute.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="effective_go.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gccgo_contribute.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gccgo_install.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go-logo-black.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go-logo-blue.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_faq.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_for_cpp_programmers.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_lang_faq.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_mem.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_spec.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_talk-20091030.pdf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_tutorial.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go_tutorial.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="GoCourseDay1.pdf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="GoCourseDay2.pdf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="GoCourseDay3.pdf" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="godocs.js" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gordon" o="root" g="wheel" p="16893"><f n="bumper.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bumper192x108.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bumper320x180.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bumper480x270.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bumper640x360.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gopherbw.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gophercolor.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gophercolor16x16.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="htmlgen.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="install.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="logo-153x55.png" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="makehtml" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="prog.sh" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="progs" o="root" g="wheel" p="16893"><f n="cat.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cat_rot13.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="echo.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="file.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="helloworld.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="helloworld3.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="print.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="print_string.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="run" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="server.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="server1.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sieve.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sieve1.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sort.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sortmain.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strings.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sum.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="root.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sieve.gif" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="style.css" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="video-snap.jpg" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="favicon.ico" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="lib" o="root" g="wheel" p="16893"><f n="codereview" o="root" g="wheel" p="16893"><f n="codereview.py" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><f n="godoc" o="root" g="wheel" p="16893"><f n="dirlist.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="godoc.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="package.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="package.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="parseerror.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="parseerror.txt" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="search.html" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="lib9.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libbio.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libmach.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="LICENSE" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="misc" o="root" g="wheel" p="16893"><f n="cgo" o="root" g="wheel" p="16893"><f n="gmp" o="root" g="wheel" p="16893"><f n="fib.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gmp.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pi.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="stdio" o="root" g="wheel" p="16893"><f n="chain.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="fib.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="file.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="golden.out" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hello.go" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Makefile" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="test.bash" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="emacs" o="root" g="wheel" p="16893"><f n="go-mode-load.el" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go-mode.el" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="vim" o="root" g="wheel" p="16893"><f n="go.vim" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="xcode" o="root" g="wheel" p="16893"><f n="go.pbfilespec" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go.xclangspec" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="pkg" o="root" g="wheel" p="16893"><f n="darwin_386" o="root" g="wheel" p="16893"><f n="archive" o="root" g="wheel" p="16893"><f n="tar.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="asn1.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="big.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bignum.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bufio.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="bytes.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="compress" o="root" g="wheel" p="16893"><f n="flate.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gzip.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="zlib.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="container" o="root" g="wheel" p="16893"><f n="heap.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="list.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ring.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="vector.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="crypto" o="root" g="wheel" p="16893"><f n="aes.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="block.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hmac.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="md5.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rc4.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rsa.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sha1.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="subtle.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tls.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="x509.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="debug" o="root" g="wheel" p="16893"><f n="dwarf.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="elf.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gosym.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="macho.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="proc.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="ebnf.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="encoding" o="root" g="wheel" p="16893"><f n="ascii85.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="base64.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="binary.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="git85.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hex.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="pem.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="exec.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="exp" o="root" g="wheel" p="16893"><f n="datafmt.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="eval.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="iterable.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="expvar.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="flag.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="fmt.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="go" o="root" g="wheel" p="16893"><f n="ast.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="doc.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="parser.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="printer.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="scanner.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="token.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="gob.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="hash" o="root" g="wheel" p="16893"><f n="adler32.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="crc32.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="hash.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="http.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="image" o="root" g="wheel" p="16893"><f n="png.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="image.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="io.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="json.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="libcgo.so" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="log.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="malloc.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="math.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="net.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="once.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="os.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="patch.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="path.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rand.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="reflect.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="regexp.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="rpc.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="runtime.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sort.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="stdio.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="stdio_file.so" o="root" g="wheel" p="33277"><mod>mode</mod></f><f n="strconv.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="strings.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="sync.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="syscall.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="tabwriter.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="template.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="testing" o="root" g="wheel" p="16893"><f n="iotest.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="quick.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="script.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="testing.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="time.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="unicode.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="utf8.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="xml.a" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="~place-holder~" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="go-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/go/go-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="go-32" o="root" g="wheel" p="16893">
+            <f n=".hg_archival.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n=".hgignore" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n=".hgtags" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="AUTHORS" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bin" o="root" g="wheel" p="16893">
+              <f n="6nm" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="8a" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="8c" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="8g" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="8l" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="cgo" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ebnflint" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="godefs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="godoc" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="gofmt" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="gopack" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="gotest" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="goyacc" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hgpatch" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="quietgcc" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="CONTRIBUTORS" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="doc" o="root" g="wheel" p="16893">
+              <f n="contribute.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="effective_go.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gccgo_contribute.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gccgo_install.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go-logo-black.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go-logo-blue.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_faq.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_for_cpp_programmers.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_lang_faq.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_mem.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_spec.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_talk-20091030.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_tutorial.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="go_tutorial.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GoCourseDay1.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GoCourseDay2.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GoCourseDay3.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="godocs.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gordon" o="root" g="wheel" p="16893">
+                <f n="bumper.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bumper192x108.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bumper320x180.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bumper480x270.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bumper640x360.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gopherbw.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gophercolor.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gophercolor16x16.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="htmlgen.go" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="install.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logo-153x55.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="makehtml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="prog.sh" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="progs" o="root" g="wheel" p="16893">
+                <f n="cat.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cat_rot13.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="echo.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="file.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="helloworld.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="helloworld3.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="print.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="print_string.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="run" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="server.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="server1.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sieve.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sieve1.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sort.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sortmain.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="strings.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sum.go" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="root.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sieve.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="style.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="video-snap.jpg" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="favicon.ico" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib" o="root" g="wheel" p="16893">
+              <f n="codereview" o="root" g="wheel" p="16893">
+                <f n="codereview.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="godoc" o="root" g="wheel" p="16893">
+                <f n="dirlist.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="godoc.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="package.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="package.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="parseerror.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="parseerror.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="search.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="lib9.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libbio.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libmach.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="LICENSE" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="misc" o="root" g="wheel" p="16893">
+              <f n="cgo" o="root" g="wheel" p="16893">
+                <f n="gmp" o="root" g="wheel" p="16893">
+                  <f n="fib.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="gmp.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Makefile" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="pi.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="stdio" o="root" g="wheel" p="16893">
+                  <f n="chain.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fib.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="file.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="golden.out" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hello.go" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Makefile" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test.bash" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="emacs" o="root" g="wheel" p="16893">
+                <f n="go-mode-load.el" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="go-mode.el" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="vim" o="root" g="wheel" p="16893">
+                <f n="go.vim" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="xcode" o="root" g="wheel" p="16893">
+                <f n="go.pbfilespec" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="go.xclangspec" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="pkg" o="root" g="wheel" p="16893">
+              <f n="darwin_386" o="root" g="wheel" p="16893">
+                <f n="archive" o="root" g="wheel" p="16893">
+                  <f n="tar.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="asn1.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="big.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bignum.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bufio.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bytes.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="compress" o="root" g="wheel" p="16893">
+                  <f n="flate.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="gzip.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="zlib.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="container" o="root" g="wheel" p="16893">
+                  <f n="heap.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="list.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ring.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="vector.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="crypto" o="root" g="wheel" p="16893">
+                  <f n="aes.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="block.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hmac.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="md5.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="rc4.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="rsa.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="sha1.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="subtle.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tls.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="x509.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="debug" o="root" g="wheel" p="16893">
+                  <f n="dwarf.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="elf.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="gosym.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="macho.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="proc.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="ebnf.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="encoding" o="root" g="wheel" p="16893">
+                  <f n="ascii85.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="base64.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="binary.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="git85.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hex.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="pem.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="exec.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="exp" o="root" g="wheel" p="16893">
+                  <f n="datafmt.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="eval.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="iterable.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="expvar.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="flag.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="fmt.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="go" o="root" g="wheel" p="16893">
+                  <f n="ast.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="doc.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="parser.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="printer.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="scanner.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="token.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="gob.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hash" o="root" g="wheel" p="16893">
+                  <f n="adler32.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="crc32.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="hash.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="http.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="image" o="root" g="wheel" p="16893">
+                  <f n="png.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="image.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="io.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="json.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="libcgo.so" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="log.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="malloc.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="math.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="net.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="once.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="os.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="patch.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="path.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rand.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reflect.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="regexp.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rpc.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="runtime.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sort.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stdio.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stdio_file.so" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="strconv.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="strings.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sync.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="syscall.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="tabwriter.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="template.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="testing" o="root" g="wheel" p="16893">
+                  <f n="iotest.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="quick.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="script.a" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="testing.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="time.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="unicode.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="utf8.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xml.a" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="~place-holder~" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="README" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

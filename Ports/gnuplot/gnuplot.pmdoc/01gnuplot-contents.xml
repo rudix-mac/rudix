@@ -1,1 +1,140 @@
-<pkg-contents spec="1.12"><f n="gnuplot-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/gnuplot/gnuplot-install" m="false" t="file"><f n="usr" o="root" g="wheel" p="16877"><f n="local" o="root" g="wheel" p="16877"><f n="bin" o="root" g="wheel" p="16877"><f n="gnuplot" o="root" g="wheel" p="33277"><mod>mode</mod></f></f><f n="lib" o="root" g="wheel" p="16893"><f n="X11" o="root" g="wheel" p="16893"><f n="app-defaults" o="root" g="wheel" p="16893"><f n="Gnuplot" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f></f><f n="libexec" o="root" g="wheel" p="16893"><f n="gnuplot" o="root" g="wheel" p="16893"><f n="4.2" o="root" g="wheel" p="16893"><f n="gnuplot_x11" o="root" g="wheel" p="33277"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f></f><f n="share" o="root" g="wheel" p="16893"><f n="doc" o="root" g="wheel" p="16893"><f n="gnuplot" o="root" g="wheel" p="16893"><f n="BUGS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="ChangeLog" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="Copyright" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="FAQ" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="NEWS" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="README" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="TODO" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f></f><f n="emacs" o="root" g="wheel" p="16893"><f n="site-lisp" o="root" g="wheel" p="16893"><f n="gnuplot-gui.el" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gnuplot-gui.elc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gnuplot.el" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="gnuplot.elc" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="info-look.20.2.el" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="info-look.20.3.el" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f><f n="gnuplot" o="root" g="wheel" p="16893"><f n="4.2" o="root" g="wheel" p="16893"><f n="gnuplot.gih" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="PostScript" o="root" g="wheel" p="16893"><f n="8859-1.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-15.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="8859-2.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cp1250.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cp437.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cp850.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="cp852.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="koi8r.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="koi8u.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><f n="prologue.ps" o="root" g="wheel" p="33204"><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><mod>mode</mod></f><f n="info" o="root" g="wheel" p="16893"><f n="gnuplot.info" o="root" g="wheel" p="33204"><mod>mode</mod></f></f><f n="man" o="root" g="wheel" p="16893"><f n="man1" o="root" g="wheel" p="16893"><f n="gnuplot.1" o="root" g="wheel" p="33204"><mod>mode</mod></f></f></f></f></f></f></f></pkg-contents>
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="gnuplot-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/gnuplot/gnuplot-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="gnuplot" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="X11" o="root" g="wheel" p="16893">
+            <f n="app-defaults" o="root" g="wheel" p="16893">
+              <f n="Gnuplot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="gnuplot" o="root" g="wheel" p="16893">
+            <f n="4.2" o="root" g="wheel" p="16893">
+              <f n="gnuplot_x11" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="gnuplot" o="root" g="wheel" p="16893">
+              <f n="BUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Copyright" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="emacs" o="root" g="wheel" p="16893">
+            <f n="site-lisp" o="root" g="wheel" p="16893">
+              <f n="gnuplot-gui.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuplot-gui.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuplot.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuplot.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="info-look.20.2.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="info-look.20.3.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="gnuplot" o="root" g="wheel" p="16893">
+            <f n="4.2" o="root" g="wheel" p="16893">
+              <f n="gnuplot.gih" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PostScript" o="root" g="wheel" p="16893">
+                <f n="8859-1.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="8859-15.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="8859-2.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cp1250.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cp437.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cp850.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cp852.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="koi8r.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="koi8u.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="prologue.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="info" o="root" g="wheel" p="16893">
+            <f n="gnuplot.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="gnuplot.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
