@@ -4,10 +4,10 @@
 
 include ../../Library/Rules.mk
 
-TITLE=		Apache Portable Runtime $(VERSION)
+TITLE=		APR $(VERSION)
 NAME=		apr
 VERSION=	1.4.2
-REVISION=	0
+REVISION=	1
 URL=		http://www.apache.org/dist/apr
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
