@@ -13,12 +13,12 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 prep: retrieve
 	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
-	$(TOUCH) prep
+	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) ; $(make)
-	$(TOUCH) build
+	$(configure) ; $(make)
+	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
@@ -29,4 +29,4 @@ install: build
 
 test: install
 	cd $(BUILDDIR) ; make test
-	$(TOUCH) test
+	touch test
