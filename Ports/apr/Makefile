@@ -28,8 +28,8 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/* $(INSTALLDOCDIR)
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.dylib
-	$(STRIP_LIB)  $(INSTALLDIR)/usr/local/lib/*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/*.a
 	$(TOUCH) install
 
 test: install
