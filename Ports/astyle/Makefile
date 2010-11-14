@@ -15,21 +15,19 @@ prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME) $(NAME)-$(VERSION)
 	patch -d $(BUILDDIR)/build/mac < $(PORTDIR)/makefile.patch
-	$(TOUCH) prep
+	touch prep
 
 build: prep
-	cd $(BUILDDIR)/build/mac ; \
-	make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	$(TOUCH) build
+	cd $(BUILDDIR)/build/mac ; make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+	touch build
 
 install: build
 	install -d $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/build/mac/bin/astyle \
-		$(INSTALLDIR)/usr/local/bin
+	install -m 755 $(BUILDDIR)/build/mac/bin/astyle $(INSTALLDIR)/usr/local/bin
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
-	$(TOUCH) install
+	touch install
 
 test: build
 	lipo $(INSTALLDIR)/usr/local/bin/astyle -verify_arch i386 x86_64
-	$(TOUCH) test
+	touch test
