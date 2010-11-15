@@ -4,20 +4,23 @@
 
 include ../../Library/Rules.mk
 
-TITLE=		APR Utility $(VERSION)
+TITLE=		APR-util $(VERSION)
 NAME=		apr-util
-VERSION=	1.3.9
-REVISION=	2
+VERSION=	1.3.10
+REVISION=	0
 URL=		http://www.apache.org/dist/apr/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
-DEPENDS=	/usr/local/bin/apr-1-config
+DEPENDS=	/usr/local/lib/libapr-1.la
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
 endif
 
 prep: retrieve
-	tar jxvf $(SOURCE)
+	tar jxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
@@ -30,7 +33,9 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{CHANGES,NOTICE} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
 	strip -x $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so
