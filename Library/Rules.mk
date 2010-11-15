@@ -4,7 +4,7 @@
 # Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	3
+BUILDSYSTEM=	20101115
 
 VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
@@ -81,7 +81,11 @@ pkg: install
 	touch pkg
 
 dmg: pkg
-	$(CREATEDMG) -srcfolder $(PKGNAME) $(DMGNAME)
+	$(CREATEDMG) \
+		-volname "$(NAME)" \
+		-srcfolder $(README) \
+		-srcfolder $(LICENSE) \
+		-srcfolder $(PKGNAME) $(DMGNAME)
 	touch dmg
 
 installpkg: pkg
