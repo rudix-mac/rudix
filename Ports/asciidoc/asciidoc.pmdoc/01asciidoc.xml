@@ -6,7 +6,7 @@
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom>/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-install</installFrom>
+    <installFrom relative="true">asciidoc-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>

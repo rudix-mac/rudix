@@ -6,26 +6,31 @@ include ../../Library/Rules.mk
 
 TITLE=		AsciiDoc $(VERSION)
 NAME=		asciidoc
-VERSION=	8.5.3
+VERSION=	8.6.3
 REVISION=	0
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 prep: retrieve
-	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
+	tar zxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) ; $(make)
+	cd $(BUILDDIR) ; ./configure ; make
 	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf \
-		$(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf.orig
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUGS*,CHANGELOG*,COPY*,README*} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{BUGS*,CHANGELOG*,COPYRIGHT,README.txt} $(INSTALLDOCDIR)
+	mv $(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf \
+		$(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf.default
+	touch install
 
 test: install
 	cd $(BUILDDIR) ; make test

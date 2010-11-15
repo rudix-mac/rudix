@@ -18,8 +18,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource mod="true" type="license">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/COPYING</resource>
-      <resource mod="true" type="readme">/Users/ruda/Work/rudix.svn/Ports/asciidoc/asciidoc-8.5.3/README</resource>
+      <resource relative="true" mod="true" type="license">asciidoc-8.6.3/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">asciidoc-8.6.3/README</resource>
     </locale>
   </resources>
   <flags/>
