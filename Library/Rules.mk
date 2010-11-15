@@ -118,7 +118,6 @@ about:
 define configure
 ./configure \
 	--cache-file=$(PORTDIR)/config.cache \
-	--disable-dependency-tracking \
 	--mandir=/usr/local/share/man \
 	--infodir=/usr/local/share/info
 endef
