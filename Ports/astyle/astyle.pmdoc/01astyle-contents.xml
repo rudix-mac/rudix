@@ -1,23 +1,43 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="astyle-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/astyle/astyle-install" m="false" t="file">
+  <f n="astyle-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/astyle/astyle-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
-          <f n="astyle" o="root" g="wheel" p="33277"/>
+          <f n="astyle" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="astyle" o="root" g="wheel" p="16893">
-              <f n="astyle.html" o="root" g="wheel" p="33204"/>
-              <f n="index.html" o="root" g="wheel" p="33204"/>
-              <f n="install.html" o="root" g="wheel" p="33204"/>
-              <f n="license.html" o="root" g="wheel" p="33204"/>
-              <f n="links.html" o="root" g="wheel" p="33204"/>
-              <f n="news.html" o="root" g="wheel" p="33204"/>
-              <f n="notes.html" o="root" g="wheel" p="33204"/>
-              <f n="scripts.html" o="root" g="wheel" p="33204"/>
-              <f n="styles.css" o="root" g="wheel" p="33204"/>
+              <f n="astyle.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="install.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="license.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="links.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="news.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="notes.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="scripts.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="styles.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="subversion.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>

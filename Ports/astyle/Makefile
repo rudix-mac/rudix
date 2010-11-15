@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		Artistic Style $(VERSION)
 NAME=		astyle
 VERSION=	1.24
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)_$(VERSION)_macosx.tar.gz
+
+README=		$(BUILDDIR)/doc/index.html
+LICENSE=	$(BUILDDIR)/doc/license.html
 
 prep: retrieve
 	tar zxvf $(SOURCE)
