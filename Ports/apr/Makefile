@@ -11,12 +11,15 @@ REVISION=	1
 URL=		http://www.apache.org/dist/apr
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
+
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
 endif
 
 prep: retrieve
-	tar jxvf $(SOURCE)
+	tar jxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
@@ -30,8 +33,11 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,NOTICE,README} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{CHANGES,NOTICE} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/docs/* $(INSTALLDOCDIR)
+	rm $(INSTALLDIR)/usr/local/lib/apr.exp
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
 endif
