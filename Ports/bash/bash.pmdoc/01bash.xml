@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="24409790-DD7E-46DF-800F-5F89621211A1">
   <config>
     <identifier>org.rudix.pkg.bash</identifier>
-    <version>4.0</version>
+    <version>4.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

@@ -11,6 +11,9 @@ REVISION=	1
 URL=		http://ftp.gnu.org/gnu/bash/
 SOURCE=		bash-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 prep: retrieve
 	tar zxvf $(SOURCE)
 	patch -d $(BUILDDIR)/builtins < $(PORTDIR)/universal-build.patch
@@ -29,7 +32,9 @@ install: build
 	cd $(INSTALLDIR)/usr/local/share/man/man1 ; ln -sf bash.1 bash4.1
 	rm -f $(INSTALLDIR)/usr/local/share/info/dir
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,CHANGES,COMPAT,COPYING,NEWS,NOTES,POSIX,RBASH,README,Y2K} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,CHANGES,COMPAT,NEWS,NOTES,POSIX,RBASH,Y2K} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/bash
 	touch install
 
