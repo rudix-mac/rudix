@@ -111,7 +111,7 @@ realdistclean: distclean
 
 tag:
 	svn update
-	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)/$(NAME)-$(VERSION)-$(REVISION) -m "Tag: $(NAME) version $(VERSION) revision $(REVISION)"
+	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)/$(NAME)-$(VERSION)-$(REVISION) -m "[TAG] $(NAME) version $(VERSION) revision $(REVISION)"
 
 about:
 	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"

@@ -1,6 +1,6 @@
 # Makefile for a new generic port
 # http://rudix.org/
-# License (GPL, LGPL, BSD, Apache, etc.)
+# GPL, LGPL, BSD, Apache, etc.
 
 include ../../Library/Rules.mk
 
@@ -15,6 +15,9 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).tar.bz2
 #SOURCE=	$(NAME)-$(VERSION).tar.Z
 #SOURCE=	$(NAME)-$(VERSION).zip
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 #ifdef WITHOUT_NLS
 #CONFIG_OPTS=	--disable-nls
@@ -34,8 +37,8 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 # Preparing to build: extract source and apply patches
 #
 prep: retrieve
-	tar zxvf $(SOURCE)
-	#tar jxvf $(SOURCE)
+	tar zxf $(SOURCE)
+	#tar jxf $(SOURCE)
 	#unzip $(SOURCE)
 	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
 	touch prep
@@ -56,14 +59,13 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	#cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local install
-
 	rm -f $(INSTALLDIR)/usr/local/share/info/dir
 	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
-
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,THANKS,TODO} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip $(INSTALLDIR)/usr/local/sbin/*
 	strip -x $(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib

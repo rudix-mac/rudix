@@ -11,6 +11,9 @@ REVISION=	0
 URL=		http://path/to/download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
+
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
 

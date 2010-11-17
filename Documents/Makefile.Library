@@ -16,6 +16,9 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).tar.Z
 #SOURCE=	$(NAME)-$(VERSION).zip
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
+
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
 else
@@ -23,8 +26,8 @@ CONFIG_OPTS=	--enable-static --enable-shared
 endif
 
 prep: retrieve
-	tar zxvf $(SOURCE)
-	#tar jxvf $(SOURCE)
+	tar zxf $(SOURCE)
+	#tar jxf $(SOURCE)
 	#unzip $(SOURCE)
 	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
 	touch prep
@@ -39,14 +42,13 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	#cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local install
-
-	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	#rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
-	#rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
-
-	#install -d $(INSTALLDOCDIR)
-	#install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-
+	rm -f $(INSTALLDIR)/usr/local/share/info/dir
+	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
+	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,THANKS,TODO} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif

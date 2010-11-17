@@ -16,6 +16,9 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #SOURCE=	$(NAME)-$(VERSION).tar.Z
 #SOURCE=	$(NAME)-$(VERSION).zip
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 #ifdef WITHOUT_NLS
 #CONFIGURE_OPTS=	--disable-nls
 #else
@@ -28,8 +31,8 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 #endif
 
 prep: retrieve
-	tar zxvf $(SOURCE)
-	#tar jxvf $(SOURCE)
+	tar zxf $(SOURCE)
+	#tar jxf $(SOURCE)
 	#unzip $(SOURCE)
 	$(TOUCH) prep
 
@@ -41,18 +44,17 @@ build: prep $(DEPENDS)
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-
-	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	#rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
-	#rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
-
-	#install -d $(INSTALLDOCDIR)
-	#install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/bin/*
-	#$(STRIP_BIN) $(INSTALLDIR)/usr/local/sbin/*
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	#$(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
+	rm -f $(INSTALLDIR)/usr/local/share/info/dir
+	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
+	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,THANKS,TODO} $(INSTALLDOCDIR)
+	strip $(INSTALLDIR)/usr/local/bin/*
+	strip $(INSTALLDIR)/usr/local/sbin/*
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	$(TOUCH) install
 
 test: install
