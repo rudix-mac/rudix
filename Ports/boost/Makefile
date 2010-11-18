@@ -6,14 +6,14 @@ include ../../Library/Rules.mk
 
 TITLE=		Boost C++ Libraries
 NAME=		boost
-VERSION=	1.43.0
+VERSION=	1.44.0
 REVISION=	0
 URL=		http://downloads.sourceforge.net/boost
-SOURCE=		$(NAME)_1_43_0.tar.bz2
+SOURCE=		$(NAME)_1_44_0.tar.bz2
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	mv $(NAME)_1_43_0 $(NAME)-$(VERSION)
+	mv $(NAME)_1_44_0 $(NAME)-$(VERSION)
 	touch prep
 
 build: prep $(DEPENDS)
