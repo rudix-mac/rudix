@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		cabextract $(VERSION)
 NAME=		cabextract
 VERSION=	1.3
-REVISION=	0
+REVISION=	1
 URL=		http://www.cabextract.org.uk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -24,7 +27,9 @@ install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -m 755 $(BUILDDIR)/src/cabinfo $(INSTALLDIR)/usr/local/bin
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,TODO} $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/{magic,*.html} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
