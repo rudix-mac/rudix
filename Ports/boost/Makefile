@@ -11,6 +11,9 @@ REVISION=	0
 URL=		http://downloads.sourceforge.net/boost
 SOURCE=		$(NAME)_1_44_0.tar.bz2
 
+README=		$(BUILDDIR)/index.html
+LICENSE=	$(BUILDDIR)/LICENSE_1_0.txt
+
 prep: retrieve
 	tar jxvf $(SOURCE)
 	mv $(NAME)_1_44_0 $(NAME)-$(VERSION)
