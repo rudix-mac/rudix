@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Bazaar</title>
-    <build>/Users/ruda/Desktop/Bazaar.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -20,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">bzr-2.1.2/COPYING.txt</resource>
-      <resource relative="true" mod="true" type="readme">bzr-2.1.2/README</resource>
+      <resource relative="true" mod="true" type="license">bzr-2.2.1/COPYING.txt</resource>
+      <resource relative="true" mod="true" type="readme">bzr-2.2.1/README</resource>
     </locale>
   </resources>
   <flags/>

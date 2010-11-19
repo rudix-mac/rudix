@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		Bazaar $(VERSION)
 NAME=		bzr
-VERSION=	2.1.2
+VERSION=	2.2.1
 REVISION=	0
-URL=		http://launchpad.net/bzr/2.1/$(VERSION)/+download/
+URL=		http://launchpad.net/bzr/2.2/$(VERSION)/+download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING.txt
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
@@ -31,7 +34,9 @@ install: build
 		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING.txt,NEWS,README,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{NEWS,TODO} $(INSTALLDOCDIR)
 	rsync -a $(BUILDDIR)/doc/ $(INSTALLDOCDIR)
 	strip -x  $(INSTALLDIR)/$(SITEPACKAGES)/bzrlib/*.so
 	touch install
