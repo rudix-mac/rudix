@@ -5,10 +5,13 @@
 include ../../Library/Rules.mk
 
 NAME=		pixman
-VERSION=	0.17.6
+VERSION=	0.21.2
 REVISION=	0
 URL=		http://www.cairographics.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
@@ -28,7 +31,9 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,TODO} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
