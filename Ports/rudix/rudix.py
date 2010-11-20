@@ -103,8 +103,10 @@ def install_package(pkg):
 
 def remove_package(pkg):
     root_required()
-    call(['pkgutil', '--unlink', pkg, '-f'], stderr=PIPE)
-    call(['pkgutil', '--forget', pkg], stderr=PIPE)
+    devnull = open('/dev/null')
+    call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
+    call(['pkgutil', '--forget', pkg], stderr=devnull)
+    devnull.close()
 
 def remove_all_packages():
     root_required()
