@@ -3,11 +3,11 @@
 '''Rudix Package Manager -- RPM ;D
 
 Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
-List all installed packages unless options are given, like:
+List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
-  -l    List all installed packages (print version and install date)
-  -I    Print package information
+  -l    List all installed packages (package-id, version and install date)
+  -I    Print package information (package-id, version and install date)
   -L    List package content
   -i    Install package
   -r    Remove package
@@ -16,8 +16,10 @@ List all installed packages unless options are given, like:
   -V    Verify package
   -K    Verify all installed packages
   -f    Fix (repair) package
-  -n    Download and install package
-  -u    Download and install updated packages
+  -n    Download and install package (remote install)
+  -u    Download and install updated packages (remote update)
+
+Where <package-id> is either org.rudix.pkg.<name> or <name>.
 '''
 
 import sys
