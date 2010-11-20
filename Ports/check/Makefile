@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		Check $(VERSION)
 NAME=		check
 VERSION=	0.9.8
-REVISION=	0
+REVISION=	1
 URL=		http://prdownloads.sourceforge.net/check
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING.LESSER
 
 prep: retrieve
 	tar zxvf $(SOURCE)
