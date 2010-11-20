@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">cairo-1.8.10/COPYING-LGPL-2.1</resource>
-      <resource relative="true" mod="true" type="readme">cairo-1.8.10/README</resource>
+      <resource relative="true" mod="true" type="license">cairo-1.10.0/COPYING-LGPL-2.1</resource>
+      <resource relative="true" mod="true" type="readme">cairo-1.10.0/README</resource>
     </locale>
   </resources>
   <flags/>

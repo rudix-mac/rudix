@@ -2,7 +2,12 @@
 <pkg-contents spec="1.12">
   <f n="cairo-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/cairo/cairo-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="cairo-trace" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="cairo" o="root" g="wheel" p="16893">
             <f n="cairo-deprecated.h" o="root" g="wheel" p="33204">
@@ -23,6 +28,9 @@
             <f n="cairo-quartz.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="cairo-script-interpreter.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="cairo-svg.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -38,10 +46,36 @@
             <f n="cairo.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
+          <f n="cairo" o="root" g="wheel" p="16893">
+            <f n="libcairo-trace.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libcairo-trace.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libcairo-trace.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libcairo-trace.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libcairo-script-interpreter.2.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libcairo-script-interpreter.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libcairo-script-interpreter.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libcairo-script-interpreter.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="libcairo.2.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -55,6 +89,9 @@
             <mod>mode</mod>
           </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="cairo-fc.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="cairo-ft.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -127,91 +164,97 @@
                 <f n="bindings-surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-context.html" o="root" g="wheel" p="33204">
+                <f n="cairo-cairo-device-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-font-face-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-font-options-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-matrix-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-pattern-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-scaled-font-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-surface-t.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cairo-cairo-t.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo-drawing.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-error-status.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="cairo-font-face.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="cairo-font-options.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Error-handling.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo-fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-ft-font.html" o="root" g="wheel" p="33204">
+                <f n="cairo-FreeType-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-image-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Image-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-matrix.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Paths.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-paths.html" o="root" g="wheel" p="33204">
+                <f n="cairo-PDF-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-pattern.html" o="root" g="wheel" p="33204">
+                <f n="cairo-PNG-Support.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-pdf-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-PostScript-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-png-functions.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Quartz-(CGFont)-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-ps-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Quartz-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-quartz-font.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="cairo-quartz-surface.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="cairo-scaled-font.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Regions.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo-support.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-surface.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <f n="cairo-surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-svg-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-SVG-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo-text.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-transformations.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Transformations.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-types.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Types.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-user-font.html" o="root" g="wheel" p="33204">
+                <f n="cairo-User-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-version-info.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Version-Information.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-win32-font.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Win32-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-win32-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-Win32-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-xlib-surface.html" o="root" g="wheel" p="33204">
+                <f n="cairo-XLib-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo.devhelp" o="root" g="wheel" p="33204">
@@ -221,6 +264,9 @@
                   <mod>mode</mod>
                 </f>
                 <f n="home.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index-1.10.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="index-1.2.html" o="root" g="wheel" p="33204">
@@ -259,7 +305,6 @@
                 <f n="up.png" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -282,7 +327,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>

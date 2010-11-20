@@ -5,10 +5,13 @@
 include ../../Library/Rules.mk
 
 NAME=		cairo
-VERSION=	1.8.10
+VERSION=	1.10.0
 REVISION=	0
 URL=		http://www.cairographics.org/releases/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 DEPENDS=	/usr/local/bin/pkg-config
 DEPENDS+=	/usr/local/lib/libpixman-1.la
@@ -34,11 +37,13 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,BIBLIOGRAPHY,BUGS,COPYING*,ChangeLog,HACKING,NEWS,README} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,BIBLIOGRAPHY,BUGS,COPYING*,ChangeLog,HACKING,NEWS} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
 test: install
