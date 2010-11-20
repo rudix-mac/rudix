@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU gettext $(VERSION)
 NAME=		gettext
 VERSION=	0.18.1.1
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/gettext/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef STATIC_ONLY
 STATIC=		--enable-static --disable-shared
@@ -34,7 +37,9 @@ install: build
 	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
 	rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,THANKS} $(INSTALLDOCDIR)
 	rm -rf $(INSTALLDIR)/usr/local/share/doc/gettext/examples
 	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
