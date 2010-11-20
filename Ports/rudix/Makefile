@@ -9,6 +9,9 @@ NAME=		rudix
 VERSION=	3.0
 REVISION=	0
 
+README=		$(PORTDIR)/ReadMe.txt
+LICENSE=	$(PORTDIR)/License.txt
+
 build: rudix.pdf
 	touch build
 
@@ -19,7 +22,9 @@ install: build
 	install -d $(INSTALLDIR)/usr/local/share/man/man1
 	install -m 644 rudix.1 $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)
-	install -m 644 ReadMe.txt License.txt rudix.pdf $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 rudix.pdf $(INSTALLDOCDIR)
 	touch install
 
 test: install
