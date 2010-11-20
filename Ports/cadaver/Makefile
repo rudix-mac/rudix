@@ -11,11 +11,14 @@ REVISION=	0
 URL=		http://www.webdav.org/cadaver/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 ifdef WITHOUT_NLS
-CONFIGURE_OPTS=	--disable-nls --without-libintl-prefix
+CONFIG_OPTS=	--disable-nls --without-libintl-prefix
 else
-DEPENDS+=	/usr/local/lib/libintl.la
-CONFIGURE-OPTS=	--enable-nls
+#DEPENDS+=	/usr/local/lib/libintl.la
+CONFIG_OPTS=	--enable-nls
 endif
 
 ifdef WITH_STATIC_NLS
@@ -27,9 +30,8 @@ prep: retrieve
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(CONFIG_OPTS) \
 		--with-ssl ; $(make)
 	touch build
 
@@ -38,7 +40,9 @@ install: build
 	make 	prefix=$(INSTALLDIR)/usr/local \
 		mandir=$(INSTALLDIR)/usr/local/share/man  install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUGS,COPYING,ChangeLog,FAQ,INTEROP,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{BUGS,ChangeLog,FAQ,INTEROP,NEWS,THANKS,TODO} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
