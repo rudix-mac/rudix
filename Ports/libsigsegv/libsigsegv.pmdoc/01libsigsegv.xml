@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="D6FCFD98-4D88-44F0-B7C0-FDFEBC7C9E49">
   <config>
     <identifier>org.rudix.pkg.libsigsegv</identifier>
-    <version>2.6</version>
+    <version>2.9</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
