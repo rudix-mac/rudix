@@ -17,10 +17,9 @@ LICENSE=	$(BUILDDIR)/COPYING
 ifdef WITHOUT_NLS
 CONFIG_OPTS=	--disable-nls --without-libintl-prefix
 else
-#DEPENDS+=	/usr/local/lib/libintl.la
+DEPENDS+=	/usr/local/lib/libintl.la
 CONFIG_OPTS=	--enable-nls
 endif
-
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
 endif
