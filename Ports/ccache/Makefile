@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		ccache $(VERSION)
 NAME=		ccache
-VERSION=	3.0.1
+VERSION=	3.1.1
 REVISION=	0
 URL=		http://samba.org/ftp/ccache/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README.txt
+LICENSE=	$(BUILDDIR)/LICENSE.txt
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -27,7 +30,7 @@ install: build
 		ln -sf /usr/local/bin/ccache $$x ; \
 	done
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,INSTALL.*,NEWS.*,README.*} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{*.txt,*.html} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 

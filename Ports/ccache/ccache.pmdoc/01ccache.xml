@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A27670D9-AA44-479F-BEE1-74E9D689A026">
+<pkgref spec="1.12" uuid="20BB5854-C2D4-4004-A41D-811740EE852D">
   <config>
-    <identifier>org.rudix.ccache.ccache-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.ccache</identifier>
+    <version>3.1.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,9 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installFrom.path</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01ccache-contents.xml</file-list>

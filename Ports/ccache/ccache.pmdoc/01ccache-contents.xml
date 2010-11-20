@@ -1,27 +1,57 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="ccache-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/ccache/ccache-install" m="false" t="file">
+  <f n="ccache-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/ccache/ccache-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
-          <f n="ccache" o="root" g="wheel" p="33277"/>
+          <f n="ccache" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="libexec" o="root" g="wheel" p="16893">
           <f n="ccache" o="root" g="wheel" p="16893">
-            <f n="c++" o="root" g="wheel" p="33277"/>
-            <f n="cc" o="root" g="wheel" p="33277"/>
-            <f n="g++" o="root" g="wheel" p="33277"/>
-            <f n="gcc" o="root" g="wheel" p="33277"/>
+            <f n="c++" o="root" g="wheel" p="41396">
+              <mod>mode</mod>
+            </f>
+            <f n="cc" o="root" g="wheel" p="41396">
+              <mod>mode</mod>
+            </f>
+            <f n="g++" o="root" g="wheel" p="41396">
+              <mod>mode</mod>
+            </f>
+            <f n="gcc" o="root" g="wheel" p="41396">
+              <mod>mode</mod>
+            </f>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="ccache" o="root" g="wheel" p="16893">
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="AUTHORS.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GPL-3.0.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="INSTALL.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="INSTALL.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MANUAL.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MANUAL.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS.html" o="root" g="wheel" p="33204">
@@ -40,7 +70,9 @@
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="ccache.1" o="root" g="wheel" p="33204"/>
+              <f n="ccache.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
