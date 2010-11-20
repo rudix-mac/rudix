@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		cadaver $(VERSION)
 NAME=		cadaver
 VERSION=	0.23.3
-REVISION=	0
+REVISION=	1
 URL=		http://www.webdav.org/cadaver/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
