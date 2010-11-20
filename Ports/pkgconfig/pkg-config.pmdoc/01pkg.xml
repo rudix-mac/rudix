@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="7248534E-DA8A-47D9-9ED3-B5AC2DD41822">
   <config>
     <identifier>org.rudix.pkg.pkgconfig</identifier>
-    <version>1</version>
+    <version>0.25</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

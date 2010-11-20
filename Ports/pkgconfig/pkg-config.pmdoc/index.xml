@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>pkg-config</title>
-    <build>/Users/ruda/Desktop/Pkg-Config.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>

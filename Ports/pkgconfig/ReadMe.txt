@@ -1,3 +1,0 @@
-Tool for managing library compile/link flags
-
-Pkg-config is a system for managing library compile/link flags that works with automake and autoconf. It replaces the ubiquitous *-config scripts you may have seen with a single tool.
