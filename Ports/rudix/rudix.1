@@ -1,7 +1,7 @@
-.\"- $Id: rudix.1,v 1.2 2009/03/27 01:10:51 ruda Exp $
-.\" Copyright (c) 2005-2009 Ruda Moura <ruda@rudix.org>
 .\"
-.Dd July 25, 2009
+.\" Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
+.\"
+.Dd October 19, 2010
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -9,7 +9,7 @@
 .Nd Rudix Package Manager
 .Sh SYNOPSIS
 .Nm
-.Op Fl h | l | R | v | K
+.Op Fl h | l | R | v | K | u
 .Op Fl i Ar pkg-path
 .Op Fl r Ar package-id
 .Op Fl I Ar package-id
@@ -17,6 +17,7 @@
 .Op Fl S Ar path
 .Op Fl V Ar package-id
 .Op Fl f Ar package-id
+.Op Fl n Ar package-id
 .Sh DESCRIPTION
 The
 .Nm
@@ -44,6 +45,10 @@ Print version and copyright information.
 Print a list of packages with package id, version and install date.
 .It Fl i Ar pkg-path
 Install package. This operation requires root privileges.
+.It Fl n Ar package-id
+Remote install package. This operation requires root privileges.
+.It Fl u
+Remote update installed packages. This operation requires root privileges.
 .It Fl r Ar package-id
 Remove package. This operation requires root privileges.
 .It Fl R
