@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Rudix Package Manager</title>
-    <build>/Users/ruda/Desktop/Rudix Package Manager.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,10 +11,10 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Rudix package manager command line tool</description>
+  <description>Rudix Package Manager</description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.rudixPackageManager.rudix-install.pkg"/>
+      <pkgref id="org.rudix.pkg.rudix"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
