@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		Cheetah $(VERSION)
 NAME=		cheetah
-VERSION=	2.4.2.1
+VERSION=	2.4.3
 REVISION=	0
 URL=		http://pypi.python.org/packages/source/C/Cheetah/
 SOURCE=		Cheetah-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README.markdown
+LICENSE=	$(BUILDDIR)/LICENSE
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
@@ -32,7 +35,9 @@ install: build
 		--install-lib=$(SITEPACKAGES)
 	$(PYTHON) -m compileall -d / $(INSTALLDIR)
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,LICENSE,README*,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{CHANGES,TODO} $(INSTALLDOCDIR)
 	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/Cheetah/*.so
 	touch install
 

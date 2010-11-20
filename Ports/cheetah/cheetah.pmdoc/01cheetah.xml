@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="5034AB41-8049-4C14-8311-ED0825F8CB55">
   <config>
     <identifier>org.rudix.pkg.cheetah</identifier>
-    <version>2.0.1</version>
+    <version>2.4.3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
