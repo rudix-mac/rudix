@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkgref spec="1.12" uuid="410805CB-471B-4448-BAFE-FDEC0CF2B97D">
   <config>
-    <identifier>org.rudix.pkg.gnuCoreutils.coreutils-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.coreutils</identifier>
+    <version>8.7</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

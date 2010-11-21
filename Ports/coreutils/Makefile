@@ -6,15 +6,18 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Core Utilities $(VERSION)
 NAME=		coreutils
-VERSION=	8.5
+VERSION=	8.7
 REVISION=	0
 URL=		http://ftp.gnu.org/gnu/coreutils/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 ifdef WITHOUT_NLS
-CONFIGURE_OPTS=		--disable-nls
+CONFIG_OPTS=		--disable-nls
 else
-CONFIGURE_OPTS=		--enable-nls
+CONFIG_OPTS=		--enable-nls
 DEPENDS+=		/usr/local/lib/libintl.la
 endif
 
@@ -28,7 +31,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) \
+	$(configure) $(CONFIG_OPTS) \
 		jm_cv_func_svid_putenv=yes \
 		--disable-dependency-tracking \
 		--program-prefix=gnu ; $(make)
@@ -42,7 +45,9 @@ install: build
 	$(PORTDIR)/mklinks.sh $(INSTALLDIR)/usr/local/bin
 	$(PORTDIR)/mklinks.sh $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS,THANKS,TODO} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
