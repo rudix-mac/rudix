@@ -5,25 +5,33 @@
 include ../../Library/Rules.mk
 
 NAME=		git
-VERSION=	1.7.3.1
+VERSION=	1.7.3.2
 REVISION=	0
 URL=		http://www.kernel.org/pub/software/scm/git/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
+retrieve:
+	$(FETCH) $(URL)/$(SOURCE)
+	$(FETCH) $(URL)/git-manpages-$(VERSION).tar.bz2
+	touch retrieve
+
 prep: retrieve
-	tar jxvf $(SOURCE)
+	tar jxf $(SOURCE)
 	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.patch
 	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make configure ; \
-	env CFLAGS="$(CFLAGS)" $(configure) ; $(make)
+	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
 	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install #install-doc
 	rm -rf $(INSTALLDIR)/usr/local/Library
-	# Place Git application in an better folder
+	# Place Git application in the right folder
 	install -d $(INSTALLDIR)/Applications
 	mv $(INSTALLDIR)/usr/local/share/git-gui/lib/Git\ Gui.app \
 		$(INSTALLDIR)/Applications
@@ -36,11 +44,15 @@ install: build
 	install -d $(INSTALLDIR)/Library/Perl/Updates/5.10.0
 	mv $(INSTALLDIR)/usr/local/lib/perl5/site_perl/*.pm \
 		$(INSTALLDIR)/Library/Perl/Updates/5.10.0
-	# Nothing interesting rest here
+	# Nothing interesting is resting here
 	rm -rf $(INSTALLDIR)/usr/local/lib
 	rm -rf $(INSTALLDIR)/usr/local/share/info
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
+	# Manpages
+	install -d $(INSTALLDIR)/usr/local/share/man
+	tar jxf $(PORTDIR)/git-manpages-$(VERSION).tar.bz2 \
+		-C $(INSTALLDIR)/usr/local/share/man
 	find $(INSTALLDIR)/usr/local/bin -type f -exec strip {} \;
 	touch install
 
@@ -48,3 +60,7 @@ test: install
 	lipo $(INSTALLDIR)/usr/local/bin/git -verify_arch i386 x86_64
 	#cd $(BUILDDIR) ; make check
 	touch test
+
+realdistclean: distclean
+	rm -f retrieve $(SOURCE) git-manpages-$(VERSION).tar.bz2
+
