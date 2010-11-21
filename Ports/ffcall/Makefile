@@ -36,5 +36,7 @@ install: build
 	touch install
 
 test: install
-	cd $(BUILDDIR) ; make check
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	#cd $(BUILDDIR) ; make check
 	touch test
