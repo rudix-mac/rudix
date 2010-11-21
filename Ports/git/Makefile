@@ -53,11 +53,17 @@ install: build
 	install -d $(INSTALLDIR)/usr/local/share/man
 	tar jxf $(PORTDIR)/git-manpages-$(VERSION).tar.bz2 \
 		-C $(INSTALLDIR)/usr/local/share/man
+	# Strip
 	find $(INSTALLDIR)/usr/local/bin -type f -exec strip {} \;
+	find $(INSTALLDIR)/usr/local/libexec/git-core -type f -exec strip {} \;
 	touch install
 
 test: install
-	lipo $(INSTALLDIR)/usr/local/bin/git -verify_arch i386 x86_64
+	for x in git git-receive-pack git-shell git-upload-archive git-upload-pack ; do \
+		lipo $(INSTALLDIR)/usr/local/bin/$$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/git-core/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	# FIXME: /bin/sh: sparse: command not found
 	#cd $(BUILDDIR) ; make check
 	touch test
 

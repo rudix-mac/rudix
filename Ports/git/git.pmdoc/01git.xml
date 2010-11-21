@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A372BD4A-1D65-433B-B09B-43066E03E284">
+<pkgref spec="1.12" uuid="4940023E-D89B-47A4-A8A4-024F7967690E">
   <config>
     <identifier>org.rudix.pkg.git</identifier>
     <version>1.7.3.2</version>
@@ -22,7 +22,7 @@
     <file-list>01git-contents.xml</file-list>
     <component id="cz.or.repo.git-gui" path="/Users/ruda/Downloads/rudix.svn/Ports/git/git-install/Applications/Git Gui.app" version="0.13.0" isRelocatable="true">
       <locator-info>
-        <token title="pkmk-token-4">
+        <token title="pkmk-token-16">
           <search-rule>
             <combo identifier="cz.or.repo.git-gui" default-path="/Applications/Git Gui.app"/>
           </search-rule>
