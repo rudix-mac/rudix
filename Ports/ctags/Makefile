@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		Exuberant Ctags $(VERSION)
 NAME=		ctags
 VERSION=	5.8
-REVISION=	0
-URL=		http://prdownloads.sourceforge.net/ctags/
+REVISION=	1
+URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -30,7 +33,9 @@ install: build
 	cd $(INSTALLDIR)/usr/local/share/man/man1 ; \
 	ln -sf exuberant-ctags.1 ctags.1 ; ln -sf exuberant-ctags.1 etags.1
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,FAQ,NEWS,README} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{FAQ,NEWS} $(INSTALLDOCDIR)
 	install	-m 644 $(BUILDDIR)/*.html $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
