@@ -2,7 +2,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>ffcall</title>
-    <organization>org.rudix.pkg</organization>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
