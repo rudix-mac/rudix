@@ -6,25 +6,28 @@ include ../../Library/Rules.mk
 
 TITLE=		Berkeley DB $(VERSION)
 NAME=		db
-VERSION=	4.8.24
+VERSION=	5.1.19
 REVISION=	0
 URL=		http://download.oracle.com/berkeley-db/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
+
 ifdef STATIC_ONLY
-CONFIGURE_OPTS=		--enable-static --disable-shared
+CONFIG_OPTS=	--enable-static --disable-shared
 else
-CONFIGURE_OPTS=		--enable-static --enable-shared --enable-java
+CONFIG_OPTS=	--enable-static --enable-shared --enable-java
 endif
 
 prep: retrieve
-	tar zxvf $(SOURCE)
+	tar zxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR)/build_unix ; \
 	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	../dist/$(configure) $(CONFIGURE_OPTS)		\
+	../dist/$(configure) $(CONFIG_OPTS)		\
 		--prefix=/usr/local			\
 		--docdir=/usr/local/share/doc/db	\
 		--enable-compat185 --enable-dump185 	\
@@ -37,7 +40,8 @@ install: build
 	make DESTDIR=$(INSTALLDIR) docdir=/usr/local/share/doc/db install
 	chmod +w $(INSTALLDIR)/usr/local/bin/*
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{LICENSE,README} $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
