@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="5CEAF82E-4072-4BC0-A60D-BCC6887FF0E1">
   <config>
     <identifier>org.rudix.pkg.django</identifier>
-    <version>1.0.2</version>
+    <version>1.2.3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

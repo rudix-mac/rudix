@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		Django $(VERSION)
 NAME=		django
-VERSION=	1.2.1
+VERSION=	1.2.3
 REVISION=	0
 URL=		http://media.djangoproject.com/releases/1.2/Django-$(VERSION).tar.gz
 SOURCE=		Django-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
