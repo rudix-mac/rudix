@@ -11,7 +11,7 @@ URL=		ftp://invisible-island.net/dialog/
 SOURCE=		$(NAME)-$(VERSION).tgz
 
 README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
