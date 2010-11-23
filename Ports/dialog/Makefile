@@ -5,10 +5,13 @@
 include ../../Library/Rules.mk
 
 NAME=		dialog
-VERSION=	1.1-20080819
-REVISION=	2
+VERSION=	1.1-20100428
+REVISION=	0
 URL=		ftp://invisible-island.net/dialog/
 SOURCE=		$(NAME)-$(VERSION).tgz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 prep: retrieve
 	tar zxvf $(SOURCE)

@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="1ABA24F8-38E9-4C8C-8CD9-1C6FFF3EB921">
   <config>
     <identifier>org.rudix.pkg.dialog</identifier>
-    <version>1.1-20080819</version>
+    <version>1.1-20100428</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
