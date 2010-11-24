@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		dtach $(VERSION)
 NAME=		dtach
 VERSION=	0.8
-REVISION=	4
+REVISION=	5
 URL=		http://downloads.sourceforge.net/dtach
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)

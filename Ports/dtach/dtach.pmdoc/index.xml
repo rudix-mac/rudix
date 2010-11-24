@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Dtach</title>
-    <build>/Users/ruda/Desktop/Dtach.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
