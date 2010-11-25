@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="148A2787-0E00-4589-B88F-9F694E592E58">
+<pkgref spec="1.12" uuid="1660DBE3-A65C-4F27-89EA-64EA1D0B2785">
   <config>
-    <identifier>org.rudix.erlang.erlang-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.erlang</identifier>
+    <version>R14B</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom>/Users/ruda/Work/rudix.svn/Ports/erlang/erlang-install</installFrom>
+    <installFrom relative="true" mod="true">erlang-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01erlang-contents.xml</file-list>

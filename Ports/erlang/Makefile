@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		Erlang/OTP $(VERSION)
 NAME=		erlang
 VERSION=	R14B
-REVISION=	0
+REVISION=	1
 URL=		http://www.erlang.org/download/
 SOURCE=		otp_src_$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README.md
+LICENSE=	$(BUILDDIR)/EPLICENCE
 
 retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
@@ -18,7 +21,7 @@ retrieve:
 	touch retrieve
 
 prep: retrieve
-	tar zxvf $(SOURCE)
+	tar -zxf $(SOURCE)
 	mv otp_src_$(VERSION) $(NAME)-$(VERSION)
 	touch prep
 
@@ -33,11 +36,13 @@ build: prep
 
 install: build
 	cd $(BUILDDIR) ; make INSTALL_PREFIX=$(INSTALLDIR) install
-	cd $(INSTALLDIR)/usr/local/lib/erlang ; \
-	tar zxvf $(PORTDIR)/otp_doc_html_$(VERSION).tar.gz ; \
-	tar zxvf $(PORTDIR)/otp_doc_man_$(VERSION).tar.gz
+	install -d $(INSTALLDIR)/usr/local/share
+	tar -zxf $(PORTDIR)/otp_doc_man_$(VERSION).tar.gz -C $(INSTALLDIR)/usr/local/share
+	tar -zxf $(PORTDIR)/otp_doc_html_$(VERSION).tar.gz -C $(INSTALLDIR)/usr/local/lib/erlang
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,EPLICENCE,README.*} $(INSTALLDOCDIR)
+	cd $(INSTALLDOCDIR) ; ln -sf ../../../lib/erlang/doc html
+	rm -f $(INSTALLDIR)/usr/local/share/{COPYRIGHT,PR.template,README}
 	touch install
 
 test: install
