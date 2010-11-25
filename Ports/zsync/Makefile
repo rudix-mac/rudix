@@ -6,17 +6,20 @@ include ../../Library/Rules.mk
 
 NAME=		zsync
 VERSION=	0.6.2
-REVISION=	0
+REVISION=	1
 URL=		http://zsync.moria.org.uk/download/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar jxvf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) --disable-dependency-tracking ; $(make)
 	touch build
 
 install: build
