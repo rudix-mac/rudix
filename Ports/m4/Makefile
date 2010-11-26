@@ -1,4 +1,4 @@
-# GNU m4
+# GNU M4
 # http://www.gnu.org/software/m4/
 # GPL
 
@@ -9,9 +9,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU M4 $(VERSION)
 NAME=		m4
 VERSION=	1.4.15
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/m4/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -19,7 +22,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) --disable-dependency-tracking ; $(make)
+	$(configure) --disable-dependency-tracking ; $(make)
 	touch build
 
 install: build
