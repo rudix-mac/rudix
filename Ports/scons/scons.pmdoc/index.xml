@@ -13,9 +13,7 @@
   </distribution>
   <description>Python-based build system</description>
   <contents>
-    <choice title="scons-install" id="choice4" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.scons.scons-install.pkg"/>
-    </choice>
+    <choice title="scons-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false"/>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">

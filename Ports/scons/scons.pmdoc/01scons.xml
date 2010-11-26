@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
 <pkgref spec="1.12" uuid="FA7C22E8-4823-4383-9808-78F0F3D44F10">
   <config>
-    <identifier>org.rudix.scons.scons-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.scons</identifier>
+    <version>2.0.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom>/Users/ruda/Work/rudix.svn/Ports/scons/scons-install</installFrom>
+    <installFrom relative="true" mod="true">scons-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01scons-contents.xml</file-list>

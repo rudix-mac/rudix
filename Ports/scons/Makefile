@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		SCons $(VERSION)
 NAME=		scons
 VERSION=	2.0.1
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/scons
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README.txt
+COPYING=	$(BUILDDIR)/LICESNE.txt
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
