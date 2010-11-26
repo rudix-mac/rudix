@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="FDA5F24D-7E1E-4894-BC4F-B70CDED197E9">
   <config>
     <identifier>org.rudix.pkg.wget</identifier>
-    <version>1.11.4</version>
+    <version>1.12</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -13,11 +13,11 @@
     </flags>
     <packageStore type="internal"/>
     <mod>scripts.postflight.path</mod>
-    <mod>installTo</mod>
+    <mod>identifier</mod>
     <mod>installFrom.path</mod>
     <mod>parent</mod>
+    <mod>installTo</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <scripts>
     <postflight relative="true" mod="true">scripts/postflight</postflight>

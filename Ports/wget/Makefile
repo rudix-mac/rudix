@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU Wget $(VERSION)
 NAME=		wget
 VERSION=	1.12
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/wget/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
@@ -36,7 +39,7 @@ install: build
 	mv $(INSTALLDIR)/usr/local/etc/wgetrc \
 		$(INSTALLDIR)/usr/local/etc/wgetrc.default
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS} $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 

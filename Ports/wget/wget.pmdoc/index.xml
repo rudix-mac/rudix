@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>GNU Wget</title>
-    <build>/Users/ruda/Desktop/GNU Wget.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
