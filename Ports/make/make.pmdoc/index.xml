@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU make</description>
+  <description>Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.</description>
   <contents>
     <choice title="make-install" id="make" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.make"/>

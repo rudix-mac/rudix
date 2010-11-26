@@ -7,14 +7,17 @@ include ../../Library/Rules.mk
 TITLE=		GNU Make $(VERSION)
 NAME=		make
 VERSION=	3.82
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/make/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
+
 ifdef WITHOUT_NLS
-CONFIG_OPTS=	--disable-nls
+NLS=	--disable-nls
 else
-CONFIG_OPTS=	--enable-nls
+NLS=	--enable-nls
 DEPENDS+=	/usr/local/lib/libintl.la
 endif
 
@@ -23,12 +26,12 @@ LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 prep: retrieve
-	tar jxvf $(SOURCE)
+	tar jxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIG_OPTS) \
+	$(configure) $(NLS) \
 		--disable-dependency-tracking \
 		--program-prefix="gnu" ; $(make)
 	touch build
