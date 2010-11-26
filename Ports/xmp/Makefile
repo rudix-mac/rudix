@@ -2,18 +2,20 @@
 # http://xmp.sourceforge.net/
 # GPL
 
+include ../../Library/Rules.mk
+
 TITLE=		XMP $(VERSION)
 NAME=		xmp
-VERSION=	3.0.0
-REVISION=	0
+VERSION=	3.2.0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/xmp
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/docs/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	#patch -d $(BUILDDIR)/src/drivers < $(PORTDIR)/osx.c.patch
 	touch prep
 
 build: prep $(DEPENDS)
@@ -31,5 +33,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test
