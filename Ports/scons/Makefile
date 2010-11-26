@@ -12,7 +12,7 @@ URL=		http://downloads.sourceforge.net/scons
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 README=		$(BUILDDIR)/README.txt
-COPYING=	$(BUILDDIR)/LICESNE.txt
+COPYING=	$(BUILDDIR)/LICENSE.txt
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
