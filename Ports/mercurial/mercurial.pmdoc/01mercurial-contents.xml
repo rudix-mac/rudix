@@ -1,56 +1,144 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mercurial-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/mercurial/mercurial-install" m="false" t="file">
+  <f n="mercurial-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/mercurial/mercurial-install" m="false" t="file">
     <f n="Library" o="root" g="admin" p="17405">
       <f n="Python" o="root" g="admin" p="16893">
         <f n="2.6" o="root" g="admin" p="16893">
           <f n="site-packages" o="root" g="admin" p="16893">
             <f n="hgext" o="root" g="admin" p="16893">
-              <f n="__init__.py" o="root" g="admin" p="33204"/>
-              <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-              <f n="acl.py" o="root" g="admin" p="33204"/>
-              <f n="acl.pyc" o="root" g="admin" p="33204"/>
-              <f n="bookmarks.py" o="root" g="admin" p="33204"/>
-              <f n="bookmarks.pyc" o="root" g="admin" p="33204"/>
-              <f n="bugzilla.py" o="root" g="admin" p="33204"/>
-              <f n="bugzilla.pyc" o="root" g="admin" p="33204"/>
-              <f n="children.py" o="root" g="admin" p="33204"/>
-              <f n="children.pyc" o="root" g="admin" p="33204"/>
-              <f n="churn.py" o="root" g="admin" p="33204"/>
-              <f n="churn.pyc" o="root" g="admin" p="33204"/>
-              <f n="color.py" o="root" g="admin" p="33204"/>
-              <f n="color.pyc" o="root" g="admin" p="33204"/>
+              <f n="__init__.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="acl.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="acl.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bookmarks.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bookmarks.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bugzilla.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bugzilla.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="children.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="children.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="churn.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="churn.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="color.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="color.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="convert" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204"/>
-                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-                <f n="bzr.py" o="root" g="admin" p="33204"/>
-                <f n="bzr.pyc" o="root" g="admin" p="33204"/>
-                <f n="common.py" o="root" g="admin" p="33204"/>
-                <f n="common.pyc" o="root" g="admin" p="33204"/>
-                <f n="convcmd.py" o="root" g="admin" p="33204"/>
-                <f n="convcmd.pyc" o="root" g="admin" p="33204"/>
-                <f n="cvs.py" o="root" g="admin" p="33204"/>
-                <f n="cvs.pyc" o="root" g="admin" p="33204"/>
-                <f n="cvsps.py" o="root" g="admin" p="33204"/>
-                <f n="cvsps.pyc" o="root" g="admin" p="33204"/>
-                <f n="darcs.py" o="root" g="admin" p="33204"/>
-                <f n="darcs.pyc" o="root" g="admin" p="33204"/>
-                <f n="filemap.py" o="root" g="admin" p="33204"/>
-                <f n="filemap.pyc" o="root" g="admin" p="33204"/>
-                <f n="git.py" o="root" g="admin" p="33204"/>
-                <f n="git.pyc" o="root" g="admin" p="33204"/>
-                <f n="gnuarch.py" o="root" g="admin" p="33204"/>
-                <f n="gnuarch.pyc" o="root" g="admin" p="33204"/>
-                <f n="hg.py" o="root" g="admin" p="33204"/>
-                <f n="hg.pyc" o="root" g="admin" p="33204"/>
-                <f n="monotone.py" o="root" g="admin" p="33204"/>
-                <f n="monotone.pyc" o="root" g="admin" p="33204"/>
-                <f n="p4.py" o="root" g="admin" p="33204"/>
-                <f n="p4.pyc" o="root" g="admin" p="33204"/>
-                <f n="subversion.py" o="root" g="admin" p="33204"/>
-                <f n="subversion.pyc" o="root" g="admin" p="33204"/>
-                <f n="transport.py" o="root" g="admin" p="33204"/>
-                <f n="transport.pyc" o="root" g="admin" p="33204"/>
+                <f n="__init__.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bzr.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bzr.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="common.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="common.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="convcmd.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="convcmd.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cvs.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cvs.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cvsps.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cvsps.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="darcs.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="darcs.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="filemap.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="filemap.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="git.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="git.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuarch.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuarch.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hg.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hg.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="monotone.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="monotone.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="p4.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="p4.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="subversion.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="subversion.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="transport.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="transport.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="eol.py" o="root" g="admin" p="33277">
                 <mod>mode</mod>
@@ -58,50 +146,122 @@
               <f n="eol.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="extdiff.py" o="root" g="admin" p="33204"/>
-              <f n="extdiff.pyc" o="root" g="admin" p="33204"/>
-              <f n="fetch.py" o="root" g="admin" p="33204"/>
-              <f n="fetch.pyc" o="root" g="admin" p="33204"/>
-              <f n="gpg.py" o="root" g="admin" p="33204"/>
-              <f n="gpg.pyc" o="root" g="admin" p="33204"/>
-              <f n="graphlog.py" o="root" g="admin" p="33204"/>
-              <f n="graphlog.pyc" o="root" g="admin" p="33204"/>
-              <f n="hgcia.py" o="root" g="admin" p="33204"/>
-              <f n="hgcia.pyc" o="root" g="admin" p="33204"/>
-              <f n="hgk.py" o="root" g="admin" p="33204"/>
-              <f n="hgk.pyc" o="root" g="admin" p="33204"/>
-              <f n="highlight" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204"/>
-                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-                <f n="highlight.py" o="root" g="admin" p="33204"/>
-                <f n="highlight.pyc" o="root" g="admin" p="33204"/>
+              <f n="extdiff.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="interhg.py" o="root" g="admin" p="33204"/>
-              <f n="interhg.pyc" o="root" g="admin" p="33204"/>
-              <f n="keyword.py" o="root" g="admin" p="33204"/>
-              <f n="keyword.pyc" o="root" g="admin" p="33204"/>
-              <f n="mq.py" o="root" g="admin" p="33204"/>
-              <f n="mq.pyc" o="root" g="admin" p="33204"/>
-              <f n="notify.py" o="root" g="admin" p="33204"/>
-              <f n="notify.pyc" o="root" g="admin" p="33204"/>
-              <f n="pager.py" o="root" g="admin" p="33204"/>
-              <f n="pager.pyc" o="root" g="admin" p="33204"/>
-              <f n="parentrevspec.py" o="root" g="admin" p="33204"/>
-              <f n="parentrevspec.pyc" o="root" g="admin" p="33204"/>
-              <f n="patchbomb.py" o="root" g="admin" p="33204"/>
-              <f n="patchbomb.pyc" o="root" g="admin" p="33204"/>
+              <f n="extdiff.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fetch.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fetch.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gpg.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gpg.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="graphlog.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="graphlog.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgcia.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgcia.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgk.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgk.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="highlight" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="highlight.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="highlight.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="interhg.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="interhg.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="keyword.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="keyword.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mq.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mq.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="notify.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="notify.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pager.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pager.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="parentrevspec.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="parentrevspec.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="patchbomb.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="patchbomb.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="progress.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="progress.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="purge.py" o="root" g="admin" p="33204"/>
-              <f n="purge.pyc" o="root" g="admin" p="33204"/>
-              <f n="rebase.py" o="root" g="admin" p="33204"/>
-              <f n="rebase.pyc" o="root" g="admin" p="33204"/>
-              <f n="record.py" o="root" g="admin" p="33204"/>
-              <f n="record.pyc" o="root" g="admin" p="33204"/>
+              <f n="purge.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="purge.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rebase.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rebase.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="record.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="record.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="relink.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
@@ -114,85 +274,211 @@
               <f n="schemes.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="share.py" o="root" g="admin" p="33204"/>
-              <f n="share.pyc" o="root" g="admin" p="33204"/>
-              <f n="transplant.py" o="root" g="admin" p="33204"/>
-              <f n="transplant.pyc" o="root" g="admin" p="33204"/>
-              <f n="win32mbcs.py" o="root" g="admin" p="33204"/>
-              <f n="win32mbcs.pyc" o="root" g="admin" p="33204"/>
-              <f n="win32text.py" o="root" g="admin" p="33204"/>
-              <f n="win32text.pyc" o="root" g="admin" p="33204"/>
+              <f n="share.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="share.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transplant.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transplant.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32mbcs.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32mbcs.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32text.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32text.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="zeroconf" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204"/>
-                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-                <f n="Zeroconf.py" o="root" g="admin" p="33277"/>
-                <f n="Zeroconf.pyc" o="root" g="admin" p="33204"/>
+                <f n="__init__.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Zeroconf.py" o="root" g="admin" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="Zeroconf.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
             </f>
             <f n="mercurial" o="root" g="admin" p="16893">
-              <f n="__init__.py" o="root" g="admin" p="33204"/>
-              <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-              <f n="__version__.py" o="root" g="admin" p="33204"/>
-              <f n="__version__.pyc" o="root" g="admin" p="33204"/>
-              <f n="ancestor.py" o="root" g="admin" p="33204"/>
-              <f n="ancestor.pyc" o="root" g="admin" p="33204"/>
-              <f n="archival.py" o="root" g="admin" p="33204"/>
-              <f n="archival.pyc" o="root" g="admin" p="33204"/>
-              <f n="base85.so" o="root" g="admin" p="33277"/>
-              <f n="bdiff.so" o="root" g="admin" p="33277"/>
-              <f n="bundlerepo.py" o="root" g="admin" p="33204"/>
-              <f n="bundlerepo.pyc" o="root" g="admin" p="33204"/>
-              <f n="byterange.py" o="root" g="admin" p="33204"/>
-              <f n="byterange.pyc" o="root" g="admin" p="33204"/>
-              <f n="changegroup.py" o="root" g="admin" p="33204"/>
-              <f n="changegroup.pyc" o="root" g="admin" p="33204"/>
-              <f n="changelog.py" o="root" g="admin" p="33204"/>
-              <f n="changelog.pyc" o="root" g="admin" p="33204"/>
-              <f n="cmdutil.py" o="root" g="admin" p="33204"/>
-              <f n="cmdutil.pyc" o="root" g="admin" p="33204"/>
-              <f n="commands.py" o="root" g="admin" p="33204"/>
-              <f n="commands.pyc" o="root" g="admin" p="33204"/>
-              <f n="config.py" o="root" g="admin" p="33204"/>
-              <f n="config.pyc" o="root" g="admin" p="33204"/>
-              <f n="context.py" o="root" g="admin" p="33204"/>
-              <f n="context.pyc" o="root" g="admin" p="33204"/>
-              <f n="copies.py" o="root" g="admin" p="33204"/>
-              <f n="copies.pyc" o="root" g="admin" p="33204"/>
+              <f n="__init__.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__version__.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__version__.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ancestor.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ancestor.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="archival.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="archival.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="base85.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="bdiff.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="bundlerepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bundlerepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="byterange.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="byterange.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="changegroup.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="changegroup.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="changelog.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="changelog.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cmdutil.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cmdutil.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="commands.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="commands.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="context.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="context.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="copies.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="copies.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="dagparser.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="dagparser.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="demandimport.py" o="root" g="admin" p="33204"/>
-              <f n="demandimport.pyc" o="root" g="admin" p="33204"/>
-              <f n="diffhelpers.so" o="root" g="admin" p="33277"/>
-              <f n="dirstate.py" o="root" g="admin" p="33204"/>
-              <f n="dirstate.pyc" o="root" g="admin" p="33204"/>
+              <f n="demandimport.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="demandimport.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="diffhelpers.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="dirstate.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dirstate.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="discovery.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="discovery.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dispatch.py" o="root" g="admin" p="33204"/>
-              <f n="dispatch.pyc" o="root" g="admin" p="33204"/>
-              <f n="encoding.py" o="root" g="admin" p="33204"/>
-              <f n="encoding.pyc" o="root" g="admin" p="33204"/>
-              <f n="error.py" o="root" g="admin" p="33204"/>
-              <f n="error.pyc" o="root" g="admin" p="33204"/>
-              <f n="extensions.py" o="root" g="admin" p="33204"/>
-              <f n="extensions.pyc" o="root" g="admin" p="33204"/>
-              <f n="fancyopts.py" o="root" g="admin" p="33204"/>
-              <f n="fancyopts.pyc" o="root" g="admin" p="33204"/>
-              <f n="filelog.py" o="root" g="admin" p="33204"/>
-              <f n="filelog.pyc" o="root" g="admin" p="33204"/>
-              <f n="filemerge.py" o="root" g="admin" p="33204"/>
-              <f n="filemerge.pyc" o="root" g="admin" p="33204"/>
-              <f n="graphmod.py" o="root" g="admin" p="33204"/>
-              <f n="graphmod.pyc" o="root" g="admin" p="33204"/>
-              <f n="hbisect.py" o="root" g="admin" p="33204"/>
-              <f n="hbisect.pyc" o="root" g="admin" p="33204"/>
+              <f n="dispatch.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dispatch.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="encoding.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="encoding.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="error.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="error.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="extensions.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="extensions.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fancyopts.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fancyopts.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filelog.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filelog.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filemerge.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filemerge.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="graphmod.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="graphmod.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hbisect.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hbisect.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="help" o="root" g="admin" p="16893">
                 <f n="config.txt" o="root" g="admin" p="33204">
                   <mod>mode</mod>
@@ -215,6 +501,9 @@
                 <f n="hgweb.txt" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="merge-tools.txt" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="multirevs.txt" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -227,6 +516,9 @@
                 <f n="revsets.txt" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="subrepos.txt" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="templates.txt" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -235,77 +527,168 @@
                 </f>
                 <mod>mode</mod>
               </f>
-              <f n="help.py" o="root" g="admin" p="33204"/>
-              <f n="help.pyc" o="root" g="admin" p="33204"/>
-              <f n="hg.py" o="root" g="admin" p="33204"/>
-              <f n="hg.pyc" o="root" g="admin" p="33204"/>
-              <f n="hgweb" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204"/>
-                <f n="__init__.pyc" o="root" g="admin" p="33204"/>
-                <f n="common.py" o="root" g="admin" p="33204"/>
-                <f n="common.pyc" o="root" g="admin" p="33204"/>
-                <f n="hgweb_mod.py" o="root" g="admin" p="33204"/>
-                <f n="hgweb_mod.pyc" o="root" g="admin" p="33204"/>
-                <f n="hgwebdir_mod.py" o="root" g="admin" p="33204"/>
-                <f n="hgwebdir_mod.pyc" o="root" g="admin" p="33204"/>
-                <f n="protocol.py" o="root" g="admin" p="33204"/>
-                <f n="protocol.pyc" o="root" g="admin" p="33204"/>
-                <f n="request.py" o="root" g="admin" p="33204"/>
-                <f n="request.pyc" o="root" g="admin" p="33204"/>
-                <f n="server.py" o="root" g="admin" p="33204"/>
-                <f n="server.pyc" o="root" g="admin" p="33204"/>
-                <f n="webcommands.py" o="root" g="admin" p="33204"/>
-                <f n="webcommands.pyc" o="root" g="admin" p="33204"/>
-                <f n="webutil.py" o="root" g="admin" p="33204"/>
-                <f n="webutil.pyc" o="root" g="admin" p="33204"/>
-                <f n="wsgicgi.py" o="root" g="admin" p="33204"/>
-                <f n="wsgicgi.pyc" o="root" g="admin" p="33204"/>
+              <f n="help.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="hook.py" o="root" g="admin" p="33204"/>
-              <f n="hook.pyc" o="root" g="admin" p="33204"/>
-              <f n="httprepo.py" o="root" g="admin" p="33204"/>
-              <f n="httprepo.pyc" o="root" g="admin" p="33204"/>
-              <f n="i18n.py" o="root" g="admin" p="33204"/>
-              <f n="i18n.pyc" o="root" g="admin" p="33204"/>
-              <f n="ignore.py" o="root" g="admin" p="33204"/>
-              <f n="ignore.pyc" o="root" g="admin" p="33204"/>
-              <f n="keepalive.py" o="root" g="admin" p="33204"/>
-              <f n="keepalive.pyc" o="root" g="admin" p="33204"/>
+              <f n="help.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hg.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hg.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgweb" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="common.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="common.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hgweb_mod.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hgweb_mod.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hgwebdir_mod.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hgwebdir_mod.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="protocol.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="protocol.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="request.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="request.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="server.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="server.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webcommands.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webcommands.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webutil.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webutil.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wsgicgi.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wsgicgi.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="hook.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hook.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="httprepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="httprepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="i18n.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="i18n.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ignore.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ignore.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="keepalive.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="keepalive.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="locale" o="root" g="admin" p="16893">
                 <f n="da" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="de" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="el" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="fr" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="it" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="ja" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="pt_BR" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
+                </f>
+                <f n="ro" o="root" g="admin" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="admin" p="16893">
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
                 </f>
                 <f n="sv" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
@@ -318,66 +701,142 @@
                 </f>
                 <f n="zh_CN" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
                 <f n="zh_TW" o="root" g="admin" p="16893">
                   <f n="LC_MESSAGES" o="root" g="admin" p="16893">
-                    <f n="hg.mo" o="root" g="admin" p="33204"/>
+                    <f n="hg.mo" o="root" g="admin" p="33204">
+                      <mod>mode</mod>
+                    </f>
                   </f>
                 </f>
               </f>
-              <f n="localrepo.py" o="root" g="admin" p="33204"/>
-              <f n="localrepo.pyc" o="root" g="admin" p="33204"/>
-              <f n="lock.py" o="root" g="admin" p="33204"/>
-              <f n="lock.pyc" o="root" g="admin" p="33204"/>
-              <f n="lsprof.py" o="root" g="admin" p="33277"/>
-              <f n="lsprof.pyc" o="root" g="admin" p="33204"/>
-              <f n="lsprofcalltree.py" o="root" g="admin" p="33277"/>
-              <f n="lsprofcalltree.pyc" o="root" g="admin" p="33204"/>
-              <f n="mail.py" o="root" g="admin" p="33204"/>
-              <f n="mail.pyc" o="root" g="admin" p="33204"/>
-              <f n="manifest.py" o="root" g="admin" p="33204"/>
-              <f n="manifest.pyc" o="root" g="admin" p="33204"/>
-              <f n="match.py" o="root" g="admin" p="33204"/>
-              <f n="match.pyc" o="root" g="admin" p="33204"/>
-              <f n="mdiff.py" o="root" g="admin" p="33204"/>
-              <f n="mdiff.pyc" o="root" g="admin" p="33204"/>
-              <f n="merge.py" o="root" g="admin" p="33204"/>
-              <f n="merge.pyc" o="root" g="admin" p="33204"/>
+              <f n="localrepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localrepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lock.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lock.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprof.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprof.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprofcalltree.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprofcalltree.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manifest.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manifest.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="match.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="match.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mdiff.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mdiff.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="merge.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="merge.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="minirst.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="minirst.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="mpatch.so" o="root" g="admin" p="33277"/>
-              <f n="node.py" o="root" g="admin" p="33204"/>
-              <f n="node.pyc" o="root" g="admin" p="33204"/>
-              <f n="osutil.so" o="root" g="admin" p="33277"/>
+              <f n="mpatch.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="node.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="node.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="osutil.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
               <f n="parser.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="parser.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="parsers.so" o="root" g="admin" p="33277"/>
-              <f n="patch.py" o="root" g="admin" p="33204"/>
-              <f n="patch.pyc" o="root" g="admin" p="33204"/>
-              <f n="posix.py" o="root" g="admin" p="33204"/>
-              <f n="posix.pyc" o="root" g="admin" p="33204"/>
+              <f n="parsers.so" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="patch.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="patch.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="posix.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="posix.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pushkey.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pushkey.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="repair.py" o="root" g="admin" p="33204"/>
-              <f n="repair.pyc" o="root" g="admin" p="33204"/>
-              <f n="repo.py" o="root" g="admin" p="33204"/>
-              <f n="repo.pyc" o="root" g="admin" p="33204"/>
-              <f n="revlog.py" o="root" g="admin" p="33204"/>
-              <f n="revlog.pyc" o="root" g="admin" p="33204"/>
+              <f n="py3kcompat.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="py3kcompat.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repair.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repair.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revlog.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revlog.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="revset.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
@@ -390,200 +849,532 @@
               <f n="similar.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="simplemerge.py" o="root" g="admin" p="33277"/>
-              <f n="simplemerge.pyc" o="root" g="admin" p="33204"/>
-              <f n="sshrepo.py" o="root" g="admin" p="33204"/>
-              <f n="sshrepo.pyc" o="root" g="admin" p="33204"/>
-              <f n="sshserver.py" o="root" g="admin" p="33204"/>
-              <f n="sshserver.pyc" o="root" g="admin" p="33204"/>
-              <f n="statichttprepo.py" o="root" g="admin" p="33204"/>
-              <f n="statichttprepo.pyc" o="root" g="admin" p="33204"/>
-              <f n="store.py" o="root" g="admin" p="33204"/>
-              <f n="store.pyc" o="root" g="admin" p="33204"/>
-              <f n="streamclone.py" o="root" g="admin" p="33204"/>
-              <f n="streamclone.pyc" o="root" g="admin" p="33204"/>
-              <f n="strutil.py" o="root" g="admin" p="33204"/>
-              <f n="strutil.pyc" o="root" g="admin" p="33204"/>
-              <f n="subrepo.py" o="root" g="admin" p="33204"/>
-              <f n="subrepo.pyc" o="root" g="admin" p="33204"/>
+              <f n="simplemerge.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="simplemerge.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshrepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshrepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshserver.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshserver.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="statichttprepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="statichttprepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="store.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="store.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="strutil.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="strutil.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="subrepo.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="subrepo.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="tags.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="tags.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="templatefilters.py" o="root" g="admin" p="33204"/>
-              <f n="templatefilters.pyc" o="root" g="admin" p="33204"/>
+              <f n="templatefilters.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templatefilters.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="templatekw.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="templatekw.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="templater.py" o="root" g="admin" p="33204"/>
-              <f n="templater.pyc" o="root" g="admin" p="33204"/>
+              <f n="templater.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templater.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="templates" o="root" g="admin" p="16893">
                 <f n="atom" o="root" g="admin" p="16893">
-                  <f n="changelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="tagentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="changelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tagentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="coal" o="root" g="admin" p="16893">
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="gitweb" o="root" g="admin" p="16893">
-                  <f n="branches.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="index.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="search.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="summary.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="branches.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="summary.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
-                <f n="map-cmdline.changelog" o="root" g="admin" p="33204"/>
-                <f n="map-cmdline.compact" o="root" g="admin" p="33204"/>
-                <f n="map-cmdline.default" o="root" g="admin" p="33204"/>
+                <f n="map-cmdline.changelog" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="map-cmdline.compact" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="map-cmdline.default" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="map-cmdline.xml" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="monoblue" o="root" g="admin" p="16893">
-                  <f n="branches.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="index.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="search.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="summary.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="branches.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="summary.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="paper" o="root" g="admin" p="16893">
-                  <f n="branches.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="index.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="search.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="branches.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="raw" o="root" g="admin" p="16893">
-                  <f n="changeset.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="index.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="changeset.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="rss" o="root" g="admin" p="16893">
-                  <f n="changelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="tagentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="changelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tagentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="spartan" o="root" g="admin" p="16893">
-                  <f n="branches.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="error.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="header.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="index.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="map" o="root" g="admin" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="search.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="shortlogentry.tmpl" o="root" g="admin" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="admin" p="33204"/>
+                  <f n="branches.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlogentry.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
                 <f n="static" o="root" g="admin" p="16893">
-                  <f n="background.png" o="root" g="admin" p="33204"/>
-                  <f n="coal-file.png" o="root" g="admin" p="33204"/>
-                  <f n="coal-folder.png" o="root" g="admin" p="33204"/>
-                  <f n="excanvas.js" o="root" g="admin" p="33204"/>
-                  <f n="graph.js" o="root" g="admin" p="33204"/>
-                  <f n="hgicon.png" o="root" g="admin" p="33204"/>
-                  <f n="hglogo.png" o="root" g="admin" p="33204"/>
-                  <f n="style-coal.css" o="root" g="admin" p="33204"/>
-                  <f n="style-gitweb.css" o="root" g="admin" p="33204"/>
-                  <f n="style-monoblue.css" o="root" g="admin" p="33204"/>
-                  <f n="style-paper.css" o="root" g="admin" p="33204"/>
-                  <f n="style.css" o="root" g="admin" p="33204"/>
+                  <f n="background.png" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="coal-file.png" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="coal-folder.png" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="excanvas.js" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.js" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hgicon.png" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hglogo.png" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-coal.css" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-gitweb.css" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-monoblue.css" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-paper.css" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style.css" o="root" g="admin" p="33204">
+                    <mod>mode</mod>
+                  </f>
                 </f>
-                <f n="template-vars.txt" o="root" g="admin" p="33204"/>
+                <f n="template-vars.txt" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="transaction.py" o="root" g="admin" p="33204"/>
-              <f n="transaction.pyc" o="root" g="admin" p="33204"/>
-              <f n="ui.py" o="root" g="admin" p="33204"/>
-              <f n="ui.pyc" o="root" g="admin" p="33204"/>
-              <f n="url.py" o="root" g="admin" p="33204"/>
-              <f n="url.pyc" o="root" g="admin" p="33204"/>
-              <f n="util.py" o="root" g="admin" p="33204"/>
-              <f n="util.pyc" o="root" g="admin" p="33204"/>
-              <f n="verify.py" o="root" g="admin" p="33204"/>
-              <f n="verify.pyc" o="root" g="admin" p="33204"/>
-              <f n="win32.py" o="root" g="admin" p="33204"/>
-              <f n="win32.pyc" o="root" g="admin" p="33204"/>
-              <f n="windows.py" o="root" g="admin" p="33204"/>
-              <f n="windows.pyc" o="root" g="admin" p="33204"/>
+              <f n="transaction.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transaction.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ui.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ui.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="verify.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="verify.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="windows.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="windows.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wireproto.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wireproto.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
-            <f n="mercurial-1.6.2-py2.6.egg-info" o="root" g="admin" p="33204">
+            <f n="mercurial-1.7.1-py2.6.egg-info" o="root" g="admin" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -593,23 +1384,37 @@
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
-          <f n="hg" o="root" g="wheel" p="33277"/>
+          <f n="hg" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="mercurial" o="root" g="wheel" p="16893">
-              <f n="CONTRIBUTORS" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
+              <f n="CONTRIBUTORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="hg.1" o="root" g="wheel" p="33204"/>
+              <f n="hg.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
             <f n="man5" o="root" g="wheel" p="16893">
-              <f n="hgignore.5" o="root" g="wheel" p="33204"/>
-              <f n="hgrc.5" o="root" g="wheel" p="33204"/>
+              <f n="hgignore.5" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgrc.5" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
