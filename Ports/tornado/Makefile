@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		Tornado $(VERSION)
 NAME=		tornado
-VERSION=	0.2
+VERSION=	1.1
 REVISION=	0
-URL=		http://www.tornadoweb.org/static
+URL=		http://github.com/downloads/facebook/tornado
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(PORTDIR)/LICENSE-2.0
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages

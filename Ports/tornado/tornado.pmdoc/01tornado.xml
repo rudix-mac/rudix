@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D289FD07-9EE5-4DF9-B2AF-639257E0B7B7">
+<pkgref spec="1.12" uuid="1033F8B2-4ADF-4251-B24B-DD0B7ED9FF64">
   <config>
     <identifier>org.rudix.pkg.tornado</identifier>
-    <version>1.0</version>
+    <version>1.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
     <mod>parent</mod>
-    <mod>installTo</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01tornado-contents.xml</file-list>
