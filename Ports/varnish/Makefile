@@ -5,14 +5,17 @@ include ../../Library/Rules.mk
 
 TITLE=		Varnish $(VERSION)
 NAME=		varnish
-VERSION=	2.0.4
-REVISION=	1
-URL=		http://downloads.sourceforge.net/project/varnish/varnish/$(VERSION)
+VERSION=	2.1.4
+REVISION=	0
+URL=		http://www.varnish-software.com/sites/default/files
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+DEPENDS=	/usr/local/lib/libpcre.la
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 prep: retrieve
 	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR) -p0 < $(PORTDIR)/daemonize.patch
 	touch prep
 
 build: prep $(DEPENDS)

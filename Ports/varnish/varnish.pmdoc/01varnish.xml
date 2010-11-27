@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E1290FEE-2F7D-49BB-947D-1A0A79B11072">
+<pkgref spec="1.12" uuid="880A3AF7-9FCF-481D-9BBE-4C26185621AF">
   <config>
     <identifier>org.rudix.pkg.varnish</identifier>
-    <version>1</version>
+    <version>2.1.4</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

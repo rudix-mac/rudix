@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="varnish-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/varnish/varnish-install" m="false" t="file">
+  <f n="varnish-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/varnish/varnish-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
@@ -19,6 +19,9 @@
           <f n="varnishreplay" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <f n="varnishsizes" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="varnishstat" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -34,7 +37,6 @@
             <f n="default.vcl.default" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
@@ -54,7 +56,6 @@
             <f n="varnishapi.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
@@ -129,7 +130,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
@@ -137,28 +137,7 @@
               <f n="varnishadm.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="varnishd.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishhist.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishlog.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishncsa.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishreplay.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishstat.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishtest.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="varnishtop.1" o="root" g="wheel" p="33204">
+              <f n="varnishsizes.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
             </f>
@@ -166,15 +145,11 @@
               <f n="vcl.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
         <f n="var" o="root" g="wheel" p="16893">
-          <f n="varnish" o="root" g="wheel" p="16893">
-            <mod>mode</mod>
-          </f>
-          <mod>mode</mod>
+          <f n="varnish" o="root" g="wheel" p="16893"/>
         </f>
       </f>
     </f>
