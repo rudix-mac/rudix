@@ -5,13 +5,16 @@ include ../../Library/Rules.mk
 
 TITLE=		PCRE $(VERSION)
 NAME=		pcre
-VERSION=	8.00
+VERSION=	8.10
 REVISION=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENCE
+
 ifdef STATIC_ONLY
-CONFIGURE_OPTS= --enable-static --disable-shared
+CONFIG_OPTS= 	--enable-static --disable-shared
 endif
 
 prep: retrieve
@@ -20,7 +23,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) \
+	$(configure) $(CONFIG_OPTS) \
 		--disable-dependency-tracking \
 		--enable-utf8 ; $(make)
 	touch build

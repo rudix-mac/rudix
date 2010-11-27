@@ -2,7 +2,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>PCRE</title>
-    <organization>org.rudix.pkg</organization>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -13,14 +13,14 @@
   </distribution>
   <description>Perl-compatible regular expression library</description>
   <contents>
-    <choice title="pcre-install" id="pcre" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="pcre-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pcre"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">pcre-8.00/LICENCE</resource>
-      <resource relative="true" mod="true" type="readme">pcre-8.00/README</resource>
+      <resource relative="true" mod="true" type="license">pcre-8.10/LICENCE</resource>
+      <resource relative="true" mod="true" type="readme">pcre-8.10/README</resource>
     </locale>
   </resources>
   <flags/>

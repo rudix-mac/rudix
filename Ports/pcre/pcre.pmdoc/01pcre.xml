@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="837F7B4E-46D5-423B-BC14-02C7874D0A9F">
+<pkgref spec="1.12" uuid="027C5B9E-C7F8-4C81-B849-3E5A850A9864">
   <config>
     <identifier>org.rudix.pkg.pcre</identifier>
-    <version>1</version>
+    <version>8.10</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,10 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>parent</mod>
-    <mod>version</mod>
+    <mod>installTo</mod>
     <mod>identifier</mod>
   </config>
   <contents>
