@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU Sed $(VERSION)
 NAME=		sed
 VERSION=	4.2.1
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/sed/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITHOUT_NLS
 CONFIG_OPTS=	--disable-nls

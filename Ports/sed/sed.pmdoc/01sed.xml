@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="1DF602C2-8F47-4C4F-BE62-21FEB7489692">
+<pkgref spec="1.12" uuid="C359D0F8-B050-482D-ABAE-60D4CB07F9E5">
   <config>
     <identifier>org.rudix.pkg.sed</identifier>
-    <version>1.0</version>
+    <version>4.2.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
     <mod>parent</mod>
-    <mod>installTo</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01sed-contents.xml</file-list>
