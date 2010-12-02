@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="4880752C-808A-4403-A29B-F4C06FF18B32">
   <config>
     <identifier>org.rudix.pkg.findutils</identifier>
-    <version>4.4.0</version>
+    <version>4.4.2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

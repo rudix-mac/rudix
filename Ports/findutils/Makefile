@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU Find Utilities $(VERSION)
 NAME=		findutils
 VERSION=	4.4.2
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/findutils/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
