@@ -14,14 +14,14 @@
   </distribution>
   <description>GNU versions of grep pattern matching utilities</description>
   <contents>
-    <choice title="grep-install" id="grep" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="grep-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.grep"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">grep-2.5.4/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">grep-2.5.4/README</resource>
+      <resource relative="true" mod="true" type="license">grep-2.7/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">grep-2.7/README</resource>
     </locale>
   </resources>
   <flags/>

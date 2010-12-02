@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU Grep $(VERSION)
 NAME=		grep
-VERSION=	2.5.4
-REVISION=	1
+VERSION=	2.7
+REVISION=	0
 URL=		http://ftp.gnu.org/gnu/grep/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
@@ -24,7 +27,7 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	cd $(BUILDDIR)/po ; patch < $(PORTDIR)/Makefile.in.in.patch
+	#cd $(BUILDDIR)/po ; patch < $(PORTDIR)/Makefile.in.in.patch
 	touch prep
 
 build: prep $(DEPENDS)
@@ -50,5 +53,5 @@ install: build
 test: install
 	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	#cd $(BUILDDIR) ; make check
+	cd $(BUILDDIR) ; make check
 	touch install
