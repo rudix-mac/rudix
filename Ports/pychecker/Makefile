@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		PyChecker $(VERSION)
 NAME=		pychecker
 VERSION=	0.8.18
-REVISION=	1
+REVISION=	2
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYRIGHT
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
