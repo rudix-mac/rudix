@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU AWK $(VERSION)
 NAME=		gawk
 VERSION=	3.1.8
-REVISION=	0
+REVISION=	1
 URL=		http://ftp.gnu.org/gnu/gawk/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITHOUT_NLS
 CONFIGURE_OPTS+=	--disable-nls
