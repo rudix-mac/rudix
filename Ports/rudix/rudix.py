@@ -9,7 +9,7 @@ List all installed packages (package-id) unless options are given, like:
   -l    List all installed packages (package-id, version and install date)
   -I    Print package information (package-id, version and install date)
   -L    List package content
-  -i    Install package
+  -i    Install package (download if not a file)
   -r    Remove package
   -R    Remove *all* Rudix packages installed (ask to confirm)
   -S    Search for <path> in all packages and print if matched
@@ -17,7 +17,7 @@ List all installed packages (package-id) unless options are given, like:
   -K    Verify all installed packages
   -f    Fix (repair) package
   -n    Download and install package (remote install)
-  -u    Download and install updated packages (remote update)
+  -u    Download and install all updated packages (remote update)
 
 Where <package-id> is either org.rudix.pkg.<name> or <name>.
 '''
@@ -37,7 +37,7 @@ __version__ = '@VERSION@'
 PROG_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
-def version():
+def rudix_version():
     print 'Rudix Package Manager version %s' % __version__
     print __copyright__
 
@@ -141,6 +141,10 @@ def fix_package(pkg):
     root_required()
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
+def version_compare(v1, v2):
+    from distutils.version import LooseVersion
+    return cmp(LooseVersion(v1), LooseVersion(v2))
+
 def find_net_info(pkg):
     'Search the download page for versions of pkg'
     from urllib2 import urlopen
@@ -148,7 +152,7 @@ def find_net_info(pkg):
     pkg = denormalize(pkg)
     cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=%s'%pkg).read()
     urls = re.findall('(http://rudix.googlecode.com/files/(%s-([0-9.]*)-?[0-9]*\.dmg))'%pkg, cont)
-    versions = sorted(list(set(urls)), key=lambda i: i[1])
+    versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
     if len(versions) == 0:
         return None
     else:
@@ -181,10 +185,11 @@ def net_install_package(pkg, net_info):
 def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
     net_info = find_net_info(pkg)
+    version, install_date = get_package_info(pkg)
     if net_info is None:
         print "Package '%s' not found online"%pkg
         return
-    if version >= net_info[2]:
+    if version is not None and version_compare(version, net_info[2]) >= 0:
         print 'Latest version of package %s(%s) already installed'%(pkg, version)
         return
     net_install_package(pkg, net_info)
@@ -196,17 +201,17 @@ def update_all_packages():
     for pkg in get_packages():
         net_info = find_net_info(pkg)
         version, install_date = get_package_info(pkg)
-        if net_info is None or version >= net_info[2]:
+        if net_info is None or version_compare(version, net_info[2]) >= 0:
             continue
-        print pkg, 'will be updated to version', net_info[2]
-        to_update.append(net_info)
+        print '{0:25} {1:10} will be updated to version {2}'.format(denormalize(pkg), version, net_info[2])
+        to_update.append((pkg, net_info))
     if len(to_update) == 0:
         print 'All packages are up to date'
         return
 
     # if there is packages to update you need to be root
     root_required()
-    for net_info in to_update:
+    for pkg, net_info in to_update:
         net_install_package(pkg, net_info)
     print 'All done'
 
@@ -240,7 +245,7 @@ def main(argv=None):
         if option == '-h':
             usage()
         if option == '-v':
-            version()
+            rudix_version()
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':
@@ -248,7 +253,10 @@ def main(argv=None):
         if option == '-L':
             list_package_files(normalize(value))
         if option == '-i':
-            install_package(value)
+            if os.path.isfile(value):
+                install_package(value)
+            else:
+                net_install_command(normalize(value))
         if option == '-r':
             remove_package(normalize(value))
         if option == '-R':
