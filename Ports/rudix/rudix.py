@@ -38,29 +38,35 @@ PROG_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
 def rudix_version():
+    'Print version and exit'
     print 'Rudix Package Manager version %s' % __version__
     print __copyright__
+    sys.exit(0)
 
 def usage():
+    'Print help and exit'
     print __doc__
     sys.exit(0)
 
 def root_required():
+    'Check for root and pass or exit if not'
     if os.getuid() != 0:
         print >> sys.stderr, '%s: this operation requires root privileges'%PROG_NAME
         sys.exit(1)
 
 def communicate(args):
-    'call a process and return its stdout data as a list of strings'
+    'Call a process and return its stdout data as a list of strings'
     proc = Popen(args, stdout=PIPE, stderr=PIPE)
     return proc.communicate()[0].split('\n')[:-1]
 
 def get_packages():
-    out = communicate(['pkgutil', '--pkgs=org.rudix.pkg.*'])
+    'Get a list of packages installed'
+    out = communicate(['pkgutil', '--pkgs=' + PREFIX + '*'])
     pkgs = [line.strip() for line in out]
     return pkgs
 
 def get_package_info(pkg):
+    'Get information from pkg'
     out = communicate(['pkgutil', '-v', '--pkg-info', pkg])
     version = None
     install_date = None
@@ -73,11 +79,13 @@ def get_package_info(pkg):
     return version, install_date
 
 def get_package_content(pkg):
+    'Get a list of file names from pkg'
     out = communicate(['pkgutil', '--files', pkg, '--only-files'])
     content = ['/'+line.strip() for line in out]
     return content
 
 def print_package_info(pkg):
+    'Print information about pkg'
     version, install_date = get_package_info(pkg)
     if install_date is not None:
         print '%s version %s (install: %s)'%(pkg, version, install_date)
@@ -85,23 +93,28 @@ def print_package_info(pkg):
         print "No receipt for '%s' found at '/'."%pkg # pretend we are pkgutil
 
 def list_all_packages():
+    'List all packages installed'
     for pkg in get_packages():
         print pkg
 
 def list_all_packages_info():
+    'List all packages installed, more detailed'
     for pkg in get_packages():
         print_package_info(pkg)
 
 def list_package_files(pkg):
+    'Print the file names of pkg'
     content = get_package_content(pkg)
     for file in content:
         print file
 
 def install_package(pkg):
+    'Install a local pkg'
     root_required()
     call(['installer', '-pkg', pkg, '-target', '/'], stderr=PIPE)
 
 def remove_package(pkg):
+    'Uninstall a pkg'
     root_required()
     devnull = open('/dev/null')
     call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
@@ -109,6 +122,7 @@ def remove_package(pkg):
     devnull.close()
 
 def remove_all_packages():
+    'Uninstall all packages'
     root_required()
     print "Using this option will remove *all* Rudix's packages!"
     print "Are you sure you want to proceed? (answer 'yes' or 'y' to confirm)"
@@ -124,6 +138,7 @@ def remove_all_packages():
     print 'Cry a little tear because Rudix was removed'
 
 def search_in_packages(path):
+    'Search for path in all packages'
     out = communicate(['pkgutil', '--file-info', path])
     for line in out:
         line = line.strip()
@@ -131,13 +146,16 @@ def search_in_packages(path):
             print line[len('pkgid: '):]
 
 def verify_package(pkg):
+    'Verify pkg sanity'
     call(['pkgutil', '--verify', pkg], stderr=PIPE)
 
 def verify_all_packages():
+    'Verify all packages sanity'
     for pkg in get_packages():
         verify_package(pkg)
 
 def fix_package(pkg):
+    'Try to fix permissions and groups of pkg'
     root_required()
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
@@ -162,6 +180,7 @@ def find_net_info(pkg):
         return versions[-1]
 
 def net_install_package(pkg, net_info):
+    'Support function for net_install_command'
     root_required()
     net_url, net_filename, net_version = net_info
     print 'Downloading', net_url
@@ -199,6 +218,7 @@ def net_install_command(pkg):
     print 'All done'
 
 def update_all_packages():
+    'Try to update the current base of packages'
     to_update = []
     # take each package, go to the internet and see if there is a newer version
     for pkg in get_packages():
@@ -211,7 +231,6 @@ def update_all_packages():
     if len(to_update) == 0:
         print 'All packages are up to date'
         return
-
     # if there is packages to update you need to be root
     root_required()
     for pkg, net_info in to_update:
@@ -219,11 +238,13 @@ def update_all_packages():
     print 'All done'
 
 def normalize(pkg):
+    'Transform pkg in full pkg-id (with PREFIX)'
     if not pkg.startswith(PREFIX):
         pkg = PREFIX + pkg
     return pkg
 
 def denormalize(pkg):
+    'Transform pkg in name without PREFIX'
     if pkg.startswith(PREFIX):
         pkg = pkg[len(PREFIX):]
     return pkg
@@ -231,23 +252,21 @@ def denormalize(pkg):
 def main(argv=None):
     if argv is None:
         argv = sys.argv
-
     if len(argv) == 1:
         list_all_packages()
         sys.exit(0)
-
     try:
         opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:RS:vV:Kf:n:u")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROG_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
         sys.exit(2)
-
     # option processing
     for option, value in opts:
         if option == '-h':
             usage()
         if option == '-v':
+            version()
             rudix_version()
         if option == '-I':
             print_package_info(normalize(value))
