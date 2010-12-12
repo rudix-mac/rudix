@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="061F4CD6-D2EF-463C-9DCA-845B01825CD2">
+<pkgref spec="1.12" uuid="5B893DA2-11FC-4BD2-A304-874A2E1AB180">
   <config>
-    <identifier>org.rudix.nhc98.nhc98-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.nhc98</identifier>
+    <version>1.22</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom>/Users/ruda/Work/rudix.svn/Ports/nhc98/nhc98-install</installFrom>
+    <installFrom relative="true" mod="true">nhc98-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01nhc-contents.xml</file-list>

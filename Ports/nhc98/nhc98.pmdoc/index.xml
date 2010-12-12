@@ -13,8 +13,8 @@
   </distribution>
   <description>Portable Haskell compiler</description>
   <contents>
-    <choice title="nhc98-install" id="choice3" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.nhc98.nhc98-install.pkg"/>
+    <choice title="nhc98-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.nhc98"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
