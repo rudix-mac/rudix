@@ -263,7 +263,6 @@ def main(argv=None):
         if option == '-h':
             usage()
         if option == '-v':
-            version()
             rudix_version()
         if option == '-I':
             print_package_info(normalize(value))
