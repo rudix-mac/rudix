@@ -7,12 +7,15 @@ include ../../Library/Rules.mk
 TITLE=		libevent $(VERSION)
 NAME=		libevent
 VERSION=	1.4.14b
-REVISION=	0
+REVISION=	1
 URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
 
+README=		$(BUILDDIR)/README
+LICENSE=	$(PORTDIR)/LICENSE
+
 ifdef STATIC_ONLY
-CONFIGURE_OPTS=	--enable-static --disable-shared
+CONFIG_OPTS=	--enable-static --disable-shared
 endif
 
 prep: retrieve
@@ -22,13 +25,14 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS); $(make)
+	$(configure) $(CONFIG_OPTS); $(make)
 	touch build
 
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{ChangeLog,README} $(INSTALLDOCDIR)
+	install -m 644 $(PORTDIR)/LICENSE $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
