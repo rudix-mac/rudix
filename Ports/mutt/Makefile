@@ -5,8 +5,8 @@
 include ../../Library/Rules.mk
 
 NAME=		mutt
-VERSION=	1.5.20
-REVISION=	0
+VERSION=	1.5.21
+REVISION=	1
 URL=		ftp://ftp.mutt.org/mutt/devel/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -31,7 +31,9 @@ build: prep $(DEPENDS)
 	$(configure) \
 		--disable-dependency-tracking \
 		--with-docdir=/usr/local/share/doc/mutt  \
-		--enable-pop --enable-imap --with-ssl $(NLS) ; $(make)
+		--enable-pop --enable-imap --enable-smtp \
+		--enable-hcache \
+		--with-ssl $(NLS) ; $(make)
 	touch build
 
 install: build

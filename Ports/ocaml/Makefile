@@ -6,9 +6,12 @@ include ../../Library/Rules.mk
 
 NAME=		ocaml
 VERSION=	3.12.0
-REVISION=	0.i386
+REVISION=	1
 URL=		http://caml.inria.fr/pub/distrib/ocaml-3.12/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
 
 prep: retrieve
 	tar jxvf $(SOURCE)
