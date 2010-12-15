@@ -14,7 +14,7 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 DEPENDS=	/usr/local/lib/libevent.la
 
 README=		$(BUILDDIR)/README
-COPYING=	$(BUILDDIR)/COPYING
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
