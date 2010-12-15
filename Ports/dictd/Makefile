@@ -6,9 +6,12 @@ include ../../Library/Rules.mk
 
 NAME=		dictd
 VERSION=	1.11.2
-REVISION=	0
+REVISION=	1
 URL=		http://downloads.sourceforge.net/dict
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)

@@ -6,10 +6,10 @@ include ../../Library/Rules.mk
 
 TITLE=		ELinks $(version)
 NAME=		elinks
-VERSION=	0.11.7
+VERSION=	0.13
 REVISION=	0
 URL=		http://elinks.or.cz/download/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+SOURCE=		$(NAME)-current-$(VERSION).tar.bz2
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
@@ -23,8 +23,9 @@ LDFLAGS+=	-framework CoreFoundation -liconv
 endif
 
 prep: retrieve
-	tar jxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.lib.patch
+	tar jxf $(SOURCE)
+	#cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.lib.patch
+	mv elinks-0.13-20101124 $(BUILDDIR)
 	touch prep
 
 build: prep $(DEPENDS)

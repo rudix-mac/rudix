@@ -42,7 +42,7 @@ install: build
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/{AUTHORS,EPLICENCE,README.*} $(INSTALLDOCDIR)
 	cd $(INSTALLDOCDIR) ; ln -sf ../../../lib/erlang/doc html
-	cd $(INSTALLDIR)/usr/local/lib/erlang ; ln -sf /usr/local/share/man .
+	cd $(INSTALLDIR)/usr/local/lib/erlang ; ln -sf ../../share/man .
 	rm -f $(INSTALLDIR)/usr/local/share/{COPYRIGHT,PR.template,README}
 	touch install
 
