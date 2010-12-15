@@ -7,11 +7,14 @@ include ../../Library/Rules.mk
 TITLE=		memcached $(VERSION)
 NAME=		memcached
 VERSION=	1.4.5
-REVISION=	0
+REVISION=	1
 URL=		http://memcached.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 DEPENDS=	/usr/local/lib/libevent.la
+
+README=		$(BUILDDIR)/README
+COPYING=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
