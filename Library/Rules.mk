@@ -4,7 +4,7 @@
 # Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	20101115
+BUILDSYSTEM=	20101220
 
 VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
@@ -110,8 +110,7 @@ realdistclean: distclean
 	rm -f retrieve $(SOURCE)
 
 tag:
-	svn update
-	svn copy . https://rudix.googlecode.com/svn/tags/pool/$(NAME)/$(NAME)-$(VERSION)-$(REVISION) -m "[TAG] $(NAME) version $(VERSION) revision $(REVISION)"
+	hg tag $(NAME)-$(VERSION)-$(REVISION)
 
 about:
 	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"
