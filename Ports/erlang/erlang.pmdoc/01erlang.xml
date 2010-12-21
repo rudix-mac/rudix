@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="BC2731E6-503F-464D-B28F-757465AD349B">
   <config>
     <identifier>org.rudix.pkg.erlang</identifier>
-    <version>R14B</version>
+    <version>R14B01</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
