@@ -1,13 +1,13 @@
-# Real-time, concurrent and distributed functional language
-# http://www.erlang.org/
-# ERLANG PUBLIC LICENSE
+# SUMMARY=	Real-time, concurrent and distributed functional language
+# HOMEPAGE=	http://www.erlang.org/
+# COPYING=	ERLANG PUBLIC LICENSE
 
 include ../../Library/Rules.mk
 
 TITLE=		Erlang/OTP $(VERSION)
 NAME=		erlang
-VERSION=	R14B
-REVISION=	1
+VERSION=	R14B01
+REVISION=	0
 URL=		http://www.erlang.org/download/
 SOURCE=		otp_src_$(VERSION).tar.gz
 

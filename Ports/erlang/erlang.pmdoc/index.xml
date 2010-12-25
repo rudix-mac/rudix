@@ -20,8 +20,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">erlang-R14B/EPLICENCE</resource>
-      <resource relative="true" mod="true" type="readme">erlang-R14B/README.md</resource>
+      <resource relative="true" mod="true" type="license">erlang-R14B01/EPLICENCE</resource>
+      <resource relative="true" mod="true" type="readme">erlang-R14B01/README.md</resource>
     </locale>
   </resources>
   <flags/>
