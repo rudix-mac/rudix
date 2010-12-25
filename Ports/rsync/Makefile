@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		Rsync $(VERSION)
 NAME=		rsync
 VERSION=	3.0.7
-REVISION=	0
+REVISION=	1
 URL=		http://samba.org/ftp/rsync/src/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
@@ -19,7 +19,9 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --with-rsyncd-conf=/usr/local/etc ; $(make)
+	$(configure) \
+		--with-included-popt \
+		--with-rsyncd-conf=/usr/local/etc ; $(make)
 	touch build
 
 install: build
