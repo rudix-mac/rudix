@@ -1,12 +1,13 @@
 # Utility to turn simply formatted text into markup
-# http://txt2tags.sourceforge.net/
+# http://txt2tags.org/
+# GPL
 
 include ../../Library/Rules.mk
 
 NAME=		txt2tags
-VERSION=	2.5
-REVISION=	3
-URL=		http://downloads.sourceforge.net/$(NAME)
+VERSION=	2.6
+REVISION=	0
+URL=		http://txt2tags.googlecode.com/files/
 SOURCE=		$(NAME)-$(VERSION).tgz
 
 DEPENDS=	/usr/local/bin/msgfmt
