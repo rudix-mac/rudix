@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="08E233C1-D669-44FB-A2B9-0C7C8BFF5368">
+<pkgref spec="1.12" uuid="404C2016-200D-4291-9FA0-852251643CAC">
   <config>
     <identifier>org.rudix.pkg.mutt</identifier>
-    <version>1</version>
+    <version>1.5.21</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,9 +14,9 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01mutt-contents.xml</file-list>

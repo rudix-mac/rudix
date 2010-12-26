@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Mutt</title>
-    <build>/Users/ruda/Desktop/Mutt.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Tty-based e-mail client</description>
+  <description>The Mutt E-Mail Client</description>
   <contents>
     <choice title="mutt-install" id="mutt" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.mutt"/>
@@ -20,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">mutt-1.5.20/COPYRIGHT</resource>
-      <resource relative="true" mod="true" type="readme">mutt-1.5.20/README</resource>
+      <resource relative="true" mod="true" type="license">mutt-1.5.21/COPYRIGHT</resource>
+      <resource relative="true" mod="true" type="readme">mutt-1.5.21/README</resource>
     </locale>
   </resources>
   <flags/>
