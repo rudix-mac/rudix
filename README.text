@@ -1,4 +1,5 @@
 ABOUT RUDIX
+===========
 
 Rudix features a world class collection of pre-compiled and ready
 to use Unix compatible software which are not available from a fresh
@@ -13,9 +14,16 @@ and build native Mac OS X software for public distribution (both
 Unix port systems.
 
 LICENSE
+=======
 
 Rudix port system (only the build system) is maintained by Ruda
-Moura and it is licensed under BSD (see the copyright note below).
+Moura and it is licensed under BSD (see LICENSE.text).
 Note that each pre-compiled package distributed here is covered
 under an appropriate license and ownership. Rudix contains some
 text descriptions from OpenBSD.
+
+AUTHORS
+=======
+
+* Ruda Moura <ruda@rudix.org> or <ruda.moura@gmail.com>
+* Leonardo Santagada <santagada@gmail.com>
