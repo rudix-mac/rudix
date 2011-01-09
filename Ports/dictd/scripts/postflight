@@ -1,6 +1,0 @@
-#!/bin/sh
-
-[ ! -f /usr/local/etc/dict.conf ] && \
-cp -f /usr/local/etc/dict.conf.default /usr/local/etc/dict.conf
-
-exit 0
