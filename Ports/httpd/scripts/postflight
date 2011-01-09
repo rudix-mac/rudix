@@ -1,9 +1,0 @@
-#!/bin/sh
-
-CONFDIR="/usr/local/etc/httpd"
-
-for x in httpd.conf magic mime.types ; do
-    [ ! -f $CONFDIR/$x ] && install -m 644 $CONFDIR/$x.default $CONFDIR/$x
-done
-
-exit 0
