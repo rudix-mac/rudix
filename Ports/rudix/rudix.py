@@ -34,24 +34,22 @@ __credits__ = 'Ruda Moura, Leonardo Santagada'
 __license__ = 'BSD'
 __version__ = '@VERSION@'
 
-PROG_NAME = os.path.basename(sys.argv[0])
+PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
 def rudix_version():
     'Print version and exit'
     print 'Rudix Package Manager version %s' % __version__
     print __copyright__
-    sys.exit(0)
 
 def usage():
     'Print help and exit'
     print __doc__
-    sys.exit(0)
 
 def root_required():
     'Check for root and pass or exit if not'
     if os.getuid() != 0:
-        print >> sys.stderr, '%s: this operation requires root privileges'%PROG_NAME
+        print >> sys.stderr, '%s: this operation requires root privileges'%PROGRAM_NAME
         sys.exit(1)
 
 def communicate(args):
@@ -255,15 +253,17 @@ def main(argv=None):
     try:
         opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:RS:vV:Kf:n:u")
     except getopt.error, msg:
-        print >> sys.stderr, '%s: %s'%(PROG_NAME, msg)
+        print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
         sys.exit(2)
     # option processing
     for option, value in opts:
         if option == '-h':
             usage()
+            sys.exit(0)
         if option == '-v':
             rudix_version()
+            sys.exit(0)
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':
