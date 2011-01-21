@@ -16,7 +16,10 @@ class RudixTest(unittest.TestCase):
 
     def test_normalization(self):
         self.assertEqual( normalize('rudix'), 'org.rudix.pkg.rudix' )
+        self.assertEqual( normalize('org.rudix.pkg.rudix'),
+                          'org.rudix.pkg.rudix' )
         self.assertEqual( denormalize('org.rudix.pkg.rudix'), 'rudix' )
+        self.assertEqual( denormalize('rudix'), 'rudix' )
 
 if __name__ == '__main__':
     unittest.main()
