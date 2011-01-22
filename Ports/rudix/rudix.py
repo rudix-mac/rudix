@@ -26,7 +26,9 @@ import sys
 import os
 import getopt
 import tempfile
+import re
 from subprocess import Popen, PIPE, call
+from urllib2 import urlopen
 
 __author__ = 'Ruda Moura'
 __copyright__ = 'Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>'
@@ -195,18 +197,32 @@ def version_compare(v1, v2):
     if v2.endswith('-0'): v2 = v2[:-2]
     return cmp(LooseVersion(v1), LooseVersion(v2))
 
-def find_net_info(pkg):
-    'Search the download page for versions of pkg'
-    from urllib2 import urlopen
-    import re
+def get_versions_for_package(pkg):
+    'Get a list of available versions for pkg'
     pkg = denormalize(pkg)
-    cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s'%pkg).read()
-    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
-    versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
+    content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
+    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))' % pkg, content)
+    versions = sorted(list(set(urls)),
+                      cmp=lambda x, y: version_compare(x[1], y[1]))
     if len(versions) == 0:
         return None
     else:
-        return versions[-1]
+        return versions
+
+def get_latest_version_of_package(pkg):
+    versions = get_versions_for_package(pkg)
+    return versions[-1]
+
+def find_net_info(pkg):
+    'Search the download page for versions of pkg'
+#     pkg = denormalize(pkg)
+#     cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s'%pkg).read()
+#     urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
+#     versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
+#     if len(versions) == 0:
+#         return None
+#     else:
+#         return versions[-1]
 
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
@@ -232,7 +248,8 @@ def net_install_package(pkg, net_info):
 
 def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
-    net_info = find_net_info(pkg)
+    #net_info = find_net_info(pkg)
+    net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
     if net_info is None:
         print "Package '%s' not found online"%pkg
