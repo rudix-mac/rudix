@@ -66,6 +66,23 @@ def is_package_installed(pkg):
             return True
     return False
 
+def is_package_with_version_installed(pkg, version):
+    'Test if pkg with version is installed'
+    pkg = normalize(pkg)
+    current = None
+    out = communicate(['pkgutil', '--pkg-info', pkg])
+    for line in out:
+        if line.startswith('version: '):
+            current = line[len('version: '):]
+        if line.startswith('install-time: '):
+            break
+    if current == None:
+        return False
+    if version_compare(current, version) == 0:
+        return True
+    else:
+        return False
+
 def get_packages():
     'Get a list of packages installed'
     out = communicate(['pkgutil', '--pkgs=' + PREFIX + '*'])
