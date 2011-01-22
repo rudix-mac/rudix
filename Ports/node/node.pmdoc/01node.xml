@@ -2,7 +2,7 @@
 <pkgref spec="1.12" uuid="B8A01275-7650-4166-AF0B-E16BAF0D4985">
   <config>
     <identifier>org.rudix.pkg.nodejs</identifier>
-    <version>0.3.4</version>
+    <version>0.3.6</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

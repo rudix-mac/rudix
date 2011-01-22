@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">node-0.3.4/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">node-0.3.4/README</resource>
+      <resource relative="true" mod="true" type="license">node-0.3.6/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">node-0.3.6/README</resource>
     </locale>
   </resources>
   <flags/>
