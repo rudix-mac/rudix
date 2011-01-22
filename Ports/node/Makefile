@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Node.JS $(VERSION)
 NAME=		node
-VERSION=	0.3.4
-REVISION=	0
+VERSION=	0.3.6
+REVISION=	0.i386
 URL=		http://nodejs.org/dist/
 SOURCE=		$(NAME)-v$(VERSION).tar.gz
 
