@@ -2,7 +2,7 @@
 
 '''Rudix Package Manager -- RPM ;D
 
-Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
+Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
 List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
@@ -12,6 +12,7 @@ List all installed packages (package-id) unless options are given, like:
   -i    Install package (download if not a file)
   -r    Remove package
   -R    Remove *all* Rudix packages installed (ask to confirm)
+  -s    List available versions for package-id
   -S    Search for <path> in all packages and print if matched
   -V    Verify package
   -K    Verify all installed packages
@@ -296,7 +297,7 @@ def main(argv=None):
         list_all_packages()
         sys.exit(0)
     try:
-        opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:RS:vV:Kf:n:u")
+        opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:Rs:S:vV:Kf:n:u")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
@@ -324,6 +325,8 @@ def main(argv=None):
             remove_package(normalize(value))
         if option == '-R':
             remove_all_packages()
+        if option == '-s':
+            print_versions_for_package(normalize(value))
         if option == '-S':
             search_in_packages(value)
         if option == '-V':
