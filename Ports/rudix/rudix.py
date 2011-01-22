@@ -91,6 +91,7 @@ def get_packages():
 
 def get_package_info(pkg):
     'Get information from pkg'
+    pkg = normalize(pkg)
     out = communicate(['pkgutil', '-v', '--pkg-info', pkg])
     version = None
     install_date = None
@@ -104,6 +105,7 @@ def get_package_info(pkg):
 
 def get_package_content(pkg):
     'Get a list of file names from pkg'
+    pkg = normalize(pkg)
     out = communicate(['pkgutil', '--files', pkg, '--only-files'])
     content = ['/'+line.strip() for line in out]
     return content
