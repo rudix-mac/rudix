@@ -142,6 +142,7 @@ def install_package(pkg):
 def remove_package(pkg):
     'Uninstall a pkg'
     root_required()
+    pkg = normalize(pkg)
     devnull = open('/dev/null')
     call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
     call(['pkgutil', '--forget', pkg], stderr=devnull)
@@ -173,6 +174,7 @@ def search_in_packages(path):
 
 def verify_package(pkg):
     'Verify pkg sanity'
+    pkg = normalize(pkg)
     call(['pkgutil', '--verify', pkg], stderr=PIPE)
 
 def verify_all_packages():
@@ -183,6 +185,7 @@ def verify_all_packages():
 def fix_package(pkg):
     'Try to fix permissions and groups of pkg'
     root_required()
+    pkg = normalize(pkg)
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
 def version_compare(v1, v2):
