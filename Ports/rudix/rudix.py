@@ -213,17 +213,6 @@ def get_latest_version_of_package(pkg):
     versions = get_versions_for_package(pkg)
     return versions[-1]
 
-def find_net_info(pkg):
-    'Search the download page for versions of pkg'
-#     pkg = denormalize(pkg)
-#     cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s'%pkg).read()
-#     urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
-#     versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
-#     if len(versions) == 0:
-#         return None
-#     else:
-#         return versions[-1]
-
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
     root_required()
