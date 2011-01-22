@@ -57,6 +57,15 @@ def communicate(args):
     proc = Popen(args, stdout=PIPE, stderr=PIPE)
     return proc.communicate()[0].split('\n')[:-1]
 
+def is_package_installed(pkg):
+    'Test if pkg is installed'
+    pkg = normalize(pkg)
+    out = communicate(['pkgutil', '--pkg-info', pkg])
+    for line in out:
+        if line.startswith('install-time: '):
+            return True
+    return False
+
 def get_packages():
     'Get a list of packages installed'
     out = communicate(['pkgutil', '--pkgs=' + PREFIX + '*'])
