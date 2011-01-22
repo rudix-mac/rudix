@@ -246,7 +246,6 @@ def net_install_package(pkg, net_info):
 
 def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
-    #net_info = find_net_info(pkg)
     net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
     if net_info is None:
@@ -263,7 +262,7 @@ def update_all_packages():
     to_update = []
     # take each package, go to the internet and see if there is a newer version
     for pkg in get_packages():
-        net_info = find_net_info(pkg)
+        net_info = get_latest_version_of_package(pkg)
         version, install_date = get_package_info(pkg)
         if net_info is None or version_compare(version, net_info[2]) >= 0:
             continue
