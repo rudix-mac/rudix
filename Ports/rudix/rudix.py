@@ -213,6 +213,14 @@ def get_latest_version_of_package(pkg):
     versions = get_versions_for_package(pkg)
     return versions[-1]
 
+def print_versions_for_package(pkg):
+    versions = get_versions_for_package(pkg)
+    for version in versions:
+        name = version[1]
+        if name.endswith('.dmg'):
+            name = name[:name.index('.dmg')]
+        print name
+
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
     root_required()
