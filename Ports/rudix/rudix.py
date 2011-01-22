@@ -228,8 +228,9 @@ def net_install_package(pkg, net_info):
                 disk_path = l.split()[0]
             if 'Apple_HFS' in l:
                 volume_path = l.split()[2]
-
-        install_package(os.path.join(volume_path, denormalize(pkg)+'.pkg'))
+        filepath = os.path.join(volume_path, denormalize(pkg) + '.pkg')
+        if os.path.exists(filepath):
+            install_package(filepath)
         print 'Unmounting image', volume_path
         call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
     finally:
