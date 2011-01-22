@@ -1,7 +1,7 @@
 .\"
-.\" Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
+.\" Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 .\"
-.Dd October 19, 2010
+.Dd January 22, 2011
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -14,6 +14,7 @@
 .Op Fl r Ar package-id
 .Op Fl I Ar package-id
 .Op Fl L Ar package-id
+.Op Fl s Ar package-id
 .Op Fl S Ar path
 .Op Fl V Ar package-id
 .Op Fl f Ar package-id
@@ -21,17 +22,11 @@
 .Sh DESCRIPTION
 The
 .Nm
-utility is a package manager therefore you can install, remove,
-print information about packages and search files under the Rudix
-domain. Also, it is possible to verify the integrity of installed
-packages and to fix (repair) packages.
+utility is a package manager therefore you can install, remove, print information about packages and search files under the Rudix domain. It is possible to verify the integrity of installed packages and to fix (repair) packages.
 .Pp
-Every package has a unique identification (called package-id) and
-you may refer to Rudix packages by using its full package-id or
-with its alias. For example, org.rudix.pkg.ccache is a package-id
-and ccache is an alias.
+Every package has a unique identification (called package-id) and you may refer to Rudix packages by using its full package-id or with its alias. For example, org.rudix.pkg.ccache is a package-id and ccache is an alias.
 .Pp
-Without any arguments
+Without any arguments provided,
 .Nm
 prints a list of packages installed.
 .Pp
@@ -42,9 +37,9 @@ Print help on screen and exit.
 .It Fl v
 Print version and copyright information.
 .It Fl l
-Print a list of packages with package id, version and install date.
+Print a list of packages with package-id, version and install date.
 .It Fl i Ar pkg-path
-Install package. This operation requires root privileges.
+Install package. If pkg-path is not a file then try to install the package from the Internet. This operation requires root privileges.
 .It Fl n Ar package-id
 Remote install package. This operation requires root privileges.
 .It Fl u
@@ -57,6 +52,8 @@ Remove all installed packages. This operation requires root privileges.
 Print package-id version and install date.
 .It Fl L Ar package-id
 List package files.
+.It Fl s Ar package-id
+List available versions for package-id.
 .It Fl S Ar path
 Print all packages that contais path.
 .It Fl V Ar package-id
