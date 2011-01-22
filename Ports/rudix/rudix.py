@@ -29,7 +29,7 @@ import tempfile
 from subprocess import Popen, PIPE, call
 
 __author__ = 'Ruda Moura'
-__copyright__ = 'Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>'
+__copyright__ = 'Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>'
 __credits__ = 'Ruda Moura, Leonardo Santagada'
 __license__ = 'BSD'
 __version__ = '@VERSION@'
@@ -56,6 +56,15 @@ def communicate(args):
     'Call a process and return its stdout data as a list of strings'
     proc = Popen(args, stdout=PIPE, stderr=PIPE)
     return proc.communicate()[0].split('\n')[:-1]
+
+def is_package_installed(pkg):
+    pkg = normalize(pkg)
+    'Test if pkg is installed'
+    out = communicate(['pkgutil', '--pkg-info', pkg])
+    for line in out:
+        if line.startswith('install-time: '):
+            return True
+    return False
 
 def get_packages():
     'Get a list of packages installed'
