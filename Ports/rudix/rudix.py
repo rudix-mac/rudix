@@ -206,13 +206,16 @@ def get_versions_for_package(pkg):
     versions = sorted(list(set(urls)),
                       cmp=lambda x, y: version_compare(x[1], y[1]))
     if len(versions) == 0:
-        return None
+        return []
     else:
         return versions
 
 def get_latest_version_of_package(pkg):
     versions = get_versions_for_package(pkg)
-    return versions[-1]
+    if versions:
+        return versions[-1]
+    else:
+        return []
 
 def print_versions_for_package(pkg):
     versions = get_versions_for_package(pkg)
@@ -224,7 +227,6 @@ def print_versions_for_package(pkg):
 
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
-    root_required()
     net_url, net_filename, net_version = net_info
     print 'Downloading', net_url
     tempf, file_path = tempfile.mkstemp()
@@ -249,7 +251,7 @@ def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
     net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
-    if net_info is None:
+    if net_info == []:
         print "Package '%s' not found online"%pkg
         return
     if version is not None and version_compare(version, net_info[2]) >= 0:
