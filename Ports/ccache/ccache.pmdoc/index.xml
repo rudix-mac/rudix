@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>ccache</title>
-    <build>/Users/ruda/Desktop/Compiler Cache.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -20,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">ccache-3.1.1/LICENSE.txt</resource>
-      <resource relative="true" mod="true" type="readme">ccache-3.1.1/README.txt</resource>
+      <resource relative="true" mod="true" type="license">ccache-3.1.4/LICENSE.txt</resource>
+      <resource relative="true" mod="true" type="readme">ccache-3.1.4/README.txt</resource>
     </locale>
   </resources>
   <flags/>

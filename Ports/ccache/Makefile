@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		ccache $(VERSION)
 NAME=		ccache
-VERSION=	3.1.1
+VERSION=	3.1.4
 REVISION=	0
 URL=		http://samba.org/ftp/ccache/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
