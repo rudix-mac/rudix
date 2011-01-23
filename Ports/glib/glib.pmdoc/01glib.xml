@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="DE365B64-4482-4BF9-B1D2-B3ADB495CEBD">
+<pkgref spec="1.12" uuid="3D4B17CC-8B01-48ED-8BE3-DFEC38D52075">
   <config>
     <identifier>org.rudix.pkg.glib</identifier>
-    <version>1.0</version>
+    <version>2.27.92</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>identifier</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01glib-contents.xml</file-list>
