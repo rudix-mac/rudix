@@ -6,13 +6,16 @@ include ../../Library/Rules.mk
 
 TITLE=		Midnight Commander $(VERSION)
 NAME=		mc
-VERSION=	4.7.1
-REVISION=	1
+VERSION=	4.7.5
+REVISION=	0
 URL=		http://www.midnight-commander.org/downloads/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 DEPENDS+=	/usr/local/lib/libglib-2.0.la
 DEPENDS+=	/usr/local/lib/libintl.la
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
@@ -44,5 +47,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

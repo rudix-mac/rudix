@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkgref spec="1.12" uuid="56EF5844-0227-40BF-BB4E-B07DB9EB2403">
   <config>
-    <identifier>org.rudix.pkg.midnightCommander</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.mc</identifier>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
