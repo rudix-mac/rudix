@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="6805C2ED-38A5-4106-9047-B85D90411410">
   <config>
     <identifier>org.rudix.pkg.astyle</identifier>
-    <version>1.24</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
