@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU MP $(VERSION)
 NAME=		gmp
 VERSION=	5.0.1
-REVISION=	0
+REVISION=	0.i386
 URL=		ftp://ftp.gmplib.org/pub/gmp-$(VERSION)/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
@@ -19,7 +22,6 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-	patch -d $(BUILDDIR) < $(PORTDIR)/remove_amd.patch
 	touch prep
 
 build: prep $(DEPENDS)

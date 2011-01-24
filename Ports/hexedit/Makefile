@@ -6,9 +6,12 @@ include ../../Library/Rules.mk
 
 NAME=		hexedit
 VERSION=	1.2.12
-REVISION=	4
+REVISION=	5
 URL=		http://www.chez.com/prigaux/
 SOURCE=		$(NAME)-$(VERSION).src.tgz
+
+README=		$(PORTDIR)/ReadMe.txt
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -28,5 +31,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

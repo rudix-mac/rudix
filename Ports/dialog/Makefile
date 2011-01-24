@@ -5,7 +5,7 @@
 include ../../Library/Rules.mk
 
 NAME=		dialog
-VERSION=	1.1-20100428
+VERSION=	1.1-20110118
 REVISION=	0
 URL=		ftp://invisible-island.net/dialog/
 SOURCE=		$(NAME)-$(VERSION).tgz

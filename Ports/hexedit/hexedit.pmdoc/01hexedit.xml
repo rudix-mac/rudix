@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="D2E09F04-E1B5-4E9A-BE89-E5CE2D6AE51F">
   <config>
     <identifier>org.rudix.pkg.hexedit</identifier>
-    <version>1.2.12</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

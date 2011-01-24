@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="gmp-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/gmp/gmp-install" m="false" t="file">
+  <f n="gmp-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/gmp/gmp-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="gmp.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
@@ -10,13 +10,9 @@
           <f n="gmpxx.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libgmp.3.5.0.dylib" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
-          <f n="libgmp.3.dylib" o="root" g="wheel" p="41469">
+          <f n="libgmp.10.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libgmp.a" o="root" g="wheel" p="33204">
@@ -28,10 +24,7 @@
           <f n="libgmp.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libgmpxx.4.1.0.dylib" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
-          <f n="libgmpxx.4.dylib" o="root" g="wheel" p="41469">
+          <f n="libgmpxx.4.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libgmpxx.a" o="root" g="wheel" p="33204">
@@ -43,7 +36,6 @@
           <f n="libgmpxx.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -57,9 +49,7 @@
               <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
             <f n="gmp.info" o="root" g="wheel" p="33204">
@@ -71,11 +61,8 @@
             <f n="gmp.info-2" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
-        <mod>mode</mod>
       </f>
     </f>
   </f>
