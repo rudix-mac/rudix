@@ -12,7 +12,7 @@ URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)_$(VERSION)_src_all.tar.bz2
 
 README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+LICENSE=	$(BUILDDIR)/DOCS/License.txt
 
 prep: retrieve
 	tar jxvf $(SOURCE)
