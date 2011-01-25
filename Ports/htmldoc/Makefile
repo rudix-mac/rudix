@@ -1,13 +1,16 @@
 # Convert HTML pages to PDF/PS format
 # http://www.htmldoc.org/
 
+include ../../Library/Rules.mk
+
 NAME=		htmldoc
 VERSION=	1.8.27
-REVISION=	11
-URL=		http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/htmldoc/$(VERSION)/
+REVISION=	12
+URL=		http://ftp.easysw.com/pub/htmldoc/$(VERSION)/
 SOURCE=		$(NAME)-$(VERSION)-source.tar.bz2
 
-include ../../Library/Rules.mk
+README=		$(BUILDDIR)/README.txt
+LICENSE=	$(BUILDDIR)/COPYING.txt
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -32,5 +35,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

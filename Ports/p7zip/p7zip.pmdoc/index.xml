@@ -20,8 +20,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">p7zip-9.04/DOCS/copying.txt</resource>
-      <resource relative="true" mod="true" type="readme">p7zip-9.04/README</resource>
+      <resource relative="true" mod="true" type="license">p7zip-9.13/DOCS/copying.txt</resource>
+      <resource relative="true" mod="true" type="readme">p7zip-9.13/README</resource>
     </locale>
   </resources>
   <flags/>
