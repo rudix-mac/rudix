@@ -32,7 +32,7 @@ from subprocess import Popen, PIPE, call
 from urllib2 import urlopen
 
 __author__ = 'Ruda Moura'
-__copyright__ = 'Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>'
+__copyright__ = 'Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>'
 __credits__ = 'Ruda Moura, Leonardo Santagada'
 __license__ = 'BSD'
 __version__ = '@VERSION@'
@@ -267,7 +267,7 @@ def update_all_packages():
     for pkg in get_packages():
         net_info = get_latest_version_of_package(pkg)
         version, install_date = get_package_info(pkg)
-        if net_info is None or version_compare(version, net_info[2]) >= 0:
+        if net_info == [] or version_compare(version, net_info[2]) >= 0:
             continue
         print '{0:25} {1:10} will be updated to version {2}'.format(denormalize(pkg), version, net_info[2])
         to_update.append((pkg, net_info))
