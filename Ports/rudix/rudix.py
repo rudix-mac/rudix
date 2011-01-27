@@ -193,9 +193,9 @@ def fix_package(pkg):
 
 def version_compare(v1, v2):
     from distutils.version import LooseVersion
-    # remove the release if it is 0
-    if v1.endswith('-0'): v1 = v1[:-2]
-    if v2.endswith('-0'): v2 = v2[:-2]
+    # Threat revision as part of version
+    v1 = v1.replace('-', '.')
+    v2 = v2.replace('-', '.')
     return cmp(LooseVersion(v1), LooseVersion(v2))
 
 def get_versions_for_package(pkg):
@@ -204,7 +204,7 @@ def get_versions_for_package(pkg):
     content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
     urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))' % pkg, content)
     versions = sorted(list(set(urls)),
-                      cmp=lambda x, y: version_compare(x[1], y[1]))
+                      cmp=lambda x, y: version_compare(x[2], y[2]))
     if len(versions) == 0:
         return []
     else:
