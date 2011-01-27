@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Rudix Package Manager $(VERSION)
 NAME=		rudix
-VERSION=	11.1.1
+VERSION=	11.1.2
 REVISION=	0
 
 README=		$(PORTDIR)/ReadMe.text
