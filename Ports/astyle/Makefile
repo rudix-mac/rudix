@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Artistic Style $(VERSION)
 NAME=		astyle
-VERSION=	1.24
-REVISION=	1
+VERSION=	2.01
+REVISION=	0
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)_$(VERSION)_macosx.tar.gz
 
@@ -17,7 +17,6 @@ LICENSE=	$(BUILDDIR)/doc/license.html
 prep: retrieve
 	tar zxvf $(SOURCE)
 	mv $(NAME) $(NAME)-$(VERSION)
-	patch -d $(BUILDDIR)/build/mac < $(PORTDIR)/makefile.patch
 	touch prep
 
 build: prep

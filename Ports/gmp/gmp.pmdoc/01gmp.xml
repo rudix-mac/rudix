@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="39F7133A-0554-4F01-8113-132AD78D6653">
+<pkgref spec="1.12" uuid="C11F0290-60FD-456C-A568-AF4D94DE320F">
   <config>
-    <identifier>org.rudix.pkg.gmp</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.gmp.pkg</identifier>
+    <version>5.0.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -15,8 +15,8 @@
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>parent</mod>
-    <mod>identifier</mod>
     <mod>version</mod>
+    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01gmp-contents.xml</file-list>

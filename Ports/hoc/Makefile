@@ -1,13 +1,16 @@
 # From Kernighan and Pike: High Order Calculator
 # http://cm.bell-labs.com/cm/cs/upe/index.html
 
+include ../../Library/Rules.mk
+
 NAME=		hoc
 VERSION=	1.1
-REVISION=	5
+REVISION=	6
 URL=		http://netlib.bell-labs.com/~bwk/
 SOURCE=		$(NAME).sh
 
-include ../../Library/Rules.mk
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/README
 
 prep: retrieve
 	mkdir $(BUILDDIR)

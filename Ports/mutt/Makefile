@@ -1,14 +1,18 @@
-# Tty-based e-mail client
+# The Mutt E-Mail Client
 # http://www.mutt.org/
 # GPL
 
 include ../../Library/Rules.mk
 
+TITLE=		Mutt $(VERSION)
 NAME=		mutt
 VERSION=	1.5.21
-REVISION=	1
+REVISION=	2
 URL=		ftp://ftp.mutt.org/mutt/devel/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYRIGHT
 
 ifdef WITHOUT_NLS
 NLS=		--disable-nls
@@ -19,6 +23,11 @@ endif
 
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+
+ifdef WITH_HCACHE
+DEPENDS=	/usr/local/lib/libdb.a
+HCACHE=		--enable-hcache
 endif
 
 prep: retrieve
@@ -32,8 +41,7 @@ build: prep $(DEPENDS)
 		--disable-dependency-tracking \
 		--with-docdir=/usr/local/share/doc/mutt  \
 		--enable-pop --enable-imap --enable-smtp \
-		--enable-hcache \
-		--with-ssl $(NLS) ; $(make)
+		--with-ssl $(NLS) $(HCACHE) ; $(make)
 	touch build
 
 install: build

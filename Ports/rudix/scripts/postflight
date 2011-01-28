@@ -1,5 +1,6 @@
 #!/bin/sh
 
-[ -d /etc/paths.d ] && echo "/usr/local/sbin" > /etc/paths.d/rudix
+[ -f /usr/local/sbin/rudix.py ] && rm -f /usr/local/sbin/rudix.py
+[ -f /etc/paths.d/rudix] && rm -f /etc/paths.d/rudix
 
 exit 0

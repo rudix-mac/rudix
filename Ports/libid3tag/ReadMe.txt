@@ -1,3 +1,0 @@
-Library for reading ID3 tags
-
-libid3tag is a library for reading and (eventually) writing ID3 tags, both ID3v1 and the various versions of ID3v2.

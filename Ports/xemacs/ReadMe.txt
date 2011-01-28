@@ -1,3 +1,0 @@
-Heavily customizable and extensible editor
-
-XEmacs is a highly customizable open source text editor and application development system. It is protected under the GNU Public License and related to other versions of Emacs, in particular GNU Emacs. XEmacs has an active development community numbering in the hundreds, and runs on Windows 95 and NT, Linux and nearly every other version of Unix in existence. Support for XEmacs has been supplied by Sun Microsystems, University of Illinois, Lucid, ETL/Electrotechnical Laboratory, Amdahl Corporation, BeOpen, and others, as well as the unpaid time of a great number of individual developers.

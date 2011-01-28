@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		GNU httptunnel $(VERSION)
 NAME=		httptunnel
 VERSION=	3.3
-REVISION=	1
+REVISION=	2
 URL=		http://www.nocrew.org/software/httptunnel/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -28,5 +31,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

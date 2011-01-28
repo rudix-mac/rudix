@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		GNU MP $(VERSION)
 NAME=		gmp
-VERSION=	4.3.2
-REVISION=	0
-URL=		http://ftp.gnu.org/gnu/gmp
+VERSION=	5.0.1
+REVISION=	0.i386
+URL=		ftp://ftp.gmplib.org/pub/gmp-$(VERSION)/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
@@ -19,9 +22,6 @@ endif
 
 prep: retrieve
 	tar jxvf $(SOURCE)
-ifdef STATIC_ONLY
-	patch -d $(BUILDDIR)/tests < $(PORTDIR)/gmp-4.2.1-static-IntelMac.patch
-endif
 	touch prep
 
 build: prep $(DEPENDS)

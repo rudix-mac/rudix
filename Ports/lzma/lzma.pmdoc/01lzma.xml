@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="12FC0123-A287-429C-B839-6D0499C92C22">
   <config>
     <identifier>org.rudix.pkg.lzma</identifier>
-    <version>4.32.7</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

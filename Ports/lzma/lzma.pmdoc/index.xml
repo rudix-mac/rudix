@@ -20,8 +20,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">lzma-4.32.7/COPYING.GPLv3</resource>
-      <resource relative="true" mod="true" type="readme">ReadMe.txt</resource>
+      <resource relative="true" mod="true" type="license">COPYING</resource>
+      <resource relative="true" mod="true" type="readme">lzma-4.32.7/README</resource>
     </locale>
   </resources>
   <flags/>

@@ -2,7 +2,7 @@
 
 '''Rudix Package Manager -- RPM ;D
 
-Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
+Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
 List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
@@ -12,6 +12,7 @@ List all installed packages (package-id) unless options are given, like:
   -i    Install package (download if not a file)
   -r    Remove package
   -R    Remove *all* Rudix packages installed (ask to confirm)
+  -s    List available versions for package-id
   -S    Search for <path> in all packages and print if matched
   -V    Verify package
   -K    Verify all installed packages
@@ -26,38 +27,64 @@ import sys
 import os
 import getopt
 import tempfile
+import re
 from subprocess import Popen, PIPE, call
+from urllib2 import urlopen
 
 __author__ = 'Ruda Moura'
-__copyright__ = 'Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>'
+__copyright__ = 'Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>'
 __credits__ = 'Ruda Moura, Leonardo Santagada'
 __license__ = 'BSD'
 __version__ = '@VERSION@'
 
-PROG_NAME = os.path.basename(sys.argv[0])
+PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
 def rudix_version():
     'Print version and exit'
     print 'Rudix Package Manager version %s' % __version__
     print __copyright__
-    sys.exit(0)
 
 def usage():
     'Print help and exit'
     print __doc__
-    sys.exit(0)
 
 def root_required():
     'Check for root and pass or exit if not'
     if os.getuid() != 0:
-        print >> sys.stderr, '%s: this operation requires root privileges'%PROG_NAME
+        print >> sys.stderr, '%s: this operation requires root privileges'%PROGRAM_NAME
         sys.exit(1)
 
 def communicate(args):
     'Call a process and return its stdout data as a list of strings'
     proc = Popen(args, stdout=PIPE, stderr=PIPE)
     return proc.communicate()[0].split('\n')[:-1]
+
+def is_package_installed(pkg):
+    'Test if pkg is installed'
+    pkg = normalize(pkg)
+    out = communicate(['pkgutil', '--pkg-info', pkg])
+    for line in out:
+        if line.startswith('install-time: '):
+            return True
+    return False
+
+def is_package_with_version_installed(pkg, version):
+    'Test if pkg with version is installed'
+    pkg = normalize(pkg)
+    current = None
+    out = communicate(['pkgutil', '--pkg-info', pkg])
+    for line in out:
+        if line.startswith('version: '):
+            current = line[len('version: '):]
+        if line.startswith('install-time: '):
+            break
+    if current == None:
+        return False
+    if version_compare(current, version) == 0:
+        return True
+    else:
+        return False
 
 def get_packages():
     'Get a list of packages installed'
@@ -67,6 +94,7 @@ def get_packages():
 
 def get_package_info(pkg):
     'Get information from pkg'
+    pkg = normalize(pkg)
     out = communicate(['pkgutil', '-v', '--pkg-info', pkg])
     version = None
     install_date = None
@@ -80,6 +108,7 @@ def get_package_info(pkg):
 
 def get_package_content(pkg):
     'Get a list of file names from pkg'
+    pkg = normalize(pkg)
     out = communicate(['pkgutil', '--files', pkg, '--only-files'])
     content = ['/'+line.strip() for line in out]
     return content
@@ -116,6 +145,7 @@ def install_package(pkg):
 def remove_package(pkg):
     'Uninstall a pkg'
     root_required()
+    pkg = normalize(pkg)
     devnull = open('/dev/null')
     call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
     call(['pkgutil', '--forget', pkg], stderr=devnull)
@@ -147,6 +177,7 @@ def search_in_packages(path):
 
 def verify_package(pkg):
     'Verify pkg sanity'
+    pkg = normalize(pkg)
     call(['pkgutil', '--verify', pkg], stderr=PIPE)
 
 def verify_all_packages():
@@ -157,31 +188,56 @@ def verify_all_packages():
 def fix_package(pkg):
     'Try to fix permissions and groups of pkg'
     root_required()
+    pkg = normalize(pkg)
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
 def version_compare(v1, v2):
     from distutils.version import LooseVersion
-    # remove the release if it is 0
-    if v1.endswith('-0'): v1 = v1[:-2]
-    if v2.endswith('-0'): v2 = v2[:-2]
-    return cmp(LooseVersion(v1), LooseVersion(v2))
+    # remove the release
+    ver_rel_re = re.compile('([^-]+)(?:-(\d+)$)?')
+    v1, r1 = ver_rel_re.match(v1).groups()
+    v2, r2 = ver_rel_re.match(v2).groups()
 
-def find_net_info(pkg):
-    'Search the download page for versions of pkg'
-    from urllib2 import urlopen
-    import re
-    pkg = denormalize(pkg)
-    cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=%s'%pkg).read()
-    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([^-]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
-    versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
-    if len(versions) == 0:
-        return None
+    v_cmp = cmp(LooseVersion(v1), LooseVersion(v2))
+    if v_cmp == 0:
+        # if the same version then compare the release
+        if r1 is None:
+            r1 = 0
+        if r2 is None:
+            r2 = 0
+        return cmp(int(r1), int(r2))
     else:
+        return v_cmp
+
+def get_versions_for_package(pkg):
+    'Get a list of available versions for pkg'
+    pkg = denormalize(pkg)
+    content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
+    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)\.dmg))' % pkg, content)
+    versions = sorted(list(set(urls)),
+                      cmp=lambda x, y: version_compare(x[1], y[1]))
+    if len(versions) == 0:
+        return []
+    else:
+        return versions
+
+def get_latest_version_of_package(pkg):
+    versions = get_versions_for_package(pkg)
+    if versions:
         return versions[-1]
+    else:
+        return []
+
+def print_versions_for_package(pkg):
+    versions = get_versions_for_package(pkg)
+    for version in versions:
+        name = version[1]
+        if name.endswith('.dmg'):
+            name = name[:name.index('.dmg')]
+        print name
 
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
-    root_required()
     net_url, net_filename, net_version = net_info
     print 'Downloading', net_url
     tempf, file_path = tempfile.mkstemp()
@@ -194,8 +250,9 @@ def net_install_package(pkg, net_info):
                 disk_path = l.split()[0]
             if 'Apple_HFS' in l:
                 volume_path = l.split()[2]
-
-        install_package(os.path.join(volume_path, denormalize(pkg)+'.pkg'))
+        filepath = os.path.join(volume_path, denormalize(pkg) + '.pkg')
+        if os.path.exists(filepath):
+            install_package(filepath)
         print 'Unmounting image', volume_path
         call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
     finally:
@@ -203,9 +260,9 @@ def net_install_package(pkg, net_info):
 
 def net_install_command(pkg):
     'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
-    net_info = find_net_info(pkg)
+    net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
-    if net_info is None:
+    if net_info == []:
         print "Package '%s' not found online"%pkg
         return
     if version is not None and version_compare(version, net_info[2]) >= 0:
@@ -219,9 +276,9 @@ def update_all_packages():
     to_update = []
     # take each package, go to the internet and see if there is a newer version
     for pkg in get_packages():
-        net_info = find_net_info(pkg)
+        net_info = get_latest_version_of_package(pkg)
         version, install_date = get_package_info(pkg)
-        if net_info is None or version_compare(version, net_info[2]) >= 0:
+        if net_info == [] or version_compare(version, net_info[2]) >= 0:
             continue
         print '{0:25} {1:10} will be updated to version {2}'.format(denormalize(pkg), version, net_info[2])
         to_update.append((pkg, net_info))
@@ -253,17 +310,19 @@ def main(argv=None):
         list_all_packages()
         sys.exit(0)
     try:
-        opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:RS:vV:Kf:n:u")
+        opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:Rs:S:vV:Kf:n:u")
     except getopt.error, msg:
-        print >> sys.stderr, '%s: %s'%(PROG_NAME, msg)
+        print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
         sys.exit(2)
     # option processing
     for option, value in opts:
         if option == '-h':
             usage()
+            sys.exit(0)
         if option == '-v':
             rudix_version()
+            sys.exit(0)
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':
@@ -279,6 +338,8 @@ def main(argv=None):
             remove_package(normalize(value))
         if option == '-R':
             remove_all_packages()
+        if option == '-s':
+            print_versions_for_package(normalize(value))
         if option == '-S':
             search_in_packages(value)
         if option == '-V':

@@ -6,19 +6,19 @@ include ../../Library/Rules.mk
 
 TITLE=		Rudix Package Manager $(VERSION)
 NAME=		rudix
-VERSION=	3.0
+VERSION=	11.1.2
 REVISION=	0
 
-README=		$(PORTDIR)/ReadMe.txt
-LICENSE=	$(PORTDIR)/License.txt
+README=		$(PORTDIR)/ReadMe.text
+LICENSE=	$(PORTDIR)/License.text
 
 build: rudix.pdf
 	touch build
 
 install: build
-	install -d $(INSTALLDIR)/usr/local/sbin
-	sed "s/@VERSION@/$(VERSION)/" $(PORTDIR)/rudix.py > $(INSTALLDIR)/usr/local/sbin/rudix
-	chmod 755 $(INSTALLDIR)/usr/local/sbin/rudix
+	install -d $(INSTALLDIR)/usr/local/bin
+	sed "s/@VERSION@/$(VERSION)/" $(PORTDIR)/rudix.py > $(INSTALLDIR)/usr/local/bin/rudix
+	chmod 755 $(INSTALLDIR)/usr/local/bin/rudix
 	install -d $(INSTALLDIR)/usr/local/share/man/man1
 	install -m 644 rudix.1 $(INSTALLDIR)/usr/local/share/man/man1
 	install -d $(INSTALLDOCDIR)

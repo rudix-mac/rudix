@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="B323CBD9-6A75-40AB-8021-9941C72E4355">
   <config>
     <identifier>org.rudix.pkg.rudix</identifier>
-    <version>3.0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

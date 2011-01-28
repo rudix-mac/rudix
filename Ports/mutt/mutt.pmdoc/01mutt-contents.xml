@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mutt-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/mutt/mutt-install" m="false" t="file">
+  <f n="mutt-install" o="ruda" g="staff" p="16877" pt="mutt-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
@@ -10,7 +10,7 @@
           <f n="mutt" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="mutt_dotlock" o="root" g="mail" p="33277">
+          <f n="mutt_dotlock" o="root" g="mail" p="34301">
             <mod>mode</mod>
             <mod>group</mod>
           </f>
@@ -181,7 +181,6 @@
                   <f n="iconv.solaris-2.7.rc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="Mush.rc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -219,7 +218,6 @@
                 <f n="Tin.rc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="security.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -236,7 +234,6 @@
               <f n="VERSION" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
@@ -456,6 +453,9 @@
                 <mod>mode</mod>
               </f>
               <f n="muttbug.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="smime_keys.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
             </f>

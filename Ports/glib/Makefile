@@ -6,13 +6,16 @@ include ../../Library/Rules.mk
 
 TITLE=		GLib $(VERSION)
 NAME=		glib
-VERSION=	2.23.5
+VERSION=	2.27.92
 REVISION=	0
-URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.23
+URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.27
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
 DEPENDS+=	/usr/local/bin/pkg-config
 DEPENDS+=	/usr/local/lib/libintl.la
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 ifdef WITH_STATIC_NLS
 LDFLAGS+=	-framework CoreFoundation -liconv

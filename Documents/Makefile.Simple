@@ -1,0 +1,34 @@
+# Makefile for a new generic port
+# http://rudix.org/
+# GPL, LGPL, BSD, Apache, etc.
+
+include ../../Library/Rules.mk
+
+TITLE=		Template $(VERSION)
+NAME=		template
+VERSION=	1.2.3
+REVISION=	0
+URL=		http://path/to/download/
+SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/LICENSE
+
+prep: retrieve
+	tar zxf $(SOURCE)
+	touch prep
+
+build: prep $(DEPENDS)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
+	touch build
+
+install: build
+	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
+	install -d $(INSTALLDOCDIR)
+	install -m 644 $(README) $(INSTALLDOCDIR)
+	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
+	touch install
+
+test: install
+	cd $(BUILDDIR) ; make check
+	touch test

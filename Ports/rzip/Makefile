@@ -1,16 +1,17 @@
-# $Id: Makefile,v 1.2 2009/03/22 00:30:06 ruda Exp $
-
 # File compressor with a high compression ratio
 # http://rzip.samba.org/
 # GPL
 
+include ../../Library/Rules.mk
+
 NAME=		rzip
 VERSION=	2.1
-REVISION=	13
+REVISION=	14
 URL=		http://rzip.samba.org/ftp/rzip/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-include ../../Library/Rules.mk
+README=		$(PORTDIR)/ReadMe.txt
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -31,5 +32,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

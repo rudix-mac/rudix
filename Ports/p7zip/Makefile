@@ -6,10 +6,13 @@ include ../../Library/Rules.mk
 
 TITLE=		P7ZIP $(VERSION)
 NAME=		p7zip
-VERSION=	9.04
+VERSION=	9.13
 REVISION=	0.i386
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)_$(VERSION)_src_all.tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/DOCS/License.txt
 
 prep: retrieve
 	tar jxvf $(SOURCE)
@@ -37,6 +40,8 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/p7zip/7z*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/p7zip/7z*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

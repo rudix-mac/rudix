@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="C0A94E67-2EF8-4444-945E-DB806198E7FA">
   <config>
     <identifier>org.rudix.pkg.p7zip</identifier>
-    <version>4.65</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

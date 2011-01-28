@@ -6,9 +6,12 @@ include ../../Library/Rules.mk
 
 NAME=		lzma
 VERSION=	4.32.7
-REVISION=	2
+REVISION=	3
 URL=		http://tukaani.org/lzma/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(PORTDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
