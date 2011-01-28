@@ -172,7 +172,7 @@ def find_net_info(pkg):
     import re
     pkg = denormalize(pkg)
     cont = urlopen('http://code.google.com/p/rudix/downloads/list?q=%s'%pkg).read()
-    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([0-9.]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
+    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([^-]+(?:-[0-9]+)?(?:.i386)?)\.dmg))'%pkg, cont)
     versions = sorted(list(set(urls)), cmp=lambda x,y: version_compare(x[1],y[1]))
     if len(versions) == 0:
         return None
