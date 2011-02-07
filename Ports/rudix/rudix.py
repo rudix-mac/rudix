@@ -244,7 +244,7 @@ def net_install_package(pkg, net_info):
     try:
         call(['curl', '-f', '-o', file_path, '-C', '-', '-L', '-#', net_url])
         print 'Mounting downloaded image file', file_path
-        out = communicate(['hdiutil', 'attach', file_path])
+        out = communicate(['hdiutil', 'attach', '-noautoopen', file_path])
         for l in out:
             if 'Apple_partition_scheme' in l:
                 disk_path = l.split()[0]
