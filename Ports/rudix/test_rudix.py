@@ -19,6 +19,12 @@ class RudixTest(unittest.TestCase):
         # -0 is the same as an empty release number)
         self.assertEqual(version_compare('1.0.1', '1.0.1-0'), 0)
 
+    def test_sort_version(self):
+        l = ['1.0', '1.0-2', '1.0.1', '1.2', '1.7', '1.7.1']
+        l2 = sorted(l, cmp=version_compare)
+        for i in zip(l,l2):
+            self.assertEqual(i[0], i[1])
+
     def test_communicate(self):
         self.assertEqual(communicate(['echo', 'rudix']), ['rudix'])
 
