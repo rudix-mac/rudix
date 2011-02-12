@@ -41,12 +41,12 @@ PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
 def rudix_version():
-    'Print version and exit'
+    'Print current Rudix version'
     print 'Rudix Package Manager version %s' % __version__
     print __copyright__
 
 def usage():
-    'Print help and exit'
+    'Print help'
     print __doc__
 
 def root_required():
@@ -192,6 +192,7 @@ def fix_package(pkg):
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
 def version_compare(v1, v2):
+    'Compare software version'
     from distutils.version import LooseVersion
     # remove the release
     ver_rel_re = re.compile('([^-]+)(?:-(\d+)$)?')
@@ -222,6 +223,7 @@ def get_versions_for_package(pkg):
         return versions
 
 def get_latest_version_of_package(pkg):
+    'Get the latest version of pkg'
     versions = get_versions_for_package(pkg)
     if versions:
         return versions[-1]
@@ -229,6 +231,7 @@ def get_latest_version_of_package(pkg):
         return []
 
 def print_versions_for_package(pkg):
+    'Print all versions available for pkg'
     versions = get_versions_for_package(pkg)
     for version in versions:
         name = version[1]
