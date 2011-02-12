@@ -45,6 +45,7 @@
             </f>
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="gio-unix-2.0" o="root" g="wheel" p="16893">
@@ -671,19 +672,14 @@
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="gio" o="root" g="wheel" p="16893">
-            <f n="modules" o="root" g="wheel" p="16893">
-              <mod>mode</mod>
-            </f>
-            <mod>mode</mod>
+            <f n="modules" o="root" g="wheel" p="16893"/>
           </f>
           <f n="glib-2.0" o="root" g="wheel" p="16893">
             <f n="include" o="root" g="wheel" p="16893">
               <f n="glibconfig.h" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="libgio-2.0.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -957,6 +953,9 @@
               <f n="GDBusConnection.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="GDBusError.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="GDBusMessage.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -1053,9 +1052,6 @@
               <f n="gio-GConverterOutputstream.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="gio-GDBusError.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="gio-GFileAttribute.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -1063,9 +1059,6 @@
                 <mod>mode</mod>
               </f>
               <f n="gio-GIOScheduler.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="gio-GSrvTarget.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="gio-hierarchy.html" o="root" g="wheel" p="33204">
@@ -1189,6 +1182,9 @@
                 <mod>mode</mod>
               </f>
               <f n="GSocketService.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GSrvTarget.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="GTcpConnection.html" o="root" g="wheel" p="33204">
@@ -1925,10 +1921,10 @@
           </f>
           <f n="gdb" o="root" g="wheel" p="16893">
             <f n="auto-load" o="root" g="wheel" p="16893">
-              <f n="libglib-2.0.so.0.2792.0-gdb.py" o="root" g="wheel" p="33277">
+              <f n="libglib-2.0.so.0.2793.0-gdb.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="libgobject-2.0.so.0.2792.0-gdb.py" o="root" g="wheel" p="33277">
+              <f n="libgobject-2.0.so.0.2793.0-gdb.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
             </f>
