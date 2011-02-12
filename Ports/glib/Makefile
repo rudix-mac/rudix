@@ -87,11 +87,14 @@ endif
 	touch install
 
 test: install
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/{gdbus,gio-querymodules,glib-compile-schemas,glib-genmarshal,gobject-query,gsettings,gtester}) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 ifndef STATIC_ONLY
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 endif
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR)/i386/tests ; ./testglib
+	cd $(BUILDDIR)/i386/tests ; make test
+	cd $(BUILDDIR)/x86_64/tests ; make test
 	touch test
