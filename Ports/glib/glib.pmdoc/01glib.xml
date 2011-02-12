@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="3D4B17CC-8B01-48ED-8BE3-DFEC38D52075">
   <config>
     <identifier>org.rudix.pkg.glib</identifier>
-    <version>2.27.92</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

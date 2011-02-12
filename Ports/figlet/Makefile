@@ -5,10 +5,10 @@
 include ../../Library/Rules.mk
 
 NAME=		figlet
-VERSION=	2.2.2
-REVISION=	1
+VERSION=	2.2.4
+REVISION=	0
 URL=		ftp://ftp.figlet.org/pub/figlet/program/unix/
-SOURCE=		$(NAME)222.tar.gz
+SOURCE=		$(NAME)224.tar.gz
 
 prep: retrieve
 	tar zxvf $(SOURCE)

@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		Node.JS $(VERSION)
 NAME=		node
-VERSION=	0.3.6
-REVISION=	0.i386
+VERSION=	0.3.7
+REVISION=	0
 URL=		http://nodejs.org/dist/
 SOURCE=		$(NAME)-v$(VERSION).tar.gz
 
@@ -20,7 +20,10 @@ prep: retrieve
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ;./configure ; $(make)
+	cd $(BUILDDIR) ; \
+	./configure --dest-cpu=ia32 ; $(make)
+	cd $(BUILDDIR) ; mv build build-i386 ; make clean ; \
+	./configure --dest-cpu=x64 ; $(make)
 	touch build
 
 install: build
