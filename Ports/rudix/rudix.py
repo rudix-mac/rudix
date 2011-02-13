@@ -362,8 +362,6 @@ def repl():
             continue
         if line in ['quit', 'exit', 'end', 'bye', 'halt']:
             break
-        if line in ['commands']:
-            print translate_commands.nameoptions.keys()
         argv = [None] + line.split() # fake ARGV
         main(argv)
 
