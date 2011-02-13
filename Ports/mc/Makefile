@@ -12,6 +12,7 @@ URL=		http://www.midnight-commander.org/downloads/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 DEPENDS+=	/usr/local/lib/libglib-2.0.la
+DEPENDS+=	/usr/local/lib/libgmodule-2.0.la
 DEPENDS+=	/usr/local/lib/libintl.la
 
 README=		$(BUILDDIR)/README
