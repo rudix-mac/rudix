@@ -271,6 +271,7 @@ def net_install_command(pkg):
     if version is not None and version_compare(version, net_info[2]) >= 0:
         print 'Latest version of package %s(%s) already installed'%(pkg, version)
         return
+    root_required()
     net_install_package(pkg, net_info)
     print 'All done'
 
