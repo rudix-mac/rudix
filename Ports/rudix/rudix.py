@@ -2,7 +2,9 @@
 
 '''Rudix Package Manager -- RPM ;D
 
-Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <pkg-path>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
+Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <package-id>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
+rudix [help|version|list|remove-all|verify-all|update] [info <package-id>|files <package-id>|install <package-id>|remove <package-id>|search <package-id>|owner <path>|verify <package-id>|fix <package-id>]
+
 List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
@@ -19,6 +21,7 @@ List all installed packages (package-id) unless options are given, like:
   -f    Fix (repair) package
   -n    Download and install package (remote install)
   -u    Download and install all updated packages (remote update)
+  -z    Interactive mode (type exit to quit)
 
 Where <package-id> is either org.rudix.pkg.<name> or <name>.
 '''
@@ -49,11 +52,17 @@ def usage():
     'Print help'
     print __doc__
 
+def is_root():
+    'Test for root account'
+    if os.getuid() == 0:
+        return True
+    else:
+        return False
+
 def root_required():
-    'Check for root and pass or exit if not'
-    if os.getuid() != 0:
-        print >> sys.stderr, '%s: this operation requires root privileges'%PROGRAM_NAME
-        sys.exit(1)
+    'Requires root message'
+    print >> sys.stderr, '%s: this operation requires root privileges' % PROGRAM_NAME
+    return 1
 
 def communicate(args):
     'Call a process and return its stdout data as a list of strings'
@@ -139,12 +148,15 @@ def list_package_files(pkg):
 
 def install_package(pkg):
     'Install a local pkg'
-    root_required()
-    call(['installer', '-pkg', pkg, '-target', '/'], stderr=PIPE)
+    if is_root():
+        call(['installer', '-pkg', pkg, '-target', '/'], stderr=PIPE)
+    else:
+        root_required()
 
 def remove_package(pkg):
     'Uninstall a pkg'
-    root_required()
+    if is_root() == False:
+        return root_required()
     pkg = normalize(pkg)
     devnull = open('/dev/null')
     call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
@@ -153,7 +165,8 @@ def remove_package(pkg):
 
 def remove_all_packages():
     'Uninstall all packages'
-    root_required()
+    if is_root == False:
+        return root_required()
     print "Using this option will remove *all* Rudix's packages!"
     print "Are you sure you want to proceed? (answer 'yes' or 'y' to confirm)"
     answer = raw_input().strip()
@@ -187,7 +200,8 @@ def verify_all_packages():
 
 def fix_package(pkg):
     'Try to fix permissions and groups of pkg'
-    root_required()
+    if is_root() == False:
+        return root_required()
     pkg = normalize(pkg)
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
@@ -271,9 +285,11 @@ def net_install_command(pkg):
     if version is not None and version_compare(version, net_info[2]) >= 0:
         print 'Latest version of package %s(%s) already installed'%(pkg, version)
         return
-    root_required()
-    net_install_package(pkg, net_info)
-    print 'All done'
+    if is_root():
+        net_install_package(pkg, net_info)
+        print 'All done'
+    else:
+        root_required()
 
 def update_all_packages():
     'Try to update the current base of packages'
@@ -290,10 +306,12 @@ def update_all_packages():
         print 'All packages are up to date'
         return
     # if there is packages to update you need to be root
-    root_required()
-    for pkg, net_info in to_update:
-        net_install_package(pkg, net_info)
-    print 'All done'
+    if is_root():
+        for pkg, net_info in to_update:
+            net_install_package(pkg, net_info)
+        print 'All done'
+    else:
+        root_required()
 
 def normalize(pkg):
     'Transform pkg in full pkg-id (with PREFIX)'
@@ -312,16 +330,19 @@ def translate_commands(args):
     nameoptions = {
         'help': '-h',
         'version': '-v',
-        'all': '-l',
+        'list': '-l', 'ls': '-l', 'dir': '-l',
         'info': '-I', 'about': '-I',
         'install': '-i',
         'uninstall': '-r', 'remove': '-r',
-        'files': '-L', 'list': '-L',
+        'uninstall-all': '-R', 'remove-all': '-R',
+        'files': '-L', 'content': '-L',
         'search': '-s', 'versions': '-s',
         'owner': '-S',
         'verify': '-V', 'check': '-V',
+        'verify-all': '-K',
         'fix': '-f',
         'update': '-u', 'upgrade': '-u',
+        'repl': '-z', 'interactive': '-z',
     }
     res = []
     for arg in args:
@@ -331,27 +352,42 @@ def translate_commands(args):
             res.append(arg)
     return res
 
+def repl():
+    'The interactive mode (read-eval-print-loop)'
+    rudix_version()
+    while True:
+        print ']',
+        line = raw_input().strip()
+        if not line:
+            continue
+        if line in ['quit', 'exit', 'end', 'bye', 'halt']:
+            break
+        if line in ['commands']:
+            print translate_commands.nameoptions.keys()
+        argv = [None] + line.split() # fake ARGV
+        main(argv)
+
 def main(argv=None):
     if argv is None:
         argv = sys.argv
     if len(argv) == 1:
         list_all_packages()
-        sys.exit(0)
+        return 0
     args = translate_commands(argv[1:])
     try:
-        opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:u")
+        opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
-        sys.exit(2)
+        return 2
     # option processing
     for option, value in opts:
         if option == '-h':
             usage()
-            sys.exit(0)
+            return 0
         if option == '-v':
             rudix_version()
-            sys.exit(0)
+            return 0
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':
@@ -381,6 +417,8 @@ def main(argv=None):
             net_install_command(normalize(value))
         if option == '-u':
             update_all_packages()
+        if option == '-z':
+            repl()
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
