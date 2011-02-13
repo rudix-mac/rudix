@@ -306,14 +306,39 @@ def denormalize(pkg):
         pkg = pkg[len(PREFIX):]
     return pkg
 
+def translate_commands(args):
+    'Translate command names to options'
+    nameoptions = {
+        'help': '-h',
+        'version': '-v',
+        'all': '-l',
+        'info': '-I', 'about': '-I',
+        'install': '-i',
+        'uninstall': '-r', 'remove': '-r',
+        'files': '-L', 'list': '-L',
+        'search': '-s', 'versions': '-s',
+        'owner': '-S',
+        'verify': '-V', 'check': '-V',
+        'fix': '-f',
+        'update': '-u', 'upgrade': '-u',
+    }
+    res = []
+    for arg in args:
+        if arg in nameoptions:
+            res.append(nameoptions[arg])
+        else:
+            res.append(arg)
+    return res
+
 def main(argv=None):
     if argv is None:
         argv = sys.argv
     if len(argv) == 1:
         list_all_packages()
         sys.exit(0)
+    args = translate_commands(argv[1:])
     try:
-        opts, args = getopt.getopt(argv[1:], "hI:lL:i:r:Rs:S:vV:Kf:n:u")
+        opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:u")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h'
