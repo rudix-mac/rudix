@@ -6,9 +6,12 @@ include ../../Library/Rules.mk
 TITLE=		unRAR $(VERSION)
 NAME=		unrar
 VERSION=	3.7.8
-REVISION=	5
+REVISION=	6
 URL=		http://www.rarlab.com/rar/
 SOURCE=		$(NAME)src-$(VERSION).tar.gz
+
+README=		$(BUILDDIR)/readme.txt
+LICENSE=	$(BUILDDIR)/license.txt
 
 prep: retrieve
 	tar zxvf $(SOURCE)
@@ -29,5 +32,6 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test
