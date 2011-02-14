@@ -6,30 +6,29 @@ include ../../Library/Rules.mk
 
 TITLE=		Lua $(VERSION)
 NAME=		lua
-VERSION=	5.1.4
-REVISION=	4
-URL=		http://www.lua.org/ftp/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+VERSION=	5.2.0
+REVISION=	0
+URL=		http://www.lua.org/work/
+SOURCE=		$(NAME)-$(VERSION)-alpha.tar.gz
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(PORTDIR)/COPYRIGHT
 
 prep: retrieve
-	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR)/etc < $(PORTDIR)/lua.pc.patch
-	patch -d $(BUILDDIR)/src < $(PORTDIR)/patch-lua-5.1.4-2.patch
+	tar zxf $(SOURCE)
+	mv lua-$(VERSION)-alpha $(NAME)-$(VERSION)
 	touch prep
 
 build: prep
-	cd $(BUILDDIR) ; \
-	$(make)	CFLAGS="$(CFLAGS) -DLUA_USE_MACOSX -DLUA_USE_READLINE" \
-		MYLDFLAGS="$(LDFLAGS)" macosx
+	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" MYLDFLAGS="$(LDFLAGS)" macosx
 	touch build
 
 install: build
 	cd $(BUILDDIR) ; \
 	make INSTALL_TOP=$(INSTALLDIR)/usr/local INSTALL_MAN=$(INSTALLDIR)/usr/local/share/man/man1 install
-	install -d $(INSTALLDIR)/usr/local/lib/pkgconfig
-	install -m 644 $(BUILDDIR)/etc/lua.pc $(INSTALLDIR)/usr/local/lib/pkgconfig
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,HISTORY,INSTALL,README} $(INSTALLDOCDIR)
+	install -m 644 $(PORTDIR)/COPYRIGHT $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/README $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
 	rm -f $(INSTALLDOCDIR)/*.1
 	strip $(INSTALLDIR)/usr/local/bin/*
