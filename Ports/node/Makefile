@@ -4,14 +4,14 @@
 
 include ../../Library/Rules.mk
 
-TITLE=		Node.JS $(VERSION)
+TITLE=		Node.js $(VERSION)
 NAME=		node
-VERSION=	0.3.7
+VERSION=	0.4.0
 REVISION=	0
 URL=		http://nodejs.org/dist/
 SOURCE=		$(NAME)-v$(VERSION).tar.gz
 
-README=		$(BUILDDIR)/README
+README=		$(BUILDDIR)/README.md
 LICENSE=	$(BUILDDIR)/LICENSE
 
 prep: retrieve
@@ -20,10 +20,16 @@ prep: retrieve
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	./configure --dest-cpu=ia32 ; $(make)
-	cd $(BUILDDIR) ; mv build build-i386 ; make clean ; \
-	./configure --dest-cpu=x64 ; $(make)
+	for a in ia32 x64 ; do \
+		cd $(BUILDDIR) ; make clean ; \
+		./configure --dest-cpu=$$a ; $(make) ; \
+		mv build build-$$a ; \
+	done
+	lipo -create \
+		-arch i386 $(BUILDDIR)/build-ia32/default/node \
+		-arch x86_64 $(BUILDDIR)/build-x64/default/node \
+		-output $(BUILDDIR)/build-ia32/default/node
+	cd $(BUILDDIR) ; ln -sf build-ia32 build
 	touch build
 
 install: build
@@ -40,5 +46,6 @@ install: build
 	touch install
 
 test: install
-	cd $(BUILDDIR) ; make test
+	lipo $(INSTALLDIR)/usr/local/bin/node -verify_arch i386 x86_64
+	#cd $(BUILDDIR) ; make test
 	touch test

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="node-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/nodejs/node-install" m="false" t="file">
+  <f n="node-install" o="ruda" g="staff" p="16877" pt="node-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
@@ -58,7 +58,6 @@
             <f n="v8stdint.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
@@ -209,14 +208,11 @@
                 <f n="xlcxx.py" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Utils.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
             <f n="nodejs.pc" o="root" g="wheel" p="33204">
@@ -269,7 +265,6 @@
                     <f n="style.css" o="root" g="wheel" p="33204">
                       <mod>mode</mod>
                     </f>
-                    <mod>mode</mod>
                   </f>
                   <f n="buffers.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
@@ -278,6 +273,9 @@
                     <mod>mode</mod>
                   </f>
                   <f n="crypto.html" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="debugger.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="dgram.html" o="root" g="wheel" p="33204">
@@ -296,6 +294,9 @@
                     <mod>mode</mod>
                   </f>
                   <f n="http.html" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="https.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="index.html" o="root" g="wheel" p="33204">
@@ -352,7 +353,6 @@
                   <f n="vm.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="appendix_1.markdown" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -372,6 +372,9 @@
                 <f n="crypto.markdown" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="debugger.markdown" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="dgram.markdown" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -388,6 +391,9 @@
                   <mod>mode</mod>
                 </f>
                 <f n="http.markdown" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="https.markdown" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="index.markdown" o="root" g="wheel" p="33204">
@@ -444,7 +450,6 @@
                 <f n="vm.markdown" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="api_assets" o="root" g="wheel" p="16893">
                 <f n="sh.css" o="root" g="wheel" p="33204">
@@ -459,18 +464,11 @@
                 <f n="style.css" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="AUTHORS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="changelog_footer.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="changelog_header.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="cla.html" o="root" g="wheel" p="33204">
@@ -491,7 +489,7 @@
               <f n="pipe.css" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="README" o="root" g="wheel" p="33204">
+              <f n="README.md" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="sh_javascript.min.js" o="root" g="wheel" p="33204">
@@ -512,7 +510,9 @@
               <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
+              <f n="v0.4_announcement.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
