@@ -10,10 +10,13 @@
 include ../../Library/Rules.mk
 
 NAME=		epic5
-VERSION=	1.0
-REVISION=	1
+VERSION=	1.1.2
+REVISION=	0
 URL=		http://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYRIGHT
 
 # Need this to compile with Perl
 CFLAGS+=	-arch ppc
@@ -25,7 +28,7 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) ; make
+	$(configure) ; $(make)
 	touch build
 
 install: build
@@ -39,6 +42,8 @@ install: build
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/*"
+	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test

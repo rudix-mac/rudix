@@ -20,8 +20,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">epic5-1.0/COPYRIGHT</resource>
-      <resource relative="true" mod="true" type="readme">epic5-1.0/doc/EPIC_ABOUT</resource>
+      <resource relative="true" mod="true" type="license">epic5-1.1.2/COPYRIGHT</resource>
+      <resource relative="true" mod="true" type="readme">epic5-1.1.2/doc/EPIC_ABOUT</resource>
     </locale>
   </resources>
   <flags/>

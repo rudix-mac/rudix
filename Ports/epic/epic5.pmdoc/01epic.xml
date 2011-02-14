@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="775D8C6B-0114-498A-901A-1AA46B9B32DD">
+<pkgref spec="1.12" uuid="96D37302-2C73-42D8-8660-E7F62135E974">
   <config>
     <identifier>org.rudix.pkg.epic5</identifier>
-    <version>1.0</version>
+    <version>1.1.2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,10 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
     <mod>version</mod>
   </config>
   <contents>
