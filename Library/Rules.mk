@@ -1,10 +1,11 @@
 # -*- mode: makefile -*-
 #
-# Common Rules and Macros
-# Copyright (c) 2005-2010 Ruda Moura <ruda@rudix.org>
+# Rules.mk - Common Rules and Macros
+#
+# Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	20101220
+BUILDSYSTEM=	20110214
 
 VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
@@ -54,10 +55,10 @@ help:
 	@echo "  prep		explode source, apply patches, etc"
 	@echo "  build		configure software and then build it"
 	@echo "  install	install software into directory $(INTALLDIR)"
+	@echo "  all		do prep, build and install"
 	@echo "  pkg		create a package (.pkg)"
 	@echo "  dmg		create a disk image (.dmg)"
 	@echo "  installpkg	install the package created"
-	@echo "  all		do prep, build and install"
 	@echo "  installclean	local installation clean-up"
 	@echo "  clean		build and local installation clean-up"
 	@echo "  distclean	clean-up  many things but keep sources"
@@ -68,7 +69,7 @@ retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	touch retrieve
 
-# Note: rules prep, build, install must be defined in your Makefile!
+# Rules prep, build and install must be defined in your Makefile!
 
 pkg: install
 	$(PACKAGEMAKER) \

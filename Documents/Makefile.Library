@@ -1,4 +1,4 @@
-# Summary for a Library
+# The summary for a Library
 # http://rudix.org/
 # GPL, LGPL, BSD, Apache, etc.
 
@@ -27,14 +27,10 @@ endif
 
 prep: retrieve
 	tar zxf $(SOURCE)
-	#tar jxf $(SOURCE)
-	#unzip $(SOURCE)
-	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" $(configure) $(CONFIG_OPTS) ; $(make)
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" $(configure) $(CONFIG_OPTS) ; $(make)
 	#env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) $(CONFIG_OPTS) ; $(make)
 	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)"
 	touch build

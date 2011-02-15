@@ -1,10 +1,10 @@
-# Makefile for a new generic port
+# Starting point for new ports
 # http://rudix.org/
 # GPL, LGPL, BSD, Apache, etc.
 
 include ../../Library/Rules.mk
 
-TITLE=		Generic Template $(VERSION)
+TITLE=		Template $(VERSION)
 NAME=		template
 VERSION=	1.2.3
 REVISION=	0
@@ -30,9 +30,6 @@ LICENSE=	$(BUILDDIR)/LICENSE
 #LDFLAGS+=	-framework CoreFoundation -liconv
 #endif
 
-# Sometimes required to access FTP sites
-#FETCH+=	--disable-epsv
-
 #
 # Preparing to build: extract source and apply patches
 #
@@ -40,15 +37,16 @@ prep: retrieve
 	tar zxf $(SOURCE)
 	#tar jxf $(SOURCE)
 	#unzip $(SOURCE)
-	#cd $(BUILDDIR) ; patch < $(PORTDIR)/some.patch
+	#patch -d $(BUILDDIR) < $(PORTDIR)/some.patch
+	#for x in $(PORTDIR)/patches/* ; do \
+	#	patch -d $(BUILDDIR) < $$x ; done
 	touch prep
 
 #
 # Configure and build from sources
 #
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) $(CONFIG_OPTS) ; $(make)
 	#cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="($LDFLAGS)"
 	touch build
