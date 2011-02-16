@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="13041CD4-EEC4-4663-852C-598D930F6AA7">
   <config>
     <identifier>org.rudix.pkg.bzr</identifier>
-    <version>2.2.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

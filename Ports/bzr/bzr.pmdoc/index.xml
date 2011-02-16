@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">bzr-2.2.1/COPYING.txt</resource>
-      <resource relative="true" mod="true" type="readme">bzr-2.2.1/README</resource>
+      <resource relative="true" mod="true" type="license">bzr-2.3.0/COPYING.txt</resource>
+      <resource relative="true" mod="true" type="readme">bzr-2.3.0/README</resource>
     </locale>
   </resources>
   <flags/>

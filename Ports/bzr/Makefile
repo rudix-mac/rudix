@@ -6,9 +6,9 @@ include ../../Library/Rules.mk
 
 TITLE=		Bazaar $(VERSION)
 NAME=		bzr
-VERSION=	2.2.1
+VERSION=	2.3.0
 REVISION=	0
-URL=		http://launchpad.net/bzr/2.2/$(VERSION)/+download/
+URL=		http://launchpad.net/bzr/2.3/$(VERSION)/+download/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
 README=		$(BUILDDIR)/README
