@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Midnight Commander $(VERSION)
 NAME=		mc
-VERSION=	4.7.5
+VERSION=	4.7.5.1
 REVISION=	0
 URL=		http://www.midnight-commander.org/downloads/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
