@@ -5,7 +5,7 @@
 include ../../Library/Rules.mk
 
 NAME=		git
-VERSION=	1.7.3.2
+VERSION=	1.7.4.1
 REVISION=	0
 URL=		http://www.kernel.org/pub/software/scm/git/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
@@ -69,4 +69,3 @@ test: install
 
 realdistclean: distclean
 	rm -f retrieve $(SOURCE) git-manpages-$(VERSION).tar.bz2
-
