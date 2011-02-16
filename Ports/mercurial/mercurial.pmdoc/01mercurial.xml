@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="C5A519CB-5B35-467A-A382-927E1E98CF71">
   <config>
     <identifier>org.rudix.pkg.mercurial</identifier>
-    <version>1.7.1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

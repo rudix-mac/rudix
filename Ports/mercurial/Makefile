@@ -6,7 +6,7 @@ include ../../Library/Rules.mk
 
 TITLE=		Mercurial $(VERSION)
 NAME=		mercurial
-VERSION=	1.7.1
+VERSION=	1.7.5
 REVISION=	0
 URL=		http://www.selenic.com/mercurial/release/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
