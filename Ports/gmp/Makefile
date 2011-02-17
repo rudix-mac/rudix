@@ -7,7 +7,7 @@ include ../../Library/Rules.mk
 TITLE=		GNU MP $(VERSION)
 NAME=		gmp
 VERSION=	5.0.1
-REVISION=	0.i386
+REVISION=	1
 URL=		ftp://ftp.gmplib.org/pub/gmp-$(VERSION)/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
@@ -25,7 +25,9 @@ prep: retrieve
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) $(CONFIG_OPTS) --enable-cxx ; $(make)
+	cd $(BUILDDIR) ; env ABI=32 \
+	$(configure) $(CONFIG_OPTS) \
+		--enable-cxx ; $(make)
 	touch build
 
 install: build
