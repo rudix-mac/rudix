@@ -1,1 +1,28 @@
-<pkgref spec="1.12" uuid="B127AA01-A594-419A-B0B8-3360F09C6476"><config><identifier>org.rudix.pkg.libevent</identifier><version>1.4.14b</version><description/><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">libevent-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"/><mod>version</mod><mod>installFrom.path</mod><mod>parent</mod><mod>installTo</mod><mod>identifier</mod></config><contents><file-list>01libevent-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="E7A09279-B35C-4B9C-B585-795EF07D1C54">
+  <config>
+    <identifier>org.rudix.pkg.libevent</identifier>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">libevent-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+  </config>
+  <contents>
+    <file-list>01libevent-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>

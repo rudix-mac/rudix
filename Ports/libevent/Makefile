@@ -6,8 +6,8 @@ include ../../Library/Rules.mk
 
 TITLE=		libevent $(VERSION)
 NAME=		libevent
-VERSION=	1.4.14b
-REVISION=	1
+VERSION=	2.0.10
+REVISION=	0
 URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
 
@@ -25,7 +25,8 @@ prep: retrieve
 
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIG_OPTS); $(make)
+	$(configure) $(CONFIG_OPTS) \
+		--disable-dependency-tracking ; $(make)
 	touch build
 
 install: build
