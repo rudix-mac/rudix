@@ -12,7 +12,7 @@ URL=		http://monkey.org/~provos/
 SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
 
 README=		$(BUILDDIR)/README
-LICENSE=	$(PORTDIR)/LICENSE
+LICENSE=	$(BUILDDIR)/LICENSE
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
@@ -32,8 +32,7 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{ChangeLog,README} $(INSTALLDOCDIR)
-	install -m 644 $(PORTDIR)/LICENSE $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/{ChangeLog,README,LICENSE} $(INSTALLDOCDIR)
 ifndef STATIC_ONLY
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
 endif
