@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E7A09279-B35C-4B9C-B585-795EF07D1C54">
+<pkgref spec="1.12" uuid="BEAEBBEA-B595-46F4-BCCC-A8A3BF91B51B">
   <config>
-    <identifier>org.rudix.pkg.libevent</identifier>
+    <identifier>org.rudix.pkg.tmux</identifier>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">libevent-install</installFrom>
+    <installFrom relative="true" mod="true">tmux-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
@@ -14,11 +14,11 @@
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>parent</mod>
   </config>
   <contents>
-    <file-list>01libevent-contents.xml</file-list>
+    <file-list>01tmux-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
