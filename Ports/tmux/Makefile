@@ -11,6 +11,8 @@ REVISION=	0
 URL=		http://downloads.sourceforge.net/tmux/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
+DEPENDS=	/usr/local/lib/libevent.la
+
 README=		$(BUILDDIR)/NOTES
 LICENSE=	$(PORTDIR)/LICENSE
 
