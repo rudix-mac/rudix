@@ -28,6 +28,7 @@ install: build
 	touch install
 
 test: install
+	python test_rudix.py
 	touch test
 
 rudix.pdf: rudix.1
