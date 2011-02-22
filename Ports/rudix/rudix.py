@@ -365,13 +365,8 @@ def repl():
         argv = [None] + line.split() # fake ARGV
         main(argv)
 
-def main(argv=None):
-    if argv is None:
-        argv = sys.argv
-    if len(argv) == 1:
-        list_all_packages()
-        return 0
-    args = translate_commands(argv[1:])
+def process(args):
+    'Process args and execute some action'
     try:
         opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
@@ -417,6 +412,16 @@ def main(argv=None):
             update_all_packages()
         if option == '-z':
             repl()
+    return args
+
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv
+    if len(argv) == 1:
+        list_all_packages()
+        return 0
+    args = translate_commands(argv[1:])
+    process(args)
 
 if __name__ == "__main__":
     sys.exit(main())
