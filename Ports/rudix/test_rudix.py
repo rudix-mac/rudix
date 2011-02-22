@@ -35,6 +35,13 @@ class RudixTest(unittest.TestCase):
         self.assertEqual( denormalize('org.rudix.pkg.rudix'), 'rudix' )
         self.assertEqual( denormalize('rudix'), 'rudix' )
 
+    def test_process(self):
+        self.assertEqual( process(['-h']), 0 )
+        self.assertEqual( process(['-v']), 0 )
+        self.assertEqual( process(['-a']), 2 ) # option -a not used
+        self.assertEqual( process(['help']), 0 )
+        self.assertEqual( process(['version']), 0 )
+        self.assertEqual( process(['foo']), 2 ) # command  foo doesn't exists
 
 if __name__ == '__main__':
     unittest.main()
