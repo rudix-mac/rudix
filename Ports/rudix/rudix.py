@@ -43,6 +43,24 @@ __version__ = '@VERSION@'
 PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 
+NAME_OPTS = {
+    'help': '-h',
+    'version': '-v',
+    'list': '-l', 'ls': '-l', 'dir': '-l',
+    'info': '-I', 'about': '-I',
+    'install': '-i',
+    'uninstall': '-r', 'remove': '-r',
+    'uninstall-all': '-R', 'remove-all': '-R',
+    'files': '-L', 'content': '-L',
+    'search': '-s', 'versions': '-s',
+    'owner': '-S',
+    'verify': '-V', 'check': '-V',
+    'verify-all': '-K',
+    'fix': '-f',
+    'update': '-u', 'upgrade': '-u',
+    'repl': '-z', 'interactive': '-z',
+}
+
 def rudix_version():
     'Print current Rudix version'
     print 'Rudix Package Manager version %s' % __version__
@@ -325,33 +343,6 @@ def denormalize(pkg):
         pkg = pkg[len(PREFIX):]
     return pkg
 
-def translate_commands(args):
-    'Translate command names to options'
-    nameoptions = {
-        'help': '-h',
-        'version': '-v',
-        'list': '-l', 'ls': '-l', 'dir': '-l',
-        'info': '-I', 'about': '-I',
-        'install': '-i',
-        'uninstall': '-r', 'remove': '-r',
-        'uninstall-all': '-R', 'remove-all': '-R',
-        'files': '-L', 'content': '-L',
-        'search': '-s', 'versions': '-s',
-        'owner': '-S',
-        'verify': '-V', 'check': '-V',
-        'verify-all': '-K',
-        'fix': '-f',
-        'update': '-u', 'upgrade': '-u',
-        'repl': '-z', 'interactive': '-z',
-    }
-    res = []
-    for arg in args:
-        if arg in nameoptions:
-            res.append(nameoptions[arg])
-        else:
-            res.append(arg)
-    return res
-
 def repl():
     'The interactive mode (read-eval-print-loop)'
     rudix_version()
@@ -371,7 +362,7 @@ def process(args):
         opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
-        print >> sys.stderr, '\t for help use -h'
+        print >> sys.stderr, '\t for help use -h or help'
         return 2
     # option processing
     for option, value in opts:
@@ -412,7 +403,15 @@ def process(args):
             update_all_packages()
         if option == '-z':
             repl()
-    return args
+    if args:
+        try:
+            opt = NAME_OPTS[args[0]]
+        except KeyError, e:
+            print >> sys.stderr, "%s: unknown command %s"%(PROGRAM_NAME, e)
+            print >> sys.stderr, '\t for help use -h or help'
+            return 2
+        args[0] = opt
+        return process(args)
 
 def main(argv=None):
     if argv is None:
@@ -420,8 +419,7 @@ def main(argv=None):
     if len(argv) == 1:
         list_all_packages()
         return 0
-    args = translate_commands(argv[1:])
-    process(args)
+    return process(argv[1:])
 
 if __name__ == "__main__":
     sys.exit(main())
