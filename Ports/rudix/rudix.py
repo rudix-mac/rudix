@@ -2,8 +2,10 @@
 
 '''Rudix Package Manager -- RPM ;D
 
-Usage: rudix [-h|-v|-l|-R|-K|-u] [-I <package-id>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
-rudix [help|version|list|remove-all|verify-all|update] [info <package-id>|files <package-id>|install <package-id>|remove <package-id>|search <package-id>|owner <path>|verify <package-id>|fix <package-id>]
+Usage:
+rudix [help|version|list|remove-all|verify-all|update|interactive] [info <package-id>|files <package-id>|install <package-id>|remove <package-id>|search <package-id>|owner <path>|verify <package-id>|fix <package-id>]
+
+rudix [-h|-v|-l|-R|-K|-u|-z] [-I <package-id>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
 
 List all installed packages (package-id) unless options are given, like:
   -h    This help message

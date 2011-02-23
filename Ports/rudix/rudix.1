@@ -1,7 +1,7 @@
 .\"
 .\" Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 .\"
-.Dd February 13, 2011
+.Dd February 22, 2011
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -9,7 +9,7 @@
 .Nd Rudix Package Manager
 .Sh SYNOPSIS
 .Nm
-.Op Fl h | l | R | v | K | u | z
+.Op Fl h | v | l | R | K | u | z
 .Op Fl i Ar pkg-path
 .Op Fl r Ar package-id
 .Op Fl I Ar package-id
@@ -65,5 +65,9 @@ Fix (repair) package-id. This operation requires root privileges.
 .It Fl z
 Enter interactive mode (type exit to quit).
 .El
+.Sh COMMANDS
+The
+.Nm
+utility also accepts simple commands. These commands matches the same options seen above. The current list of commands are: help, version, list, remove-all, verify-all, update, interactive, info, files, install, remove, search, owner, verify, fix.
 .Sh SEE ALSO
 pkgutil(1), installer(8).
