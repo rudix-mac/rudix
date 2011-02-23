@@ -1,6 +1,8 @@
 import unittest
 from rudix import *
 
+# NOTICE: we will assume org.rudix.pkg.rudix is installed.
+
 class RudixTest(unittest.TestCase):
     def test_version_compare(self):
         self.assertEqual(version_compare('1.0', '2.0'), -1)
@@ -27,6 +29,21 @@ class RudixTest(unittest.TestCase):
 
     def test_communicate(self):
         self.assertEqual(communicate(['echo', 'rudix']), ['rudix'])
+
+    def test_is_package_installed(self):
+        self.assertEqual( is_package_installed('rudix'), True )
+        self.assertEqual( is_package_installed('rrrrr'), False )
+
+    def test_get_packages(self):
+        self.assertEqual( 'org.rudix.pkg.rudix' in get_packages(), True )
+        self.assertEqual( 'org.rudix.pkg.rrrrr' in get_packages(), False )
+
+    def test_get_package_info(self):
+        self.assertEqual( len(get_package_info('rudix')), 2 )
+
+    def test_get_package_content(self):
+        self.assertEqual(
+            '/usr/local/bin/rudix' in get_package_content('rudix'), True )
 
     def test_normalization(self):
         self.assertEqual( normalize('rudix'), 'org.rudix.pkg.rudix' )
