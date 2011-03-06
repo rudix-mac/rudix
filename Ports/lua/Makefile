@@ -44,5 +44,6 @@ test: install
 		lipo $$x -verify_arch i386 x86_64 ; done
 	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
+	otool -L $(INSTALLDIR)/usr/local/bin/lua | grep libedit
 	cd $(BUILDDIR) ; make test
 	touch test
