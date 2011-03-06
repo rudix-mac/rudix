@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="9F37DA3F-D3C0-4790-BF8B-88FC511D4C0E">
+<pkgref spec="1.12" uuid="3A8CF450-DC14-4425-B477-FCD217A94227">
   <config>
     <identifier>org.rudix.pkg.lua</identifier>
-    <version>5.2.0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +11,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>version</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01lua-contents.xml</file-list>

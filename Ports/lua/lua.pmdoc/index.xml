@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">COPYRIGHT</resource>
-      <resource relative="true" mod="true" type="readme">lua-5.2.0/README</resource>
+      <resource relative="true" mod="true" type="license">lua-5.1.4/COPYRIGHT</resource>
+      <resource relative="true" mod="true" type="readme">lua-5.1.4/README</resource>
     </locale>
   </resources>
   <flags/>
