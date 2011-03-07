@@ -7,9 +7,12 @@ include ../../Library/Rules.mk
 TITLE=		Vx32 $(VERSION)
 NAME=		vx32
 VERSION=	0.12
-REVISION=	2
+REVISION=	3
 URL=		http://pdos.csail.mit.edu/~baford/vm/release/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
+
+README=		$(BUILDDIR)/ADVENTURE
+LICENSE=	$(PORTDIR)/LICENSE
 
 prep: retrieve
 	tar jxvf $(SOURCE)
