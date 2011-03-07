@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="qemu-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/qemu/qemu-install" m="false" t="file">
+  <f n="qemu-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/qemu/qemu-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
-        <f n="bin" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
           <f n="qemu" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -11,6 +11,9 @@
             <mod>mode</mod>
           </f>
           <f n="qemu-io" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="qemu-nbd" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="qemu-system-arm" o="root" g="wheel" p="33277">
@@ -62,6 +65,14 @@
             <mod>mode</mod>
           </f>
         </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="qemu" o="root" g="wheel" p="16893">
+            <f n="target-x86_64.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="qemu" o="root" g="wheel" p="16893">
@@ -87,6 +98,7 @@
               <f n="qemu-nbd.8" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="qemu" o="root" g="wheel" p="16893">
@@ -94,6 +106,9 @@
               <mod>mode</mod>
             </f>
             <f n="bios.bin" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gpxe-eepro100-80861209.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="keymaps" o="root" g="wheel" p="16893">
@@ -228,9 +243,6 @@
             <f n="pxe-e1000.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-i82559er.bin" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
             <f n="pxe-ne2k_pci.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -243,13 +255,22 @@
             <f n="pxe-virtio.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="s390-zipl.rom" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="vgabios-cirrus.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="vgabios.bin" o="root" g="wheel" p="33204">
+            <f n="vgabios-qxl.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="video.x" o="root" g="wheel" p="33277">
+            <f n="vgabios-stdvga.bin" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vgabios-vmware.bin" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vgabios.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <mod>mode</mod>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A1F1EE06-6F85-4FF7-A6C1-575E4FA605A7">
+<pkgref spec="1.12" uuid="6F6AF196-14C0-4C86-9750-0513A223B4D6">
   <config>
     <identifier>org.rudix.pkg.qemu</identifier>
-    <version>1.0</version>
+    <version>0.14.0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,9 +12,10 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>identifier</mod>
     <mod>installFrom.path</mod>
     <mod>parent</mod>
-    <mod>identifier</mod>
+    <mod>version</mod>
     <mod>installTo</mod>
   </config>
   <contents>
