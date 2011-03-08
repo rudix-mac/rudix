@@ -1,0 +1,6 @@
+SIMH is licensed under a modified X-Windows license. This license
+allows more or less unrestricted use of the sources and binaries.
+The license is included with the documentation and is also included
+in every source module. The software packages are available under
+various terms and conditions; see the documentation included with
+each software package.
