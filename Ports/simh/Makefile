@@ -1,19 +1,19 @@
 # PDP, IBM 1401, Nova and other CPUs simulator
 # http://simh.trailing-edge.com/
-#
+# MIT
 
 include ../../Library/Rules.mk
 
 TITLE=		SIMH $(VERSION)
 NAME=		simh
 VERSION=	3.8.1
-REVISION=	0
+REVISION=	1
 URL=		http://simh.trailing-edge.com/sources/
 SOURCE=		$(NAME)v38-1.zip
 
 prep: retrieve
 	unzip -o -a -d $(BUILDDIR) $(SOURCE)
-	patch -d $(BUILDDIR) < simh-3.8.1-pcap.patch
+	patch -d $(BUILDDIR) < $(PORTDIR)/simh-3.8.1-pcap.patch
 	mkdir $(BUILDDIR)/BIN
 	touch prep
 
@@ -28,6 +28,9 @@ install: build
 	install -m 755 $(BUILDDIR)/BIN/* $(INSTALLDIR)/usr/local/bin
 	install -d $(INSTALLDOCDIR)
 	install -m 644 $(BUILDDIR)/*.txt $(INSTALLDOCDIR)
+	install -m 644 $(BUILDDIR)/*/*.txt $(INSTALLDOCDIR)
+	install -m 644 $(PORTDIR)/LICENSE.txt $(INSTALLDOCDIR)
+	install -m 644 $(PORTDIR)/simh_faq.pdf $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	touch install
 
