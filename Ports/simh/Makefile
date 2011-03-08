@@ -11,6 +11,9 @@ REVISION=	1
 URL=		http://simh.trailing-edge.com/sources/
 SOURCE=		$(NAME)v38-1.zip
 
+README=		$(BUILDDIR)/0readme_38.txt
+LICENSE=	$(PORTDIR)/LICENSE.txt
+
 prep: retrieve
 	unzip -o -a -d $(BUILDDIR) $(SOURCE)
 	patch -d $(BUILDDIR) < $(PORTDIR)/simh-3.8.1-pcap.patch
