@@ -11,8 +11,8 @@ REVISION=	0
 URL=		http://download.savannah.gnu.org/releases/qemu/
 SOURCE=		$(NAME)-$(VERSION).tar.gz
 
-README=
-LICENSE=
+README=		$(BUILDDIR)/qemu-doc.html
+LICENSE=	$(BUILDDIR)/LICENSE
 
 prep: retrieve
 	tar zxvf $(SOURCE)
