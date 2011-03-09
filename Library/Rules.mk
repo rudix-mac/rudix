@@ -5,15 +5,16 @@
 # Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	20110214
+BUILDSYSTEM=	20110308
 
 VENDOR=		org.rudix
+DISTNAME=	$(NAME)
 PORTDIR:=	$(shell pwd)
 BUILDDIR=	$(PORTDIR)/$(NAME)-$(VERSION)
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)/usr/local/share/doc/$(NAME)
-PKGNAME=	$(PORTDIR)/$(NAME).pkg
-DMGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).dmg
+PKGNAME=	$(PORTDIR)/$(DISTNAME).pkg
+DMGNAME=	$(PORTDIR)/$(DISTNAME)-$(VERSION)-$(REVISION).dmg
 TITLE=		$(NAME) $(VERSION)
 
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
@@ -74,7 +75,7 @@ retrieve:
 pkg: install
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
-		--id $(VENDOR).pkg.$(NAME) \
+		--id $(VENDOR).pkg.$(DISTNAME) \
 		--version $(VERSION)-$(REVISION) \
 		--title "$(TITLE)" \
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
@@ -83,7 +84,7 @@ pkg: install
 
 dmg: pkg
 	$(CREATEDMG) \
-		-volname "$(NAME)" \
+		-volname "$(DISTNAME)" \
 		-srcfolder $(README) \
 		-srcfolder $(LICENSE) \
 		-srcfolder $(PKGNAME) $(DMGNAME)
@@ -114,7 +115,7 @@ tag:
 	hg tag $(NAME)-$(VERSION)-$(REVISION)
 
 about:
-	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"
+	@echo "$(TITLE) ($(DISTNAME)-$(VERSION)-$(REVISION))"
 
 #
 # Handful macros
