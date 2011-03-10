@@ -16,6 +16,7 @@ LICENSE=	$(BUILDDIR)/LICENSE
 
 ifdef STATIC_ONLY
 CONFIG_OPTS=	--enable-static --disable-shared
+DISTNAME=	static-$(NAME)
 endif
 
 prep: retrieve
