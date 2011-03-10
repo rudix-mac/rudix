@@ -1,12 +1,12 @@
 # A full-featured and high-performance event loop
-# http://rudix.org/
+# http://software.schmorp.de/pkg/libev.html
 # BSD|GPL
 
 include ../../Library/Rules.mk
 
 TITLE=		libev $(VERSION)
 NAME=		libev
-VERSION=	4.03
+VERSION=	4.04
 REVISION=	0
 URL=		http://dist.schmorp.de/libev/
 SOURCE=		$(NAME)-$(VERSION).tar.gz

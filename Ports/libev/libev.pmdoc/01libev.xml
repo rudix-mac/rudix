@@ -2,7 +2,6 @@
 <pkgref spec="1.12" uuid="74E049EA-3E57-4AC1-812E-2B732E0DD829">
   <config>
     <identifier>org.rudix.pkg.libev</identifier>
-    <version>4.03</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
