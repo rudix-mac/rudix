@@ -12,7 +12,7 @@ URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-3.98.4.tar.gz
 
 README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYRIGHT
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
 	tar zxvf $(SOURCE)
