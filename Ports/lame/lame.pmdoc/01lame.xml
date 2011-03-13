@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="ED703FBC-C400-44A4-95C8-E677AB73AC52">
+<pkgref spec="1.12" uuid="A1E6F8FA-75F8-4511-98EC-CE6012C78B84">
   <config>
     <identifier>org.rudix.pkg.lame</identifier>
-    <version>3.98.2</version>
+    <version>3.98.4</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,9 +14,9 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01lame-contents.xml</file-list>
