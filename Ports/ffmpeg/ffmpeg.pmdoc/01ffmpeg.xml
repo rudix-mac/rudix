@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="6AF5A0CF-A1E5-4727-A623-EFFE6EFF7DC4">
+<pkgref spec="1.12" uuid="6DC54300-DC84-4F24-9D66-E01F06AD86D6">
   <config>
     <identifier>org.rudix.pkg.ffmpeg</identifier>
-    <version>0.5</version>
+    <version>20110313</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,16 +12,12 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>scripts.postflight.path</mod>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
     <mod>version</mod>
   </config>
-  <scripts>
-    <postflight relative="true" mod="true">scripts/postflight</postflight>
-  </scripts>
   <contents>
     <file-list>01ffmpeg-contents.xml</file-list>
     <filter>/CVS$</filter>
