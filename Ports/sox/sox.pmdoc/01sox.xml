@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="5F00D760-8372-4273-A4AD-6FD296BF1E45">
+<pkgref spec="1.12" uuid="1915FF1A-82AA-4DD9-8E3A-F2BB87232C99">
   <config>
     <identifier>org.rudix.pkg.sox</identifier>
+    <version>14.3.2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -11,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
-    <mod>scripts.scriptsDirectoryPath.path</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01sox-contents.xml</file-list>
