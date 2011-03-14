@@ -42,5 +42,9 @@ install: build
 	touch install
 
 test: install
+ifdef WITH_STATIC_LAME
+	nm $(INSTALLDIR)/usr/local/lib/libavcodec.dylib | grep lame_init
+else
 	otool -L $(INSTALLDIR)/usr/local/bin/ffmpeg | grep libmp3lame.0.dylib
+endif
 	touch test
