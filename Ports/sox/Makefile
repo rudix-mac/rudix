@@ -6,13 +6,17 @@ include ../../Library/Rules.mk
 
 TITLE=		SoX $(VERSION)
 NAME=		sox
-VERSION=	14.3.0
+VERSION=	14.3.2
 REVISION=	0
 URL=		http://downloads.sourceforge.net/$(NAME)
 SOURCE=		$(NAME)-$(VERSION).tar.gz
+DEPENDS=	/usr/local/lib/libmp3lame.la
+
+README=		$(BUILDDIR)/README
+LICENSE=	$(BUILDDIR)/COPYING
 
 prep: retrieve
-	tar zxvf $(SOURCE)
+	tar zxf $(SOURCE)
 	touch prep
 
 build: prep $(DEPENDS)
@@ -33,5 +37,8 @@ install: build
 	touch install
 
 test: install
+ifdef WITH_STATIC_LAME
+	nm $(INSTALLDIR)/usr/local/lib/libsox.1.dylib | grep lame_init
+endif
 	cd $(BUILDDIR)/src ; sh tests.sh
 	touch test

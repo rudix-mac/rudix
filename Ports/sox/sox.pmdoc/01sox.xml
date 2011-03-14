@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkgref spec="1.12" uuid="5F00D760-8372-4273-A4AD-6FD296BF1E45">
   <config>
-    <identifier>org.rudix.sox.sox-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.sox</identifier>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
