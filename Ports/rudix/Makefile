@@ -1,16 +1,16 @@
-# Rudix Package Manager -- RPM ;D
 # http://rudix.org/
 # BSD
 
 include ../../Library/Rules.mk
 
+DESCRIPTION=	Rudix Package Manager.
 TITLE=		Rudix Package Manager $(VERSION)
 NAME=		rudix
 VERSION=	11.2.1
 REVISION=	0
 
-README=		$(PORTDIR)/ReadMe.text
-LICENSE=	$(PORTDIR)/License.text
+README=		ReadMe.text
+LICENSE=	License.text
 
 build: rudix.pdf
 	touch build

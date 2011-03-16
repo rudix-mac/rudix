@@ -5,12 +5,12 @@
 # Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	20110308
+BUILDSYSTEM=	20110315
 
 VENDOR=		org.rudix
 DISTNAME=	$(NAME)
 PORTDIR:=	$(shell pwd)
-BUILDDIR=	$(PORTDIR)/$(NAME)-$(VERSION)
+BUILDDIR=	$(NAME)-$(VERSION)
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)/usr/local/share/doc/$(NAME)
 PKGNAME=	$(PORTDIR)/$(DISTNAME).pkg
@@ -23,6 +23,7 @@ TOUCH=		touch
 #TOUCH=		@date >
 FETCH=		curl -f -O -C - -L
 #FETCH=		wget -c
+MKPMDOC=	../../Library/mkpmdoc.py
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
 ARCH:=		$(shell arch)
@@ -71,6 +72,15 @@ retrieve:
 	touch retrieve
 
 # Rules prep, build and install must be defined in your Makefile!
+
+pmdoc:
+	$(MKPMDOC) \
+		--name $(NAME) \
+		--title "$(TITLE)" \
+		--description "$(DESCRIPTION)" \
+		--readme $(README) \
+		--license $(LICENSE) \
+		.
 
 pkg: install
 	$(PACKAGEMAKER) \

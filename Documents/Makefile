@@ -1,9 +1,9 @@
-# Starting point for new ports
 # http://rudix.org/
 # GPL, LGPL, BSD, Apache, etc.
 
 include ../../Library/Rules.mk
 
+DESCRIPTION=	Starting point for new ports.
 TITLE=		Template $(VERSION)
 NAME=		template
 VERSION=	1.2.3
