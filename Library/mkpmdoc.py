@@ -2,8 +2,10 @@
 
 import sys, os
 import getopt
+from uuid import uuid1
 
 VENDOR='org.rudix'
+UUID=str(uuid1()).upper()
 
 Index = '''<?xml version="1.0"?>
 <pkmkdoc spec="1.12">
@@ -37,6 +39,37 @@ Index = '''<?xml version="1.0"?>
 </pkmkdoc>
 '''
 
+PkgRef = '''<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="{uuid}">
+  <config>
+    <identifier>{vendor}.pkg.{name}</identifier>
+    <version>{version}</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">{name}-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+  </config>
+  <contents>
+    <file-list>01{name}-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
+'''
+
 def make_empty_pmdoc(pathname):
     if pathname.endswith('.pmdoc') is False:
         pathname = pathname + '.pmdoc'
@@ -45,6 +78,9 @@ def make_empty_pmdoc(pathname):
 
 def output_index(name, title, description, readme, license, vendor=VENDOR):
     return Index.format(name=name, title=title, description=description, vendor=vendor, readme=readme, license=license)
+
+def output_pkgref(name, version, uuid=UUID, vendor=VENDOR):
+    return PkgRef.format(name=name, version=version, uuid=uuid, vendor=vendor)
 
 def main(argv=None):
     if not argv:
@@ -68,9 +104,13 @@ def main(argv=None):
     except IndexError:
         path = '.'
     pmdoc = path + '/' + name + '.pmdoc'
+    index_xml = pmdoc + '/index.xml'
+    pkgref_xml = pmdoc + '/01%s.xml' % name
     make_empty_pmdoc(pmdoc)
-    with open(pmdoc + '/index.xml', 'w') as idx:
+    with open(index_xml, 'w') as idx:
         idx.write(output_index(name=name, title=title, description=description, readme=readme, license=license))
+    with open(pkgref_xml, 'w') as ref:
+        ref.write(output_pkgref(name=name, version=version))
     return 0
 
 if __name__ == '__main__':

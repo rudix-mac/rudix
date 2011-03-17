@@ -5,7 +5,7 @@
 # Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 #
 
-BUILDSYSTEM=	20110315
+BUILDSYSTEM=	20110316
 
 VENDOR=		org.rudix
 DISTNAME=	$(NAME)
@@ -76,6 +76,7 @@ retrieve:
 pmdoc:
 	$(MKPMDOC) \
 		--name $(NAME) \
+		--version $(VERSION)-$(REVISION) \
 		--title "$(TITLE)" \
 		--description "$(DESCRIPTION)" \
 		--readme $(README) \
