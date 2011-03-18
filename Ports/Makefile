@@ -3,7 +3,7 @@
 # Copyright (c) 2007-2009 Ruda Moura <ruda@rudix.org>
 #
 
-Rules  = retrieve prep build install about
+Rules  = retrieve prep build install pmdoc about
 Rules += installpkg pkg dmg
 Rules += installclean clean distclean realdistclean pkgclean dmgclean
 

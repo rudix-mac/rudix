@@ -76,7 +76,7 @@ retrieve:
 CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
 USER= $(shell users)
 
-pmdoc:
+pmdoc: install
 	$(MKPMDOC) \
 		--name $(NAME) \
 		--version $(VERSION)-$(REVISION) \
@@ -87,8 +87,9 @@ pmdoc:
 		.
 	sed 's*$(USER)*root*' $(CONTENTSXML) > $(CONTENTSXML)
 	sed 's*$(PORTDIR)**' $(CONTENTSXML) > $(CONTENTSXML)
+	touch pmdoc
 
-pkg: install
+pkg: pmdoc
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).pkg.$(DISTNAME) \
