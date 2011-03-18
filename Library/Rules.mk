@@ -86,7 +86,7 @@ pmdoc: install
 		--license $(LICENSE) \
 		.
 	sed 's*$(USER)*root*' $(CONTENTSXML) > $(CONTENTSXML)
-	sed 's*$(PORTDIR)**' $(CONTENTSXML) > $(CONTENTSXML)
+	sed 's*$(PORTDIR)/**' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
 
 pkg: pmdoc
