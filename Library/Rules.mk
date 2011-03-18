@@ -120,7 +120,7 @@ dmgclean:
 	rm -rf dmg *.dmg
 
 clean: installclean
-	rm -rf prep build test $(BUILDDIR)
+	rm -rf prep build pmdoc test $(BUILDDIR)
 
 distclean: clean pkgclean dmgclean
 	rm -f config.cache*
