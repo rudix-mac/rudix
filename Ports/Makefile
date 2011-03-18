@@ -20,3 +20,8 @@ only-static-libs:
 	@for port in gettext readline gmp glib ; do \
 		$(MAKE) -C $$port STATIC_ONLY=1 pkg ; \
 	done
+
+new:
+	mkdir $(port)
+	cp ../Documents/Makefile $(port)
+
