@@ -23,5 +23,7 @@ only-static-libs:
 
 new:
 	mkdir $(port)
-	cp ../Documents/Makefile $(port)
+	sed 's*{NAME}*$(port)*' ../Documents/Makefile > $(port)/Makefile
+	cd $(port)
+	$(MAKE) -C $$port createpmdoc
 

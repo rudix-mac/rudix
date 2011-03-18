@@ -5,7 +5,7 @@ include ../../Library/Rules.mk
 
 DESCRIPTION=	Starting point for new ports.
 TITLE=		Template $(VERSION)
-NAME=		template
+NAME=		{NAME}
 VERSION=	1.2.3
 REVISION=	0
 URL=		http://path/to/download/

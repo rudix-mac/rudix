@@ -73,10 +73,7 @@ retrieve:
 
 # Rules prep, build and install must be defined in your Makefile!
 
-CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
-USER= $(shell users)
-
-pmdoc: install
+createpmdoc:
 	$(MKPMDOC) \
 		--name $(NAME) \
 		--version $(VERSION)-$(REVISION) \
@@ -85,6 +82,12 @@ pmdoc: install
 		--readme $(README) \
 		--license $(LICENSE) \
 		.
+
+CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
+USER= $(shell users)
+
+pmdoc: install
+	$(MAKE) createpmdoc
 	sed 's*$(USER)*root*' $(CONTENTSXML) > $(CONTENTSXML)
 	sed 's*$(PORTDIR)/**' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
