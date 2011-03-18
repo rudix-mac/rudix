@@ -73,6 +73,9 @@ retrieve:
 
 # Rules prep, build and install must be defined in your Makefile!
 
+CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
+USER= $(shell users)
+
 pmdoc:
 	$(MKPMDOC) \
 		--name $(NAME) \
@@ -82,6 +85,8 @@ pmdoc:
 		--readme $(README) \
 		--license $(LICENSE) \
 		.
+	sed 's*$(USER)*root*' $(CONTENTSXML) > $(CONTENTSXML)
+	sed 's*$(PORTDIR)**' $(CONTENTSXML) > $(CONTENTSXML)
 
 pkg: install
 	$(PACKAGEMAKER) \
