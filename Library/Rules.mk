@@ -84,12 +84,11 @@ createpmdoc:
 		.
 
 CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
-USER= $(shell users)
 
 pmdoc: install
 	$(MAKE) createpmdoc
-	sed 's*$(USER)*root*' $(CONTENTSXML) > $(CONTENTSXML)
-	sed 's*$(PORTDIR)/**' $(CONTENTSXML) > $(CONTENTSXML)
+	sed 's*o="$(USER)"*o="root"*' $(CONTENTSXML) > $(CONTENTSXML)
+	sed 's*pt="$(PORTDIR)/*pt="*' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
 
 universal_test: install
