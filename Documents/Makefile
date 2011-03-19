@@ -70,14 +70,6 @@ install: build
 	strip -x $(STRIP_LIB) $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
+test: universal_test install
 	cd $(BUILDDIR) ; make check
 	touch test
