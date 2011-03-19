@@ -92,7 +92,19 @@ pmdoc: install
 	sed 's*$(PORTDIR)/**' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
 
-pkg: pmdoc
+universal_test: install
+	@echo "Starting Universal binaries test"
+	@for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+	@for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+	@for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
+		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+	@for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+	@echo "Finished Universal binaries test"
+
+pkg: pmdoc test
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).pkg.$(DISTNAME) \
