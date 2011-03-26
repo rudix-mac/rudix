@@ -10,7 +10,9 @@ BUILDSYSTEM=	20110316
 VENDOR=		org.rudix
 DISTNAME=	$(NAME)
 PORTDIR:=	$(shell pwd)
-BUILDDIR=	$(NAME)-$(VERSION)
+BUILDDIR=	$(NAME)-$(VERSION)-src
+UNCOMPRESSED_DIR = $(NAME)-$(VERSION)
+
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)${PREFIX}/share/doc/$(NAME)
 PKGNAME=	$(PORTDIR)/$(DISTNAME).pkg
@@ -90,7 +92,20 @@ retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	touch retrieve
 
-# Rules prep, build and install must be defined in your Makefile!
+prep: retrieve
+	if [ "`file -b -z --mime-type $(SOURCE)`" = "application/x-tar" ]; \
+	then \
+		tar zxf $(SOURCE); \
+	else \
+		unzip $(SOURCE); \
+	fi
+	mv $(UNCOMPRESSED_DIR) $(BUILDDIR)
+	shopt -s nullglob; \
+	for patchfile in *.patch patches/*.patch; \
+	do \
+		patch -d $(BUILDDIR) < $$patchfile; \
+	done
+	touch prep
 
 createpmdoc:
 	$(MKPMDOC) \
