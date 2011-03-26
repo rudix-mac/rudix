@@ -3,6 +3,7 @@
 # GPL
 
 include ../../Library/Rules.mk
+include ../../Library/GNUConfigure.mk
 
 TITLE=		AsciiDoc $(VERSION)
 NAME=		asciidoc
@@ -14,24 +15,9 @@ SOURCE=		$(NAME)-$(VERSION).tar.gz
 README=		$(BUILDDIR)/README
 LICENSE=	$(BUILDDIR)/COPYING
 
-prep: retrieve
-	tar zxf $(SOURCE)
-	touch prep
+gcmakecheck= make test
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./configure ; make
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(README) $(INSTALLDOCDIR)
-	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUGS*,CHANGELOG*,COPYRIGHT,README.txt} $(INSTALLDOCDIR)
-	mv $(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf \
-		$(INSTALLDIR)/usr/local/etc/asciidoc/asciidoc.conf.default
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; make test
-	touch test
+define gcinstallextra
+mv $(INSTALLDIR)$(PREFIX)/etc/asciidoc/asciidoc.conf \
+   $(INSTALLDIR)$(PREFIX)/etc/asciidoc/asciidoc.conf.default
+endef
