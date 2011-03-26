@@ -8,19 +8,18 @@
 BUILDSYSTEM=	20110316
 
 VENDOR=		org.rudix
-DISTNAME=	$(NAME)
 PORTDIR:=	$(shell pwd)
 BUILDDIR=	$(NAME)-$(VERSION)-src
-UNCOMPRESSED_DIR = $(NAME)-$(VERSION)
+UNCOMPRESSEDDIR= $(NAME)-$(VERSION)
 
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)${PREFIX}/share/doc/$(NAME)
-PKGNAME=	$(PORTDIR)/$(DISTNAME).pkg
-DMGNAME=	$(PORTDIR)/$(DISTNAME)-$(VERSION)-$(REVISION).dmg
+PKGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).pkg
+# DMGNAME=	$(PORTDIR)/$(DISTNAME)-$(VERSION)-$(REVISION).dmg
 TITLE=		$(NAME) $(VERSION)
 
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
-CREATEDMG=	/usr/bin/hdiutil create
+# CREATEDMG=	/usr/bin/hdiutil create
 TOUCH=		touch
 #TOUCH=		@date >
 FETCH=		curl -f -O -C - -L
@@ -37,6 +36,10 @@ CPU64BIT:=	$(shell sysctl -n hw.cpu64bit_capable)
 CFLAGS=		-arch i386 -arch x86_64 -Os
 CXXFLAGS=	-arch i386 -arch x86_64 -Os
 LDFLAGS=	-arch i386 -arch x86_64
+
+ifdef STATIC_ONLY
+CONFIG_OPTS=	--enable-static --disable-shared
+endif
 
 ## Debug flags:
 #CFLAGS=	-ggdb
@@ -62,10 +65,6 @@ define make
 make -j $(NCPU)
 endef
 
-define strip
-strip -x -S
-endef
-
 #
 # Build rules
 #
@@ -80,7 +79,6 @@ help:
 	@echo "  install	install software into directory $(INTALLDIR)"
 	@echo "  all		do prep, build and install"
 	@echo "  pkg		create a package (.pkg)"
-	@echo "  dmg		create a disk image (.dmg)"
 	@echo "  installpkg	install the package created"
 	@echo "  installclean	local installation clean-up"
 	@echo "  clean		build and local installation clean-up"
@@ -93,16 +91,13 @@ retrieve:
 	touch retrieve
 
 prep: retrieve
-	if [ "`file -b -z --mime-type $(SOURCE)`" = "application/x-tar" ]; \
-	then \
+	if [ "`file -b -z --mime-type $(SOURCE)`" = "application/x-tar" ]; then \
 		tar zxf $(SOURCE); \
 	else \
 		unzip $(SOURCE); \
 	fi
-	mv $(UNCOMPRESSED_DIR) $(BUILDDIR)
-	shopt -s nullglob; \
-	for patchfile in *.patch patches/*.patch; \
-	do \
+	mv $(UNCOMPRESSEDDIR) $(BUILDDIR)
+	for patchfile in $(wildcard *.patch patches/*.patch); do \
 		patch -d $(BUILDDIR) < $$patchfile; \
 	done
 	touch prep
@@ -126,24 +121,29 @@ pmdoc: install
 	touch pmdoc
 
 define lipo
-lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m"
 endef
 
 universal_test: install
 	@echo "Starting Universal binaries test"
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/bin/*) ; do \
-		${lipo}
+		${lipo}; \
+	done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/sbin/*) ; do \
-		${lipo}
+		${lipo}; \
+	done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.dylib) ; do \
-		${lipo}
+		${lipo}; \
+	done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.a) ; do \
-		${lipo}
+		${lipo}; \
+	done
 	@for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so) ; do \
-		${lipo}
+		${lipo}; \
+	done
 	@echo "Finished Universal binaries test"
 
-pkg: pmdoc test
+pkg: universal_test test pmdoc
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).pkg.$(DISTNAME) \
@@ -152,14 +152,6 @@ pkg: pmdoc test
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
 		--out $(PKGNAME)
 	touch pkg
-
-dmg: pkg
-	$(CREATEDMG) \
-		-volname "$(DISTNAME)" \
-		-srcfolder $(README) \
-		-srcfolder $(LICENSE) \
-		-srcfolder $(PKGNAME) $(DMGNAME)
-	touch dmg
 
 installpkg: pkg
 	installer -pkg $(PKGNAME) -target /
@@ -170,13 +162,10 @@ installclean:
 pkgclean:
 	rm -rf pkg *.pkg
 
-dmgclean:
-	rm -rf dmg *.dmg
-
 clean: installclean
 	rm -rf prep build pmdoc test $(BUILDDIR)
 
-distclean: clean pkgclean dmgclean
+distclean: clean pkgclean
 	rm -f config.cache*
 
 realdistclean: distclean
