@@ -10,3 +10,6 @@ dmg
 *.pkg
 *.dmg
 *-install
+*.tar.gz
+*.tar.bz2
+*.zip

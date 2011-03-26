@@ -12,7 +12,7 @@ DISTNAME=	$(NAME)
 PORTDIR:=	$(shell pwd)
 BUILDDIR=	$(NAME)-$(VERSION)
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
-INSTALLDOCDIR=	$(INSTALLDIR)/usr/local/share/doc/$(NAME)
+INSTALLDOCDIR=	$(INSTALLDIR)${PREFIX}/share/doc/$(NAME)
 PKGNAME=	$(PORTDIR)/$(DISTNAME).pkg
 DMGNAME=	$(PORTDIR)/$(DISTNAME)-$(VERSION)-$(REVISION).dmg
 TITLE=		$(NAME) $(VERSION)
@@ -24,6 +24,7 @@ TOUCH=		touch
 FETCH=		curl -f -O -C - -L
 #FETCH=		wget -c
 MKPMDOC=	../../Library/mkpmdoc.py
+PREFIX= /usr/local
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
 ARCH:=		$(shell arch)
@@ -35,15 +36,33 @@ CFLAGS=		-arch i386 -arch x86_64 -Os
 CXXFLAGS=	-arch i386 -arch x86_64 -Os
 LDFLAGS=	-arch i386 -arch x86_64
 
-## Build flags on Leopard
-#CFLAGS=	-arch i386 -arch ppc -Os
-#CXXFLAGS=	-arch i386 -arch ppc -Os
-#LDFLAGS=	-arch i386 -arch ppc
-
 ## Debug flags:
 #CFLAGS=	-ggdb
 #CXXFLAGS=	-ggdb
 #LDFLAGS=
+
+## Python variables
+PYTHON=		/usr/bin/python2.6
+SITEPACKAGES=	/Library/Python/2.6/site-packages
+ARCHFLAGS="-arch i386 -arch x86_64"
+
+#
+# Handful macros
+#
+define configure
+./configure \
+	--cache-file=$(PORTDIR)/config.cache \
+	--mandir=${PREFIX}/share/man \
+	--infodir=${PREFIX}/share/info
+endef
+
+define make
+make -j $(NCPU)
+endef
+
+define strip
+strip -x -S
+endef
 
 #
 # Build rules
@@ -91,16 +110,22 @@ pmdoc: install
 	sed 's*pt="$(PORTDIR)/*pt="*' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
 
+define lipo
+lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+endef
+
 universal_test: install
 	@echo "Starting Universal binaries test"
-	@for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
-	@for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
-	@for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
-	@for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m" ; done
+	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/bin/*) ; do \
+		${lipo}
+	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/sbin/*) ; do \
+		${lipo}
+	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.dylib) ; do \
+		${lipo}
+	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.a) ; do \
+		${lipo}
+	@for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so) ; do \
+		${lipo}
 	@echo "Finished Universal binaries test"
 
 pkg: pmdoc test
@@ -148,16 +173,4 @@ tag:
 about:
 	@echo "$(TITLE) ($(DISTNAME)-$(VERSION)-$(REVISION))"
 
-#
-# Handful macros
-#
-define configure
-./configure \
-	--cache-file=$(PORTDIR)/config.cache \
-	--mandir=/usr/local/share/man \
-	--infodir=/usr/local/share/info
-endef
 
-define make
-make -j $(NCPU)
-endef
