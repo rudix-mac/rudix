@@ -61,7 +61,7 @@ install: build
 		fi \
 	done
 	$(gcinstallextra)
-	for x in $(wildcard $(INSTALLDIR)$(PREFIX)/bin/*); do \
+	shopt -s nullglob; for x in $(INSTALLDIR)$(PREFIX)/{bin,sbin,lib}/*; do \
 		 strip $$x; \
 	done 
 	touch install
