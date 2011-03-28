@@ -46,11 +46,24 @@ SITEPACKAGES=	/Library/Python/2.6/site-packages
 #
 # Handful macros
 #
+
+define info_output
+printf "\033[32m$1\033[0m\n"
+endef
+
+define warning_output
+printf "\033[33mWarning: $1\033[0m\n"
+endef
+
+define error_output
+printf "\033[31mError: $1\031[0m\n"
+endef
+
 define configure
 ./configure \
 	--cache-file=$(PORTDIR)/config.cache \
-	--mandir=${PREFIX}/share/man \
-	--infodir=${PREFIX}/share/info
+	--mandir=$(PREFIX)/share/man \
+	--infodir=$(PREFIX)/share/info
 endef
 
 define make
@@ -74,7 +87,7 @@ for patchfile in $(wildcard *.patch patches/*.patch) ; do \
 endef
 
 define lipo_verify
-lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m"
+lipo $1 -verify_arch i386 x86_64 || $(call warning_output,file $1 is not an Universal binary)
 endef
 
 #
@@ -99,13 +112,19 @@ help:
 	@echo "make without any action does 'make all'"
 
 retrieve:
+	@$(call info_output,Retrieving source)
 	$(FETCH) $(URL)/$(SOURCE)
-	$(TOUCH) retrieve
+	@$(call info_output,Finished)
+	touch retrieve
 
 prep: retrieve
-	$(explode_source)
+	@$(call info_output,Preparing to build)
+	@$(call info_output,Exploding source)
+	@$(explode_source)
 	mv $(UNCOMPRESSEDDIR) $(BUILDDIR)
-	$(apply_patches)
+	@$(call info_output,Applying patches (if any))
+	@$(apply_patches)
+	@$(call info_output,Finished)
 	touch prep
 
 createpmdoc:
@@ -127,21 +146,21 @@ pmdoc: install
 
 # Included as precond in install rule
 universal_test:
-	@echo "Starting Universal binaries test"
+	@$(call info_output,Starting Universal binaries test)
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/bin/*) ; do \
-		${lipo_verify} ; done
+		$(call lipo_verify,$$x) ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/sbin/*) ; do \
-		${lipo_verify} ; done
+		$(call lipo_verify,$$x) ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.dylib) ; do \
-		${lipo_verify} ; done
+		$(call lipo_verify, $$x) ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.a) ; do \
 		${lipo_verify} ; done
 	@for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so) ; do \
 		${lipo_verify} ; done
-	@echo "Finished Universal binaries test"
-
+	@$(call info_output,Finished Universal binaries test)
 
 pkg: install test pmdoc
+	@$(call info_output,Creating package)
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).pkg.$(DISTNAME) \
@@ -152,6 +171,7 @@ pkg: install test pmdoc
 	touch pkg
 
 installpkg: pkg
+	@$(call info_output,Installing package)
 	installer -pkg $(PKGNAME) -target /
 
 installclean:
