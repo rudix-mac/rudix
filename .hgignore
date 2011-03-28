@@ -10,7 +10,7 @@ pkg
 *~
 *.pkg
 *-install
-*-src
+*-build
 *.tar.gz
 *.tar.bz2
 *.zip
