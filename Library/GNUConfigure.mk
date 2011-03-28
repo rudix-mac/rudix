@@ -53,5 +53,5 @@ install: build
 	touch install
 
 test: install
-	cd $(BUILDDIR) ; $(gcmakecheck) || echo "\033[33mOne or more tests failed\033[0m"
+	cd $(BUILDDIR) ; $(gcmakecheck) || $(call error_output,One or more tests failed)
 	touch test
