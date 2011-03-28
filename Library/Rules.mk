@@ -129,17 +129,21 @@ help:
 
 retrieve:
 	@$(call info_output,Retrieving source)
+	$(call pre_retrieve_hook)
 	$(FETCH) $(URL)/$(SOURCE)
+	$(call post_retrieve_hook)
 	@$(call info_output,Finished)
 	touch retrieve
 
 prep: retrieve
 	@$(call info_output,Preparing to build)
+	$(call pre_prep_hook)
 	@$(call info_output,Exploding source)
 	@$(explode_source)
 	mv $(UNCOMPRESSEDDIR) $(BUILDDIR)
 	@$(call info_output,Applying patches (if any))
 	@$(apply_patches)
+	$(call post_prep_hook)
 	@$(call info_output,Finished)
 	touch prep
 

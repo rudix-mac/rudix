@@ -30,21 +30,26 @@ make check
 endef
 
 build: prep $(DEPENDS)
+	$(call pre_build_hook)
 	cd $(BUILDDIR); $(gnu_configure) ; $(make)
+	$(call post_build_hook)
 	touch build
 
 install: build
+	$(call pre_install_hook)
 	cd $(BUILDDIR) ; $(gnu_make_install)
 	rm -f $(INSTALLDIR)${PREFIX}/share/info/dir
 	rm -f $(INSTALLDIR)${PREFIX}/lib/charset.alias
 	rm -f $(INSTALLDIR)${PREFIX}/share/locale/locale.alias
 	$(createdocdir)
-	$(gcinstallextra)
 	for x in $(wildcard $(INSTALLDIR)$(PREFIX)/bin/*); do \
 		 strip $$x; \
 	done 
+	$(call post_install_hook)
 	touch install
 
 test: install universal_test
+	$(call pre_test_hook)
 	cd $(BUILDDIR) ; $(gnu_make_check) || $(call error_output,One or more tests failed)
+	$(call post_test_hook)
 	touch test
