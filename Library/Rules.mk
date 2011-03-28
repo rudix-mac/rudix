@@ -1,17 +1,15 @@
 # -*- mode: makefile -*-
-#
 # Rules.mk - Common Rules and Macros
-#
 # Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
-#
 
-BUILDSYSTEM=	20110316
+BUILDSYSTEM=	20110327
 
 VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
-BUILDDIR=	$(NAME)-$(VERSION)-src
-UNCOMPRESSEDDIR= $(NAME)-$(VERSION)
+BUILDDIR=	$(NAME)-$(VERSION)-build
+UNCOMPRESSEDDIR=$(NAME)-$(VERSION)
 
+PREFIX=		/usr/local
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)${PREFIX}/share/doc/$(NAME)
 PKGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).pkg
@@ -20,12 +18,11 @@ TITLE=		$(NAME) $(VERSION)
 
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
 # CREATEDMG=	/usr/bin/hdiutil create
-TOUCH=		touch
+TOUCH=		@touch
 #TOUCH=		@date >
-FETCH=		curl -f -O -C - -L
-#FETCH=		wget -c
+FETCH=		@curl -f -O -C - -L
+#FETCH=		@wget -c
 MKPMDOC=	../../Library/mkpmdoc.py
-PREFIX= /usr/local
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
 ARCH:=		$(shell arch)
@@ -33,23 +30,18 @@ NCPU:=		$(shell sysctl -n hw.ncpu)
 CPU64BIT:=	$(shell sysctl -n hw.cpu64bit_capable)
 
 # Build flags on Snow Leopard
-CFLAGS=		-arch i386 -arch x86_64 -Os
-CXXFLAGS=	-arch i386 -arch x86_64 -Os
-LDFLAGS=	-arch i386 -arch x86_64
+ARCHFLAGS=	-arch i386 -arch x86_64
+CFLAGS=		$(ARCHFLAGS) -Os
+CXXFLAGS=	$(ARCHFLAGS) -Os
+LDFLAGS=	$(ARCHFLAGS)
 
 ifdef STATIC_ONLY
-CONFIG_OPTS=	--enable-static --disable-shared
+CONFIG_OPTS+=	--enable-static --disable-shared
 endif
 
-## Debug flags:
-#CFLAGS=	-ggdb
-#CXXFLAGS=	-ggdb
-#LDFLAGS=
-
-## Python variables
+# Python variables
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
-ARCHFLAGS="-arch i386 -arch x86_64"
 
 #
 # Handful macros
@@ -63,6 +55,26 @@ endef
 
 define make
 make -j $(NCPU)
+endef
+
+define explode_source
+case `file -b -z --mime-type $(SOURCE)` in \
+	application/x-tar) \
+		tar zxf $(SOURCE) ;; \
+	application/zip) \
+		unzip -o -a -d $(BUILDDIR) $(SOURCE) ;; \
+	*) \
+		false ;; \
+esac
+endef
+
+define apply_patches
+for patchfile in $(wildcard *.patch patches/*.patch) ; do \
+	patch -d $(BUILDDIR) < $$patchfile ; done
+endef
+
+define lipo_verify
+lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m"
 endef
 
 #
@@ -88,18 +100,12 @@ help:
 
 retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
-	touch retrieve
+	$(TOUCH) retrieve
 
 prep: retrieve
-	if [ "`file -b -z --mime-type $(SOURCE)`" = "application/x-tar" ]; then \
-		tar zxf $(SOURCE); \
-	else \
-		unzip $(SOURCE); \
-	fi
+	$(explode_source)
 	mv $(UNCOMPRESSEDDIR) $(BUILDDIR)
-	for patchfile in $(wildcard *.patch patches/*.patch); do \
-		patch -d $(BUILDDIR) < $$patchfile; \
-	done
+	$(apply_patches)
 	touch prep
 
 createpmdoc:
@@ -113,37 +119,29 @@ createpmdoc:
 		.
 
 CONTENTSXML=	$(NAME).pmdoc/01$(NAME)-contents.xml
-
 pmdoc: install
 	$(MAKE) createpmdoc
 	sed 's*o="$(USER)"*o="root"*' $(CONTENTSXML) > $(CONTENTSXML)
 	sed 's*pt="$(PORTDIR)/*pt="*' $(CONTENTSXML) > $(CONTENTSXML)
 	touch pmdoc
 
-define lipo
-lipo $$x -verify_arch i386 x86_64 || echo "\033[33mWarning file $$x is not an Universal binary\033[0m"
-endef
-
-universal_test: install
+# Included as precond in install rule
+universal_test:
 	@echo "Starting Universal binaries test"
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/bin/*) ; do \
-		${lipo}; \
-	done
+		${lipo_verify} ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/sbin/*) ; do \
-		${lipo}; \
-	done
+		${lipo_verify} ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.dylib) ; do \
-		${lipo}; \
-	done
+		${lipo_verify} ; done
 	@for x in $(wildcard $(INSTALLDIR)${PREFIX}/lib/*.a) ; do \
-		${lipo}; \
-	done
+		${lipo_verify} ; done
 	@for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so) ; do \
-		${lipo}; \
-	done
+		${lipo_verify} ; done
 	@echo "Finished Universal binaries test"
 
-pkg: universal_test test pmdoc
+
+pkg: install test pmdoc
 	$(PACKAGEMAKER) \
 		--doc $(NAME).pmdoc \
 		--id $(VENDOR).pkg.$(DISTNAME) \
@@ -172,9 +170,7 @@ realdistclean: distclean
 	rm -f retrieve $(SOURCE)
 
 tag:
-	hg tag $(NAME)-$(VERSION)-$(REVISION)
+	@hg tag $(NAME)-$(VERSION)-$(REVISION)
 
 about:
 	@echo "$(TITLE) ($(DISTNAME)-$(VERSION)-$(REVISION))"
-
-
