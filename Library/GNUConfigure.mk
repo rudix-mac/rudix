@@ -45,21 +45,7 @@ install: build
 	rm -f $(INSTALLDIR)${PREFIX}/share/info/dir
 	rm -f $(INSTALLDIR)${PREFIX}/lib/charset.alias
 	rm -f $(INSTALLDIR)${PREFIX}/share/locale/locale.alias
-	install -d $(INSTALLDOCDIR)
-	for x in $(wildcard $(BUILDDIR)/CHANGELOG* \
-						$(BUILDDIR)/BUGS* \
-						$(BUILDDIR)/COPYING \
-						$(BUILDDIR)/INSTALL \
-						$(BUILDDIR)/NEWS \
-						$(BUILDDIR)/README \
-						$(BUILDDIR)/LICENSE \
-						$(BUILDDIR)/NOTICE \
-						$(README) \
-						$(LICENSE)); do \
-		if [[ -e $$x ]]; then \
-			install -m 644 $$x $(INSTALLDOCDIR); \
-		fi \
-	done
+	$(createdocdir)
 	$(gcinstallextra)
 	for x in $(wildcard $(INSTALLDIR)$(PREFIX)/bin/*); do \
 		 strip $$x; \

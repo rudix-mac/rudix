@@ -39,10 +39,6 @@ ifdef STATIC_ONLY
 CONFIG_OPTS+=	--enable-static --disable-shared
 endif
 
-# Python variables
-PYTHON=		/usr/bin/python2.6
-SITEPACKAGES=	/Library/Python/2.6/site-packages
-
 #
 # Handful macros
 #
@@ -69,6 +65,25 @@ endef
 define make
 make -j $(NCPU)
 endef
+
+define createdocdir
+install -d $(INSTALLDOCDIR)
+for x in $(wildcard $(BUILDDIR)/CHANGELOG* \
+					$(BUILDDIR)/BUGS* \
+					$(BUILDDIR)/COPYING \
+					$(BUILDDIR)/INSTALL \
+					$(BUILDDIR)/NEWS \
+					$(BUILDDIR)/README \
+					$(BUILDDIR)/LICENSE \
+					$(BUILDDIR)/NOTICE \
+					$(BUILDDIR)/ACKS \
+					$(BUILDDIR)/ChangeLog \
+					$(README) \
+					$(LICENSE)); do \
+	if [[ -e $$x ]]; then \
+		install -m 644 $$x $(INSTALLDOCDIR); \
+	fi \
+done
 
 define explode_source
 case `file -b -z --mime-type $(SOURCE)` in \
