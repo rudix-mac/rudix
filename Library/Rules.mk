@@ -84,6 +84,7 @@ for x in $(wildcard $(BUILDDIR)/CHANGELOG* \
 		install -m 644 $$x $(INSTALLDOCDIR); \
 	fi \
 done
+endef
 
 define explode_source
 case `file -b -z --mime-type $(SOURCE)` in \
