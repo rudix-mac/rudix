@@ -1,4 +1,3 @@
-
 #ifdef WITHOUT_NLS
 #CONFIG_OPTS=	--disable-nls
 #else
@@ -12,36 +11,30 @@
 
 DISABLE_DEPENDENCY_TRACKING= yes
 
-define gcconfigure
+define gnu_configure
 env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 $(configure) $(CONFIG_OPTS) \
 $(if $DISABLE_DEPENDENCY_TRACKING, --disable-dependency-tracking) 
 endef
 
-define gcmake
-$(make)
-endef
-
 MAKEINSTALLOPTIONS= "DESTDIR=$(INSTALLDIR)"
 
-define gcmakeinstall
+define gnu_make_install
 make $(MAKEINSTALLOPTIONS) install
 endef
 
 gcinstallextra=
 
-
-define gcmakecheck
+define gnu_make_check
 make check
 endef
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR); $(gcconfigure)
-	cd $(BUILDDIR); $(gcmake)
+	cd $(BUILDDIR); $(gnu_configure) ; $(make)
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; $(gcmakeinstall)
+	cd $(BUILDDIR) ; $(gnu_make_install)
 	rm -f $(INSTALLDIR)${PREFIX}/share/info/dir
 	rm -f $(INSTALLDIR)${PREFIX}/lib/charset.alias
 	rm -f $(INSTALLDIR)${PREFIX}/share/locale/locale.alias
@@ -52,6 +45,6 @@ install: build
 	done 
 	touch install
 
-test: install
-	cd $(BUILDDIR) ; $(gcmakecheck) || $(call error_output,One or more tests failed)
+test: install universal_test
+	cd $(BUILDDIR) ; $(gnu_make_check) || $(call error_output,One or more tests failed)
 	touch test
