@@ -2,26 +2,21 @@
 # Rules.mk - Common Rules and Macros
 # Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
 
-BUILDSYSTEM=	20110327
+BUILDSYSTEM=	20110328
 
 VENDOR=		org.rudix
 PORTDIR:=	$(shell pwd)
-BUILDDIR=	$(NAME)-$(VERSION)-build
+BUILDDIR=	$(NAME)-build
 UNCOMPRESSEDDIR=$(NAME)-$(VERSION)
 
 PREFIX=		/usr/local
 INSTALLDIR=	$(PORTDIR)/$(NAME)-install
 INSTALLDOCDIR=	$(INSTALLDIR)${PREFIX}/share/doc/$(NAME)
 PKGNAME=	$(PORTDIR)/$(NAME)-$(VERSION)-$(REVISION).pkg
-# DMGNAME=	$(PORTDIR)/$(DISTNAME)-$(VERSION)-$(REVISION).dmg
 TITLE=		$(NAME) $(VERSION)
 
 PACKAGEMAKER=	/Developer/usr/bin/packagemaker
-# CREATEDMG=	/usr/bin/hdiutil create
-TOUCH=		@touch
-#TOUCH=		@date >
-FETCH=		@curl -f -O -C - -L
-#FETCH=		@wget -c
+FETCH=		curl -f -O -C - -L
 MKPMDOC=	../../Library/mkpmdoc.py
 
 # Detect architecture (Intel or PowerPC) and number of CPUs/Cores
@@ -68,8 +63,8 @@ endef
 
 define createdocdir
 install -d $(INSTALLDOCDIR)
-for x in $(wildcard $(BUILDDIR)/CHANGELOG* \
-					$(BUILDDIR)/BUGS* \
+for x in $(wildcard $(BUILDDIR)/CHANGELOG \
+					$(BUILDDIR)/BUGS \
 					$(BUILDDIR)/COPYING \
 					$(BUILDDIR)/INSTALL \
 					$(BUILDDIR)/NEWS \
@@ -133,7 +128,7 @@ retrieve:
 	$(FETCH) $(URL)/$(SOURCE)
 	$(call post_retrieve_hook)
 	@$(call info_output,Finished)
-	touch retrieve
+	@touch retrieve
 
 prep: retrieve
 	@$(call info_output,Preparing to build)
@@ -145,7 +140,7 @@ prep: retrieve
 	@$(apply_patches)
 	$(call post_prep_hook)
 	@$(call info_output,Finished)
-	touch prep
+	@touch prep
 
 createpmdoc:
 	$(MKPMDOC) \
@@ -162,7 +157,7 @@ pmdoc: install
 	$(MAKE) createpmdoc
 	sed 's*o="$(USER)"*o="root"*' $(CONTENTSXML) > $(CONTENTSXML)
 	sed 's*pt="$(PORTDIR)/*pt="*' $(CONTENTSXML) > $(CONTENTSXML)
-	touch pmdoc
+	@touch pmdoc
 
 # Included as precond in install rule
 universal_test:
@@ -188,11 +183,13 @@ pkg: install test pmdoc
 		--title "$(TITLE)" \
 	$(if $(wildcard $(PORTDIR)/scripts),--scripts $(PORTDIR)/scripts) \
 		--out $(PKGNAME)
-	touch pkg
+	@$(call info_output,Finished)
+	@touch pkg
 
 installpkg: pkg
 	@$(call info_output,Installing package)
 	installer -pkg $(PKGNAME) -target /
+	@$(call info_output,Finished)
 
 installclean:
 	rm -rf install $(INSTALLDIR)
@@ -213,4 +210,5 @@ tag:
 	@hg tag $(NAME)-$(VERSION)-$(REVISION)
 
 about:
-	@echo "$(TITLE) ($(DISTNAME)-$(VERSION)-$(REVISION))"
+	@echo "$(TITLE) ($(NAME)-$(VERSION)-$(REVISION))"
+	@echo "$(DESCRIPTION)"
