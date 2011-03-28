@@ -28,15 +28,15 @@ make check
 endef
 
 build: prep $(DEPENDS)
-	@$(call info_output,"Building from source")
+	@$(call info_output,Building from source)
 	$(call pre_build_hook)
 	cd $(BUILDDIR); $(gnu_configure) ; $(make)
 	$(call post_build_hook)
-	@$(call info_output,"Finished")
+	@$(call info_output,Finished)
 	@touch build
 
 install: build
-	@$(call info_output,"Installing now")
+	@$(call info_output,Installing now)
 	$(call pre_install_hook)
 	cd $(BUILDDIR) ; $(gnu_make_install)
 	rm -f $(INSTALLDIR)${PREFIX}/share/info/dir
@@ -47,11 +47,11 @@ install: build
 		 strip $$x; \
 	done 
 	$(call post_install_hook)
-	@$(call info_output,"Finished")
-	touch install
+	@$(call info_output,Finished)
+	@touch install
 
 test: install universal_test
 	$(call pre_test_hook)
 	cd $(BUILDDIR) ; $(gnu_make_check) || $(call error_output,One or more tests failed)
 	$(call post_test_hook)
-	touch test
+	@touch test
