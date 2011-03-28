@@ -14,4 +14,5 @@ pkg
 *.tar.gz
 *.tar.bz2
 *.zip
+*.orig
 config.cache
