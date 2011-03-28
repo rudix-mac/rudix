@@ -1,6 +1,7 @@
 
 define pysetupbuild
-ARCHFLAGS=$(ARCHFLAGS);$(PYTHON) setup.py build
+env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ARCHFLAGS="$(ARCHFLAGS)" \
+$(PYTHON) setup.py build
 endef
 
 define pysetupinstall
@@ -22,8 +23,12 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; $(pysetupinstall)
 	$(pycompileall)
-	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so
+	$(createdocdir)
+	shopt -s nullglob; for x in $(INSTALLDIR)/$(SITEPACKAGES)/*/*.so; do \
+		 strip -x $$x; \
+	done
 	touch install
 
-test:
+test: install
+	touch test
 	
