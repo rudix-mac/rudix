@@ -1,3 +1,7 @@
+# Rudix.mk - The BuildSystem as it
+# Copyright (c) 2011 Ruda Moura
+# Authors: Ruda Moura, Leonardo Santagada
+
 BuildSystem = 20110328
 
 Vendor = org.rudix
