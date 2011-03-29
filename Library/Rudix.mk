@@ -234,6 +234,20 @@ define install_inner_hook
 cd $(BuildDir) ; \
 $(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
 $(install_base_documentation)
+for x in $(wildcard \
+	$(BuildDir)/AUTHORS* \
+	$(BuildDir)/ACKS* \
+	$(BuildDir)/CHANGES* \
+	$(BuildDir)/COPYING* \
+	$(BuildDir)/CREDITS* \
+	$(BuildDir)/NOTICE* \
+	$(BuildDir)/README* \
+	$(BuildDir)/INSTALL* \
+	$(BuildDir)/NEWS* \
+	$(BuildDir)/LICENSE* \
+	$(BuildDir)/ChangeLog*) ; do \
+	install -m 644 $$x $(InstallDir)/$(DocDir)/$(Name) ; \
+done
 endef
 
 define test_inner_hook
