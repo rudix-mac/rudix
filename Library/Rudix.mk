@@ -33,43 +33,6 @@ ManDir = $(Prefix)/share/man
 InfoDir = $(Prefix)/share/info
 
 #
-# Tools
-#
-define fetch
-curl -f -O -C - -L
-endef
-
-define explode
-case `file -b -z --mime-type $(Source)` in \
-	application/x-tar) tar zxf $(Source) ;; \
-	application/zip) unzip -o -a -d $(BuilDir) $(Source) ;; \
-	*) false ;; \
-esac
-endef
-
-define apply_patches
-for x in $(wildcard *.patch patches/*.patch) ; do \
-	patch -d $(BuildDir) < $$x ; done
-endef
-
-define pkgmaker
-/Developer/usr/bin/packagemaker
-endef
-
-define gnu_configure
-./configure $(GnuConfigureExtra) \
-	--prefix=$(Prefix) \
-	--mandir=$(ManDir) \
-	--infodir=$(InfoDir) \
-	$(if $(RUDIX_DISABLE_DEPENDENCY_TRACKING),--disable-dependency-tracking) \
-	$(if $(RUDIX_SAVE_CONFIGURE_CACHE),--cache-file=$(PortDir)/config.cache)
-endef
-
-define gnu_make
-make -j $(NumCPU)
-endef
-
-#
 # Framework
 #
 all: install
@@ -141,6 +104,40 @@ endef
 
 define error_color
 printf "\033[31mError: $1\031[0m\n"
+endef
+
+define fetch
+curl -f -O -C - -L
+endef
+
+define explode
+case `file -b -z --mime-type $(Source)` in \
+	application/x-tar) tar zxf $(Source) ;; \
+	application/zip) unzip -o -a -d $(BuilDir) $(Source) ;; \
+	*) false ;; \
+esac
+endef
+
+define apply_patches
+for x in $(wildcard *.patch patches/*.patch) ; do \
+	patch -d $(BuildDir) < $$x ; done
+endef
+
+define pkgmaker
+/Developer/usr/bin/packagemaker
+endef
+
+define gnu_configure
+./configure $(GnuConfigureExtra) \
+	--prefix=$(Prefix) \
+	--mandir=$(ManDir) \
+	--infodir=$(InfoDir) \
+	$(if $(RUDIX_DISABLE_DEPENDENCY_TRACKING),--disable-dependency-tracking) \
+	$(if $(RUDIX_SAVE_CONFIGURE_CACHE),--cache-file=$(PortDir)/config.cache)
+endef
+
+define gnu_make
+make -j $(NumCPU)
 endef
 
 define retrieve_inner_hook
