@@ -106,6 +106,8 @@ distclean: clean pkgclean
 realdistclean: distclean
 	rm -f retrieve $(Source)
 
+.PHONY: installclean pkgclean clean distclean realdistclean
+
 #
 # Functions
 #
