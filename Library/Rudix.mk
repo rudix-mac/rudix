@@ -33,6 +33,12 @@ ManDir = $(Prefix)/share/man
 InfoDir = $(Prefix)/share/info
 
 #
+# Python options
+#
+Python = /usr/bin/python2.6
+PythonSitePackages = /Library/Python/2.6/site-packages
+
+#
 # Framework
 #
 all: install
@@ -164,6 +170,8 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 	$(call verify_universal,$$x) ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do \
+	$(call verify_universal,$$x) ; done
 @$(call info_color,Done)
 endef
 
@@ -200,18 +208,17 @@ ifdef RUDIX_PYTHON_FORMULA
 define build_inner_hook
 cd $(BuildDir) ; \
 env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LDFLAGS)" ARCHFLAGS="$(ARCHFLAGS)" \
-$(RUDIX_PYTHON) setup.py build
+$(Python) setup.py build
 endef
 
 define install_inner_hook
-cd $(BuildDir) ; $(RUDIX_PYTHON) setup.py install \
+cd $(BuildDir) ; $(Python) setup.py install \
 	--no-compile \
 	--root=$(PortDir)/$(InstallDir) \
 	--prefix=$(Prefix) \
-	--install-lib=$(RUDIX_SITE_PACKAGES)
-cd $(BuildDir) ; $(RUDIX_PYTHON) -m compileall -d / $(PortDir)/$(InstallDir)
+	--install-lib=$(PythonSitePackages)
+cd $(BuildDir) ; $(Python) -m compileall -d / $(PortDir)/$(InstallDir)
 endef
-
 
 define test_inner_hook
 $(if $(RUDIX_UNIVERSAL),$(call test_universal))
