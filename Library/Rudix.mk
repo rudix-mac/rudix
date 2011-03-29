@@ -197,5 +197,23 @@ endef
 endif
 
 ifdef RUDIX_PYTHON_FORMULA
-# FIXME
+define build_inner_hook
+cd $(BuildDir) ; \
+env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LDFLAGS)" ARCHFLAGS="$(ARCHFLAGS)" \
+$(RUDIX_PYTHON) setup.py build
+endef
+
+define install_inner_hook
+cd $(BuildDir) ; $(RUDIX_PYTHON) setup.py install \
+	--no-compile \
+	--root=$(PortDir)/$(InstallDir) \
+	--prefix=$(Prefix) \
+	--install-lib=$(RUDIX_SITE_PACKAGES)
+cd $(BuildDir) ; $(RUDIX_PYTHON) -m compileall -d / $(PortDir)/$(InstallDir)
+endef
+
+
+define test_inner_hook
+$(if $(RUDIX_UNIVERSAL),$(call test_universal))
+endef
 endif
