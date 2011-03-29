@@ -1,9 +1,6 @@
 BuildSystem = 20110328
 
 Vendor = org.rudix
-Name = noname
-Version = 0
-Revision = 0
 UncompressedName = $(Name)-$(Version)
 PortDir := $(shell pwd)
 BuildDir = $(Name)-build
@@ -29,6 +26,7 @@ LdFlags = $(ArchFlags)
 #
 Prefix = /usr/local
 BinDir = $(Prefix)/bin
+SBinDir = $(Prefix)/sbin
 LibDir = $(Prefix/lib
 DocDir = $(Prefix)/share/doc
 ManDir = $(Prefix)/share/man
@@ -149,6 +147,19 @@ $(explode)
 mv -v $(UncompressedName) $(BuildDir)
 endef
 
+define verify_universal
+lipo $1 -verify_arch i386 x86_64 || $(call warning_color,file $1 is not an Universal Binary)
+endef
+
+define test_universal
+@$(call info_color,Starting Universal Binaries test)
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+	$(call verify_universal,$$x) ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+	$(call verify_universal,$$x) ; done
+@$(call info_color,Done)
+endef
+
 #
 # Formulas
 #
@@ -159,11 +170,14 @@ env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" \
 $(gnu_configure)
 cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
 endef
+
 define install_inner_hook
 cd $(BuildDir) ; \
 $(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
 endef
+
 define test_inner_hook
+$(if $(RUDIX_UNIVERSAL),$(call test_universal))
 cd $(BuildDir) ; $(gnu_make) check
 endef
 endif
