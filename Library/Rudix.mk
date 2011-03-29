@@ -2,6 +2,7 @@ BuildSystem = 20110328
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
+PkgName = $(Name)-$(Version)-$(Revision).pkg
 PortDir := $(shell pwd)
 BuildDir = $(Name)-build
 InstallDir = $(Name)-install
@@ -82,6 +83,14 @@ test: install
 	@$(call info_color,Done)
 	@touch test
 
+pkg: test
+	@$(call info_color,Packing)
+	@$(call pkg_pre_hook)
+	@$(call pkg_inner_hook)
+	@$(call pkg_post_hook)
+	@$(call info_color,Done)
+	@touch pkg
+
 installclean:
 	rm -rf install $(InstallDir)
 
@@ -129,8 +138,25 @@ for x in $(wildcard *.patch patches/*.patch) ; do \
 	patch -d $(BuildDir) < $$x ; done
 endef
 
-define pkgmaker
-/Developer/usr/bin/packagemaker
+define create_pmdoc
+../../Library/mkpmdoc.py \
+	--name $(Name) \
+	--version $(Version)-$(Revision) \
+	--title "$(Title)" \
+	--description "$(Description)" \
+	--readme $(ReadMeFile) \
+	--license $(LicenseFile) \
+	.
+endef
+
+define create_pkg
+/Developer/usr/bin/packagemaker \
+	--doc $(Name).pmdoc \
+	--id $(Vendor).pkg.$(Name) \
+	--version $(Version)-$(Revision) \
+	--title "$(Title)" \
+$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
+	--out $(PortDir)/$(PkgName)
 endef
 
 define gnu_configure
@@ -179,6 +205,12 @@ define install_base_documentation
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define pkg_inner_hook
+$(create_pmdoc)
+$(fix_owner_in_contents)
+$(create_pkg)
 endef
 
 #
