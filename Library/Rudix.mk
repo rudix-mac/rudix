@@ -167,6 +167,12 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 @$(call info_color,Done)
 endef
 
+define install_base_documentation
+install -d $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+endef
+
 #
 # Formulas
 #
@@ -181,6 +187,7 @@ endef
 define install_inner_hook
 cd $(BuildDir) ; \
 $(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
+$(install_base_documentation)
 endef
 
 define test_inner_hook
