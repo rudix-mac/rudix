@@ -47,6 +47,11 @@ case `file -b -z --mime-type $(Source)` in \
 esac
 endef
 
+define apply_patches
+for x in $(wildcard *.patch patches/*.patch) ; do \
+	patch -d $(BuildDir) < $$x ; done
+endef
+
 define pkgmaker
 /Developer/usr/bin/packagemaker
 endef
@@ -145,6 +150,7 @@ endef
 define prep_inner_hook
 $(explode)
 mv -v $(UncompressedName) $(BuildDir)
+$(apply_patches)
 endef
 
 define verify_universal
