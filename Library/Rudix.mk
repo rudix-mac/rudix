@@ -27,7 +27,7 @@ LdFlags = $(ArchFlags)
 Prefix = /usr/local
 BinDir = $(Prefix)/bin
 SBinDir = $(Prefix)/sbin
-LibDir = $(Prefix/lib
+LibDir = $(Prefix)/lib
 DocDir = $(Prefix)/share/doc
 ManDir = $(Prefix)/share/man
 InfoDir = $(Prefix)/share/info
@@ -159,6 +159,10 @@ define test_universal
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+	$(call verify_universal,$$x) ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+	$(call verify_universal,$$x) ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
 @$(call info_color,Done)
 endef
