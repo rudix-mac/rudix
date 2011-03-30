@@ -1,15 +1,18 @@
-# Client-side implementation of the rsync algorithm
 # http://zsync.moria.org.uk/
 # Artistic License
 
-include ../../Library/Rules.mk
-include ../../Library/GNUConfigure.mk
+RUDIX_GNU_FORMULA=true
 
-NAME=		zsync
-VERSION=	0.6.2
-REVISION=	1
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+
+Description=	Client-side implementation of the rsync algorithm
+Title=		zsync $(Version)
+Name=		zsync
+Version=	0.6.2
+Revision=	2
 URL=		http://zsync.moria.org.uk/download/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/COPYING
