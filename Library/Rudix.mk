@@ -178,15 +178,6 @@ define gnu_make
 make -j $(NumCPU)
 endef
 
-define retrieve_inner_hook
-$(fetch) $(URL)/$(Source)
-endef
-
-define prep_inner_hook
-$(explode)
-mv -v $(UncompressedName) $(BuildDir)
-$(apply_patches)
-endef
 
 define verify_universal
 lipo $1 -verify_arch i386 x86_64 || $(call warning_color,file $1 is not an Universal Binary)
@@ -224,6 +215,19 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
 $(call info_color,Done)
+endef
+
+#
+# Common inner hooks
+#
+define retrieve_inner_hook
+$(fetch) $(URL)/$(Source)
+endef
+
+define prep_inner_hook
+$(explode)
+mv -v $(UncompressedName) $(BuildDir)
+$(apply_patches)
 endef
 
 define pkg_inner_hook
