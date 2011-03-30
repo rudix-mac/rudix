@@ -1,10 +1,9 @@
 # http://zsync.moria.org.uk/
 # Artistic License
 
-RUDIX_GNU_FORMULA=true
-
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
 Description=	Client-side implementation of the rsync algorithm
 Title=		zsync $(Version)
