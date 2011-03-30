@@ -52,7 +52,7 @@ retrieve:
 	@$(call retrieve_pre_hook)
 	@$(call retrieve_inner_hook)
 	@$(call retrieve_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch retrieve
 
 prep: retrieve
@@ -60,7 +60,7 @@ prep: retrieve
 	@$(call prep_pre_hook)
 	@$(call prep_inner_hook)
 	@$(call prep_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch prep
 
 build: prep
@@ -68,7 +68,7 @@ build: prep
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
 	@$(call build_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch build
 
 install: build
@@ -76,7 +76,7 @@ install: build
 	@$(call install_pre_hook)
 	@$(call install_inner_hook)
 	@$(call install_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch install
 
 test: install
@@ -84,7 +84,7 @@ test: install
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
 	@$(call test_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch test
 
 pkg: test
@@ -92,7 +92,7 @@ pkg: test
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
 	@$(call pkg_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,Finished)
 	@touch pkg
 
 installclean:
