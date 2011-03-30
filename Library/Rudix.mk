@@ -213,9 +213,22 @@ install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
 endef
 
+define strip_macho
+$(call info_color,Stripping binaries)
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+	strip $$x ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+	strip $$x ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+	strip -x $$x ; done
+for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
+	strip -x $$x ; done
+$(call info_color,Done)
+endef
+
 define pkg_inner_hook
 $(create_pmdoc)
-$(fix_owner_in_contents)
+$(if RUDIX_STRIP_PACKAGE,$(strip_macho))
 $(create_pkg)
 endef
 
