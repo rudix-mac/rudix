@@ -1,4 +1,4 @@
-# Rudix.mk - The BuildSystem as it
+# Rudix.mk - The BuildSystem itself
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
