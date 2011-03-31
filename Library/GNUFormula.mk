@@ -2,6 +2,13 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
+ifeq ($(RUDIX_ENABLE_NLS),yes)
+GnuConfigureExtra += --enable-nls
+BuildRequires += /usr/local/lib/libintl.la
+else ifeq ($(RUDIX_ENABLE_NLS),no)
+GnuConfigureExtra += --disable-nls
+endif
+
 define build_inner_hook
 cd $(BuildDir) ; \
 env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" \
