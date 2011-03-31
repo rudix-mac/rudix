@@ -63,7 +63,7 @@ prep: retrieve
 	@$(call info_color,Finished)
 	@touch prep
 
-build: prep
+build: prep $(BuildRequires)
 	@$(call info_color,Building)
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
