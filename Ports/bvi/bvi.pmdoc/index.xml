@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Bvi</title>
+    <title>Bvi 1.3.2</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">bvi-1.3.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">bvi-1.3.2/README</resource>
+      <resource relative="true" mod="true" type="license">bvi-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">bvi-build/README</resource>
     </locale>
   </resources>
   <flags/>
