@@ -1,50 +1,27 @@
-# Retrieve files from the web via HTTP, HTTPS and FTP
-# http://www.gnu.org/software/wget/
-# GPL
+RUDIX_ENABLE_NLS=yes
 
-include ../../Library/Rules.mk
+# FIXME: How to compile it static with the new buildsystem?
+#ifdef WITH_STATIC_NLS
+#LDFLAGS+=	-framework CoreFoundation -liconv
+#endif
 
-TITLE=		GNU Wget $(VERSION)
-NAME=		wget
-VERSION=	1.12
-REVISION=	1
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
+
+Site=		http://www.gnu.org/software/wget/
+License=	GPL
+Description=	Retrieve files from the web via HTTP, HTTPS and FTP
+Title=		GNU Wget $(Version)
+Name=		wget
+Version=	1.12
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/wget/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/COPYING
 
-ifdef WITHOUT_NLS
-NLS=		--disable-nls
-else
-NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.la
-endif
-
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv
-endif
-
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-		$(configure) --disable-dependency-tracking $(NLS) ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/etc/wgetrc \
-		$(INSTALLDIR)/usr/local/etc/wgetrc.default
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make check
-	touch test
+define install_post_hook
+mv $(InstallDir)/$(Prefix)/etc/wgetrc $(InstallDir)/$(Prefix)/etc/wgetrc.default
+endef
