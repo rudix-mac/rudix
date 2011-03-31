@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="969FCAA4-D116-43D5-BE9F-43CC0FDB8371">
+<pkgref spec="1.12" uuid="5D76A332-5B4B-11E0-8C6C-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.bvi</identifier>
-    <version>1.3.2</version>
+    <version>1.3.2-7</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,9 +14,9 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01bvi-contents.xml</file-list>

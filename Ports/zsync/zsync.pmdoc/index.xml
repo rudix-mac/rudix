@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>zsync</title>
+    <title>zsync 0.6.2</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Client-side implementation of the rsync algorith</description>
+  <description>Client-side implementation of the rsync algorithm</description>
   <contents>
     <choice title="zsync-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.zsync"/>
@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">zsync-0.6.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">zsync-0.6.2/README</resource>
+      <resource relative="true" mod="true" type="license">zsync-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">zsync-build/README</resource>
     </locale>
   </resources>
   <flags/>

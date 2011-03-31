@@ -1,38 +1,25 @@
-# Extended module player
-# http://xmp.sourceforge.net/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Site=		http://xmp.sourceforge.net/
+License=	GPL
+Description=	Extended module player
 
-TITLE=		XMP $(VERSION)
-NAME=		xmp
-VERSION=	3.2.0
-REVISION=	1
+Title=		XMP $(VERSION)
+Name=		xmp
+Version=	3.3.0
+Revision=	0
 URL=		http://downloads.sourceforge.net/xmp
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/docs/COPYING
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/docs/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
+define install_post_hook
+rm -rf $(InstallDir)/etc
+endef
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) ; $(make) LDFLAGS="$(LDFLAGS)"
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; \
-	make DESTDIR=$(INSTALLDIR) BIN_DIR=$(INSTALLDIR)/usr/local/bin install
-	rm -rf $(INSTALLDIR)/etc
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/README $(BUILDDIR)/docs/{COPYING,CREDITS,ChangeLog} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define test_inner_hook
+$(if $(RUDIX_UNIVERSAL),$(call test_universal))
+endef

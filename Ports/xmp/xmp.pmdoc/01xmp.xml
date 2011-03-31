@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A1DF8C4C-EB2C-4921-8FE8-11C4DBF1BD5E">
+<pkgref spec="1.12" uuid="C5645F7E-5B1A-11E0-8597-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.xmp</identifier>
-    <version>2.5.1</version>
+    <version>3.3.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>version</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>identifier</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01xmp-contents.xml</file-list>

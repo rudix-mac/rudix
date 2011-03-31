@@ -4,9 +4,15 @@ retrieve
 prep
 build
 install
+pmdoc
+test
 pkg
-dmg
 *~
 *.pkg
-*.dmg
 *-install
+*-build
+*.tar.gz
+*.tar.bz2
+*.zip
+*.orig
+config.cache
