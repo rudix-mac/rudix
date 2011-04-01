@@ -4,7 +4,7 @@
 
 define build_inner_hook
 cd $(BuildDir) ; \
-env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LDFLAGS)" ARCHFLAGS="$(ARCHFLAGS)" \
+env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" ARCHFLAGS="$(ArchFlags)" \
 $(Python) setup.py build
 endef
 
