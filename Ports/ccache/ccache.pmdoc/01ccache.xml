@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="20BB5854-C2D4-4004-A41D-811740EE852D">
+<pkgref spec="1.12" uuid="134925DA-5E09-11E0-AC9F-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.ccache</identifier>
+    <version>3.1.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

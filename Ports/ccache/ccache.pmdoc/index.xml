@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">ccache-3.1.4/LICENSE.txt</resource>
-      <resource relative="true" mod="true" type="readme">ccache-3.1.4/README.txt</resource>
+      <resource relative="true" mod="true" type="license">ccache-build/LICENSE.txt</resource>
+      <resource relative="true" mod="true" type="readme">ccache-build/README.txt</resource>
     </locale>
   </resources>
   <flags/>
