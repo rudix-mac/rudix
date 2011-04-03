@@ -16,9 +16,9 @@ InstallDir = $(Name)-install
 #
 Arch = $(shell arch)
 NumCPU = $(shell sysctl -n hw.ncpu)
-ifdef RUDIX_UNIVERSAL
+ifeq ($(RUDIX_UNIVERSAL),yes)
 ArchFlags = -arch i386 -arch x86_64
-else
+else ifeq ($(RUDIX_UNIVERSAL),no)
 ArchFlags = -arch $(Arch)
 endif
 OptFlags = -Os
@@ -32,6 +32,7 @@ LdFlags = $(ArchFlags)
 Prefix = /usr/local
 BinDir = $(Prefix)/bin
 SBinDir = $(Prefix)/sbin
+IncludeDir = $(Prefix)/include
 LibDir = $(Prefix)/lib
 DocDir = $(Prefix)/share/doc
 ManDir = $(Prefix)/share/man
@@ -141,7 +142,7 @@ endef
 
 define apply_patches
 for x in $(wildcard *.patch patches/*.patch) ; do \
-	patch -d $(SourceDir) < $$x ; done
+	patch -p0 -d $(SourceDir) < $$x ; done
 endef
 
 define create_pmdoc
