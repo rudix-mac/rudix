@@ -1,0 +1,12 @@
+# UnixFormula.mk - Standard build with make.
+# Copyright (c) 2011 Ruda Moura
+# Authors: Ruda Moura, Leonardo Santagada
+
+define build_inner_hook
+cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra) \
+	CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFALGS="$(LdFlags)"
+endef
+
+define install_inner_hook
+$(install_base_documentation)
+endef
