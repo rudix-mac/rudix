@@ -1,48 +1,23 @@
-# High-performance HTTP accelerator
-# http://varnish.projects.linpro.no/
+BuildRequires=	/usr/local/bin/pkg-config
+BuildRequires+=	/usr/local/lib/libpcre.la
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-TITLE=		Varnish $(VERSION)
-NAME=		varnish
-VERSION=	2.1.4
-REVISION=	0
+Site=		http://varnish.projects.linpro.no/
+License=	BSD
+Description=	High-performance HTTP accelerator
+Title=		Varnish
+Name=		varnish
+Version=	2.1.4
+Revision=	0
 URL=		http://www.varnish-software.com/sites/default/files
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-DEPENDS=	/usr/local/lib/libpcre.la
+Source=		$(Name)-$(Version).tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/LICENSE
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	cd $(INSTALLDIR)/usr/local/etc/varnish ; \
-		mv default.vcl default.vcl.default
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{ChangeLog,LICENSE,README} $(INSTALLDOCDIR)
-	strip -x $(INSTALLDIR)/usr/local/bin/*
-	strip -x $(INSTALLDIR)/usr/local/sbin/*
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make check
-	touch test
+define install_post_hook
+cd $(InstallDir)/$(Prefix)/etc/varnish ; mv default.vcl default.vcl.default
+endef
