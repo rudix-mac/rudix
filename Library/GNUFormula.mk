@@ -37,6 +37,6 @@ done
 endef
 
 define test_inner_hook
-$(if $(RUDIX_UNIVERSAL),$(call test_universal))
-cd $(BuildDir) ; $(gnu_make) check
+$(call test_universal)
+cd $(BuildDir) ; $(gnu_make) check || $(call error_color,One or more tests failed)
 endef
