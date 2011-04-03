@@ -6,9 +6,9 @@ BuildSystem = 20110328
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
-PkgName = $(Name)-$(Version)-$(Revision).pkg
 PortDir := $(shell pwd)
-BuildDir = $(Name)-build
+SourceDir = $(Name)-build
+BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
 
 #
@@ -102,7 +102,7 @@ pkgclean:
 	rm -rf pkg *.pkg
 
 clean: installclean
-	rm -rf prep build pmdoc test $(BuildDir)
+	rm -rf prep build pmdoc test $(SourceDir)
 
 distclean: clean pkgclean
 	rm -f config.cache*
@@ -124,7 +124,7 @@ printf "\033[33mWarning: $1\033[0m\n"
 endef
 
 define error_color
-printf "\033[31mError: $1\031[0m\n"
+printf "\033[31mError: $1\033[0m\n"
 endef
 
 define fetch
@@ -141,7 +141,7 @@ endef
 
 define apply_patches
 for x in $(wildcard *.patch patches/*.patch) ; do \
-	patch -d $(BuildDir) < $$x ; done
+	patch -d $(SourceDir) < $$x ; done
 endef
 
 define create_pmdoc
@@ -160,9 +160,9 @@ define create_pkg
 	--doc $(Name).pmdoc \
 	--id $(Vendor).pkg.$(Name) \
 	--version $(Version)-$(Revision) \
-	--title "$(Title)" \
+	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
-	--out $(PortDir)/$(PkgName)
+	--out $(PortDir)/$(Name)-$(Version)-$(Revision).pkg
 endef
 
 define gnu_configure
@@ -178,11 +178,11 @@ define gnu_make
 make -j $(NumCPU)
 endef
 
-
 define verify_universal
 lipo $1 -verify_arch i386 x86_64 || $(call warning_color,file $1 is not an Universal Binary)
 endef
 
+ifeq ($(RUDIX_UNIVERSAL),yes)
 define test_universal
 @$(call info_color,Starting Universal Binaries test)
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
@@ -197,6 +197,7 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do 
 	$(call verify_universal,$$x) ; done
 @$(call info_color,Done)
 endef
+endif
 
 define install_base_documentation
 install -d $(InstallDir)/$(DocDir)/$(Name)
@@ -226,7 +227,7 @@ endef
 
 define prep_inner_hook
 $(explode)
-mv -v $(UncompressedName) $(BuildDir)
+mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
