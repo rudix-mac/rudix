@@ -1,39 +1,37 @@
-# Vx32: portable, efficient, safe execution of untrusted x86 code
-# http://pdos.csail.mit.edu/~baford/vm/
-# LGPL
+include ../../Library/Config.mk
 
-include ../../Library/Rules.mk
+RUDIX_UNIVERSAL=no
 
-TITLE=		Vx32 $(VERSION)
-NAME=		vx32
-VERSION=	0.12
-REVISION=	3
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
+
+Arch=i386
+
+Site=		http://pdos.csail.mit.edu/~baford/vm/
+License=	LGPL
+Description=	Vx32: portable, efficient, safe execution of untrusted x86 code
+Title=		Vx32
+Name=		vx32
+Version=	0.12
+Revision=	3
 URL=		http://pdos.csail.mit.edu/~baford/vm/release/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/ADVENTURE
-LICENSE=	$(PORTDIR)/LICENSE
+ReadMeFile=	$(SourceDir)/ADVENTURE
+LicenseFile=	$(PortDir)/LICENSE
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/snowleopard.patch
-	touch prep
+BuildDir = $(Name)-build/src
+GnuMakeExtra = libvx32/libvx32.a 9vx/9vx vxrun/vxrun
 
-build: prep
-	cd $(BUILDDIR)/src ;  $(make) libvx32/libvx32.a 9vx/9vx vxrun/vxrun
-	touch build
-
-install: build
-	install -d $(INSTALLDIR)/usr/local/lib
-	install -m 644 $(BUILDDIR)/src/libvx32/libvx32.a $(INSTALLDIR)/usr/local/lib
-	install -d $(INSTALLDIR)/usr/local/include/vx32
-	install -m 644 $(BUILDDIR)/src/libvx32/*.h $(INSTALLDIR)/usr/local/include/vx32
-	install -d $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/src/9vx/9vx $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/src/vxrun/vxrun $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/src/vxrun/vxrungcc $(INSTALLDIR)/usr/local/bin
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/ADVENTURE $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/*.pdf $(INSTALLDOCDIR)
-	install -m 644 $(PORTDIR)/LICENSE $(INSTALLDOCDIR)
-	touch install
+define install_post_hook
+install -d $(InstallDir)/$(LibDir)
+install -m 644 $(SourceDir)/src/libvx32/libvx32.a $(InstallDir)/$(LibDir)
+install -d $(InstallDir)/$(IncludeDir)/vx32
+install -m 644 $(SourceDir)/src/libvx32/*.h $(InstallDir)/$(IncludeDir)/vx32
+install -d $(InstallDir)/$(BinDir)
+install -m 755 $(SourceDir)/src/9vx/9vx $(InstallDir)/$(BinDir)
+install -m 755 $(SourceDir)/src/vxrun/vxrun $(InstallDir)/$(BinDir)
+install -m 755 $(SourceDir)/src/vxrun/vxrungcc $(InstallDir)/$(BinDir)
+install -m 644 $(SourceDir)/ADVENTURE $(InstallDir)/$(DocDir)/vx32
+install -m 644 $(SourceDir)/doc/*.pdf $(InstallDir)/$(DocDir)/vx32
+endef
