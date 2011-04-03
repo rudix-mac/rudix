@@ -1,41 +1,29 @@
-# tmux is a terminal multiplexer
-# http://tmux.sourceforge.net/
-# BSD
+BuildRequires+=	/usr/local/lib/libevent.la
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-TITLE=		Terminal multiplexer $(VERSION)
-NAME=		tmux
-VERSION=	1.4
-REVISION=	0
+Site=		http://tmux.sourceforge.net/
+License=	BSD
+Description=	tmux is a terminal multiplexer
+Title=		Terminal multiplexer
+Name=		tmux
+Version=	1.4
+Revision=	0
 URL=		http://downloads.sourceforge.net/tmux/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS=	/usr/local/lib/libevent.la
+ReadMeFile=	$(SourceDir)/NOTES
+LicenseFile=	$(PortDir)/LICENSE
 
-README=		$(BUILDDIR)/NOTES
-LICENSE=	$(PORTDIR)/LICENSE
+GnuMakeExtra = -f GNUmakefile FUNIVERSAL=1
+GnuMakeInstallExtra = -f GNUmakefile
 
-prep: retrieve
-	tar zxf $(SOURCE)
-	patch -d $(BUILDDIR) < $(PORTDIR)/GNumakefile.patch
-	touch prep
+define install_post_hook
+chmod +w $(INSTALLDIR)/usr/local/bin/tmux
+endef
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./configure ; $(make) -f GNUmakefile FUNIVERSAL=1
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make -f GNUmakefile DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(README) $(INSTALLDOCDIR)
-	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,FAQ,TODO} $(INSTALLDOCDIR)
-	chmod +w $(INSTALLDIR)/usr/local/bin/tmux
-	strip $(INSTALLDIR)/usr/local/bin/tmux
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define test_inner_hook
+$(call test_universal)
+endef
