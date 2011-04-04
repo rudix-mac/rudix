@@ -1,37 +1,27 @@
-# http://www.rarlab.com/
-# Freeware
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		unRAR $(VERSION)
-NAME=		unrar
-VERSION=	3.7.8
-REVISION=	6
+Site=		http://www.rarlab.com/
+License=	Freeware
+Description=	Extract, list, and test RAR archives
+Title=		unRAR
+Name=		unrar
+Version=	3.7.8
+Revision=	6
 URL=		http://www.rarlab.com/rar/
-SOURCE=		$(NAME)src-$(VERSION).tar.gz
+Source=		$(Name)src-$(Version).tar.gz
 
-README=		$(BUILDDIR)/readme.txt
-LICENSE=	$(BUILDDIR)/license.txt
+ReadMeFile=	$(SourceDir)/readme.txt
+LicenseFile=	$(SourceDir)/license.txt
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	mv unrar $(NAME)-$(VERSION)
-	install -m 644 $(PORTDIR)/makefile.macosx $(BUILDDIR)/Makefile
-	touch prep
+UncompressedName=$(Name)
 
-build: prep
-	cd $(BUILDDIR) ; $(make) CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(CFLAGS)"
-	touch build
+define prep_post_hook
+install -m 644 $(PortDir)/makefile.macosx $(SourceDir)/Makefile
+endef
 
-install: build
-	install -d $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/unrar $(INSTALLDIR)/usr/local/bin
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{license.txt,readme.txt} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install -d $(InstallDir)/$(BinDir)
+install -m 755 $(BuildDir)/unrar $(InstallDir)/$(BinDir)
+endef
