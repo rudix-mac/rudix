@@ -21,7 +21,7 @@ GnuMakeExtra = -f GNUmakefile FUNIVERSAL=1
 GnuMakeInstallExtra = -f GNUmakefile
 
 define install_post_hook
-chmod +w $(INSTALLDIR)/usr/local/bin/tmux
+chmod +w $(InstallDir)/usr/local/bin/tmux
 endef
 
 define test_inner_hook
