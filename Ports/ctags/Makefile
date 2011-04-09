@@ -1,46 +1,28 @@
-# Multilanguage implementation of ctags
-# http://ctags.sourceforge.net/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Description=	Multilanguage implementation of ctags
+Site=		http://ctags.sourceforge.net/
+License=	GPL
+Title=		Exuberant Ctags $(Version)
+Name=		ctags
+Version=	5.8
+Revision=	1
+URL=		http://downloads.sourceforge.net/$(Name)
+Source=		$(Name)-$(Version).tar.gz
 
-TITLE=		Exuberant Ctags $(VERSION)
-NAME=		ctags
-VERSION=	5.8
-REVISION=	1
-URL=		http://downloads.sourceforge.net/$(NAME)
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+GnuConfigureExtra = --program-prefix=exuberant-
+GnuMakeInstallExtra += prefix=$(InstallDir)/$(Prefix)
+GnuMakeInstallExtra += mandir=$(InstallDir)/$(Mandir)
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/exuberant-prefix.patch
-	touch prep
-
-build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --program-prefix=exuberant- ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; \
-	make	prefix=$(INSTALLDIR)/usr/local \
-		mandir=$(INSTALLDIR)/usr/local/share/man install
-	cd $(INSTALLDIR)/usr/local/bin/ ; \
-	ln -sf exuberant-ctags ctags ; ln -sf exuberant-ctags etags
-	cd $(INSTALLDIR)/usr/local/share/man/man1 ; \
-	ln -sf exuberant-ctags.1 ctags.1 ; ln -sf exuberant-ctags.1 etags.1
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(README) $(INSTALLDOCDIR)
-	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{FAQ,NEWS} $(INSTALLDOCDIR)
-	install	-m 644 $(BUILDDIR)/*.html $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+cd $(InstallDir)/$(BinDir) ; \
+ln -sf exuberant-ctags ctags ; ln -sf exuberant-ctags etags
+cd $(InstallDir)/$(ManDir)/man1 ; \
+ln -sf exuberant-ctags.1 ctags.1 ; ln -sf exuberant-ctags.1 etags.1
+install	-m 644 $(SourceDir)/{FAQ,*.html} $(InstallDir)/$(DocDir)/$(Name)
+endef
