@@ -1,59 +1,24 @@
-# Apache Portable Runtime Utility
-# http://apr.apache.org/
-# Apache License
+BuildRequires += /usr/local/lib/libapr-1.la
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-TITLE=		APR-util $(VERSION)
-NAME=		apr-util
-VERSION=	1.3.10
-REVISION=	0
+Site=		http://apr.apache.org/
+License=	Apache License
+Description=	Companion library to APR
+Title=		APR-util
+Name=		apr-util
+Version=	1.3.10
+Revision=	0
 URL=		http://www.apache.org/dist/apr/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
-DEPENDS=	/usr/local/lib/libapr-1.la
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/LICENSE
 
-ifdef STATIC_ONLY
-CONFIG_OPTS=	--enable-static --disable-shared
-endif
+#ifdef STATIC_ONLY
+#CONFIG_OPTS=	--enable-static --disable-shared
+#endif
 
-prep: retrieve
-	tar jxf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIG_OPTS) \
-		--prefix=/usr/local \
-		--with-apr=/usr/local/bin/apr-1-config ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(README) $(INSTALLDOCDIR)
-	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,NOTICE} $(INSTALLDOCDIR)
-ifndef STATIC_ONLY
-	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
-	strip -x $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so
-endif
-	strip -x $(INSTALLDIR)/usr/local/lib/*.a
-	strip -x $(INSTALLDIR)/usr/local/lib/apr-util-1/*.a
-	touch install
-
-test: install
-ifndef STATIC_ONLY
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.so) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do  \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/apr-util-1/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR)/test ; make all ; ./testall -v
-	touch test
+GnuConfigureExtra += --with-apr=/usr/local/bin/apr-1-config
