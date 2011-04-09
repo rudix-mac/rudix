@@ -1,35 +1,25 @@
-# Indenter and formatter of C/C++/Java source files
-# http://astyle.sourceforge.net/
-# LGPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
+Site=		http://astyle.sourceforge.net/
+License=	LGPL
+Description=	Indenter and formatter of C/C++/Java source files
+Title=		Artistic Style
+Name=		astyle
+Version=	2.01
+Revision=	0
+URL=		http://downloads.sourceforge.net/$(Name)
+Source=		$(Name)_$(Version)_macosx.tar.gz
 
-TITLE=		Artistic Style $(VERSION)
-NAME=		astyle
-VERSION=	2.01
-REVISION=	0
-URL=		http://downloads.sourceforge.net/$(NAME)
-SOURCE=		$(NAME)_$(VERSION)_macosx.tar.gz
+ReadMeFile=	$(SourceDir)/doc/index.html
+LicenseFile=	$(SourceDir)/doc/license.html
 
-README=		$(BUILDDIR)/doc/index.html
-LICENSE=	$(BUILDDIR)/doc/license.html
+UncompressedName=$(Name)
+BuildDir=	$(SourceDir)/build/mac
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	mv $(NAME) $(NAME)-$(VERSION)
-	touch prep
-
-build: prep
-	cd $(BUILDDIR)/build/mac ; make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	touch build
-
-install: build
-	install -d $(INSTALLDIR)/usr/local/bin
-	install -m 755 $(BUILDDIR)/build/mac/bin/astyle $(INSTALLDIR)/usr/local/bin
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
-	touch install
-
-test: build
-	lipo $(INSTALLDIR)/usr/local/bin/astyle -verify_arch i386 x86_64
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/doc/* $(InstallDir)/$(DocDir)/$(Name)
+install -d $(InstallDir)/$(BinDir)
+install -m 755 $(BuildDir)/bin/astyle $(InstallDir)/$(BinDir)
+endef
