@@ -11,7 +11,7 @@ endif
 
 define build_inner_hook
 cd $(BuildDir) ; \
-env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" \
+env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
 $(gnu_configure)
 cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
 endef
