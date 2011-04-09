@@ -13,9 +13,9 @@ while (<>) {
     s/LICENSE/LicenseFile/;
     s/INSTALLDIR/InstallDir/;
     s!\$\(INSTALLDOCDIR\)!\$\(InstallDir\)/\$\(DocDir\)/\$\(Name\)!;
-    s!/usr/local/bin!$(BinDir)!;
-    s!/usr/local/lib!$(LibDir)!;
-    s!/usr/local/share/doc!$(DocDir)!;
-    s!/usr/local!\$(Prefix)!;
+    s!/usr/local/bin!\$\(BinDir\)!;
+    s!/usr/local/lib!\$\(LibDir\)!;
+    s!/usr/local/share/doc!\$\(DocDir\)!;
+    s!/usr/local!\$\(Prefix\)!;
     print;
 }
