@@ -1,23 +1,25 @@
-# Text based document generation
-# http://www.methods.co.nz/asciidoc/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-include ../../Library/GNUConfigure.mk
+Site=		http://www.methods.co.nz/asciidoc/
+License=	GPL
+Description=	Text based document generation
+Title=		AsciiDoc
+Name=		asciidoc
+Version=	8.6.3
+Revision=	0
+URL=		http://downloads.sourceforge.net/$(Name)
+Source=		$(Name)-$(Version).tar.gz
 
-TITLE=		AsciiDoc $(VERSION)
-NAME=		asciidoc
-VERSION=	8.6.3
-REVISION=	0
-URL=		http://downloads.sourceforge.net/$(NAME)
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+ReadMeFile=	$(BuildDir)/README
+LicenseFile=	$(BuildDir)/COPYING
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+define install_post_hook
+mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \
+   $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf.default
+endef
 
-gcmakecheck= make test
-
-define gcinstallextra
-mv $(INSTALLDIR)$(PREFIX)/etc/asciidoc/asciidoc.conf \
-   $(INSTALLDIR)$(PREFIX)/etc/asciidoc/asciidoc.conf.default
+# Pure Python binaries
+define test_inner_hook
 endef
