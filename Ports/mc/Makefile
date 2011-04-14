@@ -1,53 +1,35 @@
-# Free Norton Commander clone with many useful features
-# http://www.midnight-commander.org/
-# GPL
+BuildRequires += $(LibDir)/libglib-2.0.la
+BuildRequires += $(LibDir)/libgmodule-2.0.la
+BuildRequires += $(LibDir)/libintl.la
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-TITLE=		Midnight Commander $(VERSION)
-NAME=		mc
-VERSION=	4.7.5.1
-REVISION=	0
+Description=	Free Norton Commander clone with many useful features
+Site=		http://www.midnight-commander.org/
+License=	GPL
+Title=		Midnight Commander
+Name=		mc
+Version=	4.7.5.2
+Revision=	0
 URL=		http://www.midnight-commander.org/downloads/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS+=	/usr/local/lib/libglib-2.0.la
-DEPENDS+=	/usr/local/lib/libgmodule-2.0.la
-DEPENDS+=	/usr/local/lib/libintl.la
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+#ifdef WITH_STATIC_NLS
+#LDFLAGS+=	-framework CoreFoundation -liconv
+#endif
+#ifdef WITH_STATIC_GLIB
+#LDFLAGS+=	-framework Carbon -framework CoreServices
+#endif
 
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv
-endif
-ifdef WITH_STATIC_GLIB
-LDFLAGS+=	-framework Carbon -framework CoreServices
-endif
+GnuConfigureExtra += --with-screen=ncurses
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--disable-dependency-tracking \
-		--with-screen=ncurses ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/etc/mc \
-		$(INSTALLDIR)/usr/local/etc/mc.default
-	install -d $(INSTALLDIR)/usr/local/etc/mc
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/{FAQ,HACKING,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/doc/{FAQ,HACKING,TODO} $(InstallDir)/$(DocDir)/$(Name)
+mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
+install -d $(InstallDir)/$(Prefix)/etc/mc
+endef
