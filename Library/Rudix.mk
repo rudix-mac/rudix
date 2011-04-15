@@ -34,9 +34,10 @@ BinDir = $(Prefix)/bin
 SBinDir = $(Prefix)/sbin
 IncludeDir = $(Prefix)/include
 LibDir = $(Prefix)/lib
-DocDir = $(Prefix)/share/doc
-ManDir = $(Prefix)/share/man
-InfoDir = $(Prefix)/share/info
+DataDir = $(Prefix)/share
+DocDir = $(DataDir)/doc
+ManDir = $(DataDir)/man
+InfoDir = $(DataDir)/info
 
 #
 # Python options
