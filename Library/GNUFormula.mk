@@ -34,6 +34,9 @@ for x in $(wildcard \
 	$(BuildDir)/ChangeLog*) ; do \
 	install -m 644 $$x $(InstallDir)/$(DocDir)/$(Name) ; \
 done
+rm -f $(InstallDir)/$(InfoDir)/dir
+rm -f $(InstallDir)/$(LibDir)/charset.alias
+rm -f $(InstallDir)/$(DataDir)/locale/locale.alias
 endef
 
 define test_inner_hook
