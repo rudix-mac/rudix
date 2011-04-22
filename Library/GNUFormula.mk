@@ -10,9 +10,11 @@ GnuConfigureExtra += --disable-nls
 endif
 
 define build_inner_hook
+$(call info_color,Running Configure)
 cd $(BuildDir) ; \
 env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
 $(gnu_configure)
+$(call info_color,Done)
 cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
 endef
 
