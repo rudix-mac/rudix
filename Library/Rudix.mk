@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110328
+BuildSystem = 20110422
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
