@@ -245,7 +245,7 @@ def get_versions_for_package(pkg):
     'Get a list of available versions for pkg'
     pkg = denormalize(pkg)
     content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
-    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)\.dmg))' % pkg, content)
+    urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % pkg, content)
     versions = sorted(list(set(urls)),
                       cmp=lambda x, y: version_compare(x[2], y[2]))
     if len(versions) == 0:
@@ -268,27 +268,34 @@ def print_versions_for_package(pkg):
         name = version[1]
         if name.endswith('.dmg'):
             name = name[:name.index('.dmg')]
+        if name.endswith('.pkg'):
+            name = name[:name.index('.pkg')]
         print name
 
 def net_install_package(pkg, net_info):
     'Support function for net_install_command'
-    net_url, net_filename, net_version = net_info
+    net_url, net_filename, net_version, net_extension = net_info
     print 'Downloading', net_url
     tempf, file_path = tempfile.mkstemp()
+    file_path += net_extension
     try:
         call(['curl', '-f', '-o', file_path, '-C', '-', '-L', '-#', net_url])
-        print 'Mounting downloaded image file', file_path
-        out = communicate(['hdiutil', 'attach', '-noautoopen', file_path])
-        for l in out:
-            if 'Apple_partition_scheme' in l:
-                disk_path = l.split()[0]
-            if 'Apple_HFS' in l:
-                volume_path = l.split()[2]
-        filepath = os.path.join(volume_path, denormalize(pkg) + '.pkg')
+        if net_extension == '.dmg':
+            print 'Mounting downloaded image file', file_path
+            out = communicate(['hdiutil', 'attach', '-noautoopen', file_path])
+            for l in out:
+                if 'Apple_partition_scheme' in l:
+                    disk_path = l.split()[0]
+                if 'Apple_HFS' in l:
+                    volume_path = l.split()[2]
+            filepath = os.path.join(volume_path, denormalize(pkg) + '.pkg')
+        if net_extension == '.pkg':
+            filepath = file_path
         if os.path.exists(filepath):
             install_package(filepath)
-        print 'Unmounting image', volume_path
-        call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
+        if net_extension == '.dmg':
+            print 'Unmounting image', volume_path
+            call(['hdiutil', 'detach', disk_path], stdout=PIPE, stderr=PIPE)
     finally:
         os.close(tempf)
 
@@ -297,10 +304,10 @@ def net_install_command(pkg):
     net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
     if net_info == []:
-        print "Package '%s' not found online"%pkg
+        print "Package '%s' not found online" % pkg
         return
     if version is not None and version_compare(version, net_info[2]) >= 0:
-        print 'Latest version of package %s(%s) already installed'%(pkg, version)
+        print 'Latest version of package %s(%s) already installed' % (pkg, version)
         return
     if is_root():
         net_install_package(pkg, net_info)
