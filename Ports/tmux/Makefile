@@ -20,6 +20,12 @@ LicenseFile=	$(PortDir)/LICENSE
 GnuMakeExtra = -f GNUmakefile FUNIVERSAL=1
 GnuMakeInstallExtra = -f GNUmakefile
 
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+define prep_post_hook
+perl -p -i -e 's|-levent|/usr/local/lib/libevent.a|g'	$(SourceDir)/configure
+endef
+endif
+
 define install_post_hook
 chmod +w $(InstallDir)/usr/local/bin/tmux
 endef
