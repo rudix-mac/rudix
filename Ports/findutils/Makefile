@@ -1,60 +1,37 @@
-# Finds and then operates on files
-# http://www.gnu.org/software/findutils/
-# GPL
+ifeq ($(RUDIX_ENABLE_NLS),yes)
+BuildRequires += /usr/local/lib/libintl.la
+endif
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-TITLE=		GNU Find Utilities $(VERSION)
-NAME=		findutils
-VERSION=	4.4.2
-REVISION=	1
+Description=	Finds and then operates on files
+Site=		http://www.gnu.org/software/findutils/
+License=	GPL
+Title=		GNU Find Utilities
+Name=		findutils
+Version=	4.4.2
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/findutils/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifdef WITHOUT_NLS
-NLS=		--disable-nls
-else
-DEPENDS+=	/usr/local/lib/libintl.la
-NLS=		--enable-nls
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
+define prep_post_hook
+perl -p -i -e s/'intl '//g $(SourceDir)/configure
+endef
 endif
 
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv
-endif
+GnuConfigureExtra += --program-prefix=gnu
+GnuConfigureExtra += --with-included-regex
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--disable-dependency-tracking \
-		--program-prefix=gnu \
-		--with-included-regex ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	./links.sh $(INSTALLDIR)/usr/local/bin
-	./links.sh $(INSTALLDIR)/usr/local/share/man/man1
-	./links.sh $(INSTALLDIR)/usr/local/share/man/man5
-	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	cd $(INSTALLDIR)/usr/local/share/info ; ln -sf find.info gnufind.info
-	rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip $(INSTALLDIR)/usr/local/libexec/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make check
-	touch test
+define install_post_hook
+./links.sh $(InstallDir)$(BinDir)
+./links.sh $(InstallDir)$(Prefix)/share/man/man1
+./links.sh $(InstallDir)$(Prefix)/share/man/man5
+cd $(InstallDir)$(Prefix)/share/info ; ln -sf find.info gnufind.info
+endef
