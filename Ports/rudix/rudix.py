@@ -73,11 +73,8 @@ def usage():
     print __doc__
 
 def is_root():
-    'Test for root account'
-    if os.getuid() == 0:
-        return True
-    else:
-        return False
+    'Test for root privileges'
+    return os.getuid() == 0
 
 def root_required():
     'Requires root message'
