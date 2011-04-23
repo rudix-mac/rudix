@@ -1,50 +1,22 @@
-# Perl-compatible regular expression library
-# http://www.pcre.org/
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		PCRE $(VERSION)
-NAME=		pcre
-VERSION=	8.10
-REVISION=	0
+Description=	Perl-compatible regular expression library
+Site=		http://www.pcre.org/
+License=	BSD
+Title=		PCRE
+Name=		pcre
+Version=	8.12
+Revision=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENCE
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENCE
 
-ifdef STATIC_ONLY
-CONFIG_OPTS= 	--enable-static --disable-shared
-endif
+GnuConfigureExtra += --enable-utf8
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" \
-	$(configure) $(CONFIG_OPTS) \
-		--disable-dependency-tracking \
-		--enable-utf8 ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	strip $(INSTALLDIR)/usr/local/bin/*
-ifndef STATIC_ONLY
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-endif
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-ifndef STATIC_ONLY
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; ./RunTest
-	touch test
+define test_post_hook
+cd $(SourceDir) ; ./RunTest
+endef

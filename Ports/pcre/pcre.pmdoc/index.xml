@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">pcre-8.10/LICENCE</resource>
-      <resource relative="true" mod="true" type="readme">pcre-8.10/README</resource>
+      <resource relative="true" mod="true" type="license">pcre-build/LICENCE</resource>
+      <resource relative="true" mod="true" type="readme">pcre-build/README</resource>
     </locale>
   </resources>
   <flags/>
