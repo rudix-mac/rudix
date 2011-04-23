@@ -119,7 +119,7 @@ def get_packages():
     return pkgs
 
 def get_package_info(pkg):
-    'Get information from pkg'
+    'Get information from package'
     pkg = normalize(pkg)
     out = communicate(['pkgutil', '-v', '--pkg-info', pkg])
     version = None
@@ -133,7 +133,7 @@ def get_package_info(pkg):
     return version, install_date
 
 def get_package_content(pkg):
-    'Get a list of file names from pkg'
+    'Get a list of file names from package'
     pkg = normalize(pkg)
     out = communicate(['pkgutil', '--files', pkg, '--only-files'])
     content = ['/'+line.strip() for line in out]
@@ -158,20 +158,20 @@ def list_all_packages_info():
         print_package_info(pkg)
 
 def list_package_files(pkg):
-    'Print the file names of pkg'
+    'Print the file names of package'
     content = get_package_content(pkg)
     for file in content:
         print file
 
 def install_package(pkg):
-    'Install a local pkg'
+    'Install a local package'
     if is_root():
         call(['installer', '-pkg', pkg, '-target', '/'], stderr=PIPE)
     else:
         root_required()
 
 def remove_package(pkg):
-    'Uninstall a pkg'
+    'Uninstall a package'
     if is_root() == False:
         return root_required()
     pkg = normalize(pkg)
@@ -206,7 +206,7 @@ def search_in_packages(path):
             print line[len('pkgid: '):]
 
 def verify_package(pkg):
-    'Verify pkg sanity'
+    'Verify package sanity'
     pkg = normalize(pkg)
     call(['pkgutil', '--verify', pkg], stderr=PIPE)
 
@@ -216,7 +216,7 @@ def verify_all_packages():
         verify_package(pkg)
 
 def fix_package(pkg):
-    'Try to fix permissions and groups of pkg'
+    'Try to fix permissions and groups of package'
     if is_root() == False:
         return root_required()
     pkg = normalize(pkg)
@@ -242,7 +242,7 @@ def version_compare(v1, v2):
         return v_cmp
 
 def get_versions_for_package(pkg):
-    'Get a list of available versions for pkg'
+    'Get a list of available versions for package'
     pkg = denormalize(pkg)
     content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
     urls = re.findall('(http://rudix.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % pkg, content)
@@ -254,7 +254,7 @@ def get_versions_for_package(pkg):
         return versions
 
 def get_latest_version_of_package(pkg):
-    'Get the latest version of pkg'
+    'Get the latest version of package'
     versions = get_versions_for_package(pkg)
     if versions:
         return versions[-1]
@@ -262,7 +262,7 @@ def get_latest_version_of_package(pkg):
         return []
 
 def print_versions_for_package(pkg):
-    'Print all versions available for pkg'
+    'Print all versions available for package'
     versions = get_versions_for_package(pkg)
     for version in versions:
         name = version[1]
@@ -276,8 +276,7 @@ def net_install_package(pkg, net_info):
     'Support function for net_install_command'
     net_url, net_filename, net_version, net_extension = net_info
     print 'Downloading', net_url
-    tempf, file_path = tempfile.mkstemp()
-    file_path += net_extension
+    tempf, file_path = tempfile.mkstemp(suffix=net_extension)
     try:
         call(['curl', '-f', '-o', file_path, '-C', '-', '-L', '-#', net_url])
         if net_extension == '.dmg':
@@ -300,7 +299,7 @@ def net_install_package(pkg, net_info):
         os.close(tempf)
 
 def net_install_command(pkg):
-    'Install a pkg from the internet if the pkg was not installed or is older than the internet version'
+    'Install package from the Internet if the package was not installed or is older than the internet version'
     net_info = get_latest_version_of_package(pkg)
     version, install_date = get_package_info(pkg)
     if net_info == []:
@@ -338,13 +337,13 @@ def update_all_packages():
         root_required()
 
 def normalize(pkg):
-    'Transform pkg in full pkg-id (with PREFIX)'
+    'Transform package in full pkg-id (with PREFIX)'
     if not pkg.startswith(PREFIX):
         pkg = PREFIX + pkg
     return pkg
 
 def denormalize(pkg):
-    'Transform pkg in name without PREFIX'
+    'Transform package in name without PREFIX'
     if pkg.startswith(PREFIX):
         pkg = pkg[len(PREFIX):]
     return pkg
@@ -363,7 +362,7 @@ def repl():
         main(argv)
 
 def process(args):
-    'Process args and execute some action'
+    'Process arguments and execute some action'
     try:
         opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
