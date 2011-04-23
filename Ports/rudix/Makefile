@@ -27,7 +27,7 @@ endef
 
 define install_inner_hook
 install -d $(InstallDir)$(BinDir)
-sed "s/@Version@/$(VERSION)/" rudix.py > $(InstallDir)$(BinDir)/rudix
+sed "s/@Version@/$(Version)/" rudix.py > $(InstallDir)$(BinDir)/rudix
 chmod 755 $(InstallDir)$(BinDir)/rudix
 install -d $(InstallDir)$(Prefix)/share/man/man1
 install -m 644 rudix.1 $(InstallDir)$(Prefix)/share/man/man1
