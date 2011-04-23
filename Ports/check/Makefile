@@ -2,10 +2,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Unit test framework for C programs
+Description=	Check is a unit testing framework for C programs
 Site=		http://check.sourceforge.net/
 License=	LGPL
-Title=		Check $(Version)
+Title=		Check
 Name=		check
 Version=	0.9.8
 Revision=	1
