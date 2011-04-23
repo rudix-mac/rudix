@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Rudix Package Manager</description>
+  <description>Rudix Package Manager - RPM ;)</description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rudix"/>
@@ -24,10 +24,7 @@
     </locale>
   </resources>
   <flags/>
-  <extra-files/>
   <item type="file">01rudix.xml</item>
   <mod>properties.title</mod>
-  <mod>properties.customizeOption</mod>
   <mod>description</mod>
-  <mod>extraFiles</mod>
 </pkmkdoc>

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="B323CBD9-6A75-40AB-8021-9941C72E4355">
+<pkgref spec="1.12" uuid="0C2A7DE0-6DC1-11E0-AF94-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.rudix</identifier>
+    <version>11.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -13,9 +14,9 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01rudix-contents.xml</file-list>

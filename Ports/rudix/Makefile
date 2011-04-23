@@ -1,36 +1,44 @@
-# http://rudix.org/
-# BSD
+include ../../Library/Rudix.mk
 
-include ../../Library/Rules.mk
+Description=	Rudix Package Manager - RPM ;)
+Site=		http://rudix.org/
+License=	BSD
+Title=		Rudix Package Manager
+Name=		rudix
+Version=	11.4
+Revision=	0
 
-DESCRIPTION=	Rudix Package Manager.
-TITLE=		Rudix Package Manager $(VERSION)
-NAME=		rudix
-VERSION=	11.2.1
-REVISION=	0
+ReadMeFile=	ReadMe.text
+LicenseFile=	License.text
 
-README=		ReadMe.text
-LICENSE=	License.text
+define retrieve_inner_hook
+touch retrieve
+endef
 
-build: rudix.pdf
-	touch build
+define prep_inner_hook
+touch prep
+endef
 
-install: build
-	install -d $(INSTALLDIR)/usr/local/bin
-	sed "s/@VERSION@/$(VERSION)/" $(PORTDIR)/rudix.py > $(INSTALLDIR)/usr/local/bin/rudix
-	chmod 755 $(INSTALLDIR)/usr/local/bin/rudix
-	install -d $(INSTALLDIR)/usr/local/share/man/man1
-	install -m 644 rudix.1 $(INSTALLDIR)/usr/local/share/man/man1
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(README) $(INSTALLDOCDIR)
-	install -m 644 $(LICENSE) $(INSTALLDOCDIR)
-	install -m 644 rudix.pdf $(INSTALLDOCDIR)
-	touch install
+define build_inner_hook
+groff -mandoc rudix.1 > rudix.ps
+pstopdf rudix.ps -o rudix.pdf
+touch build
+endef
 
-test: install
-	python test_rudix.py
-	touch test
+define install_inner_hook
+install -d $(InstallDir)$(BinDir)
+sed "s/@Version@/$(VERSION)/" rudix.py > $(InstallDir)$(BinDir)/rudix
+chmod 755 $(InstallDir)$(BinDir)/rudix
+install -d $(InstallDir)$(Prefix)/share/man/man1
+install -m 644 rudix.1 $(InstallDir)$(Prefix)/share/man/man1
+install -d $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 rudix.pdf $(InstallDir)/$(DocDir)/$(Name)
+touch install
+endef
 
-rudix.pdf: rudix.1
-	groff -mandoc rudix.1 > rudix.ps
-	pstopdf rudix.ps -o rudix.pdf
+define test_inner_hook
+python test_rudix.py
+touch test
+endef
