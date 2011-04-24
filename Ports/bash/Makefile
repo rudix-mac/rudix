@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Site=		http://www.gnu.org/software/bash/
 License=	GPL
 Description=	GNU Bourne Again Shell
-Title=		GNU Bash $(Version)
+Title=		GNU Bash
 Name=		bash
 Version=	4.2
 Revision=	0
