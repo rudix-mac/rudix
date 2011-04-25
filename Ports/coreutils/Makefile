@@ -9,7 +9,7 @@ include ../../Library/GNUFormula.mk
 Description=	GNU Core Utilities
 Site=		http://www.gnu.org/software/coreutils/
 License=	GPL
-Title=		GNU Core Utilities $(Version)
+Title=		GNU Core Utilities
 Name=		coreutils
 Version=	8.9
 Revision=	0
