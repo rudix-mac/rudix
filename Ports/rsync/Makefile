@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	Mirroring/synchronization over low bandwidth links
 Site=		http://samba.org/rsync/
 License=	GPL
-Title=		Rsync $(Version)
+Title=		Rsync
 Name=		rsync
 Version=	3.0.8
 Revision=	0
