@@ -5,6 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	SMTP plugin for MUAs
 Site=		http://msmtp.sourceforge.net/
 License=	GPL
+Title=		msmtp
 Name=		msmtp
 Version=	1.4.23
 Revision=	0
