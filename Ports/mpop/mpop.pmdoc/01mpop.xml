@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="2185E526-530F-4FA2-BCC8-55937B0D51E9">
+<pkgref spec="1.12" uuid="CFF70C42-7074-11E0-89F3-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.mpop</identifier>
-    <version>1</version>
+    <version>1.0.23-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,9 +14,9 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01mpop-contents.xml</file-list>
