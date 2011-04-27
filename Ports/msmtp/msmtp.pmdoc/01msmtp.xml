@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="1CBDC466-7076-11E0-ACA8-0017F22C0C04">
+<pkgref spec="1.12" uuid="655BBB6E-7077-11E0-990F-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.msmtp</identifier>
     <version>1.4.23-0</version>
