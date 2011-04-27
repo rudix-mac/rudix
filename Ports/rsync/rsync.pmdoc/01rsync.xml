@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A816BBB0-6F9C-11E0-9A78-0017F22C0C04">
+<pkgref spec="1.12" uuid="AD08CAA8-6FFD-11E0-99FC-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.rsync</identifier>
     <version>3.0.8-0</version>
