@@ -1,44 +1,26 @@
-# SMTP plugin for MUAs
-# http://msmtp.sourceforge.net/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		msmtp
-VERSION=	1.4.17
-REVISION=	2
+Description=	SMTP plugin for MUAs
+Site=		http://msmtp.sourceforge.net/
+License=	GPL
+Name=		msmtp
+Version=	1.4.23
+Revision=	0
 URL=		http://downloads.sourceforge.net/msmtp/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-ifdef WITHOUT_NLS
-NLS=		--disable-nls
-else
-NLS=		--enable-nls
-DEPENDS=	/usr/local/lib/libintl.la
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
+
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
+define prep_post_hook
+perl -p -i -e s/'intl '//g $(SourceDir)/configure
+endef
 endif
 
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv
-endif
-
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --disable-dependency-tracking $(NLS) ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)                                            
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,doc/msmtp*} $(INSTALLDOCDIR)  
-	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/doc/msmtp* $(InstallDir)/$(DocDir)/$(Name)  
+endef

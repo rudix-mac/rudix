@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>msmtp</title>
-    <build>/Users/ruda/Documents/msmtp.pkg</build>
+    <title></title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -14,14 +13,14 @@
   </distribution>
   <description>SMTP plugin for MUAs</description>
   <contents>
-    <choice title="msmtp-install" id="msmtp" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="msmtp-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.msmtp"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">msmtp-1.4.17/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">msmtp-1.4.17/README</resource>
+      <resource relative="true" mod="true" type="license">msmtp-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">msmtp-build/README</resource>
     </locale>
   </resources>
   <flags/>
