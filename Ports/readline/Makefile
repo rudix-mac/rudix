@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	GNU Readline library
 Site=		http://tiswww.case.edu/php/chet/readline/rltop.html
 License=	GPL
-Title=		GNU Readline $(Version)
+Title=		GNU Readline
 Name=		readline
 Version=	6.2
 Revision=	0
