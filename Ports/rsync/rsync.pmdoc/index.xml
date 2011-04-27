@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Rsync</title>
-    <build>/Users/ruda/Desktop/Rsync 3.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -14,14 +13,14 @@
   </distribution>
   <description>Mirroring/synchronization over low bandwidth links</description>
   <contents>
-    <choice title="rsync-install" id="rsync" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="rsync-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rsync"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">rsync-3.0.7/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">rsync-3.0.7/README</resource>
+      <resource relative="true" mod="true" type="license">rsync-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">rsync-build/README</resource>
     </locale>
   </resources>
   <flags/>

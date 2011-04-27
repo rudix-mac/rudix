@@ -1,50 +1,24 @@
-# GNU Readline library
-# http://tiswww.case.edu/php/chet/readline/rltop.html
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Description=	GNU Readline library
+Site=		http://tiswww.case.edu/php/chet/readline/rltop.html
+License=	GPL
+Title=		GNU Readline
+Name=		readline
+Version=	6.2
+Revision=	0
+URL=		http://ftp.gnu.org/gnu/readline/
+Source=		$(Name)-$(Version).tar.gz
 
-TITLE=		GNU Readline $(VERSION)
-NAME=		readline
-VERSION=	6.0
-REVISION=	2
-URL=		ftp://ftp.cwru.edu/pub/bash/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifdef STATIC_ONLY
-CONFIGURE_OPTS=	--enable-static --disable-shared
-endif
+GnuConfigureExtra += --with-curses
+GnuMakeInstallExtra += install-doc
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; for x in $(PORTDIR)/readline*-00? ; do \
-		patch < $$x ; done
-	touch prep
-
-build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) --with-curses ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install install-doc
-	rm -rf $(INSTALLDIR)/usr/local/share/readline
-	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGELOG,CHANGES,COPYING,NEWS,README,USAGE} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/*.html $(INSTALLDOCDIR)
-ifndef STATIC_ONLY
-	chmod u+w $(INSTALLDIR)/usr/local/lib/*.dylib
-	strip -x  $(INSTALLDIR)/usr/local/lib/*.dylib
-endif
-	strip -x  $(INSTALLDIR)/usr/local/lib/*.a
-	touch install
-
-test: install
-ifndef STATIC_ONLY
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch install
+define install_post_hook
+install -m 644 $(SourceDir)/doc/*.html $(InstallDir)/$(DocDir)/$(Name)
+chmod u+w $(InstallDir)$(LibDir)/*.dylib
+endef

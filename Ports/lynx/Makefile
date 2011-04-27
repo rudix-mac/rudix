@@ -1,50 +1,38 @@
-# Text mode  World Wide Web (WWW) client
-# http://lynx.isc.org/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		Lynx $(VERSION)
-NAME=		lynx
-VERSION=	2.8.7
-REVISION=	1
+Description=	Lynx is a text browser for the World Wide Web
+Site=		http://lynx.isc.org/
+License=	GPL
+Title=		Lynx Browser
+Name=		lynx
+Version=	2.8.7
+Revision=	1
 URL=		http://lynx.isc.org/release/
-SOURCE=		$(NAME)$(VERSION).tar.bz2
+Source=		$(Name)$(Version).tar.bz2
 
-ifdef WITHOUT_NLS
-NLS=		--disable-nls
-else
-NLS=		--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.la
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
+
+UncompressedName = lynx2-8-7
+
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
+define prep_post_hook
+#perl -p -i -e s/'intl '//g $(SourceDir)/configure
+endef
 endif
 
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv
-endif
+GnuConfigureExtra += --enable-ipv6
+GnuConfigureExtra += --with-ssl
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	mv lynx2-8-7 $(NAME)-$(VERSION)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/lynx.cfg.patch
-	touch prep
+define install_post_hook
+mv $(InstallDir)$(Prefix)/etc/lynx.cfg $(InstallDir)$(Prefix)/etc/lynx.cfg.default
+mv $(InstallDir)$(Prefix)/etc/lynx.lss $(InstallDir)$(Prefix)/etc/lynx.lss.default
+install -m 644 $(SourceDir)/{CHANGES,COPYHEADER*,PROBLEMS} $(InstallDir)/$(DocDir)/$(Name)
+endef
 
-build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(STATIC) \
-		--enable-ipv6 \
-		--with-ssl $(NLS) ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/etc/lynx.cfg $(INSTALLDIR)/usr/local/etc/lynx.cfg.default
-	mv $(INSTALLDIR)/usr/local/etc/lynx.lss $(INSTALLDIR)/usr/local/etc/lynx.lss.default
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,CHANGES,COPYHEADER*,COPYING*,PROBLEMS,README} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define test_inner_hook
+$(call test_universal)
+endef

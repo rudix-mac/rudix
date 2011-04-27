@@ -1,5 +1,5 @@
---- Makefile.in.orig	2008-12-08 15:49:23.000000000 -0200
-+++ Makefile.in	2008-12-16 22:44:34.000000000 -0200
+--- libguile/Makefile.in.orig	2008-12-08 15:49:23.000000000 -0200
++++ libguile/Makefile.in	2008-12-16 22:44:34.000000000 -0200
 @@ -493,7 +493,7 @@
      c-tokenize.lex version.h.in						\
      scmconfig.h.top gettext.h measure-hwm.scm

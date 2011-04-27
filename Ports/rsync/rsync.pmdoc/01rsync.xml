@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A04D5D4D-29B8-4A14-A4DF-AA7D1AD7448D">
+<pkgref spec="1.12" uuid="AD08CAA8-6FFD-11E0-99FC-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.rsync</identifier>
-    <version>3.0.5</version>
+    <version>3.0.8-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,10 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
     <mod>version</mod>
   </config>
   <contents>

@@ -1,41 +1,25 @@
-# Mirroring/synchronization over low bandwidth links
-# http://samba.org/rsync/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		Rsync $(VERSION)
-NAME=		rsync
-VERSION=	3.0.7
-REVISION=	1
+Description=	Mirroring/synchronization over low bandwidth links
+Site=		http://samba.org/rsync/
+License=	GPL
+Title=		Rsync
+Name=		rsync
+Version=	3.0.8
+Revision=	0
 URL=		http://samba.org/ftp/rsync/src/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-#DEPENDS=	/usr/local/lib/libpopt.la
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
+GnuConfigureExtra += --with-included-popt
+GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--with-included-popt \
-		--with-rsyncd-conf=/usr/local/etc ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	cd $(INSTALLDIR)/usr/local/bin ; ln -sf rsync rsync3
-	cd $(INSTALLDIR)/usr/local/share/man/man1 ; ln -sf rsync.1 rsync3.1
-	cd $(INSTALLDIR)/usr/local/share/man/man5 ; ln -sf rsyncd.conf.5 rsyncd3.conf.5
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; make check
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+cd $(InstallDir)$(BinDir) ; ln -sf rsync rsync3
+cd $(InstallDir)$(Prefix)/share/man/man1 ; ln -sf rsync.1 rsync3.1
+cd $(InstallDir)$(Prefix)/share/man/man5 ; ln -sf rsyncd.conf.5 rsyncd3.conf.5
+endef
