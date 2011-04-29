@@ -13,7 +13,7 @@ include ../../Library/GNUFormula.mk
 Site=		http://optipng.sourceforge.net/
 License=	zlib
 Description=	OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.
-Title=		OptiPNG $(Version)
+Title=		OptiPNG
 Name=		optipng
 Version=	0.6.5
 Revision=	1
