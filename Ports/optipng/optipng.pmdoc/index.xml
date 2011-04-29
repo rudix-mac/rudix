@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>OptiPNG</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.</description>
+  <contents>
+    <choice title="optipng-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.optipng"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">optipng-build/LICENSE.txt</resource>
+      <resource relative="true" mod="true" type="readme">optipng-build/README.txt</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01optipng.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

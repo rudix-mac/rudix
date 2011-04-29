@@ -1,9 +1,5 @@
-# Mirroring/synchronization over low bandwidth links
-# http://samba.org/rsync/
-# GPL
 
 include ../../Library/Config.mk
-RUDIX_ENABLE_NLS=false
 include ../../Library/Rudix.mk
 define gnu_configure
 ./configure
