@@ -1,50 +1,47 @@
-# http://rudix.org/
-# GPL, LGPL, BSD, Apache, etc.
+###
+# A template Makefile
+# Remove the comments before commiting
+###
 
-include ../../Library/Rules.mk
-# or if a python module
-#include ../../Library/Rules.mk
+###
+# Includes section
+#
+# This includes most config options
+include ../../Library/Config.mk
+# This is the base build system, it defines targets and a ton of macros
+include ../../Library/Rudix.mk
+# Next you chould choose one of the *Formulas that best fit your Port
+# if it is a python project
+#include ../../Library/PythonFormula.mk
 # or if it uses gnu configure / autotools
-#include ../../Library/GNUConfigure.mk
+#include ../../Library/GNUFormula.mk
+# or if it is just a make; make install simple package
+#include ../../Library/UnixFormula.mk
+###
 
 ###
 # Metadata section
 #
-DESCRIPTION=	Starting point for new ports.
-TITLE=		Template $(VERSION)
-NAME=		{NAME}
-VERSION=	1.2.3
-REVISION=	0
-URL=		http://path/to/download/
-#or URL=		http://downloads.sourceforge.net/$(NAME)
-#   URL=		http://ftp.gnu.org/gnu/$(NAME)
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-# or SOURCE=	$(NAME)-$(VERSION).tar.bz2
-#    SOURCE=	$(NAME)-$(VERSION).tar.Z
-#    SOURCE=	$(NAME)-$(VERSION).zip
+Site=		http://www.packagewebsite.org/
+License=	bsd
+# or GPL, LGPL, etc
+Description=	The description of the packe, is going to be shown online
+Title=		Complete Package Title
+Name=		simplename
+Version=	0.6.5
+Revision=	1
+# packages should start at revision 1
+URL=		http://url.to.download.package/
+Source=		$(Name)-$(Version).tar.gz
+# or tar.bz2 or zip
+# url is going to be concatenated to source to download the source
+
+ReadMeFile=	$(BuildDir)/README.txt
+LicenseFile=	$(BuildDir)/LICENSE.txt
+# rudix build needs this files, if the package don't have them you can create
+# those files on the port dir
+
 # if the directory created by uncompressing the tarball isn't
 # named $(NAME)-$(VERSION) put the correct one in here
-#UNCOMPRESSEDDIR= $(NAME)-$(VERSION)
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
-# or LICENSE=	$(BUILDDIR)/COPYING
-# or you can also have a new file on the port dir
-# in cases were there is no such files in the src
-
+#UncompressedName= $(NAME)-$(VERSION)
 ###
-# Python.mk macros
-# for python packages you can append += or redefine
-# this constants:
-#
-# pysetupbuild
-setup.py build
-#
-# pysetupinstall
-# setup.py install \
-#
-# pycompileall
-# $(PYTHON) -m compileall
-
-###
-# GNUConfigure.mk macros
-#
