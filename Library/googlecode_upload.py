@@ -103,7 +103,7 @@ def upload(file, project_name, user_name, password, summary, description, labels
   resp = server.getresponse()
   server.close()
 
-  if resp.status == 201:
+  if resp.status == 201 or resp.status == 302:
     location = resp.getheader('Location', None)
   else:
     location = None
