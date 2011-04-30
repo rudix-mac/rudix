@@ -53,6 +53,7 @@ import os.path
 import optparse
 import getpass
 import base64
+import time
 import sys
 
 
@@ -80,15 +81,16 @@ def upload(file, project_name, user_name, password, summary, description, labels
   # is in the full user@domain form, strip it down.
   if user_name.endswith('@gmail.com'):
     user_name = user_name[:user_name.index('@gmail.com')]
-
-  form_fields = [('summary', summary), ('description', description)]
+  release_date = str(int(time.time()))
+  form_fields = [('summary', summary), ('description', description),
+                 ('release_date', release_date)]
   if labels is not None:
     form_fields.extend([('label', l.strip()) for l in labels])
 
   content_type, body = encode_upload_request(form_fields, file)
 
-  upload_host = '%s.googlecode.com' % project_name
-  upload_uri = '/files'
+  upload_host = 'uploads.code.google.com'
+  upload_uri = '/upload/%s' % project_name
   auth_token = base64.b64encode('%s:%s'% (user_name, password))
   headers = {
     'Authorization': 'Basic %s' % auth_token,
@@ -101,7 +103,7 @@ def upload(file, project_name, user_name, password, summary, description, labels
   resp = server.getresponse()
   server.close()
 
-  if resp.status == 201:
+  if resp.status == 201 or resp.status == 302:
     location = resp.getheader('Location', None)
   else:
     location = None
