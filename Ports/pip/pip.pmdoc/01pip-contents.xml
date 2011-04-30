@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pip-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/pip/pip-install" m="false" t="file">
+  <f n="pip-install" o="root" g="staff" p="16877" pt="pip-install" m="false" t="file">
     <f n="Library" o="root" g="admin" p="17405">
       <f n="Python" o="root" g="admin" p="16893">
         <f n="2.6" o="root" g="admin" p="16893">
@@ -97,7 +97,6 @@
                 <f n="zip.pyc" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="download.py" o="root" g="admin" p="33204">
                 <mod>mode</mod>
@@ -178,7 +177,6 @@
                 <f n="subversion.pyc" o="root" g="admin" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="venv.py" o="root" g="admin" p="33277">
                 <mod>mode</mod>
@@ -186,9 +184,8 @@
               <f n="venv.pyc" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <f n="pip-0.8.2-py2.6.egg-info" o="root" g="admin" p="16893">
+            <f n="pip-1.0-py2.6.egg-info" o="root" g="admin" p="16893">
               <f n="dependency_links.txt" o="root" g="admin" p="33204">
                 <mod>mode</mod>
               </f>
