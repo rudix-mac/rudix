@@ -87,7 +87,7 @@ def communicate(args):
     return proc.communicate()[0].split('\n')[:-1]
 
 def is_package_installed(pkg):
-    'Test if pkg is installed'
+    'Test if package is installed'
     pkg = normalize(pkg)
     out = communicate(['pkgutil', '--pkg-info', pkg])
     for line in out:
@@ -96,7 +96,7 @@ def is_package_installed(pkg):
     return False
 
 def is_package_with_version_installed(pkg, version):
-    'Test if pkg with version is installed'
+    'Test if package with version is installed'
     pkg = normalize(pkg)
     current = None
     out = communicate(['pkgutil', '--pkg-info', pkg])
