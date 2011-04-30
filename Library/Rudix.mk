@@ -126,6 +126,7 @@ sanitizepmdoc:
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011' $(PkgFile)
+	twitter -erudix4mac set $(Title) $(Version) http://rudix.googlecode.com/files/$(PkgFile)
 	@$(call info_color,Finished)
 
 .PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload
