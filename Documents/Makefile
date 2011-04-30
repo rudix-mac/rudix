@@ -29,8 +29,8 @@ Description=	The description of the packe, is going to be shown online
 Title=		Complete Package Title
 Name=		simplename
 Version=	0.6.5
-Revision=	1
-# packages should start at revision 1
+Revision=	0
+# packages should start at revision 0
 URL=		http://url.to.download.package/
 Source=		$(Name)-$(Version).tar.gz
 # or tar.bz2 or zip
