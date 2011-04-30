@@ -223,6 +223,7 @@ install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
 endef
 
+ifeq ($(RUDIX_STRIP_PACKAGE),yes)
 define strip_macho
 $(call info_color,Stripping binaries)
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
@@ -235,6 +236,7 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
 $(call info_color,Done)
 endef
+endif
 
 #
 # Common inner hooks
@@ -251,6 +253,6 @@ endef
 
 define pkg_inner_hook
 $(create_pmdoc)
-$(if RUDIX_STRIP_PACKAGE,$(strip_macho))
+$(strip_macho)
 $(create_pkg)
 endef
