@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="1F76830C-729F-11E0-BD0D-00254BCF7000">
+<pkgref spec="1.12" uuid="5BF2C662-72CF-11E0-BFFD-00254BCF7000">
   <config>
     <identifier>org.rudix.pkg.optipng</identifier>
-    <version>0.6.5-1</version>
+    <version>0.6.5-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
