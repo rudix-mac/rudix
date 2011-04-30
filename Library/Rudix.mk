@@ -10,6 +10,7 @@ PortDir := $(shell pwd)
 SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
+PkgFile = $(Name)-$(Version)-$(Revision).pkg
 
 #
 # Build flags options
@@ -112,7 +113,22 @@ distclean: clean pkgclean
 realdistclean: distclean
 	rm -f retrieve $(Source)
 
-.PHONY: installclean pkgclean clean distclean realdistclean
+ContentsXML = $(Name).pmdoc/01$(Name)-contents.xml
+sanitizepmdoc:
+	@$(call info_color,Cleaning $(ContentsXML))
+	@sed 's*o="$(USER)"*o="root"*; \
+	      s*pt="$(PortDir)/*pt="*' $(ContentsXML)| \
+	xmllint --format --output $(ContentsXML) -
+	@head -n 10 $(ContentsXML)
+	@$(call warning_color,check the snippet above)
+	@$(call info_color,Finished)
+
+upload: pkg
+	@$(call info_color,Sending $(PkgFile))
+	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011' $(PkgFile)
+	@$(call info_color,Finished)
+
+.PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload
 
 #
 # Functions
@@ -164,7 +180,7 @@ define create_pkg
 	--version $(Version)-$(Revision) \
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
-	--out $(PortDir)/$(Name)-$(Version)-$(Revision).pkg
+	--out $(PortDir)/$(PkgFile)
 endef
 
 define gnu_configure
