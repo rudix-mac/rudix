@@ -116,8 +116,8 @@ realdistclean: distclean
 ContentsXML = $(Name).pmdoc/01$(Name)-contents.xml
 sanitizepmdoc:
 	@$(call info_color,Cleaning $(ContentsXML))
-	@sed 's*o="$(USER)"*o="root"*; \
-	      s*pt="$(PortDir)/*pt="*' $(ContentsXML)| \
+	@sed 's_o="$(USER)"_o="root"_ ; \
+	      s_pt="[^"]*"_pt="$(InstallDir)"_' $(ContentsXML)| \
 	xmllint --format --output $(ContentsXML) -
 	@head -n 10 $(ContentsXML)
 	@$(call warning_color,check the snippet above)
