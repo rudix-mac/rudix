@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110422
+BuildSystem = 20110430
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -172,6 +172,7 @@ define create_pmdoc
 	--description "$(Description)" \
 	--readme $(ReadMeFile) \
 	--license $(LicenseFile) \
+	--components '$(Components)' \
 	.
 endef
 

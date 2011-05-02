@@ -6,6 +6,7 @@ from uuid import uuid1
 
 VENDOR='org.rudix'
 UUID=str(uuid1()).upper()
+COMPONENTS=''
 
 Index = '''<?xml version="1.0"?>
 <pkmkdoc spec="1.12">
@@ -61,6 +62,7 @@ PkgRef = '''<?xml version="1.0"?>
   </config>
   <contents>
     <file-list>01{name}-contents.xml</file-list>
+    {components}
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
@@ -79,13 +81,13 @@ def make_empty_pmdoc(pathname):
 def output_index(name, title, description, readme, license, vendor=VENDOR):
     return Index.format(name=name, title=title, description=description, vendor=vendor, readme=readme, license=license)
 
-def output_pkgref(name, version, uuid=UUID, vendor=VENDOR):
-    return PkgRef.format(name=name, version=version, uuid=uuid, vendor=vendor)
+def output_pkgref(name, version, components, uuid=UUID, vendor=VENDOR):
+    return PkgRef.format(name=name, version=version, uuid=uuid, vendor=vendor, components=components)
 
 def main(argv=None):
     if not argv:
         argv = sys.argv
-    opts, args = getopt.getopt(argv[1:], 'n:v:t:d:l:r:', ['name=', 'version=', 'title=', 'description=', 'license=', 'readme='])
+    opts, args = getopt.getopt(argv[1:], 'n:v:t:d:l:r:c', ['name=', 'version=', 'title=', 'description=', 'license=', 'readme=', 'components='])
     for opt, arg in opts:
         if opt in ('-n', '--name'):
             name = arg
@@ -99,6 +101,8 @@ def main(argv=None):
             license = arg
         if opt in ('-r', '--readme'):
             readme = arg
+        if opt in ('-c', '--components'):
+            components = arg
     try:
         path = args[0]
     except IndexError:
@@ -110,7 +114,7 @@ def main(argv=None):
     with open(index_xml, 'w') as idx:
         idx.write(output_index(name=name, title=title, description=description, readme=readme, license=license))
     with open(pkgref_xml, 'w') as ref:
-        ref.write(output_pkgref(name=name, version=version))
+        ref.write(output_pkgref(name=name, version=version, components=components))
     return 0
 
 if __name__ == '__main__':
