@@ -3,7 +3,7 @@ include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
 Site=		http://www.xiph.org/ogg/
-License=	GPL
+License=	BSD
 Description=	Libogg contains necessary functionality to create, decode, and work with Ogg bitstreams
 Title=		Libogg
 Name=		libogg
