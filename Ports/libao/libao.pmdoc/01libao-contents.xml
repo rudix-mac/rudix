@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="libao-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/libao/libao-install" m="false" t="file">
+  <f n="libao-install" o="root" g="staff" p="16877" pt="libao-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="ao" o="root" g="wheel" p="16893">
             <f n="ao.h" o="root" g="wheel" p="33204">
@@ -19,7 +19,7 @@
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="ao" o="root" g="wheel" p="16893">
-            <f n="plugins-2" o="root" g="wheel" p="16893">
+            <f n="plugins-4" o="root" g="wheel" p="16893">
               <f n="libmacosx.a" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -33,10 +33,7 @@
             </f>
             <mod>mode</mod>
           </f>
-          <f n="libao.2.1.3.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libao.2.dylib" o="root" g="wheel" p="41469">
+          <f n="libao.4.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libao.a" o="root" g="wheel" p="33204">
@@ -62,6 +59,21 @@
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="libao" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="libao-1.1.0" o="root" g="wheel" p="16893">
               <f n="ao_append_option.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -146,13 +158,7 @@
               <f n="ao_shutdown.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="AUTHORS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="config.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="drivers.html" o="root" g="wheel" p="33204">
@@ -173,13 +179,7 @@
               <f n="plugin-overview.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="style.css" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>

@@ -1,38 +1,20 @@
-# Portable audio output library
-# http://xiph.org/ao/
-# GPL
+BuildRequires += $(BinDir)/pkg-config
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-NAME=		libao
-VERSION=	0.8.8
-REVISION=	6
+Description=	libao: a cross platform audio library
+Site=		http://xiph.org/ao/
+License=	GPL
+Title=		Libao
+Name=		libao
+Version=	1.1.0
+Revision=	0
 URL=		http://downloads.xiph.org/releases/ao/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS=	/usr/local/bin/pkg-config
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--disable-dependency-tracking --enable-static ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; \
-	make	DESTDIR=$(INSTALLDIR) \
-		docdir=$(NSTALLDOCDIR)/usr/local/share/doc/libao install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,README,TODO} $(INSTALLDOCDIR)
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	strip -x $(INSTALLDIR)/usr/local/lib/ao/plugins-2/*.so
-	strip -x $(INSTALLDIR)/usr/local/lib/ao/plugins-2/*.a
-	touch install
-
-test: install
-	touch test
+GnuConfigureExtra += --enable-static

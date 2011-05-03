@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4FFA6AAE-AEEB-4149-9D39-5A7A9774932B">
+<pkgref spec="1.12" uuid="D5C14F02-7524-11E0-8342-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.libao</identifier>
-    <version>0.8.8</version>
+    <version>1.1.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,13 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01libao-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
