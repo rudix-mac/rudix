@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="B6D90ED2-75DC-11E0-8ACE-0017F22C0C04">
+  <config>
+    <identifier>org.rudix.pkg.libogg</identifier>
+    <version>1.2.2-0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">libogg-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+  </config>
+  <contents>
+    <file-list>01libogg-contents.xml</file-list>
+    
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
