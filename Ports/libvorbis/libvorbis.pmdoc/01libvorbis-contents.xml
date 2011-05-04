@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="libvorbis-install" o="root" g="staff" p="16877" pt="libvorbis-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="vorbis" o="root" g="wheel" p="16893">
+            <f n="codec.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vorbisenc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vorbisfile.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libvorbis.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbis.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbis.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbis.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisenc.2.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisenc.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisenc.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisenc.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisfile.3.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisfile.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisfile.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libvorbisfile.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="vorbis.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vorbisenc.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vorbisfile.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="16893">
+            <f n="vorbis.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="libvorbis" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="libvorbis-1.3.2" o="root" g="wheel" p="16893">
+              <f n="doxygen-build.stamp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="eightphase.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="evenlsp.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fish_xiph_org.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="floor1_inverse_dB_table.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="floorval.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fourphase.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="framing.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="helper.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libvorbis" o="root" g="wheel" p="16893">
+                <f n="index.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overview.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reference.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="return.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="style.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis_blockout.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis_buffer.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis_headerout.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_analysis_wrote.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_bitrate_addblock.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_bitrate_flushpacket.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_block.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_block_clear.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_block_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_add.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_add_tag.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_clear.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_query.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_comment_query_count.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_commentheader_out.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_dsp_clear.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_dsp_state.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_granule_time.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_info.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_info_blocksize.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_info_clear.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_info_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_packet_blocksize.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_blockin.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_halfrate.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_halfrate_p.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_headerin.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_idheader.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_lapout.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_pcmout.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_read.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_restart.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_synthesis_trackonly.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_version_string.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="lspmap.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="oddlsp.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="oggstream.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="programming.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rfc5215.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rfc5215.xml" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="squarepolar.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stereo.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stream.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="v-comment.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vorbis-clip.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vorbis-errors.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vorbis-fidelity.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vorbis.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vorbisenc" o="root" g="wheel" p="16893">
+                <f n="changes.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="examples.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ovectl_ratemanage2_arg.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ovectl_ratemanage_arg.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overview.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reference.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="style.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_ctl.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_init_vbr.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_setup_init.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_setup_managed.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbis_encode_setup_vbr.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="vorbisfile" o="root" g="wheel" p="16893">
+                <f n="callbacks.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="chaining_example_c.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="chainingexample.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="crosslap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="datastructures.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="decoding.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="example.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="exampleindex.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="fileinfo.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="initialization.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="OggVorbis_File.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_bitrate.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_bitrate_instant.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_callbacks.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_clear.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_comment.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_crosslap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_fopen.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_info.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_open.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_open_callbacks.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_seek.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_seek_lap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_seek_page.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_seek_page_lap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_tell.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_pcm_total.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_raw_seek.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_raw_seek_lap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_raw_tell.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_raw_total.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_read.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_read_filter.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_read_float.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_seekable.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_serialnumber.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_streams.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_test.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_test_callbacks.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_test_open.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_seek.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_seek_lap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_seek_page.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_seek_page_lap.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_tell.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ov_time_total.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overview.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reference.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="seekexample.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="seeking.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="seeking_example_c.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="seeking_test_c.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="seekingexample.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="style.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="threads.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vorbisfile_example_c.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="vorbisword2.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wait.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="white-xifish.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
