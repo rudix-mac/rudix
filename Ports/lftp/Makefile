@@ -1,64 +1,27 @@
-# Shell-like command line ftp and sftp client
-# http://lftp.yar.ru/
-# GPL
+BuildRequires += $(LibDir)/libintl.la
+BuildRequires += $(LibDir)/libreadline.a
 
-# FIXME: can't compile with /usr/lib/libreadline.dylib present
-# FIXME: stripping binaries needs investigation due:
-# $ lftp
-# dyld: Symbol not found: _program_name
-#   Referenced from: /usr/local/lib/liblftp-tasks.0.dylib
-#   Expected in: flat namespace
-# in /usr/local/lib/liblftp-tasks.0.dylib
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		LFTP $(VERSION)
-NAME=		lftp
-VERSION=	4.0.10
-REVISION=	0
+Description=	LFTP is sophisticated ftp/http client, file transfer program supporting a number of network protocols
+Site=		http://lftp.yar.ru/
+License=	GPLv3
+Title=		LFTP
+Name=		lftp
+Version=	4.2.3
+Revision=	0
 URL=		http://ftp.yars.free.net/pub/source/lftp
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-DEPENDS=	/usr/local/lib/libreadline.a
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifdef WITHOUT_NLS
-CONFIG_OPTS=	--disable-nls
-else
-CONFIG_OPTS=	--enable-nls
-DEPENDS+=	/usr/local/lib/libintl.la
-endif
+GnuConfigureExtra += --with-openssl
+GnuConfigureExtra += --with-modules
 
-ifdef WITH_STATIC_NLS
-LDFLAGS+=	-framework CoreFoundation -liconv /usr/local/lib/libintl.a
-endif
-
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--disable-dependency-tracking \
-		--with-modules \
-		--with-openssl $(CONFIG_OPTS) ; make
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/etc/lftp.conf $(INSTALLDIR)/usr/local/etc/lftp.conf.default
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FAQ,FEATURES,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	#strip $(INSTALLDIR)/usr/local/bin/*
-	#strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	touch install
-
-test: install
-	lipo $(INSTALLDIR)/usr/local/bin/lftp -verify_arch i386 x86_64
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make check
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
+mv $(InstallDir)/$(Prefix)/etc/lftp.conf $(InstallDir)/$(Prefix)/etc/lftp.conf.default
+endef

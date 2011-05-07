@@ -11,16 +11,16 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Shell-like command line ftp and sftp client</description>
+  <description>LFTP is sophisticated ftp/http client, file transfer program supporting a number of network protocols</description>
   <contents>
-    <choice title="lftp-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="lftp-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.lftp"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">lftp-4.0.10/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">lftp-4.0.10/README</resource>
+      <resource relative="true" mod="true" type="license">lftp-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">lftp-build/README</resource>
     </locale>
   </resources>
   <flags/>
