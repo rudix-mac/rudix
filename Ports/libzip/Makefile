@@ -1,33 +1,16 @@
-# C library for zip archives
-# http://nih.at/libzip/
-# 
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		libzip
-VERSION=	0.9
-REVISION=	1
+Description=	libzip is a C library for reading, creating, and modifying zip archives
+Site=		http://nih.at/libzip/
+License=	BSD
+Title=		libzip
+Name=		libzip
+Version=	0.10
+Revision=	0
 URL=		http://nih.at/libzip/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) --disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: build
-	cd $(BUILDDIR) ; make check
-	touch test
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENSE
