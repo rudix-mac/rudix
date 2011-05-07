@@ -17,5 +17,6 @@ while (<>) {
     s!/usr/local/lib!\$\(LibDir\)!;
     s!/usr/local/share/doc!\$\(DocDir\)!;
     s!/usr/local!\$\(Prefix\)!;
+    s!PORTDIR!PortDir!;
     print;
 }
