@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>libevent</title>
-    <organization>org.rudix.pkg</organization>
+    <title>Libevent</title>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">libevent-2.0.10/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">libevent-2.0.10/README</resource>
+      <resource relative="true" mod="true" type="license">libevent-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">libevent-build/README</resource>
     </locale>
   </resources>
   <flags/>

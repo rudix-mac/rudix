@@ -1,51 +1,18 @@
-# An event notification library
-# http://monkey.org/~provos/libevent/
-# BSD
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		libevent $(VERSION)
-NAME=		libevent
-VERSION=	2.0.10
-REVISION=	0
+Description=	An event notification library
+Site=		http://monkey.org/~provos/libevent/
+License=	BSD
+Title=		Libevent
+Name=		libevent
+Version=	2.0.11
+Revision=	0
 URL=		http://monkey.org/~provos/
-SOURCE=		$(NAME)-$(VERSION)-stable.tar.gz
+Source=		$(Name)-$(Version)-stable.tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENSE
 
-ifdef STATIC_ONLY
-CONFIG_OPTS=	--enable-static --disable-shared
-DISTNAME=	static-$(NAME)
-endif
-
-prep: retrieve
-	tar zxvf $(SOURCE)
-	mv $(NAME)-$(VERSION)-stable $(NAME)-$(VERSION)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIG_OPTS) \
-		--disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{ChangeLog,README,LICENSE} $(INSTALLDOCDIR)
-ifndef STATIC_ONLY
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-endif
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-ifndef STATIC_ONLY
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/lib*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make verify
-	touch test
+UncompressedName = $(Name)-$(Version)-stable
