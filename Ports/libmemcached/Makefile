@@ -1,51 +1,15 @@
-# C/C++ client library to the memcached server 
-# http://libmemcached.org/libMemcached.html
-# BSD
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Description=	libMemcached was designed to provide the greatest number of options to use Memcached
+Site=		http://libmemcached.org/
+License=	BSD
+Name=		libmemcached
+Version=	0.49
+Revision=	0
+URL=		http://launchpad.net/libmemcached/1.0/$(Version)/+download/
+Source=		$(Name)-$(Version).tar.gz
 
-NAME=		libmemcached
-VERSION=	0.43
-REVISION=	0
-URL=		http://download.tangent.org/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-
-DEPENDS=	/usr/local/include/memcached/protocol_binary.h
-
-ifdef STATIC_ONLY
-CONFIG_OPTS=	--enable-static --disable-shared
-else
-CONFIG_OPTS=	--enable-static --enable-shared
-endif
-
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure)  $(CONFIG_OPTS) --disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,THANKS,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-ifndef STATIC_ONLY
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib
-endif
-	strip -x $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-ifndef	STATIC_ONLY
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.dylib) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-endif
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make test
-	touch test
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
