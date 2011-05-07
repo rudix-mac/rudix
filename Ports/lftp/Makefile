@@ -21,6 +21,13 @@ LicenseFile=	$(SourceDir)/COPYING
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules
 
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+LdFlags += /usr/local/lib/libreadline.a
+define prep_post_hook
+perl -p -i -e s/'-lreadline'//g $(SourceDir)/configure
+endef
+endif
+
 define install_post_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf $(InstallDir)/$(Prefix)/etc/lftp.conf.default
