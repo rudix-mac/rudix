@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>libev</title>
+    <title>Libev</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>A full-featured and high-performance event loop.</description>
+  <description>A full-featured and high-performance event loop</description>
   <contents>
     <choice title="libev-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libev"/>
@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">libev-4.04/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">libev-4.04/README</resource>
+      <resource relative="true" mod="true" type="license">libev-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">libev-build/README</resource>
     </locale>
   </resources>
   <flags/>
