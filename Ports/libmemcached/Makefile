@@ -5,6 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	libMemcached was designed to provide the greatest number of options to use Memcached
 Site=		http://libmemcached.org/
 License=	BSD
+Title=		libmemcached
 Name=		libmemcached
 Version=	0.49
 Revision=	0
