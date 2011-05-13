@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E140A3AA-7D08-11E0-915C-D49A200B3D20">
+<pkgref spec="1.12" uuid="88EC2EC0-7D0A-11E0-B586-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.aspell</identifier>
     <version>0.60.6-0</version>
