@@ -20,7 +20,7 @@
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
       <resource relative="true" mod="true" type="license">aria2-build/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">aria2-build/README</resource>
+      <resource relative="true" mod="true" type="readme">aria2-build/README.asciidoc</resource>
     </locale>
   </resources>
   <flags/>

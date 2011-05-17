@@ -12,5 +12,7 @@ Revision=	0
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(BuildDir)/README
+ReadMeFile=	$(BuildDir)/README.asciidoc
 LicenseFile=	$(BuildDir)/COPYING
+
+GnuConfigureExtra += --with-included-gettext
