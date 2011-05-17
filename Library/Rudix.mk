@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110430
+BuildSystem = 20110508
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -184,6 +184,11 @@ define create_pkg
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
+endef
+
+define simple_configure
+./configure $(ConfigureExtra) \
+	--prefix=$(Prefix)
 endef
 
 define gnu_configure
