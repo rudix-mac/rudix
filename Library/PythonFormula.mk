@@ -4,19 +4,21 @@
 
 define build_inner_hook
 cd $(BuildDir) ; \
-env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" ARCHFLAGS="$(ArchFlags)" \
-$(Python) setup.py build
+env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" ARCHFLAGS="$(ArchFlags)" $(EnvExtra) \
+$(Python) setup.py build $(SetupExtra)
 endef
 
 define install_inner_hook
-cd $(BuildDir) ; $(Python) setup.py install \
+cd $(BuildDir) ; \
+$(Python) setup.py install $(SetupInstallExtra) \
 	--no-compile \
 	--root=$(PortDir)/$(InstallDir) \
 	--prefix=$(Prefix) \
 	--install-lib=$(PythonSitePackages)
 cd $(BuildDir) ; $(Python) -m compileall -d / $(PortDir)/$(InstallDir)
+$(install_base_documentation)
 endef
 
 define test_inner_hook
-$(if $(RUDIX_UNIVERSAL),$(call test_universal))
+$(call test_universal)
 endef
