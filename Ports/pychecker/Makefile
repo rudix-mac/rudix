@@ -1,41 +1,20 @@
-# Python codes checker 
-# http://pychecker.sourceforge.net/
-# BSD
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/PythonFormula.mk
 
-include ../../Library/Rules.mk
+Description=	PyChecker is a tool for finding bugs in python source code
+Site=		http://pychecker.sourceforge.net/
+License=	BSD
+Title=		PyChecker
+Name=		pychecker
+Version=	0.8.19
+Revision=	0
+URL=		http://downloads.sourceforge.net/$(Name)
+Source=		$(Name)-$(Version).tar.gz
 
-TITLE=		PyChecker $(VERSION)
-NAME=		pychecker
-VERSION=	0.8.18
-REVISION=	2
-URL=		http://downloads.sourceforge.net/$(NAME)
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYRIGHT
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYRIGHT
-
-PYTHON=		/usr/bin/python2.6
-SITEPACKAGES=	/Library/Python/2.6/site-packages
-
-prep: retrieve
-	cd $(BUILDDIR) ; tar xvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; $(PYTHON) setup.py install \
-		--no-compile \
-		--root=$(INSTALLDIR) \
-		--prefix=/usr/local \
-		--install-lib=$(SITEPACKAGES)
-	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	install -d $(INSTALLDIR)/usr/local/share/doc/$(NAME)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,ChangeLog,KNOWN_BUGS,MAINTAINERS,NEWS,README,TODO,VERSION} $(INSTALLDIR)/usr/local/share/doc/$(NAME)
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; ./test_check.sh
-	touch test
+define test_post_hook
+#cd $(SourceDir) ; ./test_check.sh
+endef

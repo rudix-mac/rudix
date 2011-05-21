@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pychecker-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/pychecker/pychecker-install" m="false" t="file">
+  <f n="pychecker-install" o="root" g="staff" p="16877" pt="pychecker-install" m="false" t="file">
     <f n="Library" o="root" g="admin" p="17405">
       <f n="Python" o="root" g="admin" p="16893">
         <f n="2.6" o="root" g="admin" p="16893">
@@ -176,7 +176,7 @@
               </f>
               <mod>mode</mod>
             </f>
-            <f n="PyChecker-0.8.18-py2.6.egg-info" o="root" g="admin" p="33204">
+            <f n="PyChecker-0.8.19-py2.6.egg-info" o="root" g="admin" p="33204">
               <mod>mode</mod>
             </f>
           </f>
