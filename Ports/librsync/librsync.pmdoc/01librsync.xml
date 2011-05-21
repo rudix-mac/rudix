@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="6D970164-78DB-11E0-BE92-0017F22C0C04">
+<pkgref spec="1.12" uuid="2E1FA4EE-83A5-11E0-A29F-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.librsync</identifier>
-    <version>0.9.7-8</version>
+    <version>0.9.7-9</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

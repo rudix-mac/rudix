@@ -1,3 +1,1 @@
-File compressor with a high compression ratio
-
-Rzip is a compression program that is similar to gzip and bzip2. The primary difference is that rzip is able to exploit long distance redundancies in files, which enables rzip to produce much better compression ratios (sometimes). However, the drawbacks of rzip are that one cannot pipeline rzip and it is very memory-intensive.
+rzip is a compression program, similar in functionality to gzip or bzip2, but able to take advantage long distance redundencies in files, which can sometimes allow rzip to produce much better compression ratios than other programs. The original idea behind rzip is described in my PhD thesis (see http://samba.org/~tridge/), but the implementation in this version is considerably improved from the original implementation. The new version is much faster and also produces a better compression ratio.

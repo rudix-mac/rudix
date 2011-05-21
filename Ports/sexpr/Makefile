@@ -1,36 +1,28 @@
-# Small, fast s-expression library
-# http://sexpr.sourceforge.net/
-# LGPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-NAME=		sexpr
-VERSION=	1.2
-REVISION=	1
-URL=		http://downloads.sourceforge.net/sexpr
-SOURCE=		$(NAME)_$(VERSION).tar.gz
+Description=	The small, fast s-expression library
+Site=		http://sexpr.sourceforge.net/
+License=	BSD
+Title=		sfsexp
+Name=		sexpr
+Version=	1.2.1
+Revision=	0
+URL=		http://downloads.sourceforge.net/$(Name)
+Source=		$(Name)_$(Version).tar.gz
 
-include ../../Library/Rules.mk
+ReadMeFile=	$(SourceDir)/README.txt
+LicenseFile=	$(SourceDir)/LICENSE
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	mv $(NAME)_$(VERSION) $(NAME)-$(VERSION)
-	touch prep
+UncompressedName=$(Name)_$(Version)
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) ; \
-	$(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	touch build
+GnuMakeExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFlags)"
 
-install: build
-	install -d $(INSTALLDIR)/usr/local/include/sexpr
-	install -m 644 $(BUILDDIR)/src/*.h $(INSTALLDIR)/usr/local/include/sexpr
-	install -d $(INSTALLDIR)/usr/local/lib
-	install -m 644 $(BUILDDIR)/src/libsexp.a $(INSTALLDIR)/usr/local/lib
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{LICENSE*,README.txt,state_machine.txt} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	touch test
+define install_post_hook
+install -d $(InstallDir)$(Prefix)/include/sexpr
+install -m 644 $(SourceDir)/src/*.h $(InstallDir)$(Prefix)/include/sexpr
+install -d $(InstallDir)$(LibDir)
+install -m 644 $(SourceDir)/src/libsexp.a $(InstallDir)$(LibDir)
+install -m 644 $(SourceDir)/*.txt $(InstallDir)/$(DocDir)/$(Name)
+endef

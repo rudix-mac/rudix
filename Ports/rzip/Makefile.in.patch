@@ -1,0 +1,28 @@
+--- Makefile.in.orig	2011-05-08 15:27:36.000000000 -0300
++++ Makefile.in	2011-05-08 15:32:00.000000000 -0300
+@@ -3,8 +3,9 @@
+ 
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
++datarootdir=$(prefix)/share
+ INSTALL_BIN=$(exec_prefix)/bin
+-INSTALL_MAN=$(prefix)/man
++INSTALL_MAN=$(datarootdir)/man
+ 
+ LIBS=@LIBS@
+ CC=@CC@
+@@ -31,10 +32,10 @@
+ man: rzip.1 
+ 
+ install: all
+-	-mkdir -p ${INSTALL_BIN}
+-	${INSTALLCMD} -m 755 rzip ${INSTALL_BIN}
+-	-mkdir -p ${INSTALL_MAN}/man1
+-	${INSTALLCMD} -m 644 $(srcdir)/rzip.1 ${INSTALL_MAN}/man1/
++	-mkdir -p ${DESTDIR}/${INSTALL_BIN}
++	${INSTALLCMD} -m 755 rzip ${DESTDIR}/${INSTALL_BIN}
++	-mkdir -p ${DESTDIR}/${INSTALL_MAN}/man1
++	${INSTALLCMD} -m 644 $(srcdir)/rzip.1 ${DESTDIR}/${INSTALL_MAN}/man1/
+ 
+ rzip: $(OBJS)
+ 	$(CC) $(CFLAGS) -o rzip $(OBJS) $(LIBS)

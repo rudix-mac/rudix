@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110430
+BuildSystem = 20110508
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -127,7 +127,11 @@ upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
 	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011' $(PkgFile)
+ifdef TWEET
+	twitter -erudix4mac set $(Title) $(Version) $(TWEET) http://rudix.googlecode.com/files/$(PkgFile)
+else
 	twitter -erudix4mac set $(Title) $(Version) http://rudix.googlecode.com/files/$(PkgFile)
+endif
 	@$(call info_color,Finished)
 
 .PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload
@@ -184,6 +188,11 @@ define create_pkg
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
+endef
+
+define simple_configure
+./configure $(ConfigureExtra) \
+	--prefix=$(Prefix)
 endef
 
 define gnu_configure

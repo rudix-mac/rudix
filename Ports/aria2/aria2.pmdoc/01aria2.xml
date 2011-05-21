@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A716864E-79A8-11E0-B122-0017F22C0C04">
+<pkgref spec="1.12" uuid="59022B4A-8031-11E0-8281-0017F22C0C04">
   <config>
-    <identifier>org.rudix.pkg.sexpr</identifier>
-    <version>1.2.1-0</version>
+    <identifier>org.rudix.pkg.aria2</identifier>
+    <version>1.11.1-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">sexpr-install</installFrom>
+    <installFrom relative="true" mod="true">aria2-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
@@ -19,7 +19,7 @@
     <mod>version</mod>
   </config>
   <contents>
-    <file-list>01sexpr-contents.xml</file-list>
+    <file-list>01aria2-contents.xml</file-list>
     
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
