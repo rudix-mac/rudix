@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="5FD3E2DA-27DB-413A-AF4F-DD6253253B36">
+<pkgref spec="1.12" uuid="365965DC-8404-11E0-8583-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.dtach</identifier>
-    <version>0.8</version>
+    <version>0.8-5</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,12 +14,13 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01dtach-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

@@ -13,14 +13,14 @@
   </distribution>
   <description>Tiny program emulating the detach feature of screen</description>
   <contents>
-    <choice title="dtach-install" id="dtach" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="dtach-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.dtach"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">dtach-0.8/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">dtach-0.8/README</resource>
+      <resource relative="true" mod="true" type="license">dtach-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">dtach-build/README</resource>
     </locale>
   </resources>
   <flags/>
