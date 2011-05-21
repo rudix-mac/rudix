@@ -9,19 +9,7 @@ else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
 
-define build_inner_hook
-$(call info_color,Running Configure)
-cd $(BuildDir) ; \
-env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
-$(gnu_configure)
-$(call info_color,Done)
-cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
-endef
-
-define install_inner_hook
-cd $(BuildDir) ; \
-$(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
-$(install_base_documentation)
+define install_gnu_documentation
 for x in $(wildcard \
 	$(BuildDir)/AUTHORS* \
 	$(BuildDir)/ACKS* \
@@ -39,6 +27,22 @@ done
 rm -f $(InstallDir)/$(InfoDir)/dir
 rm -f $(InstallDir)/$(LibDir)/charset.alias
 rm -f $(InstallDir)/$(DataDir)/locale/locale.alias
+endef
+
+define build_inner_hook
+$(call info_color,Running Configure)
+cd $(BuildDir) ; \
+env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
+$(gnu_configure)
+$(call info_color,Done)
+cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
+endef
+
+define install_inner_hook
+cd $(BuildDir) ; \
+$(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
+$(install_base_documentation)
+$(install_gnu_documentation)
 endef
 
 define test_inner_hook
