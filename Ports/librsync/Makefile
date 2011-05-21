@@ -8,7 +8,7 @@ License=	LGPL
 Title=		Librsync
 Name=		librsync
 Version=	0.9.7
-Revision=	8
+Revision=	9
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
