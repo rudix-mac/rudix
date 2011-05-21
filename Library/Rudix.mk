@@ -127,7 +127,11 @@ upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
 	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011' $(PkgFile)
+ifdef TWEET
+	twitter -erudix4mac set $(Title) $(Version) $(TWEET) http://rudix.googlecode.com/files/$(PkgFile)
+else
 	twitter -erudix4mac set $(Title) $(Version) http://rudix.googlecode.com/files/$(PkgFile)
+endif
 	@$(call info_color,Finished)
 
 .PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload
