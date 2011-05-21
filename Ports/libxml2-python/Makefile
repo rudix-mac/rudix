@@ -4,37 +4,37 @@
 
 include ../../Library/Rules.mk
 
-NAME=		libxml2-python
-VERSION=	2.6.21
-REVISION=	0
+Name=		libxml2-python
+Version=	2.6.21
+Revision=	0
 URL=		ftp://xmlsoft.org/libxml2/python/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
 PYTHON=		/usr/bin/python2.6
 SITEPACKAGES=	/Library/Python/2.6/site-packages
 
 prep: retrieve
-	cd $(BUILDDIR) ; tar zxvf $(SOURCE)
+	cd $(SourceDir) ; tar zxvf $(Source)
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(PYTHON) setup.py build
+	cd $(SourceDir) ; $(PYTHON) setup.py build
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; \
+	cd $(SourceDir) ; \
 	$(PYTHON) setup.py install \
 		--no-compile \
-		--root=$(INSTALLDIR) \
-		--prefix=/usr/local \
+		--root=$(InstallDir) \
+		--prefix=$(Prefix) \
 		--install-lib=$(SITEPACKAGES)
-	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{README,TODO,*.xml,*.txt} $(INSTALLDOCDIR)
-	strip -x $(INSTALLDIR)/$(SITEPACKAGES)/*.so
+	$(PYTHON) -m compileall -d / $(InstallDir)
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{ReadMeFile,TODO,*.xml,*.txt} $(InstallDir)/$(DocDir)/$(Name)
+	strip -x $(InstallDir)/$(SITEPACKAGES)/*.so
 	touch install
 
 test: install
-	for x in $(wildcard $(INSTALLDIR)/$(SITEPACKAGES)/*.so) ; do \
+	for x in $(wildcard $(InstallDir)/$(SITEPACKAGES)/*.so) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	touch test
