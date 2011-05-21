@@ -5,6 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	Library that implements the rsync remote-delta algorithm
 Site=		http://librsync.sourceforge.net/
 License=	LGPL
+Title=		Librsync
 Name=		librsync
 Version=	0.9.7
 Revision=	8
