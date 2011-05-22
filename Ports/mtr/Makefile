@@ -1,35 +1,27 @@
-# Matt's traceroute - network diagnostic tool
-# http://www.bitwizard.nl/mtr/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		MTR $(VERSION)
-NAME=		mtr
-VERSION=	0.80
-REVISION=	0
+Description=	MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool
+Site=		http://www.bitwizard.nl/mtr/
+License=	GPL
+Title=		MTR
+Name=		mtr
+Version=	0.80
+Revision=	0
 URL=		ftp://ftp.bitwizard.nl/mtr/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	rm -rf $(BUILDDIR)/autom4te.cache $(BUILDDIR)/{.deps,Makefile}
-	touch prep
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-build: prep
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS) -lresolv" \
-	$(configure) \
-		--disable-dependency-tracking --without-gtk ; $(make)
-	touch build
+GnuConfigureExtra += --without-gtk
+LdFlags += -lresolv
 
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,FORMATS,NEWS,README,SECURITY,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/sbin/*
-	touch install
+define prep_post_hook
+rm -rf $(SourceDir)/autom4te.cache $(SourceDir)/{.deps,Makefile}
+endef
 
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/sbin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
+endef

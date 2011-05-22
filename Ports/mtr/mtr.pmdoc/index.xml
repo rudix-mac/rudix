@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>MTR</title>
-    <build>/Users/ruda/Desktop/MTR.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,16 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Matt's traceroute - network diagnostic tool</description>
+  <description>MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool</description>
   <contents>
-    <choice title="mtr-install" id="mtr" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="mtr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.mtr"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">mtr-0.80/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">mtr-0.80/README</resource>
+      <resource relative="true" mod="true" type="license">mtr-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">mtr-build/README</resource>
     </locale>
   </resources>
   <flags/>
