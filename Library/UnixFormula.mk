@@ -8,6 +8,8 @@ cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra) \
 endef
 
 define install_inner_hook
+cd $(BuildDir) ; $(gnu_make) \
+	DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra) install
 $(install_base_documentation)
 endef
 
