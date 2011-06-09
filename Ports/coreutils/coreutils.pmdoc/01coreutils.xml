@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="410805CB-471B-4448-BAFE-FDEC0CF2B97D">
+<pkgref spec="1.12" uuid="2BA4D68A-9232-11E0-BD18-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.coreutils</identifier>
-    <version>8.7</version>
+    <version>8.9-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01coreutils-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

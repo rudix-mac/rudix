@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GNU coreutils</title>
+    <title>GNU Core Utilities</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU core utilities</description>
+  <description>GNU Core Utilities</description>
   <contents>
     <choice title="coreutils-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.coreutils"/>
@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">coreutils-8.7/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">coreutils-8.7/README</resource>
+      <resource relative="true" mod="true" type="license">coreutils-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">coreutils-build/README</resource>
     </locale>
   </resources>
   <flags/>

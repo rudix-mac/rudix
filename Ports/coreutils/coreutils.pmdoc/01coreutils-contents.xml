@@ -1,298 +1,749 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="coreutils-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/coreutils/coreutils-install" m="false" t="file">
+  <f n="coreutils-install" o="root" g="staff" p="16877" pt="coreutils-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
-          <f n="[" o="root" g="wheel" p="33277"/>
-          <f n="base64" o="root" g="wheel" p="33277"/>
-          <f n="basename" o="root" g="wheel" p="33277"/>
-          <f n="cat" o="root" g="wheel" p="33277"/>
-          <f n="chcon" o="root" g="wheel" p="33277"/>
-          <f n="chgrp" o="root" g="wheel" p="33277"/>
-          <f n="chmod" o="root" g="wheel" p="33277"/>
-          <f n="chown" o="root" g="wheel" p="33277"/>
-          <f n="chroot" o="root" g="wheel" p="33277"/>
-          <f n="cksum" o="root" g="wheel" p="33277"/>
-          <f n="comm" o="root" g="wheel" p="33277"/>
-          <f n="cp" o="root" g="wheel" p="33277"/>
-          <f n="csplit" o="root" g="wheel" p="33277"/>
-          <f n="cut" o="root" g="wheel" p="33277"/>
-          <f n="date" o="root" g="wheel" p="33277"/>
-          <f n="dd" o="root" g="wheel" p="33277"/>
-          <f n="df" o="root" g="wheel" p="33277"/>
-          <f n="dir" o="root" g="wheel" p="33277"/>
-          <f n="dircolors" o="root" g="wheel" p="33277"/>
-          <f n="dirname" o="root" g="wheel" p="33277"/>
-          <f n="du" o="root" g="wheel" p="33277"/>
-          <f n="echo" o="root" g="wheel" p="33277"/>
-          <f n="env" o="root" g="wheel" p="33277"/>
-          <f n="expand" o="root" g="wheel" p="33277"/>
-          <f n="expr" o="root" g="wheel" p="33277"/>
-          <f n="factor" o="root" g="wheel" p="33277"/>
-          <f n="false" o="root" g="wheel" p="33277"/>
-          <f n="fmt" o="root" g="wheel" p="33277"/>
-          <f n="fold" o="root" g="wheel" p="33277"/>
-          <f n="gnu[" o="root" g="wheel" p="33277"/>
-          <f n="gnubase64" o="root" g="wheel" p="33277"/>
-          <f n="gnubasename" o="root" g="wheel" p="33277"/>
-          <f n="gnucat" o="root" g="wheel" p="33277"/>
-          <f n="gnuchcon" o="root" g="wheel" p="33277"/>
-          <f n="gnuchgrp" o="root" g="wheel" p="33277"/>
-          <f n="gnuchmod" o="root" g="wheel" p="33277"/>
-          <f n="gnuchown" o="root" g="wheel" p="33277"/>
-          <f n="gnuchroot" o="root" g="wheel" p="33277"/>
-          <f n="gnucksum" o="root" g="wheel" p="33277"/>
-          <f n="gnucomm" o="root" g="wheel" p="33277"/>
-          <f n="gnucp" o="root" g="wheel" p="33277"/>
-          <f n="gnucsplit" o="root" g="wheel" p="33277"/>
-          <f n="gnucut" o="root" g="wheel" p="33277"/>
-          <f n="gnudate" o="root" g="wheel" p="33277"/>
-          <f n="gnudd" o="root" g="wheel" p="33277"/>
-          <f n="gnudf" o="root" g="wheel" p="33277"/>
-          <f n="gnudir" o="root" g="wheel" p="33277"/>
-          <f n="gnudircolors" o="root" g="wheel" p="33277"/>
-          <f n="gnudirname" o="root" g="wheel" p="33277"/>
-          <f n="gnudu" o="root" g="wheel" p="33277"/>
-          <f n="gnuecho" o="root" g="wheel" p="33277"/>
-          <f n="gnuenv" o="root" g="wheel" p="33277"/>
-          <f n="gnuexpand" o="root" g="wheel" p="33277"/>
-          <f n="gnuexpr" o="root" g="wheel" p="33277"/>
-          <f n="gnufactor" o="root" g="wheel" p="33277"/>
-          <f n="gnufalse" o="root" g="wheel" p="33277"/>
-          <f n="gnufmt" o="root" g="wheel" p="33277"/>
-          <f n="gnufold" o="root" g="wheel" p="33277"/>
-          <f n="gnugroups" o="root" g="wheel" p="33277"/>
-          <f n="gnuhead" o="root" g="wheel" p="33277"/>
-          <f n="gnuhostid" o="root" g="wheel" p="33277"/>
-          <f n="gnuid" o="root" g="wheel" p="33277"/>
-          <f n="gnuinstall" o="root" g="wheel" p="33277"/>
-          <f n="gnujoin" o="root" g="wheel" p="33277"/>
-          <f n="gnukill" o="root" g="wheel" p="33277"/>
-          <f n="gnulink" o="root" g="wheel" p="33277"/>
-          <f n="gnuln" o="root" g="wheel" p="33277"/>
-          <f n="gnulogname" o="root" g="wheel" p="33277"/>
-          <f n="gnuls" o="root" g="wheel" p="33277"/>
-          <f n="gnumd5sum" o="root" g="wheel" p="33277"/>
-          <f n="gnumkdir" o="root" g="wheel" p="33277"/>
-          <f n="gnumkfifo" o="root" g="wheel" p="33277"/>
-          <f n="gnumknod" o="root" g="wheel" p="33277"/>
-          <f n="gnumktemp" o="root" g="wheel" p="33277"/>
-          <f n="gnumv" o="root" g="wheel" p="33277"/>
-          <f n="gnunice" o="root" g="wheel" p="33277"/>
-          <f n="gnunl" o="root" g="wheel" p="33277"/>
-          <f n="gnunohup" o="root" g="wheel" p="33277"/>
+          <f n="[" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="base64" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="basename" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="cat" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="chcon" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="chgrp" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="chmod" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="chown" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="chroot" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="cksum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="comm" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="cp" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="csplit" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="cut" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="date" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="dd" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="df" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="dir" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="dircolors" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="dirname" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="du" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="echo" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="env" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="expand" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="expr" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="factor" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="false" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="fmt" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="fold" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="gnu[" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnubase64" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnubasename" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucat" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuchcon" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuchgrp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuchmod" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuchown" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuchroot" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucksum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucomm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucsplit" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnucut" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudate" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudd" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudir" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudircolors" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudirname" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnudu" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuecho" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuenv" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuexpand" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuexpr" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnufactor" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnufalse" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnufmt" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnufold" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnugroups" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuhead" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuhostid" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuid" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuinstall" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnujoin" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnukill" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnulink" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuln" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnulogname" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuls" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumd5sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumkdir" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumkfifo" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumknod" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumktemp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnumv" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnunice" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnunl" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnunohup" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="gnunproc" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="gnuod" o="root" g="wheel" p="33277"/>
-          <f n="gnupaste" o="root" g="wheel" p="33277"/>
-          <f n="gnupathchk" o="root" g="wheel" p="33277"/>
-          <f n="gnupinky" o="root" g="wheel" p="33277"/>
-          <f n="gnupr" o="root" g="wheel" p="33277"/>
-          <f n="gnuprintenv" o="root" g="wheel" p="33277"/>
-          <f n="gnuprintf" o="root" g="wheel" p="33277"/>
-          <f n="gnuptx" o="root" g="wheel" p="33277"/>
-          <f n="gnupwd" o="root" g="wheel" p="33277"/>
-          <f n="gnureadlink" o="root" g="wheel" p="33277"/>
-          <f n="gnurm" o="root" g="wheel" p="33277"/>
-          <f n="gnurmdir" o="root" g="wheel" p="33277"/>
-          <f n="gnuruncon" o="root" g="wheel" p="33277"/>
-          <f n="gnuseq" o="root" g="wheel" p="33277"/>
-          <f n="gnusha1sum" o="root" g="wheel" p="33277"/>
-          <f n="gnusha224sum" o="root" g="wheel" p="33277"/>
-          <f n="gnusha256sum" o="root" g="wheel" p="33277"/>
-          <f n="gnusha384sum" o="root" g="wheel" p="33277"/>
-          <f n="gnusha512sum" o="root" g="wheel" p="33277"/>
-          <f n="gnushred" o="root" g="wheel" p="33277"/>
-          <f n="gnushuf" o="root" g="wheel" p="33277"/>
-          <f n="gnusleep" o="root" g="wheel" p="33277"/>
-          <f n="gnusort" o="root" g="wheel" p="33277"/>
-          <f n="gnusplit" o="root" g="wheel" p="33277"/>
-          <f n="gnustat" o="root" g="wheel" p="33277"/>
-          <f n="gnustty" o="root" g="wheel" p="33277"/>
-          <f n="gnusum" o="root" g="wheel" p="33277"/>
-          <f n="gnusync" o="root" g="wheel" p="33277"/>
-          <f n="gnutac" o="root" g="wheel" p="33277"/>
-          <f n="gnutail" o="root" g="wheel" p="33277"/>
-          <f n="gnutee" o="root" g="wheel" p="33277"/>
-          <f n="gnutest" o="root" g="wheel" p="33277"/>
-          <f n="gnutimeout" o="root" g="wheel" p="33277"/>
-          <f n="gnutouch" o="root" g="wheel" p="33277"/>
-          <f n="gnutr" o="root" g="wheel" p="33277"/>
-          <f n="gnutrue" o="root" g="wheel" p="33277"/>
-          <f n="gnutruncate" o="root" g="wheel" p="33277"/>
-          <f n="gnutsort" o="root" g="wheel" p="33277"/>
-          <f n="gnutty" o="root" g="wheel" p="33277"/>
-          <f n="gnuuname" o="root" g="wheel" p="33277"/>
-          <f n="gnuunexpand" o="root" g="wheel" p="33277"/>
-          <f n="gnuuniq" o="root" g="wheel" p="33277"/>
-          <f n="gnuunlink" o="root" g="wheel" p="33277"/>
-          <f n="gnuuptime" o="root" g="wheel" p="33277"/>
-          <f n="gnuusers" o="root" g="wheel" p="33277"/>
-          <f n="gnuvdir" o="root" g="wheel" p="33277"/>
-          <f n="gnuwc" o="root" g="wheel" p="33277"/>
-          <f n="gnuwho" o="root" g="wheel" p="33277"/>
-          <f n="gnuwhoami" o="root" g="wheel" p="33277"/>
-          <f n="gnuyes" o="root" g="wheel" p="33277"/>
-          <f n="groups" o="root" g="wheel" p="33277"/>
-          <f n="head" o="root" g="wheel" p="33277"/>
-          <f n="hostid" o="root" g="wheel" p="33277"/>
-          <f n="id" o="root" g="wheel" p="33277"/>
-          <f n="install" o="root" g="wheel" p="33277"/>
-          <f n="join" o="root" g="wheel" p="33277"/>
-          <f n="kill" o="root" g="wheel" p="33277"/>
-          <f n="link" o="root" g="wheel" p="33277"/>
-          <f n="ln" o="root" g="wheel" p="33277"/>
-          <f n="logname" o="root" g="wheel" p="33277"/>
-          <f n="ls" o="root" g="wheel" p="33277"/>
-          <f n="md5sum" o="root" g="wheel" p="33277"/>
-          <f n="mkdir" o="root" g="wheel" p="33277"/>
-          <f n="mkfifo" o="root" g="wheel" p="33277"/>
-          <f n="mknod" o="root" g="wheel" p="33277"/>
-          <f n="mktemp" o="root" g="wheel" p="33277"/>
-          <f n="mv" o="root" g="wheel" p="33277"/>
-          <f n="nice" o="root" g="wheel" p="33277"/>
-          <f n="nl" o="root" g="wheel" p="33277"/>
-          <f n="nohup" o="root" g="wheel" p="33277"/>
+          <f n="gnuod" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnupaste" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnupathchk" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnupinky" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnupr" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuprintenv" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuprintf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuptx" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnupwd" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnureadlink" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnurm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnurmdir" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuruncon" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuseq" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusha1sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusha224sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusha256sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusha384sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusha512sum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnushred" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnushuf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusleep" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusort" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusplit" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnustat" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnustty" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusum" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnusync" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutac" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutail" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutee" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutest" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutimeout" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutouch" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutr" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutrue" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutruncate" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutsort" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnutty" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuuname" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuunexpand" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuuniq" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuunlink" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuuptime" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuusers" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuvdir" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuwc" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuwho" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuwhoami" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gnuyes" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="groups" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="head" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="hostid" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="id" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="install" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="join" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="kill" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="link" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="ln" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="logname" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="ls" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="md5sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mkdir" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mkfifo" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mknod" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mktemp" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="mv" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="nice" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="nl" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="nohup" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
           <f n="nproc" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="od" o="root" g="wheel" p="33277"/>
-          <f n="paste" o="root" g="wheel" p="33277"/>
-          <f n="pathchk" o="root" g="wheel" p="33277"/>
-          <f n="pinky" o="root" g="wheel" p="33277"/>
-          <f n="pr" o="root" g="wheel" p="33277"/>
-          <f n="printenv" o="root" g="wheel" p="33277"/>
-          <f n="printf" o="root" g="wheel" p="33277"/>
-          <f n="ptx" o="root" g="wheel" p="33277"/>
-          <f n="pwd" o="root" g="wheel" p="33277"/>
-          <f n="readlink" o="root" g="wheel" p="33277"/>
-          <f n="rm" o="root" g="wheel" p="33277"/>
-          <f n="rmdir" o="root" g="wheel" p="33277"/>
-          <f n="runcon" o="root" g="wheel" p="33277"/>
-          <f n="seq" o="root" g="wheel" p="33277"/>
-          <f n="sha1sum" o="root" g="wheel" p="33277"/>
-          <f n="sha224sum" o="root" g="wheel" p="33277"/>
-          <f n="sha256sum" o="root" g="wheel" p="33277"/>
-          <f n="sha384sum" o="root" g="wheel" p="33277"/>
-          <f n="sha512sum" o="root" g="wheel" p="33277"/>
-          <f n="shred" o="root" g="wheel" p="33277"/>
-          <f n="shuf" o="root" g="wheel" p="33277"/>
-          <f n="sleep" o="root" g="wheel" p="33277"/>
-          <f n="sort" o="root" g="wheel" p="33277"/>
-          <f n="split" o="root" g="wheel" p="33277"/>
-          <f n="stat" o="root" g="wheel" p="33277"/>
-          <f n="stty" o="root" g="wheel" p="33277"/>
-          <f n="sum" o="root" g="wheel" p="33277"/>
-          <f n="sync" o="root" g="wheel" p="33277"/>
-          <f n="tac" o="root" g="wheel" p="33277"/>
-          <f n="tail" o="root" g="wheel" p="33277"/>
-          <f n="tee" o="root" g="wheel" p="33277"/>
-          <f n="test" o="root" g="wheel" p="33277"/>
-          <f n="timeout" o="root" g="wheel" p="33277"/>
-          <f n="touch" o="root" g="wheel" p="33277"/>
-          <f n="tr" o="root" g="wheel" p="33277"/>
-          <f n="true" o="root" g="wheel" p="33277"/>
-          <f n="truncate" o="root" g="wheel" p="33277"/>
-          <f n="tsort" o="root" g="wheel" p="33277"/>
-          <f n="tty" o="root" g="wheel" p="33277"/>
-          <f n="uname" o="root" g="wheel" p="33277"/>
-          <f n="unexpand" o="root" g="wheel" p="33277"/>
-          <f n="uniq" o="root" g="wheel" p="33277"/>
-          <f n="unlink" o="root" g="wheel" p="33277"/>
-          <f n="uptime" o="root" g="wheel" p="33277"/>
-          <f n="users" o="root" g="wheel" p="33277"/>
-          <f n="vdir" o="root" g="wheel" p="33277"/>
-          <f n="wc" o="root" g="wheel" p="33277"/>
-          <f n="who" o="root" g="wheel" p="33277"/>
-          <f n="whoami" o="root" g="wheel" p="33277"/>
-          <f n="yes" o="root" g="wheel" p="33277"/>
+          <f n="od" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="paste" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="pathchk" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="pinky" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="pr" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="printenv" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="printf" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="ptx" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="pwd" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="readlink" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="rm" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="rmdir" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="runcon" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="seq" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sha1sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sha224sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sha256sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sha384sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sha512sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="shred" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="shuf" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sleep" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sort" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="split" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="stat" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="stty" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sum" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="sync" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tac" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tail" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tee" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="test" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="timeout" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="touch" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tr" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="true" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="truncate" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tsort" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="tty" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="uname" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="unexpand" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="uniq" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="unlink" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="uptime" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="users" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="vdir" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="wc" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="who" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="whoami" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="yes" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="coreutils" o="root" g="wheel" p="16893"/>
+          <f n="coreutils" o="root" g="wheel" p="16893">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="coreutils" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="THANKS" o="root" g="wheel" p="33204"/>
-              <f n="TODO" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog-2005" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog-2006" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog-2007" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog-2008" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
-            <f n="coreutils.info" o="root" g="wheel" p="33204"/>
+            <f n="coreutils.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
             <f n="af" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="be" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="bg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="ca" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="cs" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="da" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="de" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="el" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="en" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="coreutils.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -307,101 +758,18 @@
             </f>
             <f n="es" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="et" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="eu" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="fi" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="fr" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="ga" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="gl" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="hu" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="id" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="it" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="ja" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="ko" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
-              </f>
-            </f>
-            <f n="lg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="coreutils.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -414,60 +782,253 @@
                 <mod>mode</mod>
               </f>
             </f>
-            <f n="lt" o="root" g="wheel" p="16893">
+            <f n="eu" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="fi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="fr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="ga" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="gl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="hu" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="id" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="it" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="ja" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="kk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="ko" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="lg" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="lt" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="LC_TIME" o="root" g="wheel" p="16893">
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="ms" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="nb" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="nl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="pl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="pt" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="pt_BR" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="ro" o="root" g="wheel" p="16893">
@@ -485,281 +1046,718 @@
             </f>
             <f n="ru" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="sl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="sv" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="tr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="uk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="vi" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="zh_CN" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
             <f n="zh_TW" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
-                <f n="coreutils.mo" o="root" g="wheel" p="33204"/>
+                <f n="coreutils.mo" o="root" g="wheel" p="41396">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="base64.1" o="root" g="wheel" p="33204"/>
-              <f n="basename.1" o="root" g="wheel" p="33204"/>
-              <f n="cat.1" o="root" g="wheel" p="33204"/>
-              <f n="chcon.1" o="root" g="wheel" p="33204"/>
-              <f n="chgrp.1" o="root" g="wheel" p="33204"/>
-              <f n="chmod.1" o="root" g="wheel" p="33204"/>
-              <f n="chown.1" o="root" g="wheel" p="33204"/>
-              <f n="chroot.1" o="root" g="wheel" p="33204"/>
-              <f n="cksum.1" o="root" g="wheel" p="33204"/>
-              <f n="comm.1" o="root" g="wheel" p="33204"/>
-              <f n="cp.1" o="root" g="wheel" p="33204"/>
-              <f n="csplit.1" o="root" g="wheel" p="33204"/>
-              <f n="cut.1" o="root" g="wheel" p="33204"/>
-              <f n="date.1" o="root" g="wheel" p="33204"/>
-              <f n="dd.1" o="root" g="wheel" p="33204"/>
-              <f n="df.1" o="root" g="wheel" p="33204"/>
-              <f n="dir.1" o="root" g="wheel" p="33204"/>
-              <f n="dircolors.1" o="root" g="wheel" p="33204"/>
-              <f n="dirname.1" o="root" g="wheel" p="33204"/>
-              <f n="du.1" o="root" g="wheel" p="33204"/>
-              <f n="echo.1" o="root" g="wheel" p="33204"/>
-              <f n="env.1" o="root" g="wheel" p="33204"/>
-              <f n="expand.1" o="root" g="wheel" p="33204"/>
-              <f n="expr.1" o="root" g="wheel" p="33204"/>
-              <f n="factor.1" o="root" g="wheel" p="33204"/>
-              <f n="false.1" o="root" g="wheel" p="33204"/>
-              <f n="fmt.1" o="root" g="wheel" p="33204"/>
-              <f n="fold.1" o="root" g="wheel" p="33204"/>
-              <f n="gnubase64.1" o="root" g="wheel" p="33204"/>
-              <f n="gnubasename.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucat.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuchcon.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuchgrp.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuchmod.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuchown.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuchroot.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucksum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucomm.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucp.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucsplit.1" o="root" g="wheel" p="33204"/>
-              <f n="gnucut.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudate.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudd.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudf.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudir.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudircolors.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudirname.1" o="root" g="wheel" p="33204"/>
-              <f n="gnudu.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuecho.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuenv.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuexpand.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuexpr.1" o="root" g="wheel" p="33204"/>
-              <f n="gnufactor.1" o="root" g="wheel" p="33204"/>
-              <f n="gnufalse.1" o="root" g="wheel" p="33204"/>
-              <f n="gnufmt.1" o="root" g="wheel" p="33204"/>
-              <f n="gnufold.1" o="root" g="wheel" p="33204"/>
-              <f n="gnugroups.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuhead.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuhostid.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuid.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuinstall.1" o="root" g="wheel" p="33204"/>
-              <f n="gnujoin.1" o="root" g="wheel" p="33204"/>
-              <f n="gnukill.1" o="root" g="wheel" p="33204"/>
-              <f n="gnulink.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuln.1" o="root" g="wheel" p="33204"/>
-              <f n="gnulogname.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuls.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumd5sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumkdir.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumkfifo.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumknod.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumktemp.1" o="root" g="wheel" p="33204"/>
-              <f n="gnumv.1" o="root" g="wheel" p="33204"/>
-              <f n="gnunice.1" o="root" g="wheel" p="33204"/>
-              <f n="gnunl.1" o="root" g="wheel" p="33204"/>
-              <f n="gnunohup.1" o="root" g="wheel" p="33204"/>
+              <f n="base64.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="basename.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="cat.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="chcon.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="chgrp.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="chmod.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="chown.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="chroot.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="cksum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="comm.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="cp.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="csplit.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="cut.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="date.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="dd.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="df.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="dir.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="dircolors.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="dirname.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="du.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="echo.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="env.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="expand.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="expr.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="factor.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="false.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="fmt.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="fold.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="gnubase64.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnubasename.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucat.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuchcon.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuchgrp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuchmod.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuchown.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuchroot.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucksum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucomm.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucsplit.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnucut.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudate.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudd.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudir.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudircolors.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudirname.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnudu.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuecho.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuenv.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuexpand.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuexpr.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnufactor.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnufalse.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnufmt.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnufold.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnugroups.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuhead.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuhostid.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuid.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuinstall.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnujoin.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnukill.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnulink.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuln.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnulogname.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuls.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumd5sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumkdir.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumkfifo.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumknod.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumktemp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnumv.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnunice.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnunl.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnunohup.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="gnunproc.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="gnuod.1" o="root" g="wheel" p="33204"/>
-              <f n="gnupaste.1" o="root" g="wheel" p="33204"/>
-              <f n="gnupathchk.1" o="root" g="wheel" p="33204"/>
-              <f n="gnupinky.1" o="root" g="wheel" p="33204"/>
-              <f n="gnupr.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuprintenv.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuprintf.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuptx.1" o="root" g="wheel" p="33204"/>
-              <f n="gnupwd.1" o="root" g="wheel" p="33204"/>
-              <f n="gnureadlink.1" o="root" g="wheel" p="33204"/>
-              <f n="gnurm.1" o="root" g="wheel" p="33204"/>
-              <f n="gnurmdir.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuruncon.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuseq.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusha1sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusha224sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusha256sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusha384sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusha512sum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnushred.1" o="root" g="wheel" p="33204"/>
-              <f n="gnushuf.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusleep.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusort.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusplit.1" o="root" g="wheel" p="33204"/>
-              <f n="gnustat.1" o="root" g="wheel" p="33204"/>
-              <f n="gnustty.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusum.1" o="root" g="wheel" p="33204"/>
-              <f n="gnusync.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutac.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutail.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutee.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutest.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutimeout.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutouch.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutr.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutrue.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutruncate.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutsort.1" o="root" g="wheel" p="33204"/>
-              <f n="gnutty.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuuname.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuunexpand.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuuniq.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuunlink.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuuptime.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuusers.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuvdir.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuwc.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuwho.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuwhoami.1" o="root" g="wheel" p="33204"/>
-              <f n="gnuyes.1" o="root" g="wheel" p="33204"/>
-              <f n="groups.1" o="root" g="wheel" p="33204"/>
-              <f n="head.1" o="root" g="wheel" p="33204"/>
-              <f n="hostid.1" o="root" g="wheel" p="33204"/>
-              <f n="id.1" o="root" g="wheel" p="33204"/>
-              <f n="install.1" o="root" g="wheel" p="33204"/>
-              <f n="join.1" o="root" g="wheel" p="33204"/>
-              <f n="kill.1" o="root" g="wheel" p="33204"/>
-              <f n="link.1" o="root" g="wheel" p="33204"/>
-              <f n="ln.1" o="root" g="wheel" p="33204"/>
-              <f n="logname.1" o="root" g="wheel" p="33204"/>
-              <f n="ls.1" o="root" g="wheel" p="33204"/>
-              <f n="md5sum.1" o="root" g="wheel" p="33204"/>
-              <f n="mkdir.1" o="root" g="wheel" p="33204"/>
-              <f n="mkfifo.1" o="root" g="wheel" p="33204"/>
-              <f n="mknod.1" o="root" g="wheel" p="33204"/>
-              <f n="mktemp.1" o="root" g="wheel" p="33204"/>
-              <f n="mv.1" o="root" g="wheel" p="33204"/>
-              <f n="nice.1" o="root" g="wheel" p="33204"/>
-              <f n="nl.1" o="root" g="wheel" p="33204"/>
-              <f n="nohup.1" o="root" g="wheel" p="33204"/>
+              <f n="gnuod.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnupaste.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnupathchk.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnupinky.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnupr.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuprintenv.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuprintf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuptx.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnupwd.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnureadlink.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnurm.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnurmdir.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuruncon.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuseq.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusha1sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusha224sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusha256sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusha384sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusha512sum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnushred.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnushuf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusleep.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusort.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusplit.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnustat.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnustty.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusum.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnusync.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutac.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutail.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutee.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutest.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutimeout.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutouch.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutr.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutrue.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutruncate.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutsort.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnutty.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuuname.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuunexpand.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuuniq.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuunlink.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuuptime.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuusers.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuvdir.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuwc.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuwho.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuwhoami.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuyes.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="groups.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="head.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="hostid.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="id.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="install.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="join.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="kill.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="link.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="ln.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="logname.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="ls.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="md5sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="mkdir.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="mkfifo.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="mknod.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="mktemp.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="mv.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="nice.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="nl.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="nohup.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
               <f n="nproc.1" o="root" g="wheel" p="41396">
                 <mod>mode</mod>
               </f>
-              <f n="od.1" o="root" g="wheel" p="33204"/>
-              <f n="paste.1" o="root" g="wheel" p="33204"/>
-              <f n="pathchk.1" o="root" g="wheel" p="33204"/>
-              <f n="pinky.1" o="root" g="wheel" p="33204"/>
-              <f n="pr.1" o="root" g="wheel" p="33204"/>
-              <f n="printenv.1" o="root" g="wheel" p="33204"/>
-              <f n="printf.1" o="root" g="wheel" p="33204"/>
-              <f n="ptx.1" o="root" g="wheel" p="33204"/>
-              <f n="pwd.1" o="root" g="wheel" p="33204"/>
-              <f n="readlink.1" o="root" g="wheel" p="33204"/>
-              <f n="rm.1" o="root" g="wheel" p="33204"/>
-              <f n="rmdir.1" o="root" g="wheel" p="33204"/>
-              <f n="runcon.1" o="root" g="wheel" p="33204"/>
-              <f n="seq.1" o="root" g="wheel" p="33204"/>
-              <f n="sha1sum.1" o="root" g="wheel" p="33204"/>
-              <f n="sha224sum.1" o="root" g="wheel" p="33204"/>
-              <f n="sha256sum.1" o="root" g="wheel" p="33204"/>
-              <f n="sha384sum.1" o="root" g="wheel" p="33204"/>
-              <f n="sha512sum.1" o="root" g="wheel" p="33204"/>
-              <f n="shred.1" o="root" g="wheel" p="33204"/>
-              <f n="shuf.1" o="root" g="wheel" p="33204"/>
-              <f n="sleep.1" o="root" g="wheel" p="33204"/>
-              <f n="sort.1" o="root" g="wheel" p="33204"/>
-              <f n="split.1" o="root" g="wheel" p="33204"/>
-              <f n="stat.1" o="root" g="wheel" p="33204"/>
-              <f n="stty.1" o="root" g="wheel" p="33204"/>
-              <f n="sum.1" o="root" g="wheel" p="33204"/>
-              <f n="sync.1" o="root" g="wheel" p="33204"/>
-              <f n="tac.1" o="root" g="wheel" p="33204"/>
-              <f n="tail.1" o="root" g="wheel" p="33204"/>
-              <f n="tee.1" o="root" g="wheel" p="33204"/>
-              <f n="test.1" o="root" g="wheel" p="33204"/>
-              <f n="timeout.1" o="root" g="wheel" p="33204"/>
-              <f n="touch.1" o="root" g="wheel" p="33204"/>
-              <f n="tr.1" o="root" g="wheel" p="33204"/>
-              <f n="true.1" o="root" g="wheel" p="33204"/>
-              <f n="truncate.1" o="root" g="wheel" p="33204"/>
-              <f n="tsort.1" o="root" g="wheel" p="33204"/>
-              <f n="tty.1" o="root" g="wheel" p="33204"/>
-              <f n="uname.1" o="root" g="wheel" p="33204"/>
-              <f n="unexpand.1" o="root" g="wheel" p="33204"/>
-              <f n="uniq.1" o="root" g="wheel" p="33204"/>
-              <f n="unlink.1" o="root" g="wheel" p="33204"/>
-              <f n="uptime.1" o="root" g="wheel" p="33204"/>
-              <f n="users.1" o="root" g="wheel" p="33204"/>
-              <f n="vdir.1" o="root" g="wheel" p="33204"/>
-              <f n="wc.1" o="root" g="wheel" p="33204"/>
-              <f n="who.1" o="root" g="wheel" p="33204"/>
-              <f n="whoami.1" o="root" g="wheel" p="33204"/>
-              <f n="yes.1" o="root" g="wheel" p="33204"/>
+              <f n="od.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="paste.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pathchk.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pinky.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pr.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="printenv.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="printf.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="ptx.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pwd.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="readlink.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="rm.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="rmdir.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="runcon.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="seq.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sha1sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sha224sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sha256sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sha384sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sha512sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="shred.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="shuf.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sleep.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sort.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="split.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="stat.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="stty.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sum.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="sync.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tac.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tail.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tee.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="test.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="timeout.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="touch.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tr.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="true.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="truncate.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tsort.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="tty.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="uname.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="unexpand.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="uniq.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="unlink.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="uptime.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="users.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="vdir.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="wc.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="who.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="whoami.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="yes.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
