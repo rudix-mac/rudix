@@ -134,7 +134,14 @@ else
 endif
 	@$(call info_color,Finished)
 
-.PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload
+wiki: pkg
+	@$(call info_color,Generating Wiki page)
+	env Name="$(Name)" Title="$(Title)" Description="$(Description)" \
+		Site="$(Site)" License="$(License)" PkgFile="$(PkgFile)" \
+		../../Library/mkwikipage.py
+	@$(call info_color,Finished)
+
+.PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload wiki
 
 #
 # Functions
