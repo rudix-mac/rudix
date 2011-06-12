@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Apache Portable Runtime</title>
-    <build>/Users/ruda/Desktop/Apache Portable Runtime.pkg</build>
+    <title>APR</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,16 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>The Apache Portable Runtime library</description>
+  <description>Apache Portable Runtime library</description>
   <contents>
-    <choice title="apr-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.apachePortableRuntime.apr-install.pkg"/>
+    <choice title="apr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.apr"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">apr-1.4.2/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">apr-1.4.2/README</resource>
+      <resource relative="true" mod="true" type="license">apr-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">apr-build/README</resource>
     </locale>
   </resources>
   <flags/>
