@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="6805C2ED-38A5-4106-9047-B85D90411410">
+<pkgref spec="1.12" uuid="971333E2-94FF-11E0-BA44-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.astyle</identifier>
+    <version>2.02-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,7 +13,6 @@
     </flags>
     <packageStore type="internal"/>
     <mod>installTo</mod>
-    <mod>scripts.scriptsDirectoryPath.path</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
     <mod>parent</mod>
@@ -20,6 +20,7 @@
   </config>
   <contents>
     <file-list>01astyle-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
