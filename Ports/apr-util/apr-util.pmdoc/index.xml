@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>APR Utilily</title>
+    <title>APR-util</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -19,12 +19,12 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">apr-util-1.3.10/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">apr-util-1.3.10/README</resource>
+      <resource relative="true" mod="true" type="license">apr-util-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">apr-util-build/README</resource>
     </locale>
   </resources>
   <flags/>
-  <item type="file">01apr.xml</item>
+  <item type="file">01apr-util.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

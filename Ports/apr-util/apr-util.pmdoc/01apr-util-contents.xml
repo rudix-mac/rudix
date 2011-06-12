@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="apr-util-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/apr-util/apr-util-install" m="false" t="file">
+  <f n="apr-util-install" o="root" g="staff" p="16877" pt="apr-util-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">
@@ -119,12 +119,11 @@
             <f n="apr_dbd_sqlite3.so" o="root" g="wheel" p="41469">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="aprutil.exp" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libaprutil-1.0.3.9.dylib" o="root" g="wheel" p="33277">
+          <f n="libaprutil-1.0.3.12.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libaprutil-1.0.dylib" o="root" g="wheel" p="41469">
@@ -160,7 +159,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
