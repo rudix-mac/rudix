@@ -1,22 +1,26 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="8B1C7FB5-7FBA-4C98-BE40-87DBBB38DF47">
+<pkgref spec="1.12" uuid="E20942EA-949D-11E0-BCE2-0017F22C0C04">
   <config>
-    <identifier>org.rudix.asciidoc.asciidoc-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.asciidoc</identifier>
+    <version>8.6.5-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true">asciidoc-install</installFrom>
+    <installFrom relative="true" mod="true">asciidoc-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01asciidoc-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

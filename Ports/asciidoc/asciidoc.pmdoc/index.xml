@@ -11,18 +11,20 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
+  <description>Text based document generation</description>
   <contents>
     <choice title="asciidoc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.asciidoc.asciidoc-install.pkg"/>
+      <pkgref id="org.rudix.pkg.asciidoc"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">asciidoc-8.6.3/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">asciidoc-8.6.3/README</resource>
+      <resource relative="true" mod="true" type="license">asciidoc-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">asciidoc-build/README</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01asciidoc.xml</item>
   <mod>properties.title</mod>
+  <mod>description</mod>
 </pkmkdoc>
