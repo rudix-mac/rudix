@@ -1,3 +1,5 @@
+BuildRequires += /usr/local/lib/libintl.la
+
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
@@ -5,10 +7,10 @@ include ../../Library/GNUFormula.mk
 Description=	Lynx is a text browser for the World Wide Web
 Site=		http://lynx.isc.org/
 License=	GPL
-Title=		Lynx Browser
+Title=		Lynx
 Name=		lynx
 Version=	2.8.7
-Revision=	1
+Revision=	2
 URL=		http://lynx.isc.org/release/
 Source=		$(Name)$(Version).tar.bz2
 
