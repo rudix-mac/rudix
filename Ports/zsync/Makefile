@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Site=		http://zsync.moria.org.uk/
 License=	Artistic License
 Description=	Client-side implementation of the rsync algorithm
-Title=		zsync $(Version)
+Title=		Zsync
 Name=		zsync
 Version=	0.6.2
 Revision=	2

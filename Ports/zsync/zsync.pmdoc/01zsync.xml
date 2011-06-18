@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E379D29C-5A7E-11E0-970D-0017F22C0C04">
+<pkgref spec="1.12" uuid="6E260548-99AC-11E0-905C-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.zsync</identifier>
     <version>0.6.2-2</version>
@@ -20,6 +20,7 @@
   </config>
   <contents>
     <file-list>01zsync-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
