@@ -13,7 +13,7 @@ Description=	Vx32: portable, efficient, safe execution of untrusted x86 code
 Title=		Vx32
 Name=		vx32
 Version=	0.12
-Revision=	3
+Revision=	4
 URL=		http://pdos.csail.mit.edu/~baford/vm/release/
 Source=		$(Name)-$(Version).tar.bz2
 
@@ -22,6 +22,8 @@ LicenseFile=	$(PortDir)/LICENSE
 
 BuildDir = $(Name)-build/src
 GnuMakeExtra = libvx32/libvx32.a 9vx/9vx vxrun/vxrun
+
+GnuMakeInstallExtra = prefix=$(InstallDir)$(Prefix)
 
 define install_post_hook
 install -d $(InstallDir)/$(LibDir)
