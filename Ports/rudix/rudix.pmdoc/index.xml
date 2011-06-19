@@ -19,8 +19,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">License.text</resource>
-      <resource relative="true" mod="true" type="readme">ReadMe.text</resource>
+      <resource relative="true" mod="true" type="license">/Users/ruda/Downloads/rudix.hg/Ports/rudix/License.md</resource>
+      <resource relative="true" mod="true" type="readme">/Users/ruda/Downloads/rudix.hg/Ports/rudix/ReadMe.md</resource>
     </locale>
   </resources>
   <flags/>

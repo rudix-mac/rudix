@@ -5,11 +5,11 @@ Site=		http://rudix.org/
 License=	BSD
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	11.4
+Version=	11.6
 Revision=	0
 
-ReadMeFile=	ReadMe.text
-LicenseFile=	License.text
+ReadMeFile=	$(PortDir)/ReadMe.md
+LicenseFile=	$(PortDir)/License.md
 
 define retrieve_inner_hook
 touch retrieve

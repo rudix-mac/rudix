@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="rudix-install" o="ruda" g="staff" p="16877" pt="rudix-install" m="false" t="file">
+  <f n="rudix-install" o="root" g="staff" p="16877" pt="rudix-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -11,10 +11,10 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="rudix" o="root" g="wheel" p="16893">
-              <f n="License.txt" o="root" g="wheel" p="33204">
+              <f n="License.md" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ReadMe.txt" o="root" g="wheel" p="33204">
+              <f n="ReadMe.md" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="rudix.pdf" o="root" g="wheel" p="33204">
