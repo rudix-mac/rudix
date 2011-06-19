@@ -1,46 +1,34 @@
-# Library for arbitrary precision arithmetic
-# http://gmplib.org/
-# LGPL
+include ../../Library/Config.mk
+RUDIX_UNIVERSAL=no
+ArchFlags=
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Description=	The GNU Multiple Precision Arithmetic Library
+Site=		http://gmplib.org/
+License=	GPL
+Title=		GNU MP $(Version)
+Name=		gmp
+Version=	5.0.2
+Revision=	0
+URL=		ftp://ftp.gmplib.org/pub/gmp-$(Version)/
+Source=		$(Name)-$(Version).tar.bz2
 
-TITLE=		GNU MP $(VERSION)
-NAME=		gmp
-VERSION=	5.0.1
-REVISION=	1
-URL=		ftp://ftp.gmplib.org/pub/gmp-$(VERSION)/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+GnuConfigureExtra += --enable-fat
+GnuConfigureExtra += --enable-cxx
 
-ifdef STATIC_ONLY
-CONFIG_OPTS=	--enable-static --disable-shared
-else
-CONFIG_OPTS=	--enable-static --enable-shared
-endif
-
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env ABI=32 \
-	$(configure) $(CONFIG_OPTS) \
-		--enable-cxx ; $(make)
-	touch build
-
+ifdef FOO
 install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,ChangeLog,NEWS} $(INSTALLDOCDIR)
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
+	rm -f $(InstallDir)$(Prefix)/share/info/dir
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{AUTHORS,ChangeLog,NEWS} $(InstallDir)/$(DocDir)/$(Name)
 ifndef STATIC_ONLY
-	strip -x $(INSTALLDIR)/usr/local/lib/*.dylib
+	strip -x $(InstallDir)$(LibDir)/*.dylib
 endif
-	strip -x $(INSTALLDIR)/usr/local/lib/*.a
+	strip -x $(InstallDir)$(LibDir)/*.a
 	touch install
-
-test: install
-	cd $(BUILDDIR) ; make check
-	touch test
+endif
