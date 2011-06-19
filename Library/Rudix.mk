@@ -134,7 +134,7 @@ else
 endif
 	@$(call info_color,Finished)
 
-wiki: pkg
+wiki:
 	@$(call info_color,Generating Wiki page)
 	env Name="$(Name)" Title="$(Title)" Description="$(Description)" \
 		Site="$(Site)" License="$(License)" PkgFile="$(PkgFile)" \
