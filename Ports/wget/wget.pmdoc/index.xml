@@ -13,14 +13,14 @@
   </distribution>
   <description>Retrieve files from the web via HTTP, HTTPS and FTP</description>
   <contents>
-    <choice title="wget-install" id="wget" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="wget-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.wget"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">wget-1.12/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">wget-1.12/README</resource>
+      <resource relative="true" mod="true" type="license">wget-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">wget-build/README</resource>
     </locale>
   </resources>
   <flags/>

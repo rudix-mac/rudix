@@ -10,7 +10,7 @@ Description=	Retrieve files from the web via HTTP, HTTPS and FTP
 Title=		GNU Wget
 Name=		wget
 Version=	1.12
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/wget/
 Source=		$(Name)-$(Version).tar.gz
 
