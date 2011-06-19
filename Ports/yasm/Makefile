@@ -5,14 +5,14 @@ include ../../Library/GNUFormula.mk
 Site=		http://www.tortall.net/projects/yasm/
 License=	BSD
 Description=	Complete rewrite of the NASM assembler
-Title=		Yasm $(Version)
+Title=		Yasm
 Name=		yasm
 Version=	1.1.0
 Revision=	2
 URL=		http://www.tortall.net/projects/yasm/releases/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README
+ReadMeFile=	$(PortDir)/README
 LicenseFile=	$(BuildDir)/COPYING
 
 define install_post_hook

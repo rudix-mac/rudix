@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="0E6571BC-5B17-11E0-9863-0017F22C0C04">
+<pkgref spec="1.12" uuid="E1313830-9A12-11E0-B396-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.yasm</identifier>
     <version>1.1.0-2</version>
@@ -20,6 +20,7 @@
   </config>
   <contents>
     <file-list>01yasm-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
