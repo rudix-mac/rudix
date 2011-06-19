@@ -1,0 +1,1 @@
+Mac OS X already comes with Bash version 3.2.48(1)-release installed in `/bin/bash`.
