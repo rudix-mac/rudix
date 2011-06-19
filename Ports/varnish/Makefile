@@ -1,5 +1,5 @@
 BuildRequires=	/usr/local/bin/pkg-config
-BuildRequires+=	/usr/local/lib/libpcre.la
+#BuildRequires+=	/usr/local/lib/libpcre.la
 
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
@@ -7,12 +7,12 @@ include ../../Library/GNUFormula.mk
 
 Site=		http://varnish.projects.linpro.no/
 License=	BSD
-Description=	High-performance HTTP accelerator
-Title=		Varnish
+Description=	Varnish Cache is a web application accelerator also known as a caching HTTP reverse proxy
+Title=		Varnish Cache
 Name=		varnish
-Version=	2.1.4
+Version=	3.0.0
 Revision=	0
-URL=		http://www.varnish-software.com/sites/default/files
+URL=		http://repo.varnish-cache.org/source/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(BuildDir)/README
