@@ -7,8 +7,8 @@ License=	Freeware
 Description=	Extract, list, and test RAR archives
 Title=		unRAR
 Name=		unrar
-Version=	3.7.8
-Revision=	6
+Version=	4.0.3
+Revision=	0
 URL=		http://www.rarlab.com/rar/
 Source=		$(Name)src-$(Version).tar.gz
 
