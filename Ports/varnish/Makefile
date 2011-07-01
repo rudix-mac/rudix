@@ -18,6 +18,8 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/LICENSE
 
+GnuConfigureExtra = PCRE_LIBS="-L/usr/local/lib /usr/local/lib/libpcre.a"
+
 define install_post_hook
 cd $(InstallDir)/$(Prefix)/etc/varnish ; mv default.vcl default.vcl.default
 endef
