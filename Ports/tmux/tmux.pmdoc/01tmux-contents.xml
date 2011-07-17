@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="tmux-install" o="ruda" g="staff" p="16877" pt="tmux-install" m="false" t="file">
+  <f n="tmux-install" o="root" g="staff" p="16877" pt="tmux-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">

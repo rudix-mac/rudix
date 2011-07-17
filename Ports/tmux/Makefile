@@ -7,29 +7,29 @@ include ../../Library/GNUFormula.mk
 Site=		http://tmux.sourceforge.net/
 License=	BSD
 Description=	tmux is a terminal multiplexer
-Title=		Terminal multiplexer
+Title=		tmux
 Name=		tmux
-Version=	1.4
+Version=	1.5
 Revision=	0
 URL=		http://downloads.sourceforge.net/tmux/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/NOTES
-LicenseFile=	$(PortDir)/LICENSE
+LicenseFile=	LICENSE
 
-GnuMakeExtra = -f GNUmakefile FUNIVERSAL=1
-GnuMakeInstallExtra = -f GNUmakefile
+LdFlags += -lresolv
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
-define prep_post_hook
-perl -p -i -e 's|-levent|/usr/local/lib/libevent.a|g'	$(SourceDir)/configure
-endef
+EnvExtra += LIBS="/usr/local/lib/libevent.a"
 endif
 
-define install_post_hook
-chmod +w $(InstallDir)/usr/local/bin/tmux
-endef
+#define test_inner_hook
+#$(call test_universal)
+#endef
 
-define test_inner_hook
-$(call test_universal)
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+define test_post_hook
+otool -L $(InstallDir)/usr/local/bin/tmux | grep -v libevent
+nm $(InstallDir)/usr/local/bin/tmux | grep event
 endef
+endif
