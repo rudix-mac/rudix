@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="2865C4C2-6682-40BF-85DC-C1882A7275E5">
+<pkgref spec="1.12" uuid="81514DD4-B19A-11E0-AC38-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.cabextract</identifier>
-    <version>1.2</version>
+    <version>1.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,14 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
     <mod>version</mod>
   </config>
   <contents>
     <file-list>01cabextract-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

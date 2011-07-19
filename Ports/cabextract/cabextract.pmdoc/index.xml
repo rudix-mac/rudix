@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Cabextract</title>
-    <build>/Users/ruda/Desktop/Cabextract.pkg</build>
+    <title>cabextract</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -14,14 +13,14 @@
   </distribution>
   <description>Extracts files from Microsoft CAB archives</description>
   <contents>
-    <choice title="cabextract-install" id="cabextract" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="cabextract-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.cabextract"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">cabextract-1.3/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">cabextract-1.3/README</resource>
+      <resource relative="true" mod="true" type="license">cabextract-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">cabextract-build/README</resource>
     </locale>
   </resources>
   <flags/>

@@ -7,8 +7,8 @@ License=	GPL
 Description=	Extracts files from Microsoft CAB archives
 Title=		cabextract
 Name=		cabextract
-Version=	1.3
-Revision=	1
+Version=	1.4
+Revision=	0
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
 
