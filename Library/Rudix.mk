@@ -10,7 +10,8 @@ PortDir := $(shell pwd)
 SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
-PkgFile = $(Name)-$(Version)-$(Revision).pkg
+DistName = $(Name)
+PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 
 #
 # Build flags options
@@ -190,7 +191,7 @@ endef
 define create_pkg
 /Developer/usr/bin/packagemaker \
 	--doc $(Name).pmdoc \
-	--id $(Vendor).pkg.$(Name) \
+	--id $(Vendor).pkg.$(DistName) \
 	--version $(Version)-$(Revision) \
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
