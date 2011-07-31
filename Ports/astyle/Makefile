@@ -8,7 +8,7 @@ Description=	Indenter and formatter of C/C++/Java source files
 Title=		Artistic Style
 Name=		astyle
 Version=	2.02
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)_$(Version)_macosx.tar.gz
 
