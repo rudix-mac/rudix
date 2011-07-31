@@ -8,16 +8,12 @@ License=	GPL
 Title=		GNU gettext
 Name=		gettext
 Version=	0.18.1.1
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
-
-#ifdef STATIC_ONLY
-#STATIC=		--enable-static --disable-shared
-#endif
 
 GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-csharp

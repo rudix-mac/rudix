@@ -5,7 +5,7 @@ Site=		http://rudix.org/
 License=	BSD
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	11.6
+Version=	11.7
 Revision=	0
 
 ReadMeFile=	$(PortDir)/ReadMe.md

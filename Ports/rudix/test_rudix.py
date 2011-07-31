@@ -1,8 +1,6 @@
 import unittest
 from rudix import *
 
-# NOTICE: we will assume org.rudix.pkg.rudix is installed.
-
 class RudixTest(unittest.TestCase):
     def test_version_compare(self):
         self.assertEqual(version_compare('1.0', '2.0'), -1)

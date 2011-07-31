@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110508
+BuildSystem = 20110723
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -40,12 +40,6 @@ DataDir = $(Prefix)/share
 DocDir = $(DataDir)/doc
 ManDir = $(DataDir)/man
 InfoDir = $(DataDir)/info
-
-#
-# Python options
-#
-Python = /usr/bin/python2.6
-PythonSitePackages = /Library/Python/2.6/site-packages
 
 #
 # Framework
