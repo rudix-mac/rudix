@@ -8,13 +8,9 @@ License=	GPL
 Title=		GNU cflow $(Version)
 Name=		cflow
 Version=	1.3
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/cflow/
 Source=		$(Name)-$(Version).tar.bz2
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
-
-#ifdef WITH_STATIC_NLS
-#LDFLAGS+=	-framework CoreFoundation -liconv
-#endif

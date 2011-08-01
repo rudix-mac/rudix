@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="95D949CF-BE5C-4D40-816A-BF2303072D77">
+<pkgref spec="1.12" uuid="9B9633E3-BBE0-11E0-96AF-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.cflow</identifier>
-    <version>1.3</version>
+    <version>1.3-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,12 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installFrom.path</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01cflow-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
