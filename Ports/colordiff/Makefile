@@ -8,7 +8,7 @@ Description=	Colour-highlighted diff output
 Title=		ColorDiff
 Name=		colordiff
 Version=	1.0.9
-Revision=	0
+Revision=	1
 URL=		http://colordiff.sourceforge.net/
 Source=		$(Name)-$(Version).tar.gz
 
