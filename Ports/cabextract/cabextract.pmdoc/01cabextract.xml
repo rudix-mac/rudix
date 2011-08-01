@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="81514DD4-B19A-11E0-AC38-0017F22C0C04">
+<pkgref spec="1.12" uuid="BAFC6CC2-BBDA-11E0-ABE0-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.cabextract</identifier>
-    <version>1.4-0</version>
+    <version>1.4-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
