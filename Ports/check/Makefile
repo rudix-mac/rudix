@@ -8,7 +8,7 @@ License=	LGPL
 Title=		Check
 Name=		check
 Version=	0.9.8
-Revision=	1
+Revision=	2
 URL=		http://prdownloads.sourceforge.net/check
 Source=		$(Name)-$(Version).tar.gz
 

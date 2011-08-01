@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="check-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/check/check-install" m="false" t="file">
+  <f n="check-install" o="root" g="staff" p="16877" pt="check-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="include" o="root" g="wheel" p="16893">
