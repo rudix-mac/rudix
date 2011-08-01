@@ -6,8 +6,8 @@ Site=		http://www.boost.org/
 License=	MIT-like
 Title=		Boost C++ Libraries
 Name=		boost
-Version=	1.46.1
-AltVersion=	1_46_1
+Version=	1.47.0
+AltVersion=	1_47_0
 Revision=	0
 URL=		http://downloads.sourceforge.net/boost
 Source=		$(Name)_$(AltVersion).tar.bz2
@@ -18,8 +18,7 @@ UncompressedName = $(Name)_$(AltVersion)
 
 ifdef FOO
 build: prep $(DEPENDS)
-	cd $(SourceDir) ; ./bootstrap.sh ; \
-	./bjam toolset=darwin architecture=x86 address-model=32_64
+	cd $(SourceDir) ; ./bootstrap.sh ; ./bjam 
 	touch build
 
 install: build

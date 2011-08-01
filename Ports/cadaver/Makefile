@@ -8,7 +8,7 @@ License=	GPL
 Title=		cadaver $(Version)
 Name=		cadaver
 Version=	0.23.3
-Revision=	1
+Revision=	2
 URL=		http://www.webdav.org/cadaver/
 Source=		$(Name)-$(Version).tar.gz
 
@@ -16,10 +16,6 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-ssl
-
-#ifdef WITH_STATIC_NLS
-#LDFLAGS+=	-framework CoreFoundation -liconv
-#endif
 
 define install_post_hook
 install -m 644 $(SourceDir)/{FAQ,INTEROP} $(InstallDir)/$(DocDir)/$(Name)

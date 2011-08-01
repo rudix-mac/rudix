@@ -8,7 +8,7 @@ Description=	Text based document generation
 Title=		AsciiDoc
 Name=		asciidoc
 Version=	8.6.5
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
