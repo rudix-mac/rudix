@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4F3409C3-5D40-4562-8113-4B86603778B3">
+<pkgref spec="1.12" uuid="9DB9BE4C-BBE6-11E0-8B7C-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.cscope</identifier>
-    <version>1.0</version>
+    <version>15.7a-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,12 +14,13 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01cscope-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
