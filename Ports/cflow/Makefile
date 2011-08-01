@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Description=	Analyze C source files and print a call graph
 Site=		http://www.gnu.org/software/cflow/
 License=	GPL
-Title=		GNU cflow $(Version)
+Title=		GNU cflow
 Name=		cflow
 Version=	1.3
 Revision=	2
