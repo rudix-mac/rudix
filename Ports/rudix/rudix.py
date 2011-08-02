@@ -35,6 +35,7 @@ import tempfile
 import re
 from subprocess import Popen, PIPE, call
 from urllib2 import urlopen
+from platform import mac_ver
 
 __author__ = 'Ruda Moura'
 __copyright__ = 'Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>'
@@ -44,6 +45,7 @@ __version__ = '@VERSION@'
 
 PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
+OSX = mac_ver()[0]
 
 NAME_OPTS = {
     'help': '-h',
@@ -176,7 +178,15 @@ def remove_package(pkg):
         return root_required()
     pkg = normalize(pkg)
     devnull = open('/dev/null')
-    call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
+    if OSX == '10.6':
+        call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
+    else:
+        for x in get_package_content(pkg):
+            try:
+                os.unlink(x)
+            except OSError, e:
+                pass
+                #print >> sys.stderr, e
     call(['pkgutil', '--forget', pkg], stderr=devnull)
     devnull.close()
 
