@@ -1,0 +1,24 @@
+--- Makefile.in.orig	2009-07-04 02:29:28.000000000 -0300
++++ Makefile.in	2011-08-01 21:22:47.000000000 -0300
+@@ -142,9 +142,7 @@
+ 	$(INSTALL_PROG) $(CTAGS_EXEC) $@  &&  chmod 755 $@
+ 
+ $(DEST_ETAGS):
+-	- if [ -x $(DEST_CTAGS) ]; then \
+-	    cd $(bindir) && $(SLINK) $(CTAGS_EXEC) $(ETAGS_EXEC); \
+-	fi
++	- cd $(bindir) && $(SLINK) $(CTAGS_EXEC) $(ETAGS_EXEC)
+ 
+ #
+ # install the man pages
+@@ -157,9 +155,7 @@
+ 	- $(INSTALL_DATA) $(srcdir)/$(MANPAGE) $@  &&  chmod 644 $@
+ 
+ $(DEST_EMAN):
+-	- if [ -f $(DEST_CMAN) ]; then \
+-	    cd $(man1dir) && $(SLINK) $(CMAN) $(EMAN); \
+-	fi
++	- cd $(man1dir) && $(SLINK) $(CMAN) $(EMAN)
+ 
+ #
+ # install the library
