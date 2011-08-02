@@ -121,7 +121,7 @@ sanitizepmdoc:
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
-	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011' -l 'OSX-Lion' $(PkgFile)
+	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011,OSX-Lion' $(PkgFile)
 ifdef TWEET
 	twitter -erudix4mac set $(Title) $(Version) $(TWEET) http://rudix.googlecode.com/files/$(PkgFile)
 else
