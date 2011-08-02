@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="632CE831-8645-4A63-B826-F5609596DA74">
+<pkgref spec="1.12" uuid="38B394D4-BCA0-11E0-A318-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.ctags</identifier>
-    <version>5.7</version>
+    <version>5.8-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,12 +14,13 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01ctags-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

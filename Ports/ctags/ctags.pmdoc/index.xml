@@ -13,14 +13,14 @@
   </distribution>
   <description>Multilanguage implementation of ctags</description>
   <contents>
-    <choice title="ctags-install" id="ctags" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="ctags-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ctags"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">ctags-5.8/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">ctags-5.8/README</resource>
+      <resource relative="true" mod="true" type="license">ctags-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">ctags-build/README</resource>
     </locale>
   </resources>
   <flags/>
