@@ -8,7 +8,7 @@ License=	GPL
 Title=		Dtach
 Name=		dtach
 Version=	0.8
-Revision=	5
+Revision=	6
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 

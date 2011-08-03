@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="365965DC-8404-11E0-8583-0017F22C0C04">
+<pkgref spec="1.12" uuid="8E60E228-BD69-11E0-B1E4-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.dtach</identifier>
-    <version>0.8-5</version>
+    <version>0.8-6</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
