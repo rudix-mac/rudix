@@ -13,14 +13,14 @@
   </distribution>
   <description>Display dialog boxes from shell scripts</description>
   <contents>
-    <choice title="dialog-install" id="dialog" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="dialog-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.dialog"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">dialog-1.1-20110118/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">dialog-1.1-20110118/README</resource>
+      <resource relative="true" mod="true" type="license">dialog-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">dialog-build/README</resource>
     </locale>
   </resources>
   <flags/>

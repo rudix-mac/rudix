@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="1ABA24F8-38E9-4C8C-8CD9-1C6FFF3EB921">
+<pkgref spec="1.12" uuid="89EFC85E-BD68-11E0-919F-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.dialog</identifier>
+    <version>1.1-20110707-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -13,12 +14,13 @@
     <packageStore type="internal"/>
     <mod>installTo</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>parent</mod>
     <mod>version</mod>
-    <mod>identifier</mod>
   </config>
   <contents>
     <file-list>01dialog-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

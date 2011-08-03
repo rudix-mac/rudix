@@ -1,36 +1,24 @@
-# Display dialog boxes from shell scripts
-# http://invisible-island.net/dialog/dialog.html
-# GPL
+include ../../Library/Config.mk
 
-include ../../Library/Rules.mk
+# Compile without gettext
+RUDIX_ENABLE_NLS=no
 
-NAME=		dialog
-VERSION=	1.1-20110118
-REVISION=	0
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
+
+Description=	Display dialog boxes from shell scripts
+Site=		http://invisible-island.net/dialog/dialog.html
+License=	LGPL
+Title=		Dialog
+Name=		dialog
+Version=	1.1-20110707
+Revision=	0
 URL=		ftp://invisible-island.net/dialog/
-SOURCE=		$(NAME)-$(VERSION).tgz
+Source=		$(Name)-$(Version).tgz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,COPYING,README} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/samples/*.rc $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/samples/*.rc $(InstallDir)/$(DocDir)/$(Name)
+endef
