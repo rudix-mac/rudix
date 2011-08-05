@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="gettext-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/gettext/gettext-install" m="false" t="file">
+  <f n="gettext-install" o="root" g="staff" p="16877" pt="gettext-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16877">

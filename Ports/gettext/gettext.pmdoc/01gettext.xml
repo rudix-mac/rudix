@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="16BBF9F1-B3FC-46A8-9339-63371AACCA35">
+<pkgref spec="1.12" uuid="B7CA6EB3-BEF5-11E0-B388-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.gnuGettext.gettext-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.gettext</identifier>
+    <version>0.18.1.1-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -13,11 +13,14 @@
     </flags>
     <packageStore type="internal"/>
     <mod>installTo</mod>
-    <mod>parent</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01gettext-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
