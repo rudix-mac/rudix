@@ -1,0 +1,137 @@
+=== modified file 'tests/mem_functions.cc'
+--- tests/mem_functions.cc	2011-07-21 05:26:52 +0000
++++ tests/mem_functions.cc	2011-08-12 21:47:41 +0000
+@@ -456,8 +456,8 @@
+ static test_return_t set_test(memcached_st *memc)
+ {
+   memcached_return_t rc= memcached_set(memc,
+-                                       memcached_literal_param("foo"),
+-                                       memcached_literal_param("when we sanitize"),
++                                       test_literal_param("foo"),
++                                       test_literal_param("when we sanitize"),
+                                        time_t(0), (uint32_t)0);
+   test_true_got(rc == MEMCACHED_SUCCESS || rc == MEMCACHED_BUFFERED, memcached_strerror(NULL, rc));
+ 
+@@ -3441,6 +3441,11 @@
+     memcached_return_t rc;
+     while ((results= memcached_fetch_result(memc, &results_obj, &rc)))
+     {
++      if (rc == MEMCACHED_IN_PROGRESS)
++      {
++        continue;
++      }
++
+       test_true(results);
+       test_compare(MEMCACHED_SUCCESS, rc);
+     }
+@@ -3629,7 +3634,7 @@
+     memcached_behavior_set(memc, MEMCACHED_BEHAVIOR_NO_BLOCK, 0);
+     test_compare(MEMCACHED_SUCCESS,
+                  memcached_behavior_set(memc, MEMCACHED_BEHAVIOR_BINARY_PROTOCOL, 1));
+-    test_compare(1UL, memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_BINARY_PROTOCOL));
++    test_compare(uint64_t(1), memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_BINARY_PROTOCOL));
+   }
+   else
+   {
+@@ -4396,7 +4401,7 @@
+   test_compare(MEMCACHED_SUCCESS,
+                memcached_set(mmc[0], key, keylen, "0", 1, 0, 0));
+ 
+-  for (size_t x= 0; x < POOL_SIZE; ++x)
++  for (uint64_t x= 0; x < POOL_SIZE; ++x)
+   {
+     uint64_t number_value;
+     test_compare(MEMCACHED_SUCCESS,
+@@ -4951,7 +4956,7 @@
+   test_compare(MEMCACHED_SUCCESS,
+                memcached_behavior_set(memc, MEMCACHED_BEHAVIOR_KETAMA_WEIGHTED, 1));
+ 
+-  test_compare(1UL, memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_KETAMA_WEIGHTED));
++  test_compare(uint64_t(1), memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_KETAMA_WEIGHTED));
+ 
+   test_compare(MEMCACHED_SUCCESS, memcached_behavior_set_distribution(memc, MEMCACHED_DISTRIBUTION_CONSISTENT_KETAMA));
+   test_compare(MEMCACHED_DISTRIBUTION_CONSISTENT_KETAMA, memcached_behavior_get_distribution(memc));
+@@ -5818,7 +5823,7 @@
+   test_false(value);
+   test_zero(length);
+ 
+-  test_compare_got(MEMCACHED_TIMEOUT, rc, memcached_strerror(memc, rc));
++  test_compare_got(MEMCACHED_TIMEOUT, rc, memcached_last_error_message(memc));
+ 
+   memcached_free(memc);
+ 
+
+=== modified file 'tests/namespace.cc'
+--- tests/namespace.cc	2011-07-18 17:48:40 +0000
++++ tests/namespace.cc	2011-08-12 21:47:41 +0000
+@@ -58,13 +58,13 @@
+                memcached_increment(memc,
+                                    test_literal_param("number"),
+                                    1, &new_number));
+-  test_compare(1UL, new_number);
++  test_compare(uint64_t(1), new_number);
+ 
+   test_compare(MEMCACHED_SUCCESS, 
+                memcached_increment(memc,
+                                    test_literal_param("number"),
+                                    1, &new_number));
+-  test_compare(2UL, new_number);
++  test_compare(uint64_t(2), new_number);
+ 
+   memcached_st *clone= memcached_clone(NULL, memc);
+ 
+@@ -94,13 +94,13 @@
+                memcached_increment(clone,
+                                    test_literal_param("number"),
+                                    1, &new_number));
+-  test_compare(11UL, new_number);
++  test_compare(uint64_t(11), new_number);
+ 
+   test_compare(MEMCACHED_SUCCESS, 
+                memcached_increment(memc,
+                                    test_literal_param("number"),
+                                    1, &new_number));
+-  test_compare(3UL, new_number);
++  test_compare(uint64_t(3), new_number);
+ 
+   memcached_free(clone);
+ 
+
+=== modified file 'tests/plus.cpp'
+--- tests/plus.cpp	2011-07-18 17:48:40 +0000
++++ tests/plus.cpp	2011-08-12 21:47:41 +0000
+@@ -128,13 +128,13 @@
+   test_compare(int_inc_value, int_ret_value);
+ 
+   test_true(mcach.increment(key, 1, &int_ret_value));
+-  test_compare(2UL, int_ret_value);
++  test_compare(uint64_t(2), int_ret_value);
+ 
+   test_true(mcach.increment(key, 1, &int_ret_value));
+-  test_compare(3UL, int_ret_value);
++  test_compare(uint64_t(3), int_ret_value);
+ 
+   test_true(mcach.increment(key, 5, &int_ret_value));
+-  test_compare(8UL, int_ret_value);
++  test_compare(uint64_t(8), int_ret_value);
+ 
+   return TEST_SUCCESS;
+ }
+
+=== modified file 'tests/replication.cc'
+--- tests/replication.cc	2011-07-18 17:54:02 +0000
++++ tests/replication.cc	2011-08-12 21:47:41 +0000
+@@ -249,10 +249,10 @@
+ 
+   // Make one copy
+   test_compare(MEMCACHED_SUCCESS, memcached_behavior_set(memc_replicated, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS, 1UL));
+-  test_compare(1UL, memcached_behavior_get(memc_replicated, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS));
++  test_compare(uint64_t(1), memcached_behavior_get(memc_replicated, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS));
+ 
+   test_compare(MEMCACHED_SUCCESS, memcached_behavior_set(memc_not_replicate, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS, 0UL));
+-  test_compare(0UL, memcached_behavior_get(memc_not_replicate, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS));
++  test_compare(uint64_t(0), memcached_behavior_get(memc_not_replicate, MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS));
+ 
+   for (size_t x= 0; x < test_array_length(keys); ++x)
+   {
+

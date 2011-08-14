@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>libMemcached was designed to provide the greatest number of options to use Memcached</description>
+  <description>libMemcached is an open source C/C++ client library and tools for the memcached server</description>
   <contents>
     <choice title="libmemcached-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libmemcached"/>
