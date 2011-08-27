@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="3A8CF450-DC14-4425-B477-FCD217A94227">
+<pkgref spec="1.12" uuid="F16A2563-D0D0-11E0-A857-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.lua</identifier>
+    <version>5.1.4-6</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -19,6 +20,7 @@
   </config>
   <contents>
     <file-list>01lua-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

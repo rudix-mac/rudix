@@ -1,49 +1,58 @@
-# Powerful, light-weight programming language
-# http://www.lua.org/
-# MIT
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		Lua $(VERSION)
-NAME=		lua
-VERSION=	5.1.4
-REVISION=	5
+Description=	Powerful, light-weight programming language
+Site=		http://www.lua.org/
+Lincese=	MIT
+Title=		Lua $(Version)
+Name=		lua
+Version=	5.1.4
+Revision=	6
 URL=		http://www.lua.org/ftp/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYRIGHT
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYRIGHT
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR)/etc < $(PORTDIR)/lua.pc.patch
-	patch -d $(BUILDDIR)/src < $(PORTDIR)/patch-lua-5.1.4-2.patch
-	touch prep
+GnuMakeExtra += macosx
+GnuMakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
+GnuMakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
 
+define install_post_hook
+install -d $(PortDir)/$(InstallDir)$(LibDir)/pkgconfig
+install -m 644 $(SourceDir)/etc/lua.pc $(PortDir)/$(InstallDir)$(LibDir)/pkgconfig/lua.pc
+install -m 644 $(SourceDir)/doc/* $(PortDir)/$(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define test_post_hook
+otool -L $(InstallDir)$(BinDir)/lua | grep libedit
+endef
+
+ifdef FOO
 build: prep
-	cd $(BUILDDIR) ; \
+	cd $(SourceDir) ; \
 	$(make)	CFLAGS="$(CFLAGS) -DLUA_USE_MACOSX -DLUA_USE_READLINE" \
 		MYLDFLAGS="$(LDFLAGS)" macosx
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; \
-	make INSTALL_TOP=$(INSTALLDIR)/usr/local INSTALL_MAN=$(INSTALLDIR)/usr/local/share/man/man1 install
-	install -d $(INSTALLDIR)/usr/local/lib/pkgconfig
-	install -m 644 $(BUILDDIR)/etc/lua.pc $(INSTALLDIR)/usr/local/lib/pkgconfig
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,HISTORY,INSTALL,README} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
-	rm -f $(INSTALLDOCDIR)/*.1
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip -x $(INSTALLDIR)/usr/local/lib/*.a
+	cd $(SourceDir) ; \
+	make INSTALL_TOP=$(InstallDir)$(Prefix) INSTALL_MAN=$(INSTALLDIR)/usr/local/share/man/man1 install
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{COPYRIGHT,HISTORY,INSTALL,ReadMeFile} $(InstallDir)/$(DocDir)/$(Name)
+
+	rm -f $(InstallDir)/$(DocDir)/$(Name)/*.1
+	strip $(InstallDir)$(BinDir)/*
+	strip -x $(InstallDir)$(LibDir)/*.a
 	touch install
 
 test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
+	for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/*.a) ; do \
+	for x in $(wildcard $(InstallDir)$(LibDir)/*.a) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	otool -L $(INSTALLDIR)/usr/local/bin/lua | grep libedit
-	cd $(BUILDDIR) ; make test
+
+	cd $(SourceDir) ; make test
 	touch test
+endif
