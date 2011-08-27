@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D5FC95C6-2C89-483F-8A48-CC6B3B874760">
+<pkgref spec="1.12" uuid="F2B71494-D0C0-11E0-8336-D49A200B3D20">
   <config>
-    <identifier>org.rudix.gawk.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.gawk</identifier>
+    <version>4.0.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,13 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>identifier</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01gawk-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

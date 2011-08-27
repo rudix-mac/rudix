@@ -1,14 +1,18 @@
+ifeq ($(RUDIX_ENABLE_NLS),yes)
+BuildRequires += /usr/local/lib/libintl.la
+endif
+
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	GNU AWK
+Description=	Programming language that makes it possible to handle simple data-reformatting
 Site=		http://www.gnu.org/software/gawk/
 License=	GPL
 Title=		Gawk
 Name=		gawk
-Version=	3.1.8
-Revision=	1
+Version=	4.0.0
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/gawk/
 Source=		$(Name)-$(Version).tar.gz
 

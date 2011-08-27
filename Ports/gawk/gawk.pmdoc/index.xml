@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GNU AWK</title>
+    <title>Gawk</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,16 +11,16 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU awk</description>
+  <description>Programming language that makes it possible to handle simple data-reformatting</description>
   <contents>
     <choice title="gawk-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.gawk.pkg"/>
+      <pkgref id="org.rudix.pkg.gawk"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">gawk-3.1.8/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">gawk-3.1.8/README</resource>
+      <resource relative="true" mod="true" type="license">gawk-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">gawk-build/README</resource>
     </locale>
   </resources>
   <flags/>
