@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="429FB95C-D0D2-11E0-935A-D49A200B3D20">
+<pkgref spec="1.12" uuid="71898E5E-D0D3-11E0-9855-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.lua</identifier>
     <version>5.1.4-6</version>
