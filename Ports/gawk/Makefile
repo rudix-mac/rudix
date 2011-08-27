@@ -12,7 +12,7 @@ License=	GPL
 Title=		Gawk
 Name=		gawk
 Version=	4.0.0
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/gawk/
 Source=		$(Name)-$(Version).tar.gz
 
