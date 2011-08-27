@@ -6,13 +6,13 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Finds and then operates on files
+Description=	The GNU Find Utilities are the basic directory searching utilities
 Site=		http://www.gnu.org/software/findutils/
 License=	GPL
 Title=		GNU Find Utilities
 Name=		findutils
 Version=	4.4.2
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/findutils/
 Source=		$(Name)-$(Version).tar.gz
 
