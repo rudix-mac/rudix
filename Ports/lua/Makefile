@@ -5,7 +5,7 @@ include ../../Library/UnixFormula.mk
 Description=	Powerful, light-weight programming language
 Site=		http://www.lua.org/
 Lincese=	MIT
-Title=		Lua $(Version)
+Title=		Lua
 Name=		lua
 Version=	5.1.4
 Revision=	6
@@ -15,7 +15,7 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-GnuMakeExtra += macosx
+GnuMakeExtra += macosx MYLDFLAGS="$(LdFlags)"
 GnuMakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
 GnuMakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
 
