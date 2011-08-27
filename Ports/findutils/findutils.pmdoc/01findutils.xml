@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="3EE257F8-D0B3-11E0-93D6-D49A200B3D20">
+<pkgref spec="1.12" uuid="77B7F2CE-D0BB-11E0-838B-0017F22C0C04">
   <config>
     <identifier>org.rudix.pkg.findutils</identifier>
     <version>4.4.2-2</version>
