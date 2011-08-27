@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110731
+BuildSystem = 20110827
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -27,6 +27,10 @@ OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)
 CxxFlags = $(CFlags)
 LdFlags = $(ArchFlags)
+
+ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
+MakeFlags = -j $(NumCPU)
+endif
 
 #
 # Install dir options
@@ -93,6 +97,9 @@ pkg: test
 	@$(call info_color,Finished)
 	@touch pkg
 
+buildclean:
+	cd $(BuildDir) ; $(MAKE) clean
+
 installclean:
 	rm -rf install $(InstallDir)
 
@@ -136,7 +143,7 @@ wiki:
 		../../Library/mkwikipage.py
 	@$(call info_color,Finished)
 
-.PHONY: installclean pkgclean clean distclean realdistclean sanitizepmdoc upload wiki
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc upload wiki
 
 #
 # Functions
@@ -207,7 +214,7 @@ define gnu_configure
 endef
 
 define gnu_make
-make -j $(NumCPU)
+$(MAKE) $(MakeFlags)
 endef
 
 define verify_universal
