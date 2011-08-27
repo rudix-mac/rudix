@@ -1,13 +1,21 @@
 include ../../Library/Config.mk
-RUDIX_UNIVERSAL=no
-ArchFlags=
+
+# Don't build universal, don't even set arch
+RUDIX_UNIVERSAL=
+
 include ../../Library/Rudix.mk
+
+# Don't set compile flags
+CFlags=
+CxxFlags=
+LdFlags=
+
 include ../../Library/GNUFormula.mk
 
-Description=	The GNU Multiple Precision Arithmetic Library
+Description=	GNU MP is a free library for arbitrary precision arithmetic
 Site=		http://gmplib.org/
 License=	GPL
-Title=		GNU MP $(Version)
+Title=		GMP
 Name=		gmp
 Version=	5.0.2
 Revision=	0
@@ -19,16 +27,3 @@ LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --enable-fat
 GnuConfigureExtra += --enable-cxx
-
-ifdef FOO
-install: build
-	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
-	rm -f $(InstallDir)$(Prefix)/share/info/dir
-	install -d $(InstallDir)/$(DocDir)/$(Name)
-	install -m 644 $(SourceDir)/{AUTHORS,ChangeLog,NEWS} $(InstallDir)/$(DocDir)/$(Name)
-ifndef STATIC_ONLY
-	strip -x $(InstallDir)$(LibDir)/*.dylib
-endif
-	strip -x $(InstallDir)$(LibDir)/*.a
-	touch install
-endif

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4A935725-2E12-4C41-A2EE-CB7BAB472A77">
+<pkgref spec="1.12" uuid="3B47FF63-D0F9-11E0-BDDA-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.gmp</identifier>
+    <version>5.0.2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -19,6 +20,7 @@
   </config>
   <contents>
     <file-list>01gmp-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
