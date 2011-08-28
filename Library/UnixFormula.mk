@@ -3,13 +3,13 @@
 # Authors: Ruda Moura, Leonardo Santagada
 
 define build_inner_hook
-cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra) \
+cd $(BuildDir) ; $(make) $(MakeExtra) \
 	CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 endef
 
 define install_inner_hook
-cd $(BuildDir) ; $(gnu_make) \
-	DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra) install
+cd $(BuildDir) ; $(make) \
+	DESTDIR="$(PortDir)/$(InstallDir)" $(MakeInstallExtra) install
 $(install_base_documentation)
 endef
 

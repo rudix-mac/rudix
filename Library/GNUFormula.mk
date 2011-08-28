@@ -22,7 +22,7 @@ for x in $(wildcard \
 	$(BuildDir)/NEWS* \
 	$(BuildDir)/LICENSE* \
 	$(BuildDir)/ChangeLog*) ; do \
-	install -m 644 $$x $(InstallDir)/$(DocDir)/$(Name) ; \
+	install -m 644 $$x $(PortDir)/$(InstallDir)/$(DocDir)/$(Name) ; \
 done
 rm -f $(InstallDir)/$(InfoDir)/dir
 rm -f $(InstallDir)/$(LibDir)/charset.alias
@@ -35,17 +35,17 @@ cd $(BuildDir) ; \
 env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
 $(gnu_configure)
 $(call info_color,Done)
-cd $(BuildDir) ; $(gnu_make) $(GnuMakeExtra)
+cd $(BuildDir) ; $(make) $(MakeExtra)
 endef
 
 define install_inner_hook
 cd $(BuildDir) ; \
-$(gnu_make) install DESTDIR="$(PortDir)/$(InstallDir)" $(GnuMakeInstallExtra)
+$(make) install DESTDIR="$(PortDir)/$(InstallDir)" $(MakeInstallExtra)
 $(install_base_documentation)
 $(install_gnu_documentation)
 endef
 
 define test_inner_hook
 $(call test_universal)
-cd $(BuildDir) ; $(gnu_make) check || $(call error_color,One or more tests failed)
+cd $(BuildDir) ; $(make) check || $(call error_color,One or more tests failed)
 endef
