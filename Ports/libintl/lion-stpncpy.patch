@@ -1,0 +1,11 @@
+--- gettext-tools/gnulib-lib/stpncpy.c.orig	2010-05-24 06:42:47.000000000 -0300
++++ gettext-tools/gnulib-lib/stpncpy.c	2011-08-04 19:59:36.000000000 -0300
+@@ -25,7 +25,7 @@
+ #include <string.h>
+ 
+ #ifndef weak_alias
+-# define __stpncpy stpncpy
++# define __stpncpy gnu_stpncpy
+ #endif
+ 
+ /* Copy no more than N bytes of SRC to DST, returning a pointer past the

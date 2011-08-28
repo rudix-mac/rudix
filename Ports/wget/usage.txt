@@ -1,3 +1,0 @@
-$ wget http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
-$ wget -h
-$ man wget

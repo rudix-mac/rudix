@@ -2,8 +2,8 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>Guile</title>
-    <organization>org.rudix.pkg</organization>
-    <userSees ui="easy"/>
+    <organization>org.rudix</organization>
+    <userSees ui="both"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
   </properties>
@@ -11,20 +11,24 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU's Ubiquitous Intelligent Language for Extension</description>
+  <description>GNUs Ubiquitous Intelligent Language for Extension</description>
   <contents>
     <choice title="guile-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.guile"/>
     </choice>
+    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libintl"/>
+    </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">guile-1.8.7/COPYING.LESSER</resource>
-      <resource relative="true" mod="true" type="readme">guile-1.8.7/README</resource>
+      <resource relative="true" mod="true" type="license">guile-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">guile-build/README</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01guile.xml</item>
+  <item type="file">02libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

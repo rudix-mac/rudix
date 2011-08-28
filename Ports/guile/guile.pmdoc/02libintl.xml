@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4679054E-9ABB-11E0-B55C-0017F22C0C04">
+<pkgref spec="1.12" uuid="F362E65B-0952-4433-9A73-43E75C2BA840">
   <config>
-    <identifier>org.rudix.pkg.wget</identifier>
-    <version>1.12-2</version>
+    <identifier>org.rudix.pkg.libintl</identifier>
+    <version>0.18.1.1-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">wget-install</installFrom>
+    <installFrom relative="true" mod="true">../libintl/libintl-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installFrom.path</mod>
     <mod>parent</mod>
+    <mod>installTo</mod>
     <mod>version</mod>
   </config>
   <contents>
-    <file-list>01wget-contents.xml</file-list>
+    <file-list>02libintl-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
