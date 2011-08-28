@@ -99,6 +99,7 @@ pkg: test
 
 buildclean:
 	cd $(BuildDir) ; $(MAKE) clean
+	rm -f build
 
 installclean:
 	rm -rf install $(InstallDir)
