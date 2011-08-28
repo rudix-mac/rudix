@@ -54,7 +54,7 @@ retrieve:
 	@$(call retrieve_pre_hook)
 	@$(call retrieve_inner_hook)
 	@$(call retrieve_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch retrieve
 
 prep: retrieve
@@ -62,7 +62,7 @@ prep: retrieve
 	@$(call prep_pre_hook)
 	@$(call prep_inner_hook)
 	@$(call prep_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch prep
 
 build: prep $(BuildRequires)
@@ -70,7 +70,7 @@ build: prep $(BuildRequires)
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
 	@$(call build_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch build
 
 install: build
@@ -78,7 +78,7 @@ install: build
 	@$(call install_pre_hook)
 	@$(call install_inner_hook)
 	@$(call install_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch install
 
 test: install
@@ -86,7 +86,7 @@ test: install
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
 	@$(call test_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch test
 
 pkg: test
@@ -94,7 +94,7 @@ pkg: test
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
 	@$(call pkg_post_hook)
-	@$(call info_color,Finished)
+	@$(call info_color,Done)
 	@touch pkg
 
 buildclean:
@@ -126,6 +126,12 @@ sanitizepmdoc:
 	@$(call warning_color,check the snippet above)
 	@$(call info_color,Finished)
 
+sanitize:
+	@$(call info_color,Sanitizing pmdoc)
+	for x in $(Name).pmdoc/*.xml ; do \
+		xmllint --format --output $$x $$x ; done
+	@$(call info_color,Finished) 
+
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
@@ -144,7 +150,7 @@ wiki:
 		../../Library/mkwikipage.py
 	@$(call info_color,Finished)
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc upload wiki
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc sanitize upload wiki
 
 #
 # Functions
@@ -200,7 +206,7 @@ $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
 endef
 
-define simple_configure
+define configure
 ./configure $(ConfigureExtra) \
 	--prefix=$(Prefix)
 endef
@@ -214,7 +220,7 @@ define gnu_configure
 	$(if $(RUDIX_SAVE_CONFIGURE_CACHE),--cache-file=$(PortDir)/config.cache)
 endef
 
-define gnu_make
+define make
 $(MAKE) $(MakeFlags)
 endef
 
@@ -274,7 +280,6 @@ $(apply_patches)
 endef
 
 define pkg_inner_hook
-$(create_pmdoc)
 $(strip_macho)
 $(create_pkg)
 endef
