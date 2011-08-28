@@ -16,7 +16,7 @@ PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 #
 # Build flags options
 #
-Arch = $(shell arch)
+Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 ifeq ($(RUDIX_UNIVERSAL),yes)
 ArchFlags = -arch i386 -arch x86_64
