@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="8663CE57-5FAC-4CCF-AA93-CCDDDBC5223F">
+<pkgref spec="1.12" uuid="A463671E-D123-11E0-A363-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.guile</identifier>
-    <version>1.0</version>
+    <version>1.8.7-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,13 +12,15 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>installTo</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01guile-contents.xml</file-list>
+    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
