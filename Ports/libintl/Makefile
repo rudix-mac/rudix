@@ -26,5 +26,12 @@ GnuConfigureExtra += --disable-libasprintf
 GnuConfigureExtra += --with-included-glib
 
 define install_post_hook
-rm -rf $(InstallDir)$(DocDir)/gettext/examples
+rm -rf $(InstallDir)/$(BinDir)
+rm -f $(InstallDir)/$(LibDir)/libintl.la
+rm -rf $(InstallDir)/$(IncludeDir)
+rm -rf $(InstallDir)/$(ManDir)
+rm -rf $(InstallDir)/$(DocDir)/gettext
+rm -rf $(InstallDir)/$(DataDir)/locale
+rm -rf $(InstallDir)/$(DataDir)/gettext
+rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
