@@ -19,6 +19,9 @@
     <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libintl"/>
     </choice>
+    <choice title="libgmp-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libgmp"/>
+    </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
@@ -28,7 +31,8 @@
   </resources>
   <flags/>
   <item type="file">01guile.xml</item>
-  <item type="file">02libintl.xml</item>
+  <item type="file">01libintl.xml</item>
+  <item type="file">01libgmp.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="F362E65B-0952-4433-9A73-43E75C2BA840">
+<pkgref spec="1.12" uuid="05F699FD-D1E6-11E0-84A0-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.libintl</identifier>
-    <version>0.18.1.1-3</version>
+    <identifier>org.rudix.pkg.libgmp</identifier>
+    <version>5.0.2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">../libintl/libintl-install</installFrom>
+    <installFrom relative="true" mod="true">../libgmp/libgmp-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>installTo</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
-    <file-list>02libintl-contents.xml</file-list>
+    <file-list>01libgmp-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
