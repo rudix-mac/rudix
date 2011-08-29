@@ -241,7 +241,7 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do \
 	$(call verify_universal,$$x) ; done
-@$(call info_color,Done)
+@$(call info_color,Finished)
 endef
 endif
 
@@ -262,7 +262,7 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
-$(call info_color,Done)
+$(call info_color,Finished)
 endef
 endif
 
