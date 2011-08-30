@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="105C4E38-D2B2-11E0-8AD9-D49A200B3D20">
+<pkgref spec="1.12" uuid="EC17080A-D2B4-11E0-93DD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.mercurial</identifier>
     <version>1.9.2-0</version>

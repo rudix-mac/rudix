@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mercurial-install" o="root" g="staff" p="16877" pt="mercurial-install" m="false" t="file">
+  <f n="mercurial-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/mercurial/mercurial-install" m="false" t="file">
     <f n="Library" o="root" g="wheel" p="16877">
       <f n="Python" o="root" g="wheel" p="16877">
         <f n="2.7" o="root" g="wheel" p="16877">
@@ -301,1122 +301,1233 @@
                 </f>
               </f>
             </f>
-            <f n="mercurial" o="ruda" g="admin" p="16893">
-              <f n="__init__.py" o="ruda" g="admin" p="33204">
+            <f n="mercurial" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="__init__.pyc" o="ruda" g="admin" p="33204">
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="__version__.py" o="ruda" g="admin" p="33204">
+              <f n="__version__.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="__version__.pyc" o="ruda" g="admin" p="33204">
+              <f n="__version__.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ancestor.py" o="ruda" g="admin" p="33204">
+              <f n="ancestor.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ancestor.pyc" o="ruda" g="admin" p="33204">
+              <f n="ancestor.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="archival.py" o="ruda" g="admin" p="33204">
+              <f n="archival.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="archival.pyc" o="ruda" g="admin" p="33204">
+              <f n="archival.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="base85.so" o="ruda" g="admin" p="33277">
+              <f n="base85.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="bdiff.so" o="ruda" g="admin" p="33277">
+              <f n="bdiff.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="bookmarks.py" o="ruda" g="admin" p="33204">
+              <f n="bookmarks.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="bookmarks.pyc" o="ruda" g="admin" p="33204">
+              <f n="bookmarks.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="bundlerepo.py" o="ruda" g="admin" p="33204">
+              <f n="bundlerepo.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="bundlerepo.pyc" o="ruda" g="admin" p="33204">
+              <f n="bundlerepo.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="byterange.py" o="ruda" g="admin" p="33204">
+              <f n="byterange.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="byterange.pyc" o="ruda" g="admin" p="33204">
+              <f n="byterange.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="changegroup.py" o="ruda" g="admin" p="33204">
+              <f n="changegroup.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="changegroup.pyc" o="ruda" g="admin" p="33204">
+              <f n="changegroup.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="changelog.py" o="ruda" g="admin" p="33204">
+              <f n="changelog.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="changelog.pyc" o="ruda" g="admin" p="33204">
+              <f n="changelog.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="cmdutil.py" o="ruda" g="admin" p="33204">
+              <f n="cmdutil.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="cmdutil.pyc" o="ruda" g="admin" p="33204">
+              <f n="cmdutil.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="commands.py" o="ruda" g="admin" p="33204">
+              <f n="commands.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="commands.pyc" o="ruda" g="admin" p="33204">
+              <f n="commands.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="commandserver.py" o="ruda" g="admin" p="33204">
+              <f n="commandserver.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="commandserver.pyc" o="ruda" g="admin" p="33204">
+              <f n="commandserver.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="config.py" o="ruda" g="admin" p="33204">
+              <f n="config.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="config.pyc" o="ruda" g="admin" p="33204">
+              <f n="config.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="context.py" o="ruda" g="admin" p="33204">
+              <f n="context.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="context.pyc" o="ruda" g="admin" p="33204">
+              <f n="context.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="copies.py" o="ruda" g="admin" p="33204">
+              <f n="copies.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="copies.pyc" o="ruda" g="admin" p="33204">
+              <f n="copies.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dagparser.py" o="ruda" g="admin" p="33204">
+              <f n="dagparser.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dagparser.pyc" o="ruda" g="admin" p="33204">
+              <f n="dagparser.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dagutil.py" o="ruda" g="admin" p="33204">
+              <f n="dagutil.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dagutil.pyc" o="ruda" g="admin" p="33204">
+              <f n="dagutil.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="demandimport.py" o="ruda" g="admin" p="33204">
+              <f n="demandimport.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="demandimport.pyc" o="ruda" g="admin" p="33204">
+              <f n="demandimport.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="diffhelpers.so" o="ruda" g="admin" p="33277">
+              <f n="diffhelpers.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="dirstate.py" o="ruda" g="admin" p="33204">
+              <f n="dirstate.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dirstate.pyc" o="ruda" g="admin" p="33204">
+              <f n="dirstate.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="discovery.py" o="ruda" g="admin" p="33204">
+              <f n="discovery.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="discovery.pyc" o="ruda" g="admin" p="33204">
+              <f n="discovery.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dispatch.py" o="ruda" g="admin" p="33204">
+              <f n="dispatch.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="dispatch.pyc" o="ruda" g="admin" p="33204">
+              <f n="dispatch.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="encoding.py" o="ruda" g="admin" p="33204">
+              <f n="encoding.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="encoding.pyc" o="ruda" g="admin" p="33204">
+              <f n="encoding.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="error.py" o="ruda" g="admin" p="33204">
+              <f n="error.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="error.pyc" o="ruda" g="admin" p="33204">
+              <f n="error.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="extensions.py" o="ruda" g="admin" p="33204">
+              <f n="extensions.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="extensions.pyc" o="ruda" g="admin" p="33204">
+              <f n="extensions.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fancyopts.py" o="ruda" g="admin" p="33204">
+              <f n="fancyopts.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fancyopts.pyc" o="ruda" g="admin" p="33204">
+              <f n="fancyopts.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="filelog.py" o="ruda" g="admin" p="33204">
+              <f n="filelog.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="filelog.pyc" o="ruda" g="admin" p="33204">
+              <f n="filelog.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="filemerge.py" o="ruda" g="admin" p="33204">
+              <f n="filemerge.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="filemerge.pyc" o="ruda" g="admin" p="33204">
+              <f n="filemerge.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fileset.py" o="ruda" g="admin" p="33204">
+              <f n="fileset.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fileset.pyc" o="ruda" g="admin" p="33204">
+              <f n="fileset.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="graphmod.py" o="ruda" g="admin" p="33204">
+              <f n="graphmod.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="graphmod.pyc" o="ruda" g="admin" p="33204">
+              <f n="graphmod.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="hbisect.py" o="ruda" g="admin" p="33204">
+              <f n="hbisect.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="hbisect.pyc" o="ruda" g="admin" p="33204">
+              <f n="hbisect.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="help" o="ruda" g="admin" p="16893">
-                <f n="config.txt" o="ruda" g="admin" p="33204">
+              <f n="help" o="root" g="wheel" p="16893">
+                <f n="config.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="dates.txt" o="ruda" g="admin" p="33204">
+                <f n="dates.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="diffs.txt" o="ruda" g="admin" p="33204">
+                <f n="diffs.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="environment.txt" o="ruda" g="admin" p="33204">
+                <f n="environment.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="extensions.txt" o="ruda" g="admin" p="33204">
+                <f n="extensions.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="filesets.txt" o="ruda" g="admin" p="33204">
+                <f n="filesets.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="glossary.txt" o="ruda" g="admin" p="33204">
+                <f n="glossary.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="hgignore.txt" o="ruda" g="admin" p="33204">
+                <f n="hgignore.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="hgweb.txt" o="ruda" g="admin" p="33204">
+                <f n="hgweb.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="merge-tools.txt" o="ruda" g="admin" p="33204">
+                <f n="merge-tools.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="multirevs.txt" o="ruda" g="admin" p="33204">
+                <f n="multirevs.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="patterns.txt" o="ruda" g="admin" p="33204">
+                <f n="patterns.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="revisions.txt" o="ruda" g="admin" p="33204">
+                <f n="revisions.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="revsets.txt" o="ruda" g="admin" p="33204">
+                <f n="revsets.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="subrepos.txt" o="ruda" g="admin" p="33204">
+                <f n="subrepos.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="templates.txt" o="ruda" g="admin" p="33204">
+                <f n="templates.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="urls.txt" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-              <f n="help.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="help.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="hg.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="hg.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="hgweb" o="ruda" g="admin" p="16893">
-                <f n="__init__.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="__init__.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="common.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="common.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="hgweb_mod.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="hgweb_mod.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="hgwebdir_mod.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="hgwebdir_mod.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="protocol.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="protocol.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="request.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="request.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="server.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="server.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="webcommands.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="webcommands.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="webutil.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="webutil.pyc" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="wsgicgi.py" o="ruda" g="admin" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="wsgicgi.pyc" o="ruda" g="admin" p="33204">
+                <f n="urls.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
               </f>
-              <f n="hook.py" o="ruda" g="admin" p="33204">
+              <f n="help.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="hook.pyc" o="ruda" g="admin" p="33204">
+              <f n="help.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="httpclient" o="ruda" g="admin" p="16893">
-                <f n="__init__.py" o="ruda" g="admin" p="33204">
+              <f n="hg.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hg.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hgweb" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="__init__.pyc" o="ruda" g="admin" p="33204">
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="socketutil.py" o="ruda" g="admin" p="33204">
+                <f n="common.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="socketutil.pyc" o="ruda" g="admin" p="33204">
+                <f n="common.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="tests" o="ruda" g="admin" p="16893">
-                  <f n="__init__.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="__init__.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="simple_http_test.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="simple_http_test.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_bogus_responses.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_bogus_responses.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_chunked_transfer.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_chunked_transfer.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_proxy_support.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_proxy_support.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_ssl.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_ssl.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="util.py" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="util.pyc" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                </f>
-              </f>
-              <f n="httpconnection.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="httpconnection.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="httprepo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="httprepo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="i18n.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="i18n.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="ignore.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="ignore.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="keepalive.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="keepalive.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="localrepo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="localrepo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="lock.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="lock.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="lsprof.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="lsprof.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="lsprofcalltree.py" o="ruda" g="admin" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="lsprofcalltree.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mail.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mail.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="manifest.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="manifest.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="match.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="match.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mdiff.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mdiff.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="merge.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="merge.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="minirst.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="minirst.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mpatch.so" o="ruda" g="admin" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="node.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="node.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="osutil.so" o="ruda" g="admin" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="parser.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="parser.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="parsers.so" o="ruda" g="admin" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="patch.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="patch.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="posix.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="posix.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="pushkey.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="pushkey.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="py3kcompat.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="py3kcompat.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="repair.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="repair.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="repo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="repo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="revlog.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="revlog.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="revset.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="revset.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="scmutil.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="scmutil.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="setdiscovery.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="setdiscovery.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="similar.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="similar.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="simplemerge.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="simplemerge.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sshrepo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sshrepo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sshserver.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sshserver.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sslutil.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="sslutil.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="statichttprepo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="statichttprepo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="store.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="store.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="strutil.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="strutil.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="subrepo.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="subrepo.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="tags.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="tags.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templatefilters.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templatefilters.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templatekw.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templatekw.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templater.py" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templater.pyc" o="ruda" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="templates" o="ruda" g="admin" p="16893">
-                <f n="atom" o="ruda" g="admin" p="16893">
-                  <f n="bookmarkentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="bookmarks.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tagentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                </f>
-                <f n="coal" o="ruda" g="admin" p="16893">
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                </f>
-                <f n="gitweb" o="ruda" g="admin" p="16893">
-                  <f n="bookmarks.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="branches.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changeset.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="fileannotate.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filediff.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filerevision.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="footer.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="graph.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="help.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="helptopics.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="index.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="manifest.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="notfound.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="search.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="summary.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                </f>
-                <f n="map-cmdline.changelog" o="ruda" g="admin" p="33204">
+                <f n="hgweb_mod.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="map-cmdline.compact" o="ruda" g="admin" p="33204">
+                <f n="hgweb_mod.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="map-cmdline.default" o="ruda" g="admin" p="33204">
+                <f n="hgwebdir_mod.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="map-cmdline.xml" o="ruda" g="admin" p="33204">
+                <f n="hgwebdir_mod.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="monoblue" o="ruda" g="admin" p="16893">
-                  <f n="bookmarks.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="branches.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changeset.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="fileannotate.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filediff.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filerevision.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="footer.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="graph.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="help.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="helptopics.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="index.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="manifest.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="notfound.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="search.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="summary.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="protocol.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="paper" o="ruda" g="admin" p="16893">
-                  <f n="bookmarks.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="branches.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changeset.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="diffstat.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="fileannotate.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filediff.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filerevision.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="footer.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="graph.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="help.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="helptopics.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="index.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="manifest.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="notfound.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="search.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="protocol.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="raw" o="ruda" g="admin" p="16893">
-                  <f n="changeset.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="fileannotate.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filediff.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="index.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="manifest.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="notfound.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="request.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="rss" o="ruda" g="admin" p="16893">
-                  <f n="bookmarkentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="bookmarks.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tagentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="request.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="spartan" o="ruda" g="admin" p="16893">
-                  <f n="branches.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="changeset.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="error.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="fileannotate.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filediff.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filelogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="filerevision.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="footer.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="graph.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="header.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="index.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="manifest.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="map" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="notfound.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="search.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlog.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="shortlogentry.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="tags.tmpl" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="server.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="static" o="ruda" g="admin" p="16893">
-                  <f n="background.png" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="coal-file.png" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="coal-folder.png" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="excanvas.js" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="hgicon.png" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="hglogo.png" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="mercurial.js" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="style-coal.css" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="style-gitweb.css" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="style-monoblue.css" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="style-paper.css" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="style.css" o="ruda" g="admin" p="33204">
-                    <mod>mode</mod>
-                  </f>
+                <f n="server.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
-                <f n="template-vars.txt" o="ruda" g="admin" p="33204">
+                <f n="webcommands.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webcommands.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webutil.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="webutil.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wsgicgi.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wsgicgi.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
               </f>
-              <f n="transaction.py" o="ruda" g="admin" p="33204">
+              <f n="hook.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="transaction.pyc" o="ruda" g="admin" p="33204">
+              <f n="hook.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="treediscovery.py" o="ruda" g="admin" p="33204">
+              <f n="httpclient" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="socketutil.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="socketutil.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="tests" o="root" g="wheel" p="16893">
+                  <f n="__init__.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="simple_http_test.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="simple_http_test.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_bogus_responses.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_bogus_responses.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_chunked_transfer.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_chunked_transfer.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_proxy_support.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_proxy_support.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_ssl.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_ssl.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="util.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="util.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="httpconnection.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="treediscovery.pyc" o="ruda" g="admin" p="33204">
+              <f n="httpconnection.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ui.py" o="ruda" g="admin" p="33204">
+              <f n="httprepo.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ui.pyc" o="ruda" g="admin" p="33204">
+              <f n="httprepo.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="url.py" o="ruda" g="admin" p="33204">
+              <f n="i18n.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="url.pyc" o="ruda" g="admin" p="33204">
+              <f n="i18n.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="util.py" o="ruda" g="admin" p="33204">
+              <f n="ignore.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="util.pyc" o="ruda" g="admin" p="33204">
+              <f n="ignore.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="verify.py" o="ruda" g="admin" p="33204">
+              <f n="keepalive.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="verify.pyc" o="ruda" g="admin" p="33204">
+              <f n="keepalive.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="win32.py" o="ruda" g="admin" p="33204">
+              <f n="locale" o="root" g="wheel" p="16893">
+                <f n="da" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="de" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="el" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="fr" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="it" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="ja" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="pt_BR" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="ro" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="ru" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="sv" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="zh_CN" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="zh_TW" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
                 <mod>mode</mod>
               </f>
-              <f n="win32.pyc" o="ruda" g="admin" p="33204">
+              <f n="localrepo.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="windows.py" o="ruda" g="admin" p="33204">
+              <f n="localrepo.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="windows.pyc" o="ruda" g="admin" p="33204">
+              <f n="lock.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="wireproto.py" o="ruda" g="admin" p="33204">
+              <f n="lock.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="wireproto.pyc" o="ruda" g="admin" p="33204">
+              <f n="lsprof.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprof.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprofcalltree.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lsprofcalltree.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manifest.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manifest.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="match.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="match.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mdiff.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mdiff.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="merge.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="merge.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="minirst.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="minirst.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mpatch.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="node.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="node.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="osutil.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="parser.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="parser.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="parsers.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="patch.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="patch.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="posix.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="posix.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pushkey.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pushkey.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="py3kcompat.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="py3kcompat.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repair.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repair.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repo.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="repo.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revlog.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revlog.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revset.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revset.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="scmutil.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="scmutil.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="setdiscovery.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="setdiscovery.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="similar.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="similar.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="simplemerge.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="simplemerge.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshrepo.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshrepo.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshserver.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sshserver.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sslutil.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sslutil.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="statichttprepo.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="statichttprepo.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="store.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="store.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="strutil.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="strutil.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="subrepo.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="subrepo.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tags.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tags.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templatefilters.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templatefilters.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templatekw.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templatekw.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templater.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templater.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="templates" o="root" g="wheel" p="16893">
+                <f n="atom" o="root" g="wheel" p="16893">
+                  <f n="bookmarkentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tagentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="coal" o="root" g="wheel" p="16893">
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="gitweb" o="root" g="wheel" p="16893">
+                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="branches.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="summary.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="map-cmdline.changelog" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="map-cmdline.compact" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="map-cmdline.default" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="map-cmdline.xml" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="monoblue" o="root" g="wheel" p="16893">
+                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="branches.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="summary.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="paper" o="root" g="wheel" p="16893">
+                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="branches.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="diffstat.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="help.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="raw" o="root" g="wheel" p="16893">
+                  <f n="changeset.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="rss" o="root" g="wheel" p="16893">
+                  <f n="bookmarkentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tagentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="spartan" o="root" g="wheel" p="16893">
+                  <f n="branches.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="changeset.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="error.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filediff.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="footer.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="graph.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="header.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="manifest.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="map" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="notfound.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="search.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="shortlogentry.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags.tmpl" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="static" o="root" g="wheel" p="16893">
+                  <f n="background.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="coal-file.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="coal-folder.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="excanvas.js" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hgicon.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="hglogo.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="mercurial.js" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-coal.css" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-gitweb.css" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-monoblue.css" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style-paper.css" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="style.css" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="template-vars.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="transaction.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transaction.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="treediscovery.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="treediscovery.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ui.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ui.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="verify.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="verify.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="windows.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="windows.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wireproto.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wireproto.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
             </f>
@@ -1443,7 +1554,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
