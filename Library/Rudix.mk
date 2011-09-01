@@ -141,14 +141,7 @@ upload: pkg
 	twitter -erudix4mac set $(Title) $(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)
 	@$(call info_color,Finished)
 
-wiki:
-	@$(call info_color,Generating Wiki page)
-	env Name="$(Name)" Title="$(Title)" Description="$(Description)" \
-		Site="$(Site)" License="$(License)" PkgFile="$(PkgFile)" \
-		../../Library/mkwikipage.py
-	@$(call info_color,Finished)
-
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc sanitize upload wiki
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc sanitize upload
 
 #
 # Functions
