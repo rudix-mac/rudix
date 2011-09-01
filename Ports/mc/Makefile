@@ -12,7 +12,7 @@ Site=		http://www.midnight-commander.org/
 License=	GPL
 Title=		Midnight Commander
 Name=		mc
-Version=	4.7.5.2
+Version=	4.7.5.4
 Revision=	0
 URL=		http://www.midnight-commander.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
@@ -20,19 +20,11 @@ Source=		$(Name)-$(Version).tar.bz2
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-LdFlags += -framework Carbon -framework CoreServices
-EnvExtra += GLIB_CFLAGS="-I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include"
-EnvExtra += GLIB_LIBS="-L/usr/local/lib /usr/local/lib/libglib-2.0.a  -liconv"
-EnvExtra += GMODULE_CFLAGS="-D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include"
-EnvExtra += GMODULE_LIBS="-L/usr/local/lib /usr/local/lib/libgmodule-2.0.a /usr/local/lib/libglib-2.0.a -liconv"
-define prep_post_hook
-perl -p -i -e s/'intl '//g $(SourceDir)/configure
-endef
-endif
-
 GnuConfigureExtra += --with-screen=ncurses
+
+define fetch
+curl -f -O -C - -L -k
+endef
 
 define install_post_hook
 install -m 644 $(SourceDir)/doc/{FAQ,HACKING,TODO} $(InstallDir)/$(DocDir)/$(Name)
