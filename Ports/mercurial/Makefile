@@ -1,12 +1,9 @@
-BuildRequires += /usr/local/bin/msgfmt
+#BuildRequires += /usr/local/bin/msgfmt
 
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/PythonFormula.mk
 
-Description=	Mercurial is a free, distributed source control management tool
-Site=		http://mercurial.selenic.com/
-License=	GPL
 Title=		Mercurial
 Name=		mercurial
 Version=	1.9.2
