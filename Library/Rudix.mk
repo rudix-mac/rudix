@@ -2,7 +2,7 @@
 # Copyright (c) 2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110827
+BuildSystem = 20110901
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -135,7 +135,7 @@ sanitize:
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
-	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l 'Rudix-2011,OSX-Lion' $(PkgFile)
+	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l $(RUDIX_LABELS) $(PkgFile)
 	twitter -erudix4mac set $(Title) $(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)
 	@$(call info_color,Finished)
 
