@@ -87,7 +87,11 @@ def output_pkgref(name, version, components, uuid=UUID, vendor=VENDOR):
 def main(argv=None):
     if not argv:
         argv = sys.argv
-    opts, args = getopt.getopt(argv[1:], 'n:v:t:d:l:r:c', ['name=', 'version=', 'title=', 'description=', 'license=', 'readme=', 'components='])
+    opts, args = getopt.getopt(argv[1:], 'n:v:t:d:l:r:cip',
+                               ['name=', 'version=', 'title=', 'description=',
+                                'license=', 'readme=', 'components=',
+                                'index', 'pkgref'])
+    index, pkgref = False, False
     for opt, arg in opts:
         if opt in ('-n', '--name'):
             name = arg
@@ -103,6 +107,10 @@ def main(argv=None):
             readme = arg
         if opt in ('-c', '--components'):
             components = arg
+        if opt in ('-i', '--index'):
+            index = True
+        if opt in ('-p', '--pkgref'):
+            pkgref = True
     try:
         path = args[0]
     except IndexError:
@@ -111,10 +119,12 @@ def main(argv=None):
     index_xml = pmdoc + '/index.xml'
     pkgref_xml = pmdoc + '/01%s.xml' % name
     make_empty_pmdoc(pmdoc)
-    with open(index_xml, 'w') as idx:
-        idx.write(output_index(name=name, title=title, description=description, readme=readme, license=license))
-    with open(pkgref_xml, 'w') as ref:
-        ref.write(output_pkgref(name=name, version=version, components=components))
+    if index:
+        with open(index_xml, 'w') as idx:
+            idx.write(output_index(name=name, title=title, description=description, readme=readme, license=license))
+    if pkgref:
+        with open(pkgref_xml, 'w') as ref:
+            ref.write(output_pkgref(name=name, version=version, components=components))
     return 0
 
 if __name__ == '__main__':

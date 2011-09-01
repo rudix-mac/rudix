@@ -193,6 +193,7 @@ define create_pmdoc
 	--readme $(ReadMeFile) \
 	--license $(LicenseFile) \
 	--components '$(Components)' \
+	--index --pkgref \
 	.
 endef
 
@@ -280,6 +281,7 @@ $(apply_patches)
 endef
 
 define pkg_inner_hook
+$(create_pmdoc)
 $(strip_macho)
 $(create_pkg)
 endef
