@@ -137,7 +137,7 @@ sanitize:
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(Name)-$(Version)-$(Revision)
-	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d "$(Description)" -l $(RUDIX_LABELS) $(PkgFile)
+	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	twitter -erudix4mac set $(Title) $(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)
 	@$(call info_color,Finished)
 
@@ -187,7 +187,7 @@ define create_pmdoc
 	--name $(Name) \
 	--version $(Version)-$(Revision) \
 	--title "$(Title)" \
-	--description "$(Description)" \
+	--description Description \
 	--readme $(ReadMeFile) \
 	--license $(LicenseFile) \
 	--components '$(Components)' \

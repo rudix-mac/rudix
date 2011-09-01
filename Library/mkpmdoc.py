@@ -80,6 +80,9 @@ def make_empty_pmdoc(pathname):
         os.mkdir(pathname)
 
 def output_index(name, title, description, readme, license, vendor=VENDOR):
+    if os.path.isfile(description):
+        with open(description) as f:
+            description = f.read()
     title = escape(title)
     description = escape(description)
     return Index.format(name=name, title=title, description=description, vendor=vendor, readme=readme, license=license)

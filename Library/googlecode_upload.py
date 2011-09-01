@@ -240,6 +240,10 @@ def main():
   else:
     labels = None
 
+  if os.path.isfile(options.description):
+    with open(options.description) as f:
+      options.description = f.read()
+
   status, reason, url = upload_find_auth(file_path, options.project,
                                          options.summary, options.description,
                                          labels,
