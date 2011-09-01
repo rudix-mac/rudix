@@ -3,6 +3,7 @@
 import sys, os
 import getopt
 from uuid import uuid1
+from xml.sax.saxutils import escape
 
 VENDOR='org.rudix'
 UUID=str(uuid1()).upper()
@@ -79,6 +80,8 @@ def make_empty_pmdoc(pathname):
         os.mkdir(pathname)
 
 def output_index(name, title, description, readme, license, vendor=VENDOR):
+    title = escape(title)
+    description = escape(description)
     return Index.format(name=name, title=title, description=description, vendor=vendor, readme=readme, license=license)
 
 def output_pkgref(name, version, components, uuid=UUID, vendor=VENDOR):
