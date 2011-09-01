@@ -128,9 +128,11 @@ sanitizepmdoc:
 
 sanitize:
 	@$(call info_color,Sanitizing pmdoc)
+	for x in $(Name).pmdoc/*-contents.xml ; do \
+		perl -p -i -e 's/o="$(USER)"/o="root"/ ; s/pt="[^"]*"/pt="$(InstallDir)"/' $$x ; done
 	for x in $(Name).pmdoc/*.xml ; do \
 		xmllint --format --output $$x $$x ; done
-	@$(call info_color,Finished) 
+	@$(call info_color,Finished)
 
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
