@@ -1,1 +1,0 @@
-$ zsync http://cdimage.ubuntu.com/daily-live/current/oneiric-desktop-i386.iso.zsync

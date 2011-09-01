@@ -1,0 +1,11 @@
+zsync is a file transfer program.
+
+Changes from previous release:
+* Recompiled for Lion
+
+Site: http://zsync.moria.org.uk/
+License: Artistic License
+
+Usage:
+$ zsync http://cdimage.ubuntu.com/daily-live/current/oneiric-desktop-i386.iso.zsync
+$ man zsync
