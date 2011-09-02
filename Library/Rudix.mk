@@ -116,23 +116,9 @@ distclean: clean pkgclean
 realdistclean: distclean
 	rm -f retrieve $(Source)
 
-ContentsXML = $(Name).pmdoc/01$(Name)-contents.xml
-sanitizepmdoc:
-	@$(call info_color,Cleaning $(ContentsXML))
-	@sed 's_o="$(USER)"_o="root"_ ; \
-	      s_pt="[^"]*"_pt="$(InstallDir)"_' $(ContentsXML)| \
-	xmllint --format --output $(ContentsXML) -
-	@head -n 10 $(ContentsXML)
-	@$(call warning_color,check the snippet above)
-	@$(call info_color,Finished)
-
-sanitize:
-	@$(call info_color,Sanitizing pmdoc)
-	for x in $(Name).pmdoc/*-contents.xml ; do \
-		perl -p -i -e 's/o="$(USER)"/o="root"/ ; s/pt="[^"]*"/pt="$(InstallDir)"/' $$x ; done
-	for x in $(Name).pmdoc/*.xml ; do \
-		xmllint --format --output $$x $$x ; done
-	@$(call info_color,Finished)
+pmdoc:
+	$(create_pmdoc)
+	$(sanitize_pmdoc)
 
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
@@ -196,6 +182,13 @@ define create_pkg
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
+endef
+
+define sanitize_pmdoc
+for x in $(Name).pmdoc/*-contents.xml ; do \
+	perl -p -i -e 's/o="$(USER)"/o="root"/ ; s/pt="[^"]*"/pt="$(InstallDir)"/' $$x ; done
+for x in $(Name).pmdoc/*.xml ; do \
+	xmllint --format --output $$x $$x ; done
 endef
 
 define configure
@@ -272,7 +265,7 @@ $(apply_patches)
 endef
 
 define pkg_inner_hook
-$(create_pmdoc)
 $(strip_macho)
+$(sanitize_pmdoc)
 $(create_pkg)
 endef
