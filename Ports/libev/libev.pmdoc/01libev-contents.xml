@@ -13,6 +13,7 @@
           <f n="event.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="libev.4.dylib" o="root" g="wheel" p="33277">
@@ -31,9 +32,6 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="libev" o="root" g="wheel" p="16893">
-              <f n="Changes" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="LICENSE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>

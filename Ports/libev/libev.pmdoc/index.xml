@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>A full-featured and high-performance event loop</description>
+  <description>A full-featured and high-performance event loop that is loosely modelled after libevent.
+
+Changes from previous release:
+* Recompiled for Lion
+
+Site: http://software.schmorp.de/pkg/libev.html
+License: BSD (or GPL)
+
+Usage:
+
+</description>
   <contents>
     <choice title="libev-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libev"/>
