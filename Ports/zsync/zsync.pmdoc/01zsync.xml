@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="13E95087-D4CD-11E0-964D-D49A200B3D20">
+<pkgref spec="1.12" uuid="70979EC7-D5A1-11E0-8873-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.zsync</identifier>
     <version>0.6.2-3</version>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01zsync-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
