@@ -3,7 +3,7 @@
   <f n="libevent-install" o="root" g="staff" p="16877" pt="libevent-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="event_rpcgen.py" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -102,6 +102,7 @@
           <f n="evutil.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="libevent-2.0.5.dylib" o="root" g="wheel" p="33277">
@@ -174,6 +175,7 @@
             <f n="libevent_pthreads.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
@@ -188,6 +190,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

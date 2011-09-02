@@ -11,7 +11,14 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>An event notification library</description>
+  <description>Libevent is an event notification library.
+
+Changes from previous release:
+* Upgraded to version 2.0.13
+
+Site: http://monkey.org/~provos/libevent/
+License: BSD
+</description>
   <contents>
     <choice title="libevent-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libevent"/>

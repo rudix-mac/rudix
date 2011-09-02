@@ -1,0 +1,7 @@
+Libevent is an event notification library.
+
+Changes from previous release:
+* Upgraded to version 2.0.13
+
+Site: http://monkey.org/~provos/libevent/
+License: BSD
