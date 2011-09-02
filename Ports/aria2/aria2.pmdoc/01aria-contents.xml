@@ -3,7 +3,7 @@
   <f n="aria2-install" o="root" g="staff" p="16877" pt="aria2-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="aria2c" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -27,7 +27,6 @@
                 <f n="README.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -53,6 +52,14 @@
               <f n="README.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ru" o="root" g="wheel" p="16893">
+                <f n="aria2c.1.asciidoc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="aria2c.1.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
               <f n="xmlrpc" o="root" g="wheel" p="16893">
                 <f n="aria2mon" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
@@ -63,9 +70,7 @@
                 <f n="README.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
@@ -298,6 +303,13 @@
             <f n="man1" o="root" g="wheel" p="16893">
               <f n="aria2c.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
+              </f>
+            </f>
+            <f n="ru" o="root" g="wheel" p="16893">
+              <f n="man1" o="root" g="wheel" p="16893">
+                <f n="aria2c.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
             </f>
           </f>

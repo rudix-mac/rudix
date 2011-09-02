@@ -11,7 +11,19 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>The Next Generation Download Utility</description>
+  <description>aria2 is a lightweight multi-protocol &amp; multi-source download utility operated in command-line.
+
+Changes from previous release:
+* Upgraded to version 1.12.1
+
+Site: http://aria2.sourceforge.net/
+License: GPL
+
+Usage:
+$ aria2 http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
+$ aria2 --help
+$ man aria2
+</description>
   <contents>
     <choice title="aria2-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.aria2"/>
@@ -24,7 +36,7 @@
     </locale>
   </resources>
   <flags/>
-  <item type="file">01aria2.xml</item>
+  <item type="file">01aria.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
