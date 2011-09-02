@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="71898E5E-D0D3-11E0-9855-0017F22C0C04">
+<pkgref spec="1.12" uuid="71EA9E1C-D5AE-11E0-A103-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.lua</identifier>
     <version>5.1.4-6</version>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01lua-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

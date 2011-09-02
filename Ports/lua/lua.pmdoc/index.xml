@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Powerful, light-weight programming language</description>
+  <description>Lua is a powerful, fast, lightweight, embeddable scripting language.
+
+Changes from previous release:
+* Applied patch http://www.lua.org/ftp/patch-lua-5.1.4-3
+
+Site: http://www.lua.org/
+License: MIT
+
+Usage:
+$ lua
+</description>
   <contents>
     <choice title="lua-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.lua"/>

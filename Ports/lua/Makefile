@@ -2,9 +2,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/UnixFormula.mk
 
-Description=	Powerful, light-weight programming language
-Site=		http://www.lua.org/
-Lincese=	MIT
 Title=		Lua
 Name=		lua
 Version=	5.1.4
@@ -15,9 +12,9 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-GnuMakeExtra += macosx MYLDFLAGS="$(LdFlags)"
-GnuMakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
-GnuMakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
+MakeExtra += macosx MYLDFLAGS="$(LdFlags)"
+MakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
+MakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
 
 define install_post_hook
 install -d $(PortDir)/$(InstallDir)$(LibDir)/pkgconfig

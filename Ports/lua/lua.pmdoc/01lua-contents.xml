@@ -3,54 +3,109 @@
   <f n="lua-install" o="root" g="staff" p="16877" pt="lua-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="lua" o="root" g="wheel" p="33277"/>
-          <f n="luac" o="root" g="wheel" p="33277"/>
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="lua" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="luac" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
-          <f n="lauxlib.h" o="root" g="wheel" p="33204"/>
-          <f n="lua.h" o="root" g="wheel" p="33204"/>
-          <f n="lua.hpp" o="root" g="wheel" p="33204"/>
-          <f n="luaconf.h" o="root" g="wheel" p="33204"/>
-          <f n="lualib.h" o="root" g="wheel" p="33204"/>
+          <f n="lauxlib.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="lua.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="lua.hpp" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="luaconf.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="lualib.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="liblua.a" o="root" g="wheel" p="33204"/>
+          <f n="liblua.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
           <f n="lua" o="root" g="wheel" p="16893">
-            <f n="5.1" o="root" g="wheel" p="16893"/>
+            <f n="5.1" o="root" g="wheel" p="16893">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
-            <f n="lua.pc" o="root" g="wheel" p="33204"/>
+            <f n="lua.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="lua" o="root" g="wheel" p="16893">
-              <f n="amazon.gif" o="root" g="wheel" p="33204"/>
-              <f n="contents.html" o="root" g="wheel" p="33204"/>
-              <f n="COPYRIGHT" o="root" g="wheel" p="33204"/>
-              <f n="cover.png" o="root" g="wheel" p="33204"/>
-              <f n="HISTORY" o="root" g="wheel" p="33204"/>
-              <f n="INSTALL" o="root" g="wheel" p="33204">
+              <f n="amazon.gif" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="logo.gif" o="root" g="wheel" p="33204"/>
-              <f n="lua.css" o="root" g="wheel" p="33204"/>
-              <f n="lua.html" o="root" g="wheel" p="33204"/>
-              <f n="luac.html" o="root" g="wheel" p="33204"/>
-              <f n="manual.css" o="root" g="wheel" p="33204"/>
-              <f n="manual.html" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="readme.html" o="root" g="wheel" p="33204"/>
+              <f n="contents.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cover.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logo.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lua.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lua.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lua.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="luac.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="luac.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manual.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="manual.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="readme.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="lua" o="root" g="wheel" p="16893">
-            <f n="5.1" o="root" g="wheel" p="16893"/>
+            <f n="5.1" o="root" g="wheel" p="16893">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="lua.1" o="root" g="wheel" p="33204"/>
-              <f n="luac.1" o="root" g="wheel" p="33204"/>
+              <f n="lua.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="luac.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
