@@ -1,0 +1,7 @@
+A full-featured and high-performance event loop that is loosely modelled after libevent.
+
+Changes from previous release:
+* Recompiled for Lion
+
+Site: http://software.schmorp.de/pkg/libev.html
+License: BSD (or GPL)
