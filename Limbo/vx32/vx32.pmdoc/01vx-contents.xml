@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="vx32-install" o="ruda" g="staff" p="16877" pt="vx32-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="9vx" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="vxrun" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="vxrungcc" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="vx32" o="root" g="wheel" p="16893">
+            <f n="args.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="asm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="elf.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="os.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vx32.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vx32impl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="words.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="x86dis.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libvx32.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="vx32" o="root" g="wheel" p="16893">
+              <f n="ADVENTURE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vx32.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vxa.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

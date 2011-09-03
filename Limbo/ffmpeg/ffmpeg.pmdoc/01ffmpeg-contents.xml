@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="ffmpeg-install" o="ruda" g="staff" p="16877" pt="ffmpeg-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="ffmpeg" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ffprobe" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ffserver" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="ffserver.conf.default" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="libavcodec" o="root" g="wheel" p="16893">
+            <f n="avcodec.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avfft.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dxva2.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="opt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vaapi.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vdpau.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="xvmc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libavdevice" o="root" g="wheel" p="16893">
+            <f n="avdevice.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libavfilter" o="root" g="wheel" p="16893">
+            <f n="avfilter.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avfiltergraph.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libavformat" o="root" g="wheel" p="16893">
+            <f n="avformat.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avio.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libavutil" o="root" g="wheel" p="16893">
+            <f n="adler32.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="attributes.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="audioconvert.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avassert.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avconfig.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avstring.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="avutil.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="base64.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bswap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cpu.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="crc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="error.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="eval.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fifo.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imgutils.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intfloat_readwrite.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intreadwrite.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lfg.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="log.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mathematics.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mem.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="opt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="parseutils.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pixdesc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pixfmt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="random_seed.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rational.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="samplefmt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sha1.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libswscale" o="root" g="wheel" p="16893">
+            <f n="swscale.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libavcodec.52.114.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libavcodec.52.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavcodec.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libavcodec.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavdevice.52.3.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libavdevice.52.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavdevice.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libavdevice.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavfilter.1.76.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libavfilter.1.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavfilter.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libavfilter.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavformat.52.103.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libavformat.52.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavformat.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libavformat.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavutil.50.39.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libavutil.50.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libavutil.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libavutil.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libswscale.0.12.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libswscale.0.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libswscale.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libswscale.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libavcodec.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libavdevice.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libavfilter.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libavformat.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libavutil.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libswscale.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="ffmpeg" o="root" g="wheel" p="16893">
+              <f n="avutil.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="build_system.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.GPLv2" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.GPLv3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LGPLv2.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LGPLv3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CREDITS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-howto.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="issue_tracker.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MAINTAINERS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="multithreading.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="optimization.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rate_distortion.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snow.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="soc.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="swscale.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tablegen.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="viterbi.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="ffmpeg" o="root" g="wheel" p="16893">
+            <f n="libx264-baseline.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-fast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-fast_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-faster.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-faster_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-ipod320.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-ipod640.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_fast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_max.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_medium.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_slow.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_slower.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-lossless_ultrafast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-main.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-medium.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-medium_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-placebo.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-placebo_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-slow.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-slow_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-slower.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-slower_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-superfast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-superfast_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-ultrafast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-ultrafast_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-veryfast.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-veryfast_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-veryslow.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libx264-veryslow_firstpass.ffpreset" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="ffmpeg.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ffprobe.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ffserver.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

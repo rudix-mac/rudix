@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>CLISP</title>
+    <organization>org.rudix.pkg</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>ANSI Common Lisp compiler</description>
+  <contents>
+    <choice title="clisp-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.clisp.clisp-install.pkg"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">clisp-2.48/GNU-GPL</resource>
+      <resource relative="true" mod="true" type="readme">clisp-2.48/src/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01clisp.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

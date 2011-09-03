@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="clisp-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/clisp/clisp-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="clisp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="clisp-2.48" o="root" g="wheel" p="16893">
+            <f n="base" o="root" g="wheel" p="16893">
+              <f n="calls.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libnoreadline.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.run" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lispinit.mem" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localcharset.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="makevars" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modules.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modules.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="readline.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regex.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regexi.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regexp.dvi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="uniname.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="width.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="clisp-link" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="data" o="root" g="wheel" p="16893">
+              <f n="Symbol-Table.text" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="UnicodeDataFull.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="full" o="root" g="wheel" p="16893">
+              <f n="calls.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libnoreadline.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.run" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lispinit.mem" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localcharset.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="makevars" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modules.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modules.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="readline.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regex.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regexi.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="regexp.dvi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="uniname.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="width.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="linkkit" o="root" g="wheel" p="16893">
+              <f n="clisp.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modprep.lisp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modules.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="16893">
+            <f n="clisp.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="clisp" o="root" g="wheel" p="16893">
+              <f n="ANNOUNCE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp.dvi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp.ps" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doc" o="root" g="wheel" p="16893">
+                <f n="clisp.1" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="clisp.dvi" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="clisp.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="clisp.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="clisp.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="CLOS-guide.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="impnotes.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="impnotes.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LISP-tutorial.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="GNU-GPL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MAGIC.add" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.de" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.es" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SUMMARY" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="emacs" o="root" g="wheel" p="16893">
+            <f n="site-lisp" o="root" g="wheel" p="16893">
+              <f n="clhs.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp-coding.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp-ffi.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp-indent.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clisp-indent.lisp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="clisp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="vim" o="root" g="wheel" p="16893">
+            <f n="vimfiles" o="root" g="wheel" p="16893">
+              <f n="after" o="root" g="wheel" p="16893">
+                <f n="syntax" o="root" g="wheel" p="16893">
+                  <f n="lisp.vim" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
