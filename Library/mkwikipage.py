@@ -6,6 +6,8 @@ import string
 template = '''#summary {Description}
 #sidebar TableOfContents
 
+<g:plusone size="small"></g:plusone>
+
 = Pool =
   * [http://code.google.com/p/rudix/downloads/detail?name={PkgFile} {PkgFile}]
 
