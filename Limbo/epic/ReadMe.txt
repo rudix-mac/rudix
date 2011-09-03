@@ -1,0 +1,3 @@
+(E)nhanced (P)rogrammable (I)RC-II (C)lient
+
+EPIC5 is a new direction in ircII development. No longer is EPIC 100% backwards compatible with ircII, but instead those things where compatibility is undesirable have been found and fixed. No gratuitous  incompatibilities have been added, but lots of new code has been added to make EPIC the best ircII client available.

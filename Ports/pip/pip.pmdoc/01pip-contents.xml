@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="pip-install" o="root" g="staff" p="16877" pt="pip-install" m="false" t="file">
+    <f n="Library" o="root" g="admin" p="17405">
+      <f n="Python" o="root" g="admin" p="16893">
+        <f n="2.6" o="root" g="admin" p="16893">
+          <f n="site-packages" o="root" g="admin" p="16893">
+            <f n="pip" o="root" g="admin" p="16893">
+              <f n="__init__.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="_pkgutil.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="_pkgutil.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="backwardcompat.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="backwardcompat.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="basecommand.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="basecommand.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="baseparser.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="baseparser.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="commands" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bundle.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bundle.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="completion.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="completion.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="freeze.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="freeze.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="help.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="help.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="install.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="install.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="search.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="search.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uninstall.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uninstall.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="unzip.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="unzip.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="zip.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="zip.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="download.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="download.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="exceptions.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="exceptions.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="index.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="locations.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="locations.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="log.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="log.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="req.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="req.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="runner.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="runner.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.py" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vcs" o="root" g="admin" p="16893">
+                <f n="__init__.py" o="root" g="admin" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bazaar.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="bazaar.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="git.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="git.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="mercurial.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="mercurial.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="subversion.py" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="subversion.pyc" o="root" g="admin" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+              <f n="venv.py" o="root" g="admin" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="venv.pyc" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="pip-1.0.1-py2.6.egg-info" o="root" g="admin" p="16893">
+              <f n="dependency_links.txt" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="entry_points.txt" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="not-zip-safe" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="admin" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="pip" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pip-2.6" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

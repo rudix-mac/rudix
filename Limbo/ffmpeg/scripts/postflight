@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ ! -f /usr/local/etc/ffserver.conf ] && \
+cp -f /usr/local/etc/ffserver.conf.default /usr/local/etc/ffserver.conf
+
+exit 0

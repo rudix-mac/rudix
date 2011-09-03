@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>GNU Automake</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>GNU standards-compliant Makefile generator</description>
+  <contents>
+    <choice title="automake-install" id="automake" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.automake"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">automake-1.11.1/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">automake-1.11.1/README</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01automake.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

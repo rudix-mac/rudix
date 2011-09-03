@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="epic5-install" o="ruda" g="staff" p="16877" pt="epic5-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="epic5" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="epic5-1.1.2" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="irc" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="epic5-wserv4" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="epic5" o="root" g="wheel" p="16893">
+              <f n="BUG_FORM" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="KNOWNBUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="UPDATES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="VOTES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="epic5" o="root" g="wheel" p="16893">
+            <f n="help" o="root" g="wheel" p="16893">
+              <mod>mode</mod>
+            </f>
+            <f n="script" o="root" g="wheel" p="16893">
+              <f n="2.8script" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activity" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="addset" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="altchan" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ambig" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoget" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autojoin" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoquery" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ban" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="builtins" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="chanmonitor" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="commandqueues" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="country" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cycle" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="data_array" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="data_struct" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcc_ports" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="debug.irc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dump" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="edit_topic" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="epic-crypt-gpg" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="epic-crypt-gpg-aa" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="files" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="floodprot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="functions" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="global" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="grep" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="guh" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="help" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="help.irc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="highlight" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="history" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="history.rb" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hold_mode" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ison" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="less" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="less-pipe" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="loadformats" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="local.examp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="locale" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logman" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mail" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="man" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="map" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="massmode" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meta-compat" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="motd" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="netsplit" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="newaway" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="newnick" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nickcomp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nopaste" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="notify" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="paste" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pipe" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="reconnect" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="renumber" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="revdcc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="save" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="scan" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="screen" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="screen.e" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="set_color" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="setmail" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="slowcat" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snip" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="speak.irc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sping" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="suppressmotd" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tabkey.ce" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tabkey.jm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tabkey.sjh" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="topicbar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="topicbar.bj" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url.irc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utime" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="epic5.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="irc.1" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

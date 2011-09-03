@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>EPIC5</title>
+    <build>/Users/ruda/Desktop/EPIC4.pkg</build>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>(E)nhanced (P)rogrammable (I)RC-II (C)lient</description>
+  <contents>
+    <choice title="epic5-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.epic5"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">epic5-1.1.2/COPYRIGHT</resource>
+      <resource relative="true" mod="true" type="readme">epic5-1.1.2/doc/EPIC_ABOUT</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01epic.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>
