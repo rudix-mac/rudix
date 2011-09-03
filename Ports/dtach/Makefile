@@ -2,9 +2,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Tiny program emulating the detach feature of screen
-Site=		http://dtach.sourceforge.net
-License=	GPL
 Title=		Dtach
 Name=		dtach
 Version=	0.8
