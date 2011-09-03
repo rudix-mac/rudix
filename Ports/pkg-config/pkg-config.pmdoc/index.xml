@@ -11,16 +11,26 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Tool for managing library compile/link flags</description>
+  <description>pkg-config is a helper tool used when compiling applications and libraries.
+
+Site: http://www.freedesktop.org/wiki/Software/pkg-config
+License: GPL
+
+Usage:
+$ pkg-config
+
+Changes from previous release:
+* Recompiled for Lion
+</description>
   <contents>
-    <choice title="pkg-config-install" id="pkg-config" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.pkgconfig"/>
+    <choice title="pkg-config-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.pkg-config"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">pkg-config-0.25/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">pkg-config-0.25/README</resource>
+      <resource relative="true" mod="true" type="license">pkg-config-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">pkg-config-build/README</resource>
     </locale>
   </resources>
   <flags/>

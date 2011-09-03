@@ -1,0 +1,10 @@
+pkg-config is a helper tool used when compiling applications and libraries.
+
+Site: http://www.freedesktop.org/wiki/Software/pkg-config
+License: GPL
+
+Usage:
+$ pkg-config
+
+Changes from previous release:
+* Recompiled for Lion
