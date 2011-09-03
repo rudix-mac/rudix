@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="bash-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/bash/bash-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="bash" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="bashbug" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="bash" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COMPAT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NOTES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="POSIX" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="RBASH" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Y2K" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="info" o="root" g="wheel" p="16893">
+            <f n="bash.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="locale" o="root" g="wheel" p="16893">
+            <f n="af" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="bg" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ca" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="cs" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="de" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="en@boldquot" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="en@quot" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="eo" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="es" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="et" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ga" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="hu" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="id" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ja" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="lt" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="nl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="pl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="pt_BR" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ro" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ru" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="sv" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="tr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="vi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="zh_TW" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="bash.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bashbug.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

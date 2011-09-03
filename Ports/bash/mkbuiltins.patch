@@ -1,0 +1,11 @@
+--- builtins/Makefile.in.orig	2009-01-04 17:32:22.000000000 -0200
++++ builtins/Makefile.in	2009-08-09 13:25:55.000000000 -0300
+@@ -195,7 +195,7 @@
+ mkbuiltins.o: ../config.h
+ mkbuiltins.o: mkbuiltins.c
+ 	$(RM) $@
+-	$(CC_FOR_BUILD) -c $(CCFLAGS_FOR_BUILD) $<
++	$(CC_FOR_BUILD) -c $(CFLAGS) $(CCFLAGS_FOR_BUILD) $<
+ 
+ mkbuiltins$(EXEEXT): mkbuiltins.o
+ 	$(CC_FOR_BUILD) $(LDFLAGS_FOR_BUILD) -o $(MKBUILTINS) mkbuiltins.o $(LIBS_FOR_BUILD)
