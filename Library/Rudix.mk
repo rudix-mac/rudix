@@ -120,6 +120,11 @@ pmdoc:
 	$(create_pmdoc)
 	$(sanitize_pmdoc)
 
+wiki:
+	env Name="$(Name)" PkgFile="$(PkgFile)" \
+		Description="$(shell head -1 Description)" \
+		../../Library/mkwikipage.py
+
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	hg tag -f $(DistName)-$(Version)-$(Revision)
@@ -127,7 +132,7 @@ upload: pkg
 	twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)"
 	@$(call info_color,Finished)
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc sanitize upload
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload
 
 #
 # Functions

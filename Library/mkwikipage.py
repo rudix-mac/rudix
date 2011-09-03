@@ -3,27 +3,14 @@
 import os
 import string
 
-template = '''#summary {Description}.
+template = '''#summary {Description}
 #sidebar TableOfContents
 
-= {Title} =
-{Description}.
-  * Site: {Site}
-  * License: {License}
-  * Port source: [http://code.google.com/p/rudix/source/browse/Ports/{Name} Ports/{Name}]
+= Pool =
+  * [http://code.google.com/p/rudix/downloads/detail?name={PkgFile} {PkgFile}]
 
-= Download =
-  * [http://rudix.googlecode.com/files/{PkgFile} {PkgFile}]
-'''
-
-note_templ = '''
-= Note =
-{Note}'''
-
-usage_templ = '''
-= Usage =
-<pre>
-{Usage}</pre>
+= Port source =
+  * [http://code.google.com/p/rudix/source/browse/Ports/{Name} Ports/{Name}]
 '''
 
 class Global_Env_Dict(object):
@@ -36,18 +23,6 @@ class Global_Env_Dict(object):
 env = Global_Env_Dict()
 fmt = string.Formatter()
 output = fmt.vformat(template, None, env)
-
-if os.path.isfile('note.txt'):
-    with open('note.txt') as f:
-        content = f.read()
-    note = fmt.vformat(note_templ, None, {'Note': content})
-    output += note
-
-if os.path.isfile('usage.txt'):
-    with open('usage.txt') as f:
-        content = f.read()
-    usage = fmt.vformat(usage_templ, None, {'Usage': content})
-    output += usage
 
 tbl = string.maketrans('-', '_')
 wiki = '%s.wiki' % env['Name'].translate(tbl)
