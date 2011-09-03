@@ -1,0 +1,10 @@
+tmux is a terminal multiplexer: it enables a number of terminals (or windows), each running a separate program, to be created, accessed, and controlled from a single screen.
+
+Changes from previous release:
+* Recompiled for Lion
+
+Site: http://tmux.sourceforge.net/
+License: BSD
+
+Usage:
+$ tmux

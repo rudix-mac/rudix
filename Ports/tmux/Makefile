@@ -4,9 +4,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://tmux.sourceforge.net/
-License=	BSD
-Description=	tmux is a terminal multiplexer
 Title=		tmux
 Name=		tmux
 Version=	1.5
