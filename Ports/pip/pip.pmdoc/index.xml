@@ -11,7 +11,18 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>pip installs packages. Python packages. An easy_install replacement</description>
+  <description>pip installs packages. Python packages. An easy_install replacement.
+
+Site: http://pypi.python.org/pypi/pip
+License: Python
+
+Usage:
+$ pip
+
+Changes from previous release:
+* Upgraded to version 1.0.2
+* Recompiled for Lion
+</description>
   <contents>
     <choice title="pip-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pip"/>
