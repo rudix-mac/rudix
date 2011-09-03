@@ -2,9 +2,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://www.methods.co.nz/asciidoc/
-License=	GPL
-Description=	Text based document generation
 Title=		AsciiDoc
 Name=		asciidoc
 Version=	8.6.5
