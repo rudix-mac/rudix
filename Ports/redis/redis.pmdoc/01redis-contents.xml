@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="redis-install" o="root" g="staff" p="16877" pt="redis-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="redis-benchmark" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="redis-check-aof" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="redis-check-dump" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="redis-cli" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="redis-server" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="redis" o="root" g="wheel" p="16893">
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
