@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="13041CD4-EEC4-4663-852C-598D930F6AA7">
+<pkgref spec="1.12" uuid="F0A87491-D63D-11E0-967A-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.bzr</identifier>
+    <version>2.4.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -14,8 +15,8 @@
     <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01bzr-contents.xml</file-list>

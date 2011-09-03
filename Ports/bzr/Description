@@ -1,0 +1,10 @@
+Bazaar is a version control system that helps you track project history over time and to collaborate easily with others.
+
+Changes from previous release:
+* Upgraded to version 2.4.0
+
+Site: http://bazaar-vcs.org/
+License: GPL
+
+Usage:
+$ bzr

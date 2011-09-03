@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Distributed version control system</description>
+  <description>Bazaar is a version control system that helps you track project history over time and to collaborate easily with others.
+
+Changes from previous release:
+* Upgraded to version 2.4.0
+
+Site: http://bazaar-vcs.org/
+License: GPL
+
+Usage:
+$ bzr
+</description>
   <contents>
     <choice title="bzr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.bzr"/>
@@ -19,8 +29,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">bzr-2.3.0/COPYING.txt</resource>
-      <resource relative="true" mod="true" type="readme">bzr-2.3.0/README</resource>
+      <resource relative="true" mod="true" type="license">bzr-build/COPYING.txt</resource>
+      <resource relative="true" mod="true" type="readme">bzr-build/README</resource>
     </locale>
   </resources>
   <flags/>
