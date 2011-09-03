@@ -1,0 +1,1391 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="nhc98-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/nhc98/nhc98-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="cabal-parse" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="cpphs" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="greencard-nhc98" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="harch" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hi" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hmake" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hmake-config" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hood" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="hp2graph" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="nhc98" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="nhc98-pkg" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="runhs" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="tprofprel" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="nhc98" o="root" g="wheel" p="16893">
+            <f n="Array.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bytecode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bytecode_o.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Char.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cinterface.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="codemacros.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Complex.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="CPUTime.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Directory.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="flt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="greencard.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="haskell2c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="HatBuiltin.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="HsFFI.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="IO.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Ix.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="List.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Locale.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="macros_o.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Maybe.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mk.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkByHand.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkByProg.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Monad.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mutlib.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="newbytecode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="newmacros.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NHC" o="root" g="wheel" p="16893">
+              <f n="BinArray.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Binary.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Bit.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FFI.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GreenCard.gc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GreenCard.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Internal.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IOExtras.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Observe.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PackedString.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Prelude.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Vector.hi" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="node.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NonStdEval.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NonStdGetPID.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NonStdProfile.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NonStdTrace.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NonStdUnsafeCoerce.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Numeric.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="packages" o="root" g="wheel" p="16893">
+              <f n="array" o="root" g="wheel" p="16893">
+                <f n="Data" o="root" g="wheel" p="16893">
+                  <f n="Array.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="array.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="base" o="root" g="wheel" p="16893">
+                <f n="Control" o="root" g="wheel" p="16893">
+                  <f n="Applicative.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Arrow.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Category.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Exception" o="root" g="wheel" p="16893">
+                    <f n="Base.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Exception.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Monad" o="root" g="wheel" p="16893">
+                    <f n="Fix.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Instances.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Monad.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Data" o="root" g="wheel" p="16893">
+                  <f n="Bits.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Bool.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Char.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Complex.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Dynamic.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Either.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Eq.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Fixed.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Foldable.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Function.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Functor.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="HashTable.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Int.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="IORef.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Ix.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="List.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Maybe.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Monoid.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Ord.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Ratio.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Traversable.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Tuple.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Typeable.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Version.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Word.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Debug" o="root" g="wheel" p="16893">
+                  <f n="Trace.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="DErrNo.hi" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="DIOError.hi" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Foreign" o="root" g="wheel" p="16893">
+                  <f n="C" o="root" g="wheel" p="16893">
+                    <f n="Error.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="String.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Types.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="C.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ForeignPtr.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Marshal" o="root" g="wheel" p="16893">
+                    <f n="Alloc.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Array.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Error.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Pool.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Utils.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Marshal.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Ptr.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="StablePtr.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Storable.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Foreign.hi" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="GHC" o="root" g="wheel" p="16893">
+                  <f n="IO" o="root" g="wheel" p="16893">
+                    <f n="Device.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                </f>
+                <f n="NHC" o="root" g="wheel" p="16893">
+                  <f n="PosixTypes.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="SizedTypes.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Nhc98BaseConfig.h" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Console" o="root" g="wheel" p="16893">
+                    <f n="GetOpt.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="CPUTime.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Environment.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Exit.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Info.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="IO" o="root" g="wheel" p="16893">
+                    <f n="Error.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Unsafe.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="IO.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Mem.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Posix" o="root" g="wheel" p="16893">
+                    <f n="Internals.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Types.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Timeout.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Text" o="root" g="wheel" p="16893">
+                  <f n="Html" o="root" g="wheel" p="16893"/>
+                  <f n="ParserCombinators" o="root" g="wheel" p="16893">
+                    <f n="ReadP.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Printf.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Read.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Regex" o="root" g="wheel" p="16893"/>
+                  <f n="Show" o="root" g="wheel" p="16893">
+                    <f n="Functions.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Show.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Typeable.h" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Unsafe" o="root" g="wheel" p="16893">
+                  <f n="Coerce.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="base.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bytestring" o="root" g="wheel" p="16893">
+                <f n="Data" o="root" g="wheel" p="16893">
+                  <f n="ByteString" o="root" g="wheel" p="16893">
+                    <f n="Char8.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Fusion.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Internal.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Lazy" o="root" g="wheel" p="16893">
+                      <f n="Char8.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Internal.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                    </f>
+                    <f n="Lazy.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Unsafe.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="ByteString.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="bytestring.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Cabal" o="root" g="wheel" p="16893">
+                <f n="Distribution" o="root" g="wheel" p="16893">
+                  <f n="Compat" o="root" g="wheel" p="16893">
+                    <f n="Exception.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="ReadP.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="TempFile.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Compiler.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="GetOpt.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="InstalledPackageInfo.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="License.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Make.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ModuleName.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Package.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="PackageDescription" o="root" g="wheel" p="16893">
+                    <f n="Check.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Configuration.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Parse.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="PackageDescription.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ParseUtils.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ReadE.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Simple" o="root" g="wheel" p="16893">
+                    <f n="Build" o="root" g="wheel" p="16893">
+                      <f n="Macros.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="PathsModule.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                    </f>
+                    <f n="Build.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="BuildPaths.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Command.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Compiler.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Configure.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="GHC" o="root" g="wheel" p="16893">
+                      <f n="IPI641.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="IPI642.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Makefile.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                    </f>
+                    <f n="GHC.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Haddock.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Hugs.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Install.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="InstallDirs.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="JHC.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="LocalBuildInfo.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="NHC.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PackageIndex.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PackageSet.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PreProcess" o="root" g="wheel" p="16893">
+                      <f n="Unlit.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                    </f>
+                    <f n="PreProcess.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Program.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Register.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Setup.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="SrcDist.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="UserHooks.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Utils.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="Simple.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="System.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Text.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Verbosity.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Version.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+                <f n="Language" o="root" g="wheel" p="16893">
+                  <f n="Haskell" o="root" g="wheel" p="16893">
+                    <f n="Extension.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                </f>
+              </f>
+              <f n="Cabal.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="containers" o="root" g="wheel" p="16893">
+                <f n="Data" o="root" g="wheel" p="16893">
+                  <f n="Graph.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="IntMap.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="IntSet.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Map.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Sequence.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Set.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="Tree.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="containers.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="directory" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Directory.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="directory.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filepath" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="FilePath" o="root" g="wheel" p="16893">
+                    <f n="Posix.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Windows.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="FilePath.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="filepath.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="haskell98" o="root" g="wheel" p="16893"/>
+              <f n="haskell98.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="HaXml" o="root" g="wheel" p="16893">
+                <f n="Text" o="root" g="wheel" p="16893">
+                  <f n="XML" o="root" g="wheel" p="16893">
+                    <f n="HaXml" o="root" g="wheel" p="16893">
+                      <f n="ByteStringPP.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Combinators.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="DtdToHaskell" o="root" g="wheel" p="16893">
+                        <f n="Convert.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Instance.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="TypeDef.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                      </f>
+                      <f n="Escape.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Html" o="root" g="wheel" p="16893">
+                        <f n="Generate.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Parse.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="ParseLazy.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Pretty.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                      </f>
+                      <f n="Lex.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Namespaces.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="OneOfN.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Parse.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="ParseLazy.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Posn.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Pretty.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="SAX.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="ShowXmlLazy.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="TypeMapping.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Types.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Util.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Validate.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Verbatim.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Wrappers.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="XmlContent" o="root" g="wheel" p="16893">
+                        <f n="Haskell.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Parser.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                      </f>
+                      <f n="XmlContent.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Xtract" o="root" g="wheel" p="16893">
+                        <f n="Combinators.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Lex.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Parse.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                      </f>
+                    </f>
+                    <f n="HaXml.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                </f>
+              </f>
+              <f n="HaXml.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="old-locale" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Locale.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="old-locale.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="old-time" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Time.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="old-time.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="packedstring" o="root" g="wheel" p="16893">
+                <f n="Data" o="root" g="wheel" p="16893">
+                  <f n="PackedString.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="packedstring.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="polyparse" o="root" g="wheel" p="16893">
+                <f n="Text" o="root" g="wheel" p="16893">
+                  <f n="Parse.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ParserCombinators" o="root" g="wheel" p="16893">
+                    <f n="HuttonMeijer.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="HuttonMeijerWallace.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Poly" o="root" g="wheel" p="16893">
+                      <f n="Base.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="Lazy.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="NoLeak" o="root" g="wheel" p="16893">
+                        <f n="Lazy.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="Plain.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="State.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                        <f n="StateLazy.hi" o="root" g="wheel" p="33204">
+                          <mod>mode</mod>
+                        </f>
+                      </f>
+                      <f n="Plain.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="State.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="StateLazy.hi" o="root" g="wheel" p="33204">
+                        <mod>mode</mod>
+                      </f>
+                    </f>
+                    <f n="Poly.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PolyLazy.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PolyState.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="PolyStateLazy.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                </f>
+              </f>
+              <f n="polyparse.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pretty" o="root" g="wheel" p="16893">
+                <f n="Text" o="root" g="wheel" p="16893">
+                  <f n="PrettyPrint" o="root" g="wheel" p="16893">
+                    <f n="HughesPJ.hi" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                  </f>
+                  <f n="PrettyPrint.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="pretty.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="process" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Cmd.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="process.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="random" o="root" g="wheel" p="16893">
+                <f n="System" o="root" g="wheel" p="16893">
+                  <f n="Random.hi" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                </f>
+              </f>
+              <f n="random.cabal" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="PackedString.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Prelude.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="PreludeBuiltin.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Random.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Ratio.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="runtime.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stableptr.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="System.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Time.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="twopass.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="Warning.hi" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="hmake" o="root" g="wheel" p="16893">
+            <f n="ix86-Darwin10" o="root" g="wheel" p="16893">
+              <f n="HInteractive" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hmakerc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MkConfig" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="MkProg" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="Older" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="nhc98" o="root" g="wheel" p="16893">
+            <f n="hood.jar" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ix86-Darwin10" o="root" g="wheel" p="16893">
+              <f n="Array.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Binary.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Bit.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cabal-parse" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="Char.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Complex.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cpphs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="CPUTime.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CString.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="DErrNo.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Directory.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Driver.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FFI.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="greencard-nhc98" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="GreenCard.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hmake-PRAGMA" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hp2graph" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hsc2hs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="IO.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IOExtras.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Ix.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSarray.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSarray.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSarray.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbase.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbase.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbase.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbytestring.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbytestring.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSbytestring.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHScontainers.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHScontainers.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHScontainers.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSdirectory.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSdirectory.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSdirectory.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSfilepath.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSfilepath.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSfilepath.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHShaskell98.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHShaskell98.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHShaskell98.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSHaXml.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSHaXml.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSHaXml.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-locale.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-locale.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-locale.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-time.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-time.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSold-time.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpackedstring.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpackedstring.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpackedstring.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpolyparse.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpolyparse.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpolyparse.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpretty.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpretty.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSpretty.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSprocess.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSprocess.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSprocess.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSrandom.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSrandom.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libHSrandom.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="List.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Locale.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="main.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="main.p.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="main.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Maybe.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Monad.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutator.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutator.p.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutator.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutlib.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutlib.p.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mutlib.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nhc98-pkg" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="nhc98comp" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="nhc98heap" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="NonStdEval.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NonStdGetPID.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NonStdProfile.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NonStdTrace.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NonStdUnsafeCoerce.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Numeric.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Observe.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PackedString.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Prelude.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Prelude.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PreludeAll.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Random.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Ratio.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Runtime.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Runtime.p.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Runtime.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="System.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Time.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tprofprel1.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tprofprel2.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tprofprel3.z.o" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Warning.z.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="nhc98" o="root" g="wheel" p="16893">
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="harch.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hi.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hmake.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hp2graph.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nhc98.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

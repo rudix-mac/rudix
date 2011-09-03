@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>nhc98</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Portable Haskell compiler</description>
+  <contents>
+    <choice title="nhc98-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.nhc98"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="topleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="license">nhc98-1.22/COPYRIGHT</resource>
+      <resource relative="true" mod="true" type="readme">nhc98-1.22/docs/index.html</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01nhc.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>
