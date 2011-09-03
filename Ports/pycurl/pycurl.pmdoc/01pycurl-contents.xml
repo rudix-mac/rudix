@@ -1,108 +1,275 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pycurl-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/pycurl/pycurl-install" m="false" t="file">
-    <f n="Library" o="ruda" g="staff" p="16877">
-      <f n="Python" o="ruda" g="staff" p="16877">
-        <f n="2.6" o="ruda" g="staff" p="16877">
-          <f n="site-packages" o="ruda" g="staff" p="16877">
-            <f n="curl" o="ruda" g="staff" p="16877">
-              <f n="__init__.py" o="ruda" g="staff" p="33188"/>
-              <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+  <f n="pycurl-install" o="root" g="staff" p="16877" pt="pycurl-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="curl" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="pycurl-7.19.0-py2.6.egg-info" o="ruda" g="staff" p="33188"/>
-            <f n="pycurl.so" o="ruda" g="staff" p="33261"/>
+            <f n="pycurl-7.19.0-py2.7.egg-info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pycurl.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
           </f>
         </f>
       </f>
     </f>
-    <f n="usr" o="ruda" g="staff" p="16877">
-      <f n="local" o="ruda" g="staff" p="16877">
-        <f n="share" o="ruda" g="staff" p="16877">
-          <f n="doc" o="ruda" g="staff" p="16877">
-            <f n="pycurl" o="ruda" g="staff" p="16877">
-              <f n="ChangeLog" o="ruda" g="staff" p="33188"/>
-              <f n="COPYING" o="ruda" g="staff" p="33188"/>
-              <f n="COPYING2" o="ruda" g="staff" p="33188"/>
-              <f n="examples" o="ruda" g="staff" p="16877">
-                <f n="basicfirst.py" o="ruda" g="staff" p="33188"/>
-                <f n="basicfirst.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="file_upload.py" o="ruda" g="staff" p="33188"/>
-                <f n="file_upload.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="linksys.py" o="ruda" g="staff" p="33261"/>
-                <f n="linksys.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="retriever-multi.py" o="ruda" g="staff" p="33188"/>
-                <f n="retriever-multi.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="retriever.py" o="ruda" g="staff" p="33188"/>
-                <f n="retriever.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="sfquery.py" o="ruda" g="staff" p="33188"/>
-                <f n="sfquery.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="xmlrpc_curl.py" o="ruda" g="staff" p="33188"/>
-                <f n="xmlrpc_curl.pyc" o="ruda" g="staff" p="33188"/>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="pycurl" o="root" g="wheel" p="16893">
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="html" o="ruda" g="staff" p="16877">
-                <f n="callbacks.html" o="ruda" g="staff" p="33188"/>
-                <f n="curlmultiobject.html" o="ruda" g="staff" p="33188"/>
-                <f n="curlobject.html" o="ruda" g="staff" p="33188"/>
-                <f n="curlshareobject.html" o="ruda" g="staff" p="33188"/>
-                <f n="pycurl.html" o="ruda" g="staff" p="33188"/>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="INSTALL" o="ruda" g="staff" p="33188"/>
-              <f n="README" o="ruda" g="staff" p="33188"/>
-              <f n="tests" o="ruda" g="staff" p="16877">
-                <f n="test.py" o="ruda" g="staff" p="33188"/>
-                <f n="test.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_cb.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_cb.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_debug.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_debug.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_ftp.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_ftp.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_getinfo.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_getinfo.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_gtk.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_gtk.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_internals.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_internals.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_memleak.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_memleak.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi2.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi2.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi3.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi3.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi4.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi4.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi5.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi5.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi6.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi6.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_socket.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_socket.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_socket_select.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_socket_select.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_timer.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_timer.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_vs_thread.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_multi_vs_thread.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_post.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_post.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_post2.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_post2.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_post3.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_post3.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_share.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_share.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_socketopen.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_socketopen.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_stringio.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_stringio.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="test_xmlrpc.py" o="ruda" g="staff" p="33188"/>
-                <f n="test_xmlrpc.pyc" o="ruda" g="staff" p="33188"/>
-                <f n="util.py" o="ruda" g="staff" p="33188"/>
-                <f n="util.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="COPYING2" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="TODO" o="ruda" g="staff" p="33188"/>
+              <f n="examples" o="root" g="wheel" p="16893">
+                <f n="basicfirst.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="basicfirst.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="file_upload.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="file_upload.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="linksys.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="linksys.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="retriever-multi.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="retriever-multi.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="retriever.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="retriever.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sfquery.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="sfquery.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xmlrpc_curl.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="xmlrpc_curl.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="html" o="root" g="wheel" p="16893">
+                <f n="callbacks.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="curlmultiobject.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="curlobject.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="curlshareobject.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pycurl.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tests" o="root" g="wheel" p="16893">
+                <f n="test.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_cb.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_cb.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_debug.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_debug.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_ftp.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_ftp.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_getinfo.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_getinfo.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_gtk.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_gtk.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_internals.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_internals.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_memleak.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_memleak.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi2.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi2.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi3.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi3.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi4.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi4.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi5.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi5.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi6.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi6.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_socket.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_socket.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_socket_select.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_socket_select.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_timer.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_timer.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_vs_thread.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_multi_vs_thread.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post2.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post2.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post3.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_post3.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_share.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_share.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_socketopen.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_socketopen.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_stringio.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_stringio.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_xmlrpc.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_xmlrpc.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="util.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="util.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

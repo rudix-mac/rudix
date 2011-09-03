@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Python interface to cURL library</description>
+  <description>PycURL is a Python interface to libcurl.
+
+Site: http://pycurl.sourceforge.net/
+License: LGPL or MIT
+
+Usage:
+&gt;&gt;&gt; import pycurl
+
+Changes from previous release:
+* Recompiled for Lion
+</description>
   <contents>
     <choice title="pycurl-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pycurl"/>
@@ -19,8 +29,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">pycurl-7.19.0/COPYING2</resource>
-      <resource relative="true" mod="true" type="readme">pycurl-7.19.0/README</resource>
+      <resource relative="true" mod="true" type="license">pycurl-build/COPYING2</resource>
+      <resource relative="true" mod="true" type="readme">pycurl-build/README</resource>
     </locale>
   </resources>
   <flags/>
