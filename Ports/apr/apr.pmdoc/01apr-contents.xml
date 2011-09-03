@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="apr-install" o="root" g="staff" p="16877" pt="apr-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="apr-1-config" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="apr-1" o="root" g="wheel" p="16893">
+            <f n="apr.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_allocator.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_atomic.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dso.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_env.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_errno.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_file_info.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_file_io.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_fnmatch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_general.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_getopt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_global_mutex.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_hash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_inherit.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_lib.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_mmap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_network_io.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_poll.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_pools.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_portable.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_proc_mutex.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_random.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ring.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_shm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_signal.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_strings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_support.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_tables.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_thread_cond.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_thread_mutex.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_thread_proc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_thread_rwlock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_time.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_user.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_want.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libapr-1.0.4.5.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libapr-1.0.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libapr-1.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libapr-1.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libapr-1.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="apr-1.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="apr-1" o="root" g="wheel" p="16893">
+            <f n="build-1" o="root" g="wheel" p="16893">
+              <f n="apr_rules.mk" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libtool" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="make_exports.awk" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="make_var_export.awk" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mkdir.sh" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="apr" o="root" g="wheel" p="16893">
+              <f n="APRDesign.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="canonical_filenames.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doxygen.conf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="incomplete_types" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="non_apr_programs" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NOTICE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pool-design.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win32_builds.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

@@ -1,0 +1,2 @@
+$ /usr/local/bin/apr-1-config --includes --link-ld --libs
+ -I/usr/local/include/apr-1  -L/usr/local/lib -lapr-1 -lpthread

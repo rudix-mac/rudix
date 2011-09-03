@@ -1,0 +1,2 @@
+Requires package [apr] installed.
+Mac OS X already comes with APR-util version 1.3.9 installed in `/usr`.

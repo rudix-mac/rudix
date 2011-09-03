@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="apr-util-install" o="root" g="staff" p="16877" pt="apr-util-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="apu-1-config" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="apr-1" o="root" g="wheel" p="16893">
+            <f n="apr_anylock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_base64.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_buckets.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_date.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dbd.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dbm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_hooks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ldap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ldap_init.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ldap_option.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ldap_rebind.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_ldap_url.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_md4.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_memcache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_optional.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_optional_hooks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_queue.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_reslist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_rmm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_sdbm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_sha1.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_strmatch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_thread_pool.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_uri.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_uuid.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_xlate.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_xml.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apu.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apu_version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apu_want.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="apr-util-1" o="root" g="wheel" p="16893">
+            <f n="apr_dbd_sqlite3-1.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dbd_sqlite3.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dbd_sqlite3.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="apr_dbd_sqlite3.so" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="aprutil.exp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libaprutil-1.0.3.12.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libaprutil-1.0.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libaprutil-1.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libaprutil-1.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libaprutil-1.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="apr-util-1.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="apr-util" o="root" g="wheel" p="16893">
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NOTICE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
