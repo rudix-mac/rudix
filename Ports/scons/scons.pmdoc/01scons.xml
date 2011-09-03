@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="FA7C22E8-4823-4383-9808-78F0F3D44F10">
+<pkgref spec="1.12" uuid="7350C799-D669-11E0-B6BD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.scons</identifier>
-    <version>2.0.1</version>
+    <version>2.0.1-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01scons-contents.xml</file-list>
