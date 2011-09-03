@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="05B63AC2-82F1-11E0-8A98-D49A200B3D20">
+  <config>
+    <identifier>org.rudix.pkg.pip</identifier>
+    <version>1.0.1-0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">pip-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+  </config>
+  <contents>
+    <file-list>01pip-contents.xml</file-list>
+    
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
