@@ -1,15 +1,12 @@
 include ../../Library/Rudix.mk
 
-Description=	Rudix Package Manager - RPM ;)
-Site=		http://rudix.org/
-License=	BSD
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	11.7
+Version=	11.9
 Revision=	0
 
-ReadMeFile=	$(PortDir)/ReadMe.md
-LicenseFile=	$(PortDir)/License.md
+ReadMeFile=	ReadMe.md
+LicenseFile=	License.md
 
 define retrieve_inner_hook
 touch retrieve

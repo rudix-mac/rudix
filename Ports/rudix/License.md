@@ -1,4 +1,4 @@
-Copyright (c) 2005-2011 Ruda Moura <ruda@rudix.org>
+Copyright (c) 2005-2011 Ruda Moura
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

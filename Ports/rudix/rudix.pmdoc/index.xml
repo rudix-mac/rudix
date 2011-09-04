@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Rudix Package Manager - RPM ;)</description>
+  <description>Rudix Package Manager - RPM ;)
+
+Site: http://rudix.org/
+License: BSD
+
+Usage:
+$ rudix
+
+Changes from previous release:
+* Fixed issue 97
+</description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rudix"/>
@@ -19,8 +29,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">/Users/ruda/Rudix/Ports/rudix/License.md</resource>
-      <resource relative="true" mod="true" type="readme">/Users/ruda/Rudix/Ports/rudix/ReadMe.md</resource>
+      <resource relative="true" mod="true" type="license">License.md</resource>
+      <resource relative="true" mod="true" type="readme">ReadMe.md</resource>
     </locale>
   </resources>
   <flags/>

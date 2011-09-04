@@ -14,8 +14,8 @@ by using its full package-id or with its alias. For example,
 
 Without any arguments provided, `rudix` prints a list of packages installed.
 
-Examples
---------
+Usage
+-----
 
     $ rudix -l			# list packages
     $ sudo rudix -i ctags	# install ctags

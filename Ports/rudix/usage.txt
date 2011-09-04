@@ -1,3 +1,0 @@
-$ rudix install rudix
-$ rudix search pip
-$ rudix help

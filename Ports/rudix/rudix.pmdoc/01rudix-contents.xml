@@ -24,7 +24,9 @@
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="rudix.1" o="root" g="wheel" p="33188"/>
+              <f n="rudix.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
