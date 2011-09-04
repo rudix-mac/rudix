@@ -134,11 +134,13 @@ def get_package_info(pkg):
             install_date = line[len('install-time: '):]
     return version, install_date
 
-def get_package_content(pkg):
+def get_package_content(pkg, filter_dirs=True):
     'Get a list of file names from package'
     pkg = normalize(pkg)
-    out = communicate(['pkgutil', '--files', pkg, '--only-files'])
+    out = communicate(['pkgutil', '--files', pkg])
     content = ['/'+line.strip() for line in out]
+    if filter_dirs:
+        content = [x for x in content if os.path.isfile(x)]
     return content
 
 def print_package_info(pkg):
@@ -177,18 +179,13 @@ def remove_package(pkg):
     if is_root() == False:
         return root_required()
     pkg = normalize(pkg)
-    devnull = open('/dev/null')
-    if OSX == '10.6':
-        call(['pkgutil', '--unlink', pkg, '-f'], stderr=devnull)
-    else:
-        for x in get_package_content(pkg):
-            try:
-                os.unlink(x)
-            except OSError, e:
-                pass
-                #print >> sys.stderr, e
-    call(['pkgutil', '--forget', pkg], stderr=devnull)
-    devnull.close()
+    for x in get_package_content(pkg):
+        try:
+            os.unlink(x)
+        except OSError, e:
+            print >> sys.stderr, e
+    with open('/dev/null') as devnull:
+        call(['pkgutil', '--forget', pkg], stderr=devnull)
 
 def remove_all_packages():
     'Uninstall all packages'
