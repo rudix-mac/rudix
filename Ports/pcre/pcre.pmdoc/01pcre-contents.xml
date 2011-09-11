@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pcre-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/pcre/pcre-install" m="false" t="file">
+  <f n="pcre-install" o="root" g="staff" p="16877" pt="pcre-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="pcre-config" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -216,6 +216,10 @@
                 <f n="pcretest.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
               <f n="LICENCE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -238,6 +242,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">

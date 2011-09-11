@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Perl-compatible regular expression library</description>
+  <description>The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
+
+Site: http://www.pcre.org/
+License: BSD
+
+Usage:
+$ pcre-config
+
+Changes from previous release:
+* Upgraded to version 8.13
+</description>
   <contents>
     <choice title="pcre-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pcre"/>

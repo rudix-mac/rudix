@@ -2,12 +2,9 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Perl-compatible regular expression library
-Site=		http://www.pcre.org/
-License=	BSD
 Title=		PCRE
 Name=		pcre
-Version=	8.12
+Version=	8.13
 Revision=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		$(Name)-$(Version).tar.bz2
