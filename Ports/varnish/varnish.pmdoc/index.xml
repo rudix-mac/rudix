@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Varnish</title>
+    <title>Varnish Cache</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>High-performance HTTP accelerator</description>
+  <description>Varnish Cache is an open source, state of the art web application accelerator. You install it on your web server and it makes your website fly.
+
+Site: http://varnish.projects.linpro.no/
+License: BSD
+
+Usage:
+$ /usr/local/sbin/varnishd
+
+Changes from previous release:
+* Upgraded to version 3.0.1
+</description>
   <contents>
     <choice title="varnish-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.varnish"/>
@@ -19,8 +29,8 @@
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">varnish-2.1.4/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">varnish-2.1.4/README</resource>
+      <resource relative="true" mod="true" type="license">varnish-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">varnish-build/README</resource>
     </locale>
   </resources>
   <flags/>
