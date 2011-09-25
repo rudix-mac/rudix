@@ -1,41 +1,33 @@
-# Robust and small HTTP server and mail proxy server
-# http://nginx.org/
-# BSD?
+include ../../Library/Config.mk
 
-include ../../Library/Rules.mk
+RUDIX_ENABLE_NLS=
 
-TITLE=		nginx $(VERSION)
-NAME=		nginx
-VERSION=	0.7.64
-REVISION=	0
+include ../../Library/Rudix.mk
+include ../../Library/ConfigureFormula.mk
+
+Title=		Nginx
+Name=		nginx
+Version=	1.0.6
+Revision=	0
 URL=		http://nginx.org/download/
-#URL=		http://downloads.sourceforge.net/template
-#URL=		http://ftp.gnu.org/gnu/template
-SOURCE=		$(NAME)-$(VERSION).tar.gz
-#SOURCE=	$(NAME)-$(VERSION).tar.bz2
-#SOURCE=	$(NAME)-$(VERSION).tar.Z
-#SOURCE=	$(NAME)-$(VERSION).zip
+Source=		$(Name)-$(Version).tar.gz
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
+ReadMeFile=	$(SourceDir)/README
+LicenseFIle=	$(SourceDir)/LICENSE
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	./configure ; $(make)
-	touch build
-
+ifdef FOO
 install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	rm -f $(INSTALLDIR)/usr/local/nginx/conf/{fastcgi_params,mime.types,nginx.conf}
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
+	rm -f $(InstallDir)$(Prefix)/nginx/conf/{fastcgi_params,mime.types,nginx.conf}
 	for x in index.html 50x.html ; do \
-		mv $(INSTALLDIR)/usr/local/nginx/html/$$x \
-		   $(INSTALLDIR)/usr/local/nginx/html/$$x.default ; done
-	strip $(INSTALLDIR)/usr/local/nginx/sbin/*
+		mv $(InstallDir)$(Prefix)/nginx/html/$$x \
+		   $(InstallDir)$(Prefix)/nginx/html/$$x.default ; done
+	strip $(InstallDir)$(Prefix)/nginx/sbin/*
 	touch install
 
 test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/nginx/sbin/*) ; do \
+	for x in $(wildcard $(InstallDir)$(Prefix)/nginx/sbin/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
-	cd $(BUILDDIR) ; make check
+	cd $(SourceDir) ; make check
 	touch test
+endif

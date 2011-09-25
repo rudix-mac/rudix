@@ -15,4 +15,5 @@ endef
 
 define test_inner_hook
 $(test_universal)
+cd $(BuildDir) ; $(make) test
 endef

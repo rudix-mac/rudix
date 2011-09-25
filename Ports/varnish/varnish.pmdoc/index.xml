@@ -35,6 +35,7 @@ Changes from previous release:
   </resources>
   <flags/>
   <item type="file">01varnish.xml</item>
+  <item type="file">01pcre.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

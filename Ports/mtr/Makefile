@@ -8,14 +8,14 @@ License=	GPL
 Title=		MTR
 Name=		mtr
 Version=	0.80
-Revision=	0
+Revision=	1
 URL=		ftp://ftp.bitwizard.nl/mtr/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-GnuConfigureExtra += --without-gtk
+ConfigureExtra += --without-gtk
 LdFlags += -lresolv
 
 define prep_post_hook

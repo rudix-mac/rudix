@@ -1,71 +1,73 @@
-# GIT - Tree History Storage Tool
-# http://git.or.cz/
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		git
-VERSION=	1.7.4.1
-REVISION=	0
+Name=		git
+Version=	1.7.6.1
+Revision=	0
 URL=		http://www.kernel.org/pub/software/scm/git/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
+define retrieve_post_hook
+$(FETCH) $(URL)/git-manpages-$(Version).tar.bz2
+endef
+
+ifdef FOO
 retrieve:
-	$(FETCH) $(URL)/$(SOURCE)
-	$(FETCH) $(URL)/git-manpages-$(VERSION).tar.bz2
+	$(FETCH) $(URL)/$(Source)
+
 	touch retrieve
 
 prep: retrieve
-	tar jxf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/Makefile.patch
+	tar jxf $(Source)
+	cd $(SourceDir) ; patch < $(PortDir)/Makefile.patch
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; make configure ; \
+	cd $(SourceDir) ; make configure ; \
 	env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" $(configure) ; $(make)
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install #install-doc
-	rm -rf $(INSTALLDIR)/usr/local/Library
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install #install-doc
+	rm -rf $(InstallDir)$(Prefix)/Library
 	# Place Git application in the right folder
-	install -d $(INSTALLDIR)/Applications
-	mv $(INSTALLDIR)/usr/local/share/git-gui/lib/Git\ Gui.app \
-		$(INSTALLDIR)/Applications
+	install -d $(InstallDir)/Applications
+	mv $(InstallDir)$(Prefix)/share/git-gui/lib/Git\ Gui.app \
+		$(InstallDir)/Applications
 	# Fix Python module position
-	install -d $(INSTALLDIR)/Library/Python/2.6
-	mv $(INSTALLDIR)/usr/local/lib/python2.6/site-packages \
-		$(INSTALLDIR)/Library/Python/2.6
-	rmdir $(INSTALLDIR)/usr/local/lib/python2.6
+	install -d $(InstallDir)/Library/Python/2.6
+	mv $(InstallDir)$(LibDir)/python2.6/site-packages \
+		$(InstallDir)/Library/Python/2.6
+	rmdir $(InstallDir)$(LibDir)/python2.6
 	# Fix Perl module position
-	install -d $(INSTALLDIR)/Library/Perl/Updates/5.10.0
-	mv $(INSTALLDIR)/usr/local/lib/perl5/site_perl/*.pm \
-		$(INSTALLDIR)/Library/Perl/Updates/5.10.0
+	install -d $(InstallDir)/Library/Perl/Updates/5.10.0
+	mv $(InstallDir)$(LibDir)/perl5/site_perl/*.pm \
+		$(InstallDir)/Library/Perl/Updates/5.10.0
 	# Nothing interesting is resting here
-	rm -rf $(INSTALLDIR)/usr/local/lib
-	rm -rf $(INSTALLDIR)/usr/local/share/info
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,README} $(INSTALLDOCDIR)
+	rm -rf $(InstallDir)$(LibDir)
+	rm -rf $(InstallDir)$(Prefix)/share/info
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{COPYING,ReadMeFile} $(InstallDir)/$(DocDir)/$(Name)
 	# Manpages
-	install -d $(INSTALLDIR)/usr/local/share/man
-	tar jxf $(PORTDIR)/git-manpages-$(VERSION).tar.bz2 \
-		-C $(INSTALLDIR)/usr/local/share/man
+	install -d $(InstallDir)$(Prefix)/share/man
+	tar jxf $(PortDir)/git-manpages-$(Version).tar.bz2 \
+		-C $(InstallDir)$(Prefix)/share/man
 	# Strip
-	find $(INSTALLDIR)/usr/local/bin -type f -exec strip {} \;
-	find $(INSTALLDIR)/usr/local/libexec/git-core -type f -exec strip {} \;
+	find $(InstallDir)$(BinDir) -type f -exec strip {} \;
+	find $(InstallDir)$(LibDir)exec/git-core -type f -exec strip {} \;
 	touch install
 
 test: install
 	for x in git git-receive-pack git-shell git-upload-archive git-upload-pack ; do \
-		lipo $(INSTALLDIR)/usr/local/bin/$$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/libexec/git-core/*) ; do \
+		lipo $(InstallDir)$(BinDir)/$$x -verify_arch i386 x86_64 ; done
+	for x in $(wildcard $(InstallDir)$(LibDir)exec/git-core/*) ; do \
 		lipo $$x -verify_arch i386 x86_64 ; done
 	# FIXME: /bin/sh: sparse: command not found
-	#cd $(BUILDDIR) ; make check
+	#cd $(SourceDir) ; make check
 	touch test
 
-realdistclean: distclean
-	rm -f retrieve $(SOURCE) git-manpages-$(VERSION).tar.bz2
+endif

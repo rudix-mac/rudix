@@ -1,20 +1,16 @@
-# University of Washington IMAP4rev1/POP2/POP3 mail servers
-# http://www.washington.edu/imap/
-# Apache License 2.0
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		imap
-VERSION=	2007e
-REVISION=	2
+Name=		imap
+Version=	2007f
+Revision=	0
 URL=		ftp://ftp.cac.washington.edu/mail/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	patch -d $(BUILDDIR) -p1 < $(PORTDIR)/pam.patch
-	touch prep
+MakeExtra += EXTRACFLAGS="$(CFlags)" oxp
 
+ifdef FOO
 build: prep $(DEPENDS)
 	cd $(BUILDDIR) ; make EXTRACFLAGS="$(CFLAGS)" oxp
 	touch build
@@ -48,8 +44,4 @@ install: build
 	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
 	touch install
 
-test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/sbin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	touch test
+endif
