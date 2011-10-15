@@ -1,12 +1,12 @@
+The Next Generation Download Utility
+
 aria2 is a lightweight multi-protocol & multi-source download utility operated in command-line.
 
 Changes from previous release:
-* Upgraded to version 1.12.1
+* Upgraded to version 1.13.0
 
 Site: http://aria2.sourceforge.net/
 License: GPL
 
 Usage:
-$ aria2 http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
-$ aria2 --help
-$ man aria2
+$ aria2c http://rudix.googlecode.com/hg/Ports/rudix/rudix.py

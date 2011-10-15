@@ -4,7 +4,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		aria2
 Name=		aria2
-Version=	1.12.1
+Version=	1.13.0
 Revision=	0
 URL=		http://downloads.sourceforge.net/aria2
 Source=		$(Name)-$(Version).tar.bz2

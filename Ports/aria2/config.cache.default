@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_bigendian=${ac_cv_c_bigendian=universal}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_const=${ac_cv_c_const=yes}
@@ -119,8 +119,6 @@ ac_cv_func_getpagesize=${ac_cv_func_getpagesize=yes}
 ac_cv_func_gettimeofday=${ac_cv_func_gettimeofday=yes}
 ac_cv_func_getuid=${ac_cv_func_getuid=yes}
 ac_cv_func_inet_aton=${ac_cv_func_inet_aton=yes}
-ac_cv_func_inet_ntoa=${ac_cv_func_inet_ntoa=yes}
-ac_cv_func_inet_ntop=${ac_cv_func_inet_ntop=yes}
 ac_cv_func_kqueue=${ac_cv_func_kqueue=yes}
 ac_cv_func_localtime_r=${ac_cv_func_localtime_r=yes}
 ac_cv_func_lstat_dereferences_slashed_symlink=${ac_cv_func_lstat_dereferences_slashed_symlink=no}
@@ -174,6 +172,7 @@ ac_cv_func_unsetenv=${ac_cv_func_unsetenv=yes}
 ac_cv_func_uselocale=${ac_cv_func_uselocale=yes}
 ac_cv_func_usleep=${ac_cv_func_usleep=yes}
 ac_cv_func_utime=${ac_cv_func_utime=yes}
+ac_cv_func_utimes=${ac_cv_func_utimes=yes}
 ac_cv_func_vfork=${ac_cv_func_vfork=yes}
 ac_cv_func_vfork_works=${ac_cv_func_vfork_works=yes}
 ac_cv_func_vprintf=${ac_cv_func_vprintf=yes}
@@ -228,7 +227,7 @@ ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_header_utime_h=${ac_cv_header_utime_h=yes}
 ac_cv_header_vfork_h=${ac_cv_header_vfork_h=no}
 ac_cv_header_wchar_h=${ac_cv_header_wchar_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_lib_cares_ares_init=${ac_cv_lib_cares_ares_init=no}
 ac_cv_lib_crypto_main=${ac_cv_lib_crypto_main=yes}
 ac_cv_lib_error_at_line=${ac_cv_lib_error_at_line=no}
@@ -265,7 +264,7 @@ ac_cv_search_clock_gettime=${ac_cv_search_clock_gettime=no}
 ac_cv_struct_tm=${ac_cv_struct_tm=time.h}
 ac_cv_sys_file_offset_bits=${ac_cv_sys_file_offset_bits=no}
 ac_cv_sys_largefile_CC=${ac_cv_sys_largefile_CC=no}
-ac_cv_target=${ac_cv_target=x86_64-apple-darwin11.1.0}
+ac_cv_target=${ac_cv_target=x86_64-apple-darwin11.2.0}
 ac_cv_type__Bool=${ac_cv_type__Bool=no}
 ac_cv_type_long_long_int=${ac_cv_type_long_long_int=yes}
 ac_cv_type_mode_t=${ac_cv_type_mode_t=yes}
