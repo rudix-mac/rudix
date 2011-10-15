@@ -4,8 +4,8 @@ include ../../Library/GNUFormula.mk
 
 Title=		AsciiDoc
 Name=		asciidoc
-Version=	8.6.5
-Revision=	1
+Version=	8.6.6
+Revision=	0
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
