@@ -1,105 +1,264 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="autoconf-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/autoconf/autoconf-install" m="false" t="file">
+  <f n="autoconf-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/autoconf/autoconf-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="autoconf" o="root" g="wheel" p="33277"/>
-          <f n="autoheader" o="root" g="wheel" p="33277"/>
-          <f n="autom4te" o="root" g="wheel" p="33277"/>
-          <f n="autoreconf" o="root" g="wheel" p="33277"/>
-          <f n="autoscan" o="root" g="wheel" p="33277"/>
-          <f n="autoupdate" o="root" g="wheel" p="33277"/>
-          <f n="ifnames" o="root" g="wheel" p="33277"/>
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="autoconf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="autoheader" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="autom4te" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="autoreconf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="autoscan" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="autoupdate" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ifnames" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="autoconf" o="root" g="wheel" p="16893">
             <f n="autoconf" o="root" g="wheel" p="16893">
-              <f n="autoconf.m4" o="root" g="wheel" p="33204"/>
-              <f n="autoconf.m4f" o="root" g="wheel" p="33204"/>
-              <f n="autoheader.m4" o="root" g="wheel" p="33204"/>
-              <f n="autoscan.m4" o="root" g="wheel" p="33204"/>
-              <f n="autotest.m4" o="root" g="wheel" p="33204"/>
-              <f n="autoupdate.m4" o="root" g="wheel" p="33204"/>
-              <f n="c.m4" o="root" g="wheel" p="33204"/>
-              <f n="erlang.m4" o="root" g="wheel" p="33204"/>
-              <f n="fortran.m4" o="root" g="wheel" p="33204"/>
-              <f n="functions.m4" o="root" g="wheel" p="33204"/>
-              <f n="general.m4" o="root" g="wheel" p="33204"/>
-              <f n="headers.m4" o="root" g="wheel" p="33204"/>
-              <f n="lang.m4" o="root" g="wheel" p="33204"/>
-              <f n="libs.m4" o="root" g="wheel" p="33204"/>
-              <f n="oldnames.m4" o="root" g="wheel" p="33204"/>
-              <f n="programs.m4" o="root" g="wheel" p="33204"/>
-              <f n="specific.m4" o="root" g="wheel" p="33204"/>
-              <f n="status.m4" o="root" g="wheel" p="33204"/>
-              <f n="types.m4" o="root" g="wheel" p="33204"/>
+              <f n="autoconf.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoconf.m4f" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoheader.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoscan.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autotest.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoupdate.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="c.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="erlang.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fortran.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="functions.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="general.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="headers.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lang.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libs.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="oldnames.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="programs.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="specific.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="status.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="types.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="Autom4te" o="root" g="wheel" p="16893">
-              <f n="C4che.pm" o="root" g="wheel" p="33204"/>
-              <f n="ChannelDefs.pm" o="root" g="wheel" p="33204"/>
-              <f n="Channels.pm" o="root" g="wheel" p="33204"/>
-              <f n="Configure_ac.pm" o="root" g="wheel" p="33204"/>
-              <f n="FileUtils.pm" o="root" g="wheel" p="33204"/>
-              <f n="General.pm" o="root" g="wheel" p="33204"/>
-              <f n="Request.pm" o="root" g="wheel" p="33204"/>
-              <f n="Struct.pm" o="root" g="wheel" p="33204"/>
-              <f n="XFile.pm" o="root" g="wheel" p="33204"/>
+              <f n="C4che.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChannelDefs.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Channels.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Configure_ac.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FileUtils.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="General.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Request.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Struct.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XFile.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="autom4te.cfg" o="root" g="wheel" p="33204"/>
+            <f n="autom4te.cfg" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="autoscan" o="root" g="wheel" p="16893">
-              <f n="autoscan.list" o="root" g="wheel" p="33204"/>
+              <f n="autoscan.list" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="autotest" o="root" g="wheel" p="16893">
-              <f n="autotest.m4" o="root" g="wheel" p="33204"/>
-              <f n="autotest.m4f" o="root" g="wheel" p="33204"/>
-              <f n="general.m4" o="root" g="wheel" p="33204"/>
-              <f n="specific.m4" o="root" g="wheel" p="33204"/>
+              <f n="autotest.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autotest.m4f" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="general.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="specific.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="INSTALL" o="root" g="wheel" p="33204"/>
+            <f n="INSTALL" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="m4sugar" o="root" g="wheel" p="16893">
-              <f n="foreach.m4" o="root" g="wheel" p="33204"/>
-              <f n="m4sh.m4" o="root" g="wheel" p="33204"/>
-              <f n="m4sh.m4f" o="root" g="wheel" p="33204"/>
-              <f n="m4sugar.m4" o="root" g="wheel" p="33204"/>
-              <f n="m4sugar.m4f" o="root" g="wheel" p="33204"/>
-              <f n="version.m4" o="root" g="wheel" p="33204"/>
+              <f n="foreach.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="m4sh.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="m4sh.m4f" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="m4sugar.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="m4sugar.m4f" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="version.m4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="autoconf" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="THANKS" o="root" g="wheel" p="33204"/>
-              <f n="TODO" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.2" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.EXCEPTION" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYINGv3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="emacs" o="root" g="wheel" p="16893">
             <f n="site-lisp" o="root" g="wheel" p="16893">
-              <f n="autoconf-mode.el" o="root" g="wheel" p="33204"/>
-              <f n="autoconf-mode.elc" o="root" g="wheel" p="33204"/>
-              <f n="autotest-mode.el" o="root" g="wheel" p="33204"/>
-              <f n="autotest-mode.elc" o="root" g="wheel" p="33204"/>
+              <f n="autoconf-mode.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoconf-mode.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autotest-mode.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autotest-mode.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
-            <f n="autoconf.info" o="root" g="wheel" p="33204"/>
-            <f n="standards.info" o="root" g="wheel" p="33204"/>
+            <f n="autoconf.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="standards.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="autoconf.1" o="root" g="wheel" p="33204"/>
-              <f n="autoheader.1" o="root" g="wheel" p="33204"/>
-              <f n="autom4te.1" o="root" g="wheel" p="33204"/>
-              <f n="autoreconf.1" o="root" g="wheel" p="33204"/>
-              <f n="autoscan.1" o="root" g="wheel" p="33204"/>
-              <f n="autoupdate.1" o="root" g="wheel" p="33204"/>
-              <f n="config.guess.1" o="root" g="wheel" p="33204"/>
-              <f n="config.sub.1" o="root" g="wheel" p="33204"/>
-              <f n="ifnames.1" o="root" g="wheel" p="33204"/>
+              <f n="autoconf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoheader.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autom4te.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoreconf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoscan.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="autoupdate.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.guess.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.sub.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ifnames.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>

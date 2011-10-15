@@ -2,13 +2,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://www.gnu.org/software/autoconf/
-License=	GPL
-Description=	Automatically configure source code on many Un*x platforms
-Title=		GNU Autoconf $(Version)
+Title=		GNU Autoconf
 Name=		autoconf
 Version=	2.68
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/autoconf/
 Source=		$(Name)-$(Version).tar.bz2
 
