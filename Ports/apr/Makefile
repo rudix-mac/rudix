@@ -2,9 +2,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://apr.apache.org/
-License=	Apache License
-Description=	Apache Portable Runtime library
 Title=		APR
 Name=		apr
 Version=	1.4.5

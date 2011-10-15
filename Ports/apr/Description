@@ -1,0 +1,12 @@
+Apache Portable Runtime library
+
+Changes from previous release:
+* Upgraded to version 1.4.5
+
+Site: http://apr.apache.org/
+License: Apache License
+
+Usage:
+$ /usr/local/bin/apr-1-config --version
+1.4.5
+
