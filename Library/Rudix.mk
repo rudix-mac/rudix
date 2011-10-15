@@ -1,8 +1,8 @@
 # Rudix.mk - The BuildSystem itself
-# Copyright (c) 2011 Ruda Moura
+# Copyright (c) 2005-2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20110901
+BuildSystem = 20111015
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -132,7 +132,20 @@ upload: pkg
 	twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)"
 	@$(call info_color,Finished)
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload
+help:
+	@echo "Construction rules:"
+	@echo "  retrieve - Retrieve source to compile"
+	@echo "  prep - After retrieve, prepare source to compile"
+	@echo "  build - After prep, build source code"
+	@echo "  install - After built, install into a temporary directory"
+	@echo "  test - After installed, run tests"
+	@echo "  pkg - After installed and tested, create package"
+	@echo "Clean-up rules:"
+	@echo "  clean - Clean up until retrieve"
+	@echo "  distclean - After clean, remove config.cache and package"
+	@echo "  realdistclean - After distclean, remove source"
+
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload help
 
 #
 # Functions
@@ -191,7 +204,7 @@ endef
 
 define sanitize_pmdoc
 for x in $(Name).pmdoc/*-contents.xml ; do \
-	perl -p -i -e 's/o="$(USER)"/o="root"/ ; s/pt="[^"]*"/pt="$(InstallDir)"/' $$x ; done
+	perl -p -i -e 's/o="$(USER)"/o="root"/' $$x ; done
 for x in $(Name).pmdoc/*.xml ; do \
 	xmllint --format --output $$x $$x ; done
 endef
