@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E6FED962-7BE6-44E5-8230-227D306CBDCD">
+<pkgref spec="1.12" uuid="0F95D459-F770-11E0-8810-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.automake</identifier>
-    <version>1.10.1</version>
+    <version>1.11.1-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>installTo</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01automake-contents.xml</file-list>

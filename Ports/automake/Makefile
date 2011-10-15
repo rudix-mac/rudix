@@ -5,13 +5,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://www.gnu.org/software/automake/
-License=	GPL
-Description=	GNU standards-compliant Makefile generator
-Title=		GNU Automake $(Version)
+Title=		GNU Automake
 Name=		automake
 Version=	1.11.1
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/automake/
 Source=		$(Name)-$(Version).tar.bz2
 

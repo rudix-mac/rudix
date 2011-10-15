@@ -1,163 +1,458 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="automake-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/automake/automake-install" m="false" t="file">
+  <f n="automake-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/automake/automake-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="aclocal" o="root" g="wheel" p="33277"/>
-          <f n="aclocal-1.11" o="root" g="wheel" p="33277"/>
-          <f n="automake" o="root" g="wheel" p="33277"/>
-          <f n="automake-1.11" o="root" g="wheel" p="33277"/>
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="aclocal-1.11" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="automake" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="automake-1.11" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="aclocal-1.11" o="root" g="wheel" p="16893">
-            <f n="amversion.m4" o="root" g="wheel" p="33204"/>
-            <f n="as.m4" o="root" g="wheel" p="33204"/>
-            <f n="auxdir.m4" o="root" g="wheel" p="33204"/>
-            <f n="ccstdc.m4" o="root" g="wheel" p="33204"/>
-            <f n="cond-if.m4" o="root" g="wheel" p="33204"/>
-            <f n="cond.m4" o="root" g="wheel" p="33204"/>
-            <f n="depend.m4" o="root" g="wheel" p="33204"/>
-            <f n="depout.m4" o="root" g="wheel" p="33204"/>
-            <f n="dmalloc.m4" o="root" g="wheel" p="33204"/>
-            <f n="gcj.m4" o="root" g="wheel" p="33204"/>
-            <f n="header.m4" o="root" g="wheel" p="33204"/>
-            <f n="init.m4" o="root" g="wheel" p="33204"/>
-            <f n="install-sh.m4" o="root" g="wheel" p="33204"/>
-            <f n="lead-dot.m4" o="root" g="wheel" p="33204"/>
-            <f n="lex.m4" o="root" g="wheel" p="33204"/>
-            <f n="lispdir.m4" o="root" g="wheel" p="33204"/>
-            <f n="maintainer.m4" o="root" g="wheel" p="33204"/>
-            <f n="make.m4" o="root" g="wheel" p="33204"/>
-            <f n="minuso.m4" o="root" g="wheel" p="33204"/>
-            <f n="missing.m4" o="root" g="wheel" p="33204"/>
-            <f n="mkdirp.m4" o="root" g="wheel" p="33204"/>
-            <f n="multi.m4" o="root" g="wheel" p="33204"/>
-            <f n="obsol-gt.m4" o="root" g="wheel" p="33204"/>
-            <f n="obsol-lt.m4" o="root" g="wheel" p="33204"/>
-            <f n="obsolete.m4" o="root" g="wheel" p="33204"/>
-            <f n="options.m4" o="root" g="wheel" p="33204"/>
-            <f n="protos.m4" o="root" g="wheel" p="33204"/>
-            <f n="python.m4" o="root" g="wheel" p="33204"/>
-            <f n="regex.m4" o="root" g="wheel" p="33204"/>
-            <f n="runlog.m4" o="root" g="wheel" p="33204"/>
-            <f n="sanity.m4" o="root" g="wheel" p="33204"/>
-            <f n="silent.m4" o="root" g="wheel" p="33204"/>
-            <f n="strip.m4" o="root" g="wheel" p="33204"/>
-            <f n="substnot.m4" o="root" g="wheel" p="33204"/>
-            <f n="tar.m4" o="root" g="wheel" p="33204"/>
-            <f n="upc.m4" o="root" g="wheel" p="33204"/>
-            <f n="vala.m4" o="root" g="wheel" p="33204"/>
+            <f n="amversion.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="as.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auxdir.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ccstdc.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cond-if.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cond.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="depend.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="depout.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dmalloc.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gcj.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="header.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="init.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="install-sh.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lead-dot.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lex.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lispdir.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maintainer.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="make.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="minuso.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="missing.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkdirp.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="multi.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="obsol-gt.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="obsol-lt.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="obsolete.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="options.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="protos.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="python.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="regex.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="runlog.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sanity.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="silent.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strip.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="substnot.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tar.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="upc.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vala.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="automake-1.11" o="root" g="wheel" p="16893">
-            <f n="acinstall" o="root" g="wheel" p="33277"/>
+            <f n="acinstall" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
             <f n="am" o="root" g="wheel" p="16893">
-              <f n="ansi2knr.am" o="root" g="wheel" p="33204"/>
-              <f n="check.am" o="root" g="wheel" p="33204"/>
-              <f n="check2.am" o="root" g="wheel" p="33204"/>
-              <f n="clean-hdr.am" o="root" g="wheel" p="33204"/>
-              <f n="clean.am" o="root" g="wheel" p="33204"/>
-              <f n="compile.am" o="root" g="wheel" p="33204"/>
-              <f n="configure.am" o="root" g="wheel" p="33204"/>
-              <f n="data.am" o="root" g="wheel" p="33204"/>
-              <f n="dejagnu.am" o="root" g="wheel" p="33204"/>
-              <f n="depend.am" o="root" g="wheel" p="33204"/>
-              <f n="depend2.am" o="root" g="wheel" p="33204"/>
-              <f n="distdir.am" o="root" g="wheel" p="33204"/>
-              <f n="footer.am" o="root" g="wheel" p="33204"/>
-              <f n="header-vars.am" o="root" g="wheel" p="33204"/>
-              <f n="header.am" o="root" g="wheel" p="33204"/>
-              <f n="inst-vars.am" o="root" g="wheel" p="33204"/>
-              <f n="install.am" o="root" g="wheel" p="33204"/>
-              <f n="java.am" o="root" g="wheel" p="33204"/>
-              <f n="lang-compile.am" o="root" g="wheel" p="33204"/>
-              <f n="lex.am" o="root" g="wheel" p="33204"/>
-              <f n="library.am" o="root" g="wheel" p="33204"/>
-              <f n="libs.am" o="root" g="wheel" p="33204"/>
-              <f n="libtool.am" o="root" g="wheel" p="33204"/>
-              <f n="lisp.am" o="root" g="wheel" p="33204"/>
-              <f n="ltlib.am" o="root" g="wheel" p="33204"/>
-              <f n="ltlibrary.am" o="root" g="wheel" p="33204"/>
-              <f n="mans-vars.am" o="root" g="wheel" p="33204"/>
-              <f n="mans.am" o="root" g="wheel" p="33204"/>
-              <f n="multilib.am" o="root" g="wheel" p="33204"/>
-              <f n="program.am" o="root" g="wheel" p="33204"/>
-              <f n="progs.am" o="root" g="wheel" p="33204"/>
-              <f n="python.am" o="root" g="wheel" p="33204"/>
-              <f n="remake-hdr.am" o="root" g="wheel" p="33204"/>
-              <f n="scripts.am" o="root" g="wheel" p="33204"/>
-              <f n="subdirs.am" o="root" g="wheel" p="33204"/>
-              <f n="tags.am" o="root" g="wheel" p="33204"/>
-              <f n="texi-vers.am" o="root" g="wheel" p="33204"/>
-              <f n="texibuild.am" o="root" g="wheel" p="33204"/>
-              <f n="texinfos.am" o="root" g="wheel" p="33204"/>
-              <f n="vala.am" o="root" g="wheel" p="33204"/>
-              <f n="yacc.am" o="root" g="wheel" p="33204"/>
+              <f n="ansi2knr.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="check.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="check2.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clean-hdr.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clean.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="compile.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="configure.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="data.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dejagnu.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="depend.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="depend2.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="distdir.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="footer.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="header-vars.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="header.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="inst-vars.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="install.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="java.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lang-compile.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lex.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="library.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libs.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libtool.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lisp.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ltlib.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ltlibrary.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mans-vars.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mans.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="multilib.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="program.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="progs.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="python.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="remake-hdr.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="scripts.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="subdirs.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tags.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="texi-vers.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="texibuild.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="texinfos.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vala.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yacc.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="ansi2knr.1" o="root" g="wheel" p="33204"/>
-            <f n="ansi2knr.c" o="root" g="wheel" p="33204"/>
+            <f n="ansi2knr.1" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ansi2knr.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="Automake" o="root" g="wheel" p="16893">
-              <f n="ChannelDefs.pm" o="root" g="wheel" p="33204"/>
-              <f n="Channels.pm" o="root" g="wheel" p="33204"/>
-              <f n="Condition.pm" o="root" g="wheel" p="33204"/>
-              <f n="Config.pm" o="root" g="wheel" p="33204"/>
-              <f n="Configure_ac.pm" o="root" g="wheel" p="33204"/>
-              <f n="DisjConditions.pm" o="root" g="wheel" p="33204"/>
-              <f n="FileUtils.pm" o="root" g="wheel" p="33204"/>
-              <f n="General.pm" o="root" g="wheel" p="33204"/>
-              <f n="Item.pm" o="root" g="wheel" p="33204"/>
-              <f n="ItemDef.pm" o="root" g="wheel" p="33204"/>
-              <f n="Location.pm" o="root" g="wheel" p="33204"/>
-              <f n="Options.pm" o="root" g="wheel" p="33204"/>
-              <f n="Rule.pm" o="root" g="wheel" p="33204"/>
-              <f n="RuleDef.pm" o="root" g="wheel" p="33204"/>
-              <f n="Struct.pm" o="root" g="wheel" p="33204"/>
-              <f n="VarDef.pm" o="root" g="wheel" p="33204"/>
-              <f n="Variable.pm" o="root" g="wheel" p="33204"/>
-              <f n="Version.pm" o="root" g="wheel" p="33204"/>
-              <f n="Wrap.pm" o="root" g="wheel" p="33204"/>
-              <f n="XFile.pm" o="root" g="wheel" p="33204"/>
+              <f n="ChannelDefs.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Channels.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Condition.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Config.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Configure_ac.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="DisjConditions.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FileUtils.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="General.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Item.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ItemDef.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Location.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Options.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Rule.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="RuleDef.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Struct.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="VarDef.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Variable.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Version.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Wrap.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XFile.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="compile" o="root" g="wheel" p="33277"/>
-            <f n="config-ml.in" o="root" g="wheel" p="33204"/>
-            <f n="config.guess" o="root" g="wheel" p="33277"/>
-            <f n="config.sub" o="root" g="wheel" p="33277"/>
-            <f n="COPYING" o="root" g="wheel" p="33204"/>
-            <f n="depcomp" o="root" g="wheel" p="33277"/>
-            <f n="elisp-comp" o="root" g="wheel" p="33277"/>
-            <f n="INSTALL" o="root" g="wheel" p="33204"/>
-            <f n="install-sh" o="root" g="wheel" p="33277"/>
-            <f n="mdate-sh" o="root" g="wheel" p="33277"/>
-            <f n="missing" o="root" g="wheel" p="33277"/>
-            <f n="mkinstalldirs" o="root" g="wheel" p="33277"/>
-            <f n="py-compile" o="root" g="wheel" p="33277"/>
-            <f n="symlink-tree" o="root" g="wheel" p="33277"/>
-            <f n="texinfo.tex" o="root" g="wheel" p="33204"/>
-            <f n="ylwrap" o="root" g="wheel" p="33277"/>
+            <f n="compile" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="config-ml.in" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config.guess" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="config.sub" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="COPYING" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="depcomp" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="elisp-comp" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="INSTALL" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="install-sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mdate-sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="missing" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mkinstalldirs" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="py-compile" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="symlink-tree" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="texinfo.tex" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ylwrap" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="automake" o="root" g="wheel" p="16893">
-              <f n="amhello-1.0.tar.gz" o="root" g="wheel" p="33204"/>
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="THANKS" o="root" g="wheel" p="33204"/>
-              <f n="TODO" o="root" g="wheel" p="33204"/>
+              <f n="amhello-1.0.tar.gz" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.00" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.01" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.02" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.03" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.04" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.96" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.98" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
-            <f n="automake.info" o="root" g="wheel" p="33204"/>
-            <f n="automake.info-1" o="root" g="wheel" p="33204"/>
-            <f n="automake.info-2" o="root" g="wheel" p="33204"/>
+            <f n="automake.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="automake.info-1" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="automake.info-2" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="aclocal-1.11.1" o="root" g="wheel" p="33204"/>
-              <f n="aclocal.1" o="root" g="wheel" p="33204"/>
-              <f n="automake-1.11.1" o="root" g="wheel" p="33204"/>
-              <f n="automake.1" o="root" g="wheel" p="33204"/>
+              <f n="aclocal-1.11.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="aclocal.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="automake-1.11.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="automake.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>
