@@ -4,9 +4,6 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://apr.apache.org/
-License=	Apache License
-Description=	Companion library to APR
 Title=		APR-util
 Name=		apr-util
 Version=	1.3.12
