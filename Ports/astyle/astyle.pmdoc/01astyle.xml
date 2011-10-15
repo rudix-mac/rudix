@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01astyle-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
