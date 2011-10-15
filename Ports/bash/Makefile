@@ -2,13 +2,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://www.gnu.org/software/bash/
-License=	GPL
-Description=	GNU Bourne Again Shell
 Title=		GNU Bash
 Name=		bash
 Version=	4.2
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 

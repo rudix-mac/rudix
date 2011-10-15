@@ -1,0 +1,11 @@
+Bash is the shell, or command language interpreter, that will appear in the GNU operating system. 
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://www.gnu.org/software/bash/
+License: GPL
+
+Usage:
+$ bash4
+

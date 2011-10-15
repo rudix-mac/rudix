@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="bash-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/bash/bash-install" m="false" t="file">
+  <f n="bash-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/bash/bash-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="bash" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="bash4" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
           <f n="bashbug" o="root" g="wheel" p="33277">
@@ -17,6 +20,9 @@
               <f n="AUTHORS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="CHANGES" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -26,10 +32,10 @@
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="NEWS" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="NOTES" o="root" g="wheel" p="33204">
+              <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="POSIX" o="root" g="wheel" p="33204">
@@ -58,7 +64,9 @@
                 <f n="bash.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="bg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -228,7 +236,21 @@
                 </f>
               </f>
             </f>
+            <f n="uk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
             <f n="vi" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="bash.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="zh_CN" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="bash.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -246,6 +268,9 @@
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
               <f n="bash.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bash4.1" o="root" g="wheel" p="41396">
                 <mod>mode</mod>
               </f>
               <f n="bashbug.1" o="root" g="wheel" p="33204">

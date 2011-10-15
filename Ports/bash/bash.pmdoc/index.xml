@@ -11,7 +11,18 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU Bourne Again Shell</description>
+  <description>Bash is the shell, or command language interpreter, that will appear in the GNU operating system. 
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://www.gnu.org/software/bash/
+License: GPL
+
+Usage:
+$ bash4
+
+</description>
   <contents>
     <choice title="bash-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.bash"/>
