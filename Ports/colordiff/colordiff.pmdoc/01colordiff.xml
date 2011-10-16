@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="F2989FCC-BBE5-11E0-B8D9-D49A200B3D20">
+<pkgref spec="1.12" uuid="DC4B38CA-F83E-11E0-BCC3-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.colordiff</identifier>
-    <version>1.0.9-1</version>
+    <version>1.0.9-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01colordiff-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

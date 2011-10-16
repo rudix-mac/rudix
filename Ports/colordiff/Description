@@ -1,0 +1,10 @@
+Colour-highlighted diff output.
+
+Changes from previous release:
+* Rebuilt
+
+Site: http://colordiff.sourceforge.net/
+License: GPL
+
+Usage:
+$ colordiff
