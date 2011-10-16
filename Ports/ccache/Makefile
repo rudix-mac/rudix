@@ -2,12 +2,9 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Site=		http://ccache.samba.org/
-License=	GPL
-Description=	Compiler cache
 Title=		ccache
 Name=		ccache
-Version=	3.1.5
+Version=	3.1.6
 Revision=	0
 URL=		http://samba.org/ftp/ccache/
 Source=		$(Name)-$(Version).tar.bz2

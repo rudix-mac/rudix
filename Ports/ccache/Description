@@ -1,0 +1,10 @@
+ccache is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again. Supported languages are C, C++, Objective-C and Objective-C++.
+
+Changes from previous release:
+* Upgraded to version 3.1.6
+
+Site: http://ccache.samba.org/
+License: GPL
+
+Usage:
+$ ccache

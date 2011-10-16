@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Compiler cache</description>
+  <description>ccache is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again. Supported languages are C, C++, Objective-C and Objective-C++.
+
+Changes from previous release:
+* Upgraded to version 3.1.6
+
+Site: http://ccache.samba.org/
+License: GPL
+
+Usage:
+$ ccache
+</description>
   <contents>
     <choice title="ccache-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ccache"/>

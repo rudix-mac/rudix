@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="49984AB5-BBDE-11E0-96A2-D49A200B3D20">
+<pkgref spec="1.12" uuid="DA580A0C-F839-11E0-94E0-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.ccache</identifier>
     <version>3.1.5-0</version>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01ccache-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
