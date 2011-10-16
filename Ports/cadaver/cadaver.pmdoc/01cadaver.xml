@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="98D45965-3C11-4AB8-9FE5-4F7F35865827">
+<pkgref spec="1.12" uuid="E8128A99-F837-11E0-99D9-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.cadaver</identifier>
-    <version>0.23.2</version>
+    <version>0.23.3-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,10 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
     <mod>version</mod>
   </config>
   <contents>
