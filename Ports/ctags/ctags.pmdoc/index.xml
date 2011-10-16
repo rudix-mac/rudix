@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Multilanguage implementation of ctags</description>
+  <description>Multilanguage implementation of ctags.
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://ctags.sourceforge.net/
+License: GPL
+
+Usage:
+$ ctags
+</description>
   <contents>
     <choice title="ctags-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ctags"/>
