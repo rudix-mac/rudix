@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Code browsing program</description>
+  <description>Cscope is a developer's tool for browsing source code.
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://cscope.sourceforge.net/
+License: BSD
+
+Usage:
+$ cscope
+</description>
   <contents>
     <choice title="cscope-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.cscope"/>

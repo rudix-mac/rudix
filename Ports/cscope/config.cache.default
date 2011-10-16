@@ -1,0 +1,103 @@
+# This file is a shell script that caches the results of configure
+# tests run on this system so they can be shared between configure
+# scripts and configure runs, see configure's option --config-cache.
+# It is not useful on other systems.  If it contains results you don't
+# want to keep, you may remove or edit it.
+#
+# config.status only pays attention to the cache file if you give it
+# the --recheck option to rerun configure.
+#
+# `ac_cv_env_foo' variables (set or unset) will be overridden when
+# loading this file, other *unset* `ac_cv_foo' will be assigned the
+# following values.
+
+ac_cv_build=${ac_cv_build=i686-apple-darwin11.2.0}
+ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
+ac_cv_c_const=${ac_cv_c_const=yes}
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=set
+ac_cv_env_CFLAGS_value='-arch i386 -arch x86_64 -Os'
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_LDFLAGS_set=set
+ac_cv_env_LDFLAGS_value='-arch i386 -arch x86_64'
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_YACC_set=
+ac_cv_env_YACC_value=
+ac_cv_env_YFLAGS_set=
+ac_cv_env_YFLAGS_value=
+ac_cv_env_build_alias_set=
+ac_cv_env_build_alias_value=
+ac_cv_env_host_alias_set=
+ac_cv_env_host_alias_value=
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_func__setmode=${ac_cv_func__setmode=no}
+ac_cv_func_asprintf=${ac_cv_func_asprintf=yes}
+ac_cv_func_fixkeypad=${ac_cv_func_fixkeypad=no}
+ac_cv_func_getcwd=${ac_cv_func_getcwd=yes}
+ac_cv_func_lstat=${ac_cv_func_lstat=yes}
+ac_cv_func_memcpy=${ac_cv_func_memcpy=yes}
+ac_cv_func_memset=${ac_cv_func_memset=yes}
+ac_cv_func_regcmp=${ac_cv_func_regcmp=no}
+ac_cv_func_regcomp=${ac_cv_func_regcomp=yes}
+ac_cv_func_setmode=${ac_cv_func_setmode=yes}
+ac_cv_func_snprintf=${ac_cv_func_snprintf=yes}
+ac_cv_func_strchr=${ac_cv_func_strchr=yes}
+ac_cv_func_strerror=${ac_cv_func_strerror=yes}
+ac_cv_func_vasprintf=${ac_cv_func_vasprintf=yes}
+ac_cv_func_vsnprintf=${ac_cv_func_vsnprintf=yes}
+ac_cv_header_dirent_dirent_h=${ac_cv_header_dirent_dirent_h=yes}
+ac_cv_header_fcntl_h=${ac_cv_header_fcntl_h=yes}
+ac_cv_header_floss_h=${ac_cv_header_floss_h=no}
+ac_cv_header_inttypes_h=${ac_cv_header_inttypes_h=yes}
+ac_cv_header_io_h=${ac_cv_header_io_h=no}
+ac_cv_header_memory_h=${ac_cv_header_memory_h=yes}
+ac_cv_header_regex_h=${ac_cv_header_regex_h=yes}
+ac_cv_header_signal_h=${ac_cv_header_signal_h=yes}
+ac_cv_header_stdarg_h=${ac_cv_header_stdarg_h=yes}
+ac_cv_header_stdc=${ac_cv_header_stdc=yes}
+ac_cv_header_stdint_h=${ac_cv_header_stdint_h=yes}
+ac_cv_header_stdlib_h=${ac_cv_header_stdlib_h=yes}
+ac_cv_header_string_h=${ac_cv_header_string_h=yes}
+ac_cv_header_strings_h=${ac_cv_header_strings_h=yes}
+ac_cv_header_sys_stat_h=${ac_cv_header_sys_stat_h=yes}
+ac_cv_header_sys_termios_h=${ac_cv_header_sys_termios_h=yes}
+ac_cv_header_sys_types_h=${ac_cv_header_sys_types_h=yes}
+ac_cv_header_sys_window_h=${ac_cv_header_sys_window_h=no}
+ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
+ac_cv_header_varargs_h=${ac_cv_header_varargs_h=no}
+ac_cv_host=${ac_cv_host=i686-apple-darwin11.2.0}
+ac_cv_lib_lex=${ac_cv_lib_lex=-lfl}
+ac_cv_lib_regex_regcomp=${ac_cv_lib_regex_regcomp=no}
+ac_cv_objext=${ac_cv_objext=o}
+ac_cv_path_EGREP=${ac_cv_path_EGREP='/usr/bin/grep -E'}
+ac_cv_path_GREP=${ac_cv_path_GREP=/usr/bin/grep}
+ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
+ac_cv_prog_AWK=${ac_cv_prog_AWK=awk}
+ac_cv_prog_CPP=${ac_cv_prog_CPP='gcc -E'}
+ac_cv_prog_LEX=${ac_cv_prog_LEX=flex}
+ac_cv_prog_YACC=${ac_cv_prog_YACC='bison -y'}
+ac_cv_prog_ac_ct_CC=${ac_cv_prog_ac_ct_CC=gcc}
+ac_cv_prog_cc_c89=${ac_cv_prog_cc_c89=}
+ac_cv_prog_cc_g=${ac_cv_prog_cc_g=yes}
+ac_cv_prog_lex_root=${ac_cv_prog_lex_root=lex.yy}
+ac_cv_prog_lex_yytext_pointer=${ac_cv_prog_lex_yytext_pointer=yes}
+ac_cv_prog_make_make_set=${ac_cv_prog_make_make_set=yes}
+ac_cv_search_opendir=${ac_cv_search_opendir='none required'}
+ac_cv_type_mode_t=${ac_cv_type_mode_t=yes}
+ac_cv_type_pid_t=${ac_cv_type_pid_t=yes}
+ac_cv_type_sighandler_t=${ac_cv_type_sighandler_t=no}
+ac_cv_type_signal=${ac_cv_type_signal=void}
+ac_cv_type_size_t=${ac_cv_type_size_t=yes}
+am_cv_CC_dependencies_compiler_type=${am_cv_CC_dependencies_compiler_type=none}
+hw_cv_func_asprintf=${hw_cv_func_asprintf=yes}
+hw_cv_func_snprintf=${hw_cv_func_snprintf=yes}
+hw_cv_func_snprintf_c99=${hw_cv_func_snprintf_c99=yes}
+hw_cv_func_vasprintf=${hw_cv_func_vasprintf=yes}
+hw_cv_func_vsnprintf=${hw_cv_func_vsnprintf=yes}
+hw_cv_func_vsnprintf_c99=${hw_cv_func_vsnprintf_c99=yes}

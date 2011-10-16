@@ -2,13 +2,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Code browsing program
-Site=		http://cscope.sourceforge.net/
-License=	BSD
 Title=		Cscope
 Name=		cscope
 Version=	15.7a
-Revision=	2
+Revision=	3
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.bz2
 
