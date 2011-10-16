@@ -11,7 +11,14 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Check is a unit testing framework for C programs</description>
+  <description>Check is a unit testing framework for C. It features a simple interface for defining unit tests, putting little in the way of the developer.
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://check.sourceforge.net/
+License: LGPL
+</description>
   <contents>
     <choice title="check-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.check"/>

@@ -1,0 +1,7 @@
+Check is a unit testing framework for C. It features a simple interface for defining unit tests, putting little in the way of the developer.
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://check.sourceforge.net/
+License: LGPL
