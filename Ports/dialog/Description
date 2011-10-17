@@ -1,0 +1,11 @@
+Display dialog boxes from shell scripts.
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Site: http://invisible-island.net/dialog/dialog.html
+License: LGPL
+
+Usage:
+$ dialog
+

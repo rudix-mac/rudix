@@ -6,13 +6,10 @@ RUDIX_ENABLE_NLS=no
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Display dialog boxes from shell scripts
-Site=		http://invisible-island.net/dialog/dialog.html
-License=	LGPL
 Title=		Dialog
 Name=		dialog
 Version=	1.1-20110707
-Revision=	0
+Revision=	1
 URL=		ftp://invisible-island.net/dialog/
 Source=		$(Name)-$(Version).tgz
 
