@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		Dtach
 Name=		dtach
 Version=	0.8
-Revision=	6
+Revision=	7
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
