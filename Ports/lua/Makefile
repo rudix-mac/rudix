@@ -5,7 +5,7 @@ include ../../Library/UnixFormula.mk
 Title=		Lua
 Name=		lua
 Version=	5.1.4
-Revision=	6
+Revision=	7
 URL=		http://www.lua.org/ftp/
 Source=		$(Name)-$(Version).tar.gz
 
