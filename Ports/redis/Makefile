@@ -4,7 +4,7 @@ include ../../Library/UnixFormula.mk
 
 Title=		Redis
 Name=		redis
-Version=	2.2.12
+Version=	2.4.2
 Revision=	0
 URL=		http://redis.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz

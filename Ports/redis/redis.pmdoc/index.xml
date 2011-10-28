@@ -20,7 +20,7 @@ Usage:
 $ redis
 
 Changes from previous release:
-* Featuring in Rudix 2011
+* Upgraded to version 2.4.2
 </description>
   <contents>
     <choice title="redis-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
