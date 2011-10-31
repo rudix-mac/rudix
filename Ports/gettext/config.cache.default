@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_bigendian=${ac_cv_c_bigendian=universal}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_inline=${ac_cv_c_inline=inline}
@@ -372,7 +372,7 @@ ac_cv_header_vfork_h=${ac_cv_header_vfork_h=no}
 ac_cv_header_wchar_h=${ac_cv_header_wchar_h=yes}
 ac_cv_header_wctype_h=${ac_cv_header_wctype_h=yes}
 ac_cv_header_xlocale_h=${ac_cv_header_xlocale_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_lib_error_at_line=${ac_cv_lib_error_at_line=no}
 ac_cv_lib_posix4_sched_yield=${ac_cv_lib_posix4_sched_yield=no}
 ac_cv_lib_pthread_pthread_kill=${ac_cv_lib_pthread_pthread_kill=yes}
@@ -381,7 +381,7 @@ ac_cv_libexpat=${ac_cv_libexpat=yes}
 ac_cv_libunistring=${ac_cv_libunistring='no, consider installing GNU libunistring'}
 ac_cv_member_struct_sigaction_sa_sigaction=${ac_cv_member_struct_sigaction_sa_sigaction=yes}
 ac_cv_objext=${ac_cv_objext=o}
-ac_cv_path_DVIPS=${ac_cv_path_DVIPS='/Users/ruda/rudix/Ports/gettext/gettext-build/build-aux/missing dvips'}
+ac_cv_path_DVIPS=${ac_cv_path_DVIPS='/Users/ruda/Downloads/rudix.hg/Ports/gettext/gettext-build/build-aux/missing dvips'}
 ac_cv_path_EGREP=${ac_cv_path_EGREP='/usr/bin/grep -E'}
 ac_cv_path_FGREP=${ac_cv_path_FGREP='/usr/bin/grep -F'}
 ac_cv_path_GMSGFMT=${ac_cv_path_GMSGFMT=:}

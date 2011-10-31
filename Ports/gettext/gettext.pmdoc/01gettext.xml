@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D5BF8ADE-BEFB-11E0-855F-0017F22C0C04">
+<pkgref spec="1.12" uuid="362F5668-03E9-11E1-BACD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.gettext</identifier>
-    <version>0.18.1.1-2</version>
+    <version>0.18.1.1-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01gettext-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
