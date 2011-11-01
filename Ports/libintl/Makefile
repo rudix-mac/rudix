@@ -2,13 +2,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	GNU GetText (libintl)
-Site=		http://www.gnu.org/software/gettext/
-License=	GPL
 Title=		GNU gettext (libintl)
 Name=		libintl
 Version=	0.18.1.1
-Revision=	3
+Revision=	4
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
 

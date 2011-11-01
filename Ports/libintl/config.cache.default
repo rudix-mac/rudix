@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_inline=${ac_cv_c_inline=inline}
 ac_cv_c_restrict=${ac_cv_c_restrict=__restrict}
@@ -246,13 +246,13 @@ ac_cv_header_time_h=${ac_cv_header_time_h=yes}
 ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_header_wchar_h=${ac_cv_header_wchar_h=yes}
 ac_cv_header_wctype_h=${ac_cv_header_wctype_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_lib_error_at_line=${ac_cv_lib_error_at_line=no}
 ac_cv_lib_posix4_sched_yield=${ac_cv_lib_posix4_sched_yield=no}
 ac_cv_lib_pthread_pthread_kill=${ac_cv_lib_pthread_pthread_kill=yes}
 ac_cv_lib_rt_sched_yield=${ac_cv_lib_rt_sched_yield=no}
 ac_cv_objext=${ac_cv_objext=o}
-ac_cv_path_DVIPS=${ac_cv_path_DVIPS='/Users/ruda/rudix/Ports/libintl/libintl-build/build-aux/missing dvips'}
+ac_cv_path_DVIPS=${ac_cv_path_DVIPS='/Users/ruda/Downloads/rudix.hg/Ports/libintl/libintl-build/build-aux/missing dvips'}
 ac_cv_path_EGREP=${ac_cv_path_EGREP='/usr/bin/grep -E'}
 ac_cv_path_FGREP=${ac_cv_path_FGREP='/usr/bin/grep -F'}
 ac_cv_path_GMSGFMT=${ac_cv_path_GMSGFMT=/usr/local/bin/msgfmt}

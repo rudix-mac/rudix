@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="021C2982-D1B9-11E0-B5B2-D49A200B3D20">
+<pkgref spec="1.12" uuid="9D3C4C73-04E2-11E1-BE0D-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libintl</identifier>
-    <version>0.18.1.1-3</version>
+    <version>0.18.1.1-4</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>version</mod>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>installTo</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01libintl-contents.xml</file-list>
