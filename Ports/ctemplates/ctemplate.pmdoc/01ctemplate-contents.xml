@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="ctemplate-install" o="root" g="staff" p="16877" pt="ctemplate-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="diff_tpl_auto_escape" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="make_tpl_varnames_h" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="template-converter" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="ctemplate" o="root" g="wheel" p="16893">
+            <f n="per_expand_data.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_annotator.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_dictionary.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_dictionary_interface.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_emitter.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_enums.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_modifiers.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_namelist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_pathops.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="template_string.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libctemplate.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate_nothreads.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate_nothreads.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate_nothreads.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libctemplate_nothreads.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libctemplate.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libctemplate_nothreads.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="ctemplate" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README_windows.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="ctemplate-1.0" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="auto_escape.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="designstyle.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="example.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="guide.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="howto.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README_windows.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="reference.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tips.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xss_resources.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
