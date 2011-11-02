@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A96DDF4E-6D34-11E0-82CD-0017F22C0C04">
+<pkgref spec="1.12" uuid="1E2EC9EB-0588-11E1-9831-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.mc</identifier>
-    <version>4.7.5.2-0</version>
+    <version>4.8.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01mc-contents.xml</file-list>

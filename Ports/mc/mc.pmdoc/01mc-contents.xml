@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mc-install" o="root" g="staff" p="16877" pt="mc-install" m="false" t="file">
+  <f n="mc-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/mc/mc-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="mc" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="mcedit" o="root" g="wheel" p="41469">
+          <f n="mcdiff" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="mcmfmt" o="root" g="wheel" p="33277">
+          <f n="mcedit" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
           <f n="mcview" o="root" g="wheel" p="41469">
@@ -22,9 +22,6 @@
             <mod>mode</mod>
           </f>
           <f n="mc.default" o="root" g="wheel" p="16893">
-            <f n="cedit.menu" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
             <f n="edit.indent.rc" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
@@ -32,9 +29,6 @@
               <mod>mode</mod>
             </f>
             <f n="filehighlight.ini" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.charsets" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="mc.ext" o="root" g="wheel" p="33204">
@@ -49,24 +43,22 @@
             <f n="mc.keymap.emacs" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="mc.lib" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
             <f n="mc.menu" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="mc.menu.sr" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="sfs.ini" o="root" g="wheel" p="33204">
+            <f n="mcedit.menu" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="Syntax" o="root" g="wheel" p="33204">
+            <f n="sfs.ini" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <mod>mode</mod>
           </f>
         </f>
+        <f n="lib" o="root" g="wheel" p="16893"/>
         <f n="libexec" o="root" g="wheel" p="16893">
           <f n="mc" o="root" g="wheel" p="16893">
             <f n="extfs.d" o="root" g="wheel" p="16893">
@@ -82,6 +74,9 @@
               <f n="bpp" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
+              <f n="changesetfs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
               <f n="deb" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
@@ -92,6 +87,9 @@
                 <mod>mode</mod>
               </f>
               <f n="dpkg+" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="gitfs+" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
               <f n="hp48+" o="root" g="wheel" p="33277">
@@ -107,6 +105,9 @@
                 <mod>mode</mod>
               </f>
               <f n="patchfs" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="patchsetfs" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
@@ -168,6 +169,54 @@
               </f>
               <mod>mode</mod>
             </f>
+            <f n="fish" o="root" g="wheel" p="16893">
+              <f n="append" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="chmod" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="chown" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="fexists" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="get" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="hardlink" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="info" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ln" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="ls" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="mkdir" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="mv" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="README.fish" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rmdir" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="send" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="unlink" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <f n="mc-wrapper.csh" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
@@ -183,7 +232,6 @@
             <mod>mode</mod>
           </f>
         </f>
-        <f n="sbin" o="root" g="wheel" p="16893"/>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="mc" o="root" g="wheel" p="16893">
@@ -200,6 +248,9 @@
                 <mod>mode</mod>
               </f>
               <f n="HACKING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -228,15 +279,6 @@
                   <mod>mode</mod>
                 </f>
               </f>
-            </f>
-            <f n="be-tarask" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="mc.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
             </f>
             <f n="bg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -280,6 +322,13 @@
                 </f>
               </f>
             </f>
+            <f n="eo" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
             <f n="es" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mc.mo" o="root" g="wheel" p="33204">
@@ -301,7 +350,23 @@
                 </f>
               </f>
             </f>
+            <f n="fi_FI" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <f n="fr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="gl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mc.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -315,6 +380,22 @@
                 </f>
               </f>
             </f>
+            <f n="ia" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="id" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
             <f n="it" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mc.mo" o="root" g="wheel" p="33204">
@@ -322,7 +403,23 @@
                 </f>
               </f>
             </f>
+            <f n="it_IT" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <f n="ja" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ka" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mc.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -434,6 +531,15 @@
                 </f>
               </f>
             </f>
+            <f n="sv_SE" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="mc.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <f n="ta" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mc.mo" o="root" g="wheel" p="33204">
@@ -523,7 +629,6 @@
                 <mod>mode</mod>
               </f>
             </f>
-            <f n="man8" o="root" g="wheel" p="16893"/>
             <f n="pl" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
                 <f n="mc.1" o="root" g="wheel" p="33204">
@@ -538,9 +643,7 @@
                 <f n="mc.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="sr" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
@@ -549,68 +652,107 @@
                 </f>
                 <mod>mode</mod>
               </f>
-              <f n="man8" o="root" g="wheel" p="16893">
-                <mod>mode</mod>
-              </f>
               <mod>mode</mod>
             </f>
           </f>
           <f n="mc" o="root" g="wheel" p="16893">
-            <f n="mc.hint" o="root" g="wheel" p="33204">
+            <f n="examples" o="root" g="wheel" p="16893">
+              <f n="macros.d" o="root" g="wheel" p="16893">
+                <f n="macro.0.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.1.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.3.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.4.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.5.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.6.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="macro.7.sh" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
-            <f n="mc.hint.cs" o="root" g="wheel" p="33204">
+            <f n="help" o="root" g="wheel" p="16893">
+              <f n="mc.hlp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.es" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.hu" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.it" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.pl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.ru" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hlp.sr" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
-            <f n="mc.hint.es" o="root" g="wheel" p="33204">
+            <f n="hints" o="root" g="wheel" p="16893">
+              <f n="mc.hint" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.cs" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.es" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.hu" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.it" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.nl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.pl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.ru" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.sr" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.uk" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc.hint.zh" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
-            <f n="mc.hint.hu" o="root" g="wheel" p="33204">
+            <f n="mc.charsets" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="mc.hint.it" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.nl" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.pl" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.ru" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.sr" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.uk" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hint.zh" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.es" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.hu" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.it" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.pl" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.ru" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="mc.hlp.sr" o="root" g="wheel" p="33204">
+            <f n="mc.lib" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="skins" o="root" g="wheel" p="16893">
+              <f n="dark.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="darkfar.ini" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -624,6 +766,18 @@
                 <mod>mode</mod>
               </f>
               <f n="gotar.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mc46.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nicedark.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sand256.ini" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xoria256.ini" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -657,6 +811,9 @@
                 <mod>mode</mod>
               </f>
               <f n="cxx.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cython.syntax" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="d.syntax" o="root" g="wheel" p="33204">
@@ -705,6 +862,9 @@
                 <mod>mode</mod>
               </f>
               <f n="idl.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ini.syntax" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="j.syntax" o="root" g="wheel" p="33204">
@@ -801,6 +961,9 @@
                 <mod>mode</mod>
               </f>
               <f n="swig.syntax" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Syntax" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="syntax.syntax" o="root" g="wheel" p="33204">
