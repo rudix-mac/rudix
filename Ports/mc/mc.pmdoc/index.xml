@@ -26,6 +26,9 @@ Changes from previous release:
     <choice title="glib-runtime-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.glib-runtime"/>
     </choice>
+    <choice title="libintl-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libintl"/>
+    </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
@@ -36,6 +39,7 @@ Changes from previous release:
   <flags/>
   <item type="file">01mc.xml</item>
   <item type="file">01glib.xml</item>
+  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
