@@ -11,10 +11,23 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU Core Utilities</description>
+  <description>GNU Core Utilities.
+
+Site: http://www.gnu.org/software/coreutils/
+License: GPL
+
+Changes from previous release:
+* Upgraded to verision 8.13
+
+Usage:
+$ gnudate
+</description>
   <contents>
     <choice title="coreutils-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.coreutils"/>
+    </choice>
+    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libintl"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
@@ -25,6 +38,7 @@
   </resources>
   <flags/>
   <item type="file">01coreutils.xml</item>
+  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
