@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="A92C6140-D666-11E0-AC1A-D49A200B3D20">
+<pkgref spec="1.12" uuid="55ADBEE1-0575-11E1-AD1A-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.pkg-config</identifier>
-    <version>0.25-2</version>
+    <version>0.25-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,14 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>version</mod>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>installTo</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
-    <file-list>01pkg-contents.xml</file-list>
+    <file-list>01pkg-config-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

@@ -20,7 +20,7 @@ Usage:
 $ pkg-config
 
 Changes from previous release:
-* Recompiled for Lion
+* Upgraded to version 0.26
 </description>
   <contents>
     <choice title="pkg-config-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
@@ -34,7 +34,7 @@ Changes from previous release:
     </locale>
   </resources>
   <flags/>
-  <item type="file">01pkg.xml</item>
+  <item type="file">01pkg-config.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
