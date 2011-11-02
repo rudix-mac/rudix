@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GNU gettext (libintl)</title>
+    <title>libintl</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,7 +11,7 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU GetText (libintl part).
+  <description>libintl (part of GNU gettext).
 
 Site: http://www.gnu.org/software/gettext/
 License: GPL

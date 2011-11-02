@@ -2,7 +2,7 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Title=		GNU gettext (libintl)
+Title=		libintl
 Name=		libintl
 Version=	0.18.1.1
 Revision=	4
@@ -24,8 +24,8 @@ GnuConfigureExtra += --with-included-glib
 
 define install_post_hook
 rm -rf $(InstallDir)/$(BinDir)
-rm -f $(InstallDir)/$(LibDir)/libintl.la
-rm -rf $(InstallDir)/$(IncludeDir)
+#rm -f $(InstallDir)/$(LibDir)/libintl.la
+#rm -rf $(InstallDir)/$(IncludeDir)
 rm -rf $(InstallDir)/$(ManDir)
 rm -rf $(InstallDir)/$(DocDir)/gettext
 rm -rf $(InstallDir)/$(DataDir)/locale

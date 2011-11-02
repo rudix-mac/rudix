@@ -255,14 +255,14 @@ ac_cv_objext=${ac_cv_objext=o}
 ac_cv_path_DVIPS=${ac_cv_path_DVIPS='/Users/ruda/Downloads/rudix.hg/Ports/libintl/libintl-build/build-aux/missing dvips'}
 ac_cv_path_EGREP=${ac_cv_path_EGREP='/usr/bin/grep -E'}
 ac_cv_path_FGREP=${ac_cv_path_FGREP='/usr/bin/grep -F'}
-ac_cv_path_GMSGFMT=${ac_cv_path_GMSGFMT=/usr/local/bin/msgfmt}
+ac_cv_path_GMSGFMT=${ac_cv_path_GMSGFMT=:}
 ac_cv_path_GREP=${ac_cv_path_GREP=/usr/bin/grep}
-ac_cv_path_MSGFMT=${ac_cv_path_MSGFMT=/usr/local/bin/msgfmt}
-ac_cv_path_MSGMERGE=${ac_cv_path_MSGMERGE=/usr/local/bin/msgmerge}
+ac_cv_path_MSGFMT=${ac_cv_path_MSGFMT=:}
+ac_cv_path_MSGMERGE=${ac_cv_path_MSGMERGE=:}
 ac_cv_path_PERL=${ac_cv_path_PERL=/usr/bin/perl}
 ac_cv_path_SED=${ac_cv_path_SED=/usr/bin/sed}
 ac_cv_path_TEXI2PDF=${ac_cv_path_TEXI2PDF=/usr/bin/texi2pdf}
-ac_cv_path_XGETTEXT=${ac_cv_path_XGETTEXT=/usr/local/bin/xgettext}
+ac_cv_path_XGETTEXT=${ac_cv_path_XGETTEXT=:}
 ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
 ac_cv_prog_AWK=${ac_cv_prog_AWK=awk}
 ac_cv_prog_CPP=${ac_cv_prog_CPP='gcc -E'}
@@ -510,7 +510,7 @@ gt_cv_c_wint_t=${gt_cv_c_wint_t=yes}
 gt_cv_func_CFLocaleCopyCurrent=${gt_cv_func_CFLocaleCopyCurrent=yes}
 gt_cv_func_CFPreferencesCopyAppValue=${gt_cv_func_CFPreferencesCopyAppValue=yes}
 gt_cv_func_gnugettext2_libc=${gt_cv_func_gnugettext2_libc=no}
-gt_cv_func_gnugettext2_libintl=${gt_cv_func_gnugettext2_libintl=yes}
+gt_cv_func_gnugettext2_libintl=${gt_cv_func_gnugettext2_libintl=no}
 gt_cv_func_printf_posix=${gt_cv_func_printf_posix=yes}
 gt_cv_int_divbyzero_sigfpe=${gt_cv_int_divbyzero_sigfpe='guessing yes'}
 gt_cv_inttypes_pri_broken=${gt_cv_inttypes_pri_broken=no}
