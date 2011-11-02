@@ -4,13 +4,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Retrieve files from the web via HTTP, HTTPS and FTP
-Site=		http://www.gnu.org/software/wget/
-License=	GPL
 Title=		GNU Wget
 Name=		wget
 Version=	1.13.4
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/wget/
 Source=		$(Name)-$(Version).tar.gz
 

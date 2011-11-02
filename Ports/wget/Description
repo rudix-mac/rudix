@@ -1,0 +1,11 @@
+GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols.
+
+Site: http://www.gnu.org/software/wget/
+License: GPL
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2
+
+Usage
+$ wget http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
+

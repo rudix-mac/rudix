@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_bigendian=${ac_cv_c_bigendian=universal}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_const=${ac_cv_c_const=yes}
@@ -342,7 +342,7 @@ ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_header_utime_h=${ac_cv_header_utime_h=yes}
 ac_cv_header_wchar_h=${ac_cv_header_wchar_h=yes}
 ac_cv_header_wctype_h=${ac_cv_header_wctype_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_lib_dl_dlopen=${ac_cv_lib_dl_dlopen=yes}
 ac_cv_lib_error_at_line=${ac_cv_lib_error_at_line=no}
 ac_cv_lib_lex=${ac_cv_lib_lex=-lfl}
@@ -371,7 +371,7 @@ ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
 ac_cv_prog_AWK=${ac_cv_prog_AWK=awk}
 ac_cv_prog_CPP=${ac_cv_prog_CPP='gcc -E'}
 ac_cv_prog_LEX=${ac_cv_prog_LEX=flex}
-test "${ac_cv_prog_MAKEINFO+set}" = set || ac_cv_prog_MAKEINFO='${SHELL} /Users/ruda/rudix/Ports/wget/wget-build/build-aux/missing --run makeinfo'
+test "${ac_cv_prog_MAKEINFO+set}" = set || ac_cv_prog_MAKEINFO='${SHELL} /Users/ruda/Downloads/rudix.hg/Ports/wget/wget-build/build-aux/missing --run makeinfo'
 ac_cv_prog_ac_ct_AR=${ac_cv_prog_ac_ct_AR=ar}
 ac_cv_prog_ac_ct_CC=${ac_cv_prog_ac_ct_CC=gcc}
 ac_cv_prog_ac_ct_RANLIB=${ac_cv_prog_ac_ct_RANLIB=ranlib}
