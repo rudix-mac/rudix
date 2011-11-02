@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="8FC333E6-8604-4F2D-AD99-22C660E4A5EC">
+<pkgref spec="1.12" uuid="25BDEB9C-0584-11E1-99A6-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.glib</identifier>
-    <version>2.27.93</version>
+    <version>2.28.8-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
