@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>version</mod>
+    <mod>parent</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>version</mod>
     <mod>installTo</mod>
-    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01mc-contents.xml</file-list>
