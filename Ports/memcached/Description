@@ -1,0 +1,7 @@
+Free & open source, high-performance, distributed memory object caching system.
+
+Site: http://memcached.org/
+License: BSD
+
+Changes from previous release:
+* Upgraded to version 1.4.9
