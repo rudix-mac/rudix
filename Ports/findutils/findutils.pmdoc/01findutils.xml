@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="77B7F2CE-D0BB-11E0-838B-0017F22C0C04">
+<pkgref spec="1.12" uuid="900AECCC-07DD-11E1-A849-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.findutils</identifier>
-    <version>4.4.2-2</version>
+    <version>4.4.2-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01findutils-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

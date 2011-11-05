@@ -11,10 +11,19 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>The GNU Find Utilities are the basic directory searching utilities</description>
+  <description>The GNU Find Utilities are the basic directory searching utilities.
+
+Site: http://www.gnu.org/software/findutils/
+License: GPL
+
+Changes from previous release:
+* Rebuilt on Xcode 4.2</description>
   <contents>
     <choice title="findutils-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.findutils"/>
+    </choice>
+    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libintl"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
@@ -25,6 +34,7 @@
   </resources>
   <flags/>
   <item type="file">01findutils.xml</item>
+  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
