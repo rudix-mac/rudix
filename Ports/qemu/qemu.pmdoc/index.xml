@@ -2,7 +2,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>QEMU</title>
-    <organization>org.rudix.pkg</organization>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -11,16 +11,22 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Multi system emulator</description>
+  <description>QEMU is a generic and open source machine emulator and virtualizer.
+
+Site: http://wiki.qemu.org/
+License: GPL
+
+Changes from previous release:
+* Upgraded to version 0.15.1</description>
   <contents>
-    <choice title="qemu-install" id="qemu" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="qemu-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.qemu"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">qemu-0.14.0/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">qemu-0.14.0/qemu-doc.html</resource>
+      <resource relative="true" mod="true" type="license">qemu-build/LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">qemu-build/qemu-doc.html</resource>
     </locale>
   </resources>
   <flags/>

@@ -3,8 +3,11 @@
   <f n="qemu-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/qemu/qemu-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="qemu" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="qemu-ga" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="qemu-img" o="root" g="wheel" p="33277">
@@ -22,10 +25,16 @@
           <f n="qemu-system-cris" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <f n="qemu-system-lm32" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="qemu-system-m68k" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="qemu-system-microblaze" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="qemu-system-microblazeel" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="qemu-system-mips" o="root" g="wheel" p="33277">
@@ -47,6 +56,9 @@
             <mod>mode</mod>
           </f>
           <f n="qemu-system-ppcemb" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="qemu-system-s390x" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="qemu-system-sh4" o="root" g="wheel" p="33277">
@@ -76,10 +88,22 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="qemu" o="root" g="wheel" p="16893">
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LIB" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="qemu-doc.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="qemu-tech.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -106,9 +130,6 @@
               <mod>mode</mod>
             </f>
             <f n="bios.bin" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="gpxe-eepro100-80861209.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="keymaps" o="root" g="wheel" p="16893">
@@ -222,6 +243,9 @@
             <f n="linuxboot.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="mpc8544ds.dtb" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="multiboot.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -234,28 +258,40 @@
             <f n="openbios-sparc64" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
+            <f n="petalogix-ml605.dtb" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="petalogix-s3adsp1800.dtb" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="ppc_rom.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-e1000.bin" o="root" g="wheel" p="33204">
+            <f n="pxe-e1000.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-ne2k_pci.bin" o="root" g="wheel" p="33204">
+            <f n="pxe-eepro100.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-pcnet.bin" o="root" g="wheel" p="33204">
+            <f n="pxe-ne2k_pci.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-rtl8139.bin" o="root" g="wheel" p="33204">
+            <f n="pxe-pcnet.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="pxe-virtio.bin" o="root" g="wheel" p="33204">
+            <f n="pxe-rtl8139.rom" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pxe-virtio.rom" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="s390-zipl.rom" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="slof.bin" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="spapr-rtas.bin" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="vgabios-cirrus.bin" o="root" g="wheel" p="33204">
