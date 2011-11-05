@@ -2,38 +2,37 @@
 # http://www.gnuplot.info/
 # GPL
 
-include ../../Library/Rules.mk
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-NAME=		gnuplot
-VERSION=	4.2.6
-REVISION=	1
+Title=		Gnuplot
+Name=		gnuplot
+Version=	4.4.3
+Revision=	0
 URL=		http://downloads.sourceforge.net/gnuplot
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS=	/usr/local/bin/gdlib-config
+GnuConfigureExtra += --with-readline=builtin
 
+ifdef FOO
 prep: retrieve
-	tar zxvf $(SOURCE)
+	tar zxvf $(Source)
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	cd $(SourceDir) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	$(configure) \
 		--disable-dependency-tracking \
 		--with-readline=builtin ; $(make)
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUGS,ChangeLog,Copyright,FAQ,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	strip $(INSTALLDIR)/usr/local/libexec/gnuplot/4.2/gnuplot_x11
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
+	rm -f $(InstallDir)$(Prefix)/share/info/dir
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{BUGS,ChangeLog,Copyright,FAQ,NEWS,ReadMeFile,TODO} $(InstallDir)/$(DocDir)/$(Name)
+	strip $(InstallDir)$(BinDir)/*
+	strip $(InstallDir)$(LibDir)exec/gnuplot/4.2/gnuplot_x11
 	touch install
-
-test: install
-	cd $(BUILDDIR) ; make check
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/libexec/gnuplot/4.2/gnuplot_x11"
-	touch test
+endif
