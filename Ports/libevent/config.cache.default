@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_const=${ac_cv_c_const=yes}
 ac_cv_c_inline=${ac_cv_c_inline=inline}
@@ -108,7 +108,7 @@ ac_cv_header_sys_wait_h=${ac_cv_header_sys_wait_h=yes}
 ac_cv_header_time=${ac_cv_header_time=yes}
 ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_header_zlib_h=${ac_cv_header_zlib_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_member_struct_in6_addr_s6_addr16=${ac_cv_member_struct_in6_addr_s6_addr16=no}
 ac_cv_member_struct_in6_addr_s6_addr32=${ac_cv_member_struct_in6_addr_s6_addr32=no}
 ac_cv_member_struct_sockaddr_in6_sin6_len=${ac_cv_member_struct_sockaddr_in6_sin6_len=yes}
