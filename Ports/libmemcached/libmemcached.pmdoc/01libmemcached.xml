@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="18B2802E-C6B0-11E0-AFE8-D49A200B3D20">
+<pkgref spec="1.12" uuid="AB82EB2E-08B8-11E1-8214-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libmemcached</identifier>
-    <version>0.51-0</version>
+    <version>1.0.2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01libmemcached-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
