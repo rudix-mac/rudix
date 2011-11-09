@@ -105,6 +105,9 @@
                 <f n="pcre.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pcre_assign_jit_stack.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="pcre_compile.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -124,6 +127,9 @@
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_exec.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pcre_free_study.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_free_substring.html" o="root" g="wheel" p="33204">
@@ -151,6 +157,12 @@
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_info.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pcre_jit_stack_alloc.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pcre_jit_stack_free.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_maketables.html" o="root" g="wheel" p="33204">
@@ -186,6 +198,12 @@
                 <f n="pcregrep.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pcrejit.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pcrelimits.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="pcrematching.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -216,7 +234,9 @@
                 <f n="pcretest.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
+                <f n="pcreunicode.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
               <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -242,7 +262,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
@@ -259,6 +278,9 @@
             </f>
             <f n="man3" o="root" g="wheel" p="16893">
               <f n="pcre.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre_assign_jit_stack.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pcre_compile.3" o="root" g="wheel" p="33204">
@@ -280,6 +302,9 @@
                 <mod>mode</mod>
               </f>
               <f n="pcre_exec.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre_free_study.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pcre_free_substring.3" o="root" g="wheel" p="33204">
@@ -309,6 +334,12 @@
               <f n="pcre_info.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="pcre_jit_stack_alloc.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre_jit_stack_free.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pcre_maketables.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -336,6 +367,12 @@
               <f n="pcrecpp.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="pcrejit.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcrelimits.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pcrematching.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -361,6 +398,9 @@
                 <mod>mode</mod>
               </f>
               <f n="pcresyntax.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcreunicode.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
             </f>

@@ -4,7 +4,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		PCRE
 Name=		pcre
-Version=	8.13
+Version=	8.20
 Revision=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		$(Name)-$(Version).tar.bz2

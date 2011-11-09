@@ -18,9 +18,10 @@ License: BSD
 
 Usage:
 $ pcre-config
+$ pcregrep
 
 Changes from previous release:
-* Upgraded to version 8.13
+* Upgraded to version 8.20
 </description>
   <contents>
     <choice title="pcre-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

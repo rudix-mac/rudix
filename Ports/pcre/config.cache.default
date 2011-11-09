@@ -11,7 +11,7 @@
 # loading this file, other *unset* `ac_cv_foo' will be assigned the
 # following values.
 
-ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.1.0}
+ac_cv_build=${ac_cv_build=x86_64-apple-darwin11.2.0}
 ac_cv_c_compiler_gnu=${ac_cv_c_compiler_gnu=yes}
 ac_cv_c_const=${ac_cv_c_const=yes}
 ac_cv_c_int64_t=${ac_cv_c_int64_t=yes}
@@ -66,7 +66,7 @@ ac_cv_header_type_traits_h=${ac_cv_header_type_traits_h=no}
 ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_header_windows_h=${ac_cv_header_windows_h=no}
 ac_cv_header_zlib_h=${ac_cv_header_zlib_h=yes}
-ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.1.0}
+ac_cv_host=${ac_cv_host=x86_64-apple-darwin11.2.0}
 ac_cv_lib_readline_readline=${ac_cv_lib_readline_readline=yes}
 ac_cv_lib_z_gzopen=${ac_cv_lib_z_gzopen=yes}
 ac_cv_objext=${ac_cv_objext=o}
