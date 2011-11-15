@@ -11,7 +11,16 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Mirroring/synchronization over low bandwidth links</description>
+  <description>rsync is an open source utility that provides fast incremental file transfer.
+
+Site: http://samba.org/rsync/
+License: GPL
+
+Changes from previous release:
+* Upgraded to version 3.0.9
+
+Usage:
+$ rsync3</description>
   <contents>
     <choice title="rsync-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rsync"/>

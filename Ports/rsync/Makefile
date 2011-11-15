@@ -2,12 +2,9 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	Mirroring/synchronization over low bandwidth links
-Site=		http://samba.org/rsync/
-License=	GPL
 Title=		Rsync
 Name=		rsync
-Version=	3.0.8
+Version=	3.0.9
 Revision=	0
 URL=		http://samba.org/ftp/rsync/src/
 Source=		$(Name)-$(Version).tar.gz
