@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="65FEA7F8-799F-11E0-AA7A-0017F22C0C04">
+<pkgref spec="1.12" uuid="96AD6B45-12BF-11E1-A99E-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.protobuf</identifier>
-    <version>2.4.1-0</version>
+    <version>2.4.1-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01protobuf-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
