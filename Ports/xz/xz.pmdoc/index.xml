@@ -20,6 +20,9 @@ License: GPL
     <choice title="xz-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.xz"/>
     </choice>
+    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libintl"/>
+    </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
@@ -29,6 +32,7 @@ License: GPL
   </resources>
   <flags/>
   <item type="file">01xz.xml</item>
+  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
