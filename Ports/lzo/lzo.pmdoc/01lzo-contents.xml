@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="lzo-install" o="root" g="staff" p="16877" pt="lzo-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="lzo" o="root" g="wheel" p="16893">
+            <f n="lzo1.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1a.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1b.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1f.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1x.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1y.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo1z.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo2a.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzo_asm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzoconf.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzodefs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lzoutil.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="liblzo2.2.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="liblzo2.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="liblzo2.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="liblzo2.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="lzo" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LZO.FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LZO.TXT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LZOAPI.TXT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="THANKS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
