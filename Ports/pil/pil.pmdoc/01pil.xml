@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="B56280D3-414E-41C4-912B-EBBF34DD3E8C">
+<pkgref spec="1.12" uuid="A027813D-188C-11E1-9D94-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.pil</identifier>
-    <version>1.1.6</version>
+    <version>1.1.7-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">Imaging-install</installFrom>
+    <installFrom relative="true" mod="true">pil-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>parent</mod>
-    <mod>version</mod>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>installTo</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
-    <file-list>01imaging-contents.xml</file-list>
+    <file-list>01pil-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

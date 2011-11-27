@@ -1,37 +1,15 @@
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/PythonFormula.mk
 
-# Python imaging library
-# http://www.pythonware.com/products/pil/
-# 
+Title=		Python Imaging Library
+Name=		pil
+Version=	1.1.7
+Revision=	0
+URL=		http://effbot.org/media/downloads/
+Source=		Imaging-$(Version).tar.gz
 
-NAME=		Imaging
-VERSION=	1.1.6
-REVISION=	0
-URL=		http://effbot.org/downloads/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	LICENSE
 
-PYTHON=		/usr/bin/python
-SITEPACKAGES=	/Library/Python/2.5/site-packages
-
-include ../../Library/Rules.mk
-
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(PYTHON) setup.py build
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; \
-	$(PYTHON) setup.py install \
-		--home=$(INSTALLDIR)/usr/local \
-		--install-lib=$(INSTALLDIR)/$(SITEPACKAGES)
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES,README} $(INSTALLDOCDIR)
-	rsync -av $(BUILDDIR)/Docs/* $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/$(SITEPACKAGES)/PIL/*.so
-	touch install
-
-test: install
-	touch test
+UncompressedName=Imaging-$(Version)
