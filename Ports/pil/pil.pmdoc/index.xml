@@ -24,6 +24,9 @@ License: BSD</description>
     <choice title="libjpeg-runtime-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libjpeg-runtime"/>
     </choice>
+    <choice title="lcms-runtime-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.lcms-runtime"/>
+    </choice>
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
@@ -34,6 +37,7 @@ License: BSD</description>
   <flags/>
   <item type="file">01pil.xml</item>
   <item type="file">01libjpeg.xml</item>
+  <item type="file">01lcms.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
