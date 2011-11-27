@@ -1,0 +1,7 @@
+Libjpeg is a widely used C library for reading and writing JPEG image files.
+
+Site: http://www.ijg.org/
+License: BSD-like
+
+Changes:
+* Rebuilt on Xcode 4.2

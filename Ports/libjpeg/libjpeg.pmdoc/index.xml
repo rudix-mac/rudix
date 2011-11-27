@@ -11,7 +11,13 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Jpeg library</description>
+  <description>Libjpeg is a widely used C library for reading and writing JPEG image files.
+
+Site: http://www.ijg.org/
+License: BSD-like
+
+Changes:
+* Rebuilt on Xcode 4.2</description>
   <contents>
     <choice title="libjpeg-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libjpeg"/>
