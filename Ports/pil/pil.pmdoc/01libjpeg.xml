@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="8467649E-18F2-11E1-B9C7-D49A200B3D20">
+  <config>
+    <identifier>org.rudix.pkg.libjpeg-runtime</identifier>
+    <version>8c-1</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">../libjpeg/libjpeg-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>installTo</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>parent</mod>
+    <mod>version</mod>
+  </config>
+  <contents>
+    <file-list>01libjpeg-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+    <filter>/usr/local/bin</filter>
+    <filter>/usr/local/include</filter>
+    <filter>/usr/local/lib/lib.*\.a</filter>
+    <filter>/usr/local/lib/lib.*\.la</filter>
+    <filter>/usr/local/share/man</filter>
+  </contents>
+</pkgref>
