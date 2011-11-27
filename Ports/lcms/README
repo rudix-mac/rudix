@@ -1,0 +1,5 @@
+Welcome to the Little Color Management System.
+
+With this library you can enable your applications to use International Color Consortium (ICC) profiles. Little CMS does accept profiles conformant with ICC 4.2 or below, and supports all features described in the ICC specification, including addendums.
+
+Little CMS can operate with old V2 ICC profiles as well. The CMM does all necessary adjustments and allows you to mix both kind of profiles.
