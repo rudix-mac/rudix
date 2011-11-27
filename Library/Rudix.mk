@@ -2,7 +2,7 @@
 # Copyright (c) 2005-2011 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20111015
+BuildSystem = 20111127
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -96,10 +96,6 @@ pkg: test
 	@$(call pkg_post_hook)
 	@$(call info_color,Done)
 	@touch pkg
-
-buildclean:
-	cd $(BuildDir) ; $(MAKE) clean
-	rm -f build
 
 installclean:
 	rm -rf install $(InstallDir)

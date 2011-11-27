@@ -17,3 +17,7 @@ define test_inner_hook
 $(test_universal)
 cd $(BuildDir) ; $(make) test
 endef
+
+buildclean:
+	cd $(BuildDir) ; $(make) clean
+	rm -f build
