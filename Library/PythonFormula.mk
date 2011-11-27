@@ -39,3 +39,7 @@ endef
 define test_inner_hook
 $(call test_universal)
 endef
+
+buildclean:
+	cd $(BuildDir) ; $(Python) setup.py clean
+	rm -f build
