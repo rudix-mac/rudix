@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="libpng-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/libpng/libpng-install" m="false" t="file">
+  <f n="libpng-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/libpng/libpng-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="libpng-config" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="libpng12-config" o="root" g="wheel" p="33277">
+          <f n="libpng15-config" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
-          <f n="libpng12" o="root" g="wheel" p="16893">
+          <f n="libpng15" o="root" g="wheel" p="16893">
             <f n="png.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="pngconf.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pnglibconf.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <mod>mode</mod>
@@ -27,11 +30,11 @@
           <f n="pngconf.h" o="root" g="wheel" p="41396">
             <mod>mode</mod>
           </f>
-        </f>
-        <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libpng.3.dylib" o="root" g="wheel" p="33277">
+          <f n="pnglibconf.h" o="root" g="wheel" p="41396">
             <mod>mode</mod>
           </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
           <f n="libpng.a" o="root" g="wheel" p="41396">
             <mod>mode</mod>
           </f>
@@ -41,23 +44,23 @@
           <f n="libpng.la" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="libpng12.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libpng15.15.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libpng12.a" o="root" g="wheel" p="33204">
+          <f n="libpng15.a" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
-          <f n="libpng12.dylib" o="root" g="wheel" p="41469">
+          <f n="libpng15.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="libpng12.la" o="root" g="wheel" p="33277">
+          <f n="libpng15.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
             <f n="libpng.pc" o="root" g="wheel" p="41396">
               <mod>mode</mod>
             </f>
-            <f n="libpng12.pc" o="root" g="wheel" p="33204">
+            <f n="libpng15.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -65,22 +68,16 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="libpng" o="root" g="wheel" p="16893">
-              <f n="ANNOUNCE" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="CHANGES" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="KNOWNBUG" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="LICENSE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
