@@ -1,3 +1,5 @@
+BuildRequires += /usr/local/lib/libjpeg.la
+
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/PythonFormula.mk
