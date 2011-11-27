@@ -1,4 +1,5 @@
 BuildRequires += /usr/local/lib/libjpeg.la
+BuildRequires += /usr/local/lib/liblcms2.la
 
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk

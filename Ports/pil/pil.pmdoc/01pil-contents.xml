@@ -15,6 +15,9 @@
               <f n="_imaging.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
+              <f n="_imagingft.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
               <f n="_imagingmath.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
@@ -550,7 +553,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
