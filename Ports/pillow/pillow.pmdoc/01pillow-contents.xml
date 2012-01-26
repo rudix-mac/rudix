@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="pillow-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/pillow/pillow-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="_imaging.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="_imagingcms.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="_imagingft.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="_imagingmath.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="_imagingtk.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="PIL" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ArgImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ArgImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BdfFontFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BdfFontFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BmpImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BmpImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BufrStubImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BufrStubImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ContainerIO.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ContainerIO.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CurImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CurImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="DcxImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="DcxImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="EpsImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="EpsImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ExifTags.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ExifTags.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FitsStubImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FitsStubImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FliImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FliImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FontFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FontFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FpxImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FpxImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GbrImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GbrImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GdImageFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GdImageFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GifImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GifImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GimpGradientFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GimpGradientFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GimpPaletteFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GimpPaletteFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GribStubImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GribStubImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Hdf5StubImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Hdf5StubImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IcnsImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IcnsImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IcoImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IcoImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Image.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Image.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageChops.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageChops.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageCms.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageCms.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageColor.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageColor.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageDraw.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageDraw.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageDraw2.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageDraw2.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageEnhance.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageEnhance.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFileIO.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFileIO.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFilter.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFilter.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFont.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageFont.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageGL.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageGL.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageGrab.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageGrab.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageMath.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageMath.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageMode.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageMode.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageOps.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageOps.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImagePalette.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImagePalette.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImagePath.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImagePath.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageQt.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageQt.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageSequence.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageSequence.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageShow.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageShow.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageStat.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageStat.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageTk.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageTk.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageTransform.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageTransform.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageWin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImageWin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImtImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ImtImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IptcImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="IptcImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="JpegImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="JpegImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="McIdasImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="McIdasImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MicImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MicImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MpegImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MpegImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MspImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MspImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OleFileIO.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OleFileIO.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PaletteFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PaletteFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PalmImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PalmImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcdImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcdImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcfFontFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcfFontFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcxImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PcxImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PdfImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PdfImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PixarImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PixarImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PngImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PngImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PpmImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PpmImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PsdImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PsdImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PSDraw.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PSDraw.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SgiImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SgiImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SpiderImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SpiderImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SunImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SunImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TarIO.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TarIO.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TgaImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TgaImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TiffImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TiffImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TiffTags.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TiffTags.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="WalImageFile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="WalImageFile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="WmfImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="WmfImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XbmImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XbmImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XpmImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XpmImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XVThumbImagePlugin.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="XVThumbImagePlugin.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="Pillow-1.7.6-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="pilconvert.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pilconvert.pyc" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="pildriver.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pildriver.pyc" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="pilfile.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pilfile.pyc" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="pilfont.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pilfont.pyc" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="pilprint.py" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pilprint.pyc" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="pillow" o="root" g="wheel" p="16893">
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.rst" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
