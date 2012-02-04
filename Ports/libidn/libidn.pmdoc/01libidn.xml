@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="EE06B568-4F74-11E1-B800-D49A200B3D20">
+  <config>
+    <identifier>org.rudix.pkg.libidn</identifier>
+    <version>1.24-0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">libidn-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
+  </config>
+  <contents>
+    <file-list>01libidn-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
