@@ -16,12 +16,12 @@
 Site: http://www.pcre.org/
 License: BSD
 
-Usage:
-$ pcre-config
-$ pcregrep
-
 Changes from previous release:
-* Upgraded to version 8.20
+* Upgraded to version 8.21
+
+Usage:
+$ /usr/local/bin/pcre-config
+$ /usr/local/bin/pcregrep
 </description>
   <contents>
     <choice title="pcre-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

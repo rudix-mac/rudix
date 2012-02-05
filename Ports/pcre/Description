@@ -3,9 +3,9 @@ The PCRE library is a set of functions that implement regular expression pattern
 Site: http://www.pcre.org/
 License: BSD
 
-Usage:
-$ pcre-config
-$ pcregrep
-
 Changes from previous release:
-* Upgraded to version 8.20
+* Upgraded to version 8.21
+
+Usage:
+$ /usr/local/bin/pcre-config
+$ /usr/local/bin/pcregrep
