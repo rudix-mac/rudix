@@ -3,8 +3,8 @@ Redis is an open source, advanced key-value store. It is often referred to as a 
 Site: http://redis.io/
 License: BSD
 
-Usage:
-$ redis
-
 Changes from previous release:
-* Upgraded to version 2.4.2
+* Upgraded to version 2.4.7
+
+Usage:
+$ /usr/local/bin/redis

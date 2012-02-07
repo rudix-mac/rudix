@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="BA1E1F66-0170-11E1-A2B1-D49A200B3D20">
+<pkgref spec="1.12" uuid="683B1B61-51B1-11E1-8BCD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.redis</identifier>
-    <version>2.4.2-0</version>
+    <version>2.4.7-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

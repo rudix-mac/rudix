@@ -16,11 +16,11 @@
 Site: http://redis.io/
 License: BSD
 
-Usage:
-$ redis
-
 Changes from previous release:
-* Upgraded to version 2.4.2
+* Upgraded to version 2.4.7
+
+Usage:
+$ /usr/local/bin/redis
 </description>
   <contents>
     <choice title="redis-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
