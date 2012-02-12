@@ -13,14 +13,14 @@
   </distribution>
   <description>Lua is a powerful, fast, lightweight, embeddable scripting language.
 
-Changes from previous release:
-* Applied patch http://www.lua.org/ftp/patch-lua-5.1.4-3
-
 Site: http://www.lua.org/
 License: MIT
 
+Changes from previous release:
+* Upgraded to version 5.2.0
+
 Usage:
-$ lua
+$ /usr/local/bin/lua
 </description>
   <contents>
     <choice title="lua-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
@@ -29,8 +29,8 @@ $ lua
   </contents>
   <resources bg-scale="none" bg-align="topleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">lua-build/COPYRIGHT</resource>
-      <resource relative="true" mod="true" type="readme">lua-build/README</resource>
+      <resource relative="true" mod="true" type="license">license.html</resource>
+      <resource relative="true" mod="true" type="readme">lua-build/doc/readme.html</resource>
     </locale>
   </resources>
   <flags/>
