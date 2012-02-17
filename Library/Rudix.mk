@@ -1,8 +1,8 @@
 # Rudix.mk - The BuildSystem itself
-# Copyright (c) 2005-2011 Ruda Moura
+# Copyright (c) 2005-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20111127
+BuildSystem = 20120217
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
