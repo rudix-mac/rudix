@@ -28,10 +28,12 @@ Index = '''<?xml version="1.0"?>
       <pkgref id="{vendor}.pkg.{name}"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">{license}</resource>
       <resource relative="true" mod="true" type="readme">{readme}</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
