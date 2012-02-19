@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>tornado</title>
+    <title>Tornado</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,16 +11,29 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Scalable, non-blocking web server</description>
+  <description>Tornado is an open source version of the scalable, non-blocking web server and tools that power FriendFeed.
+
+Site: http://www.tornadoweb.org/
+License: Apache
+
+Changes from previous release:
+* Upgraded to version 2.2
+
+Usage:
+$ python2.7
+&gt;&gt;&gt; import tornado
+</description>
   <contents>
     <choice title="tornado-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.tornado"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">LICENSE-2.0</resource>
-      <resource relative="true" mod="true" type="readme">tornado-1.1/README</resource>
+      <resource relative="true" mod="true" type="readme">tornado-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
