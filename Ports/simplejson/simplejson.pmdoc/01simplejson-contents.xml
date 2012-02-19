@@ -1,161 +1,188 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="simplejson-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/simplejson/simplejson-install" m="false" t="file">
-    <f n="Library" o="root" g="admin" p="17405">
-      <f n="Python" o="root" g="admin" p="16893">
-        <f n="2.6" o="root" g="admin" p="16893">
-          <f n="site-packages" o="root" g="admin" p="16893">
-            <f n="simplejson" o="root" g="admin" p="16893">
-              <f n="__init__.py" o="root" g="admin" p="33204">
+  <f n="simplejson-install" o="root" g="staff" p="16877" pt="simplejson-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="simplejson" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="__init__.pyc" o="root" g="admin" p="33204">
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="_speedups.so" o="root" g="admin" p="33277">
+              <f n="_speedups.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="decoder.py" o="root" g="admin" p="33277">
+              <f n="decoder.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="decoder.pyc" o="root" g="admin" p="33204">
+              <f n="decoder.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="encoder.py" o="root" g="admin" p="33277">
+              <f n="encoder.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="encoder.pyc" o="root" g="admin" p="33204">
+              <f n="encoder.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="scanner.py" o="root" g="admin" p="33277">
+              <f n="ordered_dict.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="scanner.pyc" o="root" g="admin" p="33204">
+              <f n="ordered_dict.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="tests" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204">
+              <f n="scanner.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="scanner.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tests" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_check_circular.py" o="root" g="admin" p="33204">
+                <f n="test_check_circular.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_check_circular.pyc" o="root" g="admin" p="33204">
+                <f n="test_check_circular.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_decode.py" o="root" g="admin" p="33204">
+                <f n="test_decimal.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_decode.pyc" o="root" g="admin" p="33204">
+                <f n="test_decimal.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_default.py" o="root" g="admin" p="33204">
+                <f n="test_decode.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_default.pyc" o="root" g="admin" p="33204">
+                <f n="test_decode.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_dump.py" o="root" g="admin" p="33204">
+                <f n="test_default.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_dump.pyc" o="root" g="admin" p="33204">
+                <f n="test_default.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_encode_basestring_ascii.py" o="root" g="admin" p="33204">
+                <f n="test_dump.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_encode_basestring_ascii.pyc" o="root" g="admin" p="33204">
+                <f n="test_dump.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_fail.py" o="root" g="admin" p="33204">
+                <f n="test_encode_basestring_ascii.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_fail.pyc" o="root" g="admin" p="33204">
+                <f n="test_encode_basestring_ascii.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_float.py" o="root" g="admin" p="33204">
+                <f n="test_encode_for_html.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_float.pyc" o="root" g="admin" p="33204">
+                <f n="test_encode_for_html.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_indent.py" o="root" g="admin" p="33204">
+                <f n="test_errors.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_indent.pyc" o="root" g="admin" p="33204">
+                <f n="test_errors.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass1.py" o="root" g="admin" p="33204">
+                <f n="test_fail.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass1.pyc" o="root" g="admin" p="33204">
+                <f n="test_fail.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass2.py" o="root" g="admin" p="33204">
+                <f n="test_float.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass2.pyc" o="root" g="admin" p="33204">
+                <f n="test_float.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass3.py" o="root" g="admin" p="33204">
+                <f n="test_indent.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_pass3.pyc" o="root" g="admin" p="33204">
+                <f n="test_indent.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_recursion.py" o="root" g="admin" p="33204">
+                <f n="test_namedtuple.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_recursion.pyc" o="root" g="admin" p="33204">
+                <f n="test_namedtuple.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_scanstring.py" o="root" g="admin" p="33204">
+                <f n="test_pass1.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_scanstring.pyc" o="root" g="admin" p="33204">
+                <f n="test_pass1.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_separators.py" o="root" g="admin" p="33204">
+                <f n="test_pass2.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_separators.pyc" o="root" g="admin" p="33204">
+                <f n="test_pass2.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_unicode.py" o="root" g="admin" p="33204">
+                <f n="test_pass3.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="test_unicode.pyc" o="root" g="admin" p="33204">
+                <f n="test_pass3.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_recursion.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_recursion.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_scanstring.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_scanstring.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_separators.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_separators.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_speedups.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_speedups.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_tuple.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_tuple.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_unicode.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_unicode.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <mod>mode</mod>
               </f>
-              <f n="tool.py" o="root" g="admin" p="33204">
+              <f n="tool.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="tool.pyc" o="root" g="admin" p="33204">
+              <f n="tool.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
             </f>
-            <f n="simplejson-2.0.9-py2.6.egg-info" o="root" g="admin" p="16893">
-              <f n="dependency_links.txt" o="root" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="PKG-INFO" o="root" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="SOURCES.txt" o="root" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="top_level.txt" o="root" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="zip-safe" o="root" g="admin" p="33204">
-                <mod>mode</mod>
-              </f>
+            <f n="simplejson-2.3.2-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -163,26 +190,14 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16877">
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="simplejson" o="root" g="wheel" p="16893">
-              <f n="genindex.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="index.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="LICENSE.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="PKG-INFO" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="search.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="searchindex.json" o="root" g="wheel" p="33204">
+              <f n="README.rst" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>

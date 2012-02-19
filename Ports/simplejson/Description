@@ -1,0 +1,11 @@
+Simple, fast, extensible JSON encoder/decoder for Python.
+
+Site: http://pypi.python.org/pypi/simplejson
+License: BSD like
+
+Changes from previous release:
+* Upgraded to version 2.3.2
+
+Usage:
+$ python2.7
+>>> import simplejson as json

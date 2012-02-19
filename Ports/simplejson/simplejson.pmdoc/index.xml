@@ -11,16 +11,29 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Simple, fast, extensible JSON encoder/decoder for Python</description>
+  <description>Simple, fast, extensible JSON encoder/decoder for Python.
+
+Site: http://pypi.python.org/pypi/simplejson
+License: BSD like
+
+Changes from previous release:
+* Upgraded to version 2.3.2
+
+Usage:
+$ python2.7
+&gt;&gt;&gt; import simplejson as json
+</description>
   <contents>
     <choice title="simplejson-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.simplejson"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">simplejson-2.0.9/LICENSE.txt</resource>
-      <resource relative="true" mod="true" type="readme">simplejson-2.0.9/PKG-INFO</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">simplejson-build/LICENSE.txt</resource>
+      <resource relative="true" mod="true" type="readme">simplejson-build/README.rst</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

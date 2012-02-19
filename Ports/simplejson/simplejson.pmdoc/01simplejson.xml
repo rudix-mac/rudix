@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4452A673-468D-4934-9A8B-810DE909AEE4">
+<pkgref spec="1.12" uuid="9D6A1954-5A8E-11E1-B051-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.simplejson</identifier>
-    <version>1.0</version>
+    <version>2.3.2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
     <mod>parent</mod>
-    <mod>installTo</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01simplejson-contents.xml</file-list>
