@@ -1,6 +1,6 @@
 The package you are installing is part of Rudix.
 
-Rudix is a collection of Unix software delivered as packages for OS X. Every package is self-contained and has everything it needs to work.
+Rudix is a collection of Unix software delivered as packages for Mac OS X. Every package is self-contained and has everything it needs to work.
 
 Rudix tries its best not to add extra dependencies to anything but the native Mac OS X libraries.
 
