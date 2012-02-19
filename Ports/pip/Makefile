@@ -4,7 +4,7 @@ include ../../Library/PythonFormula.mk
 
 Title=		pip
 Name=		pip
-Version=	1.0.2
+Version=	1.1
 Revision=	0
 URL=		http://pypi.python.org/packages/source/p/pip/
 Source=		$(Name)-$(Version).tar.gz

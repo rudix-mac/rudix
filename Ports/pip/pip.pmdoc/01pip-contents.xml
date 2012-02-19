@@ -6,189 +6,74 @@
         <f n="2.7" o="root" g="wheel" p="16877">
           <f n="site-packages" o="root" g="wheel" p="16877">
             <f n="pip" o="root" g="wheel" p="16893">
-              <f n="__init__.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="_pkgutil.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="_pkgutil.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="backwardcompat.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="backwardcompat.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="basecommand.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="basecommand.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="baseparser.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="baseparser.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
+              <f n="__init__.py" o="root" g="wheel" p="33277"/>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
+              <f n="_pkgutil.py" o="root" g="wheel" p="33277"/>
+              <f n="_pkgutil.pyc" o="root" g="wheel" p="33204"/>
+              <f n="backwardcompat.py" o="root" g="wheel" p="33277"/>
+              <f n="backwardcompat.pyc" o="root" g="wheel" p="33204"/>
+              <f n="basecommand.py" o="root" g="wheel" p="33277"/>
+              <f n="basecommand.pyc" o="root" g="wheel" p="33204"/>
+              <f n="baseparser.py" o="root" g="wheel" p="33277"/>
+              <f n="baseparser.pyc" o="root" g="wheel" p="33204"/>
               <f n="commands" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="bundle.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="bundle.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="completion.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="completion.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="freeze.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="freeze.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="help.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="help.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="install.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="install.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="search.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="search.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="uninstall.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="uninstall.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="unzip.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="unzip.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="zip.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="zip.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
+                <f n="__init__.py" o="root" g="wheel" p="33204"/>
+                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
+                <f n="bundle.py" o="root" g="wheel" p="33204"/>
+                <f n="bundle.pyc" o="root" g="wheel" p="33204"/>
+                <f n="completion.py" o="root" g="wheel" p="33204"/>
+                <f n="completion.pyc" o="root" g="wheel" p="33204"/>
+                <f n="freeze.py" o="root" g="wheel" p="33204"/>
+                <f n="freeze.pyc" o="root" g="wheel" p="33204"/>
+                <f n="help.py" o="root" g="wheel" p="33204"/>
+                <f n="help.pyc" o="root" g="wheel" p="33204"/>
+                <f n="install.py" o="root" g="wheel" p="33204"/>
+                <f n="install.pyc" o="root" g="wheel" p="33204"/>
+                <f n="search.py" o="root" g="wheel" p="33204"/>
+                <f n="search.pyc" o="root" g="wheel" p="33204"/>
+                <f n="uninstall.py" o="root" g="wheel" p="33204"/>
+                <f n="uninstall.pyc" o="root" g="wheel" p="33204"/>
+                <f n="unzip.py" o="root" g="wheel" p="33204"/>
+                <f n="unzip.pyc" o="root" g="wheel" p="33204"/>
+                <f n="zip.py" o="root" g="wheel" p="33204"/>
+                <f n="zip.pyc" o="root" g="wheel" p="33204"/>
+              </f>
+              <f n="download.py" o="root" g="wheel" p="33204"/>
+              <f n="download.pyc" o="root" g="wheel" p="33204"/>
+              <f n="exceptions.py" o="root" g="wheel" p="33277"/>
+              <f n="exceptions.pyc" o="root" g="wheel" p="33204"/>
+              <f n="index.py" o="root" g="wheel" p="33277"/>
+              <f n="index.pyc" o="root" g="wheel" p="33204"/>
+              <f n="locations.py" o="root" g="wheel" p="33277"/>
+              <f n="locations.pyc" o="root" g="wheel" p="33204"/>
+              <f n="log.py" o="root" g="wheel" p="33277"/>
+              <f n="log.pyc" o="root" g="wheel" p="33204"/>
+              <f n="req.py" o="root" g="wheel" p="33204"/>
+              <f n="req.pyc" o="root" g="wheel" p="33204"/>
+              <f n="runner.py" o="root" g="wheel" p="33204"/>
+              <f n="runner.pyc" o="root" g="wheel" p="33204"/>
+              <f n="status_codes.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="download.py" o="root" g="wheel" p="33204">
+              <f n="status_codes.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="download.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="exceptions.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="exceptions.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="index.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="index.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="locations.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="locations.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="log.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="log.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="req.py" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="req.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="runner.py" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="runner.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="util.py" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="util.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
+              <f n="util.py" o="root" g="wheel" p="33204"/>
+              <f n="util.pyc" o="root" g="wheel" p="33204"/>
               <f n="vcs" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33277">
-                  <mod>mode</mod>
-                </f>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="bazaar.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="bazaar.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="git.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="git.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="mercurial.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="mercurial.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="subversion.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="subversion.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <mod>mode</mod>
+                <f n="__init__.py" o="root" g="wheel" p="33277"/>
+                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
+                <f n="bazaar.py" o="root" g="wheel" p="33204"/>
+                <f n="bazaar.pyc" o="root" g="wheel" p="33204"/>
+                <f n="git.py" o="root" g="wheel" p="33204"/>
+                <f n="git.pyc" o="root" g="wheel" p="33204"/>
+                <f n="mercurial.py" o="root" g="wheel" p="33204"/>
+                <f n="mercurial.pyc" o="root" g="wheel" p="33204"/>
+                <f n="subversion.py" o="root" g="wheel" p="33204"/>
+                <f n="subversion.pyc" o="root" g="wheel" p="33204"/>
               </f>
-              <f n="venv.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
-              </f>
-              <f n="venv.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
             </f>
-            <f n="pip-1.0.2-py2.7.egg-info" o="root" g="wheel" p="16893">
+            <f n="pip-1.1-py2.7.egg-info" o="root" g="wheel" p="16893">
               <f n="dependency_links.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -215,24 +100,15 @@
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16893">
-          <f n="pip" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="pip-2.7" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
+        <f n="bin" o="root" g="wheel" p="16877">
+          <f n="pip" o="root" g="wheel" p="33277"/>
+          <f n="pip-2.7" o="root" g="wheel" p="33277"/>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="pip" o="root" g="wheel" p="16893">
-              <f n="index.txt" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="license.txt" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
+              <f n="index.txt" o="root" g="wheel" p="33204"/>
+              <f n="license.txt" o="root" g="wheel" p="33204"/>
             </f>
           </f>
         </f>

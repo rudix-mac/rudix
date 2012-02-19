@@ -16,22 +16,23 @@
 Site: http://pypi.python.org/pypi/pip
 License: Python
 
-Usage:
-$ pip
-
 Changes from previous release:
-* Upgraded to version 1.0.2
-* Recompiled for Lion
+* Upgraded to version 1.1
+
+Usage:
+$ /usr/local/bin/pip
 </description>
   <contents>
     <choice title="pip-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pip"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">pip-build/license.txt</resource>
       <resource relative="true" mod="true" type="readme">pip-build/docs/index.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
