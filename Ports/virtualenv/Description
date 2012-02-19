@@ -1,0 +1,10 @@
+Virtual Python Environment builder.
+
+Site: http://pypi.python.org/pypi/virtualenv
+License: Python
+
+Changes from previous release:
+* Adopted
+
+Usage:
+$ /usr/local/bin/virtualenv
