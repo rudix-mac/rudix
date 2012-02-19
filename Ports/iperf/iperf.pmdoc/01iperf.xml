@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="183B38B2-A37D-11E0-9586-0017F22C0C04">
+<pkgref spec="1.12" uuid="823A0117-5B2A-11E1-8E88-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.iperf</identifier>
-    <version>2.0.5-0</version>
+    <version>2.0.5-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01iperf-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

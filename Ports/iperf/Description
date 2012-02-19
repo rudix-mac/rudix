@@ -1,0 +1,10 @@
+Iperf was developed by NLANR/DAST as a modern alternative for measuring maximum TCP and UDP bandwidth performance.
+
+Site: http://iperf.sourceforge.net/
+License: BSD
+
+Changes from previous release:
+* Rebuilt on OSX Lion and Xcode 4.3
+
+Usage:
+$ /usr/local/bin/iperf

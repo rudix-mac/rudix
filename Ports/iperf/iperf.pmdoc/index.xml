@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>A modern alternative for measuring TCP and UDP bandwidth performance</description>
+  <description>Iperf was developed by NLANR/DAST as a modern alternative for measuring maximum TCP and UDP bandwidth performance.
+
+Site: http://iperf.sourceforge.net/
+License: BSD
+
+Changes from previous release:
+* Rebuilt on OSX Lion and Xcode 4.3
+
+Usage:
+$ /usr/local/bin/iperf
+</description>
   <contents>
     <choice title="iperf-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.iperf"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">iperf-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">iperf-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
