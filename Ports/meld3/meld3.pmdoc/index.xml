@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>meld3</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>meld3 is an HTML/XML templating engine.
+
+Site: http://pypi.python.org/pypi/meld3
+License: ZPL
+
+Changes from previous release:
+* Upgraded to version 0.6.8
+
+Usage:
+$ python2.7
+&gt;&gt;&gt; import meld3</description>
+  <contents>
+    <choice title="meld3-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.meld3"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="bottomleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">meld3-build/COPYRIGHT.txt</resource>
+      <resource relative="true" mod="true" type="readme">meld3-build/README.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01meld.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

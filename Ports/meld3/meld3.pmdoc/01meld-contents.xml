@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="meld3-install" o="root" g="staff" p="16877" pt="meld3-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="meld3" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clearsilverprofile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="clearsilverprofile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="example.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="example.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meld3.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meld3.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="melddiff.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="melddiff.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meldprofile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meldprofile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="test_getiterator.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="test_getiterator.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="test_meld3.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="test_meld3.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="testclone.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="testclone.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zptprofile.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zptprofile.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="meld3-0.6.8-py2.7.egg-info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16877">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="meld3" o="root" g="wheel" p="16893">
+              <f n="COPYRIGHT.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

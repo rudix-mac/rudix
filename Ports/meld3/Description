@@ -1,0 +1,11 @@
+meld3 is an HTML/XML templating engine.
+
+Site: http://pypi.python.org/pypi/meld3
+License: ZPL
+
+Changes from previous release:
+* Upgraded to version 0.6.8
+
+Usage:
+$ python2.7
+>>> import meld3
