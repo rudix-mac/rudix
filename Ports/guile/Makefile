@@ -2,10 +2,6 @@ BuildRequires += $(LibDir)/libgmp.la
 BuildRequires += $(LibDir)/libintl.la
 
 include ../../Library/Config.mk
-
-# Due GMP
-RUDIX_UNIVERSAL=
-
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
@@ -14,8 +10,8 @@ Site=		http://www.gnu.org/software/guile/
 License=	LGPL
 Title=		Guile
 Name=		guile
-Version=	1.8.7
-Revision=	3
+Version=	2.0.3
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/guile/
 Source=		$(Name)-$(Version).tar.gz
 
