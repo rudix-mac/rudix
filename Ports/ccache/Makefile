@@ -4,7 +4,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		ccache
 Name=		ccache
-Version=	3.1.6
+Version=	3.1.7
 Revision=	0
 URL=		http://samba.org/ftp/ccache/
 Source=		$(Name)-$(Version).tar.bz2
