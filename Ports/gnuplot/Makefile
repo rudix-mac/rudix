@@ -8,7 +8,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		Gnuplot
 Name=		gnuplot
-Version=	4.4.3
+Version=	4.4.4
 Revision=	0
 URL=		http://downloads.sourceforge.net/gnuplot
 Source=		$(Name)-$(Version).tar.gz
