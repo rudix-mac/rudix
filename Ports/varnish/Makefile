@@ -7,7 +7,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		Varnish Cache
 Name=		varnish
-Version=	3.0.1
+Version=	3.0.2
 Revision=	0
 URL=		http://repo.varnish-cache.org/source/
 Source=		$(Name)-$(Version).tar.gz
