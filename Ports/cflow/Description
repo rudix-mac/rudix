@@ -1,0 +1,10 @@
+GNU cflow analyzes a collection of C source files and prints a graph, charting control flow within the program.
+
+Changes from previous release:
+* Upgraded to version 1.4
+
+Site: http://www.gnu.org/software/cflow/
+License: GPL
+
+Usage:
+$ cflow

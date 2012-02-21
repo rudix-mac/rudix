@@ -1,8 +1,0 @@
---- lib/argp-pv.c.orig	2011-04-09 15:45:15.000000000 -0300
-+++ lib/argp-pv.c	2011-04-09 15:45:30.000000000 -0300
-@@ -20,4 +20,4 @@
-    --version is added (unless the ARGP_NO_HELP flag is used), which will
-    print this string followed by a newline and exit (unless the
-    ARGP_NO_EXIT flag is used).  Overridden by ARGP_PROGRAM_VERSION_HOOK.  */
--const char *argp_program_version;
-+const char *argp_program_version = 0;

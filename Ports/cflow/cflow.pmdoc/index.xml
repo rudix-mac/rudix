@@ -11,7 +11,17 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Analyze C source files and print a call graph</description>
+  <description>GNU cflow analyzes a collection of C source files and prints a graph, charting control flow within the program.
+
+Changes from previous release:
+* Upgraded to version 1.4
+
+Site: http://www.gnu.org/software/cflow/
+License: GPL
+
+Usage:
+$ cflow
+</description>
   <contents>
     <choice title="cflow-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.cflow"/>
