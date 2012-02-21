@@ -79,7 +79,6 @@
                 <f n="_scons_subprocess.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Conftest.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
@@ -172,7 +171,6 @@
                 <f n="Python.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Options" o="root" g="wheel" p="16893">
                 <f n="__init__.py" o="root" g="wheel" p="33204">
@@ -211,7 +209,6 @@
                 <f n="PathOption.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="PathList.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -280,7 +277,6 @@
                 <f n="win32.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Scanner" o="root" g="wheel" p="16893">
                 <f n="__init__.py" o="root" g="wheel" p="33277">
@@ -337,7 +333,6 @@
                 <f n="RC.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="SConf.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
@@ -382,7 +377,6 @@
                 <f n="SConsOptions.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Sig.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -521,6 +515,12 @@
                   <mod>mode</mod>
                 </f>
                 <f n="dvips.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="f03.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="f03.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="f77.py" o="root" g="wheel" p="33277">
@@ -788,7 +788,6 @@
                   <f n="vs.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="mslib.py" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
@@ -899,7 +898,6 @@
                   <f n="zip.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="pdf.py" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
@@ -1087,7 +1085,6 @@
                 <f n="zip.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Util.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
@@ -1132,7 +1129,6 @@
                 <f n="PathVariable.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="Warnings.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -1140,9 +1136,8 @@
               <f n="Warnings.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <f n="scons-2.0.1-py2.7.egg-info" o="root" g="wheel" p="33204">
+            <f n="scons-2.1.0-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -1151,23 +1146,23 @@
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16877">
           <f n="scons" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="scons-2.0.1" o="root" g="wheel" p="33277">
+          <f n="scons-2.1.0" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="scons-time" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="scons-time-2.0.1" o="root" g="wheel" p="33277">
+          <f n="scons-time-2.1.0" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="sconsign" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="sconsign-2.0.1" o="root" g="wheel" p="33277">
+          <f n="sconsign-2.1.0" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
         </f>
@@ -1180,11 +1175,10 @@
               <f n="README.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
-            <f n="man1" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16877">
               <f n="scons-time.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>

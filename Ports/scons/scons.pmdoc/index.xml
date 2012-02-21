@@ -11,26 +11,27 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>SCons is an Open Source software construction tool&#x2014;that is, a next-generation build tool.
-
-Changes from previous release:
-* Recompiled for Lion
+  <description>SCons is an Open Source software construction tool.
 
 Site: http://www.scons.org/
 License: BSD
 
+Changes from previous release:
+* Upgraded to version 2.1.0
+
 Usage:
-$ scons
-</description>
+$ /usr/local/bin/scons</description>
   <contents>
     <choice title="scons-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.scons"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">scons-build/LICENSE.txt</resource>
       <resource relative="true" mod="true" type="readme">scons-build/README.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

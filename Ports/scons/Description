@@ -1,10 +1,10 @@
-SCons is an Open Source software construction tool—that is, a next-generation build tool.
-
-Changes from previous release:
-* Recompiled for Lion
+SCons is an Open Source software construction tool.
 
 Site: http://www.scons.org/
 License: BSD
 
+Changes from previous release:
+* Upgraded to version 2.1.0
+
 Usage:
-$ scons
+$ /usr/local/bin/scons
