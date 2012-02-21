@@ -1,32 +1,27 @@
-# SUMMARY=	Real-time, concurrent and distributed functional language
-# HOMEPAGE=	http://www.erlang.org/
-# COPYING=	ERLANG PUBLIC LICENSE
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		Erlang/OTP $(VERSION)
-NAME=		erlang
-VERSION=	R14B01
-REVISION=	0
+Title=		Erlang/OTP
+Name=		erlang
+Version=	R14B04
+Revision=	0
 URL=		http://www.erlang.org/download/
-SOURCE=		otp_src_$(VERSION).tar.gz
+Source=		otp_src_$(Version).tar.gz
 
-README=		$(BUILDDIR)/README.md
-LICENSE=	$(BUILDDIR)/EPLICENCE
+UncompressedName=otp_src_$(Version)
 
-retrieve:
-	$(FETCH) $(URL)/$(SOURCE)
-	$(FETCH) $(URL)/otp_doc_html_$(VERSION).tar.gz
-	$(FETCH) $(URL)/otp_doc_man_$(VERSION).tar.gz
-	touch retrieve
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/EPLICENCE
 
-prep: retrieve
-	tar -zxf $(SOURCE)
-	mv otp_src_$(VERSION) $(NAME)-$(VERSION)
-	touch prep
+define retrieve_post_hook
+$(fetch) $(URL)/otp_doc_html_$(Version).tar.gz
+$(fetch) $(URL)/otp_doc_man_$(Version).tar.gz
+endef
 
+ifdef FOO
 build: prep
-	cd $(BUILDDIR) ; $(configure) \
+	cd $(SourceDir) ; $(configure) \
 		--disable-dependency-tracking \
 		--enable-kernel-poll \
 		--enable-smp-support \
@@ -35,22 +30,23 @@ build: prep
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; make INSTALL_PREFIX=$(INSTALLDIR) install
-	install -d $(INSTALLDIR)/usr/local/share
-	tar -zxf $(PORTDIR)/otp_doc_man_$(VERSION).tar.gz -C $(INSTALLDIR)/usr/local/share
-	tar -zxf $(PORTDIR)/otp_doc_html_$(VERSION).tar.gz -C $(INSTALLDIR)/usr/local/lib/erlang
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,EPLICENCE,README.*} $(INSTALLDOCDIR)
-	cd $(INSTALLDOCDIR) ; ln -sf ../../../lib/erlang/doc html
-	cd $(INSTALLDIR)/usr/local/lib/erlang ; ln -sf ../../share/man .
-	rm -f $(INSTALLDIR)/usr/local/share/{COPYRIGHT,PR.template,README}
+	cd $(SourceDir) ; make INSTALL_PREFIX=$(InstallDir) install
+	install -d $(InstallDir)$(Prefix)/share
+	tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C $(InstallDir)$(Prefix)/share
+	tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C $(InstallDir)$(LibDir)/erlang
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{AUTHORS,EPLICENCE,ReadMeFile.*} $(InstallDir)/$(DocDir)/$(Name)
+	cd $(InstallDir)/$(DocDir)/$(Name) ; ln -sf ../../../lib/erlang/doc html
+	cd $(InstallDir)$(LibDir)/erlang ; ln -sf ../../share/man .
+	rm -f $(InstallDir)$(Prefix)/share/{COPYRIGHT,PR.template,ReadMeFile}
 	touch install
 
 test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/erlang/bin/*"
+	$(test-universal-binary) "$(InstallDir)$(LibDir)/erlang/bin/*"
 	touch test
 
 realdistclean: distclean
-	rm -f retrieve $(SOURCE)
-	rm -f otp_doc_html_$(VERSION).tar.gz
-	rm -f otp_doc_man_$(VERSION).tar.gz
+	rm -f retrieve $(Source)
+	rm -f otp_doc_html_$(Version).tar.gz
+	rm -f otp_doc_man_$(Version).tar.gz
+endif
