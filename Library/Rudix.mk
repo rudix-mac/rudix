@@ -200,7 +200,7 @@ endef
 
 define sanitize_pmdoc
 for x in $(Name).pmdoc/*-contents.xml ; do \
-	perl -p -i -e 's/o="$(USER)"/o="root"/' $$x ; done
+	perl -p -i -e 's/o="[^"]*"/o="root"/ ; s/pt="[^"]*"/pt="$(Name)-install"/' $$x ; done
 for x in $(Name).pmdoc/*.xml ; do \
 	xmllint --format --output $$x $$x ; done
 endef
