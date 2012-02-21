@@ -1,6 +1,4 @@
-#
-# Copyright (c) 2007-2011 Ruda Moura <ruda@rudix.org>
-#
+# Copyright (c) 2005-2012 Ruda Moura
 
 Rules  = retrieve prep build install test pkg
 Rules += installclean clean distclean realdistclean pkgclean
