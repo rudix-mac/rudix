@@ -1,0 +1,10 @@
+Yasm is a complete rewrite of the NASM assembler under the “new” BSD License.
+
+Site: http://yasm.tortall.net/
+License: BSD
+
+Changes from previous release:
+* Recompiled in Xcode 4.2
+
+Usage:
+$ yasm
