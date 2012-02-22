@@ -74,6 +74,75 @@
               <f n="interhg.pyc" o="root" g="wheel" p="33204"/>
               <f n="keyword.py" o="root" g="wheel" p="33204"/>
               <f n="keyword.pyc" o="root" g="wheel" p="33204"/>
+              <f n="largefiles" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="basestore.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="basestore.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="lfcommands.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="lfcommands.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="lfutil.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="lfutil.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="localstore.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="localstore.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overrides.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overrides.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="proto.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="proto.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="remotestore.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="remotestore.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reposetup.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="reposetup.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uisetup.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uisetup.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wirestore.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="wirestore.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
               <f n="mq.py" o="root" g="wheel" p="33204"/>
               <f n="mq.pyc" o="root" g="wheel" p="33204"/>
               <f n="notify.py" o="root" g="wheel" p="33204"/>
@@ -186,6 +255,9 @@
                 <f n="merge-tools.txt" o="root" g="wheel" p="33204"/>
                 <f n="multirevs.txt" o="root" g="wheel" p="33204"/>
                 <f n="patterns.txt" o="root" g="wheel" p="33204"/>
+                <f n="phases.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="revisions.txt" o="root" g="wheel" p="33204"/>
                 <f n="revsets.txt" o="root" g="wheel" p="33204"/>
                 <f n="subrepos.txt" o="root" g="wheel" p="33204"/>
@@ -252,6 +324,68 @@
               <f n="ignore.pyc" o="root" g="wheel" p="33204"/>
               <f n="keepalive.py" o="root" g="wheel" p="33204"/>
               <f n="keepalive.pyc" o="root" g="wheel" p="33204"/>
+              <f n="locale" o="root" g="wheel" p="16893">
+                <f n="da" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="de" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="el" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="fr" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="it" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="ja" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="pt_BR" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="ro" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="ru" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="sv" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="zh_CN" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+                <f n="zh_TW" o="root" g="wheel" p="16893">
+                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
+                  </f>
+                </f>
+              </f>
               <f n="localrepo.py" o="root" g="wheel" p="33204"/>
               <f n="localrepo.pyc" o="root" g="wheel" p="33204"/>
               <f n="lock.py" o="root" g="wheel" p="33204"/>
@@ -281,6 +415,12 @@
               <f n="parsers.so" o="root" g="wheel" p="33277"/>
               <f n="patch.py" o="root" g="wheel" p="33204"/>
               <f n="patch.pyc" o="root" g="wheel" p="33204"/>
+              <f n="phases.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="phases.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="posix.py" o="root" g="wheel" p="33204"/>
               <f n="posix.pyc" o="root" g="wheel" p="33204"/>
               <f n="pushkey.py" o="root" g="wheel" p="33204"/>
@@ -366,6 +506,9 @@
                   <f n="shortlog.tmpl" o="root" g="wheel" p="33204"/>
                   <f n="summary.tmpl" o="root" g="wheel" p="33204"/>
                   <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
+                </f>
+                <f n="map-cmdline.bisect" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
                 </f>
                 <f n="map-cmdline.changelog" o="root" g="wheel" p="33204"/>
                 <f n="map-cmdline.compact" o="root" g="wheel" p="33204"/>
@@ -502,14 +645,16 @@
               <f n="wireproto.py" o="root" g="wheel" p="33204"/>
               <f n="wireproto.pyc" o="root" g="wheel" p="33204"/>
             </f>
-            <f n="mercurial-1.9.2-py2.7.egg-info" o="root" g="wheel" p="33204"/>
+            <f n="mercurial-2.1-py2.7.egg-info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
           </f>
         </f>
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16877">
           <f n="hg" o="root" g="wheel" p="33277"/>
         </f>
         <f n="share" o="root" g="wheel" p="16893">

@@ -1,4 +1,4 @@
-#BuildRequires += /usr/local/bin/msgfmt
+BuildRequires += /usr/local/bin/msgfmt
 
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
@@ -6,7 +6,7 @@ include ../../Library/PythonFormula.mk
 
 Title=		Mercurial
 Name=		mercurial
-Version=	1.9.2
+Version=	2.1
 Revision=	0
 URL=		http://www.selenic.com/mercurial/release/
 Source=		$(Name)-$(Version).tar.gz
