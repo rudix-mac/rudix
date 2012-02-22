@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Apache Portable Runtime library</description>
+  <description>Apache Portable Runtime library.
+
+Site: http://apr.apache.org/
+License: Apache License
+
+Changes from previous release:
+* Upgraded to version 1.4.6
+
+Usage:
+$ /usr/local/bin/apr-1-config
+</description>
   <contents>
     <choice title="apr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.apr"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">apr-build/LICENSE</resource>
       <resource relative="true" mod="true" type="readme">apr-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

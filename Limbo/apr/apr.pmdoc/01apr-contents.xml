@@ -118,13 +118,11 @@
             <f n="apr_want.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libapr-1.0.4.5.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libapr-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libapr-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libapr-1.a" o="root" g="wheel" p="33204">
@@ -160,7 +158,9 @@
               <f n="mkdir.sh" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="apr" o="root" g="wheel" p="16893">
@@ -197,6 +197,7 @@
               <f n="win32_builds.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="3CD34DBC-92FD-11E0-909B-0017F22C0C04">
+<pkgref spec="1.12" uuid="8EEE3E99-5CEC-11E1-884A-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.apr</identifier>
-    <version>1.4.5-0</version>
+    <version>1.4.6-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -20,7 +20,6 @@
   </config>
   <contents>
     <file-list>01apr-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
