@@ -1,12 +1,10 @@
 Bash is the shell, or command language interpreter, that will appear in the GNU operating system. 
 
-Changes from previous release:
-* Applied patches bash42-009 and bash42-010
-* Rebuilt on Xcode 4.2
-
 Site: http://www.gnu.org/software/bash/
 License: GPL
 
-Usage:
-$ bash4
+Changes from previous release:
+* Applied patches bash42-001 to bash42-020
 
+Usage:
+$ /usr/local/bin/bash4

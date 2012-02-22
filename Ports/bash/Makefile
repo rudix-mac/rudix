@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		GNU Bash
 Name=		bash
 Version=	4.2
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 

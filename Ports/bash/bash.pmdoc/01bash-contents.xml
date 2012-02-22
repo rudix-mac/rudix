@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="bash-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/bash/bash-install" m="false" t="file">
+  <f n="bash-install" o="root" g="staff" p="16877" pt="bash-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16877">
           <f n="bash" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -50,7 +50,6 @@
               <f n="Y2K" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
@@ -64,9 +63,7 @@
                 <f n="bash.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="bg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -266,7 +263,7 @@
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
-            <f n="man1" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16877">
               <f n="bash.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>

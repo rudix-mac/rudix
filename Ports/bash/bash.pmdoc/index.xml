@@ -13,25 +13,26 @@
   </distribution>
   <description>Bash is the shell, or command language interpreter, that will appear in the GNU operating system. 
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2
-
 Site: http://www.gnu.org/software/bash/
 License: GPL
 
-Usage:
-$ bash4
+Changes from previous release:
+* Applied patches bash42-001 to bash42-020
 
+Usage:
+$ /usr/local/bin/bash4
 </description>
   <contents>
     <choice title="bash-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.bash"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">bash-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">bash-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
