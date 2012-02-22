@@ -1,10 +1,10 @@
-Companion library to APR
-
-Changes from previous release:
-* Upgraded to version 1.3.12
+Companion library to APR.
 
 Site: http://apr.apache.org/
 License: Apache License
+
+Changes from previous release:
+* Upgraded to version 1.4.1
 
 Usage:
 $ /usr/local/bin/apu-1-config --version
