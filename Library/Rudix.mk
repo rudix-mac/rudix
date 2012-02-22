@@ -280,6 +280,7 @@ endef
 
 define pkg_inner_hook
 $(strip_macho)
+$(create_pmdoc)
 $(sanitize_pmdoc)
 $(create_pkg)
 endef
