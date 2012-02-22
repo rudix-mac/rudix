@@ -1,0 +1,10 @@
+Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.
+
+Site: http://www.squid-cache.org/
+License: GPL
+
+Changes from previous release:
+* Adopted from version 2.7.STABLE9-20110824
+
+Usage:
+$ /usr/local/sbin/squid
