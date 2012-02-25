@@ -1,0 +1,10 @@
+Lua is a powerful, fast, lightweight, embeddable scripting language.
+
+Site: http://www.lua.org/
+License: MIT
+
+Changes from previous release:
+* Upgraded to version 5.2.0
+
+Usage:
+$ /usr/local/bin/lua
