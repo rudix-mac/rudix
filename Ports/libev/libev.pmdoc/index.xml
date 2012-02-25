@@ -13,13 +13,11 @@
   </distribution>
   <description>A full-featured and high-performance event loop that is loosely modelled after libevent.
 
-Changes from previous release:
-* Recompiled for Lion
-
 Site: http://software.schmorp.de/pkg/libev.html
 License: BSD (or GPL)
 
-Usage:
+Changes from previous release:
+* Upgraded to version 4.11
 
 </description>
   <contents>
@@ -27,10 +25,12 @@ Usage:
       <pkgref id="org.rudix.pkg.libev"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">libev-build/LICENSE</resource>
       <resource relative="true" mod="true" type="readme">libev-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

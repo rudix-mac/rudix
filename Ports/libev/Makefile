@@ -4,8 +4,8 @@ include ../../Library/GNUFormula.mk
 
 Title=		Libev
 Name=		libev
-Version=	4.04
-Revision=	1
+Version=	4.11
+Revision=	0
 URL=		http://dist.schmorp.de/libev/
 Source=		$(Name)-$(Version).tar.gz
 
