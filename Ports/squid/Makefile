@@ -13,3 +13,10 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName=$(Name)-$(Version).STABLE9-20110824
+GnuConfigureExtra += --datarootdir=$(DataDir)/squid
+GnuConfigureExtra += --with-maxfd=1024
+
+define install_post_hook
+mv $(InstallDir)/usr/local/etc/cachemgr.conf $(InstallDir)/usr/local/etc/cachemgr.conf.default
+rm -f $(InstallDir)/usr/local/etc/*.conf
+endef

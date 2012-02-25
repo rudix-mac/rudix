@@ -4,7 +4,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	R14B04
+Version=	R15B
 Revision=	0
 URL=		http://www.erlang.org/download/
 Source=		otp_src_$(Version).tar.gz
