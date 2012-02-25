@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GNU Autoconf 2.68</title>
+    <title>GNU Autoconf</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -13,24 +13,26 @@
   </distribution>
   <description>Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages.
 
-Changes from previous release:
-* Built on Xcode 4.2
-
 Site: http://www.gnu.org/software/autoconf/
 License: GPL
 
+Changes from previous release:
+* Build on Xcode 4.3
+
 Usage:
-$ /usr/local/bin/autoconf --version
+$ /usr/local/bin/autoconf
 </description>
   <contents>
     <choice title="autoconf-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.autoconf"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">autoconf-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">autoconf-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

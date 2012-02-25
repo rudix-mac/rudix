@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		GNU Autoconf
 Name=		autoconf
 Version=	2.68
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/autoconf/
 Source=		$(Name)-$(Version).tar.bz2
 

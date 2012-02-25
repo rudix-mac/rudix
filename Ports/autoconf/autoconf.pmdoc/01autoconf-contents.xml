@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="autoconf-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/autoconf/autoconf-install" m="false" t="file">
+  <f n="autoconf-install" o="root" g="staff" p="16877" pt="autoconf-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="autoconf" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -25,6 +25,7 @@
           <f n="ifnames" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="autoconf" o="root" g="wheel" p="16893">
@@ -205,6 +206,7 @@
               </f>
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="emacs" o="root" g="wheel" p="16893">
             <f n="site-lisp" o="root" g="wheel" p="16893">
@@ -220,7 +222,9 @@
               <f n="autotest-mode.elc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
             <f n="autoconf.info" o="root" g="wheel" p="33204">
@@ -229,6 +233,7 @@
             <f n="standards.info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
@@ -259,9 +264,13 @@
               <f n="ifnames.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
+        <mod>mode</mod>
       </f>
     </f>
   </f>
