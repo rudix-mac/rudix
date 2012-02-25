@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Indenter and formatter of C/C++/Java source files</description>
+  <description>A Free, Fast and Small Automatic Formatter for C, C++, C#, and Java Source Code.
+
+Site: http://astyle.sourceforge.net/
+License: LGPL
+
+Changes from previous release:
+* Build on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/astyle
+</description>
   <contents>
     <choice title="astyle-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.astyle"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">astyle-build/doc/license.html</resource>
       <resource relative="true" mod="true" type="readme">astyle-build/doc/index.html</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

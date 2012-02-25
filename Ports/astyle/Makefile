@@ -5,7 +5,7 @@ include ../../Library/UnixFormula.mk
 Title=		Artistic Style
 Name=		astyle
 Version=	2.02
-Revision=	2
+Revision=	3
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)_$(Version)_macosx.tar.gz
 

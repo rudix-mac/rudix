@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="13FB65C0-BBAF-11E0-B605-D49A200B3D20">
+<pkgref spec="1.12" uuid="21C9A38C-5FE3-11E1-8547-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.astyle</identifier>
-    <version>2.02-1</version>
+    <version>2.02-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

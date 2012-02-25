@@ -1,11 +1,10 @@
-A Free, Fast and Small Automatic Formatter for C, C++, C#, and Java Source Code
-
-Changes from previous release:
-* Built on Xcode 4.2
+A Free, Fast and Small Automatic Formatter for C, C++, C#, and Java Source Code.
 
 Site: http://astyle.sourceforge.net/
 License: LGPL
 
-Usage:
-$ astyle --help
+Changes from previous release:
+* Build on Xcode 4.3
 
+Usage:
+$ /usr/local/bin/astyle
