@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		AsciiDoc
 Name=		asciidoc
 Version=	8.6.6
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
@@ -17,6 +17,7 @@ mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \
    $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf.default
 endef
 
-# Pure Python binaries
+# Do nothing
 define test_inner_hook
+echo Nothing to test here
 endef

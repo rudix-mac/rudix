@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Text based document generation</description>
+  <description>AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs.
+
+Site: http://www.methods.co.nz/asciidoc/
+License: GPL
+
+Changes from previous release:
+* Upgraded to version 8.6.6
+
+Usage:
+$ /usr/local/bin/asciidoc
+</description>
   <contents>
     <choice title="asciidoc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.asciidoc"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">asciidoc-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">asciidoc-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

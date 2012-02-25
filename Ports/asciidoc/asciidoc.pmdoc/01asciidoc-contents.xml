@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="asciidoc-install" o="root" g="staff" p="16877" pt="asciidoc-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="a2x" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
@@ -58,7 +58,7 @@
               </f>
               <mod>mode</mod>
             </f>
-            <f n="docbook.conf" o="root" g="wheel" p="33204">
+            <f n="docbook45.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="filters" o="root" g="wheel" p="16893">
@@ -76,6 +76,15 @@
                   <mod>mode</mod>
                 </f>
                 <f n="graphviz2png.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="latex" o="root" g="wheel" p="16893">
+                <f n="latex-filter.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="latex2png.py" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
                 <mod>mode</mod>
@@ -101,6 +110,9 @@
               <mod>mode</mod>
             </f>
             <f n="html4.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="html5.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="images" o="root" g="wheel" p="16893">
@@ -191,13 +203,16 @@
               <mod>mode</mod>
             </f>
             <f n="javascripts" o="root" g="wheel" p="16893">
-              <f n="asciidoc-xhtml11.js" o="root" g="wheel" p="33204">
+              <f n="asciidoc.js" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ASCIIMathML.js" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="LaTeXMathML.js" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="slidy.js" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="toc.js" o="root" g="wheel" p="33204">
@@ -223,31 +238,61 @@
             <f n="lang-it.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="lang-nl.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="lang-pt-BR.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="lang-ru.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="lang-uk.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="latex.conf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="slidy.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="stylesheets" o="root" g="wheel" p="16893">
+              <f n="asciidoc.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="docbook-xsl.css" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="xhtml11-manpage.css" o="root" g="wheel" p="33204">
+              <f n="pygments.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="slidy.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="toc2.css" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="xhtml11-quirks.css" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="xhtml11.css" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <mod>mode</mod>
             </f>
             <f n="text.conf" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="themes" o="root" g="wheel" p="16893">
+              <f n="flask" o="root" g="wheel" p="16893">
+                <f n="flask.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="volnitsky" o="root" g="wheel" p="16893">
+                <f n="volnitsky.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
             <f n="wordpress.conf" o="root" g="wheel" p="33204">
@@ -261,26 +306,18 @@
             </f>
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="asciidoc" o="root" g="wheel" p="16893">
-              <f n="BUGS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="BUGS.txt" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="CHANGELOG" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="CHANGELOG.txt" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
