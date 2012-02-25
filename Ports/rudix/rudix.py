@@ -40,14 +40,20 @@ from urllib2 import urlopen
 from platform import mac_ver
 
 __author__ = 'Ruda Moura'
-__copyright__ = 'Copyright (c) 2005-2011 Ruda Moura'
+__copyright__ = 'Copyright (c) 2005-2012 Ruda Moura'
 __credits__ = 'Ruda Moura, Leonardo Santagada'
 __license__ = 'BSD'
 __version__ = '@VERSION@'
 
 PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
-OSX = mac_ver()[0]
+OSX_VERSION = [int(x) for x in mac_ver()[0].split('.')[0:2]] # (MAJOR, MINOR)
+
+RUDIX_NAMES = {
+    (10, 6): 'rudix-snowleopard',
+    (10, 7): 'rudix',
+}
+RUDIX = RUDIX_NAMES.get(tuple(OSX_VERSION), 'rudix')
 
 NAME_OPTS = {
     'help': '-h',
@@ -253,8 +259,8 @@ def version_compare(v1, v2):
 def get_versions_for_package(pkg):
     'Get a list of available versions for package'
     pkg = denormalize(pkg)
-    content = urlopen('http://code.google.com/p/rudix/downloads/list?q=Filename:%s' % pkg).read()
-    urls = re.findall('(rudix.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % pkg, content)
+    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Filename:%s' % (RUDIX, pkg)).read()
+    urls = re.findall('(%s.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % (RUDIX, pkg), content)
     versions = sorted(list(set(urls)),
                       cmp=lambda x, y: version_compare(x[2], y[2]))
     if len(versions) == 0:

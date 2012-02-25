@@ -1,4 +1,4 @@
-Copyright (c) 2005-2011 Ruda Moura
+Copyright (c) 2005-2012 Ruda Moura
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
