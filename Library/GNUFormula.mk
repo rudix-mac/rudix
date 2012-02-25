@@ -1,4 +1,4 @@
-# GNUFormula.mk - Build software in GNU Style (with help of configure)
+# GNUFormula.mk - GNU Configure Formula
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
@@ -8,6 +8,15 @@ BuildRequires += /usr/local/lib/libintl.la
 else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
+
+define gnu_configure
+./configure $(GnuConfigureExtra) \
+	--prefix=$(Prefix) \
+	--mandir=$(ManDir) \
+	--infodir=$(InfoDir) \
+	$(if $(RUDIX_DISABLE_DEPENDENCY_TRACKING),--disable-dependency-tracking) \
+	$(if $(RUDIX_SAVE_CONFIGURE_CACHE),--cache-file=$(PortDir)/config.cache)
+endef
 
 define install_gnu_documentation
 for x in $(wildcard \
