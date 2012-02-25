@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="282F5FCF-F794-11E0-A3B6-D49A200B3D20">
+<pkgref spec="1.12" uuid="8D96C45E-5FFD-11E1-8533-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.bzr</identifier>
-    <version>2.4.1-0</version>
+    <version>2.4.2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

@@ -4,7 +4,7 @@ include ../../Library/PythonFormula.mk
 
 Title=		Bazaar
 Name=		bzr
-Version=	2.4.1
+Version=	2.4.2
 Revision=	0
 URL=		http://launchpad.net/bzr/2.4/$(Version)/+download/
 Source=		$(Name)-$(Version).tar.gz

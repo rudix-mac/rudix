@@ -5,7 +5,7 @@
       <f n="Python" o="root" g="wheel" p="16877">
         <f n="2.7" o="root" g="wheel" p="16877">
           <f n="site-packages" o="root" g="wheel" p="16877">
-            <f n="bzr-2.4.1-py2.7.egg-info" o="root" g="wheel" p="33204">
+            <f n="bzr-2.4.2-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="bzrlib" o="root" g="wheel" p="16893">
@@ -5047,7 +5047,7 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="bzr" o="root" g="wheel" p="33277">
             <mod>mode</mod>
