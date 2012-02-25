@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="automake-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/automake/automake-install" m="false" t="file">
+  <f n="automake-install" o="root" g="staff" p="16877" pt="automake-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="aclocal" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -18,8 +18,14 @@
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="16893">
+            <mod>mode</mod>
+          </f>
           <f n="aclocal-1.11" o="root" g="wheel" p="16893">
             <f n="amversion.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ar-lib.m4" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="as.m4" o="root" g="wheel" p="33204">
@@ -138,6 +144,9 @@
             </f>
             <f n="am" o="root" g="wheel" p="16893">
               <f n="ansi2knr.am" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="check-html.am" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="check.am" o="root" g="wheel" p="33204">
@@ -268,6 +277,9 @@
             <f n="ansi2knr.c" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="ar-lib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
             <f n="Automake" o="root" g="wheel" p="16893">
               <f n="ChannelDefs.pm" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -291,6 +303,9 @@
                 <mod>mode</mod>
               </f>
               <f n="General.pm" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Getopt.pm" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="Item.pm" o="root" g="wheel" p="33204">
@@ -407,6 +422,12 @@
               <f n="ChangeLog.04" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ChangeLog.09" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.11" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="ChangeLog.96" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -436,6 +457,9 @@
               <mod>mode</mod>
             </f>
             <f n="automake.info-2" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="automake.info-3" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>

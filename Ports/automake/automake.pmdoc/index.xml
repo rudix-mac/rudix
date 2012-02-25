@@ -13,24 +13,26 @@
   </distribution>
   <description>Automake is a tool for automatically generating `Makefile.in' files compliant with the GNU Coding Standards.
 
-Changes from previous release:
-* Built on Xcode 4.2
-
 Site: http://www.gnu.org/software/automake/
 License: GPL
 
+Changes from previous release:
+* Upgraded to version 1.11.3
+
 Usage:
-$ /usr/local/bin/automake --version
+$ /usr/local/bin/automake
 </description>
   <contents>
     <choice title="automake-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.automake"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">automake-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">automake-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

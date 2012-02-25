@@ -7,10 +7,10 @@ include ../../Library/GNUFormula.mk
 
 Title=		GNU Automake
 Name=		automake
-Version=	1.11.1
-Revision=	2
+Version=	1.11.3
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/automake/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING

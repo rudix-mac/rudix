@@ -1,10 +1,10 @@
 Automake is a tool for automatically generating `Makefile.in' files compliant with the GNU Coding Standards.
 
-Changes from previous release:
-* Built on Xcode 4.2
-
 Site: http://www.gnu.org/software/automake/
 License: GPL
 
+Changes from previous release:
+* Upgraded to version 1.11.3
+
 Usage:
-$ /usr/local/bin/automake --version
+$ /usr/local/bin/automake
