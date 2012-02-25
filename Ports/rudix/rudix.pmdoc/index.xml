@@ -17,20 +17,23 @@ Site: http://rudix.org/
 License: BSD
 
 Usage:
-$ rudix
+$ /usr/local/bin/rudix
 
 Changes from previous release:
-* Fixed issue 97
+* Added support for repositories rudix (for Lion) and rudix-snowleopard.
+  The repositories are automatically selected.
 </description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rudix"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">License.md</resource>
       <resource relative="true" mod="true" type="readme">ReadMe.md</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
