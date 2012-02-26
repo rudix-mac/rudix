@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		GNU gettext
 Name=		gettext
 Version=	0.18.1.1
-Revision=	3
+Revision=	4
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		$(Name)-$(Version).tar.gz
 

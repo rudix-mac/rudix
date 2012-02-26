@@ -17,17 +17,21 @@ Site: http://www.gnu.org/software/gettext/
 License: GPL
 
 Changes from previous release:
-* Recompiled on Xcode 4.2
-</description>
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/gettext</description>
   <contents>
     <choice title="gettext-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.gettext"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">gettext-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">gettext-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

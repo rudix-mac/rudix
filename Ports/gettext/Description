@@ -4,4 +4,7 @@ Site: http://www.gnu.org/software/gettext/
 License: GPL
 
 Changes from previous release:
-* Recompiled on Xcode 4.2
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/gettext

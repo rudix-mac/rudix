@@ -2,344 +2,909 @@
 <pkg-contents spec="1.12">
   <f n="gettext-install" o="root" g="staff" p="16877" pt="gettext-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="autopoint" o="root" g="wheel" p="33277"/>
-          <f n="envsubst" o="root" g="wheel" p="33277"/>
-          <f n="gettext" o="root" g="wheel" p="33277"/>
-          <f n="gettext.sh" o="root" g="wheel" p="33277"/>
-          <f n="gettextize" o="root" g="wheel" p="33277"/>
-          <f n="msgattrib" o="root" g="wheel" p="33277"/>
-          <f n="msgcat" o="root" g="wheel" p="33277"/>
-          <f n="msgcmp" o="root" g="wheel" p="33277"/>
-          <f n="msgcomm" o="root" g="wheel" p="33277"/>
-          <f n="msgconv" o="root" g="wheel" p="33277"/>
-          <f n="msgen" o="root" g="wheel" p="33277"/>
-          <f n="msgexec" o="root" g="wheel" p="33277"/>
-          <f n="msgfilter" o="root" g="wheel" p="33277"/>
-          <f n="msgfmt" o="root" g="wheel" p="33277"/>
-          <f n="msggrep" o="root" g="wheel" p="33277"/>
-          <f n="msginit" o="root" g="wheel" p="33277"/>
-          <f n="msgmerge" o="root" g="wheel" p="33277"/>
-          <f n="msgunfmt" o="root" g="wheel" p="33277"/>
-          <f n="msguniq" o="root" g="wheel" p="33277"/>
-          <f n="ngettext" o="root" g="wheel" p="33277"/>
-          <f n="recode-sr-latin" o="root" g="wheel" p="33277"/>
-          <f n="xgettext" o="root" g="wheel" p="33277"/>
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="autopoint" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="envsubst" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gettext" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gettext.sh" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="gettextize" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgattrib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgcat" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgcmp" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgcomm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgconv" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgen" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgexec" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgfilter" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgfmt" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msggrep" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msginit" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgmerge" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msgunfmt" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="msguniq" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ngettext" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="recode-sr-latin" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="xgettext" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
-          <f n="autosprintf.h" o="root" g="wheel" p="33204"/>
-          <f n="gettext-po.h" o="root" g="wheel" p="33204"/>
-          <f n="libintl.h" o="root" g="wheel" p="33204"/>
+          <f n="autosprintf.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="gettext-po.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libintl.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="gettext" o="root" g="wheel" p="16893">
-            <f n="hostname" o="root" g="wheel" p="33277"/>
-            <f n="project-id" o="root" g="wheel" p="33277"/>
-            <f n="urlget" o="root" g="wheel" p="33277"/>
-            <f n="user-email" o="root" g="wheel" p="33277"/>
+            <f n="hostname" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="project-id" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="urlget" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="user-email" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
-          <f n="libasprintf.0.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libasprintf.a" o="root" g="wheel" p="33204"/>
-          <f n="libasprintf.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libasprintf.la" o="root" g="wheel" p="33277"/>
+          <f n="libasprintf.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libasprintf.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libasprintf.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libasprintf.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="libgettextlib-0.18.1.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libgettextlib.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libgettextlib.la" o="root" g="wheel" p="33277"/>
-          <f n="libgettextpo.0.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libgettextpo.a" o="root" g="wheel" p="33204"/>
-          <f n="libgettextpo.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libgettextpo.la" o="root" g="wheel" p="33277"/>
+          <f n="libgettextlib.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextlib.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextlib.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextpo.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextpo.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextpo.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextpo.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="libgettextsrc-0.18.1.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libgettextsrc.dylib" o="root" g="wheel" p="33277"/>
-          <f n="libgettextsrc.la" o="root" g="wheel" p="33277"/>
-          <f n="libintl.8.dylib" o="root" g="wheel" p="33204"/>
-          <f n="libintl.a" o="root" g="wheel" p="33204"/>
-          <f n="libintl.dylib" o="root" g="wheel" p="33204"/>
-          <f n="libintl.la" o="root" g="wheel" p="33204"/>
+          <f n="libgettextsrc.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextsrc.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libgettextsrc.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libintl.8.dylib" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libintl.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libintl.dylib" o="root" g="wheel" p="41396">
+            <mod>mode</mod>
+          </f>
+          <f n="libintl.la" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="aclocal" o="root" g="wheel" p="16893">
-            <f n="codeset.m4" o="root" g="wheel" p="33204"/>
+            <f n="codeset.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="fcntl-o.m4" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="gettext.m4" o="root" g="wheel" p="33204"/>
-            <f n="glibc2.m4" o="root" g="wheel" p="33204"/>
-            <f n="glibc21.m4" o="root" g="wheel" p="33204"/>
-            <f n="iconv.m4" o="root" g="wheel" p="33204"/>
-            <f n="intdiv0.m4" o="root" g="wheel" p="33204"/>
-            <f n="intl.m4" o="root" g="wheel" p="33204"/>
-            <f n="intldir.m4" o="root" g="wheel" p="33204"/>
-            <f n="intlmacosx.m4" o="root" g="wheel" p="33204"/>
-            <f n="intmax.m4" o="root" g="wheel" p="33204"/>
-            <f n="inttypes-pri.m4" o="root" g="wheel" p="33204"/>
-            <f n="inttypes_h.m4" o="root" g="wheel" p="33204"/>
-            <f n="lcmessage.m4" o="root" g="wheel" p="33204"/>
-            <f n="lib-ld.m4" o="root" g="wheel" p="33204"/>
-            <f n="lib-link.m4" o="root" g="wheel" p="33204"/>
-            <f n="lib-prefix.m4" o="root" g="wheel" p="33204"/>
-            <f n="lock.m4" o="root" g="wheel" p="33204"/>
-            <f n="longlong.m4" o="root" g="wheel" p="33204"/>
-            <f n="nls.m4" o="root" g="wheel" p="33204"/>
-            <f n="po.m4" o="root" g="wheel" p="33204"/>
-            <f n="printf-posix.m4" o="root" g="wheel" p="33204"/>
-            <f n="progtest.m4" o="root" g="wheel" p="33204"/>
-            <f n="size_max.m4" o="root" g="wheel" p="33204"/>
-            <f n="stdint_h.m4" o="root" g="wheel" p="33204"/>
+            <f n="gettext.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="glibc2.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="glibc21.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iconv.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intdiv0.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intl.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intldir.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intlmacosx.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intmax.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="inttypes-pri.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="inttypes_h.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lcmessage.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib-ld.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib-link.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib-prefix.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lock.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="longlong.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="nls.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="po.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="printf-posix.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="progtest.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="size_max.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stdint_h.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="threadlib.m4" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="uintmax_t.m4" o="root" g="wheel" p="33204"/>
-            <f n="visibility.m4" o="root" g="wheel" p="33204"/>
-            <f n="wchar_t.m4" o="root" g="wheel" p="33204"/>
-            <f n="wint_t.m4" o="root" g="wheel" p="33204"/>
-            <f n="xsize.m4" o="root" g="wheel" p="33204"/>
+            <f n="uintmax_t.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="visibility.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wchar_t.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wint_t.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="xsize.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="gettext" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="autopoint.1.html" o="root" g="wheel" p="33204"/>
-              <f n="bind_textdomain_codeset.3.html" o="root" g="wheel" p="33204"/>
-              <f n="bindtextdomain.3.html" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="csharpdoc" o="root" g="wheel" p="16893">
-                <f n="begin.html" o="root" g="wheel" p="33204"/>
-                <f n="GNU_Gettext.html" o="root" g="wheel" p="33204"/>
-                <f n="GNU_Gettext_GettextResourceManager.html" o="root" g="wheel" p="33204"/>
-                <f n="GNU_Gettext_GettextResourceSet.html" o="root" g="wheel" p="33204"/>
-                <f n="index.html" o="root" g="wheel" p="33204"/>
-                <f n="namespaces.html" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-              <f n="envsubst.1.html" o="root" g="wheel" p="33204"/>
-              <f n="FAQ.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext.1.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext.3.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_1.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_10.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_11.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_12.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_13.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_14.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_15.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_16.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_17.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_18.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_19.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_2.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_20.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_21.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_22.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_23.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_24.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_25.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_3.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_4.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_5.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_6.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_7.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_8.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_9.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_foot.html" o="root" g="wheel" p="33204"/>
-              <f n="gettext_toc.html" o="root" g="wheel" p="33204"/>
-              <f n="gettextize.1.html" o="root" g="wheel" p="33204"/>
+              <f n="autopoint.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bind_textdomain_codeset.3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bindtextdomain.3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="csharpdoc" o="root" g="wheel" p="16893">
+                <f n="begin.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="GNU_Gettext.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="GNU_Gettext_GettextResourceManager.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="GNU_Gettext_GettextResourceSet.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="namespaces.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="envsubst.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="FAQ.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_10.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_11.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_12.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_13.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_14.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_15.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_16.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_17.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_18.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_19.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_2.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_20.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_21.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_22.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_23.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_24.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_25.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_4.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_5.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_6.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_7.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_8.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_9.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_foot.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext_toc.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettextize.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="javadoc2" o="root" g="wheel" p="16893">
-                <f n="allclasses-frame.html" o="root" g="wheel" p="33204"/>
-                <f n="deprecated-list.html" o="root" g="wheel" p="33204"/>
+                <f n="allclasses-frame.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="deprecated-list.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="gnu" o="root" g="wheel" p="16893">
                   <f n="gettext" o="root" g="wheel" p="16893">
-                    <f n="GettextResource.html" o="root" g="wheel" p="33204"/>
-                    <f n="package-frame.html" o="root" g="wheel" p="33204"/>
-                    <f n="package-summary.html" o="root" g="wheel" p="33204"/>
-                    <f n="package-tree.html" o="root" g="wheel" p="33204"/>
+                    <f n="GettextResource.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="package-frame.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="package-summary.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="package-tree.html" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
                   </f>
+                  <mod>mode</mod>
                 </f>
-                <f n="help-doc.html" o="root" g="wheel" p="33204"/>
-                <f n="index-all.html" o="root" g="wheel" p="33204"/>
-                <f n="index.html" o="root" g="wheel" p="33204"/>
-                <f n="overview-tree.html" o="root" g="wheel" p="33204"/>
-                <f n="package-list" o="root" g="wheel" p="33204"/>
-                <f n="packages.html" o="root" g="wheel" p="33204"/>
-                <f n="serialized-form.html" o="root" g="wheel" p="33204"/>
-                <f n="stylesheet.css" o="root" g="wheel" p="33204"/>
+                <f n="help-doc.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index-all.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="overview-tree.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="package-list" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="packages.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="serialized-form.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stylesheet.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
-              <f n="msgattrib.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgcat.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgcmp.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgcomm.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgconv.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgen.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgexec.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgfilter.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgfmt.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msggrep.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msginit.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgmerge.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msgunfmt.1.html" o="root" g="wheel" p="33204"/>
-              <f n="msguniq.1.html" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="ngettext.1.html" o="root" g="wheel" p="33204"/>
-              <f n="ngettext.3.html" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="recode-sr-latin.1.html" o="root" g="wheel" p="33204"/>
-              <f n="textdomain.3.html" o="root" g="wheel" p="33204"/>
-              <f n="THANKS" o="root" g="wheel" p="33204"/>
-              <f n="tutorial.html" o="root" g="wheel" p="33204"/>
-              <f n="xgettext.1.html" o="root" g="wheel" p="33204"/>
+              <f n="msgattrib.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcat.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcmp.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcomm.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgconv.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgen.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgexec.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgfilter.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgfmt.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msggrep.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msginit.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgmerge.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgunfmt.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msguniq.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ngettext.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ngettext.3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.woe32" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="recode-sr-latin.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="textdomain.3.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tutorial.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xgettext.1.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="libasprintf" o="root" g="wheel" p="16893">
-              <f n="autosprintf_all.html" o="root" g="wheel" p="33204"/>
+              <f n="autosprintf_all.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="emacs" o="root" g="wheel" p="16893">
             <f n="site-lisp" o="root" g="wheel" p="16893">
-              <f n="po-compat.el" o="root" g="wheel" p="33204"/>
-              <f n="po-compat.elc" o="root" g="wheel" p="33204"/>
-              <f n="po-mode.el" o="root" g="wheel" p="33204"/>
-              <f n="po-mode.elc" o="root" g="wheel" p="33204"/>
-              <f n="start-po.el" o="root" g="wheel" p="33204"/>
-              <f n="start-po.elc" o="root" g="wheel" p="33204"/>
+              <f n="po-compat.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-compat.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-mode.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-mode.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="start-po.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="start-po.elc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="gettext" o="root" g="wheel" p="16893">
-            <f n="ABOUT-NLS" o="root" g="wheel" p="33204"/>
+            <f n="ABOUT-NLS" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="archive.git.tar.gz" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="config.rpath" o="root" g="wheel" p="33277"/>
-            <f n="gettext.h" o="root" g="wheel" p="33204"/>
-            <f n="gettext.jar" o="root" g="wheel" p="33204"/>
+            <f n="config.rpath" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="gettext.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gettext.jar" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="intl" o="root" g="wheel" p="16893">
-              <f n="bindtextdom.c" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="config.charset" o="root" g="wheel" p="33277"/>
-              <f n="COPYING.LIB-2.0" o="root" g="wheel" p="33204"/>
-              <f n="COPYING.LIB-2.1" o="root" g="wheel" p="33204"/>
-              <f n="dcgettext.c" o="root" g="wheel" p="33204"/>
-              <f n="dcigettext.c" o="root" g="wheel" p="33204"/>
-              <f n="dcngettext.c" o="root" g="wheel" p="33204"/>
-              <f n="dgettext.c" o="root" g="wheel" p="33204"/>
-              <f n="dngettext.c" o="root" g="wheel" p="33204"/>
-              <f n="eval-plural.h" o="root" g="wheel" p="33204"/>
-              <f n="explodename.c" o="root" g="wheel" p="33204"/>
-              <f n="export.h" o="root" g="wheel" p="33204"/>
-              <f n="finddomain.c" o="root" g="wheel" p="33204"/>
-              <f n="gettext.c" o="root" g="wheel" p="33204"/>
-              <f n="gettextP.h" o="root" g="wheel" p="33204"/>
-              <f n="gmo.h" o="root" g="wheel" p="33204"/>
-              <f n="hash-string.c" o="root" g="wheel" p="33204"/>
-              <f n="hash-string.h" o="root" g="wheel" p="33204"/>
-              <f n="intl-compat.c" o="root" g="wheel" p="33204"/>
-              <f n="intl-exports.c" o="root" g="wheel" p="33204"/>
-              <f n="l10nflist.c" o="root" g="wheel" p="33204"/>
-              <f n="langprefs.c" o="root" g="wheel" p="33204"/>
-              <f n="libgnuintl.h.in" o="root" g="wheel" p="33204"/>
-              <f n="libintl.rc" o="root" g="wheel" p="33204"/>
-              <f n="loadinfo.h" o="root" g="wheel" p="33204"/>
-              <f n="loadmsgcat.c" o="root" g="wheel" p="33204"/>
-              <f n="localcharset.c" o="root" g="wheel" p="33204"/>
-              <f n="localcharset.h" o="root" g="wheel" p="33204"/>
-              <f n="locale.alias" o="root" g="wheel" p="33204"/>
-              <f n="localealias.c" o="root" g="wheel" p="33204"/>
-              <f n="localename.c" o="root" g="wheel" p="33204"/>
-              <f n="lock.c" o="root" g="wheel" p="33204"/>
-              <f n="lock.h" o="root" g="wheel" p="33204"/>
-              <f n="log.c" o="root" g="wheel" p="33204"/>
-              <f n="Makefile.in" o="root" g="wheel" p="33204"/>
-              <f n="ngettext.c" o="root" g="wheel" p="33204"/>
-              <f n="os2compat.c" o="root" g="wheel" p="33204"/>
-              <f n="os2compat.h" o="root" g="wheel" p="33204"/>
-              <f n="osdep.c" o="root" g="wheel" p="33204"/>
-              <f n="plural-exp.c" o="root" g="wheel" p="33204"/>
-              <f n="plural-exp.h" o="root" g="wheel" p="33204"/>
-              <f n="plural.c" o="root" g="wheel" p="33204"/>
-              <f n="plural.y" o="root" g="wheel" p="33204"/>
-              <f n="printf-args.c" o="root" g="wheel" p="33204"/>
-              <f n="printf-args.h" o="root" g="wheel" p="33204"/>
-              <f n="printf-parse.c" o="root" g="wheel" p="33204"/>
-              <f n="printf-parse.h" o="root" g="wheel" p="33204"/>
-              <f n="printf.c" o="root" g="wheel" p="33204"/>
-              <f n="ref-add.sin" o="root" g="wheel" p="33204"/>
-              <f n="ref-del.sin" o="root" g="wheel" p="33204"/>
-              <f n="relocatable.c" o="root" g="wheel" p="33204"/>
-              <f n="relocatable.h" o="root" g="wheel" p="33204"/>
+              <f n="bindtextdom.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.charset" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LIB-2.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LIB-2.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcgettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcigettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcngettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dgettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dngettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="eval-plural.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="explodename.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="export.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="finddomain.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettextP.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gmo.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hash-string.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hash-string.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="intl-compat.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="intl-exports.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="l10nflist.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="langprefs.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libgnuintl.h.in" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libintl.rc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="loadinfo.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="loadmsgcat.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localcharset.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localcharset.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="locale.alias" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localealias.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="localename.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lock.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lock.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="log.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile.in" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ngettext.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="os2compat.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="os2compat.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="osdep.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="plural-exp.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="plural-exp.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="plural.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="plural.y" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printf-args.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printf-args.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printf-parse.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printf-parse.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printf.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ref-add.sin" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ref-del.sin" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="relocatable.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="relocatable.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="setlocale.c" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="textdomain.c" o="root" g="wheel" p="33204"/>
+              <f n="textdomain.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="threadlib.c" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="tsearch.c" o="root" g="wheel" p="33204"/>
-              <f n="tsearch.h" o="root" g="wheel" p="33204"/>
-              <f n="vasnprintf.c" o="root" g="wheel" p="33204"/>
-              <f n="vasnprintf.h" o="root" g="wheel" p="33204"/>
-              <f n="vasnwprintf.h" o="root" g="wheel" p="33204"/>
-              <f n="VERSION" o="root" g="wheel" p="33204"/>
-              <f n="version.c" o="root" g="wheel" p="33204"/>
-              <f n="wprintf-parse.h" o="root" g="wheel" p="33204"/>
-              <f n="xsize.h" o="root" g="wheel" p="33204"/>
+              <f n="tsearch.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tsearch.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vasnprintf.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vasnprintf.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vasnwprintf.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="VERSION" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="version.c" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wprintf-parse.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xsize.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="javaversion.class" o="root" g="wheel" p="33204"/>
-            <f n="libintl.jar" o="root" g="wheel" p="33204"/>
-            <f n="msgunfmt.tcl" o="root" g="wheel" p="33204"/>
+            <f n="javaversion.class" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libintl.jar" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="msgunfmt.tcl" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="po" o="root" g="wheel" p="16893">
-              <f n="boldquot.sed" o="root" g="wheel" p="33204"/>
-              <f n="en@boldquot.header" o="root" g="wheel" p="33204"/>
-              <f n="en@quot.header" o="root" g="wheel" p="33204"/>
-              <f n="insert-header.sin" o="root" g="wheel" p="33204"/>
-              <f n="Makefile.in.in" o="root" g="wheel" p="33204"/>
-              <f n="Makevars.template" o="root" g="wheel" p="33204"/>
-              <f n="quot.sed" o="root" g="wheel" p="33204"/>
-              <f n="remove-potcdate.sin" o="root" g="wheel" p="33204"/>
-              <f n="Rules-quot" o="root" g="wheel" p="33204"/>
+              <f n="boldquot.sed" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="en@boldquot.header" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="en@quot.header" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="insert-header.sin" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makefile.in.in" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Makevars.template" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="quot.sed" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="remove-potcdate.sin" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Rules-quot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="projects" o="root" g="wheel" p="16893">
               <f n="GNOME" o="root" g="wheel" p="16893">
-                <f n="team-address" o="root" g="wheel" p="33277"/>
-                <f n="teams.html" o="root" g="wheel" p="33204"/>
-                <f n="teams.url" o="root" g="wheel" p="33204"/>
-                <f n="trigger" o="root" g="wheel" p="33277"/>
+                <f n="team-address" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.url" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="trigger" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
-              <f n="index" o="root" g="wheel" p="33204"/>
+              <f n="index" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="KDE" o="root" g="wheel" p="16893">
-                <f n="team-address" o="root" g="wheel" p="33277"/>
-                <f n="teams.html" o="root" g="wheel" p="33204"/>
-                <f n="teams.url" o="root" g="wheel" p="33204"/>
-                <f n="trigger" o="root" g="wheel" p="33277"/>
+                <f n="team-address" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.url" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="trigger" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
-              <f n="team-address" o="root" g="wheel" p="33277"/>
+              <f n="team-address" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
               <f n="TP" o="root" g="wheel" p="16893">
-                <f n="team-address" o="root" g="wheel" p="33277"/>
-                <f n="teams.html" o="root" g="wheel" p="33204"/>
-                <f n="teams.url" o="root" g="wheel" p="33204"/>
-                <f n="trigger" o="root" g="wheel" p="33277"/>
+                <f n="team-address" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="teams.url" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="trigger" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="styles" o="root" g="wheel" p="16893">
-              <f n="po-default.css" o="root" g="wheel" p="33204"/>
-              <f n="po-emacs-x.css" o="root" g="wheel" p="33204"/>
-              <f n="po-emacs-xterm.css" o="root" g="wheel" p="33204"/>
-              <f n="po-emacs-xterm16.css" o="root" g="wheel" p="33204"/>
-              <f n="po-emacs-xterm256.css" o="root" g="wheel" p="33204"/>
-              <f n="po-vim.css" o="root" g="wheel" p="33204"/>
+              <f n="po-default.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-emacs-x.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-emacs-xterm.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-emacs-xterm16.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-emacs-xterm256.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="po-vim.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
-            <f n="autosprintf.info" o="root" g="wheel" p="33204"/>
-            <f n="gettext.info" o="root" g="wheel" p="33204"/>
+            <f n="autosprintf.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gettext.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
             <f n="be" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="bg" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -349,261 +914,539 @@
                 <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ca" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="cs" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="da" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="de" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="el" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="en@boldquot" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="en@quot" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="eo" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="es" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="et" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="eu" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="fi" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="fr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ga" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="gl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="id" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="it" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ja" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ko" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nb" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nn" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pt" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pt_BR" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ro" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ru" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sv" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="tr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="uk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="vi" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="zh_CN" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="zh_HK" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="zh_TW" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204"/>
-                <f n="gettext-tools.mo" o="root" g="wheel" p="33204"/>
+                <f n="gettext-runtime.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gettext-tools.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="autopoint.1" o="root" g="wheel" p="33204"/>
-              <f n="envsubst.1" o="root" g="wheel" p="33204"/>
-              <f n="gettext.1" o="root" g="wheel" p="33204"/>
-              <f n="gettextize.1" o="root" g="wheel" p="33204"/>
-              <f n="msgattrib.1" o="root" g="wheel" p="33204"/>
-              <f n="msgcat.1" o="root" g="wheel" p="33204"/>
-              <f n="msgcmp.1" o="root" g="wheel" p="33204"/>
-              <f n="msgcomm.1" o="root" g="wheel" p="33204"/>
-              <f n="msgconv.1" o="root" g="wheel" p="33204"/>
-              <f n="msgen.1" o="root" g="wheel" p="33204"/>
-              <f n="msgexec.1" o="root" g="wheel" p="33204"/>
-              <f n="msgfilter.1" o="root" g="wheel" p="33204"/>
-              <f n="msgfmt.1" o="root" g="wheel" p="33204"/>
-              <f n="msggrep.1" o="root" g="wheel" p="33204"/>
-              <f n="msginit.1" o="root" g="wheel" p="33204"/>
-              <f n="msgmerge.1" o="root" g="wheel" p="33204"/>
-              <f n="msgunfmt.1" o="root" g="wheel" p="33204"/>
-              <f n="msguniq.1" o="root" g="wheel" p="33204"/>
-              <f n="ngettext.1" o="root" g="wheel" p="33204"/>
-              <f n="recode-sr-latin.1" o="root" g="wheel" p="33204"/>
-              <f n="xgettext.1" o="root" g="wheel" p="33204"/>
+              <f n="autopoint.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="envsubst.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettextize.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgattrib.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcat.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcmp.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgcomm.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgconv.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgen.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgexec.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgfilter.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgfmt.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msggrep.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msginit.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgmerge.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgunfmt.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msguniq.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ngettext.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="recode-sr-latin.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xgettext.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
             <f n="man3" o="root" g="wheel" p="16893">
-              <f n="bind_textdomain_codeset.3" o="root" g="wheel" p="33204"/>
-              <f n="bindtextdomain.3" o="root" g="wheel" p="33204"/>
-              <f n="dcgettext.3" o="root" g="wheel" p="33204"/>
-              <f n="dcngettext.3" o="root" g="wheel" p="33204"/>
-              <f n="dgettext.3" o="root" g="wheel" p="33204"/>
-              <f n="dngettext.3" o="root" g="wheel" p="33204"/>
-              <f n="gettext.3" o="root" g="wheel" p="33204"/>
-              <f n="ngettext.3" o="root" g="wheel" p="33204"/>
-              <f n="textdomain.3" o="root" g="wheel" p="33204"/>
+              <f n="bind_textdomain_codeset.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bindtextdomain.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcgettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dcngettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dgettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dngettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ngettext.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="textdomain.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>
