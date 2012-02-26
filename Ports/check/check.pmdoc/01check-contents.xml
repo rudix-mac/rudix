@@ -2,7 +2,7 @@
 <pkg-contents spec="1.12">
   <f n="check-install" o="root" g="staff" p="16877" pt="check-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="check.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
@@ -25,6 +25,7 @@
             <f n="check.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
@@ -35,6 +36,9 @@
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="check" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -114,6 +118,9 @@
                   </f>
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
