@@ -19,3 +19,7 @@ GnuConfigureExtra += --with-included-glib
 define install_post_hook
 rm -rf $(InstallDir)$(DocDir)/gettext/examples
 endef
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
