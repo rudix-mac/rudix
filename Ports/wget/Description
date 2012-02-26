@@ -4,8 +4,7 @@ Site: http://www.gnu.org/software/wget/
 License: GPL
 
 Changes from previous release:
-* Rebuilt on Xcode 4.2
+* Rebuild on Xcode 4.3
 
 Usage
 $ wget http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
-

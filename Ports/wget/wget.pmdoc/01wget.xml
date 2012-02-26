@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="4679054E-9ABB-11E0-B55C-0017F22C0C04">
+<pkgref spec="1.12" uuid="9F187314-6091-11E1-99AA-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.wget</identifier>
-    <version>1.12-2</version>
+    <version>1.13.4-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

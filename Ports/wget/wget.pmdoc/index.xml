@@ -11,24 +11,32 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Retrieve files from the web via HTTP, HTTPS and FTP</description>
+  <description>GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols.
+
+Site: http://www.gnu.org/software/wget/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage
+$ wget http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
+</description>
   <contents>
     <choice title="wget-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.wget"/>
     </choice>
-    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.libintl"/>
-    </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">wget-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">wget-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01wget.xml</item>
-  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

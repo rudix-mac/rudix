@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="wget-install" o="root" g="staff" p="16877" pt="wget-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="wget" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -12,6 +12,7 @@
           <f n="wgetrc.default" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -22,7 +23,13 @@
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ChangeLog.README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -31,12 +38,10 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
-            <f n="dir" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
             <f n="wget.info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -91,33 +96,14 @@
                 </f>
               </f>
             </f>
-            <f n="en@boldquot" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="wget.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="en@quot" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="wget.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
             <f n="en_GB" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="wget.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
-            </f>
-            <f n="en_US" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="wget.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
+              <mod>mode</mod>
             </f>
             <f n="eo" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -180,21 +166,27 @@
                 <f n="wget.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="hr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="wget.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="hu" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="wget.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="id" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -222,7 +214,9 @@
                 <f n="wget.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nb" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
