@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		cabextract
 Name=		cabextract
 Version=	1.4
-Revision=	2
+Revision=	3
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
 

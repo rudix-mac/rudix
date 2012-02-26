@@ -1,10 +1,10 @@
 cabextract is Free Software for extracting Microsoft cabinet files, also called .CAB files.
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2
-
 Site: http://www.cabextract.org.uk/
 License: GPL
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
-$ cabextract
+$ /usr/local/bin/cabextract

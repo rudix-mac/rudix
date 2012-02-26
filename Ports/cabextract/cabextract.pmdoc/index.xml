@@ -13,24 +13,26 @@
   </distribution>
   <description>cabextract is Free Software for extracting Microsoft cabinet files, also called .CAB files.
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2
-
 Site: http://www.cabextract.org.uk/
 License: GPL
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
-$ cabextract
+$ /usr/local/bin/cabextract
 </description>
   <contents>
     <choice title="cabextract-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.cabextract"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">cabextract-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">cabextract-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
