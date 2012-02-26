@@ -2,44 +2,44 @@
 <pkg-contents spec="1.12">
   <f n="cadaver-install" o="root" g="staff" p="16877" pt="cadaver-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="cadaver" o="root" g="wheel" p="33277"/>
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="cadaver" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="cadaver" o="root" g="wheel" p="16893">
-              <f n="BUGS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="FAQ" o="root" g="wheel" p="33204"/>
-              <f n="INTEROP" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="THANKS" o="root" g="wheel" p="33204"/>
-              <f n="TODO" o="root" g="wheel" p="33204"/>
-            </f>
-          </f>
-          <f n="locale" o="root" g="wheel" p="16893">
-            <f n="en@quot" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="cadaver.mo" o="root" g="wheel" p="33204"/>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-            </f>
-            <f n="es" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="cadaver.mo" o="root" g="wheel" p="33204"/>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
-            </f>
-            <f n="it" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="cadaver.mo" o="root" g="wheel" p="33204"/>
+              <f n="FAQ" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INTEROP" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="cadaver.1" o="root" g="wheel" p="33204"/>
+              <f n="cadaver.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>

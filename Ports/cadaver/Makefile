@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		cadaver
 Name=		cadaver
 Version=	0.23.3
-Revision=	3
+Revision=	4
 URL=		http://www.webdav.org/cadaver/
 Source=		$(Name)-$(Version).tar.gz
 
