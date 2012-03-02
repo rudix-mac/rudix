@@ -2,7 +2,7 @@
 # Copyright (c) 2005-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
-BuildSystem = 20120225
+BuildSystem = 20120302
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -198,6 +198,11 @@ $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
 endef
 
+define apply_recommendations
+open $(Name).pmdoc
+../../Library/apply_recommendations.sh $(Name).pmdoc
+endef
+
 define sanitize_pmdoc
 for x in $(Name).pmdoc/*-contents.xml ; do \
 	perl -p -i -e 's/o="[^"]*"/o="root"/ ; s/pt="[^"]*"/pt="$(Name)-install"/' $$x ; done
@@ -272,6 +277,7 @@ endef
 define pkg_inner_hook
 $(strip_macho)
 $(create_pmdoc)
+$(apply_recommendations)
 $(sanitize_pmdoc)
 $(create_pkg)
 endef
