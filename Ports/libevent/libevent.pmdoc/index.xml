@@ -17,17 +17,19 @@ Site: http://libevent.org/
 License: BSD
 
 Changes from previous release:
-* Upgraded to version 2.0.15
+* Upgraded to version 2.0.17
 </description>
   <contents>
     <choice title="libevent-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libevent"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">libevent-build/LICENSE</resource>
       <resource relative="true" mod="true" type="readme">libevent-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
