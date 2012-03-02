@@ -1,0 +1,14 @@
+--- Makefile.in.orig	2005-11-08 14:16:47.000000000 -0200
++++ Makefile.in	2012-03-02 14:26:13.000000000 -0300
+@@ -40,7 +40,7 @@
+ 	rm -f Makefile config.h
+ 
+ install: $(PRODUCT)
+-	$(INSTALL) -d -m 755 $(bindir)
+-	$(INSTALL) -s -m 755 $(PRODUCT) $(bindir)
+-	$(INSTALL) -d -m 755 $(mandir)/man1
+-	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)/man1
++	$(INSTALL) -d -m 755 $(DESTDIR)/$(bindir)
++	$(INSTALL) -s -m 755 $(PRODUCT) $(DESTDIR)/$(bindir)
++	$(INSTALL) -d -m 755 $(DESTDIR)/$(mandir)/man1
++	$(INSTALL) -m 644 $(PRODUCT).1 $(DESTDIR)/$(mandir)/man1

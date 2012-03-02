@@ -1,36 +1,15 @@
-# View and edit files in hexadecimal or ASCII
-# http://www.chez.com/prigaux/hexedit.html
-# GPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		hexedit
-VERSION=	1.2.12
-REVISION=	5
+Title=		hexedit
+Name=		hexedit
+Version=	1.2.12
+Revision=	6
 URL=		http://www.chez.com/prigaux/
-SOURCE=		$(NAME)-$(VERSION).src.tgz
+Source=		$(Name)-$(Version).src.tgz
 
-README=		$(PORTDIR)/ReadMe.txt
-LICENSE=	$(BUILDDIR)/COPYING
+ReadMeFile=	$(PortDir)/ReadMe.txt
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	mv hexedit $(NAME)-$(VERSION)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make prefix=$(INSTALLDIR)/usr/local mandir=$(INSTALLDIR)/usr/local/share/man install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,Changes,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+UncompressedName = hexedit
