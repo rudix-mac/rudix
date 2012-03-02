@@ -1,4 +1,5 @@
 # ConfigureFormula.mk - Generic Configure Formula
+#
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 
