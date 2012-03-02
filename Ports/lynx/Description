@@ -1,0 +1,10 @@
+Lynx is a text browser for the World Wide Web.
+
+Site: http://lynx.browser.org/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/lynx rudix.org
