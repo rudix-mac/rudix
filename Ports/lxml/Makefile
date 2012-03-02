@@ -4,7 +4,7 @@ include ../../Library/PythonFormula.mk
 
 Title=		lxml
 Name=		lxml
-Version=	2.3.2
+Version=	2.3.3
 Revision=	0
 URL=		http://pypi.python.org/packages/source/l/lxml/
 Source=		$(Name)-$(Version).tar.gz

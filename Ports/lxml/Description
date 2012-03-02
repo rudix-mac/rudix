@@ -2,3 +2,6 @@ The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and libxs
 
 Site: http://lxml.de/
 License: BSD
+
+Changes from previous release:
+* Upgraded to version 2.3.3

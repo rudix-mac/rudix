@@ -15,16 +15,21 @@
 
 Site: http://lxml.de/
 License: BSD
+
+Changes from previous release:
+* Upgraded to version 2.3.3
 </description>
   <contents>
     <choice title="lxml-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.lxml"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">lxml-build/LICENSES.txt</resource>
       <resource relative="true" mod="true" type="readme">lxml-build/PKG-INFO</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
