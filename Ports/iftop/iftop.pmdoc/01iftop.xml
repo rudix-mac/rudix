@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="2E658E8B-0C33-46AC-A5CB-0137BD619F8C">
+<pkgref spec="1.12" uuid="A719A519-6492-11E1-987C-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.iftop</identifier>
-    <version>0.17</version>
+    <version>1.0pre2-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01iftop-contents.xml</file-list>
