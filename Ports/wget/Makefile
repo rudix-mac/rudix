@@ -4,7 +4,7 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-ifdef WITH_STATIC_LIBS
+ifdef RUDIX_BUILD_WITH_STATIC_LIBS
 LdFlags += -framework CoreFoundation -liconv
 endif
 
