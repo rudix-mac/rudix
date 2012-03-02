@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="readline-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/readline/readline-install" m="false" t="file">
+  <f n="readline-install" o="root" g="staff" p="16877" pt="readline-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="readline" o="root" g="wheel" p="16893">
             <f n="chardefs.h" o="root" g="wheel" p="33204">
@@ -33,7 +33,7 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libhistory.6.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libhistory.6.2.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libhistory.6.dylib" o="root" g="wheel" p="41469">
@@ -45,7 +45,7 @@
           <f n="libhistory.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="libreadline.6.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libreadline.6.2.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libreadline.6.dylib" o="root" g="wheel" p="41469">
@@ -61,9 +61,6 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="readline" o="root" g="wheel" p="16893">
-              <f n="CHANGELOG" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="CHANGES" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -71,6 +68,9 @@
                 <mod>mode</mod>
               </f>
               <f n="history.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -83,9 +83,6 @@
                 <mod>mode</mod>
               </f>
               <f n="rluserman.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="USAGE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -111,6 +108,42 @@
                 <mod>mode</mod>
               </f>
             </f>
+          </f>
+          <f n="readline" o="root" g="wheel" p="16893">
+            <f n="excallback.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fileman.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="histexamp.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="manexamp.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rl-fgets.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rl.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rlcat.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rlevent.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rlptytest.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rltest.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rlversion.c" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
         </f>
       </f>

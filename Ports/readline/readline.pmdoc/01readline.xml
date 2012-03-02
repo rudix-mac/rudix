@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="E8DFD504-706F-11E0-A10A-0017F22C0C04">
+<pkgref spec="1.12" uuid="9CEE585C-646E-11E1-B56F-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.readline</identifier>
-    <version>6.2-0</version>
+    <version>6.2-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01readline-contents.xml</file-list>
