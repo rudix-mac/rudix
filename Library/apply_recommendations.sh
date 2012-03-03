@@ -3,7 +3,7 @@
 
 on run arguments
 	set pmdoc to item 1 of arguments
-	"Starting PackageMaker..."
+	log "Starting PackageMaker..."
 	tell application "System Events"
 		tell process "PackageMaker"
 			activate
@@ -20,7 +20,7 @@ on run arguments
 			click menu item "Save" of menu 1 of menu bar item "File" of menu bar 1
 			click menu item "Close" of menu 1 of menu bar item "File" of menu bar 1
 			click menu item "Quit PackageMaker" of menu 1 of menu bar item "PackageMaker" of menu bar 1
-			"Closing PackageMaker..."
+			log "Closing PackageMaker..."
 		end tell
 	end tell
 end run

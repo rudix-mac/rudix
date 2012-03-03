@@ -19,4 +19,5 @@ GnuConfigureExtra += --with-maxfd=1024
 define install_post_hook
 mv $(InstallDir)/usr/local/etc/cachemgr.conf $(InstallDir)/usr/local/etc/cachemgr.conf.default
 rm -f $(InstallDir)/usr/local/etc/*.conf
+mkdir $(InstallDir)/usr/local/var/cache
 endef
