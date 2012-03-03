@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="655BBB6E-7077-11E0-990F-0017F22C0C04">
+<pkgref spec="1.12" uuid="D3B5B28F-6560-11E1-9D5F-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.msmtp</identifier>
-    <version>1.4.23-0</version>
+    <version>1.4.27-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01msmtp-contents.xml</file-list>

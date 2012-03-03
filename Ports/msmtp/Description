@@ -1,0 +1,10 @@
+msmtp is an SMTP client.
+
+Site: http://msmtp.sourceforge.net/
+License: GPL
+
+Changes from previous release:
+* Upgraded to version 1.4.27
+
+Usage:
+$ /usr/local/bin/msmtp
