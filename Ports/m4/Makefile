@@ -4,13 +4,10 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	GNU M4 is an implementation of the traditional Unix macro processor
-Site=		http://www.gnu.org/software/m4/
-License=	GPL
 Title=		GNU M4
 Name=		m4
 Version=	1.4.16
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/m4/
 Source=		$(Name)-$(Version).tar.bz2
 

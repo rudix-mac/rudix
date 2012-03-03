@@ -1,0 +1,10 @@
+GNU M4 is an implementation of the traditional Unix macro processor.
+
+Site: http://www.gnu.org/software/m4/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/m4
