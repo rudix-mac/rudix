@@ -4,4 +4,7 @@ Site: http://www.gnu.org/software/findutils/
 License: GPL
 
 Changes from previous release:
-* Rebuilt on Xcode 4.2
+* Rebuilt on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/gnufind

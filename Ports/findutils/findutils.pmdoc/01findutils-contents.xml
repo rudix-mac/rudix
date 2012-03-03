@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="findutils-install" o="root" g="staff" p="16877" pt="findutils-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="find" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
@@ -59,16 +59,16 @@
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
+              <f n="README-hacking" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -231,9 +231,7 @@
                 <f n="findutils.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="lt" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -296,7 +294,9 @@
                 <f n="findutils.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -396,6 +396,7 @@
               <f n="locatedb.5" o="root" g="wheel" p="41396">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>
