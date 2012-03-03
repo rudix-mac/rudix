@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU implementation of sed, the POSIX stream editor</description>
+  <description>GNU Stream Editor.
+
+Site: http://www.gnu.org/software/sed/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/sed
+</description>
   <contents>
     <choice title="sed-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.sed"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">sed-4.2.1/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">sed-4.2.1/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">sed-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">sed-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
