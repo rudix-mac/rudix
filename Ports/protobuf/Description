@@ -1,7 +1,7 @@
-Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.
+Protocol Buffers - Google's data interchange format.
 
 Site: http://code.google.com/p/protobuf/
 License: BSD
 
 Changes from previous release:
-* Rebuilt on Xcode 4.2
+* Rebuild on Xcode 4.3

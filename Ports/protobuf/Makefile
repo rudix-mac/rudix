@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		Protocol Buffers
 Name=		protobuf
 Version=	2.4.1
-Revision=	1
+Revision=	2
 URL=		http://protobuf.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.bz2
 

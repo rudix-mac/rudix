@@ -11,22 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.
+  <description>Protocol Buffers - Google's data interchange format.
 
 Site: http://code.google.com/p/protobuf/
 License: BSD
 
 Changes from previous release:
-* Rebuilt on Xcode 4.2</description>
+* Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="protobuf-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.protobuf"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">protobuf-build/COPYING.txt</resource>
       <resource relative="true" mod="true" type="readme">protobuf-build/README.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
