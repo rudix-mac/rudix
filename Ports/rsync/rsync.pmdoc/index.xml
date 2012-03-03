@@ -17,19 +17,22 @@ Site: http://samba.org/rsync/
 License: GPL
 
 Changes from previous release:
-* Upgraded to version 3.0.9
+* Rebuild on Xcode 4.3
 
 Usage:
-$ rsync3</description>
+$ /usr/local/bin/rsync3
+</description>
   <contents>
     <choice title="rsync-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rsync"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">rsync-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">rsync-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

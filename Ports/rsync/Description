@@ -4,7 +4,7 @@ Site: http://samba.org/rsync/
 License: GPL
 
 Changes from previous release:
-* Upgraded to version 3.0.9
+* Rebuild on Xcode 4.3
 
 Usage:
-$ rsync3
+$ /usr/local/bin/rsync3

@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		Rsync
 Name=		rsync
 Version=	3.0.9
-Revision=	0
+Revision=	1
 URL=		http://samba.org/ftp/rsync/src/
 Source=		$(Name)-$(Version).tar.gz
 
