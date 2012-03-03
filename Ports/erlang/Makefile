@@ -1,4 +1,6 @@
 include ../../Library/Config.mk
+# Don't set arch
+RUDIX_UNIVERSAL=
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
@@ -18,6 +20,12 @@ define retrieve_post_hook
 $(fetch) $(URL)/otp_doc_html_$(Version).tar.gz
 $(fetch) $(URL)/otp_doc_man_$(Version).tar.gz
 endef
+
+#GnuConfigureExtra += --enable-kernel-poll
+#GnuConfigureExtra += --enable-smp-support
+#GnuConfigureExtra += --enable-hipe
+#GnuConfigureExtra += --enable-darwin-universal
+#GnuConfigureExtre += --enable-darwin-64bit
 
 ifdef FOO
 build: prep

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Erlang</title>
-    <build>/Users/ruda/Desktop/Erlang.pkg</build>
+    <title>Erlang/OTP</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Real-time, concurrent and distributed functional language</description>
+  <description>Erlang Programming Language.
+
+Site: http://www.erlang.org/
+License: EPLICENCE
+
+Changes from previous release:
+* Upgraded to version R15B
+
+Usage:
+$ /usr/local/bin/erl
+</description>
   <contents>
     <choice title="erlang-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.erlang"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">erlang-R14B01/EPLICENCE</resource>
-      <resource relative="true" mod="true" type="readme">erlang-R14B01/README.md</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">erlang-build/EPLICENCE</resource>
+      <resource relative="true" mod="true" type="readme">erlang-build/README.md</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
