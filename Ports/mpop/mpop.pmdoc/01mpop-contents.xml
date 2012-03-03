@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mpop-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/mpop/mpop-install" m="false" t="file">
+  <f n="mpop-install" o="root" g="staff" p="16877" pt="mpop-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="mpop" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -20,16 +20,13 @@
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="mpop.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="mpop.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="mpop.info" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="mpop.pdf" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="mpop.texi" o="root" g="wheel" p="33204">
@@ -44,7 +41,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
+              <f n="README.w32" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -57,13 +54,6 @@
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
             <f n="de" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="mpop.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="es" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="mpop.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
