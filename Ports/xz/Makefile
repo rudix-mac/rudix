@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		XZ Utils
 Name=		xz
 Version=	5.0.3
-Revision=	0
+Revision=	1
 URL=		http://tukaani.org/xz/
 Source=		$(Name)-$(Version).tar.bz2
 

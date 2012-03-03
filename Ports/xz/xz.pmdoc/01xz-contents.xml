@@ -118,7 +118,6 @@
             <f n="vli.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="lzma.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
@@ -168,7 +167,6 @@
                 <f n="xz_pipe_decomp.c" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="faq.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -200,7 +198,6 @@
               <f n="xz-file-format.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
