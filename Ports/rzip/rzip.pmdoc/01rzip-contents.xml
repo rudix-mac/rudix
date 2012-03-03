@@ -2,29 +2,26 @@
 <pkg-contents spec="1.12">
   <f n="rzip-install" o="root" g="staff" p="16877" pt="rzip-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="runzip" o="root" g="wheel" p="41469">
-            <mod>mode</mod>
-          </f>
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="rzip" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
         </f>
-        <f n="share" o="root" g="wheel" p="16877">
-          <f n="doc" o="root" g="wheel" p="16877">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
             <f n="rzip" o="root" g="wheel" p="16893">
-              <f n="COPYING" o="root" g="wheel" p="33277">
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
             </f>
           </f>
-          <f n="man" o="root" g="wheel" p="16877">
-            <f n="man1" o="root" g="wheel" p="16877">
-              <f n="runzip.1" o="root" g="wheel" p="41396">
-                <mod>mode</mod>
-              </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
               <f n="rzip.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>

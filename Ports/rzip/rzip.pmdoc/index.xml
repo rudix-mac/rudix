@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title></title>
+    <title>rzip</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>File compressor with a high compression ratio</description>
+  <description>rzip is a compression program, similar in functionality to gzip or bzip2.
+
+Site: http://rzip.samba.org/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/rzip
+</description>
   <contents>
     <choice title="rzip-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.rzip"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">rzip-build/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">/Users/ruda/rudix/Ports/rzip/README.txt</resource>
+      <resource mod="true" type="readme">/Users/ruda/Downloads/rudix.hg/Ports/rzip/README.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
