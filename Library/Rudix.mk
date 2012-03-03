@@ -200,6 +200,7 @@ $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 endef
 
 define apply_recommendations
+rm -f $(Name).pmdoc/*-contents.xml
 open $(Name).pmdoc
 ../../Library/apply_recommendations.sh $(Name).pmdoc
 endef
