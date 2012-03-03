@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="23A0B582-0558-11E1-B3C2-D49A200B3D20">
+<pkgref spec="1.12" uuid="1CF9BA4C-6540-11E1-A665-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.coreutils</identifier>
-    <version>8.13-0</version>
+    <version>8.15-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01coreutils-contents.xml</file-list>

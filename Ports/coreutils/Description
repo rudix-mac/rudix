@@ -4,7 +4,8 @@ Site: http://www.gnu.org/software/coreutils/
 License: GPL
 
 Changes from previous release:
-* Upgraded to verision 8.13
+* Upgraded to verision 8.15
 
 Usage:
-$ gnudate
+$ /usr/local/bin/date
+

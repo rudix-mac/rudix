@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="coreutils-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/coreutils/coreutils-install" m="false" t="file">
+  <f n="coreutils-install" o="root" g="staff" p="16877" pt="coreutils-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="[" o="root" g="wheel" p="41469">
             <mod>mode</mod>
@@ -960,6 +960,7 @@
                 <f n="coreutils.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
               <f n="LC_TIME" o="root" g="wheel" p="16893">
                 <f n="coreutils.mo" o="root" g="wheel" p="41396">
@@ -967,6 +968,7 @@
                 </f>
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ms" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
