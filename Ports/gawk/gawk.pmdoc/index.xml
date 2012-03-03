@@ -11,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Programming language that makes it possible to handle simple data-reformatting</description>
+  <description>The GNU Awk interpreter.
+
+Site: http://www.gnu.org/software/gawk/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/gawk
+</description>
   <contents>
     <choice title="gawk-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.gawk"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">gawk-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">gawk-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
