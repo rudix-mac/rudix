@@ -2,7 +2,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>GNU Make</title>
-    <organization>org.rudix.pkg</organization>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -11,16 +11,24 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.</description>
+  <description>GNU Make is a tool which controls the generation of executables and other non-source files of a program.
+
+Site: http://www.gnu.org/software/make/
+License: GPL
+
+Changes from previous release:
+* </description>
   <contents>
-    <choice title="make-install" id="make" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="make-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.make"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">make-3.82/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">make-3.82/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">make-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">make-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
