@@ -15,24 +15,28 @@
 
 Site: http://tukaani.org/xz/
 License: GPL
+
+Changes from previous release:
+* Upgraded to version 5.0.3
+
+Usage:
+$ /usr/local/bin/xz
 </description>
   <contents>
     <choice title="xz-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.xz"/>
     </choice>
-    <choice title="libintl-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.libintl"/>
-    </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">xz-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">xz-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01xz.xml</item>
-  <item type="file">01libintl.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
