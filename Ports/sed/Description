@@ -1,0 +1,10 @@
+GNU Stream Editor.
+
+Site: http://www.gnu.org/software/sed/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+$ /usr/local/bin/sed
