@@ -17,16 +17,19 @@ Site: https://www.dlitz.net/software/pycrypto/
 License: Public Domain
 
 Changes from previous release:
-* Upgraded to version 2.4.1</description>
+* Upgraded to version 2.5
+</description>
   <contents>
     <choice title="pycrypto-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pycrypto"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">pycrypto-build/COPYRIGHT</resource>
       <resource relative="true" mod="true" type="readme">pycrypto-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
