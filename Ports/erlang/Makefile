@@ -26,17 +26,18 @@ GnuConfigureExtra += --enable-darwin-64bit
 
 define install_post_hool
 install -d $(InstallDir)$(Prefix)/share
-tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C $(InstallDir)$(Prefix)/share
-tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C $(InstallDir)$(LibDir)/erlang
+tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \
+	$(InstallDir)$(LibDir)/erlang
+tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C \
+	$(InstallDir)$(LibDir)/erlang
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(SourceDir)/{AUTHORS,EPLICENCE,ReadMeFile.*} $(InstallDir)/$(DocDir)/$(Name)
-cd $(InstallDir)/$(DocDir)/$(Name) ; ln -sf ../../../lib/erlang/doc html
-cd $(InstallDir)$(LibDir)/erlang ; ln -sf ../../share/man .
-rm -f $(InstallDir)$(Prefix)/share/{COPYRIGHT,PR.template,ReadMeFile}
+#cd $(InstallDir)/$(DocDir)/$(Name) ; ln -sf ../../../lib/erlang/doc html
+#cd $(InstallDir)$(LibDir)/erlang ; ln -sf ../../share/man .
+#rm -f $(InstallDir)$(Prefix)/share/{COPYRIGHT,PR.template,ReadMeFile}
 endef
 
 realdistclean: distclean
 	rm -f retrieve $(Source)
 	rm -f otp_doc_html_$(Version).tar.gz
 	rm -f otp_doc_man_$(Version).tar.gz
-
