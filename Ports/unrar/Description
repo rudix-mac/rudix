@@ -1,0 +1,11 @@
+Extract, list, and test RAR archives.
+
+Site: http://www.rarlab.com/
+License: Freeware
+
+Changes from previous release:
+* Upgraded to version 4.1.4
+
+Usage:
+/usr/local/bin/unrar
+

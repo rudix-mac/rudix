@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D4F1BFB4-A8C8-4C3F-8095-D548DAD1C6FF">
+<pkgref spec="1.12" uuid="44321F00-664E-11E1-8C95-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.unrar</identifier>
-    <version>3.7.8</version>
+    <version>4.1.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01unrar-contents.xml</file-list>
