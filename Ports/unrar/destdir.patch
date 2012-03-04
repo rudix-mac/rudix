@@ -1,0 +1,12 @@
+--- makefile.unix.orig	2012-03-04 19:58:10.000000000 -0300
++++ makefile.unix	2012-03-04 19:59:00.000000000 -0300
+@@ -136,7 +136,8 @@
+ 	$(LINK) -shared -o libunrar.so $(LDFLAGS) $(OBJECTS) $(LIB_OBJ)
+ 
+ install-unrar:
+-			install -D unrar $(DESTDIR)/bin/unrar
++			install -d $(DESTDIR)/usr/local/bin
++			install unrar $(DESTDIR)/usr/local/bin/unrar
+ 
+ uninstall-unrar:
+ 			rm -f $(DESTDIR)/bin/unrar
