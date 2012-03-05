@@ -3,8 +3,8 @@ PycURL is a Python interface to libcurl.
 Site: http://pycurl.sourceforge.net/
 License: LGPL or MIT
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
 >>> import pycurl
-
-Changes from previous release:
-* Recompiled for Lion

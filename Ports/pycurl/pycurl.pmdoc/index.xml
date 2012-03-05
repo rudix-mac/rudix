@@ -16,21 +16,23 @@
 Site: http://pycurl.sourceforge.net/
 License: LGPL or MIT
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
 &gt;&gt;&gt; import pycurl
-
-Changes from previous release:
-* Recompiled for Lion
 </description>
   <contents>
     <choice title="pycurl-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pycurl"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">pycurl-build/COPYING2</resource>
       <resource relative="true" mod="true" type="readme">pycurl-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
