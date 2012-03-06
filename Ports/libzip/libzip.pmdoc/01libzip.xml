@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="0FC79A4E-78BD-11E0-AD84-0017F22C0C04">
+<pkgref spec="1.12" uuid="ED44FD00-6721-11E1-8CA4-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libzip</identifier>
-    <version>0.10-0</version>
+    <version>0.10-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01libzip-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

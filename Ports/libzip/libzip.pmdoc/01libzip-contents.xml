@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="libzip-install" o="root" g="staff" p="16877" pt="libzip-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="zipcmp" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -20,10 +20,16 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libzip.1.0.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libzip" o="root" g="wheel" p="16893">
+            <f n="include" o="root" g="wheel" p="16893">
+              <f n="zipconf.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <mod>mode</mod>
           </f>
-          <f n="libzip.1.dylib" o="root" g="wheel" p="41469">
+          <f n="libzip.2.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libzip.a" o="root" g="wheel" p="33204">
@@ -47,16 +53,16 @@
               <f n="AUTHORS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -108,6 +114,9 @@
               <f n="zip_fclose.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="zip_fdopen.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="zip_file_error_clear.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -120,7 +129,13 @@
               <f n="zip_fopen.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="zip_fopen_encrypted.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="zip_fopen_index.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_fopen_index_encrypted.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="zip_fread.3" o="root" g="wheel" p="33204">
@@ -135,7 +150,13 @@
               <f n="zip_get_file_comment.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="zip_get_file_extra.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="zip_get_name.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_get_num_entries.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="zip_get_num_files.3" o="root" g="wheel" p="33204">
@@ -159,7 +180,13 @@
               <f n="zip_set_archive_flag.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="zip_set_default_password.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="zip_set_file_comment.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip_set_file_extra.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="zip_source_buffer.3" o="root" g="wheel" p="33204">

@@ -1,0 +1,8 @@
+libzip is a C library for reading, creating, and modifying zip archives.
+
+Site: http://nih.at/libzip/
+License: BSD
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
