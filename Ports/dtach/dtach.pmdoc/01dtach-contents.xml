@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="dtach-install" o="root" g="staff" p="16877" pt="dtach-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="dtach" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>

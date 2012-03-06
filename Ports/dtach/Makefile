@@ -5,8 +5,8 @@ include ../../Library/GNUFormula.mk
 Title=		Dtach
 Name=		dtach
 Version=	0.8
-Revision=	7
-URL=		http://downloads.sourceforge.net/$(Name)
+Revision=	8
+URL=		http://downloads.sourceforge.net/dtach
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
