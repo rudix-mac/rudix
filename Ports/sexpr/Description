@@ -1,0 +1,7 @@
+The small, fast s-expression library.
+
+Site: http://sexpr.sourceforge.net/
+License: BSD
+
+Changes from previous release:
+* Rebuild on Xcode 4.3

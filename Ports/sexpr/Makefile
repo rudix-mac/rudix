@@ -8,7 +8,7 @@ License=	BSD
 Title=		sfsexp
 Name=		sexpr
 Version=	1.2.1
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)_$(Version).tar.gz
 
@@ -17,7 +17,7 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=$(Name)_$(Version)
 
-GnuMakeExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFlags)"
+MakeExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFlags)"
 
 define install_post_hook
 install -d $(InstallDir)$(Prefix)/include/sexpr
