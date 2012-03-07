@@ -2,6 +2,7 @@ include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/UnixFormula.mk
 
+Title=		FIGlet
 Name=		figlet
 Version=	2.2.4
 Revision=	0
