@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="git-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/git/git-install" m="false" t="file">
+  <f n="git-install" o="root" g="staff" p="16877" pt="git-install" m="false" t="file">
     <f n="Applications" o="root" g="admin" p="16893">
       <f n="Git Gui.app" o="root" g="admin" p="16893">
         <f n="Contents" o="root" g="admin" p="16893">
@@ -30,75 +30,76 @@
         <mod>mode</mod>
       </f>
     </f>
-    <f n="Library" o="root" g="admin" p="17405">
-      <f n="Perl" o="root" g="admin" p="16893">
-        <f n="Updates" o="root" g="admin" p="16893">
-          <f n="5.10.0" o="root" g="admin" p="16893">
-            <f n="Error.pm" o="root" g="admin" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="Git.pm" o="root" g="admin" p="33204">
-              <mod>mode</mod>
-            </f>
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Perl" o="root" g="wheel" p="16877">
+        <f n="Updates" o="root" g="wheel" p="16893">
+          <f n="5.12" o="root" g="wheel" p="16893">
+            <mod>mode</mod>
           </f>
+          <f n="5.12.3" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
         </f>
       </f>
-      <f n="Python" o="root" g="admin" p="16893">
-        <f n="2.6" o="root" g="admin" p="16893">
-          <f n="site-packages" o="root" g="admin" p="16893">
-            <f n="git_remote_helpers" o="root" g="admin" p="16893">
-              <f n="__init__.py" o="root" g="admin" p="33277">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="git_remote_helpers" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="__init__.pyc" o="root" g="admin" p="33204">
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="git" o="root" g="admin" p="16893">
-                <f n="__init__.py" o="root" g="admin" p="33204">
+              <f n="git" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="__init__.pyc" o="root" g="admin" p="33204">
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="exporter.py" o="root" g="admin" p="33204">
+                <f n="exporter.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="exporter.pyc" o="root" g="admin" p="33204">
+                <f n="exporter.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="git.py" o="root" g="admin" p="33277">
+                <f n="git.py" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
-                <f n="git.pyc" o="root" g="admin" p="33204">
+                <f n="git.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="importer.py" o="root" g="admin" p="33204">
+                <f n="importer.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="importer.pyc" o="root" g="admin" p="33204">
+                <f n="importer.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="non_local.py" o="root" g="admin" p="33204">
+                <f n="non_local.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="non_local.pyc" o="root" g="admin" p="33204">
+                <f n="non_local.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="repo.py" o="root" g="admin" p="33204">
+                <f n="repo.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="repo.pyc" o="root" g="admin" p="33204">
+                <f n="repo.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-              </f>
-              <f n="util.py" o="root" g="admin" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="util.pyc" o="root" g="admin" p="33204">
+              <f n="util.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
+              <f n="util.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
-            <f n="git_remote_helpers-0.1.0-py2.6.egg-info" o="root" g="admin" p="33204">
+            <f n="git_remote_helpers-0.1.0-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -106,8 +107,8 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="git" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -211,6 +212,15 @@
               <mod>mode</mod>
             </f>
             <f n="git-count-objects" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="git-credential-cache" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="git-credential-cache--daemon" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="git-credential-store" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
             <f n="git-cvsexportcommit" o="root" g="wheel" p="33277">
@@ -435,7 +445,13 @@
             <f n="git-rebase" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
+            <f n="git-rebase--am" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
             <f n="git-rebase--interactive" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="git-rebase--merge" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
             <f n="git-receive-pack" o="root" g="wheel" p="41469">
@@ -448,6 +464,12 @@
               <mod>mode</mod>
             </f>
             <f n="git-remote" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="git-remote-ext" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="git-remote-fd" o="root" g="wheel" p="41469">
               <mod>mode</mod>
             </f>
             <f n="git-remote-ftp" o="root" g="wheel" p="33277">
@@ -499,6 +521,12 @@
               <mod>mode</mod>
             </f>
             <f n="git-send-pack" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="git-sh-i18n" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="git-sh-i18n--envsubst" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
             <f n="git-sh-setup" o="root" g="wheel" p="33277">
@@ -588,6 +616,55 @@
             <f n="git-write-tree" o="root" g="wheel" p="41469">
               <mod>mode</mod>
             </f>
+            <f n="mergetools" o="root" g="wheel" p="16893">
+              <f n="araxis" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bc3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="defaults" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="diffuse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ecmerge" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="emerge" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kdiff3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kompare" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="meld" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="opendiff" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="p4merge" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tkdiff" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tortoisemerge" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vim" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="xxdiff" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
@@ -596,14 +673,20 @@
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="git-core" o="root" g="wheel" p="16893">
             <f n="templates" o="root" g="wheel" p="16893">
-              <f n="branches" o="root" g="wheel" p="16893"/>
+              <f n="branches" o="root" g="wheel" p="16893">
+                <mod>mode</mod>
+              </f>
               <f n="description" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -612,12 +695,6 @@
                   <mod>mode</mod>
                 </f>
                 <f n="commit-msg.sample" o="root" g="wheel" p="33277">
-                  <mod>mode</mod>
-                </f>
-                <f n="post-commit.sample" o="root" g="wheel" p="33277">
-                  <mod>mode</mod>
-                </f>
-                <f n="post-receive.sample" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
                 <f n="post-update.sample" o="root" g="wheel" p="33277">
@@ -638,13 +715,17 @@
                 <f n="update.sample" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
               <f n="info" o="root" g="wheel" p="16893">
                 <f n="exclude" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="git-gui" o="root" g="wheel" p="16893">
             <f n="lib" o="root" g="wheel" p="16893">
@@ -717,6 +798,9 @@
               <f n="index.tcl" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="line.tcl" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="logo.tcl" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -748,6 +832,9 @@
                 <f n="nb.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pt_br.msg" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="ru.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -757,6 +844,7 @@
                 <f n="zh_cn.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
               <f n="option.tcl" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -806,7 +894,9 @@
               <f n="win32_shortcut.js" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="gitk" o="root" g="wheel" p="16893">
             <f n="lib" o="root" g="wheel" p="16893">
@@ -829,14 +919,20 @@
                 <f n="ja.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pt_br.msg" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="ru.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="sv.msg" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="gitweb" o="root" g="wheel" p="16893">
             <f n="gitweb.cgi" o="root" g="wheel" p="33277">
@@ -854,6 +950,17 @@
               </f>
               <f n="gitweb.js" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="locale" o="root" g="wheel" p="16893">
+            <f n="is" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="git.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
             </f>
           </f>
@@ -929,6 +1036,15 @@
                 <mod>mode</mod>
               </f>
               <f n="git-count-objects.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-credential-cache--daemon.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-credential-cache.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-credential-store.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="git-cvsexportcommit.1" o="root" g="wheel" p="33204">
@@ -1093,6 +1209,9 @@
               <f n="git-notes.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="git-p4.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="git-pack-objects.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -1141,7 +1260,16 @@
               <f n="git-relink.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="git-remote-ext.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-remote-fd.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="git-remote-helpers.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-remote-testgit.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="git-remote.1" o="root" g="wheel" p="33204">
@@ -1181,6 +1309,12 @@
                 <mod>mode</mod>
               </f>
               <f n="git-send-pack.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-sh-i18n--envsubst.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="git-sh-i18n.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="git-sh-setup.1" o="root" g="wheel" p="33204">
@@ -1276,12 +1410,15 @@
               <f n="gitk.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="gitweb.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
             <f n="man3" o="root" g="wheel" p="16893">
               <f n="Git.3pm" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="private-Error.3pm" o="root" g="wheel" p="33204">
+              <f n="Git::I18N.3pm" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
             </f>
@@ -1301,12 +1438,19 @@
               <f n="gitrepository-layout.5" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="gitweb.conf.5" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="man7" o="root" g="wheel" p="16893">
               <f n="gitcli.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="gitcore-tutorial.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gitcredentials.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="gitcvs-migration.7" o="root" g="wheel" p="33204">
@@ -1316,6 +1460,9 @@
                 <mod>mode</mod>
               </f>
               <f n="gitglossary.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gitnamespaces.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="gitrevisions.7" o="root" g="wheel" p="33204">
@@ -1330,6 +1477,7 @@
               <f n="gitworkflows.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

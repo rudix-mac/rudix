@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GIT</title>
-    <build>/Users/santagada/projects/rudix/Ports/git/git-1.7.2.pkg</build>
-    <organization>org.rudix.pkg</organization>
+    <title>Git</title>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -12,16 +11,28 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GIT - Tree History Storage Tool</description>
+  <description>Git the fast version control system.
+
+Site: http://git-scm.com/
+License: GPL
+
+Changes from previous release:
+* Upgraded to version 1.7.9.3
+
+Usage:
+/usr/local/bin/git
+</description>
   <contents>
     <choice title="git-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.git"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">git-1.7.4.1/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">git-1.7.4.1/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">git-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">git-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
