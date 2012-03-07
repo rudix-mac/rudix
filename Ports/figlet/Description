@@ -1,0 +1,10 @@
+FIGlet is a program for making large letters out of ordinary text.
+
+Site: http://www.figlet.org/
+License: The Academic Free License
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+/usr/local/bin/figlet
