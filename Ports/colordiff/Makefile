@@ -5,7 +5,7 @@ include ../../Library/UnixFormula.mk
 Title=		ColorDiff
 Name=		colordiff
 Version=	1.0.9
-Revision=	2
+Revision=	3
 URL=		http://colordiff.sourceforge.net/
 Source=		$(Name)-$(Version).tar.gz
 
