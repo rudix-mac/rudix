@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="1F19BB90-88F5-442A-97AD-54EC717D6FDE">
+<pkgref spec="1.12" uuid="9351B8EB-67F5-11E1-B1D3-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.figlet</identifier>
-    <version>2.2.2</version>
+    <version>2.2.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01figlet-contents.xml</file-list>

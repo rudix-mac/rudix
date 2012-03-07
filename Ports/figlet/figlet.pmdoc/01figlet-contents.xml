@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="figlet-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/figlet/figlet-install" m="false" t="file">
+  <f n="figlet-install" o="root" g="staff" p="16877" pt="figlet-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -17,15 +17,27 @@
             <mod>mode</mod>
           </f>
         </f>
+        <f n="man" o="root" g="wheel" p="16893">
+          <f n="man6" o="root" g="wheel" p="16893">
+            <f n="chkfont.6" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="figlet.6" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="figlist.6" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="showfigfonts.6" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
+        </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="figlet" o="root" g="wheel" p="16893">
-              <f n="CHANGES" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="FAQ" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="LICENSE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -208,14 +220,6 @@
               <mod>mode</mod>
             </f>
             <mod>mode</mod>
-          </f>
-          <f n="man" o="root" g="wheel" p="16893">
-            <f n="man6" o="root" g="wheel" p="16893">
-              <f n="figlet.6" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
-            </f>
           </f>
         </f>
       </f>
