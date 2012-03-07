@@ -17,24 +17,6 @@
             <mod>mode</mod>
           </f>
         </f>
-        <f n="man" o="root" g="wheel" p="16893">
-          <f n="man6" o="root" g="wheel" p="16893">
-            <f n="chkfont.6" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="figlet.6" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="figlist.6" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="showfigfonts.6" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <mod>mode</mod>
-          </f>
-          <mod>mode</mod>
-        </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="figlet" o="root" g="wheel" p="16893">
@@ -44,7 +26,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="figlet" o="root" g="wheel" p="16893">
@@ -219,7 +200,23 @@
             <f n="utf8.flc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man6" o="root" g="wheel" p="16893">
+              <f n="chkfont.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="figlet.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="figlist.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="showfigfonts.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
           </f>
         </f>
       </f>

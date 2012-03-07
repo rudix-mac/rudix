@@ -1,0 +1,11 @@
+--- Makefile.orig	2012-03-07 00:22:18.000000000 -0300
++++ Makefile	2012-03-07 00:22:30.000000000 -0300
+@@ -35,7 +35,7 @@
+ BINDIR	= $(prefix)/bin
+ 
+ # Where the man page should be put
+-MANDIR	= $(prefix)/man
++MANDIR	= $(prefix)/share/man
+ 
+ # Where figlet will search first for fonts (the ".flf" files).
+ DEFAULTFONTDIR = $(prefix)/share/figlet

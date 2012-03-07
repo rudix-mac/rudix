@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="C3560C9C-67F5-11E1-97D8-D49A200B3D20">
+<pkgref spec="1.12" uuid="E6F30A91-6804-11E1-A819-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.figlet</identifier>
     <version>2.2.4-0</version>
