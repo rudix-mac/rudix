@@ -4,11 +4,10 @@ include ../../Library/GNUFormula.mk
 
 Title=		CTemplate
 Name=		ctemplate
-Version=	1.0
+Version=	2.0
 Revision=	0
-URL=		http://ftp.gnu.org/gnu/wget/
+URL=		http://ctemplate.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
-

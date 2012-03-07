@@ -11,20 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>A simple but powerful template language for C++.
+  <description>Powerful but simple template language for C++.
 
 Site: http://code.google.com/p/google-ctemplate/
 License: BSD
+
+Changes from previous release:
+* Upgraded to version 2.0
 </description>
   <contents>
     <choice title="ctemplate-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ctemplate"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">ctemplate-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">ctemplate-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
