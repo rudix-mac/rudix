@@ -1,5 +1,0 @@
-Curses-based interpreter for Infocom-compatible games
-
-Frotz is another of the fine family of interpreters for Infocom's text adventures and compatible games.
-
-"Frotz" is also the name of the spell to make an object emit light.

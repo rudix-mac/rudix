@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="24430D3C-F959-4E6D-A3A9-8065D42F0A2B">
+<pkgref spec="1.12" uuid="D1A4CF38-6802-11E1-977D-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.frotz</identifier>
-    <version>2.43</version>
+    <version>2.43-6</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01frotz-contents.xml</file-list>

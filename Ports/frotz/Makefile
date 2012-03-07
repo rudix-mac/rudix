@@ -1,34 +1,22 @@
-# Curses-based interpreter for Infocom-compatible games
-# http://frotz.sourceforge.net/
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		frotz
-VERSION=	2.43
-REVISION=	5
+Title=		Frotz
+Name=		frotz
+Version=	2.43
+Revision=	6
 URL=		http://downloads.sourceforge.net/frotz
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/frotz-2.43-Makefile.patch
-	touch prep
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(make) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" all
-	touch build
+MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)$(Prefix)
+MakeInstallExtra += MAN_PREFIX=$(PortDir)/$(InstallDir)$(ManDir)
+MakeInstallExtra += install_dumb
 
-install: build
-	cd $(BUILDDIR) ; \
-	make	LDFLAGS="$(LDFLAGS)" \
-		PREFIX=$(INSTALLDIR)/usr/local \
-		MAN_PREFIX=$(INSTALLDIR)/usr/local/share/man install \
-		install_dumb
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,HOW_TO_PLAY,README,TODO,doc/*.conf*} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	touch test
+define install_post_hook
+install $(SourceDir)/{AUTHORS,ChangeLog,HOW_TO_PLAY,TODO,doc/*.conf*} \
+	$(PortDir)/$(InstallDir)$(DocDir)
+endef
