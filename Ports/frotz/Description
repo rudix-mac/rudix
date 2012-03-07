@@ -1,0 +1,10 @@
+A Portable Z-Machine Interpreter.
+
+Site: http://frotz.sourceforge.net/
+License: GPL
+
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
+Usage:
+/usr/local/bin/frotz
