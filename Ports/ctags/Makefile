@@ -5,8 +5,8 @@ include ../../Library/GNUFormula.mk
 Title=		Exuberant Ctags
 Name=		ctags
 Version=	5.8
-Revision=	3
-URL=		http://downloads.sourceforge.net/$(Name)
+Revision=	4
+URL=		http://downloads.sourceforge.net/ctags
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README

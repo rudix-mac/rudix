@@ -1,10 +1,10 @@
 Multilanguage implementation of ctags.
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2
-
 Site: http://ctags.sourceforge.net/
 License: GPL
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
-$ ctags
+/usr/local/bin/ctags

@@ -13,24 +13,26 @@
   </distribution>
   <description>Multilanguage implementation of ctags.
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2
-
 Site: http://ctags.sourceforge.net/
 License: GPL
 
+Changes from previous release:
+* Rebuild on Xcode 4.3
+
 Usage:
-$ ctags
+/usr/local/bin/ctags
 </description>
   <contents>
     <choice title="ctags-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ctags"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">ctags-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">ctags-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
