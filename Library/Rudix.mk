@@ -2,8 +2,9 @@
 #
 # Copyright (c) 2005-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
+#
 
-BuildSystem = 20120302
+BuildSystem = 20120307
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -199,11 +200,13 @@ $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
 endef
 
+ifeq ($(RUDIX_APPLY_RECOMMENDATIONS),yes)
 define apply_recommendations
 rm -f $(Name).pmdoc/*-contents.xml
 open $(Name).pmdoc
 ../../Library/apply_recommendations.sh $(Name).pmdoc
 endef
+endif
 
 define sanitize_pmdoc
 for x in $(Name).pmdoc/*-contents.xml ; do \
