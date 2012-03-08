@@ -1,0 +1,7 @@
+Python bindings for libxml2.
+
+Site: http://xmlsoft.org/python.html
+License: MIT
+
+Release Notes:
+* Rebuild on Xcode 4.3
