@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pylibmc-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/pylibmc/pylibmc-install" m="false" t="file">
+  <f n="pylibmc-install" o="root" g="staff" p="16877" pt="pylibmc-install" m="false" t="file">
     <f n="Library" o="root" g="wheel" p="16877">
       <f n="Python" o="root" g="wheel" p="16877">
         <f n="2.7" o="root" g="wheel" p="16877">
@@ -55,7 +55,7 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="pylibmc" o="root" g="wheel" p="16893">

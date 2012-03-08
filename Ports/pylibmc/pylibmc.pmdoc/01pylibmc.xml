@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="539C5E54-08BD-11E1-9004-D49A200B3D20">
+<pkgref spec="1.12" uuid="4387F8FA-6943-11E1-AC52-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.pylibmc</identifier>
-    <version>1.2.2-0</version>
+    <version>1.2.2-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01pylibmc-contents.xml</file-list>

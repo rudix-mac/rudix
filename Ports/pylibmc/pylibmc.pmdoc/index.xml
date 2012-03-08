@@ -14,28 +14,26 @@
   <description>Quick and small memcached client for Python.
 
 Site: http://pypi.python.org/pypi/pylibmc
-License: Python
+License: Python License
 
-Changes from previous release:
-* Upgraded to version 1.2.2
+Release Notes:
+* Rebuild on Xcode 4.3
 </description>
   <contents>
     <choice title="pylibmc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pylibmc"/>
     </choice>
-    <choice title="libmemcached-runtime-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.libmemcached-runtime"/>
-    </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">pylibmc-build/LICENSE</resource>
       <resource relative="true" mod="true" type="readme">pylibmc-build/README.rst</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01pylibmc.xml</item>
-  <item type="file">01libmemcached.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
