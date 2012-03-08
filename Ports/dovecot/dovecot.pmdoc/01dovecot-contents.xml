@@ -1,0 +1,2361 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="dovecot-install" o="root" g="staff" p="16877" pt="dovecot-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="doveadm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="doveconf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="dsync" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="dovecot" o="root" g="wheel" p="16893">
+            <f n="README" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="dovecot" o="root" g="wheel" p="16893">
+            <f n="abspath.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="access-lookup.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="anvil-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="aqueue.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="array-decl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="array.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="askpass.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-client-connection.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-client-interface.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-client-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-client-request.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-master-connection.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-master.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-penalty.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-postfix-connection.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-request-handler.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-request.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-server-connection.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-stream.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-worker-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth-worker-server.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="auth.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="backtrace-string.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="base64.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bsearch-insert-pos.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="buffer.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="charset-utf8.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="child-wait.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="client-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="close-keep-errno.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="compat.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config-filter.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config-parser-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config-request.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="config.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="crc32.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cydir-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cydir-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="data-stack.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="db-checkpassword.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="db-ldap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="db-passwd-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="db-sql.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-attachment.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-mail.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-save.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbox-sync-rebuild.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dict-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dict-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dict-sql-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dict-sql.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dict.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dns-lookup.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dovecot-version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="duplicate.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="eacces-error.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="env-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="execv-const.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fail-mail-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="failures.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fd-close-on-exec.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fd-set-nonblock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fdatasync-path.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fdpass.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file-copy.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file-dotlock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file-lock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file-set-size.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fs-api-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fs-api.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fs-sis-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fsync-mode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guid.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash-format.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash-method.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash2.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hex-binary.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hex-dec.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hmac-md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hmac-sha1.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="home-expand.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hostpid.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-arg.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-base-subject.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-bodystructure.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-commands-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-commands.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-date.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-envelope.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-expunge.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-fetch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-id.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-match.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-quote.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-resp-code.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-search-args.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-search.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-seqset.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-status.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-utf7.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-client-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-connection.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-list.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-mail.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-msgmap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imapc-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="imem.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-attachment.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-mail.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-search-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-search-result.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-sort-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-sort.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-sync-changes.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-sync-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="index-thread-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ioloop-iolist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ioloop-notify-fd.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ioloop-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ioloop.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iostream-openssl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iostream-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iostream-rawlog-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iostream-rawlog.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iostream-ssl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ipc-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ipc-server.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ipwd.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-attachment.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-base64-encoder.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-concat.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-crlf.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-dot.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-header-filter.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-mail.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-raw-mbox.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-rawlog.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-seekable.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream-tee.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="istream.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lda-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib-signals.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="llist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lmtp-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="login-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="login-proxy-state.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="login-proxy.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="login-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="macros.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-cache-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-copy.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-deliver.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-error.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-alloc-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-modseq.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-strmap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-sync-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-transaction-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index-view-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-index.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-namespace.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-search-build.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-search-parser-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-search-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-search-register.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-search.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-send.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-storage-hooks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-storage-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-storage-service.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-storage-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-thread.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-transaction-log-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-transaction-log-view-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-transaction-log.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-types.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mail-user.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-guid-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-delete.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-fs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-index.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-maildir.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list-subscriptions.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-list.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-log.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-search-result-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-tree.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mailbox-uidvalidity.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-filename-flags.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-filename.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-keywords.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="maildir-uidlist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-auth.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-instance.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-interface.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-login-auth.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-login.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-service-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-service-settings-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-service-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="master-service.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-from.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-lock.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mbox-sync-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="md4.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-map-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-map.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-storage-rebuild.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mdbox-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mech-otp-skey-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mech-plain-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mech.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mempool.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-address.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-date.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-decoder.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-header-decode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-header-encode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-header-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-id.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-part-serialize.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-search.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-send.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="message-size.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mkdir-parents.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mmap-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="module-context.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="module-dir.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mountpoint-list.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mountpoint.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mycrypt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="network.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="nfs-workarounds.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="notify-plugin-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="notify-plugin.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ostream-cmp.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ostream-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ostream-rawlog.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ostream.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="passdb-blocking.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="passdb-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="passdb-template.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="passdb.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="password-scheme.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-capability.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-commands.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3c-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3c-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3c-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3c-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="primes.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="printf-format-fix.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="priorityq.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="process-title.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="quoted-printable.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="randgen.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="raw-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="raw-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="read-full.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="restrict-access.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="restrict-process-size.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rfc2231-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rfc822-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="safe-memset.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="safe-mkdir.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="safe-mkstemp.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sasl-server.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sdbox-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sdbox-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sdbox-sync.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sendfile-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="seq-range-array.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="service-settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="settings-parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="settings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sha1.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sha2.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="shared-storage.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="smtp-client.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sql-api-private.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sql-api.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sql-db-cache.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ssl-proxy.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="str-find.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="str-sanitize.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="str.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strescape.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strfuncs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strnum.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="subscription-file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="syslog-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="test-common.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="time-util.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="unichar.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="unix-socket-create.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="unlink-directory.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="unlink-old-files.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="userdb-blocking.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="userdb-template.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="userdb-vpopmail.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="userdb.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="utc-mktime.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="utc-offset.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="var-expand.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="wildcard-match.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="write-full.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="dovecot" o="root" g="wheel" p="16893">
+            <f n="auth" o="root" g="wheel" p="16893">
+              <f n="libauthdb_imap.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="libauthdb_imap.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="libauthdb_imap.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="doveadm" o="root" g="wheel" p="16893">
+              <f n="lib10_doveadm_acl_plugin.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_acl_plugin.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_acl_plugin.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_expire_plugin.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_expire_plugin.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_expire_plugin.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_quota_plugin.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_quota_plugin.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_quota_plugin.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_zlib_plugin.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_zlib_plugin.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib10_doveadm_zlib_plugin.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib20_doveadm_fts_plugin.a" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lib20_doveadm_fts_plugin.la" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="lib20_doveadm_fts_plugin.so" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="dovecot-config" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib01_acl_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib01_acl_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib01_acl_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_imap_acl_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_imap_acl_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_imap_acl_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_lazy_expunge_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_lazy_expunge_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib02_lazy_expunge_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib05_snarf_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib05_snarf_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib05_snarf_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib10_quota_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib10_quota_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib10_quota_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_imap_quota_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_imap_quota_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_imap_quota_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_trash_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_trash_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib11_trash_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib15_notify_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib15_notify_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib15_notify_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_autocreate_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_autocreate_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_autocreate_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_expire_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_expire_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_expire_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_fts_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_fts_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_fts_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_listescape_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_listescape_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_listescape_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_mail_log_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_mail_log_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_mail_log_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_virtual_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_virtual_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_virtual_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_zlib_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_zlib_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib20_zlib_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib21_fts_squat_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib21_fts_squat_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib21_fts_squat_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib30_imap_zlib_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib30_imap_zlib_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib30_imap_zlib_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib90_stats_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib90_stats_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib90_stats_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib95_imap_stats_plugin.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lib95_imap_stats_plugin.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lib95_imap_stats_plugin.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-lda.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-lda.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-lda.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-lda.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-login.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-login.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-login.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-login.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-sql.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-sql.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-sql.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-sql.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-ssl.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-ssl.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-ssl.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-ssl.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-storage.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-storage.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-storage.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot-storage.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot.0.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot.a" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot.dylib" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="libdovecot.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="dovecot" o="root" g="wheel" p="16893">
+            <f n="anvil" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="auth" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="checkpassword-reply" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="config" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="decode2text.sh" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="deliver" o="root" g="wheel" p="41469">
+              <mod>mode</mod>
+            </f>
+            <f n="dict" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="director" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="dns-client" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="doveadm-server" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="dovecot-lda" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="gdbhelper" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="imap" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="imap-login" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="indexer" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="indexer-worker" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="ipc" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="lmtp" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="log" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="maildirlock" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="pop3-login" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="rawlog" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="script" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="script-login" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="ssl-params" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="stats" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="xml2text" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="sbin" o="root" g="wheel" p="16893">
+          <f n="dovecot" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="16893">
+            <f n="dovecot.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="dovecot" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LGPL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.MIT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="documentation.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="example-config" o="root" g="wheel" p="16893">
+                <f n="conf.d" o="root" g="wheel" p="16893">
+                  <f n="10-auth.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10-director.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10-logging.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10-mail.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10-master.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="10-ssl.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="15-lda.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="15-mailboxes.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="20-imap.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="20-lmtp.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="20-pop3.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="90-acl.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="90-plugin.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="90-quota.conf" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-checkpassword.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-deny.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-ldap.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-master.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-passwdfile.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-sql.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-static.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-system.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="auth-vpopmail.conf.ext" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="dovecot-db.conf.ext" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="dovecot-dict-sql.conf.ext" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="dovecot-ldap.conf.ext" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="dovecot-sql.conf.ext" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="dovecot.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="securecoding.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="thread-refs.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wiki" o="root" g="wheel" p="16893">
+                <f n="ACL.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AixPluginsSupport.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.CheckPassword.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.LDAP.AuthBinds.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.LDAP.PasswordLookups.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.LDAP.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.LDAP.Userdb.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.Passwd.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.PasswdFile.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.SQL.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="AuthDatabase.VPopMail.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Caching.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Kerberos.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.MasterUsers.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Mechanisms.DigestMD5.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Mechanisms.NTLM.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Mechanisms.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.Mechanisms.Winbind.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.MultipleDatabases.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.PasswordSchemes.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.RestrictAccess.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Authentication.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="BasicConfiguration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Chrooting.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Clients.NegativeUIDs.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Clients.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="CompilingSource.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Debugging.Authentication.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Debugging.ProcessTracing.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Debugging.Rawlog.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Debugging.Thunderbird.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Arrays.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.AuthProcess.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.AuthProtocol.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Buffers.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Dsync.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Indexes.Cache.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Indexes.MailIndexApi.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Indexes.MainIndex.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Indexes.TransactionLog.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Indexes.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.InputStreams.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.MailProcess.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Memory.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.OutputStreams.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Plugins.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Processes.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.ErrorHandling.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mail.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mailbox.Save.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mailbox.Search.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mailbox.Sync.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mailbox.Transaction.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Mailbox.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.MailboxList.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.MailNamespace.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.MailStorage.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.MailUser.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Storage.Plugins.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.Strings.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Design.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Dict.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Director.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="DomainLost.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Errors.ChgrpNoPerm.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="FindMailLocation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="FinishBasicConfiguration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.EximAndDovecotSASL.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.ImapcProxy.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.PopBSMTPAndDovecot.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.PopRelay.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.PostfixAndDovecotSASL.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.Rootless.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.SimpleVirtualInstall.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="HowTo.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="IndexFiles.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.Exim.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.Indexing.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.Postfix.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.Qmail.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.Sendmail.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LDA.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LMTP.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Logging.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="LoginProcess.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.Cydir.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.dbox.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.Maildir.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.mailstore.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.mbox.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.mbx.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.MH.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailboxFormat.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="maildrop.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.dbox.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.LocalDisk.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.Maildir.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.mbox.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.SharedDisk.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MailLocation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MboxChildFolders.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MboxLocking.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MboxProblems.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MDA.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.BincIMAP.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Courier.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Cyrus.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Linuxconf.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.MailFormat.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Online.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Teapop.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.UW.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Migration.Vm-pop3d.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MissingMailboxes.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="MTA.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="mutt.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Namespaces.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="NFS.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="OSCompatibility.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.BSDAuth.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.AllowNets.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.Host.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.NoDelay.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.NoLogin.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.Proxy.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.ExtraFields.User.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.PAM.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.Shadow.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.Static.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PasswordDatabase.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PerformanceTuning.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Installation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.ManageSieve.Clients.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.ManageSieve.Configuration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.ManageSieve.Install.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.ManageSieve.Troubleshooting.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.ManageSieve.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Configuration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Examples.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Extensions.SpamtestVirustest.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Extensions.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Extensions.Vacation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Plugins.Extdata.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Plugins.Pipe.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Plugins.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Troubleshooting.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.Sieve.Usage.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Pigeonhole.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Autocreate.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Compress.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Expire.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.FTS.Lucene.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.FTS.Solr.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.FTS.Squat.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.FTS.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Lazyexpunge.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Listescape.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.MailLog.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Notify.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Snarf.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Trash.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Virtual.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Plugins.Zlib.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="POP3Server.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PostLoginScripting.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="PreAuth.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="QuickConfiguration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.Configuration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.Dict.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.Dirsize.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.FS.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.Maildir.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Quota.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="RunningDovecot.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Sasl.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SecurityTuning.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Services.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SharedMailboxes.Permissions.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SharedMailboxes.Public.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SharedMailboxes.Shared.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SharedMailboxes.Symlinks.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SharedMailboxes.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SSL.CertificateClientImporting.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SSL.CertificateCreation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SSL.DovecotConfiguration.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SSL.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Statistics.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="SystemUsers.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="TestInstallation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="TestPop3Installation.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="TimeMovedBackwards.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.1.0.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.1.1.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.1.2.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.2.0.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.2.1.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Upgrading.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserDatabase.ExtraFields.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserDatabase.NSS.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserDatabase.Prefetch.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserDatabase.Static.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserDatabase.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="UserIds.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uw2dovecot.sh.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Variables.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="VirtualUsers.Home.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="VirtualUsers.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="WhyDoesItNotWork.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="deliver.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-altmove.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-auth.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-config.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-director.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-dump.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-expunge.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-fetch.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-force-resync.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-help.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-import.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-index.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-instance.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-kick.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-log.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-mailbox.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-mount.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-move.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-penalty.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-purge.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-pw.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-quota.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-reload.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-search.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-stop.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-user.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm-who.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveadm.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="doveconf.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dovecot-lda.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dovecot.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dsync.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+            <f n="man7" o="root" g="wheel" p="16893">
+              <f n="doveadm-search-query.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
