@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="python-twitter-install" o="root" g="staff" p="16877" pt="python-twitter-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="python_twitter-0.8.2-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="requires.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="twitter.py" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="twitter.pyc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="python-twitter" o="root" g="wheel" p="16893">
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
