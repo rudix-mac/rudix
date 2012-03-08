@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="twitter-install" o="root" g="staff" p="16877" pt="twitter-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="twitter" o="root" g="wheel" p="16877">
+              <f n="__init__.py" o="root" g="wheel" p="33188"/>
+              <f n="__init__.pyc" o="root" g="wheel" p="33188"/>
+              <f n="ansi.py" o="root" g="wheel" p="33188"/>
+              <f n="ansi.pyc" o="root" g="wheel" p="33188"/>
+              <f n="api.py" o="root" g="wheel" p="33188"/>
+              <f n="api.pyc" o="root" g="wheel" p="33188"/>
+              <f n="auth.py" o="root" g="wheel" p="33188"/>
+              <f n="auth.pyc" o="root" g="wheel" p="33188"/>
+              <f n="cmdline.py" o="root" g="wheel" p="33188"/>
+              <f n="cmdline.pyc" o="root" g="wheel" p="33188"/>
+              <f n="ircbot.py" o="root" g="wheel" p="33188"/>
+              <f n="ircbot.pyc" o="root" g="wheel" p="33188"/>
+              <f n="logger.py" o="root" g="wheel" p="33188"/>
+              <f n="logger.pyc" o="root" g="wheel" p="33188"/>
+              <f n="oauth.py" o="root" g="wheel" p="33188"/>
+              <f n="oauth.pyc" o="root" g="wheel" p="33188"/>
+              <f n="oauth_dance.py" o="root" g="wheel" p="33188"/>
+              <f n="oauth_dance.pyc" o="root" g="wheel" p="33188"/>
+              <f n="stream.py" o="root" g="wheel" p="33188"/>
+              <f n="stream.pyc" o="root" g="wheel" p="33188"/>
+              <f n="stream_example.py" o="root" g="wheel" p="33188"/>
+              <f n="stream_example.pyc" o="root" g="wheel" p="33188"/>
+              <f n="twitter_globals.py" o="root" g="wheel" p="33188"/>
+              <f n="twitter_globals.pyc" o="root" g="wheel" p="33188"/>
+              <f n="util.py" o="root" g="wheel" p="33188"/>
+              <f n="util.pyc" o="root" g="wheel" p="33188"/>
+            </f>
+            <f n="twitter-1.7.2-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="entry_points.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="zip-safe" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="twitter" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="twitter-log" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="twitter-stream-example" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="twitterbot" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="twitter" o="root" g="wheel" p="16893">
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
