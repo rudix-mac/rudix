@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="fabric-install" o="root" g="staff" p="16877" pt="fabric-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="fabfile" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="docs.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="docs.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tag.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tag.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="fabric" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="api.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="api.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="auth.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="auth.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="colors.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="colors.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="context_managers.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="context_managers.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="contrib" o="root" g="wheel" p="16893">
+                <f n="__init__.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="console.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="console.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="django.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="django.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="files.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="files.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="project.py" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="project.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="decorators.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="decorators.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="exceptions.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="exceptions.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="io.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="io.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="job_queue.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="job_queue.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="main.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="main.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="network.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="network.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="operations.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="operations.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="state.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="state.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="task_utils.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="task_utils.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tasks.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tasks.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="thread_handling.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="thread_handling.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="version.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="version.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="Fabric-1.4.0-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="entry_points.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="requires.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="fab" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="fabric" o="root" g="wheel" p="16893">
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
