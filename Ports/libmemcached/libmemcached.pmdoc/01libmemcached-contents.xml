@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="libmemcached-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/libmemcached/libmemcached-install" m="false" t="file">
+  <f n="libmemcached-install" o="root" g="staff" p="16877" pt="libmemcached-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="memcapable" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -103,6 +103,9 @@
             <mod>mode</mod>
           </f>
           <f n="libmemcached-1.0" o="root" g="wheel" p="16893">
+            <f n="alloc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="allocators.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -121,13 +124,19 @@
             <f n="callback.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="callbacks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="configure.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="constants.h" o="root" g="wheel" p="33204">
+            <f n="defaults.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="delete.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="deprecated_types.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="dump.h" o="root" g="wheel" p="33204">
@@ -155,6 +164,9 @@
               <mod>mode</mod>
             </f>
             <f n="hash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="limits.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="memcached.h" o="root" g="wheel" p="33204">
@@ -199,10 +211,61 @@
             <f n="strerror.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="string.h" o="root" g="wheel" p="33204">
+            <f n="struct" o="root" g="wheel" p="16893">
+              <f n="allocator.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="analysis.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="callback.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="memcached.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="result.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sasl.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="server.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stat.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="string.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
             <f n="touch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="triggers.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="types" o="root" g="wheel" p="16893">
+              <f n="behavior.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="callback.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="connection.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hash.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="return.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="server_distribution.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
             <f n="types.h" o="root" g="wheel" p="33204">
@@ -272,7 +335,7 @@
           <f n="libhashkit.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libmemcached.8.dylib" o="root" g="wheel" p="33277">
+          <f n="libmemcached.9.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libmemcached.a" o="root" g="wheel" p="33204">

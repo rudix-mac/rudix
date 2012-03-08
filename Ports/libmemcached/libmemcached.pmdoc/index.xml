@@ -16,17 +16,20 @@
 Site: http://libmemcached.org/
 License: BSD
 
-Changes from previous release:
-* Upgraded to version 1.0.2</description>
+Release Notes:
+* Upgraded to version 1.0.4
+</description>
   <contents>
     <choice title="libmemcached-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libmemcached"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">libmemcached-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">libmemcached-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

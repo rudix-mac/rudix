@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="AB82EB2E-08B8-11E1-8214-D49A200B3D20">
+<pkgref spec="1.12" uuid="22DB594C-6940-11E1-B3E1-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libmemcached</identifier>
-    <version>1.0.2-0</version>
+    <version>1.0.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01libmemcached-contents.xml</file-list>
