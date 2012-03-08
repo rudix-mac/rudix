@@ -6,7 +6,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		tmux
 Name=		tmux
-Version=	1.5
+Version=	1.6
 Revision=	0
 URL=		http://downloads.sourceforge.net/tmux/
 Source=		$(Name)-$(Version).tar.gz
@@ -16,7 +16,7 @@ LicenseFile=	LICENSE
 
 LdFlags += -lresolv
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 EnvExtra += LIBS="/usr/local/lib/libevent.a"
 endif
 
@@ -24,9 +24,9 @@ endif
 #$(call test_universal)
 #endef
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
-define test_post_hook
-otool -L $(InstallDir)/usr/local/bin/tmux | grep -v libevent
-nm $(InstallDir)/usr/local/bin/tmux | grep event
-endef
-endif
+#ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+#define test_post_hook
+#otool -L $(InstallDir)/usr/local/bin/tmux | grep -v libevent
+#nm $(InstallDir)/usr/local/bin/tmux | grep event
+#endef
+#endif

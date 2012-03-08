@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="03C5C9D6-B07C-11E0-B637-0017F22C0C04">
+<pkgref spec="1.12" uuid="5C1CA375-6944-11E1-A463-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.tmux</identifier>
-    <version>1.5-0</version>
+    <version>1.6-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01tmux-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
