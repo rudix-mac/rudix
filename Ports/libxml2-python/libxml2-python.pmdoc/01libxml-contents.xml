@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="libxml2-python-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/libxml2-python/libxml2-python-install" m="false" t="file">
-    <f n="Library" o="root" g="admin" p="17405">
-      <f n="Python" o="root" g="admin" p="16893">
-        <f n="2.6" o="root" g="admin" p="16893">
-          <f n="site-packages" o="root" g="admin" p="16893">
-            <f n="drv_libxml2.py" o="root" g="admin" p="33204">
+  <f n="libxml2-python-install" o="root" g="staff" p="16877" pt="libxml2-python-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="drv_libxml2.py" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="drv_libxml2.pyc" o="root" g="admin" p="33204">
+            <f n="drv_libxml2.pyc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxml2.py" o="root" g="admin" p="33204">
+            <f n="libxml2.py" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxml2.pyc" o="root" g="admin" p="33204">
+            <f n="libxml2.pyc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxml2_python-2.6.21-py2.6.egg-info" o="root" g="admin" p="33204">
+            <f n="libxml2_python-2.6.21-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxml2mod.so" o="root" g="admin" p="33277">
+            <f n="libxml2mod.so" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
-            <f n="libxslt.py" o="root" g="admin" p="33204">
+            <f n="libxslt.py" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxslt.pyc" o="root" g="admin" p="33204">
+            <f n="libxslt.pyc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <f n="libxsltmod.so" o="root" g="admin" p="33277">
+            <f n="libxsltmod.so" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
           </f>
@@ -37,32 +37,14 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="libxml2-python" o="root" g="wheel" p="16893">
-              <f n="libxml2-api.xml" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="libxml2-python-api.xml" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="libxml2class.txt" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="libxslt-api.xml" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="libxslt-python-api.xml" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="libxsltclass.txt" o="root" g="wheel" p="33204">
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>

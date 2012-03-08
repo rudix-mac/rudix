@@ -11,19 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Python bindings for the XML C parser and toolkit of Gnome
+  <description>Python bindings for libxml2.
 
+Site: http://xmlsoft.org/python.html
+License: MIT
 
+Release Notes:
+* Rebuild on Xcode 4.3
 </description>
   <contents>
-    <choice title="libxml2-python-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="libxml2-python-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libxml2-python"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">libxml2-python-2.6.21/PKG-INFO</resource>
-      <resource relative="true" mod="true" type="readme">libxml2-python-2.6.21/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">libxml2-python-build/PKG-INFO</resource>
+      <resource relative="true" mod="true" type="readme">libxml2-python-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
