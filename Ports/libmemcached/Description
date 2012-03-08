@@ -1,0 +1,7 @@
+libMemcached is designed to provide the greatest number of options to use Memcached.
+
+Site: http://libmemcached.org/
+License: BSD
+
+Release Notes:
+* Upgraded to version 1.0.4
