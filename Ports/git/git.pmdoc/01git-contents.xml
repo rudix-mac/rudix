@@ -33,10 +33,10 @@
     <f n="Library" o="root" g="wheel" p="16877">
       <f n="Perl" o="root" g="wheel" p="16877">
         <f n="Updates" o="root" g="wheel" p="16893">
-          <f n="5.12" o="root" g="wheel" p="16893">
-            <mod>mode</mod>
-          </f>
-          <f n="5.12.3" o="root" g="wheel" p="33204">
+          <f n="5.12.3" o="root" g="wheel" p="16893">
+            <f n="Git.pm" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <mod>mode</mod>
           </f>
           <mod>mode</mod>
@@ -89,7 +89,6 @@
                 <f n="repo.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="util.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
@@ -97,7 +96,6 @@
               <f n="util.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="git_remote_helpers-0.1.0-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
@@ -662,9 +660,7 @@
               <f n="xxdiff" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
@@ -679,7 +675,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="git-core" o="root" g="wheel" p="16893">
@@ -1441,7 +1436,6 @@
               <f n="gitweb.conf.5" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="man7" o="root" g="wheel" p="16893">
               <f n="gitcli.7" o="root" g="wheel" p="33204">
@@ -1477,7 +1471,6 @@
               <f n="gitworkflows.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>

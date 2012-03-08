@@ -1,4 +1,5 @@
 include ../../Library/Config.mk
+RUDIX_APPLY_RECOMMENDATIONS=no
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
@@ -30,7 +31,7 @@ install -d $(InstallDir)/Applications
 mv $(InstallDir)$(Prefix)/share/git-gui/lib/Git\ Gui.app \
 	$(InstallDir)/Applications
 # Fix Perl module position
-install -d $(InstallDir)/Library/Perl/Updates/5.12
+install -d $(InstallDir)/Library/Perl/Updates/5.12.3
 mv $(InstallDir)$(LibDir)/perl5/site_perl/*.pm \
 	$(InstallDir)/Library/Perl/Updates/5.12.3
 # Fix Python module position
