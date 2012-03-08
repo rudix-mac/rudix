@@ -6,7 +6,7 @@ include ../../Library/GNUFormula.mk
 
 Title=		memcached
 Name=		memcached
-Version=	1.4.9
+Version=	1.4.13
 Revision=	0
 URL=		http://memcached.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
