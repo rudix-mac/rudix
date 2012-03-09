@@ -1,0 +1,11 @@
+Rudix Package Manager - RPM ;)
+
+Site: http://rudix.org/
+License: BSD
+
+Usage:
+$ /usr/local/bin/rudix
+
+Changes from previous release:
+* Added support for repositories rudix (for Lion) and rudix-snowleopard.
+  The repositories are automatically selected.

@@ -1,10 +1,7 @@
 Cscope is a developer's tool for browsing source code.
 
-Site: http://cscope.sourceforge.net/
-License: BSD
+  * Site: http://cscope.sourceforge.net/
+  * License: BSD
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-/usr/local/bin/cscope
+Release Notes:
+  * Rebuild on Xcode 4.3

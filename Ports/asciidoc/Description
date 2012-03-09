@@ -1,10 +1,7 @@
 AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs.
 
-Site: http://www.methods.co.nz/asciidoc/
-License: GPL
+  * Site: http://www.methods.co.nz/asciidoc/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to version 8.6.6
-
-Usage:
-$ /usr/local/bin/asciidoc
+Release Notes:
+  * Upgraded to version 8.6.6

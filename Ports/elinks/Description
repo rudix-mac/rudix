@@ -1,0 +1,49 @@
+Full-featured text WWW browser.
+
+Site: http://elinks.cz/
+License: GPL
+
+
+Title=		ELinks $(version)
+Name=		elinks
+Version=	0.13
+Revision=	0
+URL=		http://elinks.or.cz/download/
+Source=		$(Name)-current-$(Version).tar.bz2
+
+ifdef WITHOUT_NLS
+NLS=		--disable-nls
+else
+NLS=		--enable-nls
+DEPENDS+=	$(LibDir)/libintl.la
+endif
+
+ifdef WITH_STATIC_NLS
+LDFLAGS+=	-framework CoreFoundation -liconv
+endif
+
+prep: retrieve
+	tar jxf $(Source)
+	#cd $(SourceDir) ; patch < $(PortDir)/Makefile.lib.patch
+	mv elinks-0.13-20101124 $(SourceDir)
+	touch prep
+
+build: prep $(DEPENDS)
+	cd $(SourceDir) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	$(configure) $(NLS) ; $(make)
+	touch build
+
+install: build
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
+	rm -f $(InstallDir)$(LibDir)/charset.alias
+	rm -f $(InstallDir)$(Prefix)/share/locale/locale.alias
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{AUTHORS,BUGS,COPYING,ChangeLog,NEWS,ReadMeFile,THANKS,TODO} $(InstallDir)/$(DocDir)/$(Name)
+	strip $(InstallDir)$(BinDir)/*
+	touch install
+
+test: install
+	for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
+		lipo $$x -verify_arch i386 x86_64 ; done
+	cd $(SourceDir) ; make test
+	touch test

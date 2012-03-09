@@ -1,7 +1,7 @@
 Powerful but simple template language for C++.
 
-Site: http://code.google.com/p/google-ctemplate/
-License: BSD
+  * Site: http://code.google.com/p/google-ctemplate/
+  * License: BSD
 
-Changes from previous release:
-* Upgraded to version 2.0
+Release Notes:
+  * Upgraded to version 2.0

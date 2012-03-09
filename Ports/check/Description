@@ -1,7 +1,7 @@
 Check: A unit testing framework for C.
 
-Site: http://check.sourceforge.net/
-License: LGPL
+  * Site: http://check.sourceforge.net/
+  * License: LGPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
+Release Notes:
+  * Rebuild on Xcode 4.3

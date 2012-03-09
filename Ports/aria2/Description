@@ -1,10 +1,7 @@
 aria2 is a lightweight multi-protocol & multi-source download utility operated in command-line.
 
-Site: http://aria2.sourceforge.net/
-License: GPL
+  * Site: http://aria2.sourceforge.net/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to version 1.14.1
-
-Usage:
-$ aria2c http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
+Release Notes:
+  * Upgraded to version 1.14.1

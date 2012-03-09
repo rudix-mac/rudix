@@ -1,10 +1,7 @@
-cadaver is a command-line WebDAV client for Unix.
+Cadaver is a command-line WebDAV client for Unix.
 
-Site: http://www.webdav.org/cadaver/
-License: GPL
+  * Site: http://www.webdav.org/cadaver/
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-$ /usr/local/bin/cadaver
+Release Notes:
+  * Rebuild on Xcode 4.3

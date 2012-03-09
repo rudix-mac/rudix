@@ -1,10 +1,7 @@
-Bash is the shell, or command language interpreter, that will appear in the GNU operating system. 
+Bash is the shell, or command language interpreter, that will appear in the GNU operating system.
 
-Site: http://www.gnu.org/software/bash/
-License: GPL
+  * Site: http://www.gnu.org/software/bash/
+  * License: GPL
 
-Changes from previous release:
-* Applied patches bash42-001 to bash42-020
-
-Usage:
-$ /usr/local/bin/bash4
+Release Notes:
+  * Applied patches bash42-001 to bash42-020

@@ -1,0 +1,10 @@
+ntop is a network traffic probe that shows the network usage, similar to what the popular top Unix command does.
+
+Site: http://www.ntop.org/products/ntop/
+License: GPL
+
+Changes from previous release:
+* Adopted
+
+Usage:
+$ /usr/local/bin/ntop

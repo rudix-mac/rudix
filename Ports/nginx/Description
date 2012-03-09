@@ -1,0 +1,10 @@
+nginx [engine x] is a HTTP and reverse proxy server, as well as a mail proxy server.
+
+Changes from previous release:
+* Upgraded to version 1.0.6
+
+Site: http://nginx.org/
+License: BSD
+
+Usage:
+$ /usr/local/sbin/nginx

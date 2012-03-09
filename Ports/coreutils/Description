@@ -1,11 +1,7 @@
 GNU Core Utilities.
 
-Site: http://www.gnu.org/software/coreutils/
-License: GPL
+  * Site: http://www.gnu.org/software/coreutils/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to verision 8.15
-
-Usage:
-$ /usr/local/bin/date
-
+Release Notes:
+  * Upgraded to verision 8.15

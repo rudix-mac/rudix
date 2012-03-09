@@ -1,10 +1,7 @@
 Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages.
 
-Site: http://www.gnu.org/software/autoconf/
-License: GPL
+  * Site: http://www.gnu.org/software/autoconf/
+  * License: GPL
 
-Changes from previous release:
-* Build on Xcode 4.3
-
-Usage:
-$ /usr/local/bin/autoconf
+Release Notes:
+  * Build on Xcode 4.3

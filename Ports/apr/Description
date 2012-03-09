@@ -1,10 +1,7 @@
 Apache Portable Runtime library.
 
-Site: http://apr.apache.org/
-License: Apache License
+  * Site: http://apr.apache.org/
+  * License: Apache License
 
-Changes from previous release:
-* Upgraded to version 1.4.6
-
-Usage:
-$ /usr/local/bin/apr-1-config
+Release Notes:
+  * Upgraded to version 1.4.6
