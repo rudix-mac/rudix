@@ -119,9 +119,9 @@ pmdoc:
 	$(sanitize_pmdoc)
 
 wiki:
-	env Name="$(Name)" PkgFile="$(PkgFile)" \
-		Description="$(shell head -1 Description)" \
+	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkwikipage.py
+	@cp -vf *.wiki ../../Wiki/
 
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
@@ -215,6 +215,10 @@ for x in $(Name).pmdoc/*.xml ; do \
 	xmllint --format --output $$x $$x ; done
 endef
 
+define check_pmdoc
+grep root $(Name).pmdoc/*-contents.xml >/dev/null
+endef
+
 define configure
 ./configure $(ConfigureExtra) \
 	--prefix=$(Prefix)
@@ -284,5 +288,6 @@ $(strip_macho)
 $(create_pmdoc)
 $(apply_recommendations)
 $(sanitize_pmdoc)
+$(check_pmdoc)
 $(create_pkg)
 endef

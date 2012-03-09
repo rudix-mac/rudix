@@ -3,16 +3,29 @@
 import os
 import string
 
-template = '''#summary {Description}
+template = '''#summary {Title}
 #sidebar TableOfContents
 
 <g:plusone size="small"></g:plusone>
 
-= Pool =
-  * [http://code.google.com/p/rudix/downloads/detail?name={PkgFile} {PkgFile}]
+= {Name} =
 
-= Port source =
+{Description}
+
+= Download  =
+
+Latest version:
+  * [http://code.google.com/p/rudix/downloads/detail?name={PkgFile} {PkgFile}] Lion
+  * [http://code.google.com/p/rudix-snowleopard/downloads/detail?name={PkgFile} {PkgFile}] Snow Leopard
+
+All versions: [http://code.google.com/p/rudix/downloads/list?q={Name} Lion] [http://code.google.com/p/rudix-snowleopard/downloads/list?q={Name} Snow Leopard]
+
+= Source =
   * [http://code.google.com/p/rudix/source/browse/Ports/{Name} Ports/{Name}]
+
+= Bugs =
+  * [http://code.google.com/p/rudix/issues/list?q={Name} Know issues]
+
 '''
 
 class Global_Env_Dict(object):
@@ -21,6 +34,10 @@ class Global_Env_Dict(object):
             return globals()[key]
         else:
             return os.getenv(key)
+
+f = open('Description')
+Description = f.read()
+f.close()
 
 env = Global_Env_Dict()
 fmt = string.Formatter()
