@@ -1,9 +1,6 @@
-BuildRequires += $(BinDir)/pkg-config
 BuildRequires += $(LibDir)/libintl.la
 
 include ../../Library/Config.mk
-RUDIX_UNIVERSAL=no
-
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 

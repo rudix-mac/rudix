@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="glib-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/glib/glib-install" m="false" t="file">
+  <f n="glib-install" o="root" g="staff" p="16877" pt="glib-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16877">
         <f n="bin" o="root" g="wheel" p="16893">
