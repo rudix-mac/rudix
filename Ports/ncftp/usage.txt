@@ -1,1 +1,0 @@
-$ ncftp ftp.gnu.org

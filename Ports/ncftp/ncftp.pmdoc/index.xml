@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Ftp replacement with advanced user interface</description>
+  <description>NcFTP is a set of FREE application programs implementing the File Transfer Protocol (FTP).
+
+Site: http://www.ncftp.com/
+License: The Clarified Artistic License
+
+Release Notes:
+* Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="ncftp-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.ncftp"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">ncftp-build/doc/LICENSE.txt</resource>
       <resource relative="true" mod="true" type="readme">ncftp-build/README.txt</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
