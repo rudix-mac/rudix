@@ -1,0 +1,7 @@
+A comprehensive HTTP client library that supports many features left out of other HTTP libraries.
+
+  * Site: http://code.google.com/p/httplib2/
+  * License: MIT
+
+Release Notes:
+  * Featuring in Rudix

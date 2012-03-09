@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="httplib2-install" o="root" g="staff" p="16877" pt="httplib2-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="httplib2" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="cacerts.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="iri2uri.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="iri2uri.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="socks.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="socks.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="httplib2-0.7.4-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="httplib2" o="root" g="wheel" p="16893">
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
