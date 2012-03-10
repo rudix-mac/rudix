@@ -1,10 +1,7 @@
 pkg-config is a helper tool used when compiling applications and libraries.
 
-Site: http://www.freedesktop.org/wiki/Software/pkg-config
-License: GPL
+  * Site: http://www.freedesktop.org/wiki/Software/pkg-config
+  * License: GPL
 
-Usage:
-$ pkg-config
-
-Changes from previous release:
-* Upgraded to version 0.26
+Release Notes:
+  * Rebuld on Xcode 4.3
