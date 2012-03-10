@@ -1,0 +1,11 @@
+--- config.h.in.orig	2012-03-09 21:23:46.000000000 -0300
++++ config.h.in	2012-03-09 21:23:53.000000000 -0300
+@@ -1,7 +1,7 @@
+ /* config.h.in.  Generated from configure.ac by autoheader.  */
+ 
+ /* Define if building universal (internal helper macro) */
+-#undef AC_APPLE_UNIVERSAL_BUILD
++#define AC_APPLE_UNIVERSAL_BUILD
+ 
+ /* define if asm blocks can use numeric local labels */
+ #undef ASM_NUMERIC_LABELS
