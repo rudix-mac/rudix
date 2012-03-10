@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		libintl
 Name=		libintl
 Version=	0.18.1.1
-Revision=	4
+Revision=	5
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
 
@@ -32,3 +32,7 @@ rm -rf $(InstallDir)/$(DataDir)/locale
 rm -rf $(InstallDir)/$(DataDir)/gettext
 rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif

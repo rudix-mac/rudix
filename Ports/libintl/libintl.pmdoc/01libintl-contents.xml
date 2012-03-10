@@ -2,11 +2,12 @@
 <pkg-contents spec="1.12">
   <f n="libintl-install" o="root" g="staff" p="16877" pt="libintl-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="libintl.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="libintl.8.dylib" o="root" g="wheel" p="33204">
@@ -18,6 +19,7 @@
           <f n="libintl.la" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -43,9 +45,13 @@
               <f n="README.woe32" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
+        <mod>mode</mod>
       </f>
     </f>
   </f>

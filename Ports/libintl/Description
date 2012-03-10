@@ -1,7 +1,7 @@
-libintl (part of GNU gettext).
+libintl (GNU gettext runtime).
 
-Site: http://www.gnu.org/software/gettext/
-License: GPL
+  * Site: http://www.gnu.org/software/gettext/
+  * License: GPL
 
-Changes from previous release:
-* Rebuilt on Xcode 4.2.
+Release Notes:
+  * Rebuilt on Xcode 4.3
