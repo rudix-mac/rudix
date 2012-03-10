@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="BB0208E1-6AD7-11E1-A286-D49A200B3D20">
+<pkgref spec="1.12" uuid="D64BEC26-6AD7-11E1-8A6D-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.rudix</identifier>
     <version>12.3-0</version>
