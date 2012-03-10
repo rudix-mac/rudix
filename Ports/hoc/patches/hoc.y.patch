@@ -1,5 +1,5 @@
---- hoc.y.orig	2008-12-13 14:16:48.000000000 -0200
-+++ hoc.y	2008-12-13 14:17:17.000000000 -0200
+--- hoc.y.orig	2012-03-09 23:54:11.000000000 -0300
++++ hoc.y	2012-03-09 23:54:43.000000000 -0300
 @@ -3,6 +3,7 @@
  #include "hoc.h"
  #define	code2(c1,c2)	code(c1); code(c2)
@@ -8,6 +8,15 @@
  %}
  %union {
  	Symbol	*sym;	/* symbol table pointer */
+@@ -265,7 +266,7 @@
+ 	return ifno;
+ }
+ 
+-void
++int
+ yyerror(char* s)	/* report compile-time error */
+ {
+ /*rob
 @@ -309,10 +310,6 @@
  main(int argc, char* argv[])	/* hoc6 */
  {

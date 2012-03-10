@@ -1,35 +1,22 @@
-# From Kernighan and Pike: High Order Calculator
-# http://cm.bell-labs.com/cm/cs/upe/index.html
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/UnixFormula.mk
 
-include ../../Library/Rules.mk
-
-NAME=		hoc
-VERSION=	1.1
-REVISION=	6
+Title=		HOC
+Name=		hoc
+Version=	1.1
+Revision=	7
 URL=		http://netlib.bell-labs.com/~bwk/
-SOURCE=		$(NAME).sh
+Source=		$(Name).sh
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/README
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/README
 
-prep: retrieve
-	mkdir $(BUILDDIR)
-	cd $(BUILDDIR) ; sh $(PORTDIR)/hoc.sh ; \
-	patch < $(PORTDIR)/hoc-1.1-makefile.patch ; \
-	patch < $(PORTDIR)/hoc.y.patch
-	touch prep
+define explode
+mkdir -p $(Name)-$(Version) ; cd $(Name)-$(Version) ; sh ../$(Source)
+endef
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; make CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/README $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	lipo $(INSTALLDIR)/usr/local/bin/hoc -verify_arch i386 x86_64
-	touch test
+# Can't compile in parallel
+define make
+make
+endef
