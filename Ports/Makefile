@@ -5,7 +5,7 @@ Rules += installclean clean distclean realdistclean pkgclean
 
 Ports := $(wildcard [a-z]*)
 
-all: clean
+all: about
 
 $(Rules):
 	@for port in $(Ports) ; do \
