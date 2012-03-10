@@ -1,0 +1,58 @@
+--- configure.orig	2012-02-19 10:54:57.000000000 -0200
++++ configure	2012-03-10 17:04:25.000000000 -0300
+@@ -13062,13 +13062,13 @@
+ fi
+ 
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for initscr in -lncursesw" >&5
+-$as_echo_n "checking for initscr in -lncursesw... " >&6; }
+-if ${ac_cv_lib_ncursesw_initscr+:} false; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for initscr in -lncurses" >&5
++$as_echo_n "checking for initscr in -lncurses... " >&6; }
++if ${ac_cv_lib_ncurses_initscr+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncursesw  $LIBS"
++LIBS="-lncurses  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -13088,20 +13088,20 @@
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_ncursesw_initscr=yes
++  ac_cv_lib_ncurses_initscr=yes
+ else
+-  ac_cv_lib_ncursesw_initscr=no
++  ac_cv_lib_ncurses_initscr=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ncursesw_initscr" >&5
+-$as_echo "$ac_cv_lib_ncursesw_initscr" >&6; }
+-if test "x$ac_cv_lib_ncursesw_initscr" = xyes; then :
+-  LIBS="$LIBS -lncursesw"
+-	if test x$vifm_cv_curses = x/usr -a -d /usr/include/ncursesw; then
+-		CPPFLAGS="$CPPFLAGS -I/usr/include/ncursesw"
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ncurses_initscr" >&5
++$as_echo "$ac_cv_lib_ncurses_initscr" >&6; }
++if test "x$ac_cv_lib_ncurses_initscr" = xyes; then :
++  LIBS="$LIBS -lncurses"
++	if test x$vifm_cv_curses = x/usr -a -d /usr/include/ncurses; then
++		CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"
+ 	fi
+ 	for ac_header in ncurses.h
+ do :
+@@ -13116,7 +13116,7 @@
+ done
+ 
+ else
+-  as_fn_error $? "libncursesw not found" "$LINENO" 5
++  as_fn_error $? "libncurses not found" "$LINENO" 5
+ fi
+ 
+ 	#[ac_widec_possible=no
