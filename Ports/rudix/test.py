@@ -39,26 +39,29 @@ class RudixExternalTest(unittest.TestCase):
     def test_process(self):
         self.assertEqual( process(['-h']), 0 )
         self.assertEqual( process(['-v']), 0 )
-        self.assertEqual( process(['-a']), 2 ) # option -a not used
+        self.assertEqual( process(['-b']), 2 ) # b not in use yet
         self.assertEqual( process(['help']), 0 )
         self.assertEqual( process(['version']), 0 )
-        self.assertEqual( process(['foo']), 2 ) # command  foo doesn't exists
+        self.assertEqual( process(['boo']), 2 ) # command doesn't exists
 
-    def test_is_package_installed(self):
-        self.assertEqual( is_package_installed('rudix'), True )
-        self.assertEqual( is_package_installed('rrrrr'), False )
+    def test_available_packages(self):
+        pkgs = get_available_packages(limit=10)
+        self.assertEqual( len(pkgs), 10 )
 
-    def test_get_packages(self):
-        self.assertEqual( 'org.rudix.pkg.rudix' in get_packages(), True )
-        self.assertEqual( 'org.rudix.pkg.rrrrr' in get_packages(), False )
+#     def test_is_package_installed(self):
+#         self.assertEqual( is_package_installed('rudix'), True )
+#         self.assertEqual( is_package_installed('rrrrr'), False )
 
-    def test_get_package_info(self):
-        self.assertEqual( len(get_package_info('rudix')), 2 )
+#     def test_get_packages(self):
+#         self.assertEqual( 'org.rudix.pkg.rudix' in get_packages(), True )
+#         self.assertEqual( 'org.rudix.pkg.rrrrr' in get_packages(), False )
 
-    def test_get_package_content(self):
-        self.assertEqual(
-            '/usr/local/bin/rudix' in get_package_content('rudix'), True )
+#     def test_get_package_info(self):
+#         self.assertEqual( len(get_package_info('rudix')), 2 )
 
+#     def test_get_package_content(self):
+#         self.assertEqual(
+#             '/usr/local/bin/rudix' in get_package_content('rudix'), True )
 
 if __name__ == '__main__':
     unittest.main()

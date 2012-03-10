@@ -13,15 +13,11 @@
   </distribution>
   <description>Rudix Package Manager - RPM ;)
 
-Site: http://rudix.org/
-License: BSD
+  * Site: http://rudix.org/
+  * License: BSD
 
-Usage:
-$ /usr/local/bin/rudix
-
-Changes from previous release:
-* Added support for repositories rudix (for Lion) and rudix-snowleopard.
-  The repositories are automatically selected.
+Release Notes:
+  * Included option `-a` to list packages available for installation.
 </description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
@@ -31,8 +27,8 @@ Changes from previous release:
   <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
       <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
-      <resource relative="true" mod="true" type="license">License.md</resource>
-      <resource relative="true" mod="true" type="readme">ReadMe.md</resource>
+      <resource relative="true" mod="true" type="license">LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">README</resource>
       <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>

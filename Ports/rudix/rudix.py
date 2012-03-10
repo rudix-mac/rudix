@@ -3,15 +3,16 @@
 '''Rudix Package Manager -- RPM ;D
 
 Usage:
-rudix [help|version|list|remove-all|verify-all|update|interactive]
+rudix [help|version|available|list|remove-all|verify-all|update|interactive]
       [info <package-id>|files <package-id>|install <package-id>|remove <package-id>|search <package-id>|owner <path>|verify <package-id>|fix <package-id>]
 
-rudix [-h|-v|-l|-R|-K|-u|-z]
+rudix [-h|-v|-a|-l|-R|-K|-u|-z]
       [-I <package-id>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
 
 List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
+  -a    List all packages available for installation (name-version-release)
   -l    List all installed packages (package-id, version and install date)
   -I    Print package information (package-id, version and install date)
   -L    List package content
@@ -58,6 +59,7 @@ RUDIX = RUDIX_NAMES.get(tuple(OSX_VERSION), 'rudix')
 NAME_OPTS = {
     'help': '-h',
     'version': '-v',
+    'available': '-a',
     'list': '-l', 'ls': '-l', 'dir': '-l',
     'info': '-I', 'about': '-I',
     'install': '-i',
@@ -256,6 +258,21 @@ def version_compare(v1, v2):
     else:
         return v_cmp
 
+def get_available_packages(limit=1000):
+    '''Get available packages.
+    Get a list (ordered by release time / lastest first) of all packages available for installation.
+    '''
+    content = urlopen('http://code.google.com/p/%s/downloads/list?num=%d' % (RUDIX, limit)).read()
+    packages = re.findall('%s.googlecode.com/files/(.*)(\.dmg|\.pkg)"' % RUDIX, content)
+    return packages
+
+def print_available_packages():
+    'Print all packages available for installation'
+    versions = get_available_packages()
+    for version in versions:
+        name = version[0]
+        print name
+
 def get_versions_for_package(pkg):
     'Get a list of available versions for package'
     pkg = denormalize(pkg)
@@ -386,7 +403,7 @@ def repl():
 def process(args):
     'Process arguments and execute some action'
     try:
-        opts, args = getopt.getopt(args, "hI:lL:i:r:Rs:S:vV:Kf:n:uz")
+        opts, args = getopt.getopt(args, "ahI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h or help'
@@ -399,6 +416,8 @@ def process(args):
         if option == '-v':
             rudix_version()
             return 0
+        if option == '-a':
+            print_available_packages()
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':

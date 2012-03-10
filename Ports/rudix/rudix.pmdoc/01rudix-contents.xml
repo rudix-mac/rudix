@@ -7,36 +7,29 @@
           <f n="rudix" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="rudix" o="root" g="wheel" p="16893">
-              <f n="License.md" o="root" g="wheel" p="33204">
+              <f n="LICENSE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ReadMe.md" o="root" g="wheel" p="33204">
+              <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="rudix.pdf" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
               <f n="rudix.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
-        <mod>mode</mod>
       </f>
     </f>
   </f>

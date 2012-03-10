@@ -3,11 +3,11 @@ include ../../Library/Rudix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.2
+Version=	12.3
 Revision=	0
 
-ReadMeFile=	ReadMe.md
-LicenseFile=	License.md
+ReadMeFile=	README
+LicenseFile=	LICENSE
 
 define retrieve_inner_hook
 touch retrieve
@@ -40,3 +40,7 @@ define test_inner_hook
 python test.py
 touch test
 endef
+
+realdistclean: distclean
+	rm -f *.ps *.pdf *.pyc
+
