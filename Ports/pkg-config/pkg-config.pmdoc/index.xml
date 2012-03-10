@@ -17,7 +17,7 @@
   * License: GPL
 
 Release Notes:
-  * Rebuld on Xcode 4.3
+  * Upgraded to version 0.26
 </description>
   <contents>
     <choice title="pkg-config-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

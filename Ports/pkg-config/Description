@@ -4,4 +4,4 @@ pkg-config is a helper tool used when compiling applications and libraries.
   * License: GPL
 
 Release Notes:
-  * Rebuld on Xcode 4.3
+  * Upgraded to version 0.26
