@@ -258,12 +258,21 @@ def version_compare(v1, v2):
     else:
         return v_cmp
 
+
+def _retrieve(url):
+    'Retrieve content from URL'
+    data = urlopen(url)
+    content = data.read()
+    data.close()
+    return content
+
 def get_available_packages(rudix_version=VERSION, limit=1000):
     '''Get available packages.
     Return a list (ordered by release time, lastest first) of all packages available for installation.
     Filters: rudix_version and limit.
     '''
-    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Rudix:%d&num=%d&can=2' % (RUDIX, rudix_version, limit)).read()
+    url = 'http://code.google.com/p/%s/downloads/list?q=Rudix:%d&num=%d&can=2' % (RUDIX, rudix_version, limit)
+    content = _retrieve(url)
     packages = re.findall('%s.googlecode.com/files/(.*)(\.dmg|\.pkg)"' % RUDIX, content)
     return packages
 
@@ -277,7 +286,8 @@ def print_available_packages():
 def get_versions_for_package(pkg, rudix_version=VERSION, limit=10):
     'Get a list of available versions for package'
     pkg = denormalize(pkg)
-    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Filename:%s+Rudix:%d&num=%d&can=2' % (RUDIX, pkg, rudix_version, limit)).read()
+    url = 'http://code.google.com/p/%s/downloads/list?q=Filename:%s+Rudix:%d&num=%d&can=2' % (RUDIX, pkg, rudix_version, limit)
+    content = _retrieve(url)
     urls = re.findall('(%s.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % (RUDIX, pkg), content)
     versions = sorted(list(set(urls)),
                       cmp=lambda x, y: version_compare(x[2], y[2]))
