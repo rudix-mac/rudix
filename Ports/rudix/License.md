@@ -1,3 +1,7 @@
+Rudix is licensed under 3-clause BSD license (see the copyright note below).
+Note that each package distributed is covered under an appropriate license and
+ownership. Rudix do not claims copyright in any packages distributed.
+
 Copyright (c) 2005-2012 Ruda Moura
 All rights reserved.
 
