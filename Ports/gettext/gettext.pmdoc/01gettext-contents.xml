@@ -70,6 +70,7 @@
           <f n="xgettext" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="autosprintf.h" o="root" g="wheel" p="33204">
@@ -529,6 +530,7 @@
               </f>
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="emacs" o="root" g="wheel" p="16893">
             <f n="site-lisp" o="root" g="wheel" p="16893">
@@ -1417,6 +1419,7 @@
               <f n="xgettext.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="man3" o="root" g="wheel" p="16893">
               <f n="bind_textdomain_codeset.3" o="root" g="wheel" p="33204">
@@ -1448,8 +1451,11 @@
               </f>
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
+        <mod>mode</mod>
       </f>
     </f>
   </f>
