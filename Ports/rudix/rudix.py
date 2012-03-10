@@ -368,7 +368,14 @@ def repl():
     rudix_version()
     while True:
         print ']',
-        line = raw_input().strip()
+        try:
+            line = raw_input().strip()
+        except KeyboardInterrupt:
+            print
+            return 0
+        except EOFError:
+            print
+            return 0
         if not line:
             continue
         if line in ['quit', 'exit', 'end', 'bye', 'halt']:
