@@ -37,7 +37,7 @@ Index = '''<?xml version="1.0"?>
     </locale>
   </resources>
   <flags/>
-  <item type="file">01{name}.xml</item>
+  <item type="file">01{altname}.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
@@ -64,7 +64,7 @@ PkgRef = '''<?xml version="1.0"?>
     <mod>version</mod>
   </config>
   <contents>
-    <file-list>01{name}-contents.xml</file-list>
+    <file-list>01{altname}-contents.xml</file-list>
     {components}
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
@@ -81,16 +81,16 @@ def make_empty_pmdoc(pathname):
     if os.path.isdir(pathname) is False:
         os.mkdir(pathname)
 
-def output_index(name, title, description, readme, license, vendor=VENDOR):
+def output_index(name, altname, title, description, readme, license, vendor=VENDOR):
     if os.path.isfile(description):
         with open(description) as f:
             description = f.read()
     title = escape(title)
     description = escape(description)
-    return Index.format(name=name, title=title, description=description, vendor=vendor, readme=readme, license=license)
+    return Index.format(name=name, altname=altname, title=title, description=description, vendor=vendor, readme=readme, license=license)
 
-def output_pkgref(name, version, components, uuid=UUID, vendor=VENDOR):
-    return PkgRef.format(name=name, version=version, uuid=uuid, vendor=vendor, components=components)
+def output_pkgref(name, altname, version, components, uuid=UUID, vendor=VENDOR):
+    return PkgRef.format(name=name, altname=altname, version=version, uuid=uuid, vendor=vendor, components=components)
 
 def main(argv=None):
     if not argv:
@@ -125,14 +125,18 @@ def main(argv=None):
         path = '.'
     pmdoc = path + '/' + name + '.pmdoc'
     index_xml = pmdoc + '/index.xml'
-    pkgref_xml = pmdoc + '/01%s.xml' % name
+    if '-' in name:
+        altname = name[0:name.index('-')]
+    else:
+        altname = name
+    pkgref_xml = pmdoc + '/01%s.xml' % altname
     make_empty_pmdoc(pmdoc)
     if index:
         with open(index_xml, 'w') as idx:
-            idx.write(output_index(name=name, title=title, description=description, readme=readme, license=license))
+            idx.write(output_index(name=name, altname=altname, title=title, description=description, readme=readme, license=license))
     if pkgref:
         with open(pkgref_xml, 'w') as ref:
-            ref.write(output_pkgref(name=name, version=version, components=components))
+            ref.write(output_pkgref(name=name, altname=altname, version=version, components=components))
     return 0
 
 if __name__ == '__main__':
