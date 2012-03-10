@@ -22,26 +22,22 @@ include ../../Library/Rudix.mk
 ###
 # Metadata section
 #
-Site=		http://www.packagewebsite.org/
-License=	bsd
-# or GPL, LGPL, etc
-Description=	The description of the packe, is going to be shown online
-Title=		Complete Package Title
+Title=		Title Here
 Name=		simplename
 Version=	0.6.5
-Revision=	0
 # packages should start at revision 0
+Revision=	0
 URL=		http://url.to.download.package/
+# url is going to be concatenated to source to download the source
 Source=		$(Name)-$(Version).tar.gz
 # or tar.bz2 or zip
-# url is going to be concatenated to source to download the source
 
-ReadMeFile=	$(BuildDir)/README.txt
-LicenseFile=	$(BuildDir)/LICENSE.txt
+ReadMeFile=	$(SourceDir)/README.txt
+LicenseFile=	$(SourceDir)/LICENSE.txt
 # rudix build needs this files, if the package don't have them you can create
 # those files on the port dir
 
 # if the directory created by uncompressing the tarball isn't
-# named $(NAME)-$(VERSION) put the correct one in here
-#UncompressedName= $(NAME)-$(VERSION)
+# named $(Name)-$(Version) put the correct one in here
+#UncompressedName = $(Name)-$(Version)-source
 ###
