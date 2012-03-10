@@ -6,7 +6,7 @@ endef
 
 all: setup tests teardown
 
-tests: program install remove
+tests: program install available search update remove
 
 setup:
 	@$(call info_color,Starting tests)
@@ -21,6 +21,21 @@ program:
 install:
 	@$(call info_color,Testing rudix install...)
 	sudo /usr/local/bin/rudix install wget
+	@$(call info_color,Done)
+
+available:
+	@$(call info_color,Testing rudix available...)
+	/usr/local/bin/rudix available | wc -l
+	@$(call info_color,Done)
+
+search:
+	@$(call info_color,Testing rudix search...)
+	/usr/local/bin/rudix search rudix
+	@$(call info_color,Done)
+
+update:
+	@$(call info_color,Testing rudix update...)
+	/usr/local/bin/rudix update
 	@$(call info_color,Done)
 
 remove:
