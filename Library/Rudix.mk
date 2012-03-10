@@ -143,7 +143,10 @@ help:
 	@echo "  distclean - After clean, remove config.cache and package"
 	@echo "  realdistclean - After distclean, remove source"
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload help
+about:
+	@echo "$(Name): $(Title) $(Version)-$(Revision)"
+
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload help about
 
 #
 # Functions
