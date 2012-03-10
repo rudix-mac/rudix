@@ -1,8 +1,8 @@
 GNU Readline library.
 
-Site: http://tiswww.case.edu/php/chet/readline/rltop.html
-License: GPL
+  * Site: http://tiswww.case.edu/php/chet/readline/rltop.html
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-* Applied patch readline62-002 from http://ftp.gnu.org/gnu/readline/readline-6.2-patches/
+Release Notes:
+  * Rebuild on Xcode 4.3
+  * Applied patch readline62-002 from http://ftp.gnu.org/gnu/readline/readline-6.2-patches/
