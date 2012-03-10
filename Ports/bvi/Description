@@ -1,0 +1,8 @@
+The bvi is a display-oriented editor for binary files, based on the vi texteditor.
+
+  * Site: http://bvi.sourceforge.net/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+
