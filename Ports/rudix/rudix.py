@@ -49,12 +49,12 @@ __version__ = '@VERSION@'
 PROGRAM_NAME = os.path.basename(sys.argv[0])
 PREFIX = 'org.rudix.pkg.'
 OSX_VERSION = [int(x) for x in mac_ver()[0].split('.')[0:2]] # (MAJOR, MINOR)
-
 RUDIX_NAMES = {
     (10, 6): 'rudix-snowleopard',
     (10, 7): 'rudix',
 }
 RUDIX = RUDIX_NAMES.get(tuple(OSX_VERSION), 'rudix')
+VERSION = 2012
 
 NAME_OPTS = {
     'help': '-h',
@@ -258,11 +258,12 @@ def version_compare(v1, v2):
     else:
         return v_cmp
 
-def get_available_packages(limit=1000):
+def get_available_packages(rudix_version=VERSION, limit=1000):
     '''Get available packages.
-    Get a list (ordered by release time / lastest first) of all packages available for installation.
+    Return a list (ordered by release time, lastest first) of all packages available for installation.
+    Filters: rudix_version and limit.
     '''
-    content = urlopen('http://code.google.com/p/%s/downloads/list?num=%d' % (RUDIX, limit)).read()
+    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Rudix:%d&num=%d&can=2' % (RUDIX, rudix_version, limit)).read()
     packages = re.findall('%s.googlecode.com/files/(.*)(\.dmg|\.pkg)"' % RUDIX, content)
     return packages
 
@@ -273,10 +274,10 @@ def print_available_packages():
         name = version[0]
         print name
 
-def get_versions_for_package(pkg):
+def get_versions_for_package(pkg, rudix_version=VERSION, limit=10):
     'Get a list of available versions for package'
     pkg = denormalize(pkg)
-    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Filename:%s' % (RUDIX, pkg)).read()
+    content = urlopen('http://code.google.com/p/%s/downloads/list?q=Filename:%s+Rudix:%d&num=%d&can=2' % (RUDIX, pkg, rudix_version, limit)).read()
     urls = re.findall('(%s.googlecode.com/files/(%s-([\w.]+(?:-\d+)?(?:.i386)?)(\.dmg|\.pkg)))' % (RUDIX, pkg), content)
     versions = sorted(list(set(urls)),
                       cmp=lambda x, y: version_compare(x[2], y[2]))
