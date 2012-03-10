@@ -17,7 +17,8 @@
   * License: BSD
 
 Release Notes:
-  * Included option `-a` to list packages available for installation.
+  * Included option `-a` to list packages available for installation (Fixed issue 107)
+  * Improved response time in network operations like install and search.
 </description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
