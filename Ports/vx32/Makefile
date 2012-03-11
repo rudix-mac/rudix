@@ -16,9 +16,9 @@ ReadMeFile=	$(SourceDir)/ADVENTURE
 LicenseFile=	$(PortDir)/LICENSE
 
 BuildDir = $(Name)-build/src
-GnuMakeExtra = libvx32/libvx32.a 9vx/9vx vxrun/vxrun
 
-GnuMakeInstallExtra = prefix=$(InstallDir)$(Prefix)
+MakeExtra = libvx32/libvx32.a 9vx/9vx vxrun/vxrun
+MakeInstallExtra = prefix=$(InstallDir)$(Prefix)
 
 define install_post_hook
 install -d $(InstallDir)/$(LibDir)
