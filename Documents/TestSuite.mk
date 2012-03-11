@@ -13,13 +13,14 @@ setup:
 	sudo rudix remove NAME
 	sudo rudix install NAME-*.pkg
 
+teardown:
+	sudo rudix remove rudix
+	@$(call info_color,Finished)
+
 program:
 	@$(call info_color,Testing NAME program...)
 	/usr/local/bin/NAME
 	@$(call info_color,Done)
 
-teardown:
-	sudo rudix remove rudix
-	@$(call info_color,Finished)
 
 .PHONY: setup teardown program
