@@ -1,7 +1,7 @@
-PyCrypto - The Python Cryptography Toolkit
+PyCrypto - The Python Cryptography Toolkit.
 
-Site: https://www.dlitz.net/software/pycrypto/
-License: Public Domain
+  * Site: https://www.dlitz.net/software/pycrypto/
+  * License: Public Domain
 
-Changes from previous release:
-* Upgraded to version 2.5
+Release Notes:
+  * Upgraded to version 2.5
