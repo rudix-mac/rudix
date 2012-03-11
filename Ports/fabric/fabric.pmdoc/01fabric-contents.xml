@@ -30,7 +30,6 @@
               <f n="utils.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="fabric" o="root" g="wheel" p="16893">
               <f n="__init__.py" o="root" g="wheel" p="33277">
@@ -94,7 +93,6 @@
                 <f n="project.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="decorators.py" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
@@ -180,7 +178,6 @@
               <f n="version.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="Fabric-1.4.0-py2.7.egg-info" o="root" g="wheel" p="16893">
               <f n="dependency_links.txt" o="root" g="wheel" p="33204">
@@ -201,7 +198,6 @@
               <f n="top_level.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
