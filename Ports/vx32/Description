@@ -1,0 +1,7 @@
+Vx32: portable, efficient, safe execution of untrusted x86 code.
+
+  * Site: http://pdos.csail.mit.edu/~baford/vm/
+  * License LGPL
+
+Release Notes:
+  * Rebuild on Xcode 4.2

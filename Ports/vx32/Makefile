@@ -1,19 +1,14 @@
 include ../../Library/Config.mk
-
 RUDIX_UNIVERSAL=no
-
 include ../../Library/Rudix.mk
 include ../../Library/UnixFormula.mk
 
 Arch=i386
 
-Site=		http://pdos.csail.mit.edu/~baford/vm/
-License=	LGPL
-Description=	Vx32: portable, efficient, safe execution of untrusted x86 code
 Title=		Vx32
 Name=		vx32
 Version=	0.12
-Revision=	4
+Revision=	5
 URL=		http://pdos.csail.mit.edu/~baford/vm/release/
 Source=		$(Name)-$(Version).tar.bz2
 
