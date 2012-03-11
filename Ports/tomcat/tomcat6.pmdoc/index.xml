@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>Apache Tomcat</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Apache Tomcat is an open source software implementation of the Java Servlet and JavaServer Pages technologies.
+
+  * Site: http://tomcat.apache.org/
+  * License: Apache License
+
+Release Notes:
+  * Upgraded to version 6.0.35
+</description>
+  <contents>
+    <choice title="tomcat6-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.tomcat6"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="bottomleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">LICENSE</resource>
+      <resource relative="true" mod="true" type="readme">README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01tomcat.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>
