@@ -11,6 +11,7 @@ pkg
 *.pkg
 *-install
 *-build
+*.xz
 *.tar.gz
 *.tar.bz2
 *.zip
