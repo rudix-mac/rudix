@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="8BB62480-18EB-11E1-9F9D-D49A200B3D20">
+<pkgref spec="1.12" uuid="A6D93A9C-6C51-11E1-87B2-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libpng</identifier>
-    <version>1.5.6-0</version>
+    <version>1.5.9-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01libpng-contents.xml</file-list>
