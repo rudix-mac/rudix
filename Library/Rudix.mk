@@ -50,7 +50,7 @@ InfoDir = $(DataDir)/info
 #
 # Framework
 #
-all: install
+all: test install
 retrieve:
 	@$(call info_color,Retrieving)
 	@$(call retrieve_pre_hook)
@@ -83,7 +83,7 @@ install: build
 	@$(call info_color,Done)
 	@touch install
 
-test: install
+test: build
 	@$(call info_color,Testing)
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
@@ -91,7 +91,7 @@ test: install
 	@$(call info_color,Done)
 	@touch test
 
-pkg: test
+pkg: test install
 	@$(call info_color,Packing)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
