@@ -14,7 +14,7 @@ setup:
 	sudo rudix install NAME-*.pkg
 
 teardown:
-	sudo rudix remove rudix
+	sudo rudix remove NAME
 	@$(call info_color,Finished)
 
 program:

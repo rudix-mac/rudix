@@ -1,12 +1,12 @@
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/*Formula.mk
 
 Title=		TITLE
 Name=		NAME
 Version=	1.2.3
 Revision=	0
-URL=		http://downloads.sourceforge.net/$(Name)
+URL=		http://path/to/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
