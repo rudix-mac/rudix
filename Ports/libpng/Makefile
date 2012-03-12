@@ -12,3 +12,12 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
+
+static: buildclean installclean
+	make ONLY_STATIC_LIBS=1 RUDIX_APPLY_RECOMMENDATIONS=no pkg
+	mv $(PkgFile) static-$(PkgFile)
+	touch static
