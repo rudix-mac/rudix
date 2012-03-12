@@ -17,7 +17,8 @@
   * License: GPL
 
 Release Notes:
-  * </description>
+  * Upgraded to version 2.11
+</description>
   <contents>
     <choice title="grep-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.grep"/>
