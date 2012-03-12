@@ -1,25 +1,23 @@
 ifeq ($(RUDIX_ENABLE_NLS),yes)
-BuildRequires += /usr/local/lib/libintl.la
+BuildRequires += $(LibDir)/libintl.la
 endif
+BuildRequires += $(BinDir)/xz
 
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	GNU versions of grep pattern matching utilities
-Site=		http://www.gnu.org/software/grep/
-License=	GPL
 Title=		GNU Grep
 Name=		grep
-Version=	2.7
+Version=	2.11
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/grep/
-Source=		$(Name)-$(Version).tar.gz
+Source=		$(Name)-$(Version).tar.xz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
 define prep_post_hook
 perl -p -i -e s/'intl '//g $(SourceDir)/configure

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="grep-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/grep/grep-install" m="false" t="file">
+  <f n="grep-install" o="root" g="staff" p="16877" pt="grep-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="egrep" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
@@ -32,7 +32,13 @@
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ChangeLog-2009" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -41,12 +47,16 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
+              <f n="README-alpha" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
+              <f n="README-boot" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="README-release" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
@@ -224,7 +234,9 @@
                 <f n="grep.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="lt" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
