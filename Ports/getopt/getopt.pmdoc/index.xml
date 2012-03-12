@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>getopt</title>
+    <title>Getopt</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,18 +11,29 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
+  <description>Parse command-line arguments from shell scripts.
+
+  * Site: http://software.frodo.looijaard.name/getopt/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="getopt-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.getopt.getopt-install.pkg"/>
+      <pkgref id="org.rudix.pkg.getopt"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">getopt-1.1.4/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">getopt-1.1.4/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">getopt-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">getopt-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01getopt.xml</item>
   <mod>properties.title</mod>
+  <mod>description</mod>
 </pkmkdoc>

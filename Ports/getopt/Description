@@ -1,0 +1,7 @@
+Parse command-line arguments from shell scripts.
+
+  * Site: http://software.frodo.looijaard.name/getopt/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3

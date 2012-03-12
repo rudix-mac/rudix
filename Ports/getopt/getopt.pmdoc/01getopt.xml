@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="85C83987-5E5D-4B0A-B7B7-400D83B54AA4">
+<pkgref spec="1.12" uuid="5557F48C-6C8A-11E1-9B1A-D49A200B3D20">
   <config>
-    <identifier>org.rudix.getopt.getopt-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.getopt</identifier>
+    <version>1.1.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom>/Users/ruda/Work/rudix.svn/Ports/getopt/getopt-install</installFrom>
+    <installFrom relative="true" mod="true">getopt-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
   </config>
   <contents>
