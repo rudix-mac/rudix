@@ -39,6 +39,7 @@ $(install_base_documentation)
 endef
 
 define test_inner_hook
+cd $(BuildDir) ; \
 $(Python) setup.py test || $(call error_color,One or more tests failed)
 endef
 
