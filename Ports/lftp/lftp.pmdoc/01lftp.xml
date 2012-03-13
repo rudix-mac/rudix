@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="2E4524EA-78F5-11E0-979A-0017F22C0C04">
+<pkgref spec="1.12" uuid="46E33487-6D2D-11E1-9341-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.lftp</identifier>
-    <version>4.2.3-0</version>
+    <version>4.3.5-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01lftp-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

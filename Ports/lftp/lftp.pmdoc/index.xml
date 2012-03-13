@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>LFTP is sophisticated ftp/http client, file transfer program supporting a number of network protocols</description>
+  <description>LFTP is sophisticated ftp/http client, file transfer program supporting a number of network protocols.
+
+  * Site: http://lftp.yar.ru/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 4.3.5
+</description>
   <contents>
     <choice title="lftp-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.lftp"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">lftp-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">lftp-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
