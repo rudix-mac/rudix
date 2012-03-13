@@ -42,11 +42,6 @@ define test_inner_hook
 $(Python) setup.py test || $(call error_color,One or more tests failed)
 endef
 
-define check_inner_hook
-$(call test_universal)
-endef
-
-
 buildclean:
 	cd $(BuildDir) ; $(Python) setup.py clean
 	rm -f build

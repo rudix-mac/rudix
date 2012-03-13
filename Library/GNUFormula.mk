@@ -60,10 +60,6 @@ define test_inner_hook
 cd $(BuildDir) ; $(make) check || $(call error_color,One or more tests failed)
 endef
 
-define check_inner_hook
-$(test_universal)
-endef
-
 buildclean:
 	cd $(BuildDir) ; $(make) clean
 	rm -f build

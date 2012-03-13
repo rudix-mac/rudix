@@ -249,7 +249,7 @@ $(MAKE) $(MakeFlags)
 endef
 
 define verify_universal
-lipo $1 -verify_arch i386 x86_64 || $(call warning_color,file $1 is not an Universal Binary)
+lipo $1 -verify_arch i386 x86_64 2>/dev/null || $(call warning_color,file $1 is not an Universal Binary)
 endef
 
 ifeq ($(RUDIX_UNIVERSAL),yes)
@@ -273,6 +273,13 @@ define install_base_documentation
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define test_documentation
+@$(call info_color,Testing documentation)
+test -d $(InstallDir)/usr/local/man && $(call error_color,Manual pages found in old /usr/local/man/ place)
+test -d $(InstallDir)/usr/local/info && $(call error_color,Info pages found in old /usr/local/info/ place)
+@$(call info_color,Finished)
 endef
 
 ifeq ($(RUDIX_STRIP_PACKAGE),yes)
@@ -310,4 +317,9 @@ $(apply_recommendations)
 $(sanitize_pmdoc)
 $(check_pmdoc)
 $(create_pkg)
+endef
+
+define check_inner_hook
+$(test_universal)
+$(test_documentation)
 endef
