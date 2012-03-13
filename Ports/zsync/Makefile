@@ -5,7 +5,7 @@ include ../../Library/GNUFormula.mk
 Title=		Zsync
 Name=		zsync
 Version=	0.6.2
-Revision=	4
+Revision=	5
 URL=		http://zsync.moria.org.uk/download/
 Source=		$(Name)-$(Version).tar.bz2
 

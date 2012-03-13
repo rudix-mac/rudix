@@ -1,7 +1,7 @@
-zsync is a file transfer program.
+Zsync is a file transfer program.
 
   * Site: http://zsync.moria.org.uk/
   * License: Artistic License
 
 Release Notes:
-  * Recompiled for Lion
+  * Rebuild on Xcode 4.3
