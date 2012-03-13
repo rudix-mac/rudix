@@ -1,5 +1,6 @@
 import unittest
 from rudix import *
+from rudix import _communicate
 
 class RudixInternalTest(unittest.TestCase):
     def test_version_compare(self):
@@ -34,7 +35,7 @@ class RudixInternalTest(unittest.TestCase):
 
 class RudixExternalTest(unittest.TestCase):
     def test_communicate(self):
-        self.assertEqual(communicate(['echo', 'rudix']), ['rudix'])
+        self.assertEqual(_communicate(['echo', 'rudix']), ['rudix'])
 
     def test_process(self):
         self.assertEqual( process(['-h']), 0 )

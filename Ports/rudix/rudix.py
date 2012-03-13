@@ -86,16 +86,16 @@ def usage():
     'Print help'
     print __doc__
 
-def is_root():
+def _is_root():
     'Test for root privileges'
     return os.getuid() == 0
 
-def root_required():
+def _root_required():
     'Requires root message'
     print >> sys.stderr, '%s: this operation requires root privileges' % PROGRAM_NAME
     return 1
 
-def communicate(args):
+def _communicate(args):
     'Call a process and return its stdout data as a list of strings'
     proc = Popen(args, stdout=PIPE, stderr=PIPE)
     return proc.communicate()[0].split('\n')[:-1]
@@ -103,7 +103,7 @@ def communicate(args):
 def is_package_installed(pkg):
     'Test if package is installed'
     pkg = normalize(pkg)
-    out = communicate(['pkgutil', '--pkg-info', pkg])
+    out = _communicate(['pkgutil', '--pkg-info', pkg])
     for line in out:
         if line.startswith('install-time: '):
             return True
@@ -113,7 +113,7 @@ def is_package_with_version_installed(pkg, version):
     'Test if package with version is installed'
     pkg = normalize(pkg)
     current = None
-    out = communicate(['pkgutil', '--pkg-info', pkg])
+    out = _communicate(['pkgutil', '--pkg-info', pkg])
     for line in out:
         if line.startswith('version: '):
             current = line[len('version: '):]
@@ -128,14 +128,14 @@ def is_package_with_version_installed(pkg, version):
 
 def get_packages():
     'Get a list of packages installed'
-    out = communicate(['pkgutil', '--pkgs=' + PREFIX + '*'])
+    out = _communicate(['pkgutil', '--pkgs=' + PREFIX + '*'])
     pkgs = [line.strip() for line in out]
     return pkgs
 
 def get_package_info(pkg):
     'Get information from package'
     pkg = normalize(pkg)
-    out = communicate(['pkgutil', '-v', '--pkg-info', pkg])
+    out = _communicate(['pkgutil', '-v', '--pkg-info', pkg])
     version = None
     install_date = None
     for line in out:
@@ -149,7 +149,7 @@ def get_package_info(pkg):
 def get_package_content(pkg, filter_dirs=True):
     'Get a list of file names from package'
     pkg = normalize(pkg)
-    out = communicate(['pkgutil', '--files', pkg])
+    out = _communicate(['pkgutil', '--files', pkg])
     content = ['/'+line.strip() for line in out]
     if filter_dirs:
         content = [x for x in content if os.path.isfile(x)]
@@ -181,15 +181,15 @@ def list_package_files(pkg):
 
 def install_package(pkg):
     'Install a local package'
-    if is_root():
+    if _is_root():
         call(['installer', '-pkg', pkg, '-target', '/'], stderr=PIPE)
     else:
-        root_required()
+        _root_required()
 
 def remove_package(pkg):
     'Uninstall a package'
-    if is_root() == False:
-        return root_required()
+    if _is_root() == False:
+        return _root_required()
     pkg = normalize(pkg)
     for x in get_package_content(pkg):
         try:
@@ -201,8 +201,8 @@ def remove_package(pkg):
 
 def remove_all_packages():
     'Uninstall all packages'
-    if is_root == False:
-        return root_required()
+    if _is_root == False:
+        return _root_required()
     print "Using this option will remove *all* Rudix's packages!"
     print "Are you sure you want to proceed? (answer 'yes' or 'y' to confirm)"
     answer = raw_input().strip()
@@ -218,7 +218,7 @@ def remove_all_packages():
 
 def search_in_packages(path):
     'Search for path in all packages'
-    out = communicate(['pkgutil', '--file-info', path])
+    out = _communicate(['pkgutil', '--file-info', path])
     for line in out:
         line = line.strip()
         if line.startswith('pkgid: '):
@@ -236,8 +236,8 @@ def verify_all_packages():
 
 def fix_package(pkg):
     'Try to fix permissions and groups of package'
-    if is_root() == False:
-        return root_required()
+    if _is_root() == False:
+        return _root_required()
     pkg = normalize(pkg)
     call(['pkgutil', '--repair', pkg], stderr=PIPE)
 
@@ -341,7 +341,7 @@ def net_install_package(pkg, net_info):
         call(['curl', '-f', '-o', file_path, '-C', '-', '-L', '-#', net_url])
         if net_extension == '.dmg':
             print 'Mounting downloaded image file', file_path
-            out = communicate(['hdiutil', 'attach', '-noautoopen', file_path])
+            out = _communicate(['hdiutil', 'attach', '-noautoopen', file_path])
             for l in out:
                 if 'Apple_partition_scheme' in l:
                     disk_path = l.split()[0]
@@ -368,11 +368,11 @@ def net_install_command(pkg):
     if version is not None and version_compare(version, net_info[2]) >= 0:
         print 'Latest version of package %s(%s) already installed' % (pkg, version)
         return
-    if is_root():
+    if _is_root():
         net_install_package(pkg, net_info)
         print 'All done'
     else:
-        root_required()
+        _root_required()
 
 def update_all_packages():
     'Try to update the current base of packages'
@@ -389,12 +389,12 @@ def update_all_packages():
         print 'All packages are up to date'
         return
     # if there is packages to update you need to be root
-    if is_root():
+    if _is_root():
         for pkg, net_info in to_update:
             net_install_package(pkg, net_info)
         print 'All done'
     else:
-        root_required()
+        _root_required()
 
 def normalize(pkg):
     'Transform package in full pkg-id (with PREFIX)'
