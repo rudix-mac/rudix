@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
+#
 
 #
 # Python versions
@@ -38,8 +39,13 @@ $(install_base_documentation)
 endef
 
 define test_inner_hook
+$(Python) setup.py test || $(call error_color,One or more tests failed)
+endef
+
+define check_inner_hook
 $(call test_universal)
 endef
+
 
 buildclean:
 	cd $(BuildDir) ; $(Python) setup.py clean

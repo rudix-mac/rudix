@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
+#
 
 define build_inner_hook
 cd $(BuildDir) ; $(make) $(MakeExtra) \
@@ -15,8 +16,11 @@ $(install_base_documentation)
 endef
 
 define test_inner_hook
-$(test_universal)
 cd $(BuildDir) ; $(make) test
+endef
+
+define check_inner_hook
+$(test_universal)
 endef
 
 buildclean:

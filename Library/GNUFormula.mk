@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
+#
 
 ifeq ($(RUDIX_ENABLE_NLS),yes)
 GnuConfigureExtra += --enable-nls
@@ -56,8 +57,11 @@ $(install_gnu_documentation)
 endef
 
 define test_inner_hook
-$(call test_universal)
 cd $(BuildDir) ; $(make) check || $(call error_color,One or more tests failed)
+endef
+
+define check_inner_hook
+$(test_universal)
 endef
 
 buildclean:

@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120310
+BuildSystem = 20120312
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -50,7 +50,9 @@ InfoDir = $(DataDir)/info
 #
 # Framework
 #
-all: test install
+all: test install check
+
+# Retrieve source
 retrieve:
 	@$(call info_color,Retrieving)
 	@$(call retrieve_pre_hook)
@@ -59,6 +61,7 @@ retrieve:
 	@$(call info_color,Done)
 	@touch retrieve
 
+# Prepare source to compile
 prep: retrieve
 	@$(call info_color,Preparing)
 	@$(call prep_pre_hook)
@@ -67,6 +70,7 @@ prep: retrieve
 	@$(call info_color,Done)
 	@touch prep
 
+# Build source
 build: prep $(BuildRequires)
 	@$(call info_color,Building)
 	@$(call build_pre_hook)
@@ -75,6 +79,7 @@ build: prep $(BuildRequires)
 	@$(call info_color,Done)
 	@touch build
 
+# Install into a temporary directory
 install: build
 	@$(call info_color,Installing)
 	@$(call install_pre_hook)
@@ -83,6 +88,7 @@ install: build
 	@$(call info_color,Done)
 	@touch install
 
+# Run tests from the sources
 test: build
 	@$(call info_color,Testing)
 	@$(call test_pre_hook)
@@ -91,7 +97,17 @@ test: build
 	@$(call info_color,Done)
 	@touch test
 
-pkg: test install
+# Sanity check-up (post-install tests)
+check: install
+	@$(call info_color,Checking)
+	@$(call check_pre_hook)
+	@$(call check_inner_hook)
+	@$(call check_post_hook)
+	@$(call info_color,Done)
+	@touch check
+
+# Create package
+pkg: test install check
 	@$(call info_color,Packing)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
@@ -106,7 +122,7 @@ pkgclean:
 	rm -rf pkg *.pkg
 
 clean: installclean
-	rm -rf prep build test $(SourceDir)
+	rm -rf prep build test check $(SourceDir)
 
 distclean: clean pkgclean
 	rm -f config.cache*
@@ -121,7 +137,7 @@ pmdoc:
 wiki:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkwikipage.py
-	@cp -vf *.wiki ../../Wiki/
+	@mv -vf *.wiki ../../Wiki/
 
 upload: pkg
 	@$(call info_color,Sending $(PkgFile))
@@ -132,12 +148,13 @@ upload: pkg
 
 help:
 	@echo "Construction rules:"
-	@echo "  retrieve - Retrieve source to compile"
-	@echo "  prep - After retrieve, prepare source to compile"
-	@echo "  build - After prep, build source code"
-	@echo "  install - After built, install into a temporary directory"
-	@echo "  test - After installed, run tests"
-	@echo "  pkg - After installed and tested, create package"
+	@echo "  retrieve - Retrieve source"
+	@echo "  prep - After Prepare source to compile"
+	@echo "  build - Build source"
+	@echo "  install - Install into a temporary directory"
+	@echo "  test - Run tests from the sources"
+	@echo "  check - Sanity check-up (post-install tests)"
+	@echo "  pkg - Create package"
 	@echo "Clean-up rules:"
 	@echo "  clean - Clean up until retrieve"
 	@echo "  distclean - After clean, remove config.cache and package"

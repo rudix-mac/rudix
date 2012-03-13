@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2011-2012 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
+#
 
 define install_extra_documentation
 for x in $(wildcard \
@@ -39,8 +40,11 @@ $(install_extra_documentation)
 endef
 
 define test_inner_hook
-$(call test_universal)
 cd $(BuildDir) ; $(make) test check || $(call error_color,One or more tests failed)
+endef
+
+define check_inner_hook
+$(test_universal)
 endef
 
 buildclean:

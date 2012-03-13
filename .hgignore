@@ -6,6 +6,7 @@ build
 install
 pmdoc
 test
+check
 pkg
 *~
 *.pkg
