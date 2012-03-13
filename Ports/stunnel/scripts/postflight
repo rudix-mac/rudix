@@ -1,7 +1,5 @@
 #!/bin/sh
-
 [ ! -f /usr/local/etc/stunnel/stunnel.conf ] && \
     install -m 644 /usr/local/etc/stunnel/stunnel.conf.default \
-    /usr/local/etc/stunnel/stunnel.conf
-
+    	/usr/local/etc/stunnel/stunnel.conf
 exit 0

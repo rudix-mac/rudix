@@ -1,32 +1,145 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="stunnel-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/stunnel/stunnel-install" m="false" t="file">
+  <f n="stunnel-install" o="root" g="staff" p="16877" pt="stunnel-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="etc" o="root" g="wheel" p="16893">
-          <f n="stunnel" o="root" g="wheel" p="16893">
-            <f n="stunnel.conf.default" o="root" g="wheel" p="33204"/>
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="stunnel" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="stunnel3" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
           </f>
         </f>
-        <f n="sbin" o="root" g="wheel" p="16893">
-          <f n="stunnel" o="root" g="wheel" p="33277"/>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="stunnel" o="root" g="wheel" p="16893">
+            <f n="stunnel.conf.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stunnel.pem.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="stunnel" o="root" g="wheel" p="16893">
+            <f n="libstunnel.dylib" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="libstunnel.la" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="stunnel" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="TODO" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT.GPL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CREDITS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="examples" o="root" g="wheel" p="16893">
+                <f n="ca.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ca.pl" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="importCA.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="importCA.sh" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="script.sh" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="stunnel.init" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="stunnel.service" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stunnel.spec" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.FIPS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.W32" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.WCE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PORTS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stunnel.fr.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stunnel.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stunnel.pl.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man8" o="root" g="wheel" p="16893">
-              <f n="stunnel.8" o="root" g="wheel" p="33204"/>
+              <f n="stunnel.8" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stunnel.fr.8" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stunnel.pl.8" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
+        </f>
+        <f n="var" o="root" g="wheel" p="16893">
+          <f n="lib" o="root" g="wheel" p="16893">
+            <f n="stunnel" o="root" g="wheel" p="17405">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
         </f>
       </f>
     </f>
