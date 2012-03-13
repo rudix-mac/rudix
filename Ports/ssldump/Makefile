@@ -1,44 +1,44 @@
-# SSLv3/TLS network protocol analyzer
-# http://www.rtfm.com/ssldump/
-# BSD
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		ssldump $(VERSION)
-NAME=		ssldump
-VERSION=	0.9b3
-REVISION=	1
+Title=		SSLdump
+Name=		ssldump
+Version=	0.9b3
+Revision=	2
 URL=		http://www.rtfm.com/ssldump/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYRIGHT
+
+GnuConfigureExtra += --host=i386-freebsd
+
+MakeInstallExtra += -B
+MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
+MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/$(Prefix)/share/man
+
+ifdef FOO
 prep: retrieve
-	tar zxvf $(SOURCE)
-	cd $(BUILDDIR) ; patch < $(PORTDIR)/configure.patch
-	cd $(BUILDDIR)/base ; patch < $(PORTDIR)/pcap-snoop.c.patch
+	tar zxvf $(Source)
+	cd $(SourceDir) ; patch < $(PortDir)/configure.patch
+	cd $(SourceDir)/base ; patch < $(PortDir)/pcap-snoop.c.patch
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) --host=i386-freebsd ; $(make)
+	cd $(SourceDir) ; $(configure) --host=i386-freebsd ; $(make)
 	touch build
 
 install: build
 # pass -B option to make due an INSTALL file in the same directory
 # Mac OS X with HLS+ is case insensitive. -B force rules
-	cd $(BUILDDIR) ; \
-	make -B prefix=$(INSTALLDIR)/usr/local \
-		MANDIR=$(INSTALLDIR)/usr/local/share/man install
+	cd $(SourceDir) ; \
+	make -B prefix=$(InstallDir)$(Prefix) \
+		MANDIR=$(InstallDir)$(Prefix)/share/man install
 
-	#rm -f $(INSTALLDIR)/usr/local/share/info/dir
-	#rm -f $(INSTALLDIR)/usr/local/lib/charset.alias
-	#rm -f $(INSTALLDIR)/usr/local/share/locale/locale.alias
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{COPYRIGHT,CREDITS,ChangeLog,ReadMeFile} $(InstallDir)/$(DocDir)/$(Name)
 
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,CREDITS,ChangeLog,README} $(INSTALLDOCDIR)
-
-	strip $(INSTALLDIR)/usr/local/sbin/*
+	strip $(InstallDir)$(Prefix)/sbin/*
 	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+endif
