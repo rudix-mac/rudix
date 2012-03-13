@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="285547F4-0324-45DD-8A8E-6654911FB409">
+<pkgref spec="1.12" uuid="ACDB617D-6D29-11E1-B0F6-D49A200B3D20">
   <config>
-    <identifier>org.rudix.nmap.nmap-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.nmap</identifier>
+    <version>5.50-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,7 +12,9 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>installTo</mod>
     <mod>parent</mod>
   </config>

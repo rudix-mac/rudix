@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="nmap-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/nmap/nmap-install" m="false" t="file">
+  <f n="nmap-install" o="root" g="staff" p="16877" pt="nmap-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -13,10 +13,19 @@
           <f n="nmap" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <f n="nping" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="nmap" o="root" g="wheel" p="16893">
+              <f n="3rd-party-licenses.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="committers.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -26,6 +35,9 @@
               <f n="HACKING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="leet-nmap-ascii-art.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -33,6 +45,9 @@
                 <mod>mode</mod>
               </f>
               <f n="nmap_gpgkeys.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README-WIN32" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="win32-installer-zenmap-buildguide.txt" o="root" g="wheel" p="33204">
@@ -56,7 +71,9 @@
                 <f n="nmap.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="fr" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
@@ -81,14 +98,18 @@
                 <f n="nmap.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="it" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
                 <f n="nmap.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="jp" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
@@ -109,13 +130,18 @@
               <f n="nmap.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="nping.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
             <f n="pl" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
                 <f n="nmap.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pt_BR" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
@@ -149,7 +175,9 @@
                 <f n="nmap.1" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="man1" o="root" g="wheel" p="16893">
@@ -183,6 +211,9 @@
             <f n="nmap-os-db" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="nmap-payloads" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="nmap-protocols" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -205,7 +236,16 @@
               <mod>mode</mod>
             </f>
             <f n="nselib" o="root" g="wheel" p="16893">
+              <f n="afp.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="asn1.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="base64.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="brute.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="citrixxml.lua" o="root" g="wheel" p="33204">
@@ -218,10 +258,10 @@
                 <f n="favicon-db" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="folders.lst" o="root" g="wheel" p="33204">
+                <f n="http-fingerprints.lua" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="http-fingerprints" o="root" g="wheel" p="33204">
+                <f n="http-folders.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="oracle-sids" o="root" g="wheel" p="33204">
@@ -252,13 +292,13 @@
                   <f n="nmap_service.c" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="nmap_service.exe" o="root" g="wheel" p="33277">
-                    <mod>mode</mod>
-                  </f>
                   <f n="nmap_service.vcproj" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="pwdump.lua" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="README" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <mod>mode</mod>
@@ -266,15 +306,27 @@
                 <f n="usernames.lst" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="yokoso-fingerprints" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <mod>mode</mod>
               </f>
               <f n="datafiles.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="dhcp.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="dns.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dnssd.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="drda.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ftp.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="giop.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http.lua" o="root" g="wheel" p="33204">
@@ -283,13 +335,28 @@
               <f n="imap.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="informix.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="ipOps.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="iscsi.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="json.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ldap.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="listop.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="match.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mongodb.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="msrpc.lua" o="root" g="wheel" p="33204">
@@ -301,7 +368,16 @@
               <f n="msrpctypes.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="mssql.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="netbios.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nrpc.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="nsedebug.lua" o="root" g="wheel" p="33204">
@@ -310,10 +386,19 @@
               <f n="packet.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="pgsql.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pop3.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="proxy.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rmi.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rpc.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="shortport.lua" o="root" g="wheel" p="33204">
@@ -346,15 +431,42 @@
               <f n="tab.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="target.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tns.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="unpwdb.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="upnp.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="url.lua" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="vnc.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wsdd.lua" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
             <f n="scripts" o="root" g="wheel" p="16893">
+              <f n="afp-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="afp-path-vuln.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="afp-serverinfo.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="afp-showmount.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="asn-query.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -365,6 +477,21 @@
                 <mod>mode</mod>
               </f>
               <f n="banner.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broadcast-dns-service-discovery.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broadcast-dropbox-listener.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broadcast-ms-sql-discover.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broadcast-upnp-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broadcast-wsdd-discover.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="citrix-brute-xml.nse" o="root" g="wheel" p="33204">
@@ -382,13 +509,31 @@
               <f n="citrix-enum-servers.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="couchdb-databases.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="couchdb-stats.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="daap-get-library.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="daytime.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="db2-info.nse" o="root" g="wheel" p="33204">
+              <f n="db2-das-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="db2-discover.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="dhcp-discover.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dns-cache-snoop.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dns-fuzz.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="dns-random-srcport.nse" o="root" g="wheel" p="33204">
@@ -400,10 +545,34 @@
               <f n="dns-recursion.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="dns-service-discovery.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dns-update.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="dns-zone-transfer.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="domcon-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="domcon-cmd.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="domino-enum-users.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="drda-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="drda-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="finger.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="firewalk.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ftp-anon.nse" o="root" g="wheel" p="33204">
@@ -415,19 +584,43 @@
               <f n="ftp-brute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="html-title.nse" o="root" g="wheel" p="33204">
+              <f n="ftp-libopie.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ftp-proftpd-backdoor.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="giop-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gopher-ls.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hddtemp-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hostmap.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-auth.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="http-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="http-date.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-domino-enum-passwords.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-enum.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-favicon.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-form-brute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-headers.nse" o="root" g="wheel" p="33204">
@@ -439,10 +632,22 @@
               <f n="http-malware-host.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="http-methods.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="http-open-proxy.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-passwd.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-php-version.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-robots.txt.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-title.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="http-trace.nse" o="root" g="wheel" p="33204">
@@ -451,34 +656,160 @@
               <f n="http-userdir-enum.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="http-vhosts.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="http-vmware-path-vuln.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="iax2-version.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="imap-capabilities.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="informix-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="informix-query.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="informix-tables.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ipidseq.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="irc-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="irc-unrealircd-backdoor.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="iscsi-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="iscsi-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jdwp-version.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ldap-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ldap-rootdse.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ldap-search.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="lexmark-config.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="modbus-discover.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mongodb-databases.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mongodb-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-config.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-empty-password.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-hasdbaccess.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ms-sql-info.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ms-sql-query.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-tables.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ms-sql-xp-cmdshell.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql-databases.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql-empty-password.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="mysql-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql-users.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="mysql-variables.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nat-pmp-info.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="nbstat.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="netbus-auth-bypass.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="netbus-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="netbus-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="netbus-version.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nfs-ls.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="nfs-showmount.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="nfs-statfs.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="nrpe-enum.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="ntp-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ntp-monlist.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="oracle-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="oracle-enum-users.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="oracle-sid-brute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="p2p-conficker.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="path-mtu.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pgsql-brute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pjl-ready-message.nse" o="root" g="wheel" p="33204">
@@ -493,10 +824,16 @@
               <f n="pptp-version.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="qscan.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="realvnc-auth-bypass.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="robots.txt.nse" o="root" g="wheel" p="33204">
+              <f n="resolveall.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rmi-dumpregistry.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="rpcinfo.nse" o="root" g="wheel" p="33204">
@@ -532,6 +869,9 @@
               <f n="smb-enum-users.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="smb-flood.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="smb-os-discovery.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -553,6 +893,9 @@
               <f n="smtp-commands.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="smtp-enum-users.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="smtp-open-relay.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -565,7 +908,28 @@
               <f n="snmp-brute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="snmp-interfaces.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-netstat.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-processes.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="snmp-sysdescr.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-win32-services.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-win32-shares.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-win32-software.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="snmp-win32-users.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="socks-open-proxy.nse" o="root" g="wheel" p="33204">
@@ -577,13 +941,28 @@
               <f n="ssh-hostkey.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ssh2-enum-algos.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="sshv1.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ssl-cert.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ssl-enum-ciphers.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="sslv2.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stuxnet-detect.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="svn-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="targets-traceroute.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="telnet-brute.nse" o="root" g="wheel" p="33204">
@@ -592,7 +971,19 @@
               <f n="upnp-info.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="vnc-brute.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vnc-info.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wdb-version.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="whois.nse" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wsdd-discover.nse" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="x11-access.nse" o="root" g="wheel" p="33204">

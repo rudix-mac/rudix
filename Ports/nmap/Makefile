@@ -1,35 +1,17 @@
-# Scan ports and fingerprint stack of network hosts
-# http://nmap.org/
-# GPL
+include ../../Library/GNU.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		Nmap $(VERSION)
-NAME=		nmap
-VERSION=	5.20
-REVISION=	0
+Title=		Nmap
+Name=		nmap
+Version=	5.50
+Revision=	0
 URL=		http://nmap.org/dist/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
+ReadMeFile=	$(SourceDir)/HACKING
+LicenseFile=	$(SourceDir)/COPYING
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)"  \
-	$(configure) --disable-dependency-tracking --without-zenmap ; $(make)
-	touch build
+GnuConfigureExtra += --without-zenmap
 
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,HACKING} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/docs/*.txt $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define install_post_hook
+install -m 644 $(SourceDir)/docs/*.txt $(InstallDir)/$(DocDir)/$(Name)
+endef
