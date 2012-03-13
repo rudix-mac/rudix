@@ -49,9 +49,7 @@
               <f n="proto-sftp.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="liblftp-jobs.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -111,7 +109,6 @@
               <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="lftp" o="root" g="wheel" p="16893">
@@ -127,7 +124,6 @@
             <f n="verify-file" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
             <f n="cs" o="root" g="wheel" p="16893">
