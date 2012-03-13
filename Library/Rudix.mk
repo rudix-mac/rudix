@@ -277,8 +277,8 @@ endef
 
 define test_documentation
 @$(call info_color,Testing documentation)
-test -d $(InstallDir)/usr/local/man && $(call error_color,Manual pages found in old /usr/local/man/ place)
-test -d $(InstallDir)/usr/local/info && $(call error_color,Info pages found in old /usr/local/info/ place)
+test -d $(InstallDir)/usr/local/man && $(call error_color,Manual pages found in old /usr/local/man/ place) || true
+test -d $(InstallDir)/usr/local/info && $(call error_color,Info pages found in old /usr/local/info/ place) || true
 @$(call info_color,Finished)
 endef
 
