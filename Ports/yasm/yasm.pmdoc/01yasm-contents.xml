@@ -2,73 +2,171 @@
 <pkg-contents spec="1.12">
   <f n="yasm-install" o="root" g="staff" p="16877" pt="yasm-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="vsyasm" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="yasm" o="root" g="wheel" p="33277"/>
-          <f n="ytasm" o="root" g="wheel" p="33277"/>
+          <f n="yasm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="ytasm" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="libyasm" o="root" g="wheel" p="16893">
-            <f n="arch.h" o="root" g="wheel" p="33204"/>
-            <f n="assocdat.h" o="root" g="wheel" p="33204"/>
-            <f n="bitvect.h" o="root" g="wheel" p="33204"/>
-            <f n="bytecode.h" o="root" g="wheel" p="33204"/>
-            <f n="compat-queue.h" o="root" g="wheel" p="33204"/>
-            <f n="coretype.h" o="root" g="wheel" p="33204"/>
-            <f n="dbgfmt.h" o="root" g="wheel" p="33204"/>
-            <f n="errwarn.h" o="root" g="wheel" p="33204"/>
-            <f n="expr.h" o="root" g="wheel" p="33204"/>
-            <f n="file.h" o="root" g="wheel" p="33204"/>
-            <f n="floatnum.h" o="root" g="wheel" p="33204"/>
-            <f n="hamt.h" o="root" g="wheel" p="33204"/>
-            <f n="insn.h" o="root" g="wheel" p="33204"/>
-            <f n="intnum.h" o="root" g="wheel" p="33204"/>
-            <f n="inttree.h" o="root" g="wheel" p="33204"/>
-            <f n="linemap.h" o="root" g="wheel" p="33204"/>
-            <f n="listfmt.h" o="root" g="wheel" p="33204"/>
-            <f n="md5.h" o="root" g="wheel" p="33204"/>
-            <f n="module.h" o="root" g="wheel" p="33204"/>
-            <f n="objfmt.h" o="root" g="wheel" p="33204"/>
-            <f n="parser.h" o="root" g="wheel" p="33204"/>
-            <f n="phash.h" o="root" g="wheel" p="33204"/>
-            <f n="preproc.h" o="root" g="wheel" p="33204"/>
-            <f n="section.h" o="root" g="wheel" p="33204"/>
-            <f n="symrec.h" o="root" g="wheel" p="33204"/>
-            <f n="valparam.h" o="root" g="wheel" p="33204"/>
-            <f n="value.h" o="root" g="wheel" p="33204"/>
+            <f n="arch.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="assocdat.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bitvect.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bytecode.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="compat-queue.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="coretype.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dbgfmt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="errwarn.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="expr.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="file.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="floatnum.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hamt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="insn.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="intnum.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="inttree.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="linemap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="listfmt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="md5.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="module.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="objfmt.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="parser.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="phash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="preproc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="section.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="symrec.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="valparam.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="value.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
-          <f n="libyasm-stdint.h" o="root" g="wheel" p="33204"/>
-          <f n="libyasm.h" o="root" g="wheel" p="33204"/>
+          <f n="libyasm-stdint.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libyasm.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libyasm.a" o="root" g="wheel" p="33204"/>
+          <f n="libyasm.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="yasm" o="root" g="wheel" p="16893">
-              <f n="Artistic.txt" o="root" g="wheel" p="33204"/>
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="BSD.txt" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="GNU_GPL-2.0" o="root" g="wheel" p="33204"/>
-              <f n="GNU_LGPL-2.0" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
+              <f n="Artistic.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="BSD.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GNU_GPL-2.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GNU_LGPL-2.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="yasm.1" o="root" g="wheel" p="33204"/>
+              <f n="yasm.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
             <f n="man7" o="root" g="wheel" p="16893">
-              <f n="yasm_arch.7" o="root" g="wheel" p="33204"/>
-              <f n="yasm_dbgfmts.7" o="root" g="wheel" p="33204"/>
-              <f n="yasm_objfmts.7" o="root" g="wheel" p="33204"/>
-              <f n="yasm_parsers.7" o="root" g="wheel" p="33204"/>
+              <f n="yasm_arch.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yasm_dbgfmts.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yasm_objfmts.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="yasm_parsers.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>
