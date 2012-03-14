@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="F9ED85FD-6E10-11E1-896D-D49A200B3D20">
+<pkgref spec="1.12" uuid="2D524F6E-6E23-11E1-86E1-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.httptunnel</identifier>
-    <version>3.3-</version>
+    <version>3.3-3</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
