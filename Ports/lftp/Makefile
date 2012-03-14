@@ -1,7 +1,10 @@
 BuildRequires += $(LibDir)/libintl.la
 BuildRequires += $(LibDir)/libreadline.a
 
-include ../../Library/GNU.mk
+include ../../Library/Config.mk
+RUDIX_STRIP_PACKAGE=no
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
 Title=		LFTP
 Name=		lftp
