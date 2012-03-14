@@ -13,11 +13,11 @@
   </distribution>
   <description>A full-featured and high-performance event loop that is loosely modelled after libevent.
 
-Site: http://software.schmorp.de/pkg/libev.html
-License: BSD (or GPL)
+  * Site: http://software.schmorp.de/pkg/libev.html
+  * License: BSD (or GPL)
 
-Changes from previous release:
-* Upgraded to version 4.11
+Release Notes:
+  * Rebuild on Xcode 4.3
 
 </description>
   <contents>
