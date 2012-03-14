@@ -1,14 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Description=	MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool
-Site=		http://www.bitwizard.nl/mtr/
-License=	GPL
 Title=		MTR
 Name=		mtr
-Version=	0.80
-Revision=	1
+Version=	0.82
+Revision=	0
 URL=		ftp://ftp.bitwizard.nl/mtr/
 Source=		$(Name)-$(Version).tar.gz
 

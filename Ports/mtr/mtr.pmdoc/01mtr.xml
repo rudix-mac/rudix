@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="0BA315FC-8406-11E0-8F33-0017F22C0C04">
+<pkgref spec="1.12" uuid="10E17240-6E28-11E1-8D5D-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.mtr</identifier>
-    <version>0.80-0</version>
+    <version>0.82-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01mtr-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

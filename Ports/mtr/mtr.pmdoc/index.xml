@@ -11,16 +11,26 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool</description>
+  <description>MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool.
+
+  * Site: http://www.bitwizard.nl/mtr/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 0.82
+
+</description>
   <contents>
     <choice title="mtr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.mtr"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">mtr-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">mtr-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

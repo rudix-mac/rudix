@@ -1,0 +1,8 @@
+MTR combines the functionality of the traceroute and ping programs in a single network diagnostic tool.
+
+  * Site: http://www.bitwizard.nl/mtr/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 0.82
+
