@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="BD456AE3-6E3E-11E1-9842-D49A200B3D20">
+<pkgref spec="1.12" uuid="251AEE45-6E3F-11E1-A5D6-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.gperftools</identifier>
     <version>2.0-0</version>

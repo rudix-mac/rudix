@@ -1,5 +1,6 @@
 include ../../Library/GNU.mk
 
+Title=		Gperftools
 Name=		gperftools
 Version=	2.0
 Revision=	0
