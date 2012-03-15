@@ -1,33 +1,21 @@
-# Mpeg audio 1/2 layer 1, 2 and 3 player
-# http://www.mpg123.de/
-# 
+include ../../Library/Config.mk
+RUDIX_UNIVERSAL=no
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
-include ../../Library/Rules.mk
+Name=		mpg123
+Version=	1.13.6
+Revision=	0
+URL=		http://www.mpg123.de/download/
+Source=		$(Name)-$(Version).tar.bz2
 
-NAME=		mpg123
-VERSION=	1.9.2
-REVISION=	0
-URL=		http://downloads.sourceforge.net/mpg123
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
+GnuConfigureExtra += --with-cpu=x86-64
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; $(configure) --disable-dependency-tracking ; $(make)
-	touch build
+define install_post_hook
+rm -rf $(SourceDir)/doc/examples/
+install -m 644 $(SourceDir)/doc/* $(InstallDir)/$(DocDir)/$(Name)
+endef
 
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	rm -rf $(BUILDDIR)/doc/examples/
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,doc/*} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/bin/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/mpg123/*.so
-	touch install
-
-test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/mpg123/*.so"
-	touch test

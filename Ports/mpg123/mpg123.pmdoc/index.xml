@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>mpg123</title>
-    <build>/Users/ruda/Desktop/mpg123.pkg</build>
+    <title/>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Mpeg audio 1/2 layer 1, 2 and 3 player</description>
+  <description>Mpg123 is a real time MPEG audio player/decoder for layers 1,2 and 3 (MPEG 1.0 layer 3 aka MP3 most commonly tested).
+
+  * Site: http://www.mpg123.de/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 1.13.6
+</description>
   <contents>
-    <choice title="mpg123-install" id="mpg123" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="mpg123-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.mpg123"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">mpg123-1.9.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">mpg123-1.9.2/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">mpg123-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">mpg123-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

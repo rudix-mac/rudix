@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="mpg123-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/mpg123/mpg123-install" m="false" t="file">
+  <f n="mpg123-install" o="root" g="staff" p="16877" pt="mpg123-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="mpg123" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -83,6 +83,9 @@
               <f n="doxyhead.xhtml" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="libmpg123_speed.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -99,6 +102,9 @@
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS.libmpg123" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="PATENTS" o="root" g="wheel" p="33204">
