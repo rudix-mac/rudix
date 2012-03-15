@@ -42,7 +42,6 @@
             <f n="output_openal.so" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
             <f n="libmpg123.pc" o="root" g="wheel" p="33204">
@@ -131,7 +130,6 @@
               <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">

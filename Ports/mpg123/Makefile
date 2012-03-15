@@ -3,6 +3,7 @@ RUDIX_UNIVERSAL=no
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
+Title=		MPG123
 Name=		mpg123
 Version=	1.13.6
 Revision=	0
@@ -18,4 +19,3 @@ define install_post_hook
 rm -rf $(SourceDir)/doc/examples/
 install -m 644 $(SourceDir)/doc/* $(InstallDir)/$(DocDir)/$(Name)
 endef
-
