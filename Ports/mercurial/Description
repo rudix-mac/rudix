@@ -1,10 +1,7 @@
 Mercurial is a free, distributed source control management tool.
 
-Site: http://mercurial.selenic.com/
-License: GPL
+  * Site: http://mercurial.selenic.com/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to version 2.1
-
-Usage:
-$ /usr/local/bin/hg --version
+Release Notes:
+  * Upgraded to version 2.1
