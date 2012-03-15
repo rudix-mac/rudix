@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="gperftools-install" o="root" g="staff" p="16877" pt="gperftools-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="pprof" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="google" o="root" g="wheel" p="16893">
+            <f n="heap-checker.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="heap-profiler.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_extension.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_extension_c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_hook.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_hook_c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="profiler.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stacktrace.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tcmalloc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="gperftools" o="root" g="wheel" p="16893">
+            <f n="heap-checker.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="heap-profiler.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_extension.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_extension_c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_hook.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="malloc_hook_c.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stacktrace.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tcmalloc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libtcmalloc.4.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_debug.4.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_debug.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_debug.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_debug.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal.4.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal_debug.4.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal_debug.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal_debug.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libtcmalloc_minimal_debug.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="libprofiler.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libtcmalloc.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libtcmalloc_debug.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libtcmalloc_minimal.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="libtcmalloc_minimal_debug.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="gperftools" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README_windows.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="gperftools-2.0" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="designstyle.css" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="heap-example1.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="heapprofile.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="overview.dot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="overview.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pageheap.dot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pageheap.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pprof_remote_servers.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README_windows.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="spanmap.dot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="spanmap.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="t-test1.times.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.1024.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.128.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.131072.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.16384.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.2048.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.256.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.32768.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.4096.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.512.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.64.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.65536.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspercpusec.vs.threads.8192.bytes.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.1.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.12.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.16.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.2.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.20.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.3.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.4.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.5.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc-opspersec.vs.size.8.threads.png" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="tcmalloc.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="threadheap.dot" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="threadheap.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="pprof.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

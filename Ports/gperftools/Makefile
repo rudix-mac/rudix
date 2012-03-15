@@ -1,33 +1,12 @@
-# Fast, multi-threaded malloc() and nifty performance analysis tools
-# http://code.google.com/p/google-perftools/
-# BSD
+include ../../Library/GNU.mk
 
-NAME=		google-perftools
-VERSION=	1.1
-URL=		http://google-perftools.googlecode.com/files/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Name=		gperftools
+Version=	2.0
+Revision=	0
+URL=		http://gperftools.googlecode.com/files/
+Source=		$(Name)-$(Version).tar.gz
 
-include ../../Library/Rules.mk
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar -zxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env MACOSX_DEPLOYMENT_TARGET=10.3 \
-		CXXFLAGS="$(CXXFLAGS)" $(configure) \
-		--disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	mv $(INSTALLDIR)/usr/local/share/doc/$(NAME)-$(VERSION) \
-		$(INSTALLDIR)/usr/local/share/doc/$(NAME)
-	touch install
-
-test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	touch test
+EnvExtra += MACOSX_DEPLOYMENT_TARGET=10.3
