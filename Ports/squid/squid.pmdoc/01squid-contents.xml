@@ -32,7 +32,6 @@
           <f n="unlinkd" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="sbin" o="root" g="wheel" p="16893">
           <f n="squid" o="root" g="wheel" p="33277">
@@ -3330,6 +3329,9 @@
           </f>
         </f>
         <f n="var" o="root" g="wheel" p="16893">
+          <f n="cache" o="root" g="wheel" p="16893">
+            <mod>mode</mod>
+          </f>
           <f n="logs" o="root" g="wheel" p="16893">
             <mod>mode</mod>
           </f>

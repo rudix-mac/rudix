@@ -1,5 +1,4 @@
 #!/bin/sh
-
 [ ! -f /usr/local/etc/squid.conf ] && \
-  install -m 644 /usr/local/etc/squid.conf.default \
-  	  /usr/local/etc/squid.conf
+    install -m 644 /usr/local/etc/squid.conf.default /usr/local/etc/squid.conf
+exit 0

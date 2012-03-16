@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D7CAFCD9-64AC-11E1-97F5-D49A200B3D20">
+<pkgref spec="1.12" uuid="E259C421-6F12-11E1-9C10-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.squid</identifier>
     <version>2.7-0</version>
