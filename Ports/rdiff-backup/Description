@@ -1,0 +1,7 @@
+Rdiff-backup backs up one directory to another, possibly over a network.
+
+  * Site: http://rdiff-backup.nongnu.org/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
