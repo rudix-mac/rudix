@@ -1,224 +1,224 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
   <f n="rdiff-backup-install" o="root" g="staff" p="16877" pt="rdiff-backup-install" m="false" t="file">
-    <f n="Library" o="root" g="admin" p="17405">
-      <f n="Python" o="root" g="admin" p="16893">
-        <f n="2.6" o="root" g="admin" p="16893">
-          <f n="site-packages" o="root" g="admin" p="16893">
-            <f n="rdiff_backup" o="root" g="admin" p="16893">
-              <f n="__init__.py" o="root" g="admin" p="33204">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="rdiff_backup" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="__init__.pyc" o="root" g="admin" p="33204">
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="_librsync.so" o="root" g="admin" p="33277">
+              <f n="_librsync.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="backup.py" o="root" g="admin" p="33204">
+              <f n="backup.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="backup.pyc" o="root" g="admin" p="33204">
+              <f n="backup.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="C.so" o="root" g="admin" p="33277">
+              <f n="C.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="compare.py" o="root" g="admin" p="33204">
+              <f n="compare.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="compare.pyc" o="root" g="admin" p="33204">
+              <f n="compare.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="connection.py" o="root" g="admin" p="33204">
+              <f n="connection.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="connection.pyc" o="root" g="admin" p="33204">
+              <f n="connection.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="eas_acls.py" o="root" g="admin" p="33204">
+              <f n="eas_acls.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="eas_acls.pyc" o="root" g="admin" p="33204">
+              <f n="eas_acls.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="FilenameMapping.py" o="root" g="admin" p="33204">
+              <f n="FilenameMapping.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="FilenameMapping.pyc" o="root" g="admin" p="33204">
+              <f n="FilenameMapping.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fs_abilities.py" o="root" g="admin" p="33204">
+              <f n="fs_abilities.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="fs_abilities.pyc" o="root" g="admin" p="33204">
+              <f n="fs_abilities.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Globals.py" o="root" g="admin" p="33204">
+              <f n="Globals.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Globals.pyc" o="root" g="admin" p="33204">
+              <f n="Globals.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Hardlink.py" o="root" g="admin" p="33204">
+              <f n="Hardlink.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Hardlink.pyc" o="root" g="admin" p="33204">
+              <f n="Hardlink.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="hash.py" o="root" g="admin" p="33204">
+              <f n="hash.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="hash.pyc" o="root" g="admin" p="33204">
+              <f n="hash.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="increment.py" o="root" g="admin" p="33204">
+              <f n="increment.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="increment.pyc" o="root" g="admin" p="33204">
+              <f n="increment.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="iterfile.py" o="root" g="admin" p="33204">
+              <f n="iterfile.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="iterfile.pyc" o="root" g="admin" p="33204">
+              <f n="iterfile.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="lazy.py" o="root" g="admin" p="33204">
+              <f n="lazy.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="lazy.pyc" o="root" g="admin" p="33204">
+              <f n="lazy.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="librsync.py" o="root" g="admin" p="33204">
+              <f n="librsync.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="librsync.pyc" o="root" g="admin" p="33204">
+              <f n="librsync.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="log.py" o="root" g="admin" p="33204">
+              <f n="log.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="log.pyc" o="root" g="admin" p="33204">
+              <f n="log.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="longname.py" o="root" g="admin" p="33204">
+              <f n="longname.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="longname.pyc" o="root" g="admin" p="33204">
+              <f n="longname.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Main.py" o="root" g="admin" p="33204">
+              <f n="Main.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Main.pyc" o="root" g="admin" p="33204">
+              <f n="Main.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="manage.py" o="root" g="admin" p="33204">
+              <f n="manage.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="manage.pyc" o="root" g="admin" p="33204">
+              <f n="manage.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="metadata.py" o="root" g="admin" p="33204">
+              <f n="metadata.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="metadata.pyc" o="root" g="admin" p="33204">
+              <f n="metadata.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Rdiff.py" o="root" g="admin" p="33204">
+              <f n="Rdiff.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Rdiff.pyc" o="root" g="admin" p="33204">
+              <f n="Rdiff.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="regress.py" o="root" g="admin" p="33204">
+              <f n="regress.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="regress.pyc" o="root" g="admin" p="33204">
+              <f n="regress.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="restore.py" o="root" g="admin" p="33204">
+              <f n="restore.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="restore.pyc" o="root" g="admin" p="33204">
+              <f n="restore.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="robust.py" o="root" g="admin" p="33204">
+              <f n="robust.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="robust.pyc" o="root" g="admin" p="33204">
+              <f n="robust.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="rorpiter.py" o="root" g="admin" p="33204">
+              <f n="rorpiter.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="rorpiter.pyc" o="root" g="admin" p="33204">
+              <f n="rorpiter.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="rpath.py" o="root" g="admin" p="33204">
+              <f n="rpath.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="rpath.pyc" o="root" g="admin" p="33204">
+              <f n="rpath.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Security.py" o="root" g="admin" p="33204">
+              <f n="Security.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Security.pyc" o="root" g="admin" p="33204">
+              <f n="Security.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="selection.py" o="root" g="admin" p="33204">
+              <f n="selection.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="selection.pyc" o="root" g="admin" p="33204">
+              <f n="selection.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="SetConnections.py" o="root" g="admin" p="33204">
+              <f n="SetConnections.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="SetConnections.pyc" o="root" g="admin" p="33204">
+              <f n="SetConnections.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="static.py" o="root" g="admin" p="33204">
+              <f n="static.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="static.pyc" o="root" g="admin" p="33204">
+              <f n="static.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="statistics.py" o="root" g="admin" p="33204">
+              <f n="statistics.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="statistics.pyc" o="root" g="admin" p="33204">
+              <f n="statistics.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="TempFile.py" o="root" g="admin" p="33204">
+              <f n="TempFile.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="TempFile.pyc" o="root" g="admin" p="33204">
+              <f n="TempFile.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Time.py" o="root" g="admin" p="33204">
+              <f n="Time.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="Time.pyc" o="root" g="admin" p="33204">
+              <f n="Time.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="user_group.py" o="root" g="admin" p="33204">
+              <f n="user_group.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="user_group.pyc" o="root" g="admin" p="33204">
+              <f n="user_group.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="win_acls.py" o="root" g="admin" p="33204">
+              <f n="win_acls.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="win_acls.pyc" o="root" g="admin" p="33204">
+              <f n="win_acls.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
             </f>
-            <f n="rdiff_backup-1.2.8-py2.6.egg-info" o="root" g="admin" p="33204">
+            <f n="rdiff_backup-1.2.8-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
           </f>
@@ -226,8 +226,8 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="rdiff-backup" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
