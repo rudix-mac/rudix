@@ -4,25 +4,49 @@
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
-          <f n="cjpeg" o="root" g="wheel" p="33261"/>
-          <f n="djpeg" o="root" g="wheel" p="33261"/>
-          <f n="jpegtran" o="root" g="wheel" p="33261"/>
-          <f n="rdjpgcom" o="root" g="wheel" p="33261"/>
-          <f n="wrjpgcom" o="root" g="wheel" p="33261"/>
+          <f n="cjpeg" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="djpeg" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="jpegtran" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="rdjpgcom" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="wrjpgcom" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
-        <f n="include" o="root" g="wheel" p="16877">
-          <f n="jconfig.h" o="root" g="wheel" p="33188"/>
-          <f n="jerror.h" o="root" g="wheel" p="33188"/>
-          <f n="jmorecfg.h" o="root" g="wheel" p="33188"/>
-          <f n="jpeglib.h" o="root" g="wheel" p="33188"/>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="jconfig.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="jerror.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="jmorecfg.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="jpeglib.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
         </f>
-        <f n="lib" o="root" g="wheel" p="16877">
+        <f n="lib" o="root" g="wheel" p="16893">
           <f n="libjpeg.8.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libjpeg.a" o="root" g="wheel" p="33188"/>
-          <f n="libjpeg.dylib" o="root" g="wheel" p="33261"/>
-          <f n="libjpeg.la" o="root" g="wheel" p="33261"/>
+          <f n="libjpeg.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libjpeg.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libjpeg.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -35,11 +59,21 @@
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="cjpeg.1" o="root" g="wheel" p="33188"/>
-              <f n="djpeg.1" o="root" g="wheel" p="33188"/>
-              <f n="jpegtran.1" o="root" g="wheel" p="33188"/>
-              <f n="rdjpgcom.1" o="root" g="wheel" p="33188"/>
-              <f n="wrjpgcom.1" o="root" g="wheel" p="33188"/>
+              <f n="cjpeg.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="djpeg.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jpegtran.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rdjpgcom.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wrjpgcom.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
         </f>

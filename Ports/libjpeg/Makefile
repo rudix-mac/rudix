@@ -1,15 +1,13 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		LibJpeg
 Name=		libjpeg
-Version=	8c
-Revision=	1
+Version=	8d
+Revision=	0
 URL=		http://www.ijg.org/files/
 Source=		jpegsrc.v$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/README
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/README
 
 UncompressedName= jpeg-$(Version)
