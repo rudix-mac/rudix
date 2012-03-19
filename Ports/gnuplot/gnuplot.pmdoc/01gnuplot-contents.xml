@@ -1,27 +1,16 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="gnuplot-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/src/rudix.svn/Ports/gnuplot/gnuplot-install" m="false" t="file">
+  <f n="gnuplot-install" o="root" g="staff" p="16877" pt="gnuplot-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="gnuplot" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-        </f>
-        <f n="lib" o="root" g="wheel" p="16893">
-          <f n="X11" o="root" g="wheel" p="16893">
-            <f n="app-defaults" o="root" g="wheel" p="16893">
-              <f n="Gnuplot" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
-            </f>
             <mod>mode</mod>
           </f>
         </f>
         <f n="libexec" o="root" g="wheel" p="16893">
           <f n="gnuplot" o="root" g="wheel" p="16893">
-            <f n="4.2" o="root" g="wheel" p="16893">
+            <f n="4.6" o="root" g="wheel" p="16893">
               <f n="gnuplot_x11" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
@@ -33,16 +22,16 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="gnuplot" o="root" g="wheel" p="16893">
-              <f n="BUGS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="Copyright" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="FAQ" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.gnu" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -51,7 +40,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
+              <f n="README.1ST" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -80,8 +69,77 @@
             </f>
           </f>
           <f n="gnuplot" o="root" g="wheel" p="16893">
-            <f n="4.2" o="root" g="wheel" p="16893">
+            <f n="4.6" o="root" g="wheel" p="16893">
+              <f n="app-defaults" o="root" g="wheel" p="16893">
+                <f n="Gnuplot" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="colors_default.gp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="colors_mono.gp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="colors_podo.gp" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="gnuplot.gih" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuplot.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gnuplotrc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="js" o="root" g="wheel" p="16893">
+                <f n="canvasmath.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="canvastext.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuplot_common.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuplot_dashedlines.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuplot_mouse.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuplot_mouse.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gnuplot_svg.js" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="grid.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="help.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="nextzoom.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="previouszoom.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="README" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="textzoom.png" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="lua" o="root" g="wheel" p="16893">
+                <f n="gnuplot-tikz.lua" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <mod>mode</mod>
               </f>
               <f n="PostScript" o="root" g="wheel" p="16893">
@@ -94,7 +152,16 @@
                 <f n="8859-2.ps" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="8859-9.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="aglfn.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="cp1250.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cp1251.ps" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cp437.ps" o="root" g="wheel" p="33204">
@@ -113,6 +180,9 @@
                   <mod>mode</mod>
                 </f>
                 <f n="prologue.ps" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="utf-8.ps" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <mod>mode</mod>
