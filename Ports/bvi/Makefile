@@ -11,5 +11,5 @@ ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/COPYING
 
 define final_inner_hook
-/usr/local/bin/bvi --version
+/usr/local/bin/bvi -c q
 endef
