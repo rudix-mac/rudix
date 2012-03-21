@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/UnixFormula.mk
+include ../../Library/Unix.mk
 
 Title=		Artistic Style
 Name=		astyle
@@ -12,7 +10,7 @@ Source=		$(Name)_$(Version)_macosx.tar.gz
 ReadMeFile=	$(SourceDir)/doc/index.html
 LicenseFile=	$(SourceDir)/doc/license.html
 
-UncompressedName=$(Name)
+UncompressedName = $(Name)
 BuildDir=	$(SourceDir)/build/mac
 
 MakeInstallExtra += prefix=$(InstallDir)$(Prefix)
