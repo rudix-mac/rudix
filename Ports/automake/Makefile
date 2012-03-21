@@ -1,9 +1,7 @@
-# Autoconf 2.61a-341 or better is required.
+# Autoconf 2.61a-341 or greater
 BuildRequires += $(BinDir)/autoconf
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		GNU Automake
 Name=		automake
