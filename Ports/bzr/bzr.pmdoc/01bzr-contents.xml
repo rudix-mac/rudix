@@ -5,7 +5,7 @@
       <f n="Python" o="root" g="wheel" p="16877">
         <f n="2.7" o="root" g="wheel" p="16877">
           <f n="site-packages" o="root" g="wheel" p="16877">
-            <f n="bzr-2.4.2-py2.7.egg-info" o="root" g="wheel" p="33204">
+            <f n="bzr-2.5.0-py2.7.egg-info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="bzrlib" o="root" g="wheel" p="16893">
@@ -253,6 +253,12 @@
                   </f>
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
+              </f>
+              <f n="bzr_distutils.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="bzr_distutils.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="bzrdir.py" o="root" g="wheel" p="33204">
@@ -510,6 +516,12 @@
               <f n="errors.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="estimate_compressed_size.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="estimate_compressed_size.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="export" o="root" g="wheel" p="16893">
                 <f n="__init__.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -559,6 +571,12 @@
                 <mod>mode</mod>
               </f>
               <f n="fifo_cache.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filter_tree.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="filter_tree.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="filters" o="root" g="wheel" p="16893">
@@ -653,9 +671,6 @@
                   <f n="eol.txt" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="location-alias.txt" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="log-formats.txt" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -663,6 +678,9 @@
                     <mod>mode</mod>
                   </f>
                   <f n="rules.txt" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="url-special-chars.txt" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <mod>mode</mod>
@@ -1123,6 +1141,36 @@
                   </f>
                   <mod>mode</mod>
                 </f>
+                <f n="po_merge" o="root" g="wheel" p="16893">
+                  <f n="__init__.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="po_merge.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="po_merge.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tests" o="root" g="wheel" p="16893">
+                    <f n="__init__.py" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="test_po_merge.py" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="test_po_merge.pyc" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
                 <f n="weave_fmt" o="root" g="wheel" p="16893">
                   <f n="__init__.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
@@ -1402,6 +1450,12 @@
                 <f n="server.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="signals.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="signals.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="vfs.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -1544,6 +1598,12 @@
                   <f n="test_branch.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="test_branches.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_branches.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="test_break_lock.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -1650,6 +1710,12 @@
                     <mod>mode</mod>
                   </f>
                   <f n="test_export.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_export_pot.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_export_pot.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_filesystem_cicp.py" o="root" g="wheel" p="33204">
@@ -1770,6 +1836,12 @@
                     <mod>mode</mod>
                   </f>
                   <f n="test_missing.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_mkdir.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_mkdir.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_modified.py" o="root" g="wheel" p="33204">
@@ -1938,6 +2010,12 @@
                     <mod>mode</mod>
                   </f>
                   <f n="test_shared_repository.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_shell_complete.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_shell_complete.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_shelve.py" o="root" g="wheel" p="33204">
@@ -2579,6 +2657,12 @@
                   <f n="test_compare.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="test_file_content_matches.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_file_content_matches.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <mod>mode</mod>
                 </f>
                 <f n="per_inventory" o="root" g="wheel" p="16893">
@@ -2672,12 +2756,6 @@
                   <f n="test_file_graph.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="test_fileid_involved.py" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_fileid_involved.pyc" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="test_get_parent_map.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -2708,12 +2786,6 @@
                   <f n="test_locking.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="test_merge_directive.py" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="test_merge_directive.pyc" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="test_pack.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -2742,6 +2814,12 @@
                     <mod>mode</mod>
                   </f>
                   <f n="test_revision.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_signatures.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_signatures.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_statistics.py" o="root" g="wheel" p="33204">
@@ -2921,16 +2999,34 @@
                   <f n="test_fetch.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="test_fileid_involved.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_fileid_involved.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="test_find_text_key_references.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_find_text_key_references.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="test_merge_directive.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_merge_directive.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="test_reconcile.py" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_reconcile.pyc" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_refresh_data.py" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="test_refresh_data.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="test_repository.py" o="root" g="wheel" p="33204">
@@ -3667,6 +3763,12 @@
                 <f n="test_errors.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="test_estimate_compressed_size.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_estimate_compressed_size.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="test_export.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -3685,6 +3787,12 @@
                 <f n="test_extract.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="test_features.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_features.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="test_fetch.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -3695,6 +3803,12 @@
                   <mod>mode</mod>
                 </f>
                 <f n="test_fifo_cache.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_filter_tree.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_filter_tree.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="test_filters.py" o="root" g="wheel" p="33204">
@@ -3791,6 +3905,12 @@
                   <mod>mode</mod>
                 </f>
                 <f n="test_https_ca_bundle.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_https_urllib.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_https_urllib.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="test_i18n.py" o="root" g="wheel" p="33204">
@@ -4273,6 +4393,12 @@
                 <f n="test_smart_request.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="test_smart_signals.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_smart_signals.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="test_smart_transport.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -4453,6 +4579,12 @@
                 <f n="test_upgrade_stacked.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="test_url_policy_open.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_url_policy_open.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="test_urlutils.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -4481,6 +4613,12 @@
                   <mod>mode</mod>
                 </f>
                 <f n="test_versionedfile.pyc" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_vf_search.py" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="test_vf_search.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="test_weave.py" o="root" g="wheel" p="33204">
@@ -4815,6 +4953,12 @@
               <f n="upgrade.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="url_policy_open.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="url_policy_open.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="urlutils.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -4851,57 +4995,6 @@
                     <mod>mode</mod>
                   </f>
                   <f n="configobj.pyc" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <mod>mode</mod>
-                </f>
-                <f n="effbot" o="root" g="wheel" p="16893">
-                  <f n="__init__.py" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="org" o="root" g="wheel" p="16893">
-                    <f n="__init__.py" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="gzip_consumer.py" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="gzip_consumer.pyc" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="http_client.py" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="http_client.pyc" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="http_manager.py" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <f n="http_manager.pyc" o="root" g="wheel" p="33204">
-                      <mod>mode</mod>
-                    </f>
-                    <mod>mode</mod>
-                  </f>
-                  <mod>mode</mod>
-                </f>
-                <f n="elementtree" o="root" g="wheel" p="16893">
-                  <f n="__init__.py" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="ElementTree.py" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="ElementTree.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <mod>mode</mod>
@@ -4966,6 +5059,12 @@
                 <mod>mode</mod>
               </f>
               <f n="vf_repository.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vf_search.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="vf_search.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="views.py" o="root" g="wheel" p="33204">
