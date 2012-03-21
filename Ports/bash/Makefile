@@ -18,3 +18,7 @@ cd $(InstallDir)$(Prefix)/share/man/man1 ; ln -sf bash.1 bash4.1
 install -m 644 $(SourceDir)/{COMPAT,POSIX,RBASH,Y2K} $(InstallDir)/$(DocDir)/$(Name)
 chmod 755 $(InstallDir)$(BinDir)/bashbug
 endef
+
+define final_inner_hook
+/usr/local/bin/bash --version
+endef
