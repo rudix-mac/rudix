@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="pychecker-install" o="root" g="staff" p="16877" pt="pychecker-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="pychecker" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="checker.py" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="checker.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="checker.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CodeChecks.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CodeChecks.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CodeChecks.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Config.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Config.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Config.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="function.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="function.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="function.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="KNOWN_BUGS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="MAINTAINERS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgs.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgs.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="msgs.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OP.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OP.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OP.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="options.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="options.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="options.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OptionTypes.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OptionTypes.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="OptionTypes.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcmodules.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcmodules.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcmodules.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printer.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printer.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="printer.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pychecker.doap" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="python.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="python.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="python.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Stack.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Stack.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Stack.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="TODO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="utils.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="VERSION" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="warn.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="warn.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="warn.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Warning.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Warning.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="Warning.pyo" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="pychecker-0.8.19-py2.7.egg-info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="pychecker" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="pychecker" o="root" g="wheel" p="16893">
+              <f n="COPYRIGHT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
