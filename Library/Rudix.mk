@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120312
+BuildSystem = 20120320
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -118,11 +118,20 @@ pkg: test install check
 	@$(call info_color,Done)
 	@touch pkg
 
+# Final test (post-pkg tests)
+final: pkg
+	@$(call info_color,Finally)
+	@$(call final_pre_hook)
+	@$(call final_inner_hook)
+	@$(call final_post_hook)
+	@$(call info_color,Done)
+	@touch final
+
 installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg
+	rm -rf pkg *.pkg final
 
 clean: installclean
 	rm -rf prep build test check $(SourceDir)
@@ -325,4 +334,13 @@ endef
 define check_inner_hook
 $(test_universal)
 $(test_documentation)
+endef
+
+define final_pre_hook
+sudo rudix remove $(DistName)
+sudo rudix install $(PkgFile)
+endef
+
+define final_post_hook
+sudo rudix remove $(DistName)
 endef
