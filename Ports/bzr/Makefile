@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
 Title=		Bazaar
 Name=		bzr
@@ -11,3 +9,7 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING.txt
+
+define final_inner_hook
+/usr/local/bin/bzr
+endef
