@@ -4,4 +4,4 @@ Bash is the shell, or command language interpreter, that will appear in the GNU 
   * License: GPL
 
 Release Notes:
-  * Applied patches bash42-001 to bash42-020
+  * Applied patches from bash42-021 to bash42-024

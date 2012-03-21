@@ -1,11 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		GNU Bash
 Name=		bash
 Version=	4.2
-Revision=	2
+Revision=	3
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 
