@@ -1,8 +1,6 @@
 #BuildRequires += /usr/local/lib/libapr-1.la
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		APR-util
 Name=		apr-util
