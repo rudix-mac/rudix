@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="lame-install" o="ruda" g="staff" p="16877" pt="lame-install" m="false" t="file">
+  <f n="lame-install" o="root" g="staff" p="16877" pt="lame-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="lame" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -17,10 +17,7 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libmp3lame.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libmp3lame.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libmp3lame.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libmp3lame.a" o="root" g="wheel" p="33204">
@@ -36,43 +33,61 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="lame" o="root" g="wheel" p="16893">
-              <f n="API" o="root" g="wheel" p="33204">
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="html" o="root" g="wheel" p="16893">
-                <f n="basic.html" o="root" g="wheel" p="33204">
+                <f n="about.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="abr.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="cbr.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="contact.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="contributors.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="examples.html" o="root" g="wheel" p="33204">
+                <f n="detailed.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="history.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="id3.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <f n="index.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="lame.css" o="root" g="wheel" p="33204">
+                <f n="introduction.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="modes.html" o="root" g="wheel" p="33204">
+                <f n="links.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="node6.html" o="root" g="wheel" p="33204">
+                <f n="list.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="switchs.html" o="root" g="wheel" p="33204">
+                <f n="ms_stereo.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="usage.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="vbr.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL.configure" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="LICENSE" o="root" g="wheel" p="33204">
@@ -81,13 +96,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="STYLEGUIDE" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="USAGE" o="root" g="wheel" p="33204">
+              <f n="README.WINGTK" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
