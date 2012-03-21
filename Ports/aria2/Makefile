@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		aria2
 Name=		aria2
-Version=	1.14.1
+Version=	1.14.2
 Revision=	0
 URL=		http://downloads.sourceforge.net/aria2
 Source=		$(Name)-$(Version).tar.bz2
