@@ -306,7 +306,6 @@
             </f>
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
