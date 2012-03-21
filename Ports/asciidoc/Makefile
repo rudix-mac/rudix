@@ -19,3 +19,7 @@ endef
 define test_inner_hook
 echo Nothing to test here
 endef
+
+define final_inner_hook
+/usr/local/bin/asciidoc
+endef
