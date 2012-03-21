@@ -8,6 +8,7 @@ pmdoc
 test
 check
 pkg
+final
 *~
 *.pkg
 *-install
