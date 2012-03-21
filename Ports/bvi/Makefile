@@ -1,21 +1,15 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Bvi
 Name=		bvi
 Version=	1.3.2
-Revision=	8
+Revision=	9
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).src.tar.gz
 
 ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/COPYING
 
-define post_install_hook
-cp -a $(BUILDDIR)/html $(INSTALLDOCDIR)
-endef
-
-define test_inner_hook
-$(if $(RUDIX_UNIVERSAL),$(call test_universal))
+define final_inner_hook
+/usr/local/bin/bvi --version
 endef
