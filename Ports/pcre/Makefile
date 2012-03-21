@@ -1,10 +1,8 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		PCRE
 Name=		pcre
-Version=	8.21
+Version=	8.30
 Revision=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		$(Name)-$(Version).tar.bz2

@@ -2,7 +2,7 @@
 <pkg-contents spec="1.12">
   <f n="pcre-install" o="root" g="staff" p="16877" pt="pcre-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="pcre-config" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -35,7 +35,7 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libpcre.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libpcre.1.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libpcre.a" o="root" g="wheel" p="33204">
@@ -105,6 +105,9 @@
                 <f n="pcre.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pcre16.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="pcre_assign_jit_stack.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -156,9 +159,6 @@
                 <f n="pcre_get_substring_list.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="pcre_info.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <f n="pcre_jit_stack_alloc.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -168,10 +168,16 @@
                 <f n="pcre_maketables.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="pcre_pattern_to_host_byte_order.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="pcre_refcount.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_study.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pcre_utf16_to_host_byte_order.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="pcre_version.html" o="root" g="wheel" p="33204">
@@ -237,6 +243,7 @@
                 <f n="pcreunicode.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
               <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -262,6 +269,7 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
@@ -278,6 +286,84 @@
             </f>
             <f n="man3" o="root" g="wheel" p="16893">
               <f n="pcre.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_assign_jit_stack.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_compile.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_compile2.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_config.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_copy_named_substring.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_copy_substring.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_dfa_exec.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_exec.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_free_study.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_free_substring.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_free_substring_list.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_fullinfo.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_get_named_substring.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_get_stringnumber.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_get_stringtable_entries.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_get_substring.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_get_substring_list.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_jit_stack_alloc.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_jit_stack_free.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_maketables.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_pattern_to_host_byte_order.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_refcount.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_study.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_utf16_to_host_byte_order.3" o="root" g="wheel" p="41396">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre16_version.3" o="root" g="wheel" p="41396">
                 <mod>mode</mod>
               </f>
               <f n="pcre_assign_jit_stack.3" o="root" g="wheel" p="33204">
@@ -331,9 +417,6 @@
               <f n="pcre_get_substring_list.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="pcre_info.3" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="pcre_jit_stack_alloc.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -343,10 +426,16 @@
               <f n="pcre_maketables.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="pcre_pattern_to_host_byte_order.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pcre_refcount.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pcre_study.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pcre_utf16_to_host_byte_order.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="pcre_version.3" o="root" g="wheel" p="33204">

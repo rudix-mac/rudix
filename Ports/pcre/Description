@@ -1,11 +1,7 @@
 The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 
-Site: http://www.pcre.org/
-License: BSD
+  * Site: http://www.pcre.org/
+  * License: BSD
 
-Changes from previous release:
-* Upgraded to version 8.21
-
-Usage:
-$ /usr/local/bin/pcre-config
-$ /usr/local/bin/pcregrep
+Release Notes:
+  * Upgraded to version 8.30
