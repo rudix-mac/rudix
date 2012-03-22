@@ -1,5 +1,5 @@
 # Config.mk - Global configuration
-
+RUDIX=rudix
 RUDIX_UNIVERSAL=yes
 RUDIX_DISABLE_DEPENDENCY_TRACKING=yes
 RUDIX_SAVE_CONFIGURE_CACHE=yes

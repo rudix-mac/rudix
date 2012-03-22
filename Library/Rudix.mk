@@ -151,9 +151,9 @@ wiki:
 		../../Library/mkwikipage.py
 	@mv -vf *.wiki ../../Wiki/
 
-upload: pkg
+upload: pkg final
 	@$(call info_color,Sending $(PkgFile))
-	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
+	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	hg tag -f $(DistName)-$(Version)-$(Revision)
 	#twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
 	@$(call info_color,Finished)
