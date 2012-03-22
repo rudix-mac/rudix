@@ -39,3 +39,11 @@ mv $(InstallDir)/$(LibDir)/activemq/webapps \
 rm -rf $(InstallDir)/$(LibDir)/activemq/example
 rm -rf $(InstallDir)/$(LibDir)/activemq/data/*
 endef
+
+define final_inner_hook
+sudo /usr/local/bin/activemq start
+sleep 10
+sudo /usr/local/bin/activemq status
+sudo /usr/local/bin/activemq stop
+sleep 10
+endef
