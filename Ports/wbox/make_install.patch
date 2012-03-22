@@ -1,0 +1,10 @@
+--- Makefile.orig	2012-03-22 17:16:38.000000000 -0300
++++ Makefile	2012-03-22 17:17:46.000000000 -0300
+@@ -23,3 +23,7 @@
+ 
+ dep:
+ 	$(CC) -MM *.c
++
++install: wbox
++	install -d -m 775 $(DESTDIR)/usr/local/bin
++	install -m 775 wbox $(DESTDIR)/usr/local/bin
