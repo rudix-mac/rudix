@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="activemq-install" o="root" g="staff" p="16877" pt="activemq-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="activemq" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="activemq" o="root" g="wheel" p="16893">
+            <f n="activemq-all-5.5.1.jar" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="bin" o="root" g="wheel" p="16893">
+              <f n="activemq" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-admin" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="macosx" o="root" g="wheel" p="16893">
+                <f n="activemq" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="libwrapper.jnilib" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="wrapper" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="wrapper.conf" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="run.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="wrapper.jar" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="conf.default" o="root" g="wheel" p="16893">
+              <f n="activemq-command.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-demo.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-dynamic-network-broker1.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-dynamic-network-broker2.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-jdbc.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-scalability.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-security.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-specjms.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-static-network-broker1.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-static-network-broker2.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-stomp.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-throughput.xml" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq.xml" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="broker-localhost.cert" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="broker.ks" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="broker.ts" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="camel.xml" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="client.ks" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="client.ts" o="root" g="wheel" p="33277">
+                <mod>mode</mod>
+              </f>
+              <f n="credentials-enc.properties" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="credentials.properties" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jetty-realm.properties" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jetty.xml" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jmx.access" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jmx.password" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="log4j.properties" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logging.properties" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="data" o="root" g="wheel" p="16893">
+              <mod>mode</mod>
+            </f>
+            <f n="docs" o="root" g="wheel" p="16893">
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="lib" o="root" g="wheel" p="16893">
+              <f n="activation-1.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-camel-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-console-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-core-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-jaas-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-protobuf-1.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-rar.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="activemq-web-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="camel-core-2.7.0.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="camel-jetty-2.7.0.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="camel-jms-2.7.0.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="camel-spring-2.7.0.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="geronimo-j2ee-management_1.1_spec-1.0.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="geronimo-jms_1.1_spec-1.1.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="geronimo-jta_1.0.1B_spec-1.0.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jaxb-api-2.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jaxb-impl-2.1.6.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="jcl-over-slf4j-1.5.11.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kahadb-5.5.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="optional" o="root" g="wheel" p="16893">
+                <f n="activeio-core-3.1.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="activemq-jmdns_1.0-5.5.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="activemq-optional-5.5.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="activemq-pool-5.5.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="activemq-spring-5.5.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="activemq-xmpp-5.5.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-beanutils-1.6.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-codec-1.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-collections-3.2.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-dbcp-1.2.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-httpclient-3.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-lang-2.4.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-net-2.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-pool-1.5.4.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="geronimo-j2ee-connector_1.5_spec-2.0.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jasypt-1.7.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jettison-1.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="josql-1.5.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="log4j-1.2.14.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="slf4j-log4j12-1.5.11.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-aop-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-asm-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-beans-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-context-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-core-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-expression-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-jms-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-oxm-tiger-1.5.8.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-tx-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stax2-api-3.0.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="velocity-1.6.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="woodstox-core-asl-4.0.7.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xbean-spring-3.7.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xpp3-1.1.4c.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xstream-1.3.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="slf4j-api-1.5.11.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stax-1.2.0.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="stax-api-1.0.1.jar" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="web" o="root" g="wheel" p="16893">
+                <f n="commons-management-1.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="core-3.1.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="geronimo-servlet_2.5_spec-1.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jdom-1.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-all-server-7.1.6.v20100715.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-websocket-7.1.6.v20100715.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jsp-2.1-glassfish-2.1.v20100127.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jsp-api-2.1-glassfish-2.1.v20100127.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rome-0.8.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="sitemesh-2.2.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-web-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-webmvc-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="LICENSE" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="NOTICE" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="README.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="user-guide.html" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="webapps.default" o="root" g="wheel" p="16893">
+              <f n="admin" o="root" g="wheel" p="16893">
+                <f n="404.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="500.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="browse.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="connection.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="connections.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="decorators" o="root" g="wheel" p="16893">
+                  <f n="main.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="panel.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="printable.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="graph.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="images" o="root" g="wheel" p="16893">
+                  <f n="activemq-logo.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="asf-logo.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="big-bullet.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="black-footer-bottom.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="black-footer-left.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="black-footer-right.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="bottom-red-bar.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="checker-bg.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="content-left.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="content-right.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="feed_atom.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="feed_rss.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="left-box-bottom.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="left-box-right.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="left-box-top.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="oval-arrow.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="right-box-bottom.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="right-box-left.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="right-box-top.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="small-bullet-gray.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="small-bullet-red.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="spacer.gif" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="top-red-bar.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="white-header-left.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="white-header-right.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="white-header-top.png" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="index.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="js" o="root" g="wheel" p="16893">
+                  <f n="common.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="css.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="mochi" o="root" g="wheel" p="16893">
+                    <f n="__package__.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="MochiKit.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="plotkit" o="root" g="wheel" p="16893">
+                    <f n="Base.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Canvas.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="dummy.svg" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="iecanvas.htc" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="Layout.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="SVG.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="SweetCanvas.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="SweetSVG.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="prettify.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="standardista-table-sorting.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="message.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="META-INF" o="root" g="wheel" p="16893">
+                  <f n="LICENSE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="NOTICE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="network.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="queueConsumers.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="queueGraph.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="queues.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="scheduled.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="send.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="styles" o="root" g="wheel" p="16893">
+                  <f n="prettify.css" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="site.css" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="sorttable.css" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="type-settings.css" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="subscribers.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test" o="root" g="wheel" p="16893">
+                  <f n="dummy.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="systemProperties.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="topics.jsp" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="WEB-INF" o="root" g="wheel" p="16893">
+                  <f n="classes" o="root" g="wheel" p="16893">
+                    <f n="org" o="root" g="wheel" p="16893">
+                      <f n="apache" o="root" g="wheel" p="16893">
+                        <f n="activemq" o="root" g="wheel" p="16893">
+                          <f n="web" o="root" g="wheel" p="16893">
+                            <f n="controller" o="root" g="wheel" p="16893">
+                              <f n="CopyMessage.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="CreateDestination.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="CreateSubscriber.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="DeleteDestination.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="DeleteJob.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="DeleteMessage.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="DeleteSubscriber.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="MoveMessage.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="PurgeDestination.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="SendMessage.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <mod>mode</mod>
+                            </f>
+                            <f n="filter" o="root" g="wheel" p="16893">
+                              <f n="ApplicationContextFilter$1.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="ApplicationContextFilter$2.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <f n="ApplicationContextFilter.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <mod>mode</mod>
+                            </f>
+                            <f n="handler" o="root" g="wheel" p="16893">
+                              <f n="BindingBeanNameUrlHandlerMapping.class" o="root" g="wheel" p="33277">
+                                <mod>mode</mod>
+                              </f>
+                              <mod>mode</mod>
+                            </f>
+                            <f n="WebConsoleStarter.class" o="root" g="wheel" p="33277">
+                              <mod>mode</mod>
+                            </f>
+                            <mod>mode</mod>
+                          </f>
+                          <mod>mode</mod>
+                        </f>
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="decorators.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="dispatcher-servlet.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="jsp" o="root" g="wheel" p="16893">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="jspf" o="root" g="wheel" p="16893">
+                    <f n="headertags.jspf" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="old.jspf" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tags" o="root" g="wheel" p="16893">
+                    <f n="form" o="root" g="wheel" p="16893">
+                      <f n="checkbox.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="forEachMapEntry.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="option.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="short.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="text.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="tooltip.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="uri.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <f n="jms" o="root" g="wheel" p="16893">
+                      <f n="forEachConnection.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="forEachMessage.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="formatTimestamp.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <f n="persistent.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="web.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-default.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-embedded.xml" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-invm.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-jndi.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-properties.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webconsole-query.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="xml" o="root" g="wheel" p="16893">
+                  <f n="queues.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="topics.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="demo" o="root" g="wheel" p="16893">
+                <f n="chat.css" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="chat.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="index.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="js" o="root" g="wheel" p="16893">
+                  <f n="amq.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="amq_dojo_adapter.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="amq_jquery_adapter.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="amq_prototype_adapter.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="chat.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="dojo.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="jquery-1.4.2.min.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="prototype.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="META-INF" o="root" g="wheel" p="16893">
+                  <f n="LICENSE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="NOTICE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="portfolio" o="root" g="wheel" p="16893">
+                  <f n="portfolio.html" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="portfolio.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="sandbox" o="root" g="wheel" p="16893">
+                  <f n="index.html" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="portfolio.html" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="portfolio.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="util.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="webmq.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="send.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="style.css" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="test" o="root" g="wheel" p="16893">
+                  <f n="amq_test.html" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="assets" o="root" g="wheel" p="16893">
+                    <f n="jsunittest.js" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="README" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="unittest.css" o="root" g="wheel" p="33277">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="WEB-INF" o="root" g="wheel" p="16893">
+                  <f n="web.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="favicon.ico" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="fileserver" o="root" g="wheel" p="16893">
+                <f n="index.html" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="META-INF" o="root" g="wheel" p="16893">
+                  <f n="LICENSE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="NOTICE" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="WEB-INF" o="root" g="wheel" p="16893">
+                  <f n="classes" o="root" g="wheel" p="16893">
+                    <f n="org" o="root" g="wheel" p="16893">
+                      <f n="apache" o="root" g="wheel" p="16893">
+                        <f n="activemq" o="root" g="wheel" p="16893">
+                          <f n="util" o="root" g="wheel" p="16893">
+                            <f n="FilenameGuardFilter$GuardedHttpServletRequest.class" o="root" g="wheel" p="33277">
+                              <mod>mode</mod>
+                            </f>
+                            <f n="FilenameGuardFilter.class" o="root" g="wheel" p="33277">
+                              <mod>mode</mod>
+                            </f>
+                            <f n="IOHelper.class" o="root" g="wheel" p="33277">
+                              <mod>mode</mod>
+                            </f>
+                            <f n="RestFilter.class" o="root" g="wheel" p="33277">
+                              <mod>mode</mod>
+                            </f>
+                            <mod>mode</mod>
+                          </f>
+                          <mod>mode</mod>
+                        </f>
+                        <mod>mode</mod>
+                      </f>
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="web.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="index.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="styles" o="root" g="wheel" p="16893">
+                <f n="site.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="type-settings.css" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="WebConsole-README.txt" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>

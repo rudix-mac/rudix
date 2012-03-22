@@ -1,0 +1,13 @@
+#!/bin/sh
+# -*- mode: shell-script -*-
+if [ ! -d /usr/local/lib/activemq/conf ] ; then
+    install -d -m 775 /usr/local/lib/activemq/conf
+    cp -a /usr/local/lib/activemq/conf.default/* \
+	/usr/local/lib/activemq/conf/
+fi
+if [ ! -d /usr/local/lib/activemq/webapps ] ; then
+    install -d -m 775 /usr/local/lib/activemq/webapps
+    cp -a /usr/local/lib/activemq/webapps.default/* \
+	/usr/local/lib/activemq/webapps/
+fi
+exit 0
