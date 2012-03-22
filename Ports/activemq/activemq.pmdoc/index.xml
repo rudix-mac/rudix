@@ -11,7 +11,14 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Description</description>
+  <description>Apache ActiveMQ&#x2122; is the most popular and powerful open source messaging and Integration Patterns server.
+
+  * Site: http://activemq.apache.org/
+  * License: Apache
+
+Release Notes:
+  * Featuring in Rudix
+</description>
   <contents>
     <choice title="activemq-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.activemq"/>
