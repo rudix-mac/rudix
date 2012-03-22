@@ -155,7 +155,7 @@ upload: pkg
 	@$(call info_color,Sending $(PkgFile))
 	../../Library/googlecode_upload.py -p rudix -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	hg tag -f $(DistName)-$(Version)-$(Revision)
-	echo twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/downloads/detail?name=$(PkgFile)"
+	#twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
 	@$(call info_color,Finished)
 
 help:
