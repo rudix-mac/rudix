@@ -9,3 +9,8 @@ Source=		$(Name)-$(Version).tar.bz2
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
+
+define final_inner_hook
+/usr/local/bin/zipcmp -h
+/usr/local/bin/zipmerge -h
+endef
