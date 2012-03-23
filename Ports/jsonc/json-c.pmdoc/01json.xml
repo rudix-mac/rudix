@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="AB998079-7171-4C61-933C-3EC2DCDF327C">
+<pkgref spec="1.12" uuid="28217911-752D-11E1-8012-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.jsonc</identifier>
-    <version>1</version>
+    <identifier>org.rudix.pkg.json-c</identifier>
+    <version>0.9-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,10 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>parent</mod>
     <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01json-contents.xml</file-list>

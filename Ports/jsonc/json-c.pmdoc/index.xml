@@ -2,7 +2,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>JSON-C</title>
-    <organization>org.rudix.pkg</organization>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>JSON implementation in C</description>
+  <description>JSON-C implements a reference counting object model that allows you to easily construct JSON objects in C.
+
+  * Site: http://oss.metaparadigm.com/json-c/
+  * License: BSD
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="json-c-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.jsonc"/>
+      <pkgref id="org.rudix.pkg.json-c"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">json-c-0.9/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">json-c-0.9/README.html</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">json-c-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">json-c-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

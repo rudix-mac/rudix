@@ -1,0 +1,7 @@
+JSON-C implements a reference counting object model that allows you to easily construct JSON objects in C.
+
+  * Site: http://oss.metaparadigm.com/json-c/
+  * License: BSD
+
+Release Notes:
+  * Rebuild on Xcode 4.3
