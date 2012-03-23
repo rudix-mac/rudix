@@ -1,0 +1,7 @@
+Full-featured Jabber/XMPP client library written in C++.
+
+  * Site: http://camaya.net/gloox
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3

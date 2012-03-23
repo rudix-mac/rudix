@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Full-featured Jabber/XMPP client library written in C++</description>
+  <description>Full-featured Jabber/XMPP client library written in C++.
+
+  * Site: http://camaya.net/gloox
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="gloox-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.gloox"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">gloox-1.0/LICENSE</resource>
-      <resource relative="true" mod="true" type="readme">gloox-1.0/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">gloox-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">gloox-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
