@@ -1,8 +1,5 @@
 # NOTE: GNU m4 doesn't requires gettext
-
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		GNU M4
 Name=		m4
