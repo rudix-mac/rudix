@@ -1,8 +1,6 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
-Title=		virtualenv
+Title=		VirtualEnv
 Name=		virtualenv
 Version=	1.7.1.2
 Revision=	0
