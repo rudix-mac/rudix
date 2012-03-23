@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="EE89C87D-D119-11E0-883C-D49A200B3D20">
+<pkgref spec="1.12" uuid="E1282C70-7493-11E1-9ABA-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libunistring</identifier>
-    <version>0.9.3-0</version>
+    <version>0.9.3-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01libunistring-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>
