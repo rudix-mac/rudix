@@ -1,12 +1,7 @@
-BuildRequires += $(BinDir)/pkg-config
-
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
-Description=	libao: a cross platform audio library
-Site=		http://xiph.org/ao/
-License=	GPL
 Title=		Libao
 Name=		libao
 Version=	1.1.0
