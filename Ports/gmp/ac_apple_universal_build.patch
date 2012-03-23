@@ -1,0 +1,11 @@
+--- config.in.orig	2012-03-23 10:36:38.000000000 -0300
++++ config.in	2012-03-23 10:36:49.000000000 -0300
+@@ -22,7 +22,7 @@
+ */
+ 
+ /* Define if building universal (internal helper macro) */
+-#undef AC_APPLE_UNIVERSAL_BUILD
++#define AC_APPLE_UNIVERSAL_BUILD 1
+ 
+ /* The gmp-mparam.h file (a string) the tune program should suggest updating.
+    */

@@ -1,0 +1,7 @@
+GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating point numbers.
+
+  * Site: http://gmplib.org/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 5.0.4
