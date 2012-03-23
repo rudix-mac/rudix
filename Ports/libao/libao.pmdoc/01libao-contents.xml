@@ -14,7 +14,6 @@
             <f n="plugin.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
@@ -29,9 +28,7 @@
               <f n="libmacosx.so" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="libao.4.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
@@ -71,7 +68,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="libao-1.1.0" o="root" g="wheel" p="16893">
               <f n="ao_append_option.html" o="root" g="wheel" p="33204">
@@ -182,7 +178,6 @@
               <f n="style.css" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
