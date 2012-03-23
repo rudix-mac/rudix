@@ -1,5 +1,4 @@
 #!/bin/sh
-
 install -d /usr/local/nginx/html
 [ ! -f /usr/local/nginx/html/index.html ] && \
   install -m 644 /usr/local/nginx/html/index.html.default \
@@ -13,5 +12,4 @@ for x in fastcgi_params mime.types nginx.conf ; do \
     install -m 644 /usr/local/nginx/conf/$x.default \
                    /usr/local/nginx/conf/$x
 done
-
 exit 0
