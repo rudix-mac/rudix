@@ -1,10 +1,7 @@
 GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications.
 
-Site: http://www.gnu.org/software/libidn/
-License: GPL+LGPL
+  * Site: http://www.gnu.org/software/libidn/
+  * License: GPL+LGPL
 
-Changes from previous release:
-* Adopted
-
-Usage:
-$ /usr/local/bin/idn
+Release Notes:
+  * Featuring in Rudix
