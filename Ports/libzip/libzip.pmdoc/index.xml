@@ -13,12 +13,11 @@
   </distribution>
   <description>libzip is a C library for reading, creating, and modifying zip archives.
 
-Site: http://nih.at/libzip/
-License: BSD
+  * Site: http://nih.at/libzip/
+  * License: BSD
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
+Release Notes:
+  * Upgraded to version 0.10.1
 </description>
   <contents>
     <choice title="libzip-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

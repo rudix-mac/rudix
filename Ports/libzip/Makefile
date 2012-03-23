@@ -1,11 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		libzip
 Name=		libzip
-Version=	0.10
-Revision=	1
+Version=	0.10.1
+Revision=	0
 URL=		http://nih.at/libzip/
 Source=		$(Name)-$(Version).tar.bz2
 
