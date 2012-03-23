@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="gmp-install" o="root" g="staff" p="16877" pt="gmp-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="include" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="include" o="root" g="wheel" p="16893">
           <f n="gmp.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
