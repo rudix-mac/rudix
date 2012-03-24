@@ -1,45 +1,19 @@
-# Callback framework for C++
-# http://libsigc.sourceforge.net/
-# LGPL
+BuildRequires += $(BinDir)/pkg-config
 
-include ../../Library/Rules.mk
+include ../../Library/GNU.mk
 
-NAME=		libsigc++
-VERSION=	2.2.4.2
-REVISION=	0
+Title=		Libsigc++
+Name=		libsigc++
+Version=	2.2.10
+Revision=	0
 URL=		http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.2/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-DEPENDS=	/usr/local/bin/pkg-config
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifdef STATIC_ONLY
-CONFIGURE_OPTS=		--enable-static --disable-shared
-else
-CONFIGURE_OPTS=		--enable-static --enable-shared
-endif
-
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) $(CONFIGURE_OPTS) --disable-dependency-tracking ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
-ifndef STATIC_ONLY
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-endif
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
-
-test: install
-ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
-endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
-	touch test
+#ifdef STATIC_ONLY
+#CONFIGURE_OPTS=		--enable-static --disable-shared
+#else
+#CONFIGURE_OPTS=		--enable-static --enable-shared
+#endif

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>libsigc++</title>
-    <organization>org.rudix.pkg</organization>
+    <title>Libsigc++</title>
+    <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
     <domain anywhere="true"/>
@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Callback framework for C++</description>
+  <description>Libsigc++ implements a typesafe callback system for standard C++.
+
+  * Site: http://libsigc.sourceforge.net/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 2.2.10
+</description>
   <contents>
     <choice title="libsigc++-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.libsigc++"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">libsigc++-2.2.4.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">libsigc++-2.2.4.2/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">libsigc++-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">libsigc++-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

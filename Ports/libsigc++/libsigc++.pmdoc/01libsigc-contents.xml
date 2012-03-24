@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="libsigc++-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/libsigc++/libsigc++-install" m="false" t="file">
+  <f n="libsigc++-install" o="root" g="staff" p="16877" pt="libsigc++-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="sigc++-2.0" o="root" g="wheel" p="16893">
             <f n="sigc++" o="root" g="wheel" p="16893">
@@ -147,9 +147,6 @@
           <f n="libsigc-2.0.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsigc-2.0.a" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
           <f n="libsigc-2.0.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
@@ -195,13 +192,13 @@
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -224,6 +221,9 @@
                   <f n="annotated.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="bc_s.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="classes.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -239,16 +239,10 @@
                   <f n="classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4__coll__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor0-members.html" o="root" g="wheel" p="33204">
@@ -257,7 +251,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -266,7 +260,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -275,7 +269,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -284,7 +278,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -293,7 +287,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -302,7 +296,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -311,7 +305,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -320,7 +314,7 @@
                   <f n="classsigc_1_1bound__const__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor0-members.html" o="root" g="wheel" p="33204">
@@ -329,7 +323,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -338,7 +332,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -347,7 +341,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -356,7 +350,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -365,7 +359,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -374,7 +368,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -383,7 +377,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__const__volatile__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -392,7 +386,7 @@
                   <f n="classsigc_1_1bound__const__volatile__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__const__volatile__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__const__volatile__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor0-members.html" o="root" g="wheel" p="33204">
@@ -401,7 +395,7 @@
                   <f n="classsigc_1_1bound__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -410,7 +404,7 @@
                   <f n="classsigc_1_1bound__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -419,7 +413,7 @@
                   <f n="classsigc_1_1bound__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -428,7 +422,7 @@
                   <f n="classsigc_1_1bound__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -437,7 +431,7 @@
                   <f n="classsigc_1_1bound__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -446,7 +440,7 @@
                   <f n="classsigc_1_1bound__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -455,7 +449,7 @@
                   <f n="classsigc_1_1bound__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -464,7 +458,7 @@
                   <f n="classsigc_1_1bound__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor0-members.html" o="root" g="wheel" p="33204">
@@ -473,7 +467,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -482,7 +476,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -491,7 +485,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -500,7 +494,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -509,7 +503,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -518,7 +512,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -527,7 +521,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1bound__volatile__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -536,7 +530,7 @@
                   <f n="classsigc_1_1bound__volatile__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1bound__volatile__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1bound__volatile__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__limit__reference-members.html" o="root" g="wheel" p="33204">
@@ -551,16 +545,13 @@
                   <f n="classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="classsigc_1_1const__mem__functor0-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -569,7 +560,7 @@
                   <f n="classsigc_1_1const__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -578,7 +569,7 @@
                   <f n="classsigc_1_1const__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -587,7 +578,7 @@
                   <f n="classsigc_1_1const__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -596,7 +587,7 @@
                   <f n="classsigc_1_1const__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -605,7 +596,7 @@
                   <f n="classsigc_1_1const__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -614,7 +605,7 @@
                   <f n="classsigc_1_1const__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -623,7 +614,7 @@
                   <f n="classsigc_1_1const__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__limit__reference-members.html" o="root" g="wheel" p="33204">
@@ -638,16 +629,13 @@
                   <f n="classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="classsigc_1_1const__volatile__mem__functor0-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -656,7 +644,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -665,7 +653,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -674,7 +662,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -683,7 +671,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -692,7 +680,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -701,7 +689,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1const__volatile__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -710,7 +698,7 @@
                   <f n="classsigc_1_1const__volatile__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1const__volatile__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1const__volatile__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1limit__reference-members.html" o="root" g="wheel" p="33204">
@@ -725,16 +713,13 @@
                   <f n="classsigc_1_1limit__reference_3_01T__type_00_01true_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1limit__reference_3_01T__type_00_01true_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="classsigc_1_1mem__functor0-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -743,7 +728,7 @@
                   <f n="classsigc_1_1mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -752,7 +737,7 @@
                   <f n="classsigc_1_1mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -761,7 +746,7 @@
                   <f n="classsigc_1_1mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -770,7 +755,7 @@
                   <f n="classsigc_1_1mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -779,7 +764,7 @@
                   <f n="classsigc_1_1mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -788,7 +773,7 @@
                   <f n="classsigc_1_1mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -797,7 +782,7 @@
                   <f n="classsigc_1_1mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor0-members.html" o="root" g="wheel" p="33204">
@@ -806,7 +791,7 @@
                   <f n="classsigc_1_1pointer__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor1-members.html" o="root" g="wheel" p="33204">
@@ -815,7 +800,7 @@
                   <f n="classsigc_1_1pointer__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor2-members.html" o="root" g="wheel" p="33204">
@@ -824,7 +809,7 @@
                   <f n="classsigc_1_1pointer__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor3-members.html" o="root" g="wheel" p="33204">
@@ -833,7 +818,7 @@
                   <f n="classsigc_1_1pointer__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor4-members.html" o="root" g="wheel" p="33204">
@@ -842,7 +827,7 @@
                   <f n="classsigc_1_1pointer__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor5-members.html" o="root" g="wheel" p="33204">
@@ -851,7 +836,7 @@
                   <f n="classsigc_1_1pointer__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor6-members.html" o="root" g="wheel" p="33204">
@@ -860,7 +845,7 @@
                   <f n="classsigc_1_1pointer__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1pointer__functor7-members.html" o="root" g="wheel" p="33204">
@@ -869,7 +854,7 @@
                   <f n="classsigc_1_1pointer__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1pointer__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1pointer__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal-members.html" o="root" g="wheel" p="33204">
@@ -884,7 +869,7 @@
                   <f n="classsigc_1_1signal0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal1-members.html" o="root" g="wheel" p="33204">
@@ -893,7 +878,7 @@
                   <f n="classsigc_1_1signal1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal2-members.html" o="root" g="wheel" p="33204">
@@ -902,7 +887,7 @@
                   <f n="classsigc_1_1signal2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal3-members.html" o="root" g="wheel" p="33204">
@@ -911,7 +896,7 @@
                   <f n="classsigc_1_1signal3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal4-members.html" o="root" g="wheel" p="33204">
@@ -920,7 +905,7 @@
                   <f n="classsigc_1_1signal4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal5-members.html" o="root" g="wheel" p="33204">
@@ -929,7 +914,7 @@
                   <f n="classsigc_1_1signal5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal6-members.html" o="root" g="wheel" p="33204">
@@ -938,7 +923,7 @@
                   <f n="classsigc_1_1signal6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal7-members.html" o="root" g="wheel" p="33204">
@@ -947,7 +932,7 @@
                   <f n="classsigc_1_1signal7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1signal_1_1accumulated-members.html" o="root" g="wheel" p="33204">
@@ -956,136 +941,10 @@
                   <f n="classsigc_1_1signal_1_1accumulated.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal_1_1accumulated__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal_1_1accumulated__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil810e579b3e82014b3c1a16450bdb6023.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_02af42f0cb3d98cb6a4ad4230b22bbff2.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_08a1617e39a89dfb3d657c3c5cb6673b1.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_2834c669b9a4f4ae3cbd91fd9ea54658.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_3b1bb4b094860c314af671799b3adaab.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_012ff7d4b06d3103f927940079a2066cad.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01756aafa66a891f219b67f866edb12f89.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01852c349c390cefa04662a850d84c0a94.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00c513da473cf7720ea302b4c9ac3312b.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0488c44ad57d300eb0d26f65a9505ffdc.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0ad52bc79df5ba2b4d7e5b497ba915039.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0d729ce48b1328d982e0ee754652fed04.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar01b49059ecd092e1ea927a389afae4ab.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar16a14c152bc5ff346d9997f7152c0448.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar1b790d5e11b1dad6454242a5312e335f.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar29f8b5e4157f634b1dbf70d8cd079888.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar3adb4b941bace89a3f952c380bedda11.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar7957dbdb3fb3ed3bc11f56050bf6381e.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar7d6bfb7a6739ae4708a549aeb7c1fd19.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar9961ee865f5739f77a6f717c5be690ae.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arcf6cb51783c363bfae7c4a91d9685109.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__are33def4d0c1a12dcbfd220489302db67.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1signal__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1signal__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot-members.html" o="root" g="wheel" p="33204">
@@ -1100,7 +959,7 @@
                   <f n="classsigc_1_1slot0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot1-members.html" o="root" g="wheel" p="33204">
@@ -1109,7 +968,7 @@
                   <f n="classsigc_1_1slot1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot2-members.html" o="root" g="wheel" p="33204">
@@ -1118,7 +977,7 @@
                   <f n="classsigc_1_1slot2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot3-members.html" o="root" g="wheel" p="33204">
@@ -1127,7 +986,7 @@
                   <f n="classsigc_1_1slot3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot4-members.html" o="root" g="wheel" p="33204">
@@ -1136,7 +995,7 @@
                   <f n="classsigc_1_1slot4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot5-members.html" o="root" g="wheel" p="33204">
@@ -1145,7 +1004,7 @@
                   <f n="classsigc_1_1slot5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot6-members.html" o="root" g="wheel" p="33204">
@@ -1154,7 +1013,7 @@
                   <f n="classsigc_1_1slot6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot7-members.html" o="root" g="wheel" p="33204">
@@ -1163,70 +1022,7 @@
                   <f n="classsigc_1_1slot7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot7__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_5a581d99b458267d85dd19f245bddca4.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg511b8698fc2891db58bb2a8bf0969f659.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg519ed0b830799ecdfb1e59a58e3902913.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg52ee407c118db89bb94aca248ba922de3.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4-members.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_00_01nil_01_4.html" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot7__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1slot__base-members.html" o="root" g="wheel" p="33204">
@@ -1235,10 +1031,10 @@
                   <f n="classsigc_1_1slot__base.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot__base__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot__base__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1slot__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1slot__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__limit__reference-members.html" o="root" g="wheel" p="33204">
@@ -1253,16 +1049,13 @@
                   <f n="classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="classsigc_1_1volatile__mem__functor0-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor0.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor0__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor0__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor1-members.html" o="root" g="wheel" p="33204">
@@ -1271,7 +1064,7 @@
                   <f n="classsigc_1_1volatile__mem__functor1.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor1__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor1__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor2-members.html" o="root" g="wheel" p="33204">
@@ -1280,7 +1073,7 @@
                   <f n="classsigc_1_1volatile__mem__functor2.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor2__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor2__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor3-members.html" o="root" g="wheel" p="33204">
@@ -1289,7 +1082,7 @@
                   <f n="classsigc_1_1volatile__mem__functor3.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor3__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor3__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor4-members.html" o="root" g="wheel" p="33204">
@@ -1298,7 +1091,7 @@
                   <f n="classsigc_1_1volatile__mem__functor4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor5-members.html" o="root" g="wheel" p="33204">
@@ -1307,7 +1100,7 @@
                   <f n="classsigc_1_1volatile__mem__functor5.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor5__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor5__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor6-members.html" o="root" g="wheel" p="33204">
@@ -1316,7 +1109,7 @@
                   <f n="classsigc_1_1volatile__mem__functor6.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor6__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor6__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="classsigc_1_1volatile__mem__functor7-members.html" o="root" g="wheel" p="33204">
@@ -1325,7 +1118,10 @@
                   <f n="classsigc_1_1volatile__mem__functor7.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="classsigc_1_1volatile__mem__functor7__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="classsigc_1_1volatile__mem__functor7__inherit__graph.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="closed.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="doxygen.css" o="root" g="wheel" p="33204">
@@ -1445,61 +1241,34 @@
                   <f n="group__adaptors.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__adaptors.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="group__bind.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="group__bind.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="group__compose.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__compose.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="group__exception__catch.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="group__exception__catch.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="group__group__.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__group__.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="group__hide.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="group__hide.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="group__lambdas.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__lambdas.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="group__mem__fun.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="group__mem__fun.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="group__ptr__fun.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__ptr__fun.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="group__retype.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__retype.png" o="root" g="wheel" p="33204">
+                  <f n="group__sigcfunctors.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="group__signal.html" o="root" g="wheel" p="33204">
@@ -1508,109 +1277,106 @@
                   <f n="group__slot.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="group__slot.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="hierarchy.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="index.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__0.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_0.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__1.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_1.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__10.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_10.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__11.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_11.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__12.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_12.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__13.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_13.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__14.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_14.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__15.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_15.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__16.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_16.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__17.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_17.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__18.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_18.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__19.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_19.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__2.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_2.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__20.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_20.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__21.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_21.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__22.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_22.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__23.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_23.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__24.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_24.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__25.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_25.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__26.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_26.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__27.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_27.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__28.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_28.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__29.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_29.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__3.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_3.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__30.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_30.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__31.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_31.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__4.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_4.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__5.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_5.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__6.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_6.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__7.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_7.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__8.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_8.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="inherit__graph__9.png" o="root" g="wheel" p="33204">
+                  <f n="inherit_graph_9.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="inherits.html" o="root" g="wheel" p="33204">
@@ -1673,10 +1439,19 @@
                   <f n="namespacesigc.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="nav_f.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="nav_h.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="open.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="structsigc_1_1adaptor__base.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1adaptor__base__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1adaptor__base__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1adaptor__functor-members.html" o="root" g="wheel" p="33204">
@@ -1685,7 +1460,7 @@
                   <f n="structsigc_1_1adaptor__functor.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1adaptor__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1adaptor__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1adapts-members.html" o="root" g="wheel" p="33204">
@@ -1694,133 +1469,7 @@
                   <f n="structsigc_1_1adapts.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1adapts__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01ni4ca8293ad07c2413e0de8a15362ea6c4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01ni580b37e60a5affa110a1cd3ca888b446.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01nil_00_01nil_00134c50922ecb7ea017d0f8b65767cdfb.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01nil_00_01nil_0064507f0ddc58a58ad7459b833436ad60.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01n2baeca3d362bb6c43851318434b37475.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01n6d14effad731c8dfead9984e87967108.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01nc5b014861e0ccdfa419ea306a45581e6.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T0834e37f8bd5c0361c59dcde65b688ff.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T1564029be5092b4f54029884f8072971.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T3d8983f4d98069f4e23a772a1fcb079e.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T4b2da9832015a0e3ce25e0dca6b9ceb1.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T5d526f12c92849dac4a70f282eec9dc2.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T67d342ad48aefc8493f51afa1b5195cc.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T80924a7b7c3c1f42ece02e3f2d52a352.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T8abd615cc403946700f41917bb90042c.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T8b56690e14425f094432a8a8a13b1d47.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01T94aede5c6adabf04c5b17674cd9c7ea9.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01Tc3e8b36552a95d06e9663ee6fcb1abcd.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01T__type2_00_01T__type3_00_01Tf230465d8da8d21a2da815d7eb05b413.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_0134a004909681b7eead4388b32fdece62.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01ca362af0d94b232f5a2473db276d56b0.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_011_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_0121184f2e1ef112f5a80623ba2748e9bd.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_011_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01ce9a3bb67928cefa29aa463c4d9b5cd4.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_011_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_012_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01bb5df1408df2b9fa8d0c3f9fd8b5b598.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_012_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01be149f6619e227f0b09fe9f7b62eaa77.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_012_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_013_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_012b4a7d70c2eae98129c3bfe9249d2cc2.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_013_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01570f8588a3828464e651970c3a153fae.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_013_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_014_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_011f09cfd3501e5b5874f7e6f5ffe265bc.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_014_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01232622e68f03ed1747801822dfd682b9.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_014_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_015_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_0139d8e7e057a699df0870a7d2fa4a0c50.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_015_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_013e0ef356edbd311fb08442ac3997e33a.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_015_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_016_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_018a5b055dd53c4d5f24b1fe7455cd33f7.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_016_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01f7c0a8288746607209a9ff74ff56a81c.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1bind__functor_3_016_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1adapts__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1bind__return__functor-members.html" o="root" g="wheel" p="33204">
@@ -1829,7 +1478,7 @@
                   <f n="structsigc_1_1bind__return__functor.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1bind__return__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1bind__return__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1compose1__functor-members.html" o="root" g="wheel" p="33204">
@@ -1838,7 +1487,7 @@
                   <f n="structsigc_1_1compose1__functor.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1compose1__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1compose1__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1compose2__functor-members.html" o="root" g="wheel" p="33204">
@@ -1847,16 +1496,13 @@
                   <f n="structsigc_1_1compose2__functor.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1compose2__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1compose2__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1connection-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1connection.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1connection__coll__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1const__reference__wrapper-members.html" o="root" g="wheel" p="33204">
@@ -1871,54 +1517,6 @@
                   <f n="structsigc_1_1deduce__result__type.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_4788a98c68901ad51b4daf97aed5e129.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_5c3a161eb5dba3c597d379b0bd504e5f.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_9b37fe7be1f2633448bc6b77ab8f97ff.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_a4143e7ae6d520989ac59df84e19a8dd.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_ab2712a95d535d7ed5ba1d2f9ca520b4.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_c1f3301d3698447d8ef6ff87cf0e83b5.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_d8ef7847af7e7170bed8f3a632586811.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T_e1f35ee5b12353a1a715e9045a07a27c.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01vo258d7260cbbb4e192063ff2984a0677a.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01vo46ab0e0230131bbea6ba52203b82e6ec.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01void_00_01void_69d03b1addef529f39a6613c6a98a4fa.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01T__arg2_00_01void_00_01void_724dd7c759e838f48e6fa6545d8e015d.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01void_00_01void_00_01void_00_69f792cfebc0febb10ef0b13970eae5e.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01T__arg1_00_01void_00_01void_00_01void_00_f4c559613b292c7b689426d5c155df15.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01void_00_01void_00_01void_00_01void_00_01v5b3d89f816d6c32e29d85fe715111586.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1deduce__result__type_3_01T__functor_00_01void_00_01void_00_01void_00_01void_00_01vdb2f9f83b3eba2baeb19678a790211a3.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="structsigc_1_1dereference__trait-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
@@ -1928,13 +1526,16 @@
                   <f n="structsigc_1_1functor__base.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="structsigc_1_1functor__base__inherit__graph.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="structsigc_1_1hide__functor_3-1_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3-1_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3-1_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3-1_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_010_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1943,7 +1544,7 @@
                   <f n="structsigc_1_1hide__functor_3_010_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_010_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_010_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_011_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1952,7 +1553,7 @@
                   <f n="structsigc_1_1hide__functor_3_011_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_011_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_011_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_012_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1961,7 +1562,7 @@
                   <f n="structsigc_1_1hide__functor_3_012_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_012_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_012_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_013_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1970,7 +1571,7 @@
                   <f n="structsigc_1_1hide__functor_3_013_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_013_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_013_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_014_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1979,7 +1580,7 @@
                   <f n="structsigc_1_1hide__functor_3_014_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_014_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_014_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_015_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1988,7 +1589,7 @@
                   <f n="structsigc_1_1hide__functor_3_015_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_015_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_015_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1hide__functor_3_016_00_01T__functor_01_4-members.html" o="root" g="wheel" p="33204">
@@ -1997,7 +1598,7 @@
                   <f n="structsigc_1_1hide__functor_3_016_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1hide__functor_3_016_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1hide__functor_3_016_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1is__base__and__derived-members.html" o="root" g="wheel" p="33204">
@@ -2015,7 +1616,7 @@
                   <f n="structsigc_1_1lambda__base.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1lambda__base__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1lambda__base__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1reference__wrapper-members.html" o="root" g="wheel" p="33204">
@@ -2030,7 +1631,7 @@
                   <f n="structsigc_1_1retype__functor.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1retype__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1retype__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1retype__return__functor-members.html" o="root" g="wheel" p="33204">
@@ -2045,10 +1646,10 @@
                   <f n="structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1retype__return__functor__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1retype__return__functor__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1signal__base-members.html" o="root" g="wheel" p="33204">
@@ -2057,7 +1658,7 @@
                   <f n="structsigc_1_1signal__base.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1signal__base__coll__graph.png" o="root" g="wheel" p="33204">
+                  <f n="structsigc_1_1signal__base__inherit__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1slot__const__iterator-members.html" o="root" g="wheel" p="33204">
@@ -2066,16 +1667,10 @@
                   <f n="structsigc_1_1slot__const__iterator.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="structsigc_1_1slot__const__iterator__coll__graph.png" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
                   <f n="structsigc_1_1slot__iterator-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1slot__iterator.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="structsigc_1_1slot__iterator__coll__graph.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1slot__list-members.html" o="root" g="wheel" p="33204">
@@ -2090,19 +1685,25 @@
                   <f n="structsigc_1_1trackable.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
+                  <f n="structsigc_1_1trackable__inherit__graph.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
                   <f n="structsigc_1_1unwrap__lambda__type-members.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="structsigc_1_1unwrap__lambda__type.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="tab_b.gif" o="root" g="wheel" p="33204">
+                  <f n="tab_a.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="tab_l.gif" o="root" g="wheel" p="33204">
+                  <f n="tab_b.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <f n="tab_r.gif" o="root" g="wheel" p="33204">
+                  <f n="tab_h.png" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="tab_s.png" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="tabs.css" o="root" g="wheel" p="33204">
@@ -2142,9 +1743,6 @@
                     <mod>mode</mod>
                   </f>
                   <f n="ch04s02.html" o="root" g="wheel" p="33204">
-                    <mod>mode</mod>
-                  </f>
-                  <f n="ch04s03.html" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
                   <f n="ch05.html" o="root" g="wheel" p="33204">

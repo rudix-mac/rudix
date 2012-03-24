@@ -1,0 +1,7 @@
+Libsigc++ implements a typesafe callback system for standard C++.
+
+  * Site: http://libsigc.sourceforge.net/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 2.2.10
