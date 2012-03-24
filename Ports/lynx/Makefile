@@ -1,8 +1,6 @@
 BuildRequires += /usr/local/lib/libintl.la
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Lynx
 Name=		lynx
