@@ -1,0 +1,8 @@
+The popt(3) command line option parsing library. While it is similiar
+to getopt(3), it contains a number of enhancements.
+
+  * Site: http://rpm5.org/
+  * License: BSD
+
+Release Notes:
+  * Upgraded to version 1.16
