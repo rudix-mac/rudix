@@ -1,5 +1,6 @@
 include ../../Library/GNU.mk
 
+Title=		HTMLDOC
 Name=		htmldoc
 Version=	1.8.27
 Revision=	13

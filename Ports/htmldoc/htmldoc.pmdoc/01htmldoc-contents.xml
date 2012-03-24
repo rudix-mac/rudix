@@ -26,7 +26,6 @@
               <f n="README.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="htmldoc" o="root" g="wheel" p="16893">
@@ -103,7 +102,6 @@
               <f n="psglyphs" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="fonts" o="root" g="wheel" p="16893">
               <f n="Courier-Bold.afm" o="root" g="wheel" p="33204">
@@ -262,9 +260,7 @@
               <f n="Times-Roman.pfa" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
