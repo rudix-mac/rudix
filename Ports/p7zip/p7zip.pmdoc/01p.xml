@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="C0A94E67-2EF8-4444-945E-DB806198E7FA">
+<pkgref spec="1.12" uuid="06455597-75AC-11E1-9895-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.p7zip</identifier>
+    <version>9.20.1-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -11,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>identifier</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01p-contents.xml</file-list>

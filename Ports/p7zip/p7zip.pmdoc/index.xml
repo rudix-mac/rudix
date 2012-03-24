@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>P7Zip</title>
-    <build>/Users/ruda/Desktop/P7Zip.pkg</build>
+    <title>P7ZIP</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>File archiver with high compression ratio</description>
+  <description>p7zip is a port of 7za.exe for POSIX systems like Unix.
+
+  * Site: http://p7zip.sourceforge.net/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 9.20.1
+</description>
   <contents>
-    <choice title="p7zip-install" id="p7zip" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="p7zip-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.p7zip"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">p7zip-9.13/DOCS/copying.txt</resource>
-      <resource relative="true" mod="true" type="readme">p7zip-9.13/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">p7zip-build/DOCS/License.txt</resource>
+      <resource relative="true" mod="true" type="readme">p7zip-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

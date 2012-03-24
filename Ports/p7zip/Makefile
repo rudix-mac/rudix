@@ -1,47 +1,38 @@
-# P7ZIP
-# http://p7zip.sourceforge.net/
-# LGPL
+include ../../Library/Config.mk
+RUDIX_UNIVERSAL=
+include ../../Library/Rudix.mk
 
-include ../../Library/Rules.mk
+Title=		P7ZIP
+Name=		p7zip
+Version=	9.20.1
+Revision=	0
+URL=		http://downloads.sourceforge.net/$(Name)
+URL=		http://sourceforge.net/projects/p7zip/files/p7zip/$(Version)/
+Source=		$(Name)_$(Version)_src_all.tar.bz2
 
-TITLE=		P7ZIP $(VERSION)
-NAME=		p7zip
-VERSION=	9.13
-REVISION=	0.i386
-URL=		http://downloads.sourceforge.net/$(NAME)
-SOURCE=		$(NAME)_$(VERSION)_src_all.tar.bz2
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/DOCS/License.txt
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/DOCS/License.txt
+UncompressedName = $(Name)_$(Version)
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	mv $(NAME)_$(VERSION) $(NAME)-$(VERSION)
-	cd $(BUILDDIR) ; cp makefile.macosx_32bits makefile.machine
-	touch prep
+MakeExtra += all3
 
-build: prep
-	cd $(BUILDDIR) ; $(make) all3
-	touch build
+define build_inner_hook
+cd $(BuildDir) ; $(make) $(MakeExtra)
+endef
 
-install: build
-	install -d $(INSTALLDIR)
-	cd $(BUILDDIR) ; \
-	./install.sh /usr/local/bin \
-		/usr/local/lib/p7zip \
-		/usr/local/share/man \
-		/usr/local/share/doc/p7zip $(INSTALLDIR)
-	chmod u+w $(INSTALLDIR)/usr/local/lib/p7zip/7z*
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{README,TODO} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/p7zip/7z*
-	chmod +w $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*
-	strip -x -S $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*
-	touch install
+define install_inner_hook
+cd $(BuildDir) ; $(make) \
+	DEST_HOME="$(PortDir)/$(InstallDir)/$(Prefix)" \
+	DEST_MAN="$(PortDir)/$(InstallDir)/$(ManDir)" $(MakeInstallExtra) install
+$(install_base_documentation)
+rm -f $(InstallDir)/$(BinDir)/*
+chmod -R u+w $(InstallDir)
+ln -s ../lib/p7zip/7z $(InstallDir)/$(BinDir)/7z
+ln -s ../lib/p7zip/7za $(InstallDir)/$(BinDir)/7za
+ln -s ../lib/p7zip/7zr $(InstallDir)/$(BinDir)/7zr
+endef
 
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/p7zip/7z*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	for x in $(wildcard $(INSTALLDIR)/usr/local/lib/p7zip/Codecs/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+define test_inner_hook
+cd $(BuildDir) ; $(make) test
+endef
