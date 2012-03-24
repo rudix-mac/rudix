@@ -2,7 +2,7 @@
 <pkg-contents spec="1.12">
   <f n="lzo-install" o="root" g="staff" p="16877" pt="lzo-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="include" o="root" g="wheel" p="16893">
           <f n="lzo" o="root" g="wheel" p="16893">
             <f n="lzo1.h" o="root" g="wheel" p="33204">

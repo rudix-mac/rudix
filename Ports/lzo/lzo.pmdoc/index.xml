@@ -13,8 +13,12 @@
   </distribution>
   <description>LZO is a data compression library which is suitable for data de-/compression in real-time.
 
-Site: http://www.oberhumer.com/opensource/lzo/
-License: GPL
+  * Site: http://www.oberhumer.com/opensource/lzo/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+
 
 </description>
   <contents>
@@ -22,10 +26,12 @@ License: GPL
       <pkgref id="org.rudix.pkg.lzo"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">lzo-build/COPYING</resource>
       <resource relative="true" mod="true" type="readme">lzo-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

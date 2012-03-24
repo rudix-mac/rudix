@@ -1,5 +1,9 @@
 LZO is a data compression library which is suitable for data de-/compression in real-time.
 
-Site: http://www.oberhumer.com/opensource/lzo/
-License: GPL
+  * Site: http://www.oberhumer.com/opensource/lzo/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+
 
