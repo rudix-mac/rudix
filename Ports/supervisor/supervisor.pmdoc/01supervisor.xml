@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="BFCBBDB5-5A9A-11E1-A05C-D49A200B3D20">
+<pkgref spec="1.12" uuid="E558BF82-760B-11E1-93A7-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.supervisor</identifier>
     <version>3.0a12-0</version>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01supervisor-contents.xml</file-list>
