@@ -113,7 +113,6 @@
                   <f n="rules" o="root" g="wheel" p="33277">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="default_handler.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -152,7 +151,6 @@
                   <f n="winFTPserver.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="docs" o="root" g="wheel" p="16893">
                   <f n="async_blurbs.txt" o="root" g="wheel" p="33204">
@@ -188,7 +186,6 @@
                   <f n="tkinter.txt" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="event_loop.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -377,7 +374,6 @@
                   <f n="tests.txt" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="thread" o="root" g="wheel" p="16893">
                   <f n="pi_module.py" o="root" g="wheel" p="33204">
@@ -410,7 +406,6 @@
                   <f n="thread_handler.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="TODO.txt" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -433,7 +428,6 @@
                 <f n="xmlrpc_handler.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="options.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -490,13 +484,11 @@
                 <f n="sample_exiting_eventlistener.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="skel" o="root" g="wheel" p="16893">
                 <f n="sample.conf" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="socket_manager.py" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -557,7 +549,6 @@
                   <f n="unkillable_spew.pyc" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="test_childutils.py" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -661,7 +652,6 @@
                 <f n="trackrefs.pyc" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="ui" o="root" g="wheel" p="16893">
                 <f n="images" o="root" g="wheel" p="16893">
@@ -692,7 +682,6 @@
                   <f n="supervisor.gif" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="status.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -701,12 +690,10 @@
                   <f n="supervisor.css" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="tail.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="version.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
@@ -723,7 +710,6 @@
               <f n="xmlrpc.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="supervisor-3.0a12-py2.7-nspkg.pth" o="root" g="wheel" p="33204">
               <mod>mode</mod>
@@ -753,7 +739,6 @@
               <f n="top_level.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
@@ -784,7 +769,6 @@
               <f n="README.rst" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
