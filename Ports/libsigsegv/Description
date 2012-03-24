@@ -1,0 +1,7 @@
+GNU libsigsegv - Handling page faults in user mode.
+
+  * Site: http://libsigsegv.sourceforge.net/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 2.10
