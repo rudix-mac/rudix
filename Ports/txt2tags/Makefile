@@ -1,37 +1,25 @@
-# Utility to turn simply formatted text into markup
-# http://txt2tags.org/
-# GPL
+BuildRequires += $(BinDir)/msgfmt
 
-include ../../Library/Rules.mk
+include ../../Library/Unix.mk
 
-NAME=		txt2tags
-VERSION=	2.6
-REVISION=	0
+Title=		txt2tags
+Name=		txt2tags
+Version=	2.6
+Revision=	1
 URL=		http://txt2tags.googlecode.com/files/
-SOURCE=		$(NAME)-$(VERSION).tgz
+Source=		$(Name)-$(Version).tgz
 
-DEPENDS=	/usr/local/bin/msgfmt
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	cp $(PORTDIR)/txt2tags.Makefile $(BUILDDIR)/Makefile
-	touch prep
+define prep_post_hook
+cp txt2tags.Makefile $(SourceDir)/Makefile
+endef
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; make
-	touch build
+define test_inner_hook
+cd $(SourceDir)/test ; ./run.py
+endef
 
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDIR)/usr/local/share/man/man1
-	install -m 644 $(BUILDDIR)/doc/manpage.man $(INSTALLDIR)/usr/local/share/man/man1/txt2tags.1
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,ChangeLog,README,TODO} $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/doc/* $(INSTALLDOCDIR)
-	install -d $(INSTALLDIR)/usr/local/lib/txt2tags
-	install -m 644 $(BUILDDIR)/extras/* $(INSTALLDIR)/usr/local/lib/txt2tags
-	touch install
-
-test: install
-	cd $(BUILDDIR)/test ; ./run.py
-	touch test
+define final_inner_hook
+/usr/local/bin/txt2tags -h
+endef

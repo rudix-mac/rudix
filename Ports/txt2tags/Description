@@ -1,0 +1,7 @@
+Txt2tags is a document generator. It reads a text file with minimal markup such as **bold** and //italic// and converts it to many formats.
+
+  * Site: http://txt2tags.org/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
