@@ -5,3 +5,4 @@ Libsigc++ implements a typesafe callback system for standard C++.
 
 Release Notes:
   * Upgraded to version 2.2.10
+  * Renamed package to libsigcpp

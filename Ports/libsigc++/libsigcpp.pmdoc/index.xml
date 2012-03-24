@@ -18,22 +18,23 @@
 
 Release Notes:
   * Upgraded to version 2.2.10
+  * Renamed package to libsigcpp
 </description>
   <contents>
-    <choice title="libsigc++-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.libsigc++"/>
+    <choice title="libsigcpp-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libsigcpp"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
       <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
-      <resource relative="true" mod="true" type="license">libsigc++-build/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">libsigc++-build/README</resource>
+      <resource relative="true" mod="true" type="license">libsigcpp-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">libsigcpp-build/README</resource>
       <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
-  <item type="file">01libsigc.xml</item>
+  <item type="file">01libsigcpp.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
