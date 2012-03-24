@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>pixman</title>
+    <title>Pixman</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,16 +11,26 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>The pixman library (version 1)</description>
+  <description>The pixel-manipulation library for X and cairo.
+
+  * Site: http://cgit.freedesktop.org/pixman/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 0.24.4
+
+</description>
   <contents>
     <choice title="pixman-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pixman"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">pixman-0.21.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">pixman-0.21.2/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">pixman-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">pixman-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

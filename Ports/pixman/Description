@@ -1,0 +1,8 @@
+The pixel-manipulation library for X and cairo.
+
+  * Site: http://cgit.freedesktop.org/pixman/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 0.24.4
+
