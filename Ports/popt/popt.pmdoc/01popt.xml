@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="060CBEFE-C099-4814-9663-313CEFCC2AC8">
+<pkgref spec="1.12" uuid="88BA2161-75CC-11E1-BFDD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.popt</identifier>
-    <version>1.14</version>
+    <version>1.16-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01popt-contents.xml</file-list>

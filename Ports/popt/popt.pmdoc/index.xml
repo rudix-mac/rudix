@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>popt</title>
+    <title>Popt</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,16 +11,26 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>getopt(3)-like library with a number of enhancements</description>
+  <description>The popt(3) command line option parsing library. While it is similiar
+to getopt(3), it contains a number of enhancements.
+
+  * Site: http://rpm5.org/
+  * License: BSD
+
+Release Notes:
+  * Upgraded to version 1.16
+</description>
   <contents>
-    <choice title="popt-install" id="popt" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="popt-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.popt"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">popt-1.15/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">popt-1.15/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">popt-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">popt-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
