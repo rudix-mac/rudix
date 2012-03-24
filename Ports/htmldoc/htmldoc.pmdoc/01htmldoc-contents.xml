@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="htmldoc-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/htmldoc/htmldoc-install" m="false" t="file">
+  <f n="htmldoc-install" o="root" g="staff" p="16877" pt="htmldoc-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="htmldoc" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -18,9 +18,6 @@
                 <mod>mode</mod>
               </f>
               <f n="help.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="htmldoc.eula" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="htmldoc.pdf" o="root" g="wheel" p="33204">

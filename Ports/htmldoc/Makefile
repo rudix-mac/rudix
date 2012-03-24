@@ -1,40 +1,14 @@
-# Convert HTML pages to PDF/PS format
-# http://www.htmldoc.org/
+include ../../Library/GNU.mk
 
-include ../../Library/Rules.mk
+Name=		htmldoc
+Version=	1.8.27
+Revision=	13
+URL=		http://ftp.easysw.com/pub/htmldoc/$(Version)/
+Source=		$(Name)-$(Version)-source.tar.bz2
 
-NAME=		htmldoc
-VERSION=	1.8.27
-REVISION=	12
-URL=		http://ftp.easysw.com/pub/htmldoc/$(VERSION)/
-SOURCE=		$(NAME)-$(VERSION)-source.tar.bz2
+ReadMeFile=	$(SourceDir)/README.txt
+LicenseFile=	$(SourceDir)/COPYING.txt
 
-README=		$(BUILDDIR)/README.txt
-LICENSE=	$(BUILDDIR)/COPYING.txt
-
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
-	env CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	$(configure) \
-		--prefix=/usr/local \
-		--bindir=/usr/local/bin ; $(make)
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make \
-		prefix=$(INSTALLDIR)/usr/local \
-		bindir=$(INSTALLDIR)/usr/local/bin \
-		mandir=$(INSTALLDIR)/usr/local/share/man install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{CHANGES.txt,COPYING.txt,README.txt,htmldoc.eula} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	for x in $(wildcard $(INSTALLDIR)/usr/local/bin/*) ; do \
-		lipo $$x -verify_arch i386 x86_64 ; done
-	touch test
+MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
+MakeInstallExtra += bindir=$(PortDir)/$(InstallDir)/$(BinDir)
+MakeInstallExtra += mandir=$(PortDir)/$(InstallDir)/$(ManDir)
