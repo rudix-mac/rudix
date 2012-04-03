@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120320
+BuildSystem = 20120403
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -223,7 +223,7 @@ define create_pmdoc
 endef
 
 define create_pkg
-/Developer/usr/bin/packagemaker \
+$(RUDIX_PACKAGEMAKER) \
 	--doc $(Name).pmdoc \
 	--id $(Vendor).pkg.$(DistName) \
 	--version $(Version)-$(Revision) \
