@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
 Title=		PyCrypto
 Name=		pycrypto
@@ -11,3 +9,7 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
+
+define final_inner_hook
+python -c 'import Crypto'
+endef

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="29216C05-6B9C-11E1-AFF4-D49A200B3D20">
+<pkgref spec="1.12" uuid="7AF5E2D4-7FF7-11E1-890A-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.pycrypto</identifier>
     <version>2.5-0</version>
