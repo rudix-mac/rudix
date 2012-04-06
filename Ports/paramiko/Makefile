@@ -1,6 +1,6 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+BuildRequires += /Library/Python/2.7/site-packages/Crypto/
+
+include ../../Library/Python.mk
 
 Title=		Paramiko
 Name=		paramiko
@@ -11,3 +11,11 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
+
+define test_inner_hook
+cd $(BuildDir) ; python test.py
+endef
+
+define final_inner_hook
+python -c 'import paramiko'
+endef

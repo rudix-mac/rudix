@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="280DAE4F-6B9B-11E1-B35A-D49A200B3D20">
+<pkgref spec="1.12" uuid="8EE002D1-7FF9-11E1-A742-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.paramiko</identifier>
     <version>1.7.7.1-0</version>
