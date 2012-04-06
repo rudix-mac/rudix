@@ -216,7 +216,6 @@
               <f n="win_pageant.pyc" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="ssh-1.7.13-py2.7.egg-info" o="root" g="wheel" p="16893">
               <f n="dependency_links.txt" o="root" g="wheel" p="33204">
@@ -234,7 +233,6 @@
               <f n="top_level.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
@@ -251,7 +249,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
