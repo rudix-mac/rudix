@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="C9C2BF11-8025-11E1-AFE7-D49A200B3D20">
+  <config>
+    <identifier>org.rudix.pkg.mc</identifier>
+    <version>4.8.2-0</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">mc-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
+  </config>
+  <contents>
+    <file-list>01mc-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
