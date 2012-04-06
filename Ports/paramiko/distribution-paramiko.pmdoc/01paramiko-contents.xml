@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="paramiko-install" o="root" g="staff" p="16877" pt="paramiko-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="paramiko" o="root" g="wheel" p="16893">
+              <f n="__init__.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="__init__.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="agent.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="agent.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="auth_handler.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="auth_handler.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ber.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ber.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="buffered_pipe.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="buffered_pipe.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="channel.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="channel.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="client.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="client.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="common.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="common.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="compress.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="compress.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="config.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dsskey.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="dsskey.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="file.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="file.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hostkeys.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="hostkeys.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kex_gex.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kex_gex.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kex_group1.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="kex_group1.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logging22.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="logging22.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="message.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="message.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="packet.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="packet.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pipe.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pipe.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pkey.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="pkey.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="primes.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="primes.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="resource.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="resource.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rsakey.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="rsakey.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="server.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="server.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_attr.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_attr.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_client.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_client.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_file.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_file.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_handle.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_handle.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_server.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_server.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_si.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="sftp_si.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ssh_exception.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ssh_exception.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transport.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="transport.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="util.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win_pageant.py" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="win_pageant.pyc" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="paramiko-1.7.7.1-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="requires.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="top_level.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="paramiko" o="root" g="wheel" p="16893">
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
