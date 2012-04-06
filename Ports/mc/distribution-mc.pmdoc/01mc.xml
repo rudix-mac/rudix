@@ -18,6 +18,9 @@
     <mod>installTo</mod>
     <mod>parent</mod>
   </config>
+  <scripts>
+    <scripts-dir relative="true" mod="true">scripts</scripts-dir>
+  </scripts>
   <contents>
     <file-list>01mc-contents.xml</file-list>
     <filter>/CVS$</filter>
