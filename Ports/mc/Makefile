@@ -29,3 +29,7 @@ install -m 644 $(SourceDir)/doc/{FAQ,HACKING,TODO} $(InstallDir)/$(DocDir)/$(Nam
 mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
 install -d $(InstallDir)/$(Prefix)/etc/mc
 endef
+
+define final_post_hook
+/usr/local/bin/mc --version
+endef
