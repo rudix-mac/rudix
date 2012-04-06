@@ -179,7 +179,7 @@
                 <mod>mode</mod>
               </f>
             </f>
-            <f n="Fabric-1.4.0-py2.7.egg-info" o="root" g="wheel" p="16893">
+            <f n="Fabric-1.4.1-py2.7.egg-info" o="root" g="wheel" p="16893">
               <f n="dependency_links.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -219,7 +219,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>

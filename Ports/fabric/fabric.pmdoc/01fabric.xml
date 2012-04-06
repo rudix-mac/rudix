@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D0432673-6B87-11E1-9E3C-D49A200B3D20">
+<pkgref spec="1.12" uuid="BABDF714-801D-11E1-A0A8-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.fabric</identifier>
-    <version>1.4.0-0</version>
+    <version>1.4.1-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
