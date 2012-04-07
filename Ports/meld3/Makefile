@@ -9,3 +9,7 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYRIGHT.txt
+
+define final_inner_hook
+python -c 'import meld3'
+endef

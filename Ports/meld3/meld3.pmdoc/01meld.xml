@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="3AA6378C-5AF3-11E1-97B7-D49A200B3D20">
+<pkgref spec="1.12" uuid="DF91DFF3-80D3-11E1-85BA-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.meld3</identifier>
     <version>0.6.8-0</version>
