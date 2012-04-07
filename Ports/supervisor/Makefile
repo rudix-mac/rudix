@@ -12,5 +12,5 @@ LicenseFile=	$(SourceDir)/LICENSES.txt
 
 define final_inner_hook
 $(BinDir)/supervisorctl -h
-$(BinDIr)/supervisord -h
+$(BinDir)/supervisord -h
 endef
