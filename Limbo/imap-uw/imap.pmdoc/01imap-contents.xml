@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="imap-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/imap-uw/imap-install" m="false" t="file">
+  <f n="imap-install" o="root" g="staff" p="16877" pt="imap-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="dmail" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -74,6 +74,9 @@
               <mod>mode</mod>
             </f>
             <f n="os_a41.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="os_a52.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="os_aix.h" o="root" g="wheel" p="33204">
@@ -256,6 +259,7 @@
           <f n="mlock" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -263,13 +267,7 @@
               <f n="LICENSE.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="NOTICE" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="SUPPORT" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -294,6 +292,7 @@
               <f n="ipopd.8" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

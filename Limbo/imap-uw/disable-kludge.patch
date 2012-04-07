@@ -1,0 +1,11 @@
+--- Makefile.orig	2012-04-06 22:42:02.000000000 -0300
++++ Makefile	2012-04-06 22:42:11.000000000 -0300
+@@ -419,7 +419,7 @@
+ 	$(TOUCH) ip6
+ 	$(BUILD) BUILDTYPE=osx IP=$(IP6) EXTRAAUTHENTICATORS="$(EXTRAAUTHENTICATORS) gss" \
+ 	PASSWDTYPE=pam \
+-	EXTRACFLAGS="$(EXTRACFLAGS) -DMAC_OSX_KLUDGE=1" \
++	EXTRACFLAGS="$(EXTRACFLAGS)" \
+ 	SPECIALS="SSLINCLUDE=/usr/include/openssl SSLLIB=/usr/lib SSLCERTS=/System/Library/OpenSSL/certs SSLKEYS=/System/Library/OpenSSL/private GSSINCLUDE=/usr/include GSSLIB=/usr/lib PAMDLFLAGS=-lpam"
+ 
+ osx:	osxok an
