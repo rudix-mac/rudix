@@ -37,10 +37,9 @@ touch install
 endef
 
 define test_inner_hook
-python test.py
+python tests.py
 touch test
 endef
-
 
 define final_pre_hook
 sudo ./rudix.py remove rudix
