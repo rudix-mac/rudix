@@ -2,41 +2,33 @@
 <pkg-contents spec="1.12">
   <f n="monit-install" o="root" g="staff" p="16877" pt="monit-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="monit" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="monitrc.default" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="monit" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="CHANGES.txt" o="root" g="wheel" p="33204">
+              <f n="CHANGES" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="LICENSE" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="README.DEVELOPER" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="README.SSL" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
-            <f n="man1" o="root" g="wheel" p="16877">
+            <f n="man1" o="root" g="wheel" p="16893">
               <f n="monit.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
