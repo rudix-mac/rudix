@@ -1,9 +1,8 @@
-# ABOUT RUDIX #
-Rudix is a collection of Unix software delivered as packages for OS X Lion (plus Snow Leopard compatibility). "The hassle-free way to get Unix programs on Mac OS X".
+Welcome to Rudix!
 
-# LICENSE #
-Rudix port system (the build system) is licensed under 3-clause BSD license (see the copyright note below). Note that each package distributed in Ports folder is covered under an appropriate license and ownership. Rudix do not claims copyright in any packages distributed.
+Rudix is a collection of pre-build Unix software delivered as packages for OS X Lion and Snow Leopard.
+“The hassle-free way to get Unix programs on Mac OS X”.
 
-# AUTHORS #
-* Ruda Moura <ruda@rudix.org> or <ruda.moura@gmail.com>
-* Leonardo Santagada <santagada@gmail.com>
+Authors:
+  * Rudá Moura <ruda.moura@gmail.com> - Creator and main developer
+  * Leonardo Santagada <santagada@gmail.com> - main developer

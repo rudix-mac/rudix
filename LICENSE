@@ -1,4 +1,10 @@
-Copyright (c) 2005-2012 Ruda Moura <ruda@rudix.org>
+Rudix port system (the build system) is licensed under 3-clause BSD license (see the copyright note below).
+Note that each package distributed in downloads section is covered under an appropriate license and ownership.
+Rudix do not claims copyright in any packages distributed.
+
+---
+
+Copyright (c) 2005-2012 Rudá Moura
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
