@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>ELinks</title>
-    <build>/Users/ruda/Desktop/ELinks.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Full-featured text WWW browser</description>
+  <description>ELinks is an advanced and well-established feature-rich text mode web browser.
+
+  * Site: http://elinks.cz/
+  * License: GPL
+
+Release Notes:
+  * Rebuild on Xcode 4.3
+</description>
   <contents>
-    <choice title="elinks-install" id="elinks" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="elinks-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.elinks"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">elinks-0.11.7/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">elinks-0.11.7/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">elinks-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">elinks-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

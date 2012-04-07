@@ -1,4 +1,5 @@
 include ../../Library/Config.mk
+RUDIX_UNIVERSAL=
 include ../../Library/Rudix.mk
 include ../../Library/GNUFormula.mk
 
@@ -9,15 +10,15 @@ Revision=	0
 URL=		http://elinks.or.cz/download/
 Source=		$(Name)-current-$(Version).tar.bz2
 
-UncompressedName = elinks-0.13-20120302
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIB),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-define prep_post_hook
-#perl -p -i -e s/'intl '//g $(SourceDir)/configure
-endef
-endif
+UncompressedName = elinks-$(Version)-20120407
 
 define make
 make
+endef
+
+define install_post_hook
+rm -rf $(InstallDir)/$(LibDir)
 endef
