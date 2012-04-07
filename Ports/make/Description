@@ -1,7 +1,7 @@
 GNU Make is a tool which controls the generation of executables and other non-source files of a program.
 
-Site: http://www.gnu.org/software/make/
-License: GPL
+  * Site: http://www.gnu.org/software/make/
+  * License: GPL
 
-Changes from previous release:
-* 
+Release Notes:
+  * Rebuild on Xcode 4.3
