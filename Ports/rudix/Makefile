@@ -3,7 +3,7 @@ include ../../Library/Rudix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.3
+Version=	12.4
 Revision=	0
 
 ReadMeFile=	README
@@ -41,6 +41,24 @@ python test.py
 touch test
 endef
 
+
+define final_pre_hook
+sudo ./rudix.py remove rudix
+sudo ./rudix.py install rudix-*.pkg
+endef
+
+define final_post_hook
+sudo ./rudix.py remove rudix
+endef
+
+define final_inner_hook
+/usr/local/bin/rudix
+sudo /usr/local/bin/rudix install wget
+/usr/local/bin/rudix available | wc -l
+/usr/local/bin/rudix search rudix
+/usr/local/bin/rudix update
+sudo /usr/local/bin/rudix remove wget
+endef
+
 realdistclean: distclean
 	rm -f *.ps *.pdf *.pyc
-
