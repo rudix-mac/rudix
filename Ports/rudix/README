@@ -1,8 +1,4 @@
-Rudix Package Manager
-=====================
-
-About
------
+Rudix Package Manager.
 
 The `rudix` utility is a package manager therefore you can install, remove,
 print information about packages and search files under the Rudix domain.
@@ -14,8 +10,7 @@ by using its full package-id or with its alias. For example,
 
 Without any arguments provided, `rudix` prints a list of packages installed.
 
-Usage
------
+Usage:
 
     rudix			# list packages
     sudo rudix install wget	# install wget
