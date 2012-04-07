@@ -1,10 +1,7 @@
 Erlang Programming Language.
 
-Site: http://www.erlang.org/
-License: EPLICENCE
+  * Site: http://www.erlang.org/
+  * License: EPLICENCE
 
-Changes from previous release:
-* Upgraded to version R15B
-
-Usage:
-$ /usr/local/bin/erl
+Release Notes:
+  * Upgraded to version R15B
