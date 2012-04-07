@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>Argtable</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>Argtable is an ANSI C library for parsing GNU style command line options with a minimum of fuss.
+
+  * Site: http://argtable.sourceforge.net/
+  * License: LGPL
+
+Release Notes:
+  * Featuring in Rudix
+</description>
+  <contents>
+    <choice title="argtable-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.argtable"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="bottomleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">argtable-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">argtable-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01argtable.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

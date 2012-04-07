@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="argtable-install" o="root" g="staff" p="16877" pt="argtable-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="argtable2.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libargtable2.0.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libargtable2.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libargtable2.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libargtable2.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="argtable2.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="argtable" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="argtable2" o="root" g="wheel" p="16893">
+              <f n="arg_int.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-advanced.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-advanced.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-advanced.ps" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-intro.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-intro.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2-intro.ps" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2.html" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2.pdf" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2.ps" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argxxx.gif" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="example" o="root" g="wheel" p="16893">
+                <f n="argcustom.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="argxxx.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="argxxx.h" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="callbacks.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="echo.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hasoptvalue.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ls.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="Makefile" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="multisyntax.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="mv.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="myprog.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="myprog_C89.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="README.txt" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rm.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="uname.c" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man3" o="root" g="wheel" p="16893">
+              <f n="argtable.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="argtable2.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
