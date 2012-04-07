@@ -22,3 +22,7 @@ endef
 define install_post_hook
 rm -rf $(InstallDir)/$(LibDir)
 endef
+
+define final_inner_hook
+/usr/local/bin/elinks --version
+endef
