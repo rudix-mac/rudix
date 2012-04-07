@@ -77,6 +77,18 @@ NAME_OPTS = {
     'repl': '-z', 'interactive': '-z',
 }
 
+ALIASES = {
+    'aria': 'aria2',
+    'awk': 'gawk',
+    'bazaar': 'bzr',
+    'fab': 'fabric',
+    'gnumake': 'make',
+    'hg': 'mercurial',
+    'pkgconfig': 'pkg-config',
+    'memcache': 'memcached',
+    'tomcat': 'tomcat6',
+}
+
 def rudix_version():
     'Print current Rudix version'
     print 'Rudix Package Manager version %s' % __version__
@@ -398,6 +410,8 @@ def update_all_packages():
 
 def normalize(pkg):
     'Transform package in full pkg-id (with PREFIX)'
+    if ALIASES.has_key(pkg):
+        pkg = ALIASES[pkg]
     if not pkg.startswith(PREFIX):
         pkg = PREFIX + pkg
     return pkg
