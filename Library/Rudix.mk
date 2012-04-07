@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120403
+BuildSystem = 20120407
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -281,6 +281,23 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do 
 endef
 endif
 
+define test_non_native_dylib
+@$(call info_color,Testing for external linkage)
+for x in $(wildcard $(InstallDir)/$(BinDir)/*) ; do \
+	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+	fi ; \
+done
+for x in $(wildcard $(InstallDir)/$(SBinDir)/*) ; do \
+	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+	fi ; \
+done
+for x in $(wildcard $(InstallDir)/$(LibDir)/*.dylib) ; do \
+	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Library $$x linked with non-native dynamic library) ; \
+	fi ; \
+done
+@$(call info_color,Finished)
+endef
+
 define install_base_documentation
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
@@ -333,6 +350,7 @@ endef
 
 define check_inner_hook
 $(test_universal)
+$(test_non_native_dylib)
 $(test_documentation)
 endef
 
