@@ -4,5 +4,4 @@ Rudix Package Manager - RPM ;)
   * License: BSD
 
 Release Notes:
-  * Included option `-a` to list packages available for installation (Fixed issue 107)
-  * Improved response time in network operations like install and search.
+  * Aliases for package names (example: hg for mercurial)
