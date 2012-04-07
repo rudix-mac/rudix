@@ -1,0 +1,7 @@
+Argtable is an ANSI C library for parsing GNU style command line options with a minimum of fuss.
+
+  * Site: http://argtable.sourceforge.net/
+  * License: LGPL
+
+Release Notes:
+  * Featuring in Rudix
