@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/*Formula.mk
+include ../../Library/GNU.mk
 
 Title=		TITLE
 Name=		NAME
