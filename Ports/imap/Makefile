@@ -1,5 +1,6 @@
 include ../../Library/Unix.mk
 
+Title=		IMAP UW
 Name=		imap
 Version=	2007f
 Revision=	0
@@ -9,10 +10,8 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-MakeExtra += EXTRACFLAGS="$(CFlags)" oxp
-
-define make
-make
+define build_inner_hook
+cd $(BuildDir) ; make EXTRACFLAGS="$(CFlags)" EXTRALDFLAGS="$(LdFlags)" oxp
 endef
 
 define test_inner_hook
