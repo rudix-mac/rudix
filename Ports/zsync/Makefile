@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Zsync
 Name=		zsync
@@ -9,5 +7,5 @@ Revision=	5
 URL=		http://zsync.moria.org.uk/download/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
