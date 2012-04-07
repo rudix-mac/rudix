@@ -17,7 +17,7 @@
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+  * Fix issue 64 (Symbol not found: _rs_file_copy_cb)
 </description>
   <contents>
     <choice title="rdiff-backup-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

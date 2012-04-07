@@ -4,4 +4,4 @@ Rdiff-backup backs up one directory to another, possibly over a network.
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+  * Fix issue 64 (Symbol not found: _rs_file_copy_cb)
