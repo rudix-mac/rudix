@@ -1,10 +1,7 @@
-GNU GetText.
+The GNU gettext utilities are a set of tools that provides a framework to help produce multi-lingual messages.
 
-Site: http://www.gnu.org/software/gettext/
-License: GPL
+  * Site: http://www.gnu.org/software/gettext/
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-$ /usr/local/bin/gettext
+Release Notes:
+  * Rebuild on Xcode 4.3
