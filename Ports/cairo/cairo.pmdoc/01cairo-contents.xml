@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="cairo-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/cairo/cairo-install" m="false" t="file">
+  <f n="cairo-install" o="root" g="staff" p="16877" pt="cairo-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="cairo-trace" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -31,10 +31,16 @@
             <f n="cairo-script-interpreter.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="cairo-script.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="cairo-svg.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="cairo-version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cairo-xcb.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="cairo-xlib-xrender.h" o="root" g="wheel" p="33204">
@@ -46,6 +52,7 @@
             <f n="cairo.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
@@ -110,7 +117,16 @@
             <f n="cairo-quartz.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="cairo-script.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="cairo-svg.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cairo-xcb-shm.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="cairo-xcb.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="cairo-xlib-xrender.pc" o="root" g="wheel" p="33204">
@@ -128,12 +144,6 @@
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="cairo" o="root" g="wheel" p="16893">
               <f n="AUTHORS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="BIBLIOGRAPHY" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="BUGS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="cairo" o="root" g="wheel" p="16893">
@@ -221,6 +231,9 @@
                 <f n="cairo-Quartz-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <f n="cairo-Recording-Surfaces.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
                 <f n="cairo-Regions.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -245,19 +258,16 @@
                 <f n="cairo-User-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-Version-Information.html" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <f n="cairo-Win32-Fonts.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo-Win32-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo-XLib-Surfaces.html" o="root" g="wheel" p="33204">
+                <f n="cairo-XCB-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="cairo.devhelp" o="root" g="wheel" p="33204">
+                <f n="cairo-XLib-Surfaces.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="cairo.devhelp2" o="root" g="wheel" p="33204">
@@ -267,6 +277,9 @@
                   <mod>mode</mod>
                 </f>
                 <f n="index-1.10.html" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="index-1.12.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="index-1.2.html" o="root" g="wheel" p="33204">
@@ -305,8 +318,27 @@
                 <f n="up.png" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.0" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.10" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.2" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.4" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.6" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog.pre-1.8" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
@@ -318,7 +350,7 @@
               <f n="COPYING-MPL-1.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="HACKING" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -327,6 +359,10 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="README.win32" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

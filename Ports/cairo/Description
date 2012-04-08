@@ -1,0 +1,7 @@
+Cairo is a 2D graphics library with support for multiple output devices.
+
+  * Site: http://cairographics.org/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 1.12.0
