@@ -21,3 +21,7 @@ EnvExtra +=	LIBFFI_LIBS="-L/usr/local/lib -lffi"
 define install_post_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
 endef
+
+define final_post_hook
+$(BinDir)/guile -v
+endef
