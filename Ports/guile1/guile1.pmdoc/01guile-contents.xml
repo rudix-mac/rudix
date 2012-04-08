@@ -1,0 +1,1035 @@
+<?xml version="1.0"?>
+<pkg-contents spec="1.12">
+  <f n="guile1-install" o="root" g="staff" p="16877" pt="guile1-install" m="false" t="file">
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="guile" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="guile-config" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="guile-snarf" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="guile-tools" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="include" o="root" g="wheel" p="16893">
+          <f n="guile" o="root" g="wheel" p="16893">
+            <f n="gh.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="readline.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi" o="root" g="wheel" p="16893">
+              <f n="srfi-1.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="srfi-13.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="srfi-14.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="srfi-4.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="srfi-60.h" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libguile" o="root" g="wheel" p="16893">
+            <f n="__scm.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="alist.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="arbiters.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="async.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="backtrace.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="boolean.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="chars.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="continuations.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="convert.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="debug-malloc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="debug.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="deprecated.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="deprecation.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="discouraged.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dynl.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="dynwind.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="environments.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="eq.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="error.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="eval.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="evalext.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="extensions.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="feature.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="filesys.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fluids.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="fports.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="futures.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gc.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gdb_interface.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gdbint.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="goops.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gsubr.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guardians.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hash.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hashtab.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="hooks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="i18n.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="init.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="inline.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ioext.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="iselect.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="keywords.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="lang.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="list.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="load.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="macros.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="mallocs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="modules.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="net_db.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="null-threads.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="numbers.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="objects.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="objprop.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="options.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pairs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ports.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="posix.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="print.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="procprop.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="procs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="properties.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="pthread-threads.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="ramap.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="random.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rdelim.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="read.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="regex-posix.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="root.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="rw.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scmconfig.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="scmsigs.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="script.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="simpos.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="smob.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="snarf.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="socket.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="sort.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srcprop.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-13.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-14.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="srfi-4.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stackchk.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stacks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="stime.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strings.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strorder.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="strports.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="struct.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="symbols.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="tags.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="threads.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="throw.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="unif.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="validate.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="values.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="variable.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vectors.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="version.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="vports.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="weaks.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="libguile.h" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libguile-srfi-srfi-1-v-3.3.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-1-v-3.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-1-v-3.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-1-v-3.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-13-14-v-3.3.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-13-14-v-3.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-13-14-v-3.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-13-14-v-3.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-4-v-3.3.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-4-v-3.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-4-v-3.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-4-v-3.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-60-v-2.2.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-60-v-2.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-60-v-2.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile-srfi-srfi-60-v-2.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile.17.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguile.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguilereadline-v-17.17.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libguilereadline-v-17.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libguilereadline-v-17.dylib" o="root" g="wheel" p="41469">
+            <mod>mode</mod>
+          </f>
+          <f n="libguilereadline-v-17.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="pkgconfig" o="root" g="wheel" p="16893">
+            <f n="guile-1.8.pc" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="aclocal" o="root" g="wheel" p="16893">
+            <f n="guile.m4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="guile1" o="root" g="wheel" p="16893">
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog-2008" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING.LESSER" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="GUILE-Version" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="HACKING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="emacs" o="root" g="wheel" p="16893">
+            <f n="site-lisp" o="root" g="wheel" p="16893">
+              <f n="gds-scheme.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gds-server.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="gds.el" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+          <f n="guile" o="root" g="wheel" p="16893">
+            <f n="1.8" o="root" g="wheel" p="16893">
+              <f n="guile-procedures.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ice-9" o="root" g="wheel" p="16893">
+                <f n="and-let-star.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="boot-9.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="buffered-input.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="calling.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="channel.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="common-list.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="debug.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="debugger" o="root" g="wheel" p="16893">
+                  <f n="command-loop.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="commands.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="state.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="trc.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="utils.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="debugger.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="debugging" o="root" g="wheel" p="16893">
+                  <f n="example-fns.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="ice-9-debugger-extensions.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="steps.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="trace.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="traps.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="trc.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="deprecated.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="documentation.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="emacs.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="expect.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="format.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ftw.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gap-buffer.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gds-client.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="gds-server.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="getopt-long.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hcons.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="history.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="lineio.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="list.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="ls.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="mapping.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="match.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="networking.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="null.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="occam-channel.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="optargs.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="poe.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="popen.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="posix.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="pretty-print.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="psyntax.pp" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="psyntax.ss" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="q.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="r4rs.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="r5rs.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rdelim.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="readline.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="receive.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="regex.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="runq.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="rw.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="safe-r5rs.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="safe.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="serialize.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="session.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="slib.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stack-catch.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="streams.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="string-fun.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="syncase.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="threads.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="time.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="weak-vector.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="lang" o="root" g="wheel" p="16893">
+                <f n="elisp" o="root" g="wheel" p="16893">
+                  <f n="base.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="example.el" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="interface.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="internals" o="root" g="wheel" p="16893">
+                    <f n="evaluation.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="format.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="fset.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="lambda.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="load.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="null.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="set.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="signal.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="time.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="trace.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="primitives" o="root" g="wheel" p="16893">
+                    <f n="buffers.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="char-table.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="features.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="fns.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="format.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="guile.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="keymaps.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="lists.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="load.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="match.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="numbers.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="pure.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="read.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="signal.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="strings.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="symprop.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="syntax.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="system.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <f n="time.scm" o="root" g="wheel" p="33204">
+                      <mod>mode</mod>
+                    </f>
+                    <mod>mode</mod>
+                  </f>
+                  <f n="transform.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="variables.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="oop" o="root" g="wheel" p="16893">
+                <f n="goops" o="root" g="wheel" p="16893">
+                  <f n="accessors.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="active-slot.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="compile.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="composite-slot.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="describe.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="dispatch.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="internal.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="old-define-method.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="save.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="simple.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="stklos.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="util.scm" o="root" g="wheel" p="33204">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="goops.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="scripts" o="root" g="wheel" p="16893">
+                <f n="api-diff" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="autofrisk" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="display-commentary" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="doc-snarf" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="frisk" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="generate-autoload" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="lint" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="PROGRAM" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="punify" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="read-rfc822" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="read-scheme-source" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="read-text-outline" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="scan-api" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="snarf-check-and-output-texi" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="snarf-guile-m4-docs" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="summarize-guile-TODO" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <f n="use2dot" o="root" g="wheel" p="33277">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <f n="srfi" o="root" g="wheel" p="16893">
+                <f n="srfi-1.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-10.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-11.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-13.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-14.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-16.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-17.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-19.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-2.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-26.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-31.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-34.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-35.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-37.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-39.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-4.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-6.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-60.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-69.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-8.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-88.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="srfi-9.scm" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <f n="info" o="root" g="wheel" p="16893">
+            <f n="goops.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile-tut.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-1" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-2" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-3" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-4" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-5" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-6" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="guile.info-7" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="r5rs.info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="man" o="root" g="wheel" p="16893">
+            <f n="man1" o="root" g="wheel" p="16893">
+              <f n="guile.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
