@@ -20,3 +20,7 @@ define final_inner_hook
 /usr/local/bin/pcre-config --version
 /usr/local/bin/pcregrep Version Makefile
 endef
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
