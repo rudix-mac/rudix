@@ -1,7 +1,7 @@
 Libevent is an event notification library.
 
-Site: http://libevent.org/
-License: BSD
+  * Site: http://libevent.org/
+  * License: BSD
 
-Changes from previous release:
-* Upgraded to version 2.0.17
+Release Notes:
+  * Upgraded to version 2.0.17
