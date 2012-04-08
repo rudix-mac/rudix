@@ -1,10 +1,8 @@
 mpop is a POP3 client: it retrieves mail from POP3 mailboxes.
 
-Site: http://mpop.sourceforge.net/
-License: GPL
+  * Site: http://mpop.sourceforge.net/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to version 1.0.26
+Release Notes:
+  * Upgraded to version 1.0.26
 
-Usage:
-$ /usr/local/bin/mpop

@@ -1,8 +1,6 @@
 BuildRequires += $(BinDir)/pkg-config
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		mpop
 Name=		mpop
