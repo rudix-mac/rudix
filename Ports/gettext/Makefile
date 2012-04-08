@@ -25,5 +25,5 @@ rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
 
 define final_inner_hook
-$(BinDir)/gettext
+$(BinDir)/gettext -h
 endef
