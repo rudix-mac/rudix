@@ -41,9 +41,7 @@
               <f n="srfi-60.h" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="libguile" o="root" g="wheel" p="16893">
             <f n="__scm.h" o="root" g="wheel" p="33204">
@@ -346,7 +344,6 @@
             <f n="weaks.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="libguile.h" o="root" g="wheel" p="33204">
             <mod>mode</mod>
@@ -469,7 +466,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="emacs" o="root" g="wheel" p="16893">
@@ -528,7 +524,6 @@
                   <f n="utils.scm" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="debugger.scm" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -552,7 +547,6 @@
                   <f n="trc.scm" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="deprecated.scm" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -698,7 +692,6 @@
                 <f n="weak-vector.scm" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="lang" o="root" g="wheel" p="16893">
                 <f n="elisp" o="root" g="wheel" p="16893">
@@ -742,7 +735,6 @@
                     <f n="trace.scm" o="root" g="wheel" p="33204">
                       <mod>mode</mod>
                     </f>
-                    <mod>mode</mod>
                   </f>
                   <f n="primitives" o="root" g="wheel" p="16893">
                     <f n="buffers.scm" o="root" g="wheel" p="33204">
@@ -802,7 +794,6 @@
                     <f n="time.scm" o="root" g="wheel" p="33204">
                       <mod>mode</mod>
                     </f>
-                    <mod>mode</mod>
                   </f>
                   <f n="transform.scm" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
@@ -810,9 +801,7 @@
                   <f n="variables.scm" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="oop" o="root" g="wheel" p="16893">
                 <f n="goops" o="root" g="wheel" p="16893">
@@ -852,12 +841,10 @@
                   <f n="util.scm" o="root" g="wheel" p="33204">
                     <mod>mode</mod>
                   </f>
-                  <mod>mode</mod>
                 </f>
                 <f n="goops.scm" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="scripts" o="root" g="wheel" p="16893">
                 <f n="api-diff" o="root" g="wheel" p="33277">
@@ -911,7 +898,6 @@
                 <f n="use2dot" o="root" g="wheel" p="33277">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
               <f n="srfi" o="root" g="wheel" p="16893">
                 <f n="srfi-1.scm" o="root" g="wheel" p="33204">
@@ -980,11 +966,8 @@
                 <f n="srfi-9.scm" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
           <f n="info" o="root" g="wheel" p="16893">
             <f n="goops.info" o="root" g="wheel" p="33204">
