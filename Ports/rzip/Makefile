@@ -1,8 +1,6 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Title=		rzip
+Title=		Rzip
 Name=		rzip
 Version=	2.1
 Revision=	15
