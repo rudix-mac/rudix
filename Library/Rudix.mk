@@ -158,6 +158,14 @@ upload: pkg final
 	#twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
 	@$(call info_color,Finished)
 
+# FIXME: Temporary hack to build static packages.
+static: buildclean installclean
+	make pkg \
+		ONLY_STATIC_LIBS=1 \
+		RUDIX_APPLY_RECOMMENDATIONS=no \
+		DistName=static-$(Name)
+	touch static
+
 help:
 	@echo "Construction rules:"
 	@echo "  retrieve - Retrieve source"
