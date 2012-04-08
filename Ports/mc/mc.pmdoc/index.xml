@@ -1,39 +1,8 @@
-<?xml version="1.0"?>
-<pkmkdoc spec="1.12">
-  <properties>
-    <title>Midnight Commander</title>
-    <organization>org.rudix</organization>
-    <userSees ui="easy"/>
-    <min-target os="3"/>
-    <domain anywhere="true"/>
-  </properties>
-  <distribution>
-    <versions min-spec="1.000000"/>
-    <scripts/>
-  </distribution>
-  <description>GNU Midnight Commander is a visual file manager.
+<pkmkdoc spec="1.12"><properties><title>Midnight Commander</title><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>GNU Midnight Commander is a visual file manager.
 
   * Site: http://www.midnight-commander.org/
   * License: GPL
 
 Release Notes:
   * Upgraded to version 4.8.2
-</description>
-  <contents>
-    <choice title="mc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.mc"/>
-    </choice>
-  </contents>
-  <resources bg-scale="none" bg-align="bottomleft">
-    <locale lang="en">
-      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
-      <resource relative="true" mod="true" type="license">mc-build/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">mc-build/README</resource>
-      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
-    </locale>
-  </resources>
-  <flags/>
-  <item type="file">01mc.xml</item>
-  <mod>properties.title</mod>
-  <mod>description</mod>
-</pkmkdoc>
+</description><contents><choice title="mc-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.mc"/></choice></contents><resources bg-scale="none" bg-align="bottomleft"><locale lang="en"><resource relative="true" mod="true" type="background">../../Library/rudix.png</resource><resource relative="true" mod="true" type="license">mc-build/COPYING</resource><resource relative="true" mod="true" type="readme">mc-build/README</resource><resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource></locale></resources><flags/><item type="file">01mc.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
