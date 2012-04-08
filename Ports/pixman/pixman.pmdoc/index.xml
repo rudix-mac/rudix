@@ -18,7 +18,6 @@
 
 Release Notes:
   * Upgraded to version 0.24.4
-
 </description>
   <contents>
     <choice title="pixman-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
