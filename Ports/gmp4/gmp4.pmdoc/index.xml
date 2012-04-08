@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GMP</title>
+    <title>GNU MP (Version 4)</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -17,8 +17,7 @@
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
-
+  * Fat Binary
 </description>
   <contents>
     <choice title="gmp4-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
@@ -34,7 +33,7 @@ Release Notes:
     </locale>
   </resources>
   <flags/>
-  <item type="file">01gmp4.xml</item>
+  <item type="file">01gmp.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>
