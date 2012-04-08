@@ -1,43 +1,25 @@
-# Portable Haskell compiler
-# http://www.haskell.org/nhc98/
-# BSD
+include ../../Library/Configure.mk
 
-include ../../Library/Rules.mk
-
-TITLE=		nhc98 $(VERSION)
-NAME=		nhc98
-VERSION=	1.22
-REVISION=	1
+Title=		NHC98
+Name=		nhc98
+Version=	1.22
+Revision=	2
 URL=		http://www.haskell.org/nhc98/
-SOURCE=		$(NAME)src-$(VERSION).tar.gz
+Source=		$(Name)src-$(Version).tar.gz
 
-README=		$(BUILDDIR)/docs/index.html
-LICENSE=	$(BUILDDIR)/COPYRIGHT
+ReadMeFile=	$(SourceDir)/docs/index.html
+LicenseFile=	$(SourceDir)/COPYRIGHT
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
+ConfigureExtra += --mandir=$(Prefix)/share/man/man1
+ConfigureExtra += --docdir=$(DocDir)/nhc98
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./configure \
-		--mandir=/usr/local/share/man/man1 \
-		--docdir=/usr/local/share/doc/nhc98 ; make
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	perl -pi -e "s!$(BUILDDIR)/script/cabal-parse!/usr/local/lib/nhc98/ix86-Darwin10/cabal-parse!" \
-		$(INSTALLDIR)/usr/local/bin/cabal-parse
-	perl -pi -e "s!$(BUILDDIR)/script/harch!/usr/local/bin/harch!" \
-		$(INSTALLDIR)/usr/local/bin/nhc98-pkg
-	perl -pi -e "s!$(BUILDDIR)/script/nhc98!/usr/local/bin/nhc98! ; s!$(BUILDDIR)/include!/usr/local/include/nhc98!" \
-		$(INSTALLDIR)/usr/local/lib/hmake/ix86-Darwin10/hmakerc
-	perl -pi -e "s!$(BUILDDIR)/script/cabal-parse!/usr/local/lib/nhc98/ix86-Darwin10/cabal-parse!" \
-		$(INSTALLDIR)/usr/local/lib/nhc98/ix86-Darwin10/config
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYRIGHT,README} $(INSTALLDOCDIR)
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; make test
-	touch test
+define install_post_hook
+perl -pi -e "s!$(SourceDir)/script/cabal-parse!$(LibDir)/nhc98/ix86-Darwin10/cabal-parse!" \
+	$(InstallDir)$(BinDir)/cabal-parse
+perl -pi -e "s!$(SourceDir)/script/harch!$(BinDir)/harch!" \
+	$(InstallDir)$(BinDir)/nhc98-pkg
+perl -pi -e "s!$(SourceDir)/script/nhc98!$(BinDir)/nhc98! ; s!$(BUILDDIR)/include!$(Prefix)/include/nhc98!" \
+	$(InstallDir)$(LibDir)/hmake/ix86-Darwin10/hmakerc
+perl -pi -e "s!$(SourceDir)/script/cabal-parse!$(LibDir)/nhc98/ix86-Darwin10/cabal-parse!" \
+	$(InstallDir)$(LibDir)/nhc98/ix86-Darwin10/config
+endef

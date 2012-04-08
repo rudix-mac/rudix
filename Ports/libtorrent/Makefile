@@ -1,17 +1,14 @@
-# BitTorrent library written in C++
-# http://libtorrent.rakshasa.no/
-# GPL
+DEPENDS=	$(BinDir)/pkg-config
+DEPENDS+=	$(LibDir)/libsigc-2.0.la
 
-include ../../Library/Rules.mk
+include ../../Library/GNU.mk
 
-NAME=		libtorrent
-VERSION=	0.12.6
-REVISION=	0
+Name=		libtorrent
+Version=	0.12.6
+Revision=	0
 URL=		http://libtorrent.rakshasa.no/downloads/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS=	/usr/local/bin/pkg-config
-DEPENDS+=	/usr/local/lib/libsigc-2.0.la
 
 ifdef STATIC_ONLY
 CONFIGURE_OPTS=		--enable-static --disable-shared
@@ -20,11 +17,11 @@ CONFIGURE_OPTS=		--enable-static --enable-shared
 endif
 
 prep: retrieve
-	tar zxvf $(SOURCE)
+	tar zxvf $(Source)
 	touch prep
 
 build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; \
+	cd $(SourceDir) ; \
 	env CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
 		OPENSSL_CFLAGS=-I/usr/include OPENSSL_LIBS=-lcrypto \
 		PKG_CONFIG_PATH=/usr/lib/pkgconfig \
@@ -34,18 +31,18 @@ build: prep $(DEPENDS)
 	touch build
 
 install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README} $(INSTALLDOCDIR)
+	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
+	install -d $(InstallDir)/$(DocDir)/$(Name)
+	install -m 644 $(SourceDir)/{AUTHORS,COPYING,ChangeLog,NEWS,ReadMeFile} $(InstallDir)/$(DocDir)/$(Name)
 ifndef STATIC_ONLY
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
+	strip -x -S $(InstallDir)$(LibDir)/lib*.dylib
 endif
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
+	strip -x -S $(InstallDir)$(LibDir)/lib*.a
 	touch install
 
 test: install
 ifndef STATIC_ONLY
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.dylib"
+	$(test-universal-binary) "$(InstallDir)$(LibDir)/lib*.dylib"
 endif
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/lib/lib*.a"
+	$(test-universal-binary) "$(InstallDir)$(LibDir)/lib*.a"
 	touch test

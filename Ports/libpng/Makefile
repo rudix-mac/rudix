@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		PNG
 Name=		libpng
@@ -18,6 +16,5 @@ GnuConfigureExtra += --enable-static --disable-shared
 endif
 
 static: buildclean installclean
-	make ONLY_STATIC_LIBS=1 RUDIX_APPLY_RECOMMENDATIONS=no pkg
-	mv $(PkgFile) static-$(PkgFile)
+	make pkg ONLY_STATIC_LIBS=1 RUDIX_APPLY_RECOMMENDATIONS=no DistName=static-$(Name)
 	touch static

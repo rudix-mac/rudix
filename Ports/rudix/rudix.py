@@ -81,12 +81,16 @@ ALIASES = {
     'aria': 'aria2',
     'awk': 'gawk',
     'bazaar': 'bzr',
+    'exuberant': 'ctags', 'exuberant-ctags': 'ctags',
     'fab': 'fabric',
     'gnumake': 'make',
     'hg': 'mercurial',
-    'pkgconfig': 'pkg-config',
     'memcache': 'memcached',
+    'pkgconfig': 'pkg-config',
+    'rdiff': 'librsync', 'rdiffbackup': 'rdiff-backup',
+    'tofrodos': 'dos2unix',
     'tomcat': 'tomcat6',
+    'unix2dos': 'dos2unix',
 }
 
 def rudix_version():

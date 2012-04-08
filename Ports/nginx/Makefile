@@ -17,9 +17,8 @@ LicenseFIle=	$(SourceDir)/LICENSE
 
 define install_post_hook__
 rm -f $(InstallDir)$(Prefix)/nginx/conf/{fastcgi_params,mime.types,nginx.conf}
-for x in index.html 50x.html ; do \
-	mv $(InstallDir)$(Prefix)/nginx/html/$$x \
-	   $(InstallDir)$(Prefix)/nginx/html/$$x.default ; done
+mv $(InstallDir)$(Prefix)/nginx/html \
+	$(InstallDir)$(Prefix)/nginx/html.default
 touch install
 
 endef

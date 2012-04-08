@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="EF9F6F3A-4349-47A9-9D05-26A5917464B7">
+<pkgref spec="1.12" uuid="D4CD8E19-75C0-11E1-A260-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.neon</identifier>
-    <version>1.0</version>
+    <version>0.29.6-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,9 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>parent</mod>
-    <mod>identifier</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01neon-contents.xml</file-list>

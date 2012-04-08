@@ -22,3 +22,13 @@ UncompressedName = gmp-$(Version)
 
 #GnuConfigureExtra += --enable-fat=yes
 GnuConfigureExtra += --enable-cxx
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
+static: buildclean installclean
+	make pkg \
+		ONLY_STATIC_LIBS=1 \
+		RUDIX_APPLY_RECOMMENDATIONS=no \
+		DistName=static-$(Name)
+	touch static

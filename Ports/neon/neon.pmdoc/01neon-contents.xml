@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="neon-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/neon/neon-install" m="false" t="file">
+  <f n="neon-install" o="root" g="staff" p="16877" pt="neon-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="neon-config" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -82,16 +82,11 @@
             <f n="ne_xmlreq.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libneon.27.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
           <f n="libneon.a" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
-          <f n="libneon.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
           <f n="libneon.la" o="root" g="wheel" p="33277">
@@ -106,25 +101,13 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="neon" o="root" g="wheel" p="16893">
-              <f n="api.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="AUTHORS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="biblio.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="BUGS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="compliance.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="features.html" o="root" g="wheel" p="33204">
+              <f n="ChangeLog.CVS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="html" o="root" g="wheel" p="16893">
@@ -266,11 +249,12 @@
                 <f n="xml.html" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-              </f>
-              <f n="index.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="intro.html" o="root" g="wheel" p="33204">
+              <f n="INSTALL.win32" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
@@ -279,131 +263,71 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ref.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+              <mod>mode</mod>
+            </f>
+          </f>
+          <f n="locale" o="root" g="wheel" p="16893">
+            <f n="cs" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refalloc.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="de" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refauth.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="fr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refbuf.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="ja" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refbufapp.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="nn" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refbufcr.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="pl" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refbufdest.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="ru" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refbufutil.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="tr" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
-              <f n="refcert.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refclicert.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refconfig.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="referr.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="reffeat.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refgetst.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refi18n.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refiaddr.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refneon.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refopts.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refreq.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refreqbody.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refreqflags.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refreqhdr.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refresolve.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refresphdr.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsess.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsessflags.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refshave.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsockinit.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsslca.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsslcert2.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsslcertio.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refssldname.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refsslvfy.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refstatus.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="reftok.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refvers.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="refxml.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="security.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="using.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="xml.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+            </f>
+            <f n="zh_CN" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="neon.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
               </f>
             </f>
           </f>
@@ -513,7 +437,16 @@
               <f n="ne_iaddr_make.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="ne_iaddr_parse.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="ne_iaddr_print.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ne_iaddr_raw.3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ne_iaddr_reverse.3" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="ne_iaddr_typeof.3" o="root" g="wheel" p="33204">

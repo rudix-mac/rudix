@@ -1,4 +1,8 @@
 #!/bin/sh
 [ ! -f /usr/local/etc/squid.conf ] && \
     install -m 644 /usr/local/etc/squid.conf.default /usr/local/etc/squid.conf
+[ ! -f /usr/local/etc/mime.conf ] && \
+    install -m 644 /usr/local/etc/mime.conf.default /usr/local/etc/mime.conf
+[ ! -f /usr/local/etc/cachemgr.conf ] && \
+    install -m 644 /usr/local/etc/cachemgr.conf.default /usr/local/etc/cachemgr.conf
 exit 0
