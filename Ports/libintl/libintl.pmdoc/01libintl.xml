@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="AF231E23-8023-11E1-ACA7-D49A200B3D20">
+<pkgref spec="1.12" uuid="3AC2C21C-8115-11E1-AA32-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.libintl</identifier>
-    <version>0.18.1.1-5</version>
+    <version>0.18.1.1-6</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
