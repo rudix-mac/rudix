@@ -1,10 +1,7 @@
 Git the fast version control system.
 
-Site: http://git-scm.com/
-License: GPL
+  * Site: http://git-scm.com/
+  * License: GPL
 
-Changes from previous release:
-* Upgraded to version 1.7.9.3
-
-Usage:
-/usr/local/bin/git
+Release Notes:
+  * Upgraded to version 1.7.9.3
