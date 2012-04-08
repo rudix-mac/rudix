@@ -20,3 +20,7 @@ cd $(BuildDir) ; ABI="64" CFLAGS="-arch x86_64 -Os" $(gnu_configure) ; $(make)
 cd $(BuildDir) ; for x in libgmp.10.dylib libgmp.a libgmpxx.4.dylib libgmpxx.a  ; do \
 	lipo -create -arch i386 build-i386/.libs/$$x -arch x86_64 .libs/$$x -output .libs/$$x ; done
 endef
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
