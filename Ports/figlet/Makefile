@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/UnixFormula.mk
+include ../../Library/Unix.mk
 
 Title=		FIGlet
 Name=		figlet
