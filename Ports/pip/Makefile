@@ -1,6 +1,6 @@
 include ../../Library/Python.mk
 
-Title=		pip
+Title=		pip (Python Module)
 Name=		pip
 Version=	1.1
 Revision=	0
