@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>GNU MP for Python</title>
+    <title>GMPY (Python Module)</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -11,15 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>General MultiPrecision arithmetic for Python</description>
+  <description>Multiple-precision arithmetic for Python.
+
+  * Site: http://code.google.com/p/gmpy/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 1.15
+</description>
   <contents>
     <choice title="gmpy-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.gmpy"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="readme">gmpy-1.11rc1/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">gmpy-build/lgpl-2.1.txt</resource>
+      <resource relative="true" mod="true" type="readme">gmpy-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

@@ -1,2 +1,36 @@
 <?xml version="1.0"?>
-<pkg-contents spec="1.12"/>
+<pkg-contents spec="1.12">
+  <f n="gmpy-install" o="root" g="staff" p="16877" pt="gmpy-install" m="false" t="file">
+    <f n="Library" o="root" g="wheel" p="16877">
+      <f n="Python" o="root" g="wheel" p="16877">
+        <f n="2.7" o="root" g="wheel" p="16877">
+          <f n="site-packages" o="root" g="wheel" p="16877">
+            <f n="gmpy-1.15-py2.7.egg-info" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="gmpy.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+    <f n="usr" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="gmpy" o="root" g="wheel" p="16893">
+              <f n="lgpl-2.1.txt" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+          </f>
+        </f>
+      </f>
+    </f>
+  </f>
+</pkg-contents>
