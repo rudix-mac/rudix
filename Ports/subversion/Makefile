@@ -1,4 +1,4 @@
-BuildRequires ++ $(BinDir)/pkg-config
+BuildRequires += $(BinDir)/pkg-config
 BuildRequires += $(LibDir)/libneon.la
 BuildRequires += $(LibDir)/libintl.la
 

@@ -1,9 +1,18 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="subversion-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Work/rudix.svn/Ports/subversion/subversion-install" m="false" t="file">
+  <f n="subversion-install" o="root" g="staff" p="16877" pt="subversion-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="libexec" o="root" g="wheel" p="16877">
+        <f n="apache2" o="root" g="wheel" p="16877">
+          <f n="mod_authz_svn.so" o="root" g="wheel" p="33261"/>
+          <f n="mod_dav_svn.so" o="root" g="wheel" p="33261"/>
+          <f n="mod_dontdothat.so" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+      </f>
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="svn" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -14,6 +23,9 @@
             <mod>mode</mod>
           </f>
           <f n="svnlook" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="svnrdump" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="svnserve" o="root" g="wheel" p="33277">
@@ -41,6 +53,9 @@
               <mod>mode</mod>
             </f>
             <f n="svn_base64.h" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="svn_cache_config.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="svn_checksum.h" o="root" g="wheel" p="33204">
@@ -161,10 +176,7 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libsvn_client-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_client-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_client-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_client-1.a" o="root" g="wheel" p="33204">
@@ -176,10 +188,7 @@
           <f n="libsvn_client-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_delta-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_delta-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_delta-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_delta-1.a" o="root" g="wheel" p="33204">
@@ -191,10 +200,7 @@
           <f n="libsvn_delta-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_diff-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_diff-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_diff-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_diff-1.a" o="root" g="wheel" p="33204">
@@ -206,10 +212,7 @@
           <f n="libsvn_diff-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_fs-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_fs-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_fs-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_fs-1.a" o="root" g="wheel" p="33204">
@@ -221,10 +224,7 @@
           <f n="libsvn_fs-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_fs_fs-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_fs_fs-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_fs_fs-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_fs_fs-1.a" o="root" g="wheel" p="33204">
@@ -236,10 +236,7 @@
           <f n="libsvn_fs_fs-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_fs_util-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_fs_util-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_fs_util-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_fs_util-1.a" o="root" g="wheel" p="33204">
@@ -251,10 +248,7 @@
           <f n="libsvn_fs_util-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_ra-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_ra-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_ra-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_ra-1.a" o="root" g="wheel" p="33204">
@@ -266,10 +260,7 @@
           <f n="libsvn_ra-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_ra_local-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_ra_local-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_ra_local-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_ra_local-1.a" o="root" g="wheel" p="33204">
@@ -281,10 +272,7 @@
           <f n="libsvn_ra_local-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_ra_neon-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_ra_neon-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_ra_neon-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_ra_neon-1.a" o="root" g="wheel" p="33204">
@@ -296,10 +284,7 @@
           <f n="libsvn_ra_neon-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_ra_svn-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_ra_svn-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_ra_svn-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_ra_svn-1.a" o="root" g="wheel" p="33204">
@@ -311,10 +296,7 @@
           <f n="libsvn_ra_svn-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_repos-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_repos-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_repos-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_repos-1.a" o="root" g="wheel" p="33204">
@@ -326,10 +308,7 @@
           <f n="libsvn_repos-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_subr-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_subr-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_subr-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_subr-1.a" o="root" g="wheel" p="33204">
@@ -341,10 +320,7 @@
           <f n="libsvn_subr-1.la" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="libsvn_wc-1.0.0.0.dylib" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="libsvn_wc-1.0.dylib" o="root" g="wheel" p="41469">
+          <f n="libsvn_wc-1.0.dylib" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
           <f n="libsvn_wc-1.a" o="root" g="wheel" p="33204">
@@ -360,13 +336,16 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="subversion" o="root" g="wheel" p="16893">
-              <f n="BUGS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="CHANGES" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="COPYING" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NOTICE" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
@@ -475,6 +454,9 @@
               <f n="svnlook.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="svnrdump.1" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="svnsync.1" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -486,11 +468,13 @@
               <f n="svnserve.conf.5" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="man8" o="root" g="wheel" p="16893">
               <f n="svnserve.8" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
         </f>

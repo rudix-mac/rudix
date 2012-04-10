@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="66A56894-7639-4EAE-9000-AC06F40F24F6">
+<pkgref spec="1.12" uuid="486A46F0-82BF-11E1-848D-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.subversion.subversion-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.subversion</identifier>
+    <version>1.7.4-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,7 +12,9 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>installTo</mod>
     <mod>parent</mod>
   </config>
