@@ -19,3 +19,7 @@ GnuConfigureExtra += --enable-static --disable-shared
 else
 GnuConfigureExtra += --enable-static --enable-shared
 endif
+
+define final_inner_hook
+$(BinDir)/neon-config --version
+endef
