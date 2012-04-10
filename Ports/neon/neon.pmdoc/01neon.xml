@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="D4CD8E19-75C0-11E1-A260-D49A200B3D20">
+<pkgref spec="1.12" uuid="32D8DB6E-82B3-11E1-9E42-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.neon</identifier>
     <version>0.29.6-0</version>

@@ -18,6 +18,7 @@
 
 Release Notes:
   * Upgraded to version 0.29.6
+  * Disabled build with gettext (libintl)
 </description>
   <contents>
     <choice title="neon-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

@@ -1,6 +1,4 @@
-# HTTP and WebDAV client library, with C interface
-# http://www.webdav.org/neon/
-# LGPL
+BuildRequires += $(BinDir)/pkg-config
 
 include ../../Library/GNU.mk
 
@@ -14,11 +12,10 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-define prep_post_hook
-perl -p -i -e s/'intl '//g $(SourceDir)/configure
-endef
-endif
+GnuConfigureExtra += --with-ssl=openssl
 
-GnuConfigureExtra += --enable-shared
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+else
+GnuConfigureExtra += --enable-static --enable-shared
+endif

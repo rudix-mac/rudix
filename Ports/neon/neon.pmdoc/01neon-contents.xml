@@ -86,7 +86,13 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
+          <f n="libneon.27.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="libneon.a" o="root" g="wheel" p="33204">
+            <mod>mode</mod>
+          </f>
+          <f n="libneon.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
           <f n="libneon.la" o="root" g="wheel" p="33277">
@@ -264,71 +270,6 @@
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
-            </f>
-          </f>
-          <f n="locale" o="root" g="wheel" p="16893">
-            <f n="cs" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="de" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="fr" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="ja" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="nn" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="pl" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="ru" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="tr" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
-            </f>
-            <f n="zh_CN" o="root" g="wheel" p="16893">
-              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                <f n="neon.mo" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-              </f>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
