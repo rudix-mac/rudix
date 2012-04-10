@@ -1,6 +1,6 @@
 include ../../Library/Python.mk
 
-Title=		FeedParser (Python Module)
+Title=		Universal Feed Parser (Python Module)
 Name=		feedparser
 Version=	5.1.1
 Revision=	0

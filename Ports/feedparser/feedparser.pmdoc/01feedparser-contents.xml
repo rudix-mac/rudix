@@ -18,7 +18,6 @@
               <f n="top_level.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="feedparser.py" o="root" g="wheel" p="33277">
               <mod>mode</mod>
@@ -41,7 +40,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
