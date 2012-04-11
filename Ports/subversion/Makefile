@@ -18,4 +18,7 @@ define install_post_hook
 mv $(InstallDir)/usr/libexec $(InstallDir)/$(Prefix)/libexec
 endef
 
-# otool -L $(InstallDir)$(LibDir)/libsvn_ra_neon-1.dylib | grep -v '/usr/lib/libneon.26.dylib' > /dev/null
+define final_inner_hook
+$(BinDir)/svn --version
+endef
+
