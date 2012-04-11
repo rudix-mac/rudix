@@ -2,15 +2,6 @@
 <pkg-contents spec="1.12">
   <f n="subversion-install" o="root" g="staff" p="16877" pt="subversion-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="libexec" o="root" g="wheel" p="16877">
-        <f n="apache2" o="root" g="wheel" p="16877">
-          <f n="mod_authz_svn.so" o="root" g="wheel" p="33261"/>
-          <f n="mod_dav_svn.so" o="root" g="wheel" p="33261"/>
-          <f n="mod_dontdothat.so" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-        </f>
-      </f>
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
           <f n="svn" o="root" g="wheel" p="33277">
@@ -172,7 +163,6 @@
             <f n="svn_xml.h" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
-            <mod>mode</mod>
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
@@ -333,6 +323,21 @@
             <mod>mode</mod>
           </f>
         </f>
+        <f n="libexec" o="root" g="wheel" p="16893">
+          <f n="apache2" o="root" g="wheel" p="16893">
+            <f n="mod_authz_svn.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mod_dav_svn.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <f n="mod_dontdothat.so" o="root" g="wheel" p="33277">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
+          </f>
+          <mod>mode</mod>
+        </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="subversion" o="root" g="wheel" p="16893">
@@ -351,7 +356,6 @@
               <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
@@ -468,13 +472,11 @@
               <f n="svnserve.conf.5" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
             <f n="man8" o="root" g="wheel" p="16893">
               <f n="svnserve.8" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>

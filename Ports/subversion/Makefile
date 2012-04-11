@@ -14,4 +14,8 @@ Source=		$(Name)-$(Version).tar.bz2
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
+define install_post_hook
+mv $(InstallDir)/usr/libexec $(InstallDir)/$(Prefix)/libexec
+endef
+
 # otool -L $(InstallDir)$(LibDir)/libsvn_ra_neon-1.dylib | grep -v '/usr/lib/libneon.26.dylib' > /dev/null
