@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120407
+BuildSystem = 20120410
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -306,6 +306,14 @@ done
 @$(call info_color,Finished)
 endef
 
+define test_apache_modules
+@$(call info_color,Testing Apache modules)
+for x in $(wildcard $(InstallDir)/usr/libexec/apache2/*.so) ; do \
+	$(call error_color,Apache module $$x will install in system path) ; \
+done
+@$(call info_color,Finished)
+endef
+
 define install_base_documentation
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
@@ -359,6 +367,7 @@ endef
 define check_inner_hook
 $(test_universal)
 $(test_non_native_dylib)
+$(test_apache_modules)
 $(test_documentation)
 endef
 
