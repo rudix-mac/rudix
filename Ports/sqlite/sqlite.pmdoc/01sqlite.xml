@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="496CC902-8438-11E1-AA34-D49A200B3D20">
+<pkgref spec="1.12" uuid="F6CDBC6E-8438-11E1-8978-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.sqlite</identifier>
     <version>3.7.11-0</version>
@@ -12,11 +12,11 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>version</mod>
+    <mod>installTo</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
-    <mod>installTo</mod>
     <mod>parent</mod>
+    <mod>version</mod>
   </config>
   <contents>
     <file-list>01sqlite-contents.xml</file-list>
