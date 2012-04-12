@@ -13,6 +13,7 @@ SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
 DistName = $(Name)
+PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 
 #
@@ -233,7 +234,7 @@ endef
 define create_pkg
 $(RUDIX_PACKAGEMAKER) \
 	--doc $(Name).pmdoc \
-	--id $(Vendor).pkg.$(DistName) \
+	--id $(PkgId) \
 	--version $(Version)-$(Revision) \
 	--title "$(Title) $(Version)" \
 $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
