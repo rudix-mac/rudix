@@ -1,10 +1,5 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Description=	The small, fast s-expression library
-Site=		http://sexpr.sourceforge.net/
-License=	BSD
 Title=		sfsexp
 Name=		sexpr
 Version=	1.2.1
