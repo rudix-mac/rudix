@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="891E21CA-81B2-11E1-A8B4-D49A200B3D20">
+<pkgref spec="1.12" uuid="742AEC6E-8447-11E1-A6EB-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.gmp4</identifier>
+    <identifier>org.rudix.pkg.gmp4-runtime</identifier>
     <version>4.3.2-2</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">../gmp4/gmp4-install</installFrom>
+    <installFrom relative="true" mod="true">../gmp4-runtime/gmp4-runtime-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
@@ -19,7 +19,7 @@
     <mod>parent</mod>
   </config>
   <contents>
-    <file-list>../gmp4/gmp4.pmdoc/01gmp-contents.xml</file-list>
+    <file-list>../gmp4-runtime/gmp4-runtime.pmdoc/01gmp-contents.xml</file-list>
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

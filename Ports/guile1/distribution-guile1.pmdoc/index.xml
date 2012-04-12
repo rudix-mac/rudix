@@ -23,8 +23,8 @@ Release Notes:
     <choice title="guile1-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.guile1"/>
     </choice>
-    <choice title="gmp4-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.gmp4"/>
+    <choice title="gmp4-runtime-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.gmp4-runtime"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="bottomleft">
