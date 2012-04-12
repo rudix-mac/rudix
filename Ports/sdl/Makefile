@@ -1,30 +1,21 @@
-# Cross-platform multimedia library
-# http://www.libsdl.org/
-# LGPL
+include ../../Library/GNU.mk
 
-include ../../Library/Rules.mk
-
-NAME=		SDL
-VERSION=	1.2.14
-REVISION=	0.i386
+Title=		SDL
+Name=		sdl
+Version=	1.2.15
+Revision=	0
 URL=		http://www.libsdl.org/release
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-build: prep
-	cd $(BUILDDIR) ; $(configure) --enable-nasm ; $(make)
-	touch build
+UncompressedName = sdl-$(Version) # Just in case…
 
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUGS,COPYING,CREDITS,README,README-SDL.txt,README.MacOSX} $(INSTALLDOCDIR)
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.dylib
-	strip -x -S $(INSTALLDIR)/usr/local/lib/lib*.a
-	touch install
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
 
-test: install
-	touch test
+define final_inner_hook
+$(BinDir)/sdl-config --version
+endef

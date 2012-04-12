@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="SDL-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/sdl/SDL-install" m="false" t="file">
+  <f n="sdl-install" o="root" g="staff" p="16877" pt="sdl-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -125,6 +125,9 @@
           <f n="libSDLmain.a" o="root" g="wheel" p="33204">
             <mod>mode</mod>
           </f>
+          <f n="libSDLmain.la" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
             <f n="sdl.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
@@ -138,14 +141,14 @@
             </f>
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
-            <f n="SDL" o="root" g="wheel" p="16893">
-              <f n="BUGS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
+            <f n="sdl" o="root" g="wheel" p="16893">
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="CREDITS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="README" o="root" g="wheel" p="33204">
@@ -154,7 +157,64 @@
               <f n="README-SDL.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="README.AmigaOS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.BeOS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.DC" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.HG" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.MacOS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="README.MacOSX" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.MiNT" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.NanoX" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.NDS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.OS2" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.PicoGUI" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.Porting" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.PS3" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.QNX" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.Qtopia" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.RISCOS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.Symbian" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.Watcom" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.WinCE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.wscons" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>

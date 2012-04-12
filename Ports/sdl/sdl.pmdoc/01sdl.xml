@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="00CC1E9F-5DDD-4BFD-B81E-C83C44C44C6A">
+<pkgref spec="1.12" uuid="9D160F68-84C5-11E1-B95F-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.sdl</identifier>
-    <version>1.2.13</version>
+    <version>1.2.15-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">SDL-install</installFrom>
+    <installFrom relative="true" mod="true">sdl-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
-    <mod>installFrom.path</mod>
-    <mod>parent</mod>
-    <mod>identifier</mod>
     <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
   </config>
   <contents>
     <file-list>01sdl-contents.xml</file-list>

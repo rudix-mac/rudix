@@ -11,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Cross-platform multimedia library</description>
+  <description>Simple DirectMedia Layer is a cross-platform multimedia library.
+
+  * Site: http://www.libsdl.org/
+  * License: LGPL
+
+Release Notes:
+  * Upgraded to version 1.2.15
+</description>
   <contents>
-    <choice title="SDL-install" id="SDL" starts_selected="true" starts_enabled="true" starts_hidden="false">
+    <choice title="sdl-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.sdl"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">SDL-1.2.14/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">SDL-1.2.14/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">sdl-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">sdl-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
