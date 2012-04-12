@@ -62,7 +62,7 @@ retrieve:
 	@$(call retrieve_inner_hook)
 	@$(call retrieve_post_hook)
 	@$(call info_color,Done)
-	@touch retrieve
+	@touch $@
 
 # Prepare source to compile
 prep: retrieve
@@ -71,7 +71,7 @@ prep: retrieve
 	@$(call prep_inner_hook)
 	@$(call prep_post_hook)
 	@$(call info_color,Done)
-	@touch prep
+	@touch $@
 
 # Build source
 build: prep $(BuildRequires)
@@ -80,7 +80,7 @@ build: prep $(BuildRequires)
 	@$(call build_inner_hook)
 	@$(call build_post_hook)
 	@$(call info_color,Done)
-	@touch build
+	@touch $@
 
 # Install into a temporary directory
 install: build
@@ -89,7 +89,7 @@ install: build
 	@$(call install_inner_hook)
 	@$(call install_post_hook)
 	@$(call info_color,Done)
-	@touch install
+	@touch $@
 
 # Run tests from the sources
 test: build
@@ -98,7 +98,7 @@ test: build
 	@$(call test_inner_hook)
 	@$(call test_post_hook)
 	@$(call info_color,Done)
-	@touch test
+	@touch $@
 
 # Sanity check-up (post-install tests)
 check: install
@@ -107,7 +107,7 @@ check: install
 	@$(call check_inner_hook)
 	@$(call check_post_hook)
 	@$(call info_color,Done)
-	@touch check
+	@touch $@
 
 # Create package
 pkg: test install check
@@ -116,7 +116,7 @@ pkg: test install check
 	@$(call pkg_inner_hook)
 	@$(call pkg_post_hook)
 	@$(call info_color,Done)
-	@touch pkg
+	@touch $@
 
 # Final test (post-pkg tests)
 final: pkg
@@ -125,7 +125,7 @@ final: pkg
 	@$(call final_inner_hook)
 	@$(call final_post_hook)
 	@$(call info_color,Done)
-	@touch final
+	@touch $@
 
 installclean:
 	rm -rf install $(InstallDir)
@@ -164,7 +164,7 @@ static: buildclean installclean
 		ONLY_STATIC_LIBS=1 \
 		RUDIX_APPLY_RECOMMENDATIONS=no \
 		DistName=static-$(Name)
-	touch static
+	@touch $@
 
 help:
 	@echo "Construction rules:"
