@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="sqlite-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/sqlite/sqlite-install" m="false" t="file">
+  <f n="sqlite-install" o="root" g="staff" p="16877" pt="sqlite-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -17,7 +17,10 @@
           </f>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
-          <f n="libsqlite3.0.dylib" o="root" g="wheel" p="33277">
+          <f n="libsqlite3.0.8.6.dylib" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+          <f n="libsqlite3.0.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
           <f n="libsqlite3.a" o="root" g="wheel" p="33204">
@@ -38,10 +41,10 @@
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="sqlite" o="root" g="wheel" p="16893">
-              <f n="README" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="VERSION" o="root" g="wheel" p="33204">
+              <f n="README" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
