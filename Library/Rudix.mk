@@ -206,9 +206,11 @@ curl -f -O -C - -L
 endef
 
 define explode
-case `file -b -z --mime-type $(Source)` in \
-	application/x-tar) tar zxf $(Source) ;; \
-	application/zip) unzip -o -a -d $(BuilDir) $(Source) ;; \
+case `file -b --mime-type $(Source)` in \
+	application/x-tar) tar xf $(Source) ;; \
+	application/x-gzip) tar zxf $(Source) ;; \
+	application/x-bzip2) tar jxf $(Source) ;; \
+	application/zip) tar zxf $(Source) ;; \
 	*) false ;; \
 esac
 endef
