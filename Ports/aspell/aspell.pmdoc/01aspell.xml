@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="88EC2EC0-7D0A-11E0-B586-D49A200B3D20">
+<pkgref spec="1.12" uuid="9DA6D028-867C-11E1-AEFD-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.aspell</identifier>
-    <version>0.60.6-0</version>
+    <version>0.60.6.1-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,15 +12,14 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01aspell-contents.xml</file-list>
-    
     <filter>/CVS$</filter>
     <filter>/\.svn$</filter>
     <filter>/\.cvsignore$</filter>

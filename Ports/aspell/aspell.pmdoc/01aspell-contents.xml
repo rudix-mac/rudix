@@ -2,8 +2,8 @@
 <pkg-contents spec="1.12">
   <f n="aspell-install" o="root" g="staff" p="16877" pt="aspell-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="aspell" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
@@ -348,6 +348,15 @@
             </f>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
+            <f n="ast" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
             <f n="be" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
@@ -388,9 +397,18 @@
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="es" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="fi" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -411,7 +429,21 @@
                 </f>
               </f>
             </f>
+            <f n="id" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
             <f n="it" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+              </f>
+            </f>
+            <f n="ja" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
@@ -423,7 +455,18 @@
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
+            </f>
+            <f n="ms" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="nl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -458,7 +501,9 @@
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
@@ -512,6 +557,15 @@
               </f>
             </f>
             <f n="wa" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="aspell.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
+            </f>
+            <f n="zh_CN" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="aspell.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
