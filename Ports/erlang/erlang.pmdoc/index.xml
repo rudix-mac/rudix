@@ -13,14 +13,11 @@
   </distribution>
   <description>Erlang Programming Language.
 
-Site: http://www.erlang.org/
-License: EPLICENCE
+  * Site: http://www.erlang.org/
+  * License: EPL (http://www.erlang.org/EPLICENSE)
 
-Changes from previous release:
-* Upgraded to version R15B
-
-Usage:
-$ /usr/local/bin/erl
+Release Notes:
+  * Upgraded to version R15B01
 </description>
   <contents>
     <choice title="erlang-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
