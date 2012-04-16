@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120410
+BuildSystem = 20120416
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -263,8 +263,7 @@ grep root $(Name).pmdoc/*-contents.xml >/dev/null
 endef
 
 define configure
-./configure $(ConfigureExtra) \
-	--prefix=$(Prefix)
+./configure --prefix=$(Prefix) $(ConfigureExtra)
 endef
 
 define make
