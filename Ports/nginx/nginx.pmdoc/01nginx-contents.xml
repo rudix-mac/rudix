@@ -1,10 +1,18 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="nginx-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/nginx/nginx-install" m="false" t="file">
+  <f n="nginx-install" o="root" g="staff" p="16877" pt="nginx-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="nginx" o="root" g="wheel" p="16893">
-          <f n="conf" o="root" g="wheel" p="16893">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="nginx" o="root" g="wheel" p="33277">
+            <mod>mode</mod>
+          </f>
+        </f>
+        <f n="etc" o="root" g="wheel" p="16893">
+          <f n="nginx" o="root" g="wheel" p="16893">
+            <f n="fastcgi.conf.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="fastcgi_params.default" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
@@ -20,25 +28,53 @@
             <f n="nginx.conf.default" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <f n="scgi_params.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
+            <f n="uwsgi_params.default" o="root" g="wheel" p="33204">
+              <mod>mode</mod>
+            </f>
             <f n="win-utf" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <mod>mode</mod>
           </f>
-          <f n="html" o="root" g="wheel" p="16893">
-            <f n="50x.html.default" o="root" g="wheel" p="33204">
+          <mod>mode</mod>
+        </f>
+        <f n="share" o="root" g="wheel" p="16893">
+          <f n="doc" o="root" g="wheel" p="16893">
+            <f n="nginx" o="root" g="wheel" p="16893">
+              <f n="CHANGES" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="CHANGES.ru" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="LICENSE" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
-            <f n="index.html.default" o="root" g="wheel" p="33204">
+          </f>
+          <f n="nginx" o="root" g="wheel" p="16893">
+            <f n="html" o="root" g="wheel" p="16893">
+              <f n="50x.html.default" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="index.html.default" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <mod>mode</mod>
             </f>
             <mod>mode</mod>
           </f>
-          <f n="logs" o="root" g="wheel" p="16893">
-            <mod>mode</mod>
-          </f>
-          <f n="sbin" o="root" g="wheel" p="16893">
-            <f n="nginx" o="root" g="wheel" p="33277">
+        </f>
+        <f n="var" o="root" g="wheel" p="16893">
+          <f n="log" o="root" g="wheel" p="16893">
+            <f n="nginx" o="root" g="wheel" p="16893">
               <mod>mode</mod>
             </f>
             <mod>mode</mod>

@@ -1,28 +1,36 @@
 BuildRequires += $(BinDir)/pcre-config
 
-include ../../Library/Config.mk
-RUDIX_ENABLE_NLS=
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
+include ../../Library/Configure.mk
 
 Title=		Nginx
 Name=		nginx
-Version=	1.0.14
+Version=	1.0.15
 Revision=	0
 URL=		http://nginx.org/download/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	README
-LicenseFIle=	$(SourceDir)/LICENSE
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENSE
 
-define install_post_hook__
-rm -f $(InstallDir)$(Prefix)/nginx/conf/{fastcgi_params,mime.types,nginx.conf}
-mv $(InstallDir)$(Prefix)/nginx/html \
-	$(InstallDir)$(Prefix)/nginx/html.default
+ConfigureExtra += --prefix=$(DataDir)/nginx
+ConfigureExtra += --sbin-path=$(BinDir)/nginx
+ConfigureExtra += --conf-path=$(SysConfDir)/nginx/nginx.conf
+ConfigureExtra += --error-log-path=$(LocalStateDir)/log/nginx/error.log
+ConfigureExtra += --http-log-path=$(LocalStateDir)/log/nginx/access.log
+ConfigureExtra += --pid-path=$(LocalStateDir)/run
+ConfigureExtra += --lock-path=$(LocalStateDir)/run/
+ConfigureExtra += --with-ipv6 
+ConfigureExtra += --with-http_ssl_module
+## Currently file AIO is supported on FreeBSD 4.3+ and Linux 2.6.22+ only
+#ConfigureExtra +=  --with-file-aio
+
+define install_post_hook
+rm -f $(InstallDir)/$(SBinDir)/nginx.old
+rm -f $(InstallDir)/$(SysConfDir)/nginx/{fastcgi.conf,fastcgi_params,mime.types,nginx.conf,scgi_params,uwsgi_params}
+mv $(InstallDir)/$(DataDir)/nginx/html/index.html $(InstallDir)/$(DataDir)/nginx/html/index.html.default
+mv $(InstallDir)/$(DataDir)/nginx/html/50x.html $(InstallDir)/$(DataDir)/nginx/html/50x.html.default
 touch install
-
 endef
-ifdef FOO
-install: build
-	cd $(SourceDir) ; make DESTDIR=$(InstallDir) install
-endif
+
+define test_inner_hook
+endef
