@@ -34,3 +34,7 @@ endef
 
 define test_inner_hook
 endef
+
+define final_post_hook
+$(BinDir)/nginx -v
+endef
