@@ -6,7 +6,7 @@
 [ ! -f $3/usr/local/share/nginx/html/50x.html ] && \
   install -m 664 $3/usr/local/share/nginx/html/50x.html.default $3/usr/local/share/nginx/html/50x.html
 
-for x in fastcgi.conf fastcgi_params mime.types nginx.conf scgi_params uwsgi_param ; do \
+for x in fastcgi.conf fastcgi_params mime.types nginx.conf scgi_params uwsgi_params ; do \
     [ ! -f $3/usr/local/etc/nginx/$x ] && \
     install -m 664 $3/usr/local/etc/nginx/$x.default $3/usr/local/etc/nginx/$x
 done
