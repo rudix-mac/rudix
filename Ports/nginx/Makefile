@@ -17,8 +17,8 @@ ConfigureExtra += --sbin-path=$(BinDir)/nginx
 ConfigureExtra += --conf-path=$(SysConfDir)/nginx/nginx.conf
 ConfigureExtra += --error-log-path=$(LocalStateDir)/log/nginx/error.log
 ConfigureExtra += --http-log-path=$(LocalStateDir)/log/nginx/access.log
-ConfigureExtra += --pid-path=$(LocalStateDir)/run
-ConfigureExtra += --lock-path=$(LocalStateDir)/run/
+ConfigureExtra += --pid-path=$(LocalStateDir)/run/nginx.pid
+ConfigureExtra += --lock-path=$(LocalStateDir)/run/nginx.lck
 ConfigureExtra += --with-ipv6 
 ConfigureExtra += --with-http_ssl_module
 ## Currently file AIO is supported on FreeBSD 4.3+ and Linux 2.6.22+ only
