@@ -1,0 +1,29 @@
+--- config.layout.orig	2012-04-16 22:36:12.000000000 -0300
++++ config.layout	2012-04-16 22:38:35.000000000 -0300
+@@ -347,3 +347,26 @@
+     proxycachedir: ${localstatedir}/proxy
+ </Layout>
+ 
++#   Rudix
++<Layout Rudix>
++    prefix:        /usr/local
++    exec_prefix:   ${prefix}
++    bindir:        ${prefix}/bin
++    sbindir:       ${prefix}/sbin
++    libdir:        ${prefix}/lib
++    libexecdir:    ${prefix}/libexec+
++    mandir:        ${prefix}/share/man
++    sysconfdir:    /usr/local/etc+
++    datadir:       /usr/local/var/www
++    installbuilddir: ${datadir}/build
++    errordir:      ${datadir}/error
++    iconsdir:      ${datadir}/icons
++    htdocsdir:     ${datadir}/html
++    manualdir:     ${datadir}/manual
++    cgidir:        ${datadir}/cgi-bin
++    includedir:    ${prefix}/include+
++    localstatedir: /usr/local/var
++    runtimedir:    ${localstatedir}/run
++    logfiledir:    ${localstatedir}/log+
++    proxycachedir: ${runtimedir}/proxy
++</Layout>
