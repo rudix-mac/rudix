@@ -8,4 +8,7 @@ for x in $3/usr/local/etc/apache2/extra/*.default ; do
     [ ! -f ${x%.default} ] && install -m 664 $3/$x $3/${x%.default}
 done
 
+[ ! -f $3/usr/local/var/www/html/index.html ] && \
+install -m 664 $3/usr/local/var/www/html/index.html.default $3/usr/local/var/www/html/index.html
+
 exit 0
