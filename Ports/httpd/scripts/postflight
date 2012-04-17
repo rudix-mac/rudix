@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for x in $3/usr/local/etc/apache2/*.default ; do
+    [ ! -f ${x%.default} ] && install -m 664 $3/$x $3/${x%.default}
+done
+
+for x in $3/usr/local/etc/apache2/extra/*.default ; do
+    [ ! -f ${x%.default} ] && install -m 664 $3/$x $3/${x%.default}
+done
+
+exit 0
