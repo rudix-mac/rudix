@@ -13,6 +13,7 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 GnuConfigureExtra += --enable-layout=Rudix
+StripExtra += -x # Due `Symbol not found' error
 
 define install_post_hook
 for x in httpd.conf magic mime.types ; do \
