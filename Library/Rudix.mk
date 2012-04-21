@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120416
+BuildSystem = 20120421
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -333,9 +333,9 @@ ifeq ($(RUDIX_STRIP_PACKAGE),yes)
 define strip_macho
 $(call info_color,Stripping binaries)
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
-	strip $$x ; done
+	strip $(StripExtra) $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
-	strip $$x ; done
+	strip $(StripExtra) $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
