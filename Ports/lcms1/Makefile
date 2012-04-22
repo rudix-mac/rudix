@@ -1,16 +1,19 @@
 BuildRequires += $(LibDir)/libjpeg.la
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Title=		Little CMS
-Name=		lcms
+Title=		Little CMS (Version 1)
+Name=		lcms1
 Version=	1.19
-Revision=	1
-URL=		http://prdownloads.sourceforge.net/lcms/
+Revision=	0
 URL=		http://sourceforge.net/projects/lcms/files/lcms/$(Version)/
-Source=		$(Name)-$(Version).tar.gz
+Source=		lcms-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README.1st
 LicenseFile=	$(SourceDir)/COPYING
+
+UncompressedName = lcms-$(Version)
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
