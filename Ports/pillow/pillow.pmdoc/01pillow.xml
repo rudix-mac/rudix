@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="FECF1A33-8C91-11E1-95C4-D49A200B3D20">
+<pkgref spec="1.12" uuid="48D4844A-8C93-11E1-81B1-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.pillow</identifier>
     <version>1.7.7-0</version>

@@ -1,0 +1,7 @@
+Pillow is the "friendly" PIL fork. PIL is the Python Imaging Library.
+
+  * Site: http://pypi.python.org/pypi/Pillow
+  * License: BSD?
+
+Release Notes:
+  * Upgraded to version 1.7.7

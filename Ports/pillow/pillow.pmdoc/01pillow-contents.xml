@@ -515,7 +515,6 @@
               <f n="top_level.txt" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
@@ -564,7 +563,6 @@
               <f n="README.rst" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
         </f>
