@@ -11,33 +11,29 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>Python Imaging Library (PIL).
+  <description>The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter.
 
-The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter. This library supports many file formats, and provides powerful image processing and graphics capabilities.
+  * Site: http://www.pythonware.com/products/pil/
+  * License: BSD
 
-Site: http://www.pythonware.com/products/pil/
-License: BSD</description>
+Release Notes:
+  * Rebuild on Xcode 4.3
+</description>
   <contents>
     <choice title="pil-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.pil"/>
     </choice>
-    <choice title="libjpeg-runtime-install" id="choice1" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.libjpeg-runtime"/>
-    </choice>
-    <choice title="lcms-runtime-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.lcms-runtime"/>
-    </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
       <resource relative="true" mod="true" type="license">LICENSE</resource>
       <resource relative="true" mod="true" type="readme">pil-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
   <item type="file">01pil.xml</item>
-  <item type="file">01libjpeg.xml</item>
-  <item type="file">01lcms.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

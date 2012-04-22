@@ -1,9 +1,7 @@
 BuildRequires += $(LibDir)/libjpeg.la
 BuildRequires += $(LibDir)/liblcms.la
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
 Title=		Python Imaging Library
 Name=		pil
@@ -13,6 +11,6 @@ URL=		http://effbot.org/media/downloads/
 Source=		Imaging-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/PKG-INFO
+LicenseFile=	LICENSE
 
 UncompressedName = Imaging-$(Version)
