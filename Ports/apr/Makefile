@@ -17,3 +17,7 @@ define install_post_hook
 install -m 644 $(BuildDir)/docs/* $(InstallDir)/$(DocDir)/$(Name)
 rm $(InstallDir)$(LibDir)/apr.exp
 endef
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
