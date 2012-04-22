@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="pillow-install" o="root" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.hg/Ports/pillow/pillow-install" m="false" t="file">
+  <f n="pillow-install" o="root" g="staff" p="16877" pt="pillow-install" m="false" t="file">
     <f n="Library" o="root" g="wheel" p="16877">
       <f n="Python" o="root" g="wheel" p="16877">
         <f n="2.7" o="root" g="wheel" p="16877">
@@ -502,17 +502,17 @@
                 <mod>mode</mod>
               </f>
             </f>
-            <f n="Pillow-1.7.6-py2.7.egg-info" o="root" g="wheel" p="16893">
-              <f n="dependency_links.txt" o="root" g="wheel" p="33204">
+            <f n="Pillow-1.7.7-py2.7.egg-info" o="root" g="wheel" p="16893">
+              <f n="dependency_links.txt" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="PKG-INFO" o="root" g="wheel" p="33204">
+              <f n="PKG-INFO" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="SOURCES.txt" o="root" g="wheel" p="33204">
+              <f n="SOURCES.txt" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
-              <f n="top_level.txt" o="root" g="wheel" p="33204">
+              <f n="top_level.txt" o="root" g="wheel" p="33277">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -522,8 +522,8 @@
       </f>
     </f>
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="pilconvert.py" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
