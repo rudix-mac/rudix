@@ -2,9 +2,9 @@
 <pkg-contents spec="1.12">
   <f n="gnuplot-install" o="root" g="staff" p="16877" pt="gnuplot-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16893">
-        <f n="bin" o="root" g="wheel" p="16893">
-          <f n="gnuplot" o="root" g="wheel" p="33277">
+      <f n="local" o="root" g="admin" p="16893">
+        <f n="bin" o="root" g="admin" p="16893">
+          <f n="gnuplot" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
         </f>

@@ -1,6 +1,3 @@
-BuildRequires += $(LibDir)/libpng.la
-BuildRequires += $(LibDir)/libjpeg.la
-
 include ../../Library/GNU.mk
 
 Title=		Gnuplot
