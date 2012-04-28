@@ -2,12 +2,12 @@
 <pkg-contents spec="1.12">
   <f n="lua-install" o="root" g="staff" p="16877" pt="lua-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="admin" p="16893">
-        <f n="bin" o="root" g="admin" p="16893">
-          <f n="lua" o="root" g="admin" p="33277">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
+          <f n="lua" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="luac" o="root" g="admin" p="33277">
+          <f n="luac" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
         </f>
@@ -75,10 +75,14 @@
               <f n="readme.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
           </f>
           <f n="lua" o="root" g="wheel" p="16893">
-            <f n="5.2" o="root" g="wheel" p="16893"/>
+            <f n="5.2" o="root" g="wheel" p="16893">
+              <mod>mode</mod>
+            </f>
+            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
