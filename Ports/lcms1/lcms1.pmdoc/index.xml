@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <pkmkdoc spec="1.12">
   <properties>
-    <title>Little CMS</title>
+    <title>Little CMS (Version 1)</title>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -20,20 +20,20 @@ Release Notes:
   * Rebuild on Xcode 4.3
 </description>
   <contents>
-    <choice title="lcms-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.pkg.lcms"/>
+    <choice title="lcms1-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.lcms1"/>
     </choice>
   </contents>
   <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
       <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
-      <resource relative="true" mod="true" type="license">lcms-build/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">lcms-build/README.1st</resource>
+      <resource relative="true" mod="true" type="license">lcms1-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">lcms1-build/README.1st</resource>
       <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
-  <item type="file">01lcms.xml</item>
+  <item type="file">01lcms1.xml</item>
   <mod>properties.title</mod>
   <mod>description</mod>
 </pkmkdoc>

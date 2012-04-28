@@ -1,32 +1,18 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="lcms-install" o="root" g="staff" p="16877" pt="lcms-install" m="false" t="file">
+  <f n="lcms1-install" o="root" g="staff" p="16877" pt="lcms1-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
-          <f n="icc2ps" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="icclink" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="icctrans" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="jpegicc" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
-          <f n="wtpt" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
+          <f n="icc2ps" o="root" g="wheel" p="33277"/>
+          <f n="icclink" o="root" g="wheel" p="33277"/>
+          <f n="icctrans" o="root" g="wheel" p="33277"/>
+          <f n="jpegicc" o="root" g="wheel" p="33277"/>
+          <f n="wtpt" o="root" g="wheel" p="33277"/>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
-          <f n="icc34.h" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
-          <f n="lcms.h" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
+          <f n="icc34.h" o="root" g="wheel" p="33204"/>
+          <f n="lcms.h" o="root" g="wheel" p="33204"/>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="liblcms.1.0.19.dylib" o="root" g="wheel" p="33277">
@@ -35,24 +21,18 @@
           <f n="liblcms.1.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="liblcms.a" o="root" g="wheel" p="33204">
-            <mod>mode</mod>
-          </f>
+          <f n="liblcms.a" o="root" g="wheel" p="33204"/>
           <f n="liblcms.dylib" o="root" g="wheel" p="41469">
             <mod>mode</mod>
           </f>
-          <f n="liblcms.la" o="root" g="wheel" p="33277">
-            <mod>mode</mod>
-          </f>
+          <f n="liblcms.la" o="root" g="wheel" p="33277"/>
           <f n="pkgconfig" o="root" g="wheel" p="16893">
-            <f n="lcms.pc" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
+            <f n="lcms.pc" o="root" g="wheel" p="33204"/>
           </f>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
-            <f n="lcms" o="root" g="wheel" p="16893">
+            <f n="lcms1" o="root" g="wheel" p="16893">
               <f n="AUTHORS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -76,21 +56,11 @@
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
-              <f n="icc2ps.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="icclink.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="jpegicc.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="tifficc.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="wtpt.1" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
+              <f n="icc2ps.1" o="root" g="wheel" p="33204"/>
+              <f n="icclink.1" o="root" g="wheel" p="33204"/>
+              <f n="jpegicc.1" o="root" g="wheel" p="33204"/>
+              <f n="tifficc.1" o="root" g="wheel" p="33204"/>
+              <f n="wtpt.1" o="root" g="wheel" p="33204"/>
             </f>
           </f>
         </f>

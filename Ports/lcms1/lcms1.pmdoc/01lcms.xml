@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="51B41C38-8C84-11E1-8217-D49A200B3D20">
+<pkgref spec="1.12" uuid="F0929FF8-8C8D-11E1-930D-D49A200B3D20">
   <config>
-    <identifier>org.rudix.pkg.lcms</identifier>
-    <version>1.19-2</version>
+    <identifier>org.rudix.pkg.lcms1</identifier>
+    <version>1.19-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
-    <installFrom relative="true" mod="true">lcms-install</installFrom>
+    <installFrom relative="true" mod="true">lcms1-install</installFrom>
     <installTo>/</installTo>
     <flags>
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
-    <mod>installTo</mod>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
     <mod>identifier</mod>
+    <mod>installTo</mod>
     <mod>parent</mod>
-    <mod>version</mod>
   </config>
   <contents>
     <file-list>01lcms-contents.xml</file-list>
