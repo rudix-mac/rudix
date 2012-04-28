@@ -17,7 +17,7 @@
   * License: BSD
 
 Release Notes:
-  * Aliases for package names (example: hg for mercurial)
+  * Introducing aliases for packages (see option -A)
 </description>
   <contents>
     <choice title="rudix-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">

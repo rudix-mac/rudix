@@ -61,6 +61,7 @@ VERSION = 2012
 NAME_OPTS = {
     'help': '-h',
     'version': '-v',
+    'aliases': '-A',
     'available': '-a',
     'list': '-l', 'ls': '-l', 'dir': '-l',
     'info': '-I', 'about': '-I',
@@ -318,6 +319,13 @@ def print_available_packages():
         name = version[0]
         print name
 
+def print_aliases():
+    'Print all aliases'
+    aliases = ALIASES.keys()
+    aliases.sort()
+    for alias in aliases:
+        print "alias '%s' for package '%s'" % (alias, ALIASES[alias])
+
 def get_versions_for_package(pkg, rudix_version=VERSION, limit=10):
     'Get a list of available versions for package'
     pkg = denormalize(pkg)
@@ -451,7 +459,7 @@ def repl():
 def process(args):
     'Process arguments and execute some action'
     try:
-        opts, args = getopt.getopt(args, "ahI:lL:i:r:Rs:S:vV:Kf:n:uz")
+        opts, args = getopt.getopt(args, "aAhI:lL:i:r:Rs:S:vV:Kf:n:uz")
     except getopt.error, msg:
         print >> sys.stderr, '%s: %s'%(PROGRAM_NAME, msg)
         print >> sys.stderr, '\t for help use -h or help'
@@ -466,6 +474,8 @@ def process(args):
             return 0
         if option == '-a':
             print_available_packages()
+        if option == '-A':
+            print_aliases()
         if option == '-I':
             print_package_info(normalize(value))
         if option == '-l':

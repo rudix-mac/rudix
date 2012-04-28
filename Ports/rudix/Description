@@ -4,4 +4,4 @@ Rudix Package Manager - RPM ;)
   * License: BSD
 
 Release Notes:
-  * Aliases for package names (example: hg for mercurial)
+  * Introducing aliases for packages (see option -A)

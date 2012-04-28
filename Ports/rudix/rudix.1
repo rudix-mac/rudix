@@ -1,7 +1,7 @@
 .\"
 .\" Copyright (c) 2005-2012 Ruda Moura
 .\"
-.Dd March 10, 2012
+.Dd April 28, 2012
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -9,7 +9,7 @@
 .Nd Rudix Package Manager
 .Sh SYNOPSIS
 .Nm
-.Op Fl h | v | a | l | R | K | u | z
+.Op Fl h | v | a | A | l | R | K | u | z
 .Op Fl i Ar pkg-path
 .Op Fl r Ar package-id
 .Op Fl I Ar package-id
@@ -38,6 +38,8 @@ Print help on screen and exit.
 Print version and copyright information.
 .It Fl a
 Print all packages available for installation (name-version-release).
+.It Fl A
+Print all aliases.
 .It Fl l
 Print a list of packages with package-id, version and install date.
 .It Fl i Ar pkg-path
@@ -70,6 +72,6 @@ Enter interactive mode (type exit to quit).
 .Sh COMMANDS
 The
 .Nm
-utility also accepts simple commands. These commands matches the same options seen above. The current list of commands are: help, version, available, list, remove-all, verify-all, update, interactive, info, files, install, remove, search, owner, verify, fix.
+utility also accepts simple commands. These commands matches the same options seen above. The current list of commands are: help, version, available, aliases, list, remove-all, verify-all, update, interactive, info, files, install, remove, search, owner, verify, fix.
 .Sh SEE ALSO
 pkgutil(1), installer(8), packagemaker(1).
