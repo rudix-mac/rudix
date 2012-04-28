@@ -88,6 +88,8 @@ ALIASES = {
     'memcache': 'memcached',
     'pkgconfig': 'pkg-config',
     'rdiff': 'librsync', 'rdiffbackup': 'rdiff-backup',
+    'svn': 'subversion',
+    'supervisord': 'supervisor',
     'tofrodos': 'dos2unix',
     'tomcat': 'tomcat6',
     'unix2dos': 'dos2unix',
