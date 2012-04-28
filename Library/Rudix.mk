@@ -4,7 +4,7 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120421
+BuildSystem = 20120428
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -92,7 +92,7 @@ install: build
 	@$(call info_color,Done)
 	@touch $@
 
-# Run tests from the sources
+# Run the tests from the sources
 test: build
 	@$(call info_color,Testing)
 	@$(call test_pre_hook)
@@ -119,7 +119,7 @@ pkg: test install check
 	@$(call info_color,Done)
 	@touch $@
 
-# Final test (post-pkg tests)
+# Final test (pkg check-up)
 final: pkg
 	@$(call info_color,Finally)
 	@$(call final_pre_hook)
@@ -157,7 +157,6 @@ upload: pkg final
 	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	hg tag -f $(DistName)-$(Version)-$(Revision)
 	#twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
-	@$(call info_color,Finished)
 
 # FIXME: Temporary hack to build static packages.
 static: buildclean installclean
@@ -176,6 +175,7 @@ help:
 	@echo "  test - Run tests from the sources"
 	@echo "  check - Sanity check-up (post-install tests)"
 	@echo "  pkg - Create package"
+	@echo "  final - Check package"
 	@echo "Clean-up rules:"
 	@echo "  clean - Clean up until retrieve"
 	@echo "  distclean - After clean, remove config.cache and package"
@@ -287,7 +287,6 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do \
 	$(call verify_universal,$$x) ; done
-@$(call info_color,Finished)
 endef
 endif
 
@@ -305,7 +304,6 @@ for x in $(wildcard $(InstallDir)/$(LibDir)/*.dylib) ; do \
 	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Library $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
-@$(call info_color,Finished)
 endef
 
 define test_apache_modules
@@ -313,7 +311,6 @@ define test_apache_modules
 for x in $(wildcard $(InstallDir)/usr/libexec/apache2/*.so) ; do \
 	$(call error_color,Apache module $$x will install in system path) ; \
 done
-@$(call info_color,Finished)
 endef
 
 define install_base_documentation
@@ -326,7 +323,6 @@ define test_documentation
 @$(call info_color,Testing documentation)
 test -d $(InstallDir)/usr/local/man && $(call error_color,Manual pages found in old /usr/local/man/ place) || true
 test -d $(InstallDir)/usr/local/info && $(call error_color,Info pages found in old /usr/local/info/ place) || true
-@$(call info_color,Finished)
 endef
 
 ifeq ($(RUDIX_STRIP_PACKAGE),yes)
@@ -340,7 +336,6 @@ for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
-$(call info_color,Finished)
 endef
 endif
 
