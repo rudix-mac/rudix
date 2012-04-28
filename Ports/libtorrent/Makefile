@@ -1,21 +1,24 @@
-DEPENDS=	$(BinDir)/pkg-config
-DEPENDS+=	$(LibDir)/libsigc-2.0.la
+BuildRequires += $(BinDir)/pkg-config
+BuildRequires += $(LibDir)/libsigc-2.0.la
 
 include ../../Library/GNU.mk
 
 Name=		libtorrent
-Version=	0.12.6
+Version=	0.12.9
 Revision=	0
 URL=		http://libtorrent.rakshasa.no/downloads/
 Source=		$(Name)-$(Version).tar.gz
 
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-ifdef STATIC_ONLY
-CONFIGURE_OPTS=		--enable-static --disable-shared
-else
-CONFIGURE_OPTS=		--enable-static --enable-shared
+GnuConfigureExtra += --with-kqueue
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
 endif
 
+ifdef FOO
 prep: retrieve
 	tar zxvf $(Source)
 	touch prep
@@ -46,3 +49,5 @@ ifndef STATIC_ONLY
 endif
 	$(test-universal-binary) "$(InstallDir)$(LibDir)/lib*.a"
 	touch test
+endif
+

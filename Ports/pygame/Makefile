@@ -1,8 +1,6 @@
-BuildRequires += /usr/local/lib/libjpeg.a /usr/local/lib/libpng.a
+#BuildRequires += /usr/local/lib/libjpeg.a /usr/local/lib/libpng.a
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
 define build_pre_hook
 cd $(BuildDir); \

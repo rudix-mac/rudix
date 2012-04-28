@@ -1,11 +1,11 @@
---- makefile.orig	2010-01-20 01:54:24.000000000 -0200
-+++ makefile	2010-01-20 01:54:48.000000000 -0200
+--- makefile.orig	2008-11-19 21:53:48.000000000 -0200
++++ makefile	2012-04-24 13:13:13.000000000 -0300
 @@ -15,7 +15,7 @@
    CC = gcc -std=c99 -U__STRICT_ANSI__ -g $(OS_CCDEFS) -I .
    ifeq ($(USE_NETWORK),)
    else
 -    NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
-+    NETWORK_OPT = -DUSE_NETWORK -lpcap
++    NETWORK_OPT = -DUSE_NETWORK -isystem -lpcap
    endif
  else
    #Win32 Environments

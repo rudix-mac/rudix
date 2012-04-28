@@ -16,8 +16,7 @@ GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --libdir=$(LibDir)/lighttpd
 
 define install_post_hook
-install -m 644 $(PortDir)/lighttpd.conf.default \
-	$(InstallDir)$(Prefix)/etc/lighttpd
+install $(PortDir)/lighttpd.conf.default $(InstallDir)/$(SysConfDir)/lighttpd
 endef
 
 ifdef FOO

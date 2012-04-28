@@ -15,6 +15,7 @@ MakeExtra += USE_NETWORK=1
 
 define prep_inner_hook
 unzip $(Source) -d $(SourceDir)
+$(apply_patches)
 endef
 
 define prep_post_hook
@@ -24,4 +25,4 @@ endef
 define install_post_hook
 install -d $(InstallDir)/$(BinDir)
 install -m 755 $(BUILDDIR)/BIN/* $(InstallDir)/$(BinDir)
-endif
+endef
