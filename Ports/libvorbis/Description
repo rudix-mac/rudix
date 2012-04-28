@@ -1,0 +1,7 @@
+Libvorbis contains the Vorbis reference encoder and decoder.
+
+  * Site: http://www.xiph.org/vorbis/
+  * License: BSD
+
+Release Notes:
+  * Upgraded to version 1.3.3
