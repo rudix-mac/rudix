@@ -2,33 +2,33 @@
 <pkg-contents spec="1.12">
   <f n="varnish-install" o="root" g="staff" p="16877" pt="varnish-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16893">
-          <f n="varnishadm" o="root" g="wheel" p="33277">
+      <f n="local" o="root" g="admin" p="16893">
+        <f n="bin" o="root" g="admin" p="16893">
+          <f n="varnishadm" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishhist" o="root" g="wheel" p="33277">
+          <f n="varnishhist" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishlog" o="root" g="wheel" p="33277">
+          <f n="varnishlog" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishncsa" o="root" g="wheel" p="33277">
+          <f n="varnishncsa" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishreplay" o="root" g="wheel" p="33277">
+          <f n="varnishreplay" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishsizes" o="root" g="wheel" p="33277">
+          <f n="varnishsizes" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishstat" o="root" g="wheel" p="33277">
+          <f n="varnishstat" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishtest" o="root" g="wheel" p="33277">
+          <f n="varnishtest" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
-          <f n="varnishtop" o="root" g="wheel" p="33277">
+          <f n="varnishtop" o="root" g="admin" p="33277">
             <mod>mode</mod>
           </f>
         </f>
@@ -39,7 +39,6 @@
             </f>
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="varnish" o="root" g="wheel" p="16893">
@@ -144,7 +143,6 @@
           <f n="varnishd" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -206,6 +204,9 @@
               <f n="varnish-cli.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
+              <f n="varnish-counters.7" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="vcl.7" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
@@ -217,7 +218,6 @@
           <f n="varnish" o="root" g="wheel" p="16893">
             <mod>mode</mod>
           </f>
-          <mod>mode</mod>
         </f>
       </f>
     </f>

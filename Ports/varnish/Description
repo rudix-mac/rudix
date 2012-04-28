@@ -1,10 +1,7 @@
-Varnish Cache is an open source, state of the art web application accelerator. You install it on your web server and it makes your website fly.
+Varnish Cache is an open source, state of the art web application accelerator.
 
-Site: http://varnish.projects.linpro.no/
-License: BSD
+  * Site: http://varnish.projects.linpro.no/
+  * License: BSD
 
-Usage:
-$ /usr/local/sbin/varnishd
-
-Changes from previous release:
-* Upgraded to version 3.0.1
+Release Notes:
+  * Upgraded to version 3.0.2

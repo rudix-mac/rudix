@@ -1,9 +1,7 @@
 BuildRequires += /usr/local/bin/pkg-config
 BuildRequires += /usr/local/bin/pcre-config
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Varnish Cache
 Name=		varnish
@@ -14,6 +12,8 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
+
+StripExtra += -x # Due `Symbol not found' error
 
 define install_post_hook
 cd $(InstallDir)/$(Prefix)/etc/varnish ; mv default.vcl default.vcl.default

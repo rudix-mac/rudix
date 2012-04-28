@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/varnish/default.vcl ] && \
+install -m 664 $3/usr/local/etc/varnish/default.vcl.default \
+	$3/usr/local/etc/varnish/default.vcl
+exit 0
