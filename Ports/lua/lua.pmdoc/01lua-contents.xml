@@ -45,7 +45,7 @@
               <f n="contents.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="license.html" o="root" g="wheel" p="33204">
+              <f n="license.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="logo.gif" o="root" g="wheel" p="33204">
@@ -75,13 +75,10 @@
               <f n="readme.html" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <mod>mode</mod>
             </f>
           </f>
           <f n="lua" o="root" g="wheel" p="16893">
-            <f n="5.2" o="root" g="wheel" p="16893">
-              <mod>mode</mod>
-            </f>
+            <f n="5.2" o="root" g="wheel" p="16893"/>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">

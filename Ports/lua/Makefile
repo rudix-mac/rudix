@@ -8,7 +8,7 @@ URL=		http://www.lua.org/ftp/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
-LicenseFile=	license.html
+LicenseFile=	license.txt
 
 MakeExtra += macosx MYLDFLAGS="$(LdFlags)"
 MakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
