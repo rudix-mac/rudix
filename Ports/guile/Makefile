@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libgmp.la
+BuildRequires += $(LibDir)/libgmp.la # Prefer Version 5
 BuildRequires += $(LibDir)/libintl.la
 
 include ../../Library/GNU.mk
@@ -19,7 +19,3 @@ EnvExtra +=	LIBFFI_LIBS="-L/usr/local/lib -lffi"
 define install_post_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
 endef
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libgmp.a
-endif
