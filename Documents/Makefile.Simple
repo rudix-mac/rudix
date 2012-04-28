@@ -1,10 +1,10 @@
 include ../../Library/GNU.mk
 
-Title=		TITLE
-Name=		NAME
+Title=		My Package
+Name=		package
 Version=	1.2.3
 Revision=	0
-URL=		http://path/to/
+URL=		http://my.package.com/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
