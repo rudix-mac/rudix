@@ -18,27 +18,25 @@ touch prep
 endef
 
 define build_inner_hook
-groff -mandoc rudix.1 > rudix.ps
-pstopdf rudix.ps -o rudix.pdf
-touch build
+mkdir -p $(BuildDir)
+sed "s/@VERSION@/$(Version)/" rudix.py > $(BuildDir)/rudix
+groff -mandoc rudix.1 > $(BuildDir)/rudix.ps
+pstopdf $(BuildDir)/rudix.ps -o $(BuildDir)/rudix.pdf
 endef
 
 define install_inner_hook
-install -d $(InstallDir)$(BinDir)
-sed "s/@VERSION@/$(Version)/" rudix.py > $(InstallDir)$(BinDir)/rudix
-chmod 755 $(InstallDir)$(BinDir)/rudix
-install -d $(InstallDir)$(Prefix)/share/man/man1
-install -m 644 rudix.1 $(InstallDir)$(Prefix)/share/man/man1
+install -d $(InstallDir)/$(BinDir)
+install -m 755 $(BuildDir)/rudix $(InstallDir)/$(BinDir)/rudix
+install -d $(InstallDir)/$(ManDir)/man1
+install -m 644 rudix.1 $(InstallDir)/$(ManDir)/man1
 install -d $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 rudix.pdf $(InstallDir)/$(DocDir)/$(Name)
-touch install
+install -m 644 $(BuildDir)/rudix.pdf $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
 python tests.py
-touch test
 endef
 
 define final_pre_hook
@@ -58,6 +56,3 @@ sudo /usr/local/bin/rudix install wget
 /usr/local/bin/rudix update
 sudo /usr/local/bin/rudix remove wget
 endef
-
-realdistclean: distclean
-	rm -f *.ps *.pdf *.pyc
