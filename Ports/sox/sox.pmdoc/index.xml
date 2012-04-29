@@ -11,16 +11,26 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>SOund eXchange - universal sound sample translator</description>
+  <description>SOund eXchange - universal sound sample translator.
+
+  * Site: http://sox.sourceforge.net/
+  * License: ?
+
+Release Notes:
+  * Upgraded to version 14.4.0
+
+</description>
   <contents>
     <choice title="sox-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
       <pkgref id="org.rudix.pkg.sox"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">sox-14.3.2/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">sox-14.3.2/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">sox-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">sox-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>
