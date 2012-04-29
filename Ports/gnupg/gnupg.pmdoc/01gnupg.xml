@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="933EA5EE-2FE4-445B-AAB8-B0BA0AB73B84">
+<pkgref spec="1.12" uuid="0A757B8A-9197-11E1-85C6-D49A200B3D20">
   <config>
-    <identifier>org.rudix.gnupg.gnupg-install.pkg</identifier>
-    <version>1.0</version>
+    <identifier>org.rudix.pkg.gnupg</identifier>
+    <version>1.4.12-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>
@@ -12,7 +12,9 @@
       <followSymbolicLinks/>
     </flags>
     <packageStore type="internal"/>
+    <mod>version</mod>
     <mod>installFrom.path</mod>
+    <mod>identifier</mod>
     <mod>installTo</mod>
     <mod>parent</mod>
   </config>

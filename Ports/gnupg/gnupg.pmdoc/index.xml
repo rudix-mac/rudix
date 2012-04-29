@@ -2,7 +2,6 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>GnuPG</title>
-    <build>/Users/ruda/Desktop/GNU Privacy Guard.pkg</build>
     <organization>org.rudix</organization>
     <userSees ui="easy"/>
     <min-target os="3"/>
@@ -12,16 +11,25 @@
     <versions min-spec="1.000000"/>
     <scripts/>
   </distribution>
-  <description>GNU privacy guard - a free PGP replacement</description>
+  <description>GnuPG is a complete and free implementation of the OpenPGP standard.
+
+  * Site: http://gnupg.org/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 1.4.12
+</description>
   <contents>
-    <choice title="gnupg-install" id="choice2" starts_selected="true" starts_enabled="true" starts_hidden="false">
-      <pkgref id="org.rudix.gnupg.gnupg-install.pkg"/>
+    <choice title="gnupg-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.gnupg"/>
     </choice>
   </contents>
-  <resources bg-scale="none" bg-align="topleft">
+  <resources bg-scale="none" bg-align="bottomleft">
     <locale lang="en">
-      <resource relative="true" mod="true" type="license">gnupg-1.4.10/COPYING</resource>
-      <resource relative="true" mod="true" type="readme">gnupg-1.4.10/README</resource>
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">gnupg-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">gnupg-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
     </locale>
   </resources>
   <flags/>

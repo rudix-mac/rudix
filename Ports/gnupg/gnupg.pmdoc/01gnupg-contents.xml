@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
-  <f n="gnupg-install" o="ruda" g="staff" p="16877" pt="/Users/ruda/Downloads/rudix.svn/Ports/gnupg/gnupg-install" m="false" t="file">
+  <f n="gnupg-install" o="root" g="staff" p="16877" pt="gnupg-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
       <f n="local" o="root" g="wheel" p="16893">
         <f n="bin" o="root" g="wheel" p="16893">
@@ -17,7 +17,9 @@
             <mod>mode</mod>
           </f>
         </f>
-        <f n="lib" o="root" g="wheel" p="16893"/>
+        <f n="lib" o="root" g="wheel" p="16893">
+          <mod>mode</mod>
+        </f>
         <f n="libexec" o="root" g="wheel" p="16893">
           <f n="gnupg" o="root" g="wheel" p="16893">
             <f n="gpgkeys_curl" o="root" g="wheel" p="33277">
@@ -34,6 +36,7 @@
             </f>
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="doc" o="root" g="wheel" p="16893">
@@ -41,46 +44,22 @@
               <f n="AUTHORS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="BUGS" o="root" g="wheel" p="33204">
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="ChangeLog" o="root" g="wheel" p="33204">
+              <f n="ChangeLog-2011" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="COPYING" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="DETAILS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="FAQ" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="faq.html" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="HACKING" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="highlights-1.4.txt" o="root" g="wheel" p="33204">
+              <f n="INSTALL" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="NEWS" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="PROJECTS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
               <f n="README" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="THANKS" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="TODO" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="VERSION" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <mod>mode</mod>
@@ -88,9 +67,6 @@
           </f>
           <f n="gnupg" o="root" g="wheel" p="16893">
             <f n="FAQ" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
-            <f n="faq.html" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
             <f n="options.skel" o="root" g="wheel" p="33204">
@@ -102,6 +78,7 @@
             <f n="gnupg1.info" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="locale" o="root" g="wheel" p="16893">
             <f n="be" o="root" g="wheel" p="16893">
@@ -109,211 +86,281 @@
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ca" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="cs" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="da" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="de" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="el" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="en@boldquot" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="en@quot" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="eo" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="es" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="et" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="fi" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="fr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="gl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="hu" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="id" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="it" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ja" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nb" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="nl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pl" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pt" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="pt_BR" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ro" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="ru" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sk" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="sv" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="tr" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
+            </f>
+            <f n="uk" o="root" g="wheel" p="16893">
+              <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
+                <f n="gnupg.mo" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <mod>mode</mod>
+              </f>
+              <mod>mode</mod>
             </f>
             <f n="zh_CN" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
             <f n="zh_TW" o="root" g="wheel" p="16893">
               <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
                 <f n="gnupg.mo" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
+                <mod>mode</mod>
               </f>
+              <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
             <f n="man1" o="root" g="wheel" p="16893">
