@@ -1,42 +1,20 @@
-# OfflineIMAP
-# http://software.complete.org/offlineimap
-# GPL
+# Initial packaging by Caio Begotti <http://caio.ueberalles.net>
 
-# Packager: Caio Begotti <http://caio.ueberalles.net>
+include ../../Library/Python.mk
 
-include ../../Library/Rules.mk
+Title=		Offline IMAP
+Name=		offlineimap
+Version=	6.4.0
+Revision=	0
+URL=		https://nodeload.github.com/nicolas33/offlineimap/tarball
+Source=		v$(Version)
 
-TITLE=		Offline IMAP $(VERSION)
-NAME=		offlineimap
-VERSION=	6.2.0
-REVISION=	0
-URL=		http://software.complete.org/software/attachments/download/413
-SOURCE=		$(NAME)_$(VERSION).orig.tar.gz
+ReadMeFile=	$(SourceDir)/README.rst
+LicenseFile=	$(SourceDir)/COPYING
 
-PYTHON=		/usr/bin/python2.6
-SITEPACKAGES=	/Library/Python/2.6/site-packages
+UncompressedName = nicolas33-offlineimap-b1bff15
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	# http://www.mail-archive.com/fink-users@lists.sourceforge.net/msg31539.html
-	/usr/bin/sed -i -e 's/^from/import locale; from/' $(NAME)/bin/offlineimap
-	touch prep
-
-build: prep $(DEPENDS)
-	cd $(NAME) ; $(PYTHON) setup.py build
-	touch build
-
-install: build
-	cd $(NAME) ; \
-	$(PYTHON) setup.py install \
-		--no-compile \
-                --root=$(INSTALLDIR) \
-		--prefix=/usr/local \
-		--install-lib=$(SITEPACKAGES)
-	$(PYTHON) -m compileall -d / $(INSTALLDIR)
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(NAME)/{UPGRADING,COPYING,COPYRIGHT,FAQ.html,offlineimap.conf*} $(INSTALLDOCDIR)
-	touch install
-
-test: install
-	touch test
+#define prep_post_hook
+## http://www.mail-archive.com/fink-users@lists.sourceforge.net/msg31539.html
+#/usr/bin/sed -i -e 's/^from/import locale; from/' $(Name)/bin/offlineimap
+#endef
