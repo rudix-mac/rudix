@@ -1,10 +1,10 @@
 # Rudix.mk - The BuildSystem itself
 #
-# Copyright (c) 2005-2012 Ruda Moura
-# Authors: Ruda Moura, Leonardo Santagada
+# Copyright (c) 2005-2012 Rudá Moura
+# Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120428
+BuildSystem = 20120513
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -329,9 +329,9 @@ ifeq ($(RUDIX_STRIP_PACKAGE),yes)
 define strip_macho
 $(call info_color,Stripping binaries)
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
-	strip $(StripExtra) $$x ; done
+	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
-	strip $(StripExtra) $$x ; done
+	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
