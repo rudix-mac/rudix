@@ -1,7 +1,7 @@
 .\"
 .\" Copyright (c) 2005-2012 Ruda Moura
 .\"
-.Dd April 28, 2012
+.Dd May 13, 2012
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -22,9 +22,9 @@
 .Sh DESCRIPTION
 The
 .Nm
-utility is the package manager for Rudix therefore you can install, remove, print information about packages and search files under the Rudix domain. It is possible to verify the integrity of installed packages and to fix (repair) packages.
+utility is the package manager for Rudix therefore you can use it to install, remove, print information about packages and search files under the Rudix domain. It is possible to verify the integrity of installed packages and to fix (repair) packages.
 .Pp
-Every package has a unique identification (package-id) and you may refer to Rudix packages by using its full package-id or with its short alias. For example, package Compiler Cache's package-id is org.rudix.pkg.ccache but you can use ccache as an alias.
+Every package has a unique identifier (package-id) and you may refer to Rudix packages by using its full package-id or with its short alias. For example, package Compiler Cache's package-id is org.rudix.pkg.ccache but you can use ccache as an alias.
 .Pp
 Without any arguments provided,
 .Nm
@@ -72,6 +72,9 @@ Enter interactive mode (type exit to quit).
 .Sh COMMANDS
 The
 .Nm
-utility also accepts simple commands. These commands matches the same options seen above. The current list of commands are: help, version, available, aliases, list, remove-all, verify-all, update, interactive, info, files, install, remove, search, owner, verify, fix.
+utility accepts simple commands which are related to the options seen above.
+The list of commands are: help, version, available, aliases, list, remove-all, verify-all, update, interactive, info, files, install, remove, search, owner, verify, fix.
 .Sh SEE ALSO
-pkgutil(1), installer(8), packagemaker(1).
+.Xr pkgutil 1 ,
+.Xr installer 8 ,
+.Xr packagemaker 1

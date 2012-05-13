@@ -1,10 +1,10 @@
 Rudix Package Manager.
 
-The `rudix` utility is a package manager therefore you can install, remove,
+The `rudix` utility is a package manager therefore you can use it to install, remove,
 print information about packages and search files under the Rudix domain.
 It is possible to verify the integrity of installed packages and to fix (repair) packages.
 
-Every package has a unique identification (called package-id) and you may refer to Rudix packages
+Every package has a unique identifier (package-id) and you may refer to Rudix packages
 by using its full package-id or with its alias. For example,
 `org.rudix.pkg.ccache` is a `package-id` and `ccache` is an alias for it.
 
