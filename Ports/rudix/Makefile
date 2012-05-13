@@ -3,7 +3,7 @@ include ../../Library/Rudix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.4
+Version=	12.5
 Revision=	0
 
 ReadMeFile=	README
