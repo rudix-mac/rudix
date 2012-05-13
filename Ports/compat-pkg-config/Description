@@ -1,0 +1,7 @@
+pkg-config is a helper tool used when compiling applications and libraries.
+
+  * Site: http://www.freedesktop.org/wiki/Software/pkg-config
+  * License: GPL
+
+Release Notes:
+  * pkg-config 0.25 compatibility
