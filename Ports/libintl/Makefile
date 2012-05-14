@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		GNU libintl
 Name=		libintl
 Version=	0.18.1.1
-Revision=	6
+Revision=	7
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
 
