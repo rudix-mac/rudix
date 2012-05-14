@@ -1,5 +1,4 @@
 #!/bin/sh
-
-[ ! -f /usr/local/etc/wgetrc ] && cp -f /usr/local/etc/wgetrc.default /usr/local/etc/wgetrc
-
+[ ! -f $3/usr/local/etc/wgetrc ] && \
+install -m 664 $3/usr/local/etc/wgetrc.default $3/usr/local/etc/wgetrc
 exit 0
