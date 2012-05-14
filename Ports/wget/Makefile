@@ -20,6 +20,10 @@ define install_post_hook
 mv $(InstallDir)/$(Prefix)/etc/wgetrc $(InstallDir)/$(Prefix)/etc/wgetrc.default
 endef
 
+define final_inner_hook
+$(BinDir)/wget --version
+endef
+
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
