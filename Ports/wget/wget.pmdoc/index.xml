@@ -1,11 +1,40 @@
-<pkmkdoc spec="1.12"><properties><title>GNU Wget</title><organization>org.rudix</organization><userSees ui="easy"/><min-target os="3"/><domain anywhere="true"/></properties><distribution><versions min-spec="1.000000"/><scripts></scripts></distribution><description>GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols.
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>GNU Wget</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols.
 
-Site: http://www.gnu.org/software/wget/
-License: GPL
+  * Site: http://www.gnu.org/software/wget/
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage
-$ wget http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
-</description><contents><choice title="wget-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false"><pkgref id="org.rudix.pkg.wget"/></choice></contents><resources bg-scale="none" bg-align="bottomleft"><locale lang="en"><resource relative="true" mod="true" type="background">../../Library/rudix.png</resource><resource relative="true" mod="true" type="license">wget-build/COPYING</resource><resource relative="true" mod="true" type="readme">wget-build/README</resource><resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource></locale></resources><flags/><item type="file">01wget.xml</item><mod>properties.title</mod><mod>description</mod></pkmkdoc>
+Release Notes:
+  * Build with Libidn
+  * Rebuild on Xcode 4.3
+</description>
+  <contents>
+    <choice title="wget-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.wget"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="bottomleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">wget-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">wget-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01wget.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>

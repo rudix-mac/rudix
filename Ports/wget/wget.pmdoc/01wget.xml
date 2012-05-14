@@ -1,1 +1,29 @@
-<pkgref spec="1.12" uuid="E4CAC128-6418-11E1-8ACB-D49A200B3D20"><config><identifier>org.rudix.pkg.wget</identifier><version>1.13.4-2</version><description></description><post-install type="none"/><requireAuthorization/><installFrom relative="true" mod="true">wget-install</installFrom><installTo>/</installTo><flags><followSymbolicLinks/></flags><packageStore type="internal"></packageStore><mod>parent</mod><mod>installFrom.path</mod><mod>identifier</mod><mod>version</mod><mod>installTo</mod></config><contents><file-list>01wget-contents.xml</file-list><filter>/CVS$</filter><filter>/\.svn$</filter><filter>/\.cvsignore$</filter><filter>/\.cvspass$</filter><filter>/\.DS_Store$</filter></contents></pkgref>
+<?xml version="1.0"?>
+<pkgref spec="1.12" uuid="400956BA-9D69-11E1-8176-D49A200B3D20">
+  <config>
+    <identifier>org.rudix.pkg.wget</identifier>
+    <version>1.13.4-3</version>
+    <description/>
+    <post-install type="none"/>
+    <requireAuthorization/>
+    <installFrom relative="true" mod="true">wget-install</installFrom>
+    <installTo>/</installTo>
+    <flags>
+      <followSymbolicLinks/>
+    </flags>
+    <packageStore type="internal"/>
+    <mod>version</mod>
+    <mod>installFrom.path</mod>
+    <mod>identifier</mod>
+    <mod>installTo</mod>
+    <mod>parent</mod>
+  </config>
+  <contents>
+    <file-list>01wget-contents.xml</file-list>
+    <filter>/CVS$</filter>
+    <filter>/\.svn$</filter>
+    <filter>/\.cvsignore$</filter>
+    <filter>/\.cvspass$</filter>
+    <filter>/\.DS_Store$</filter>
+  </contents>
+</pkgref>
