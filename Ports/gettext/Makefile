@@ -1,11 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		GNU gettext
 Name=		gettext
 Version=	0.18.1.1
-Revision=	5
+Revision=	6
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		$(Name)-$(Version).tar.gz
 
