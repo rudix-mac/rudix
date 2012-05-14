@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<pkmkdoc spec="1.12">
+  <properties>
+    <title>Libusb</title>
+    <organization>org.rudix</organization>
+    <userSees ui="easy"/>
+    <min-target os="3"/>
+    <domain anywhere="true"/>
+  </properties>
+  <distribution>
+    <versions min-spec="1.000000"/>
+    <scripts/>
+  </distribution>
+  <description>libusb is a C library which gives applications easy access to USB devices on many different operating systems.
+
+  * Site: http://www.libusb.org/
+  * License: LGPL
+
+Release Notes:
+  * Featuring in Rudix 2012
+</description>
+  <contents>
+    <choice title="libusb-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
+      <pkgref id="org.rudix.pkg.libusb"/>
+    </choice>
+  </contents>
+  <resources bg-scale="none" bg-align="bottomleft">
+    <locale lang="en">
+      <resource relative="true" mod="true" type="background">../../Library/rudix.png</resource>
+      <resource relative="true" mod="true" type="license">libusb-build/COPYING</resource>
+      <resource relative="true" mod="true" type="readme">libusb-build/README</resource>
+      <resource relative="true" mod="true" type="welcome">../../Library/Introduction</resource>
+    </locale>
+  </resources>
+  <flags/>
+  <item type="file">01libusb.xml</item>
+  <mod>properties.title</mod>
+  <mod>description</mod>
+</pkmkdoc>
