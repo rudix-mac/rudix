@@ -12,14 +12,28 @@
           </f>
           <f n="doc" o="root" g="wheel" p="16893">
             <f n="pkg-config" o="root" g="wheel" p="16893">
-              <f n="AUTHORS" o="root" g="wheel" p="33204"/>
-              <f n="ChangeLog" o="root" g="wheel" p="33204"/>
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="INSTALL" o="root" g="wheel" p="33204"/>
-              <f n="NEWS" o="root" g="wheel" p="33204"/>
+              <f n="AUTHORS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="ChangeLog" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="COPYING" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="INSTALL" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="NEWS" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
               <f n="pkg-config-guide.html" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
-              <f n="README.win32" o="root" g="wheel" p="33204"/>
+              <f n="README" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
+              <f n="README.win32" o="root" g="wheel" p="33204">
+                <mod>mode</mod>
+              </f>
             </f>
           </f>
           <f n="man" o="root" g="wheel" p="16893">
