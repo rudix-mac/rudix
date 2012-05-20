@@ -4,7 +4,7 @@ include ../../Library/Rudix.mk
 
 Title=		Apache ActiveMQ
 Name=		activemq
-Version=	5.5.1
+Version=	5.6.0
 Revision=	0
 URL=		http://www.apache.org/dist//activemq/apache-activemq/$(Version)/
 Source=		apache-$(Name)-$(Version)-bin.tar.gz
@@ -13,15 +13,15 @@ ReadMeFile=	$(InstallDir)/$(LibDir)/activemq/README.txt
 LicenseFile=	$(InstallDir)/$(LibDir)/activemq/LICENSE
 
 define prep_inner_hook
-touch prep
+true
 endef
 
 define build_inner_hook
-touch build
+true
 endef
 
 define test_inner_hook
-touch test
+true
 endef
 
 define install_inner_hook

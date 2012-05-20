@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="16CA2A2E-73C5-11E1-8EDE-D49A200B3D20">
+<pkgref spec="1.12" uuid="C4A94C5C-A2A4-11E1-A468-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.activemq</identifier>
-    <version>5.5.1-0</version>
+    <version>5.6.0-0</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

@@ -10,7 +10,7 @@
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="activemq" o="root" g="wheel" p="16893">
-            <f n="activemq-all-5.5.1.jar" o="root" g="wheel" p="33204">
+            <f n="activemq-all-5.6.0.jar" o="root" g="wheel" p="33277">
               <mod>mode</mod>
             </f>
             <f n="bin" o="root" g="wheel" p="16893">
@@ -137,19 +137,16 @@
               <mod>mode</mod>
             </f>
             <f n="lib" o="root" g="wheel" p="16893">
-              <f n="activation-1.1.jar" o="root" g="wheel" p="33204">
+              <f n="activemq-camel-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="activemq-camel-5.5.1.jar" o="root" g="wheel" p="33204">
+              <f n="activemq-console-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="activemq-console-5.5.1.jar" o="root" g="wheel" p="33204">
+              <f n="activemq-core-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="activemq-core-5.5.1.jar" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="activemq-jaas-5.5.1.jar" o="root" g="wheel" p="33204">
+              <f n="activemq-jaas-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="activemq-protobuf-1.1.jar" o="root" g="wheel" p="33204">
@@ -158,19 +155,19 @@
               <f n="activemq-rar.txt" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="activemq-web-5.5.1.jar" o="root" g="wheel" p="33204">
+              <f n="activemq-web-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="camel-core-2.7.0.jar" o="root" g="wheel" p="33204">
+              <f n="camel-core-2.9.2.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="camel-jetty-2.7.0.jar" o="root" g="wheel" p="33204">
+              <f n="camel-jetty-2.9.2.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="camel-jms-2.7.0.jar" o="root" g="wheel" p="33204">
+              <f n="camel-jms-2.9.2.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="camel-spring-2.7.0.jar" o="root" g="wheel" p="33204">
+              <f n="camel-spring-2.9.2.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="geronimo-j2ee-management_1.1_spec-1.0.1.jar" o="root" g="wheel" p="33204">
@@ -182,139 +179,286 @@
               <f n="geronimo-jta_1.0.1B_spec-1.0.1.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="jaxb-api-2.1.jar" o="root" g="wheel" p="33204">
+              <f n="jcl-over-slf4j-1.6.4.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
-              <f n="jaxb-impl-2.1.6.jar" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="jcl-over-slf4j-1.5.11.jar" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="kahadb-5.5.1.jar" o="root" g="wheel" p="33204">
+              <f n="kahadb-5.6.0.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="optional" o="root" g="wheel" p="16893">
-                <f n="activeio-core-3.1.2.jar" o="root" g="wheel" p="33204">
+                <f n="activeio-core-3.1.4.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="activemq-jmdns_1.0-5.5.1.jar" o="root" g="wheel" p="33204">
+                <f n="activemq-jmdns_1.0-5.6.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="activemq-optional-5.5.1.jar" o="root" g="wheel" p="33204">
+                <f n="activemq-optional-5.6.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="activemq-pool-5.5.1.jar" o="root" g="wheel" p="33204">
+                <f n="activemq-pool-5.6.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="activemq-spring-5.5.1.jar" o="root" g="wheel" p="33204">
+                <f n="activemq-spring-5.6.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="activemq-xmpp-5.5.1.jar" o="root" g="wheel" p="33204">
+                <f n="activemq-xmpp-5.6.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-beanutils-1.6.1.jar" o="root" g="wheel" p="33204">
+                <f n="aopalliance-1.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-codec-1.2.jar" o="root" g="wheel" p="33204">
+                <f n="axis-1.4.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-beanutils-1.8.3.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-beanutils-core-1.8.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-codec-1.4.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="commons-collections-3.2.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-dbcp-1.2.2.jar" o="root" g="wheel" p="33204">
+                <f n="commons-configuration-1.6.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-dbcp-1.4.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-digester-1.8.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="commons-httpclient-3.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-lang-2.4.jar" o="root" g="wheel" p="33204">
+                <f n="commons-lang-2.6.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-net-2.0.jar" o="root" g="wheel" p="33204">
+                <f n="commons-logging-1.1.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="commons-pool-1.5.4.jar" o="root" g="wheel" p="33204">
+                <f n="commons-net-2.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="commons-pool-1.5.6.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="fusemq-leveldb-1.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="geronimo-activation_1.1_spec-1.0.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="geronimo-j2ee-connector_1.5_spec-2.0.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="jasypt-1.7.jar" o="root" g="wheel" p="33204">
+                <f n="guava-10.0.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="jettison-1.2.jar" o="root" g="wheel" p="33204">
+                <f n="guice-3.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="guice-multibindings-3.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hadoop-core-1.0.0.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtbuf-1.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtbuf-proto-1.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtdispatch-1.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtdispatch-scala-1.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtdispatch-transport-1.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="hawtjni-runtime-1.5.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jackson-core-asl-1.9.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jackson-mapper-asl-1.9.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jasypt-1.8.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="javax.inject-1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jettison-1.3.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-6.1.26.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-http-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-io-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-util-6.1.26.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-util-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-webapp-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-websocket-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="jetty-xml-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="josql-1.5.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="log4j-1.2.14.jar" o="root" g="wheel" p="33204">
+                <f n="jsp-2.1-6.1.14.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="slf4j-log4j12-1.5.11.jar" o="root" g="wheel" p="33204">
+                <f n="jsp-api-2.1-6.1.14.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-aop-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="jsr305-1.3.9.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-asm-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldb-0.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-beans-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldb-api-0.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-context-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldbjni-1.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-core-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldbjni-linux32-1.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-expression-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldbjni-linux64-1.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-jms-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="leveldbjni-osx-1.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-oxm-tiger-1.5.8.jar" o="root" g="wheel" p="33204">
+                <f n="log4j-1.2.16.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-tx-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="mqtt-client-1.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="stax2-api-3.0.1.jar" o="root" g="wheel" p="33204">
+                <f n="oro-2.0.8.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="velocity-1.6.2.jar" o="root" g="wheel" p="33204">
+                <f n="scala-library-2.9.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="woodstox-core-asl-4.0.7.jar" o="root" g="wheel" p="33204">
+                <f n="servlet-api-2.5-20081211.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="xbean-spring-3.7.jar" o="root" g="wheel" p="33204">
+                <f n="servlet-api-2.5-6.1.14.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="slf4j-log4j12-1.6.4.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="snappy-java-1.0.3.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-aop-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-asm-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-beans-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-context-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-context-support-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-core-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-expression-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-jms-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-osgi-core-1.2.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-osgi-io-1.2.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-oxm-1.5.10.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-oxm-tiger-1.5.10.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-test-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-tx-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="spring-xml-1.5.10.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stax-api-1.0-2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stax-api-1.0.1.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="stax2-api-3.0.2.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="velocity-1.6.4.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="woodstox-core-asl-4.0.8.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xbean-spring-3.9.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xmlpull-1.1.3.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="xpp3-1.1.4c.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="xstream-1.3.1.jar" o="root" g="wheel" p="33204">
+                <f n="xpp3_min-1.1.4c.jar" o="root" g="wheel" p="33204">
+                  <mod>mode</mod>
+                </f>
+                <f n="xstream-1.4.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <mod>mode</mod>
               </f>
-              <f n="slf4j-api-1.5.11.jar" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="stax-1.2.0.jar" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
-              </f>
-              <f n="stax-api-1.0.1.jar" o="root" g="wheel" p="33204">
+              <f n="slf4j-api-1.6.4.jar" o="root" g="wheel" p="33204">
                 <mod>mode</mod>
               </f>
               <f n="web" o="root" g="wheel" p="16893">
-                <f n="commons-management-1.0.jar" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
                 <f n="core-3.1.1.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
@@ -324,10 +468,10 @@
                 <f n="jdom-1.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="jetty-all-server-7.1.6.v20100715.jar" o="root" g="wheel" p="33204">
+                <f n="jetty-all-server-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="jetty-websocket-7.1.6.v20100715.jar" o="root" g="wheel" p="33204">
+                <f n="jetty-websocket-7.6.1.v20120215.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <f n="jsp-2.1-glassfish-2.1.v20100127.jar" o="root" g="wheel" p="33204">
@@ -336,16 +480,16 @@
                 <f n="jsp-api-2.1-glassfish-2.1.v20100127.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="rome-0.8.jar" o="root" g="wheel" p="33204">
+                <f n="rome-1.0.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="sitemesh-2.2.1.jar" o="root" g="wheel" p="33204">
+                <f n="sitemesh-2.4.2.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-web-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="spring-web-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
-                <f n="spring-webmvc-3.0.3.RELEASE.jar" o="root" g="wheel" p="33204">
+                <f n="spring-webmvc-3.0.6.RELEASE.jar" o="root" g="wheel" p="33204">
                   <mod>mode</mod>
                 </f>
                 <mod>mode</mod>
@@ -687,6 +831,9 @@
                       <f n="checkbox.tag" o="root" g="wheel" p="33277">
                         <mod>mode</mod>
                       </f>
+                      <f n="escape.tag" o="root" g="wheel" p="33277">
+                        <mod>mode</mod>
+                      </f>
                       <f n="forEachMapEntry.tag" o="root" g="wheel" p="33277">
                         <mod>mode</mod>
                       </f>
@@ -749,6 +896,9 @@
                 </f>
                 <f n="xml" o="root" g="wheel" p="16893">
                   <f n="queues.jsp" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="subscribers.jsp" o="root" g="wheel" p="33277">
                     <mod>mode</mod>
                   </f>
                   <f n="topics.jsp" o="root" g="wheel" p="33277">
@@ -857,6 +1007,21 @@
                 </f>
                 <f n="WEB-INF" o="root" g="wheel" p="16893">
                   <f n="web.xml" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <mod>mode</mod>
+                </f>
+                <f n="websocket" o="root" g="wheel" p="16893">
+                  <f n="chat.css" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="chat.js" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="index.html" o="root" g="wheel" p="33277">
+                    <mod>mode</mod>
+                  </f>
+                  <f n="stomp.js" o="root" g="wheel" p="33277">
                     <mod>mode</mod>
                   </f>
                   <mod>mode</mod>
