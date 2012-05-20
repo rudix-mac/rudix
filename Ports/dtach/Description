@@ -1,10 +1,7 @@
 dtach is a tiny program that emulates the detach feature of screen.
 
-Site: http://dtach.sourceforge.net
-License: GPL
+  * Site: http://dtach.sourceforge.net
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-/usr/local/bin/dtach
+Release Notes:
+  * Rebuild on Xcode 4.3

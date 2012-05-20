@@ -1,6 +1,4 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Dtach
 Name=		dtach
@@ -15,8 +13,12 @@ LicenseFile=	$(SourceDir)/COPYING
 define install_inner_hook
 $(install_base_documentation)
 $(install_gnu_documentation)
-install -d $(InstallDir)$(BinDir)
-install -m 755 $(SourceDir)/dtach $(InstallDir)$(BinDir)
-install -d $(InstallDir)$(Prefix)/share/man/man1
-install -m 644 $(SourceDir)/dtach.1 $(InstallDir)$(Prefix)/share/man/man1
+install -d $(InstallDir)/$(BinDir)
+install -m 775 $(SourceDir)/dtach $(InstallDir)/$(BinDir)
+install -d $(InstallDir)/$(ManDir)/man1
+install -m 664 $(SourceDir)/dtach.1 $(InstallDir)/$(ManDir)/man1
+endef
+
+define final_inner_hook
+$(BinDir)/dtach --version
 endef
