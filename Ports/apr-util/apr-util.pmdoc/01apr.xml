@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<pkgref spec="1.12" uuid="FA28D9A0-9496-11E0-A0EF-D49A200B3D20">
+<pkgref spec="1.12" uuid="A746D173-A2A5-11E1-84C7-D49A200B3D20">
   <config>
     <identifier>org.rudix.pkg.apr-util</identifier>
-    <version>1.3.12-0</version>
+    <version>1.4.1-1</version>
     <description/>
     <post-install type="none"/>
     <requireAuthorization/>

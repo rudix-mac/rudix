@@ -4,4 +4,5 @@ Companion library to APR.
   * License: Apache License
 
 Release Notes:
+  * Build with APR version 1.4.6
   * Upgraded to version 1.4.1
