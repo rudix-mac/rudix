@@ -21,3 +21,7 @@ endef
 ifdef ONLY_STATIC_LIBS
 GnuConfigureExtra += --enable-static --disable-shared
 endif
+
+define final_inner_hook
+$(BinDir)/apr-1-config --version
+endef
