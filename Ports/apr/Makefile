@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		APR
 Name=		apr
 Version=	1.4.6
-Revision=	0
+Revision=	1
 URL=		http://www.apache.org/dist/apr
 Source=		$(Name)-$(Version).tar.bz2
 

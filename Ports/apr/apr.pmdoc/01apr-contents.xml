@@ -2,11 +2,12 @@
 <pkg-contents spec="1.12">
   <f n="apr-install" o="root" g="staff" p="16877" pt="apr-install" m="false" t="file">
     <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
+      <f n="local" o="root" g="wheel" p="16893">
+        <f n="bin" o="root" g="wheel" p="16893">
           <f n="apr-1-config" o="root" g="wheel" p="33277">
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="include" o="root" g="wheel" p="16893">
           <f n="apr-1" o="root" g="wheel" p="16893">
@@ -120,6 +121,7 @@
             </f>
             <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="lib" o="root" g="wheel" p="16893">
           <f n="libapr-1.0.dylib" o="root" g="wheel" p="33277">
@@ -138,7 +140,9 @@
             <f n="apr-1.pc" o="root" g="wheel" p="33204">
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
         <f n="share" o="root" g="wheel" p="16893">
           <f n="apr-1" o="root" g="wheel" p="16893">
@@ -199,8 +203,11 @@
               </f>
               <mod>mode</mod>
             </f>
+            <mod>mode</mod>
           </f>
+          <mod>mode</mod>
         </f>
+        <mod>mode</mod>
       </f>
     </f>
   </f>

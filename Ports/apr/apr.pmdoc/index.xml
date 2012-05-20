@@ -13,14 +13,11 @@
   </distribution>
   <description>Apache Portable Runtime library.
 
-Site: http://apr.apache.org/
-License: Apache License
+  * Site: http://apr.apache.org/
+  * License: Apache License
 
-Changes from previous release:
-* Upgraded to version 1.4.6
-
-Usage:
-$ /usr/local/bin/apr-1-config
+Release Notes:
+  * Upgraded to version 1.4.6
 </description>
   <contents>
     <choice title="apr-install" id="choice0" starts_selected="true" starts_enabled="true" starts_hidden="false">
