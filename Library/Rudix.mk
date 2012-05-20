@@ -4,7 +4,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120513
+BuildSystem = 20120520
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -369,10 +369,10 @@ $(test_documentation)
 endef
 
 define final_pre_hook
-sudo rudix remove $(DistName)
-sudo rudix install $(PkgFile)
+sudo ../../Ports/rudix/rudix.py remove $(DistName)
+sudo ../../Ports/rudix/rudix.py install $(PkgFile)
 endef
 
 define final_post_hook
-sudo rudix remove $(DistName)
+sudo ../../Ports/rudix/rudix.py remove $(DistName)
 endef
