@@ -1,667 +1,618 @@
 <?xml version="1.0"?>
 <pkg-contents spec="1.12">
   <f n="mercurial-install" o="root" g="staff" p="16877" pt="mercurial-install" m="false" t="file">
-    <f n="Library" o="root" g="wheel" p="16877">
-      <f n="Python" o="root" g="wheel" p="16877">
-        <f n="2.7" o="root" g="wheel" p="16877">
-          <f n="site-packages" o="root" g="wheel" p="16877">
-            <f n="hgext" o="root" g="wheel" p="16893">
-              <f n="__init__.py" o="root" g="wheel" p="33204"/>
-              <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-              <f n="acl.py" o="root" g="wheel" p="33204"/>
-              <f n="acl.pyc" o="root" g="wheel" p="33204"/>
-              <f n="bugzilla.py" o="root" g="wheel" p="33204"/>
-              <f n="bugzilla.pyc" o="root" g="wheel" p="33204"/>
-              <f n="children.py" o="root" g="wheel" p="33204"/>
-              <f n="children.pyc" o="root" g="wheel" p="33204"/>
-              <f n="churn.py" o="root" g="wheel" p="33204"/>
-              <f n="churn.pyc" o="root" g="wheel" p="33204"/>
-              <f n="color.py" o="root" g="wheel" p="33204"/>
-              <f n="color.pyc" o="root" g="wheel" p="33204"/>
-              <f n="convert" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                <f n="bzr.py" o="root" g="wheel" p="33204"/>
-                <f n="bzr.pyc" o="root" g="wheel" p="33204"/>
-                <f n="common.py" o="root" g="wheel" p="33204"/>
-                <f n="common.pyc" o="root" g="wheel" p="33204"/>
-                <f n="convcmd.py" o="root" g="wheel" p="33204"/>
-                <f n="convcmd.pyc" o="root" g="wheel" p="33204"/>
-                <f n="cvs.py" o="root" g="wheel" p="33204"/>
-                <f n="cvs.pyc" o="root" g="wheel" p="33204"/>
-                <f n="cvsps.py" o="root" g="wheel" p="33204"/>
-                <f n="cvsps.pyc" o="root" g="wheel" p="33204"/>
-                <f n="darcs.py" o="root" g="wheel" p="33204"/>
-                <f n="darcs.pyc" o="root" g="wheel" p="33204"/>
-                <f n="filemap.py" o="root" g="wheel" p="33204"/>
-                <f n="filemap.pyc" o="root" g="wheel" p="33204"/>
-                <f n="git.py" o="root" g="wheel" p="33204"/>
-                <f n="git.pyc" o="root" g="wheel" p="33204"/>
-                <f n="gnuarch.py" o="root" g="wheel" p="33204"/>
-                <f n="gnuarch.pyc" o="root" g="wheel" p="33204"/>
-                <f n="hg.py" o="root" g="wheel" p="33204"/>
-                <f n="hg.pyc" o="root" g="wheel" p="33204"/>
-                <f n="monotone.py" o="root" g="wheel" p="33204"/>
-                <f n="monotone.pyc" o="root" g="wheel" p="33204"/>
-                <f n="p4.py" o="root" g="wheel" p="33204"/>
-                <f n="p4.pyc" o="root" g="wheel" p="33204"/>
-                <f n="subversion.py" o="root" g="wheel" p="33204"/>
-                <f n="subversion.pyc" o="root" g="wheel" p="33204"/>
-                <f n="transport.py" o="root" g="wheel" p="33204"/>
-                <f n="transport.pyc" o="root" g="wheel" p="33204"/>
+    <f n="Library" o="ruda" g="staff" p="16877">
+      <f n="Python" o="ruda" g="staff" p="16877">
+        <f n="2.7" o="ruda" g="staff" p="16877">
+          <f n="site-packages" o="ruda" g="staff" p="16877">
+            <f n="hgext" o="ruda" g="staff" p="16877">
+              <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+              <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="acl.py" o="ruda" g="staff" p="33188"/>
+              <f n="acl.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="bugzilla.py" o="ruda" g="staff" p="33188"/>
+              <f n="bugzilla.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="children.py" o="ruda" g="staff" p="33188"/>
+              <f n="children.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="churn.py" o="ruda" g="staff" p="33188"/>
+              <f n="churn.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="color.py" o="ruda" g="staff" p="33188"/>
+              <f n="color.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="convert" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="bzr.py" o="ruda" g="staff" p="33188"/>
+                <f n="bzr.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="common.py" o="ruda" g="staff" p="33188"/>
+                <f n="common.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="convcmd.py" o="ruda" g="staff" p="33188"/>
+                <f n="convcmd.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="cvs.py" o="ruda" g="staff" p="33188"/>
+                <f n="cvs.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="cvsps.py" o="ruda" g="staff" p="33188"/>
+                <f n="cvsps.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="darcs.py" o="ruda" g="staff" p="33188"/>
+                <f n="darcs.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="filemap.py" o="ruda" g="staff" p="33188"/>
+                <f n="filemap.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="git.py" o="ruda" g="staff" p="33188"/>
+                <f n="git.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="gnuarch.py" o="ruda" g="staff" p="33188"/>
+                <f n="gnuarch.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="hg.py" o="ruda" g="staff" p="33188"/>
+                <f n="hg.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="monotone.py" o="ruda" g="staff" p="33188"/>
+                <f n="monotone.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="p4.py" o="ruda" g="staff" p="33188"/>
+                <f n="p4.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="subversion.py" o="ruda" g="staff" p="33188"/>
+                <f n="subversion.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="transport.py" o="ruda" g="staff" p="33188"/>
+                <f n="transport.pyc" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="eol.py" o="root" g="wheel" p="33277"/>
-              <f n="eol.pyc" o="root" g="wheel" p="33204"/>
-              <f n="extdiff.py" o="root" g="wheel" p="33204"/>
-              <f n="extdiff.pyc" o="root" g="wheel" p="33204"/>
-              <f n="fetch.py" o="root" g="wheel" p="33204"/>
-              <f n="fetch.pyc" o="root" g="wheel" p="33204"/>
-              <f n="gpg.py" o="root" g="wheel" p="33204"/>
-              <f n="gpg.pyc" o="root" g="wheel" p="33204"/>
-              <f n="graphlog.py" o="root" g="wheel" p="33204"/>
-              <f n="graphlog.pyc" o="root" g="wheel" p="33204"/>
-              <f n="hgcia.py" o="root" g="wheel" p="33204"/>
-              <f n="hgcia.pyc" o="root" g="wheel" p="33204"/>
-              <f n="hgk.py" o="root" g="wheel" p="33204"/>
-              <f n="hgk.pyc" o="root" g="wheel" p="33204"/>
-              <f n="highlight" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                <f n="highlight.py" o="root" g="wheel" p="33204"/>
-                <f n="highlight.pyc" o="root" g="wheel" p="33204"/>
+              <f n="eol.py" o="ruda" g="staff" p="33188"/>
+              <f n="eol.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="extdiff.py" o="ruda" g="staff" p="33188"/>
+              <f n="extdiff.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="factotum.py" o="ruda" g="staff" p="33188"/>
+              <f n="factotum.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="fetch.py" o="ruda" g="staff" p="33188"/>
+              <f n="fetch.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="gpg.py" o="ruda" g="staff" p="33188"/>
+              <f n="gpg.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="graphlog.py" o="ruda" g="staff" p="33188"/>
+              <f n="graphlog.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="hgcia.py" o="ruda" g="staff" p="33188"/>
+              <f n="hgcia.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="hgk.py" o="ruda" g="staff" p="33188"/>
+              <f n="hgk.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="highlight" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="highlight.py" o="ruda" g="staff" p="33188"/>
+                <f n="highlight.pyc" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="interhg.py" o="root" g="wheel" p="33204"/>
-              <f n="interhg.pyc" o="root" g="wheel" p="33204"/>
-              <f n="keyword.py" o="root" g="wheel" p="33204"/>
-              <f n="keyword.pyc" o="root" g="wheel" p="33204"/>
-              <f n="largefiles" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="basestore.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="basestore.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="lfcommands.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="lfcommands.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="lfutil.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="lfutil.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="localstore.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="localstore.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="overrides.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="overrides.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="proto.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="proto.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="remotestore.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="remotestore.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="reposetup.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="reposetup.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="uisetup.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="uisetup.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="wirestore.py" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="wirestore.pyc" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <mod>mode</mod>
+              <f n="interhg.py" o="ruda" g="staff" p="33188"/>
+              <f n="interhg.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="keyword.py" o="ruda" g="staff" p="33188"/>
+              <f n="keyword.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="largefiles" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="basestore.py" o="ruda" g="staff" p="33188"/>
+                <f n="basestore.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="lfcommands.py" o="ruda" g="staff" p="33188"/>
+                <f n="lfcommands.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="lfutil.py" o="ruda" g="staff" p="33188"/>
+                <f n="lfutil.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="localstore.py" o="ruda" g="staff" p="33188"/>
+                <f n="localstore.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="overrides.py" o="ruda" g="staff" p="33188"/>
+                <f n="overrides.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="proto.py" o="ruda" g="staff" p="33188"/>
+                <f n="proto.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="remotestore.py" o="ruda" g="staff" p="33188"/>
+                <f n="remotestore.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="reposetup.py" o="ruda" g="staff" p="33188"/>
+                <f n="reposetup.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="uisetup.py" o="ruda" g="staff" p="33188"/>
+                <f n="uisetup.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="wirestore.py" o="ruda" g="staff" p="33188"/>
+                <f n="wirestore.pyc" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="mq.py" o="root" g="wheel" p="33204"/>
-              <f n="mq.pyc" o="root" g="wheel" p="33204"/>
-              <f n="notify.py" o="root" g="wheel" p="33204"/>
-              <f n="notify.pyc" o="root" g="wheel" p="33204"/>
-              <f n="pager.py" o="root" g="wheel" p="33204"/>
-              <f n="pager.pyc" o="root" g="wheel" p="33204"/>
-              <f n="patchbomb.py" o="root" g="wheel" p="33204"/>
-              <f n="patchbomb.pyc" o="root" g="wheel" p="33204"/>
-              <f n="progress.py" o="root" g="wheel" p="33204"/>
-              <f n="progress.pyc" o="root" g="wheel" p="33204"/>
-              <f n="purge.py" o="root" g="wheel" p="33204"/>
-              <f n="purge.pyc" o="root" g="wheel" p="33204"/>
-              <f n="rebase.py" o="root" g="wheel" p="33204"/>
-              <f n="rebase.pyc" o="root" g="wheel" p="33204"/>
-              <f n="record.py" o="root" g="wheel" p="33204"/>
-              <f n="record.pyc" o="root" g="wheel" p="33204"/>
-              <f n="relink.py" o="root" g="wheel" p="33204"/>
-              <f n="relink.pyc" o="root" g="wheel" p="33204"/>
-              <f n="schemes.py" o="root" g="wheel" p="33204"/>
-              <f n="schemes.pyc" o="root" g="wheel" p="33204"/>
-              <f n="share.py" o="root" g="wheel" p="33204"/>
-              <f n="share.pyc" o="root" g="wheel" p="33204"/>
-              <f n="transplant.py" o="root" g="wheel" p="33204"/>
-              <f n="transplant.pyc" o="root" g="wheel" p="33204"/>
-              <f n="win32mbcs.py" o="root" g="wheel" p="33204"/>
-              <f n="win32mbcs.pyc" o="root" g="wheel" p="33204"/>
-              <f n="win32text.py" o="root" g="wheel" p="33204"/>
-              <f n="win32text.pyc" o="root" g="wheel" p="33204"/>
-              <f n="zeroconf" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                <f n="Zeroconf.py" o="root" g="wheel" p="33277"/>
-                <f n="Zeroconf.pyc" o="root" g="wheel" p="33204"/>
+              <f n="mq.py" o="ruda" g="staff" p="33188"/>
+              <f n="mq.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="notify.py" o="ruda" g="staff" p="33188"/>
+              <f n="notify.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="pager.py" o="ruda" g="staff" p="33188"/>
+              <f n="pager.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="patchbomb.py" o="ruda" g="staff" p="33188"/>
+              <f n="patchbomb.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="progress.py" o="ruda" g="staff" p="33188"/>
+              <f n="progress.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="purge.py" o="ruda" g="staff" p="33188"/>
+              <f n="purge.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="rebase.py" o="ruda" g="staff" p="33188"/>
+              <f n="rebase.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="record.py" o="ruda" g="staff" p="33188"/>
+              <f n="record.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="relink.py" o="ruda" g="staff" p="33188"/>
+              <f n="relink.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="schemes.py" o="ruda" g="staff" p="33188"/>
+              <f n="schemes.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="share.py" o="ruda" g="staff" p="33188"/>
+              <f n="share.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="transplant.py" o="ruda" g="staff" p="33188"/>
+              <f n="transplant.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="win32mbcs.py" o="ruda" g="staff" p="33188"/>
+              <f n="win32mbcs.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="win32text.py" o="ruda" g="staff" p="33188"/>
+              <f n="win32text.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="zeroconf" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="Zeroconf.py" o="ruda" g="staff" p="33188"/>
+                <f n="Zeroconf.pyc" o="ruda" g="staff" p="33188"/>
               </f>
             </f>
-            <f n="mercurial" o="root" g="wheel" p="16893">
-              <f n="__init__.py" o="root" g="wheel" p="33204"/>
-              <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-              <f n="__version__.py" o="root" g="wheel" p="33204"/>
-              <f n="__version__.pyc" o="root" g="wheel" p="33204"/>
-              <f n="ancestor.py" o="root" g="wheel" p="33204"/>
-              <f n="ancestor.pyc" o="root" g="wheel" p="33204"/>
-              <f n="archival.py" o="root" g="wheel" p="33204"/>
-              <f n="archival.pyc" o="root" g="wheel" p="33204"/>
-              <f n="base85.so" o="root" g="wheel" p="33277"/>
-              <f n="bdiff.so" o="root" g="wheel" p="33277"/>
-              <f n="bookmarks.py" o="root" g="wheel" p="33204"/>
-              <f n="bookmarks.pyc" o="root" g="wheel" p="33204"/>
-              <f n="bundlerepo.py" o="root" g="wheel" p="33204"/>
-              <f n="bundlerepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="byterange.py" o="root" g="wheel" p="33204"/>
-              <f n="byterange.pyc" o="root" g="wheel" p="33204"/>
-              <f n="changegroup.py" o="root" g="wheel" p="33204"/>
-              <f n="changegroup.pyc" o="root" g="wheel" p="33204"/>
-              <f n="changelog.py" o="root" g="wheel" p="33204"/>
-              <f n="changelog.pyc" o="root" g="wheel" p="33204"/>
-              <f n="cmdutil.py" o="root" g="wheel" p="33204"/>
-              <f n="cmdutil.pyc" o="root" g="wheel" p="33204"/>
-              <f n="commands.py" o="root" g="wheel" p="33204"/>
-              <f n="commands.pyc" o="root" g="wheel" p="33204"/>
-              <f n="commandserver.py" o="root" g="wheel" p="33204"/>
-              <f n="commandserver.pyc" o="root" g="wheel" p="33204"/>
-              <f n="config.py" o="root" g="wheel" p="33204"/>
-              <f n="config.pyc" o="root" g="wheel" p="33204"/>
-              <f n="context.py" o="root" g="wheel" p="33204"/>
-              <f n="context.pyc" o="root" g="wheel" p="33204"/>
-              <f n="copies.py" o="root" g="wheel" p="33204"/>
-              <f n="copies.pyc" o="root" g="wheel" p="33204"/>
-              <f n="dagparser.py" o="root" g="wheel" p="33204"/>
-              <f n="dagparser.pyc" o="root" g="wheel" p="33204"/>
-              <f n="dagutil.py" o="root" g="wheel" p="33204"/>
-              <f n="dagutil.pyc" o="root" g="wheel" p="33204"/>
-              <f n="demandimport.py" o="root" g="wheel" p="33204"/>
-              <f n="demandimport.pyc" o="root" g="wheel" p="33204"/>
-              <f n="diffhelpers.so" o="root" g="wheel" p="33277"/>
-              <f n="dirstate.py" o="root" g="wheel" p="33204"/>
-              <f n="dirstate.pyc" o="root" g="wheel" p="33204"/>
-              <f n="discovery.py" o="root" g="wheel" p="33204"/>
-              <f n="discovery.pyc" o="root" g="wheel" p="33204"/>
-              <f n="dispatch.py" o="root" g="wheel" p="33204"/>
-              <f n="dispatch.pyc" o="root" g="wheel" p="33204"/>
-              <f n="encoding.py" o="root" g="wheel" p="33204"/>
-              <f n="encoding.pyc" o="root" g="wheel" p="33204"/>
-              <f n="error.py" o="root" g="wheel" p="33204"/>
-              <f n="error.pyc" o="root" g="wheel" p="33204"/>
-              <f n="extensions.py" o="root" g="wheel" p="33204"/>
-              <f n="extensions.pyc" o="root" g="wheel" p="33204"/>
-              <f n="fancyopts.py" o="root" g="wheel" p="33204"/>
-              <f n="fancyopts.pyc" o="root" g="wheel" p="33204"/>
-              <f n="filelog.py" o="root" g="wheel" p="33204"/>
-              <f n="filelog.pyc" o="root" g="wheel" p="33204"/>
-              <f n="filemerge.py" o="root" g="wheel" p="33204"/>
-              <f n="filemerge.pyc" o="root" g="wheel" p="33204"/>
-              <f n="fileset.py" o="root" g="wheel" p="33204"/>
-              <f n="fileset.pyc" o="root" g="wheel" p="33204"/>
-              <f n="graphmod.py" o="root" g="wheel" p="33204"/>
-              <f n="graphmod.pyc" o="root" g="wheel" p="33204"/>
-              <f n="hbisect.py" o="root" g="wheel" p="33204"/>
-              <f n="hbisect.pyc" o="root" g="wheel" p="33204"/>
-              <f n="help" o="root" g="wheel" p="16893">
-                <f n="config.txt" o="root" g="wheel" p="33204"/>
-                <f n="dates.txt" o="root" g="wheel" p="33204"/>
-                <f n="diffs.txt" o="root" g="wheel" p="33204"/>
-                <f n="environment.txt" o="root" g="wheel" p="33204"/>
-                <f n="extensions.txt" o="root" g="wheel" p="33204"/>
-                <f n="filesets.txt" o="root" g="wheel" p="33204"/>
-                <f n="glossary.txt" o="root" g="wheel" p="33204"/>
-                <f n="hgignore.txt" o="root" g="wheel" p="33204"/>
-                <f n="hgweb.txt" o="root" g="wheel" p="33204"/>
-                <f n="merge-tools.txt" o="root" g="wheel" p="33204"/>
-                <f n="multirevs.txt" o="root" g="wheel" p="33204"/>
-                <f n="patterns.txt" o="root" g="wheel" p="33204"/>
-                <f n="phases.txt" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="revisions.txt" o="root" g="wheel" p="33204"/>
-                <f n="revsets.txt" o="root" g="wheel" p="33204"/>
-                <f n="subrepos.txt" o="root" g="wheel" p="33204"/>
-                <f n="templates.txt" o="root" g="wheel" p="33204"/>
-                <f n="urls.txt" o="root" g="wheel" p="33204"/>
+            <f n="mercurial" o="ruda" g="staff" p="16877">
+              <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+              <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="__version__.py" o="ruda" g="staff" p="33188"/>
+              <f n="__version__.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="ancestor.py" o="ruda" g="staff" p="33188"/>
+              <f n="ancestor.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="archival.py" o="ruda" g="staff" p="33188"/>
+              <f n="archival.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="base85.so" o="ruda" g="staff" p="33261"/>
+              <f n="bdiff.so" o="ruda" g="staff" p="33261"/>
+              <f n="bookmarks.py" o="ruda" g="staff" p="33188"/>
+              <f n="bookmarks.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="bundlerepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="bundlerepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="byterange.py" o="ruda" g="staff" p="33188"/>
+              <f n="byterange.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="changegroup.py" o="ruda" g="staff" p="33188"/>
+              <f n="changegroup.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="changelog.py" o="ruda" g="staff" p="33188"/>
+              <f n="changelog.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="cmdutil.py" o="ruda" g="staff" p="33188"/>
+              <f n="cmdutil.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="commands.py" o="ruda" g="staff" p="33188"/>
+              <f n="commands.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="commandserver.py" o="ruda" g="staff" p="33188"/>
+              <f n="commandserver.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="config.py" o="ruda" g="staff" p="33188"/>
+              <f n="config.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="context.py" o="ruda" g="staff" p="33188"/>
+              <f n="context.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="copies.py" o="ruda" g="staff" p="33188"/>
+              <f n="copies.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="dagparser.py" o="ruda" g="staff" p="33188"/>
+              <f n="dagparser.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="dagutil.py" o="ruda" g="staff" p="33188"/>
+              <f n="dagutil.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="demandimport.py" o="ruda" g="staff" p="33188"/>
+              <f n="demandimport.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="diffhelpers.so" o="ruda" g="staff" p="33261"/>
+              <f n="dirstate.py" o="ruda" g="staff" p="33188"/>
+              <f n="dirstate.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="discovery.py" o="ruda" g="staff" p="33188"/>
+              <f n="discovery.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="dispatch.py" o="ruda" g="staff" p="33188"/>
+              <f n="dispatch.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="encoding.py" o="ruda" g="staff" p="33188"/>
+              <f n="encoding.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="error.py" o="ruda" g="staff" p="33188"/>
+              <f n="error.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="extensions.py" o="ruda" g="staff" p="33188"/>
+              <f n="extensions.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="fancyopts.py" o="ruda" g="staff" p="33188"/>
+              <f n="fancyopts.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="filelog.py" o="ruda" g="staff" p="33188"/>
+              <f n="filelog.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="filemerge.py" o="ruda" g="staff" p="33188"/>
+              <f n="filemerge.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="fileset.py" o="ruda" g="staff" p="33188"/>
+              <f n="fileset.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="formatter.py" o="ruda" g="staff" p="33188"/>
+              <f n="formatter.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="graphmod.py" o="ruda" g="staff" p="33188"/>
+              <f n="graphmod.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="hbisect.py" o="ruda" g="staff" p="33188"/>
+              <f n="hbisect.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="help" o="ruda" g="staff" p="16877">
+                <f n="config.txt" o="ruda" g="staff" p="33188"/>
+                <f n="dates.txt" o="ruda" g="staff" p="33188"/>
+                <f n="diffs.txt" o="ruda" g="staff" p="33188"/>
+                <f n="environment.txt" o="ruda" g="staff" p="33188"/>
+                <f n="extensions.txt" o="ruda" g="staff" p="33188"/>
+                <f n="filesets.txt" o="ruda" g="staff" p="33188"/>
+                <f n="glossary.txt" o="ruda" g="staff" p="33188"/>
+                <f n="hgignore.txt" o="ruda" g="staff" p="33188"/>
+                <f n="hgweb.txt" o="ruda" g="staff" p="33188"/>
+                <f n="merge-tools.txt" o="ruda" g="staff" p="33188"/>
+                <f n="multirevs.txt" o="ruda" g="staff" p="33188"/>
+                <f n="patterns.txt" o="ruda" g="staff" p="33188"/>
+                <f n="phases.txt" o="ruda" g="staff" p="33188"/>
+                <f n="revisions.txt" o="ruda" g="staff" p="33188"/>
+                <f n="revsets.txt" o="ruda" g="staff" p="33188"/>
+                <f n="subrepos.txt" o="ruda" g="staff" p="33188"/>
+                <f n="templates.txt" o="ruda" g="staff" p="33188"/>
+                <f n="urls.txt" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="help.py" o="root" g="wheel" p="33204"/>
-              <f n="help.pyc" o="root" g="wheel" p="33204"/>
-              <f n="hg.py" o="root" g="wheel" p="33204"/>
-              <f n="hg.pyc" o="root" g="wheel" p="33204"/>
-              <f n="hgweb" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                <f n="common.py" o="root" g="wheel" p="33204"/>
-                <f n="common.pyc" o="root" g="wheel" p="33204"/>
-                <f n="hgweb_mod.py" o="root" g="wheel" p="33204"/>
-                <f n="hgweb_mod.pyc" o="root" g="wheel" p="33204"/>
-                <f n="hgwebdir_mod.py" o="root" g="wheel" p="33204"/>
-                <f n="hgwebdir_mod.pyc" o="root" g="wheel" p="33204"/>
-                <f n="protocol.py" o="root" g="wheel" p="33204"/>
-                <f n="protocol.pyc" o="root" g="wheel" p="33204"/>
-                <f n="request.py" o="root" g="wheel" p="33204"/>
-                <f n="request.pyc" o="root" g="wheel" p="33204"/>
-                <f n="server.py" o="root" g="wheel" p="33204"/>
-                <f n="server.pyc" o="root" g="wheel" p="33204"/>
-                <f n="webcommands.py" o="root" g="wheel" p="33204"/>
-                <f n="webcommands.pyc" o="root" g="wheel" p="33204"/>
-                <f n="webutil.py" o="root" g="wheel" p="33204"/>
-                <f n="webutil.pyc" o="root" g="wheel" p="33204"/>
-                <f n="wsgicgi.py" o="root" g="wheel" p="33204"/>
-                <f n="wsgicgi.pyc" o="root" g="wheel" p="33204"/>
+              <f n="help.py" o="ruda" g="staff" p="33188"/>
+              <f n="help.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="hg.py" o="ruda" g="staff" p="33188"/>
+              <f n="hg.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="hgweb" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="common.py" o="ruda" g="staff" p="33188"/>
+                <f n="common.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="hgweb_mod.py" o="ruda" g="staff" p="33188"/>
+                <f n="hgweb_mod.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="hgwebdir_mod.py" o="ruda" g="staff" p="33188"/>
+                <f n="hgwebdir_mod.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="protocol.py" o="ruda" g="staff" p="33188"/>
+                <f n="protocol.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="request.py" o="ruda" g="staff" p="33188"/>
+                <f n="request.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="server.py" o="ruda" g="staff" p="33188"/>
+                <f n="server.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="webcommands.py" o="ruda" g="staff" p="33188"/>
+                <f n="webcommands.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="webutil.py" o="ruda" g="staff" p="33188"/>
+                <f n="webutil.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="wsgicgi.py" o="ruda" g="staff" p="33188"/>
+                <f n="wsgicgi.pyc" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="hook.py" o="root" g="wheel" p="33204"/>
-              <f n="hook.pyc" o="root" g="wheel" p="33204"/>
-              <f n="httpclient" o="root" g="wheel" p="16893">
-                <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                <f n="socketutil.py" o="root" g="wheel" p="33204"/>
-                <f n="socketutil.pyc" o="root" g="wheel" p="33204"/>
-                <f n="tests" o="root" g="wheel" p="16893">
-                  <f n="__init__.py" o="root" g="wheel" p="33204"/>
-                  <f n="__init__.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="simple_http_test.py" o="root" g="wheel" p="33204"/>
-                  <f n="simple_http_test.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="test_bogus_responses.py" o="root" g="wheel" p="33204"/>
-                  <f n="test_bogus_responses.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="test_chunked_transfer.py" o="root" g="wheel" p="33204"/>
-                  <f n="test_chunked_transfer.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="test_proxy_support.py" o="root" g="wheel" p="33204"/>
-                  <f n="test_proxy_support.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="test_ssl.py" o="root" g="wheel" p="33204"/>
-                  <f n="test_ssl.pyc" o="root" g="wheel" p="33204"/>
-                  <f n="util.py" o="root" g="wheel" p="33204"/>
-                  <f n="util.pyc" o="root" g="wheel" p="33204"/>
-                </f>
-              </f>
-              <f n="httpconnection.py" o="root" g="wheel" p="33204"/>
-              <f n="httpconnection.pyc" o="root" g="wheel" p="33204"/>
-              <f n="httprepo.py" o="root" g="wheel" p="33204"/>
-              <f n="httprepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="i18n.py" o="root" g="wheel" p="33204"/>
-              <f n="i18n.pyc" o="root" g="wheel" p="33204"/>
-              <f n="ignore.py" o="root" g="wheel" p="33204"/>
-              <f n="ignore.pyc" o="root" g="wheel" p="33204"/>
-              <f n="keepalive.py" o="root" g="wheel" p="33204"/>
-              <f n="keepalive.pyc" o="root" g="wheel" p="33204"/>
-              <f n="locale" o="root" g="wheel" p="16893">
-                <f n="da" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="de" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="el" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="fr" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="it" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="ja" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="pt_BR" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="ro" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="ru" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="sv" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="zh_CN" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
-                </f>
-                <f n="zh_TW" o="root" g="wheel" p="16893">
-                  <f n="LC_MESSAGES" o="root" g="wheel" p="16893">
-                    <f n="hg.mo" o="root" g="wheel" p="33204"/>
-                  </f>
+              <f n="hook.py" o="ruda" g="staff" p="33188"/>
+              <f n="hook.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="httpclient" o="ruda" g="staff" p="16877">
+                <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="socketutil.py" o="ruda" g="staff" p="33188"/>
+                <f n="socketutil.pyc" o="ruda" g="staff" p="33188"/>
+                <f n="tests" o="ruda" g="staff" p="16877">
+                  <f n="__init__.py" o="ruda" g="staff" p="33188"/>
+                  <f n="__init__.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="simple_http_test.py" o="ruda" g="staff" p="33188"/>
+                  <f n="simple_http_test.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="test_bogus_responses.py" o="ruda" g="staff" p="33188"/>
+                  <f n="test_bogus_responses.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="test_chunked_transfer.py" o="ruda" g="staff" p="33188"/>
+                  <f n="test_chunked_transfer.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="test_proxy_support.py" o="ruda" g="staff" p="33188"/>
+                  <f n="test_proxy_support.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="test_ssl.py" o="ruda" g="staff" p="33188"/>
+                  <f n="test_ssl.pyc" o="ruda" g="staff" p="33188"/>
+                  <f n="util.py" o="ruda" g="staff" p="33188"/>
+                  <f n="util.pyc" o="ruda" g="staff" p="33188"/>
                 </f>
               </f>
-              <f n="localrepo.py" o="root" g="wheel" p="33204"/>
-              <f n="localrepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="lock.py" o="root" g="wheel" p="33204"/>
-              <f n="lock.pyc" o="root" g="wheel" p="33204"/>
-              <f n="lsprof.py" o="root" g="wheel" p="33204"/>
-              <f n="lsprof.pyc" o="root" g="wheel" p="33204"/>
-              <f n="lsprofcalltree.py" o="root" g="wheel" p="33277"/>
-              <f n="lsprofcalltree.pyc" o="root" g="wheel" p="33204"/>
-              <f n="mail.py" o="root" g="wheel" p="33204"/>
-              <f n="mail.pyc" o="root" g="wheel" p="33204"/>
-              <f n="manifest.py" o="root" g="wheel" p="33204"/>
-              <f n="manifest.pyc" o="root" g="wheel" p="33204"/>
-              <f n="match.py" o="root" g="wheel" p="33204"/>
-              <f n="match.pyc" o="root" g="wheel" p="33204"/>
-              <f n="mdiff.py" o="root" g="wheel" p="33204"/>
-              <f n="mdiff.pyc" o="root" g="wheel" p="33204"/>
-              <f n="merge.py" o="root" g="wheel" p="33204"/>
-              <f n="merge.pyc" o="root" g="wheel" p="33204"/>
-              <f n="minirst.py" o="root" g="wheel" p="33204"/>
-              <f n="minirst.pyc" o="root" g="wheel" p="33204"/>
-              <f n="mpatch.so" o="root" g="wheel" p="33277"/>
-              <f n="node.py" o="root" g="wheel" p="33204"/>
-              <f n="node.pyc" o="root" g="wheel" p="33204"/>
-              <f n="osutil.so" o="root" g="wheel" p="33277"/>
-              <f n="parser.py" o="root" g="wheel" p="33204"/>
-              <f n="parser.pyc" o="root" g="wheel" p="33204"/>
-              <f n="parsers.so" o="root" g="wheel" p="33277"/>
-              <f n="patch.py" o="root" g="wheel" p="33204"/>
-              <f n="patch.pyc" o="root" g="wheel" p="33204"/>
-              <f n="phases.py" o="root" g="wheel" p="33277">
-                <mod>mode</mod>
+              <f n="httpconnection.py" o="ruda" g="staff" p="33188"/>
+              <f n="httpconnection.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="httprepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="httprepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="i18n.py" o="ruda" g="staff" p="33188"/>
+              <f n="i18n.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="ignore.py" o="ruda" g="staff" p="33188"/>
+              <f n="ignore.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="keepalive.py" o="ruda" g="staff" p="33188"/>
+              <f n="keepalive.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="locale" o="ruda" g="staff" p="16877">
+                <f n="da" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="de" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="el" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="fr" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="it" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="ja" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="pt_BR" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="ro" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="ru" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="sv" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="zh_CN" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
+                <f n="zh_TW" o="ruda" g="staff" p="16877">
+                  <f n="LC_MESSAGES" o="ruda" g="staff" p="16877">
+                    <f n="hg.mo" o="ruda" g="staff" p="33188"/>
+                  </f>
+                </f>
               </f>
-              <f n="phases.pyc" o="root" g="wheel" p="33204">
-                <mod>mode</mod>
+              <f n="localrepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="localrepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="lock.py" o="ruda" g="staff" p="33188"/>
+              <f n="lock.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="lsprof.py" o="ruda" g="staff" p="33188"/>
+              <f n="lsprof.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="lsprofcalltree.py" o="ruda" g="staff" p="33188"/>
+              <f n="lsprofcalltree.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="mail.py" o="ruda" g="staff" p="33188"/>
+              <f n="mail.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="manifest.py" o="ruda" g="staff" p="33188"/>
+              <f n="manifest.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="match.py" o="ruda" g="staff" p="33188"/>
+              <f n="match.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="mdiff.py" o="ruda" g="staff" p="33188"/>
+              <f n="mdiff.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="merge.py" o="ruda" g="staff" p="33188"/>
+              <f n="merge.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="minirst.py" o="ruda" g="staff" p="33188"/>
+              <f n="minirst.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="mpatch.so" o="ruda" g="staff" p="33261"/>
+              <f n="node.py" o="ruda" g="staff" p="33188"/>
+              <f n="node.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="osutil.so" o="ruda" g="staff" p="33261"/>
+              <f n="parser.py" o="ruda" g="staff" p="33188"/>
+              <f n="parser.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="parsers.so" o="ruda" g="staff" p="33261"/>
+              <f n="patch.py" o="ruda" g="staff" p="33188"/>
+              <f n="patch.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="phases.py" o="ruda" g="staff" p="33188"/>
+              <f n="phases.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="posix.py" o="ruda" g="staff" p="33188"/>
+              <f n="posix.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="pushkey.py" o="ruda" g="staff" p="33188"/>
+              <f n="pushkey.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="pvec.py" o="ruda" g="staff" p="33188"/>
+              <f n="pvec.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="py3kcompat.py" o="ruda" g="staff" p="33188"/>
+              <f n="py3kcompat.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="repair.py" o="ruda" g="staff" p="33188"/>
+              <f n="repair.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="repo.py" o="ruda" g="staff" p="33188"/>
+              <f n="repo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="revlog.py" o="ruda" g="staff" p="33188"/>
+              <f n="revlog.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="revset.py" o="ruda" g="staff" p="33188"/>
+              <f n="revset.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="scmutil.py" o="ruda" g="staff" p="33188"/>
+              <f n="scmutil.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="setdiscovery.py" o="ruda" g="staff" p="33188"/>
+              <f n="setdiscovery.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="similar.py" o="ruda" g="staff" p="33188"/>
+              <f n="similar.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="simplemerge.py" o="ruda" g="staff" p="33188"/>
+              <f n="simplemerge.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="sshrepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="sshrepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="sshserver.py" o="ruda" g="staff" p="33188"/>
+              <f n="sshserver.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="sslutil.py" o="ruda" g="staff" p="33188"/>
+              <f n="sslutil.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="statichttprepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="statichttprepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="store.py" o="ruda" g="staff" p="33188"/>
+              <f n="store.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="strutil.py" o="ruda" g="staff" p="33188"/>
+              <f n="strutil.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="subrepo.py" o="ruda" g="staff" p="33188"/>
+              <f n="subrepo.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="tags.py" o="ruda" g="staff" p="33188"/>
+              <f n="tags.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="templatefilters.py" o="ruda" g="staff" p="33188"/>
+              <f n="templatefilters.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="templatekw.py" o="ruda" g="staff" p="33188"/>
+              <f n="templatekw.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="templater.py" o="ruda" g="staff" p="33188"/>
+              <f n="templater.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="templates" o="ruda" g="staff" p="16877">
+                <f n="atom" o="ruda" g="staff" p="16877">
+                  <f n="bookmarkentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="bookmarks.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="tagentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="coal" o="ruda" g="staff" p="16877">
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="gitweb" o="ruda" g="staff" p="16877">
+                  <f n="bookmarks.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="branches.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changeset.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="fileannotate.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filediff.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filerevision.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="footer.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="graph.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="help.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="helptopics.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="index.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="manifest.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="notfound.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="search.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="summary.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="map-cmdline.bisect" o="ruda" g="staff" p="33188"/>
+                <f n="map-cmdline.changelog" o="ruda" g="staff" p="33188"/>
+                <f n="map-cmdline.compact" o="ruda" g="staff" p="33188"/>
+                <f n="map-cmdline.default" o="ruda" g="staff" p="33188"/>
+                <f n="map-cmdline.xml" o="ruda" g="staff" p="33188"/>
+                <f n="monoblue" o="ruda" g="staff" p="16877">
+                  <f n="bookmarks.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="branches.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changeset.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="fileannotate.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filediff.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filerevision.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="footer.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="graph.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="help.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="helptopics.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="index.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="manifest.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="notfound.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="search.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="summary.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="paper" o="ruda" g="staff" p="16877">
+                  <f n="bookmarks.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="branches.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changeset.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="diffstat.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="fileannotate.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filediff.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filerevision.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="footer.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="graph.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="help.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="helptopics.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="index.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="manifest.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="notfound.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="search.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="raw" o="ruda" g="staff" p="16877">
+                  <f n="changeset.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="fileannotate.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filediff.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="index.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="manifest.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="notfound.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="rss" o="ruda" g="staff" p="16877">
+                  <f n="bookmarkentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="bookmarks.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="tagentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="spartan" o="ruda" g="staff" p="16877">
+                  <f n="branches.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="changeset.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="error.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="fileannotate.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filediff.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filelogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="filerevision.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="footer.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="graph.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="header.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="index.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="manifest.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="map" o="ruda" g="staff" p="33188"/>
+                  <f n="notfound.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="search.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlog.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="shortlogentry.tmpl" o="ruda" g="staff" p="33188"/>
+                  <f n="tags.tmpl" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="static" o="ruda" g="staff" p="16877">
+                  <f n="background.png" o="ruda" g="staff" p="33188"/>
+                  <f n="coal-file.png" o="ruda" g="staff" p="33188"/>
+                  <f n="coal-folder.png" o="ruda" g="staff" p="33188"/>
+                  <f n="excanvas.js" o="ruda" g="staff" p="33188"/>
+                  <f n="hgicon.png" o="ruda" g="staff" p="33188"/>
+                  <f n="hglogo.png" o="ruda" g="staff" p="33188"/>
+                  <f n="mercurial.js" o="ruda" g="staff" p="33188"/>
+                  <f n="style-coal.css" o="ruda" g="staff" p="33188"/>
+                  <f n="style-gitweb.css" o="ruda" g="staff" p="33188"/>
+                  <f n="style-monoblue.css" o="ruda" g="staff" p="33188"/>
+                  <f n="style-paper.css" o="ruda" g="staff" p="33188"/>
+                  <f n="style.css" o="ruda" g="staff" p="33188"/>
+                </f>
+                <f n="template-vars.txt" o="ruda" g="staff" p="33188"/>
               </f>
-              <f n="posix.py" o="root" g="wheel" p="33204"/>
-              <f n="posix.pyc" o="root" g="wheel" p="33204"/>
-              <f n="pushkey.py" o="root" g="wheel" p="33204"/>
-              <f n="pushkey.pyc" o="root" g="wheel" p="33204"/>
-              <f n="py3kcompat.py" o="root" g="wheel" p="33204"/>
-              <f n="py3kcompat.pyc" o="root" g="wheel" p="33204"/>
-              <f n="repair.py" o="root" g="wheel" p="33204"/>
-              <f n="repair.pyc" o="root" g="wheel" p="33204"/>
-              <f n="repo.py" o="root" g="wheel" p="33204"/>
-              <f n="repo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="revlog.py" o="root" g="wheel" p="33204"/>
-              <f n="revlog.pyc" o="root" g="wheel" p="33204"/>
-              <f n="revset.py" o="root" g="wheel" p="33204"/>
-              <f n="revset.pyc" o="root" g="wheel" p="33204"/>
-              <f n="scmutil.py" o="root" g="wheel" p="33204"/>
-              <f n="scmutil.pyc" o="root" g="wheel" p="33204"/>
-              <f n="setdiscovery.py" o="root" g="wheel" p="33204"/>
-              <f n="setdiscovery.pyc" o="root" g="wheel" p="33204"/>
-              <f n="similar.py" o="root" g="wheel" p="33204"/>
-              <f n="similar.pyc" o="root" g="wheel" p="33204"/>
-              <f n="simplemerge.py" o="root" g="wheel" p="33204"/>
-              <f n="simplemerge.pyc" o="root" g="wheel" p="33204"/>
-              <f n="sshrepo.py" o="root" g="wheel" p="33204"/>
-              <f n="sshrepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="sshserver.py" o="root" g="wheel" p="33204"/>
-              <f n="sshserver.pyc" o="root" g="wheel" p="33204"/>
-              <f n="sslutil.py" o="root" g="wheel" p="33204"/>
-              <f n="sslutil.pyc" o="root" g="wheel" p="33204"/>
-              <f n="statichttprepo.py" o="root" g="wheel" p="33204"/>
-              <f n="statichttprepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="store.py" o="root" g="wheel" p="33204"/>
-              <f n="store.pyc" o="root" g="wheel" p="33204"/>
-              <f n="strutil.py" o="root" g="wheel" p="33204"/>
-              <f n="strutil.pyc" o="root" g="wheel" p="33204"/>
-              <f n="subrepo.py" o="root" g="wheel" p="33204"/>
-              <f n="subrepo.pyc" o="root" g="wheel" p="33204"/>
-              <f n="tags.py" o="root" g="wheel" p="33204"/>
-              <f n="tags.pyc" o="root" g="wheel" p="33204"/>
-              <f n="templatefilters.py" o="root" g="wheel" p="33204"/>
-              <f n="templatefilters.pyc" o="root" g="wheel" p="33204"/>
-              <f n="templatekw.py" o="root" g="wheel" p="33204"/>
-              <f n="templatekw.pyc" o="root" g="wheel" p="33204"/>
-              <f n="templater.py" o="root" g="wheel" p="33204"/>
-              <f n="templater.pyc" o="root" g="wheel" p="33204"/>
-              <f n="templates" o="root" g="wheel" p="16893">
-                <f n="atom" o="root" g="wheel" p="16893">
-                  <f n="bookmarkentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="tagentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="coal" o="root" g="wheel" p="16893">
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="gitweb" o="root" g="wheel" p="16893">
-                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="branches.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="help.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="index.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="search.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="summary.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="map-cmdline.bisect" o="root" g="wheel" p="33204">
-                  <mod>mode</mod>
-                </f>
-                <f n="map-cmdline.changelog" o="root" g="wheel" p="33204"/>
-                <f n="map-cmdline.compact" o="root" g="wheel" p="33204"/>
-                <f n="map-cmdline.default" o="root" g="wheel" p="33204"/>
-                <f n="map-cmdline.xml" o="root" g="wheel" p="33204"/>
-                <f n="monoblue" o="root" g="wheel" p="16893">
-                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="branches.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="help.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="index.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="search.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="summary.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="paper" o="root" g="wheel" p="16893">
-                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="branches.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="diffstat.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="help.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="helptopics.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="index.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="search.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="raw" o="root" g="wheel" p="16893">
-                  <f n="changeset.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="index.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="rss" o="root" g="wheel" p="16893">
-                  <f n="bookmarkentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="bookmarks.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="tagentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="spartan" o="root" g="wheel" p="16893">
-                  <f n="branches.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="changeset.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="error.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="fileannotate.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filediff.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filelogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="filerevision.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="footer.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="graph.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="header.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="index.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="manifest.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="map" o="root" g="wheel" p="33204"/>
-                  <f n="notfound.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="search.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlog.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="shortlogentry.tmpl" o="root" g="wheel" p="33204"/>
-                  <f n="tags.tmpl" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="static" o="root" g="wheel" p="16893">
-                  <f n="background.png" o="root" g="wheel" p="33204"/>
-                  <f n="coal-file.png" o="root" g="wheel" p="33204"/>
-                  <f n="coal-folder.png" o="root" g="wheel" p="33204"/>
-                  <f n="excanvas.js" o="root" g="wheel" p="33204"/>
-                  <f n="hgicon.png" o="root" g="wheel" p="33204"/>
-                  <f n="hglogo.png" o="root" g="wheel" p="33204"/>
-                  <f n="mercurial.js" o="root" g="wheel" p="33204"/>
-                  <f n="style-coal.css" o="root" g="wheel" p="33204"/>
-                  <f n="style-gitweb.css" o="root" g="wheel" p="33204"/>
-                  <f n="style-monoblue.css" o="root" g="wheel" p="33204"/>
-                  <f n="style-paper.css" o="root" g="wheel" p="33204"/>
-                  <f n="style.css" o="root" g="wheel" p="33204"/>
-                </f>
-                <f n="template-vars.txt" o="root" g="wheel" p="33204"/>
-              </f>
-              <f n="transaction.py" o="root" g="wheel" p="33204"/>
-              <f n="transaction.pyc" o="root" g="wheel" p="33204"/>
-              <f n="treediscovery.py" o="root" g="wheel" p="33204"/>
-              <f n="treediscovery.pyc" o="root" g="wheel" p="33204"/>
-              <f n="ui.py" o="root" g="wheel" p="33204"/>
-              <f n="ui.pyc" o="root" g="wheel" p="33204"/>
-              <f n="url.py" o="root" g="wheel" p="33204"/>
-              <f n="url.pyc" o="root" g="wheel" p="33204"/>
-              <f n="util.py" o="root" g="wheel" p="33204"/>
-              <f n="util.pyc" o="root" g="wheel" p="33204"/>
-              <f n="verify.py" o="root" g="wheel" p="33204"/>
-              <f n="verify.pyc" o="root" g="wheel" p="33204"/>
-              <f n="win32.py" o="root" g="wheel" p="33204"/>
-              <f n="win32.pyc" o="root" g="wheel" p="33204"/>
-              <f n="windows.py" o="root" g="wheel" p="33204"/>
-              <f n="windows.pyc" o="root" g="wheel" p="33204"/>
-              <f n="wireproto.py" o="root" g="wheel" p="33204"/>
-              <f n="wireproto.pyc" o="root" g="wheel" p="33204"/>
+              <f n="transaction.py" o="ruda" g="staff" p="33188"/>
+              <f n="transaction.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="treediscovery.py" o="ruda" g="staff" p="33188"/>
+              <f n="treediscovery.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="ui.py" o="ruda" g="staff" p="33188"/>
+              <f n="ui.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="url.py" o="ruda" g="staff" p="33188"/>
+              <f n="url.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="util.py" o="ruda" g="staff" p="33188"/>
+              <f n="util.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="verify.py" o="ruda" g="staff" p="33188"/>
+              <f n="verify.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="win32.py" o="ruda" g="staff" p="33188"/>
+              <f n="win32.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="windows.py" o="ruda" g="staff" p="33188"/>
+              <f n="windows.pyc" o="ruda" g="staff" p="33188"/>
+              <f n="wireproto.py" o="ruda" g="staff" p="33188"/>
+              <f n="wireproto.pyc" o="ruda" g="staff" p="33188"/>
             </f>
-            <f n="mercurial-2.1-py2.7.egg-info" o="root" g="wheel" p="33204">
-              <mod>mode</mod>
-            </f>
+            <f n="mercurial-2.2.1-py2.7.egg-info" o="ruda" g="staff" p="33188"/>
           </f>
         </f>
       </f>
     </f>
-    <f n="usr" o="root" g="wheel" p="16877">
-      <f n="local" o="root" g="wheel" p="16877">
-        <f n="bin" o="root" g="wheel" p="16877">
-          <f n="hg" o="root" g="wheel" p="33277"/>
+    <f n="usr" o="ruda" g="staff" p="16877">
+      <f n="local" o="ruda" g="staff" p="16877">
+        <f n="bin" o="ruda" g="staff" p="16877">
+          <f n="hg" o="ruda" g="staff" p="33261"/>
         </f>
-        <f n="share" o="root" g="wheel" p="16893">
-          <f n="doc" o="root" g="wheel" p="16893">
-            <f n="mercurial" o="root" g="wheel" p="16893">
-              <f n="COPYING" o="root" g="wheel" p="33204"/>
-              <f n="README" o="root" g="wheel" p="33204"/>
+        <f n="share" o="ruda" g="staff" p="16877">
+          <f n="doc" o="ruda" g="staff" p="16877">
+            <f n="mercurial" o="ruda" g="staff" p="16877">
+              <f n="COPYING" o="ruda" g="staff" p="33188"/>
+              <f n="README" o="ruda" g="staff" p="33188"/>
             </f>
           </f>
         </f>
