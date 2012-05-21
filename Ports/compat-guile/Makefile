@@ -4,7 +4,7 @@ BuildRequires += $(LibDir)/libintl.la
 include ../../Library/GNU.mk
 
 Title=		GNU Guile (Version 1)
-Name=		guile1
+Name=		compat-guile
 Version=	1.8.8
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/guile/

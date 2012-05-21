@@ -1,16 +1,14 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/Configure.mk
 
-Description=	ANSI Common Lisp compiler
-Site=		http://www.clisp.org/
-License=	GPL
 Title=		CLISP
 Name=		clisp
-Version=	2.48
+Version=	2.49
 Revision=	0
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
+
+ReadMeFile=	$(SourceDir)/SUMMARY
+LicenseFile=	$(SourceDir)/COPYRIGHT
 
 #ifdef WITH_STATIC_NLS
 #LDFLAGS+=	-framework CoreFoundation -liconv
@@ -22,16 +20,8 @@ Source=		$(Name)-$(Version).tar.gz
 #DEPENDS+=	$(LibDir)/libsigsegv.la
 #DEPENDS+=	$(LibDir)/libavcall.la
 
-prep: retrieve
-	tar zxvf $(Source)
-	touch prep
 
-# FIXME: can't use $(configure) - invalid argument --cache-file=...
-build: prep $(DEPENDS)
-	cd $(SourceDir) ; env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	./configure --disable-dependency-tracking ; $(make) -C src
-	touch build
-
+ifdef FOO
 install: build
 	cd $(SourceDir) ; make -C src DESTDIR=$(InstallDir) install
 	rm -rf $(InstallDir)$(BinDir)/clisp.dSYM
@@ -40,3 +30,4 @@ install: build
 test: install
 	cd $(SourceDir) ; make -C src check
 	touch test
+endif

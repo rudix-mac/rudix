@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libapr-1.la
+#BuildRequires += $(LibDir)/libapr-1.la
 
 include ../../Library/GNU.mk
 

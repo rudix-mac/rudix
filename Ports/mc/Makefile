@@ -7,7 +7,7 @@ include ../../Library/GNU.mk
 
 Title=		Midnight Commander
 Name=		mc
-Version=	4.8.2
+Version=	4.8.3
 Revision=	0
 URL=		http://www.midnight-commander.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
@@ -19,6 +19,8 @@ LicenseFile=	$(SourceDir)/COPYING
 GnuConfigureExtra += --with-screen=ncurses
 GnuConfigureExtra += --with-x
 #GnuConfigureExtra += --enable-vfs-smb
+#GnuConfigureExtra += --with-glib-static # Bogus?
+GnuConfigureExtra += --enable-static --disable-shared
 
 define fetch
 curl -f -O -C - -L -k

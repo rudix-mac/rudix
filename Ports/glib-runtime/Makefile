@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 Title=		GLib (Runtime)
 Name=		glib-runtime
 Version=	2.28.8
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.28/
 Source=		glib-$(Version).tar.bz2
 
@@ -14,7 +14,7 @@ LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = glib-$(Version)
 
-GnuConfigureExtra += --disable-static
+GnuConfigureExtra += --disable-static --enable-shared
 
 define install_post_hook
 rm -rf $(InstallDir)/$(BinDir)
