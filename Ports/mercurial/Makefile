@@ -1,4 +1,4 @@
-BuildRequires += /usr/local/bin/msgfmt
+#BuildRequires += /usr/local/bin/msgfmt
 
 include ../../Library/Python.mk
 
