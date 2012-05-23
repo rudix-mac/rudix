@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Title=		Lua
 Name=		lua
 Version=	5.2.0
-Revision=	1
+Revision=	2
 URL=		http://www.lua.org/ftp/
 Source=		$(Name)-$(Version).tar.gz
 
@@ -19,5 +19,9 @@ install -m 644 $(SourceDir)/doc/* $(PortDir)/$(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define check_post_hook
-otool -L $(InstallDir)$(BinDir)/lua | grep libedit
+otool -L $(InstallDir)/$(BinDir)/lua | grep libedit
+endef
+
+define final_inner_hook
+$(BinDir)/lua -v
 endef
