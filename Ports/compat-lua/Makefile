@@ -1,7 +1,7 @@
 include ../../Library/Unix.mk
 
 Title=		Lua (Version 5.1)
-Name=		lua1
+Name=		compat-lua
 Version=	5.1.5
 Revision=	0
 URL=		http://www.lua.org/ftp/
@@ -22,5 +22,9 @@ install -m 644 $(SourceDir)/etc/lua.pc $(PortDir)/$(InstallDir)$(LibDir)/pkgconf
 endef
 
 define check_post_hook
-otool -L $(InstallDir)$(BinDir)/lua | grep libedit
+otool -L $(InstallDir)/$(BinDir)/lua | grep libedit
+endef
+
+define final_inner_hook
+$(BinDir)/lua -v
 endef
