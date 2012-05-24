@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2012-05-23 23:22:41.000000000 -0300
++++ Makefile.in	2012-05-23 23:22:54.000000000 -0300
+@@ -73,7 +73,7 @@
+ 
+ 
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(docdir)
+ pkgincludedir = $(includedir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@

@@ -11,3 +11,7 @@ ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	$(SourceDir)/include/gc.h
 
 GnuConfigureExtra += --enable-cplusplu
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
