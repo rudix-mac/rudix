@@ -96,6 +96,14 @@ def create_distribution(pkgs):
     print 'Creating distribution package', pkgname
     flatten(tmpdir, pkgname)
 
+def usage():
+    print 'Create a metapackage of main_package and packages into the current directory'
+    print 'Usage:', sys.argv[0], '<main_package> <packages...>'
+    print 'Example:\nmkdistribution.py /path/to/guile-1.8.8-0.pkg /path/to/gmp-5.0.5-0.pkg'
+    sys.exit(1)
+
 if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        usage()
     pkgs = sys.argv[1:]
     create_distribution(pkgs)
