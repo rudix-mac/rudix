@@ -1,5 +1,8 @@
+BuildRequires += $(BinDir)/pkg-config
 BuildRequires += $(LibDir)/libgmp.la # Prefer Version 5
 BuildRequires += $(LibDir)/libintl.la
+BuildRequires += $(LibDir)/libgc.la
+BuildRequires += $(LibDir)/libunistring.la
 
 include ../../Library/GNU.mk
 
