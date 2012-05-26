@@ -1,3 +1,6 @@
+BuildRequires += $(IncludeDir)/boost/graph/adjacency_list.hpp
+#BuildRequires += $(LibDir)/libgc.la
+
 include ../../Library/GNU.mk
 
 Title=		SDCC
@@ -11,3 +14,5 @@ UncompressedName = $(Name)
 
 ReadMeFile=	$(SourceDir)/doc/README.txt
 LicenseFile=	$(SourceDir)/COPYING
+
+GnuConfigureExtra += --disable-pic14-port --disable-pic16-port
