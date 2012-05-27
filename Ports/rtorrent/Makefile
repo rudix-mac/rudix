@@ -1,37 +1,20 @@
-# Ncurses BitTorrent client based on libTorrent
-# http://libtorrent.rakshasa.no/
-# GPL
+BuildRequires += $(LibDir)/libtorrent.la # static-libtorrent
+BuildRequires += $(LibDir)/libsigc-2.0.la # static-libsigcpp
 
-include ../../Library/Rules.mk
+include ../../Library/GNU.mk
 
-TITLE=		rTorrent $(VERSION)
-NAME=		rtorrent
-VERSION=	0.8.6
-REVISION=	0
+Title=		rTorrent
+Name=		rtorrent
+Version=	0.9.2
+Revision=	0
 URL=		http://libtorrent.rakshasa.no/downloads/
-SOURCE=		$(NAME)-$(VERSION).tar.gz
+Source=		$(Name)-$(Version).tar.gz
 
-DEPENDS=	/usr/local/lib/libtorrent.la
-DEPENDS+=	/usr/local/lib/libsigc-2.0.la
+EnvExtra += PKG_CONFIG_PATH="/usr/lib/pkgconfig"
 
-prep: retrieve
-	tar zxvf $(SOURCE)
-	touch prep
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/COPYING
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; env \
-		CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
-		PKG_CONFIG_PATH="/usr/lib/pkgconfig" \
-	$(configure) --disable-dependency-tracking ; $(make) 
-	touch build
-
-install: build
-	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{AUTHORS,COPYING,ChangeLog,NEWS,README,TODO} $(INSTALLDOCDIR)
-	strip $(INSTALLDIR)/usr/local/bin/*
-	touch install
-
-test: install
-	$(test-universal-binary) "$(INSTALLDIR)/usr/local/bin/*"
-	touch test
+define final_inner_hook
+$(BinDir)/rtorrent -h
+endef
