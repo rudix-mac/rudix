@@ -4,7 +4,7 @@ include ../../Library/Rudix.mk
 Title=		Jython
 Name=		jython
 Version=	2.7a2
-Release=	0
+Revision=	0
 URL=		http://sourceforge.net/projects/jython/files/jython-dev/2.7.0a2/
 Source=		jython_installer-$(Version).jar
 
