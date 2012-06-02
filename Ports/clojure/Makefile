@@ -25,4 +25,5 @@ chmod +x $(InstallDir)/$(BinDir)/clojure
 endef
 
 define final_inner_hook
+echo '(println "Hello World!")' | $(BinDir)/clojure
 endef
