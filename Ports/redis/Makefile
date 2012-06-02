@@ -1,10 +1,8 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/UnixFormula.mk
+include ../../Library/Unix.mk
 
 Title=		Redis
 Name=		redis
-Version=	2.4.7
+Version=	2.4.14
 Revision=	0
 URL=		http://redis.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
@@ -16,3 +14,8 @@ BuildDir=	$(SourceDir)/src
 
 MakeExtra += ARCH="$(LdFlags)" CCLINK="$(LdFlags)"
 MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)/$(Prefix)
+
+define final_inner_hook
+$(BinDir)/redis-cli -v
+$(BinDir)/redis-server --version
+endef
