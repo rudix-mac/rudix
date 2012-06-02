@@ -4,7 +4,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120520
+BuildSystem = 20120602
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -132,10 +132,10 @@ installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg final
+	rm -rf pkg *.pkg final *.pmdoc
 
 clean: installclean
-	rm -rf prep build test check $(SourceDir)
+	rm -rf prep build test check $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f config.cache*
@@ -155,8 +155,9 @@ wiki:
 upload: pkg final
 	@$(call info_color,Sending $(PkgFile))
 	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
+	@echo "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
 	hg tag -f $(DistName)-$(Version)-$(Revision)
-	#twitter -erudix4mac set "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
+
 
 # FIXME: Temporary hack to build static packages.
 static: buildclean installclean
