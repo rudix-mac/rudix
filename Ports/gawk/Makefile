@@ -17,6 +17,11 @@ LdFlags += -liconv -framework CoreFoundation
 endif
 
 define install_post_hook
+rm -f $(InstallDir)/$(BinDir)/*-$(Version)
 install -m 644 $(SourceDir)/{FUTURES,LIMITATIONS,POSIX.STD,PROBLEMS} \
 	$(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define final_inner_hook
+$(BinDir)/gawk --version
 endef
