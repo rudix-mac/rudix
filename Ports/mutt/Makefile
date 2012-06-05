@@ -32,6 +32,16 @@ mv $(InstallDir)/$(Prefix)/etc/mime.types \
 rm -rf $(InstallDir)/$(LibDir)
 endef
 
+ifeq ($(WITH_HCACHE),yes)
+define final_inner_hook
+$(BinDir)/mutt -v | grep HCACHE
+endef
+else
+define final_inner_hook
+$(BinDir)/mutt -v
+endef
+endif
+
 # WARNING: Put this on mutt.pmdoc
 # chown root:mail	$(BinDir)/mutt_dotlock
 # chmod g+s 		$(BinDir)/mutt_dotlock
