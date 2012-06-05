@@ -18,5 +18,6 @@ final
 *.tar.gz
 *.tar.bz2
 *.zip
+*.jar
 *.orig
 config.cache
