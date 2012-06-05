@@ -1,0 +1,11 @@
+--- dist/Makefile.in.orig	2012-06-04 23:02:23.000000000 -0300
++++ dist/Makefile.in	2012-06-04 23:02:34.000000000 -0300
+@@ -1076,7 +1076,7 @@
+ # Library and standard utilities install.
+ ##################################################
+ library_install: install_setup
+-library_install: install_include install_lib install_utilities install_docs
++library_install: install_include install_lib install_utilities
+ 
+ uninstall: uninstall_include uninstall_lib uninstall_utilities uninstall_docs
+ 
