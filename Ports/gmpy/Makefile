@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libgmp.la
+BuildRequires += $(LibDir)/libgmp.la # static-gmp
 
 include ../../Library/Python.mk
 
