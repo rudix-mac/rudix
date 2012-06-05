@@ -1,9 +1,6 @@
 #!/bin/sh
-
-[ ! -f /usr/local/etc/Muttrc ] && \
-  install -m 644 /usr/local/etc/Muttrc.default /usr/local/etc/Muttrc
-
-[ ! -f /usr/local/etc/mime.types ] && \
-  install -m 644 /usr/local/etc/mime.types.default /usr/local/etc/mime.types
-
+[ ! -f $3/usr/local/etc/Muttrc ] && \
+    install -m 644 $3/usr/local/etc/Muttrc.default $3/usr/local/etc/Muttrc
+[ ! -f $3/usr/local/etc/mime.types ] && \
+    install -m 644 $3/usr/local/etc/mime.types.default $3/usr/local/etc/mime.types
 exit 0
