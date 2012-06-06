@@ -1,32 +1,28 @@
-include ../../Library/Config.mk
-# Don't build universal, don't even set arch
-RUDIX_UNIVERSAL=
-include ../../Library/Rudix.mk
-# Don't set compile flags
-CFlags=
-CxxFlags=
-LdFlags=
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Title=		GNU MP
+Title=		GNU MP (Library)
 Name=		libgmp
-Version=	5.0.4
+Version=	5.0.5
 Revision=	0
-URL=		ftp://ftp.gmplib.org/pub/gmp-$(Version)/
+URL=		http://ftp.gnu.org/gnu/gmp/
 Source=		gmp-$(Version).tar.bz2
-
-UncompressedName = gmp-$(Version)
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-GnuConfigureExtra += --enable-fat
-GnuConfigureExtra += --disable-cxx
-GnuConfigureExtra += --disable-static
+UncompressedName = gmp-$(Version)
 
-define install_post_hook
-rm -rf $(InstallDir)/$(IncludeDir)
-rm -rf $(InstallDir)/$(InfoDir)
-rm -f $(InstallDir)/$(LibDir)/libgmp.la
+#GnuConfigureExtra += --enable-fat=yes
+GnuConfigureExtra += --disable-cxx --disable-static
+
+define build_inner_hook
+mkdir $(BuildDir)/build-i386
+cd $(BuildDir)/build-i386 ; ABI="32" CFLAGS="-arch i386 -Os" ../configure $(GnuConfigureExtra) ; $(make)
+cd $(BuildDir) ; ABI="64" CFLAGS="-arch x86_64 -Os" $(gnu_configure) ; $(make)
+cd $(BuildDir) ; for x in libgmp.10.dylib ; do \
+	lipo -create -arch i386 build-i386/.libs/$$x -arch x86_64 .libs/$$x -output .libs/$$x ; done
 endef
 
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+endif
