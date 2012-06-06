@@ -1,7 +1,0 @@
-Foreign function call libraries.
-
-Site: http://www.gnu.org/software/libffcall/
-License: GPL
-
-Changes from previous release:
-* Rebuild on Xcode 4.3
