@@ -29,4 +29,5 @@ $(install_base_documentatio)
 endef
 
 define test_inner_hook
+for x in $(BuildDir)/BIN/* ; do echo 'bye' | ./$$x ; done
 endef
