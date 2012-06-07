@@ -13,3 +13,7 @@ LicenseFile=	$(SourceDir)/COPYING
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
+
+define final_inner_hook
+$(BinDir)/xz --version
+endef
