@@ -13,6 +13,6 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define final_inner_hook
-$(BinDir)/fab
+$(BinDir)/fab --version
 $(Python) -c 'from fabric.api import run ; run("uptime")'
 endef
