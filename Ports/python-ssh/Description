@@ -1,7 +1,7 @@
 This is a library for making SSH2 connections (client or server).
 
-  * Site: http://pypi.python.org/pypi/ssh/1.7.13
+  * Site: http://pypi.python.org/pypi/ssh
   * License: LGPL
 
 Release Notes:
-  * Featuring in Rudix
+  * ssh 1.7.14
