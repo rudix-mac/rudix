@@ -211,6 +211,7 @@ case `file -b --mime-type $(Source)` in \
 	application/x-tar) tar xf $(Source) ;; \
 	application/x-gzip) tar zxf $(Source) ;; \
 	application/x-bzip2) tar jxf $(Source) ;; \
+	application/x-xz) tar zxf $(Source) ;; \
 	application/zip) tar zxf $(Source) ;; \
 	*) false ;; \
 esac
