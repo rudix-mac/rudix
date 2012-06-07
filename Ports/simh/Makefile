@@ -2,10 +2,10 @@ include ../../Library/Unix.mk
 
 Title=		SIMH
 Name=		simh
-Version=	3.9.0
-Revision=	0
+Version=	3.8.1
+Revision=	3
 URL=		http://simh.trailing-edge.com/sources/
-Source=		$(Name)v39-0.zip
+Source=		$(Name)v38-1.zip
 
 ReadMeFile=	$(SourceDir)/0readme_38.txt
 LicenseFile=	LICENSE.txt
