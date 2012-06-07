@@ -15,3 +15,7 @@ GnuConfigureExtra += --host=i386-freebsd
 MakeInstallExtra += -B
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
 MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/$(Prefix)/share/man
+
+define final_inner_hook
+$(SBinDir)/ssldump -version
+endef
