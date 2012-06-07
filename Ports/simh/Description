@@ -1,10 +1,7 @@
 SIMH is a highly portable, multi-system simulator.
 
-Site: http://simh.trailing-edge.com/
-License: MIT
+  * Site: http://simh.trailing-edge.com/
+  * License: MIT
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-/usr/local/bin/
+Release Notes:
+  * SIMH 3.9.0
