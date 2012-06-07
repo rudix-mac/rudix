@@ -4,5 +4,4 @@ Fabric is a Python library and command-line tool for streamlining the use of SSH
   * License: BSD
 
 Release notes:
-  * Upgraded to version 1.4.1
-  * Featuring in Rudix
+  * Fabric 1.4.2
