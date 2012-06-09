@@ -4,4 +4,5 @@ GLib provides the core application building blocks for libraries and application
   * License: GPL
 
 Release Notes:
-  * Upgraded to version 0.28.8
+  * GLib 2.33.2
+
