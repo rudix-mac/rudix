@@ -1,0 +1,11 @@
+--- po/Makefile.in.in.orig	2010-02-27 20:10:56.000000000 -0300
++++ po/Makefile.in.in	2010-02-27 20:11:32.000000000 -0300
+@@ -28,7 +28,7 @@
+ datarootdir = @datarootdir@
+ datadir = @datadir@
+ libdir = @libdir@
+-localedir = $(libdir)/locale
++localedir = $(datadir)/locale
+ gnulocaledir = $(datadir)/locale
+ gettextsrcdir = $(datadir)/glib-2.0/gettext/po
+ subdir = po

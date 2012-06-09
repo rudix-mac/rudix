@@ -1,0 +1,7 @@
+GLib provides the core application building blocks for libraries and applications written in C.
+
+  * Site: http://www.gtk.org/
+  * License: GPL
+
+Release Notes:
+  * Upgraded to version 0.28.8

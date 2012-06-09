@@ -1,0 +1,13 @@
+# http://old.nabble.com/Compiling-glib-2.20.5-on-SnowLeopard-td25230062.html
+--- glib/gconvert.c.orig	2010-02-21 13:16:42.000000000 -0300
++++ glib/gconvert.c	2010-02-21 13:18:00.000000000 -0300
+@@ -51,9 +51,6 @@
+ #if defined(USE_LIBICONV_GNU) && !defined (_LIBICONV_H)
+ #error GNU libiconv in use but included iconv.h not from libiconv
+ #endif
+-#if !defined(USE_LIBICONV_GNU) && defined (_LIBICONV_H)
+-#error GNU libiconv not in use but included iconv.h is from libiconv
+-#endif
+ 
+ #include "galias.h"
+ 

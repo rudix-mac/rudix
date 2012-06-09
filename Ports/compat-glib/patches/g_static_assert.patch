@@ -1,0 +1,33 @@
+--- ./glib/gvariant.c.orig	2012-03-09 21:45:29.000000000 -0300
++++ ./glib/gvariant.c	2012-03-09 21:46:24.000000000 -0300
+@@ -3906,8 +3906,8 @@
+ }
+ 
+ /* The code below assumes this */
+-G_STATIC_ASSERT (sizeof (gboolean) == sizeof (guint32));
+-G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
++//G_STATIC_ASSERT (sizeof (gboolean) == sizeof (guint32));
++//G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
+ 
+ static void
+ g_variant_valist_get_leaf (const gchar **str,
+--- ./gio/gdbusmessage.c.orig	2012-03-09 21:43:48.000000000 -0300
++++ ./gio/gdbusmessage.c	2012-03-09 21:44:48.000000000 -0300
+@@ -1186,7 +1186,7 @@
+         {
+           guint64 v;
+           gdouble *encoded;
+-          G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
++//        G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
+           v = g_data_input_stream_read_uint64 (dis, NULL, &local_error);
+           if (local_error != NULL)
+             goto fail;
+@@ -1941,7 +1941,7 @@
+         {
+           guint64 *encoded;
+           gdouble v = g_variant_get_double (value);
+-          G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
++//        G_STATIC_ASSERT (sizeof (gdouble) == sizeof (guint64));
+           encoded = (guint64 *) &v;
+           g_data_output_stream_put_uint64 (dos, *encoded, NULL, NULL);
+         }
