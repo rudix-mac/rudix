@@ -3,19 +3,20 @@
 '''Rudix Package Manager -- RPM ;D
 
 Usage:
-rudix [help|version|available|list|remove-all|verify-all|update|interactive]
+rudix [help|version|available|aliases|list|remove-all|verify-all|update|interactive]
       [info <package-id>|files <package-id>|install <package-id>|remove <package-id>|search <package-id>|owner <path>|verify <package-id>|fix <package-id>]
 
-rudix [-h|-v|-a|-l|-R|-K|-u|-z]
+rudix [-h|-v|-a|-A|-l|-R|-K|-u|-z]
       [-I <package-id>|-L <package-id>|-i <package-id>|-r <package-id>|-s <package-id>|-S <path>|-V <package-id>|-f <package-id>|-n <package-id>]
 
 List all installed packages (package-id) unless options are given, like:
   -h    This help message
   -v    Print version
   -a    List all packages available for installation (name-version-release)
+  -A    List all alternative aliases
   -l    List all installed packages (package-id, version and install date)
   -I    Print package information (package-id, version and install date)
-  -L    List package content
+  -L    List content of package (files)
   -i    Install package (download if not a file)
   -r    Remove package
   -R    Remove *all* Rudix packages installed (ask to confirm)
@@ -89,6 +90,7 @@ ALIASES = {
     'memcache': 'memcached',
     'pkgconfig': 'pkg-config',
     'rdiff': 'librsync', 'rdiffbackup': 'rdiff-backup',
+    'ssh': 'python-ssh',
     'svn': 'subversion',
     'supervisord': 'supervisor',
     'tofrodos': 'dos2unix',

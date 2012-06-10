@@ -3,18 +3,16 @@ include ../../Library/Rudix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.5
+Version=	12.6
 Revision=	0
 
 ReadMeFile=	README
 LicenseFile=	LICENSE
 
 define retrieve_inner_hook
-touch retrieve
 endef
 
 define prep_inner_hook
-touch prep
 endef
 
 define build_inner_hook
@@ -49,10 +47,10 @@ sudo ./rudix.py remove rudix
 endef
 
 define final_inner_hook
-/usr/local/bin/rudix
-sudo /usr/local/bin/rudix install wget
-/usr/local/bin/rudix available | wc -l
-/usr/local/bin/rudix search rudix
-/usr/local/bin/rudix update
-sudo /usr/local/bin/rudix remove wget
+$(BinDir)/rudix
+sudo $(BinDir)/rudix install wget
+$(BinDir)/rudix available | wc -l
+$(BinDir)/rudix search rudix
+$(BinDir)/rudix update
+sudo $(BinDir)/rudix remove wget
 endef

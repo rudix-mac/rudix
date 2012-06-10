@@ -4,4 +4,4 @@ Rudix Package Manager - RPM ;)
   * License: BSD
 
 Release Notes:
-  * Introducing aliases for packages (see option -A)
+  * Introducing alternative aliases for packages (see option -A)

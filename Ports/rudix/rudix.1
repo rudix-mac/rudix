@@ -1,7 +1,7 @@
 .\"
 .\" Copyright (c) 2005-2012 Ruda Moura
 .\"
-.Dd May 13, 2012
+.Dd June 10, 2012
 .Dt RUDIX 1
 .Os
 .Sh NAME
@@ -24,11 +24,11 @@ The
 .Nm
 utility is the package manager for Rudix therefore you can use it to install, remove, print information about packages and search files under the Rudix domain. It is possible to verify the integrity of installed packages and to fix (repair) packages.
 .Pp
-Every package has a unique identifier (package-id) and you may refer to Rudix packages by using its full package-id or with its short alias. For example, package Compiler Cache's package-id is org.rudix.pkg.ccache but you can use ccache as an alias.
+Every package has a unique identifier called \fIpackage-id\fP and you may refer to Rudix packages by using its full \fIpackage-id\fP or with its short alias. For example, package Compiler Cache's \fIpackage-id\fP is \fIorg.rudix.pkg.ccache\fP but you can use \fIccache\fP as alias.
 .Pp
 Without any arguments provided,
 .Nm
-prints a list of packages installed.
+prints the current list of packages installed.
 .Pp
 The options are as follows:
 .Bl -tag -width indent
@@ -39,11 +39,11 @@ Print version and copyright information.
 .It Fl a
 Print all packages available for installation (name-version-release).
 .It Fl A
-Print all aliases.
+Print all alternative aliases.
 .It Fl l
-Print a list of packages with package-id, version and install date.
+Print a list of packages with \fIpackage-id\fP, version and install date.
 .It Fl i Ar pkg-path
-Install package. If pkg-path is not a file then try to install the package from the Internet. This operation requires root privileges.
+Install package. If \fIpkg-path\fP is not a file then try to install the package from the Internet. This operation requires root privileges.
 .It Fl n Ar package-id
 Remote install package. This operation requires root privileges.
 .It Fl u
@@ -53,19 +53,19 @@ Remove package. This operation requires root privileges.
 .It Fl R
 Remove all installed packages. This operation requires root privileges.
 .It Fl I Ar package-id
-Print package-id version and install date.
+Print \fIpackage-id\fP version and install date.
 .It Fl L Ar package-id
-List package files.
+List content of package (files).
 .It Fl s Ar package-id
-List available versions for package-id.
+List available versions for \fIpackage-id\fP.
 .It Fl S Ar path
 Print all packages that contains path.
 .It Fl V Ar package-id
-Verify package-id.
+Verify \fIpackage-id\fP.
 .It Fl K
 Verify all installed packages.
 .It Fl f Ar package-id
-Fix (repair) package-id. This operation requires root privileges.
+Fix (repair) \fIpackage-id\fP. This operation requires root privileges.
 .It Fl z
 Enter interactive mode (type exit to quit).
 .El
@@ -77,4 +77,5 @@ The list of commands are: help, version, available, aliases, list, remove-all, v
 .Sh SEE ALSO
 .Xr pkgutil 1 ,
 .Xr installer 8 ,
+.Xr repair_packages 8 ,
 .Xr packagemaker 1
