@@ -1,13 +1,15 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Cscope
 Name=		cscope
-Version=	15.7a
-Revision=	4
+Version=	15.8
+Revision=	0
 URL=		http://downloads.sourceforge.net/cscope
 Source=		$(Name)-$(Version).tar.bz2
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
+
+define final_inner_hook
+$(BinDir) cscope -V
+endef
