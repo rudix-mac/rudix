@@ -2,8 +2,8 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.2.0
-Revision=	2
+Version=	5.2.1
+Revision=	0
 URL=		http://www.lua.org/ftp/
 Source=		$(Name)-$(Version).tar.gz
 
