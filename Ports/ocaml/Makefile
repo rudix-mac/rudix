@@ -12,14 +12,17 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 
+# * The Makefiles do not support parallel make (e.g. make -j2).
+# Fix: do not pass the -j option to make, and be patient.
 define build_inner_hook
-cd $(SourceDir) ; ./configure ; $(MAKE) world ; $(MAKE) opt
+cd $(SourceDir) ; ./configure ; $(MAKE) world.opt
 endef
 
 define install_inner_hook
+install -d $(InstallDir)/usr/local/bin
 cd $(SourceDir) ; $(MAKE) \
-		BINDIR=$(INSTALLDIR)/usr/local/bin \
-		LIBDIR=$(INSTALLDIR)/usr/local/lib/ocaml \
-		MANDIR=$(INSTALLDIR)/usr/local/share/man install
-cd $(SourceDir)/emacs ; make EMACSDIR=$(INSTALLDIR)/usr/local/share/emacs/site-lisp
+		BINDIR=$(PortDir)/$(InstallDir)/usr/local/bin \
+		LIBDIR=$(PortDir)/$(InstallDir)/usr/local/lib/ocaml \
+		MANDIR=$(PortDir)/$(InstallDir)/usr/local/share/man install
+cd $(SourceDir)/emacs ; make EMACSDIR=$(PortDir)/$(InstallDir)/usr/local/share/emacs/site-lisp
 endef
