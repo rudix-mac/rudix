@@ -1,38 +1,26 @@
-# ML language based on complete class-based objective system
-# http://caml.inria.fr/
-# LGPL
+include ../../Library/Config.mk
+include ../../Library/Rudix.mk
 
-include ../../Library/Rules.mk
-
-NAME=		ocaml
-VERSION=	3.12.0
-REVISION=	1
+Title=		OCaml
+Name=		ocaml
+Version=	3.12.1
+Revision=	0
 URL=		http://caml.inria.fr/pub/distrib/ocaml-3.12/
-SOURCE=		$(NAME)-$(VERSION).tar.bz2
+Source=		$(Name)-$(Version).tar.bz2
 
-README=		$(BUILDDIR)/README
-LICENSE=	$(BUILDDIR)/LICENSE
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENSE
 
-prep: retrieve
-	tar jxvf $(SOURCE)
-	touch prep
 
-build: prep $(DEPENDS)
-	cd $(BUILDDIR) ; ./configure ; \
-	$(make) world && $(make) bootstrap && $(make) opt && $(make) opt.opt
-	touch build
+define build_inner_hook
+cd $(SourceDir) ; ./configure ; \
+$(make) world && $(make) bootstrap && $(make) opt && $(make) opt.opt
+endef
 
-install: build
-	cd $(BUILDDIR) ; make \
+define install_inner_hook
+cd $(SourceDir) ; make \
 		BINDIR=$(INSTALLDIR)/usr/local/bin \
 		LIBDIR=$(INSTALLDIR)/usr/local/lib/ocaml \
 		MANDIR=$(INSTALLDIR)/usr/local/share/man install
-	cd $(BUILDDIR)/emacs ; make EMACSDIR=$(INSTALLDIR)/usr/local/share/emacs/site-lisp
-	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{Changes,LICENSE,README,VERSION} $(INSTALLDOCDIR)
-	#strip $(INSTALLDIR)/usr/local/bin/*
-	#strip -x $(INSTALLDIR)/usr/local/lib/ocaml/*.so
-	touch install
-
-test: install
-	cd $(BUILDDIR) ; touch test
+cd $(SourceDir)/emacs ; make EMACSDIR=$(INSTALLDIR)/usr/local/share/emacs/site-lisp
+endef
