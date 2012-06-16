@@ -13,12 +13,11 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 
 define build_inner_hook
-cd $(SourceDir) ; ./configure ; \
-$(make) world && $(make) bootstrap && $(make) opt && $(make) opt.opt
+cd $(SourceDir) ; ./configure ; $(MAKE) world ; $(MAKE) opt
 endef
 
 define install_inner_hook
-cd $(SourceDir) ; make \
+cd $(SourceDir) ; $(MAKE) \
 		BINDIR=$(INSTALLDIR)/usr/local/bin \
 		LIBDIR=$(INSTALLDIR)/usr/local/lib/ocaml \
 		MANDIR=$(INSTALLDIR)/usr/local/share/man install
