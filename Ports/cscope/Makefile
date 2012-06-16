@@ -11,5 +11,5 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
 define final_inner_hook
-$(BinDir) cscope -V
+$(BinDir)/cscope -V
 endef
