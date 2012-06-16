@@ -1,13 +1,8 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Site=		http://www.xiph.org/ogg/
-License=	BSD
-Description=	Libogg contains necessary functionality to create, decode, and work with Ogg bitstreams
-Title=		Libogg
+Title=		LibOgg
 Name=		libogg
-Version=	1.2.2
+Version=	1.3.0
 Revision=	0
 URL=		http://downloads.xiph.org/releases/ogg/
 Source=		$(Name)-$(Version).tar.gz
