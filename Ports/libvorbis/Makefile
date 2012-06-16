@@ -1,3 +1,5 @@
+BuildRequires += $(LibDir)/libogg.la # static-libogg
+
 include ../../Library/GNU.mk
 
 Title=		Libvorbis
