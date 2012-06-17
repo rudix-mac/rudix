@@ -4,5 +4,5 @@ mpop is a POP3 client: it retrieves mail from POP3 mailboxes.
   * License: GPL
 
 Release Notes:
-  * Upgraded to version 1.0.26
-
+  * Build with libidn
+  * Upgraded to version 1.0.27
