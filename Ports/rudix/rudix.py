@@ -88,6 +88,7 @@ ALIASES = {
     'gnumake': 'make',
     'hg': 'mercurial',
     'memcache': 'memcached',
+    'nodejs': 'node',
     'pkgconfig': 'pkg-config',
     'rdiff': 'librsync', 'rdiffbackup': 'rdiff-backup',
     'ssh': 'python-ssh',
