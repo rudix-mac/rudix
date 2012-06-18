@@ -1,7 +1,7 @@
 include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 
-Title=		Rudix Package Manager
+Title=		Rudix
 Name=		rudix
 Version=	12.6
 Revision=	0
