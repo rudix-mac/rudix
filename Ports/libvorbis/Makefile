@@ -11,3 +11,9 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
+
+ifdef ONLY_STATIC_LIBS
+GnuConfigureExtra += --enable-static --disable-shared
+else
+GnuConfigureExtra += --enable-static --enable-shared
+endif

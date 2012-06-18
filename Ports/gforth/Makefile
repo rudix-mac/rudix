@@ -1,4 +1,8 @@
-include ../../Library/GNU.mk
+include ../../Library/Config.mk
+RUDIX_UNIVERSAL=
+ArchFlags=-arch i386
+include ../../Library/Rudix.mk
+include ../../Library/GNUFormula.mk
 
 Title=		Gforh
 Name=		gforth
@@ -9,5 +13,3 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
-
-
