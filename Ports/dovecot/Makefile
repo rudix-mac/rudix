@@ -1,7 +1,7 @@
 include ../../Library/GNU.mk
 
 Title=		dovecot
-Name=		doveco
+Name=		dovecot
 Version=	2.1.7
 Revision=	0
 URL=		http://dovecot.org/releases/2.1/
