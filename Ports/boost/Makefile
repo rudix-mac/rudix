@@ -5,7 +5,7 @@ Title=		Boost C++ Libraries
 Name=		boost
 Version=	1.49.0
 AltVersion=	1_49_0
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/boost
 Source=		$(Name)_$(AltVersion).tar.bz2
 
