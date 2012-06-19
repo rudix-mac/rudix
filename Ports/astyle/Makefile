@@ -24,3 +24,7 @@ endef
 
 define test_inner_hook
 endef
+
+define final_inner_hook
+$(BinDir)/astyle  --version
+endef
