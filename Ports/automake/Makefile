@@ -14,3 +14,7 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
 EnvExtra += AUTOCONF=/usr/local/bin/autoconf
+
+define final_inner_hook
+$(BinDir)/automake --version
+endef
