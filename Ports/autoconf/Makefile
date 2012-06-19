@@ -5,7 +5,7 @@ Name=		autoconf
 Version=	2.69
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/autoconf/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
