@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		GNU Autoconf
 Name=		autoconf
-Version=	2.68
-Revision=	2
+Version=	2.69
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/autoconf/
 Source=		$(Name)-$(Version).tar.bz2
 
