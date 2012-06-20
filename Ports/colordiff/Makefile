@@ -26,5 +26,5 @@ mv $(InstallDir)/usr/local/etc/colordiffrc \
 endef
 
 define final_inner_hook
-$(BinDir)/colordiff --version
+$(BinDir)/colordiff -u $(BuildDir)/colordiff.pl $(BinDir)/colordiff || true
 endef
