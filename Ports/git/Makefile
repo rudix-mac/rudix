@@ -1,3 +1,5 @@
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+
 include ../../Library/GNU.mk
 
 Title=		Git
