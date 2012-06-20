@@ -1,10 +1,7 @@
 SCons is an Open Source software construction tool.
 
-Site: http://www.scons.org/
-License: BSD
+  * Site: http://www.scons.org/
+  * License: BSD
 
-Changes from previous release:
-* Upgraded to version 2.1.0
-
-Usage:
-$ /usr/local/bin/scons
+Release Notes:
+  * Upgraded to version 2.1.0
