@@ -1,10 +1,10 @@
-#BuildRequires += /usr/local/bin/msgfmt
+BuildRequires += $(BinDir)/msgfmt # gettext/libintl
 
 include ../../Library/Python.mk
 
 Title=		Mercurial
 Name=		mercurial
-Version=	2.2.1
+Version=	2.2.2
 Revision=	0
 URL=		http://www.selenic.com/mercurial/release/
 Source=		$(Name)-$(Version).tar.gz
