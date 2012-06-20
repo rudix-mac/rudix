@@ -11,5 +11,5 @@ ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define final_inner_hook
-$(Bindir)/scons --version
+$(BinDir)/scons --version
 endef
