@@ -1,7 +1,7 @@
 Protocol Buffers - Google's data interchange format.
 
-Site: http://code.google.com/p/protobuf/
-License: BSD
+  * Site: http://code.google.com/p/protobuf/
+  * License: BSD
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
+Release Notes:
+  * Rebuild on Xcode 4.3
