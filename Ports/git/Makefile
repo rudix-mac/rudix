@@ -1,11 +1,8 @@
-include ../../Library/Config.mk
-RUDIX_APPLY_RECOMMENDATIONS=no
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Git
 Name=		git
-Version=	1.7.9.3
+Version=	1.7.11
 Revision=	0
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
@@ -18,10 +15,7 @@ $(fetch) $(URL)/git-manpages-$(Version).tar.gz
 endef
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-define prep_post_hook
-#perl -p -i -e s/'intl '//g $(SourceDir)/configure
-endef
+LdFlags += -framework CoreFoundation -liconv
 endif
 
 define install_post_hook
@@ -45,4 +39,10 @@ rm -rf $(InstallDir)$(LibDir)
 install -d $(InstallDir)$(Prefix)/share/man
 tar jxf $(PortDir)/git-manpages-$(Version).tar.gz \
 	-C $(InstallDir)$(Prefix)/share/man
+endef
+
+define final_inner_hook
+$(BinDir)/git --version
+perl -e 'use Git'
+python -c 'import git_remote_helpers'
 endef
