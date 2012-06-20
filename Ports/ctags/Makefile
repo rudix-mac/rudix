@@ -1,11 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Exuberant Ctags
 Name=		ctags
 Version=	5.8
-Revision=	4
+Revision=	5
 URL=		http://downloads.sourceforge.net/ctags
 Source=		$(Name)-$(Version).tar.gz
 
@@ -18,4 +16,8 @@ MakeInstallExtra += mandir=$(PortDir)/$(InstallDir)/$(ManDir)
 
 define install_post_hook
 install	-m 644 $(SourceDir)/{FAQ,*.html} $(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define final_inner_hook
+$(BinDir)/ctags --version
 endef
