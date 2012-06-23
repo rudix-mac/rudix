@@ -3,7 +3,7 @@ include ../../Library/Python.mk
 Title=		meld3
 Name=		meld3
 Version=	0.6.8
-Revision=	0
+Revision=	1
 URL=		http://pypi.python.org/packages/source/m/meld3/
 Source=		$(Name)-$(Version).tar.gz
 
