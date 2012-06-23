@@ -1,11 +1,9 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/PythonFormula.mk
+include ../../Library/Python.mk
 
 Title=		lxml
 Name=		lxml
 Version=	2.3.3
-Revision=	0
+Revision=	1
 URL=		http://pypi.python.org/packages/source/l/lxml/
 Source=		$(Name)-$(Version).tar.gz
 
