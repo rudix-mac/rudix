@@ -9,3 +9,7 @@ Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSES.txt
+
+define final_inner_hook
+$(Python) -c 'import lxml'
+endef
