@@ -4,4 +4,5 @@ Mercurial Keyring is a Mercurial extension used to securely save authentication 
   * License: GPL
 
 Release Notes:
+  * Upgraded to version 0.5.1
   * Featuring in Rudix
