@@ -1,7 +1,7 @@
-	Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver.
+Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver.
 
   * Site: http://www.lighttpd.net
   * License: BSD
 
 Release Notes:
-  * Upgraded to version 1.4.30
+  * Upgraded to version 1.4.31

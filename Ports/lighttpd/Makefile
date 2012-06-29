@@ -1,10 +1,10 @@
-BuildRequires += $(BinDir)/pcre-config
+BuildRequires += $(BinDir)/pcre-config # static-pcre
 
 include ../../Library/GNU.mk
 
 Title=		Lighttpd
 Name=		lighttpd
-Version=	1.4.30
+Version=	1.4.31
 Revision=	0
 URL=		http://download.lighttpd.net/lighttpd/releases-1.4.x/
 Source=		$(Name)-$(Version).tar.bz2
