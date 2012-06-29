@@ -22,5 +22,5 @@ install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define final_inner_hook
-$(BinDir)/mtr --version
+sudo $(SBinDir)/mtr --version
 endef
