@@ -1,7 +1,7 @@
 NcFTP is a set of FREE application programs implementing the File Transfer Protocol (FTP).
 
-Site: http://www.ncftp.com/
-License: The Clarified Artistic License
+  * Site: http://www.ncftp.com/
+  * License: The Clarified Artistic License
 
 Release Notes:
-* Rebuild on Xcode 4.3
+  * Rebuild on Xcode 4.3
