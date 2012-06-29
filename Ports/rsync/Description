@@ -1,10 +1,7 @@
 rsync is an open source utility that provides fast incremental file transfer.
 
-Site: http://samba.org/rsync/
-License: GPL
+  * Site: http://samba.org/rsync/
+  * License: GPL
 
-Changes from previous release:
-* Rebuild on Xcode 4.3
-
-Usage:
-$ /usr/local/bin/rsync3
+Release Notes:
+  * Rebuild on Xcode 4.3
