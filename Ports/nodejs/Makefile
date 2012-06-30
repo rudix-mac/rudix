@@ -5,9 +5,9 @@ include ../../Library/ConfigureFormula.mk
 
 Title=		NodeJS
 Name=		node
-Version=	0.6.19
+Version=	0.8.1
 Revision=	0
-URL=		http://my.package.com/
+URL=		http://nodejs.org/dist/v$(Version)
 Source=		$(Name)-v$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README.md
