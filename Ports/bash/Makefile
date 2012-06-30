@@ -1,16 +1,18 @@
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+
 include ../../Library/GNU.mk
 
 Title=		GNU Bash
 Name=		bash
 Version=	4.2
-Revision=	3
+Revision=	4
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-GnuConfigureExtra += --with-included-gettext
+#GnuConfigureExtra += --with-included-gettext
 
 define install_post_hook
 cd $(InstallDir)$(BinDir) ; ln -sf bash bash4
@@ -20,5 +22,5 @@ chmod 755 $(InstallDir)$(BinDir)/bashbug
 endef
 
 define final_inner_hook
-/usr/local/bin/bash --version
+$(BinDir)/bash --version
 endef
