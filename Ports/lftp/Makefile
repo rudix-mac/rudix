@@ -1,14 +1,11 @@
-BuildRequires += $(LibDir)/libintl.la
-BuildRequires += $(LibDir)/libreadline.a
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libreadline.la # static-readline
 
-include ../../Library/Config.mk
-RUDIX_STRIP_PACKAGE=no
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		LFTP
 Name=		lftp
-Version=	4.3.5
+Version=	4.3.7
 Revision=	0
 URL=		http://ftp.yars.free.net/pub/source/lftp
 Source=		$(Name)-$(Version).tar.bz2
@@ -20,15 +17,14 @@ GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libreadline.a
-define prep_post_hook
-perl -p -i -e s/'-lreadline'//g $(SourceDir)/configure
-endef
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-#perl -p -i -e s/'intl '//g $(SourceDir)/configure
+LdFlags += -liconv -framework CoreFoundation
 endif
 
 define install_post_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf $(InstallDir)/$(Prefix)/etc/lftp.conf.default
+endef
+
+define final_inner_hook
+$(BinDir)/lftp --version
 endef
