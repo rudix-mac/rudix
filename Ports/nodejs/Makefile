@@ -16,3 +16,8 @@ LicenseFile=	$(SourceDir)/LICENSE
 UncompressedName = $(Name)-v$(Version)
 
 EnvExtra += OPENSSL_CFLAGS=-I/usr/include OPENSSL_LIBS=-lcrypto
+
+define final_inner_hook
+$(BinDir)/node --version
+$(BinDir)/npm --version
+endef
