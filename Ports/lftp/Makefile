@@ -1,5 +1,5 @@
 BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libreadline.la # static-readline
+BuildRequires += $(LibDir)/libreadline.a # static-readline
 
 include ../../Library/GNU.mk
 
