@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		GNU Readline
 Name=		readline
 Version=	6.2
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/readline/
 Source=		$(Name)-$(Version).tar.gz
 

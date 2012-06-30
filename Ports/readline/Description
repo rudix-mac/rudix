@@ -4,5 +4,5 @@ GNU Readline library.
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
-  * Applied patch readline62-002 from http://ftp.gnu.org/gnu/readline/readline-6.2-patches/
+  * Rebuild on Xcode 4.3 (Xcode 4.2 on Snow Leopard)
+  * Applied patches readline62-001 to readline62-002 from http://ftp.gnu.org/gnu/readline/readline-6.2-patches/
