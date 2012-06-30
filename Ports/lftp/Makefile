@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libintl.la # gettext
 BuildRequires += $(LibDir)/libreadline.a # static-readline
 
 include ../../Library/GNU.mk
@@ -16,9 +16,9 @@ LicenseFile=	$(SourceDir)/COPYING
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -liconv -framework CoreFoundation
-endif
+#ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
+#LdFlags += -framework CoreFoundation -liconv
+#endif
 
 define install_post_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
