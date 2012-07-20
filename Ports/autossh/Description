@@ -1,0 +1,7 @@
+autossh is a program to start a copy of ssh and monitor it, restarting it as necessary should it die or stop passing traffic. The idea is from rstunnel (Reliable SSH Tunnel), but implemented in C.
+
+  * Site: http://www.harding.motd.ca/autossh/
+  * License: Unknown (Freeware)
+
+Release Notes:
+  * autossh 1.4c

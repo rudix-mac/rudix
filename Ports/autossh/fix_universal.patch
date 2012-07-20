@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2012-07-20 11:23:43.000000000 -0300
++++ Makefile.in	2012-07-20 11:23:54.000000000 -0300
+@@ -31,7 +31,7 @@
+ 
+ 
+ $(TARGET):	$(OFILES)
+-		$(CC) $(CPPFLAGS) -o $(TARGET) $(OFILES) $(LIBS)
++		$(CC) $(CFLAGS) -o $(TARGET) $(OFILES) $(LIBS)
+ 
+ clean:
+ 		- /bin/rm -f *.o *.a *.core *~
