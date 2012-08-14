@@ -1,0 +1,4 @@
+#!/bin/sh
+install -m 644 $3/usr/local/etc/irssi.conf.default \
+	$3/usr/local/etc/irssi.conf
+exit 0
