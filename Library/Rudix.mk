@@ -4,7 +4,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120819
+BuildSystem = 20120602
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
