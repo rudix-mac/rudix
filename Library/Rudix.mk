@@ -4,7 +4,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120602
+BuildSystem = 20120819
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -162,8 +162,7 @@ upload: pkg final
 # FIXME: Temporary hack to build static packages.
 static: buildclean installclean
 	make pkg \
-		ONLY_STATIC_LIBS=1 \
-		RUDIX_APPLY_RECOMMENDATIONS=no \
+		RUDIX_BUILD_STATIC_LIBS=yes \
 		DistName=static-$(Name)
 	@touch $@
 
@@ -252,13 +251,11 @@ $(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	--out $(PortDir)/$(PkgFile)
 endef
 
-ifeq ($(RUDIX_APPLY_RECOMMENDATIONS),yes)
 define apply_recommendations
 rm -f $(Name).pmdoc/*-contents.xml
 open $(Name).pmdoc
 ../../Library/apply_recommendations.sh $(Name).pmdoc
 endef
-endif
 
 define sanitize_pmdoc
 for x in $(Name).pmdoc/*-contents.xml ; do \

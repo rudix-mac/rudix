@@ -14,10 +14,6 @@ GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-csharp
 GnuConfigureExtra += --with-included-glib
 
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
-
 define install_post_hook
 rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
