@@ -206,6 +206,13 @@ define fetch
 curl -f -O -C - -L
 endef
 
+define verify_checksum
+if test "$(Checksum)" != "" ; then \
+	echo "$(Checksum)  $(Source)" > checksum ; \
+	shasum --warn --check checksum ; \
+fi
+endef
+
 define explode
 case `file -b --mime-type $(Source)` in \
 	application/x-tar) tar xf $(Source) ;; \
@@ -349,6 +356,7 @@ $(fetch) $(URL)/$(Source)
 endef
 
 define prep_inner_hook
+$(verify_checksum)
 $(explode)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
