@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libintl.la
-BuildRequires += $(LibDir)/libidn.la
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libidn.la # static-libidn
 
 include ../../Library/GNU.mk
 
@@ -24,6 +24,7 @@ define final_inner_hook
 $(BinDir)/wget --version
 endef
 
+# Due static-gettext
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
