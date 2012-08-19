@@ -156,7 +156,7 @@ upload: pkg final
 	@$(call info_color,Sending $(PkgFile))
 	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	@echo "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
-	hg tag -f $(DistName)-$(Version)-$(Revision)
+	@echo git tag $(DistName)-$(Version)-$(Revision)
 
 
 # FIXME: Temporary hack to build static packages.
