@@ -1,0 +1,7 @@
+Ninja is a small build system with a focus on speed.
+
+  * Site: http://martine.github.com/ninja/
+  * License: Apache License
+
+Release Notes:
+  * Ported to Rudix
