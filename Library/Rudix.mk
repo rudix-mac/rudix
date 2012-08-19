@@ -135,7 +135,7 @@ pkgclean:
 	rm -rf pkg *.pkg final *.pmdoc
 
 clean: installclean
-	rm -rf prep build test check $(SourceDir) *~
+	rm -rf checksum prep build test check $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f config.cache*
