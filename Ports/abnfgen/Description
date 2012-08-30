@@ -1,0 +1,7 @@
+Given an Augmented Backus-Naur form (ABNF) grammar (Wikipedia, RFC 4234), abnfgen quickly generates lots of random documents that match that grammar.
+
+  * Site: http://www.quut.com/abnfgen/
+  * License: while copyrighted, free for any use
+
+Release Notes:
+  * Ported to rudix
