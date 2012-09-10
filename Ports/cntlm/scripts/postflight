@@ -1,0 +1,4 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/cntlm ] && \
+  install -m 600 $3/usr/local/etc/cntlm.default $3/usr/local/etc/cntlm
+exit 0

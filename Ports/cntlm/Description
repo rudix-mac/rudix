@@ -1,0 +1,8 @@
+Cntlm is an NTLM / NTLM Session Response / NTLMv2 authenticating HTTP proxy.
+
+  * Site: http://cntlm.sourceforge.net
+  * License: GPL
+
+Release Notes:
+  * Ported to Rudix
+
