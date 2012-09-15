@@ -1,8 +1,4 @@
-include ../../Library/Config.mk
-# Don't set arch
-RUDIX_UNIVERSAL=
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
