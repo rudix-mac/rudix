@@ -16,6 +16,6 @@ install -d $(InstallDir)/$(SysConfDir)
 install -m 664 $(SourceDir)/monitrc $(InstallDir)/$(SysConfDir)/monitrc.default
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/monit -h
 endef

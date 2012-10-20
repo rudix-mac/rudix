@@ -20,7 +20,7 @@ ConfigureExtra += --enable-gpl
 ConfigureExtra += --enable-libmp3lame
 ConfigureExtra += --enable-shared
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/ffmpeg -version
 endef
 

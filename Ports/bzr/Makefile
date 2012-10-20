@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING.txt
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/bzr --version
 endef

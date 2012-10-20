@@ -1,10 +1,11 @@
+#
 # Rudix.mk - The BuildSystem itself
 #
 # Copyright (c) 2005-2012 Rudá Moura
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20120819
+BuildSystem = 20121020
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -54,7 +55,7 @@ InfoDir = $(DataDir)/info
 #
 # Framework
 #
-all: test install check
+all: pkg
 
 # Retrieve source
 retrieve:
@@ -92,26 +93,8 @@ install: build
 	@$(call info_color,Done)
 	@touch $@
 
-# Run the tests from the sources
-test: build
-	@$(call info_color,Testing)
-	@$(call test_pre_hook)
-	@$(call test_inner_hook)
-	@$(call test_post_hook)
-	@$(call info_color,Done)
-	@touch $@
-
-# Sanity check-up (post-install tests)
-check: install
-	@$(call info_color,Checking)
-	@$(call check_pre_hook)
-	@$(call check_inner_hook)
-	@$(call check_post_hook)
-	@$(call info_color,Done)
-	@touch $@
-
 # Create package
-pkg: test install check
+pkg: install
 	@$(call info_color,Packing)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
@@ -119,12 +102,12 @@ pkg: test install check
 	@$(call info_color,Done)
 	@touch $@
 
-# Final test (pkg check-up)
-final: pkg
-	@$(call info_color,Finally)
-	@$(call final_pre_hook)
-	@$(call final_inner_hook)
-	@$(call final_post_hook)
+# Run all tests
+test: pkg
+	@$(call info_color,Testing)
+	@$(call test_pre_hook)
+	@$(call test_inner_hook)
+	@$(call test_post_hook)
 	@$(call info_color,Done)
 	@touch $@
 
@@ -132,10 +115,10 @@ installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg final *.pmdoc
+	rm -rf pkg *.pkg *.pmdoc
 
 clean: installclean
-	rm -rf checksum prep build test check $(SourceDir) *~
+	rm -rf checksum prep build test $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f config.cache*
@@ -150,9 +133,8 @@ pmdoc:
 wiki:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkwikipage.py
-	@mv -vf *.wiki ../../Wiki/
 
-upload: pkg final
+upload: pkg test
 	@$(call info_color,Sending $(PkgFile))
 	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 	@echo "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
@@ -172,10 +154,8 @@ help:
 	@echo "  prep - After Prepare source to compile"
 	@echo "  build - Build source"
 	@echo "  install - Install into a temporary directory"
-	@echo "  test - Run tests from the sources"
-	@echo "  check - Sanity check-up (post-install tests)"
 	@echo "  pkg - Create package"
-	@echo "  final - Check package"
+	@echo "  test - Run all tests"
 	@echo "Clean-up rules:"
 	@echo "  clean - Clean up until retrieve"
 	@echo "  distclean - After clean, remove config.cache and package"
@@ -368,18 +348,16 @@ $(check_pmdoc)
 $(create_pkg)
 endef
 
-define check_inner_hook
+define test_pre_hook
+$(test_build)
 $(test_universal)
 $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
-endef
-
-define final_pre_hook
 sudo ../../Ports/rudix/rudix.py remove $(DistName)
 sudo ../../Ports/rudix/rudix.py install $(PkgFile)
 endef
 
-define final_post_hook
+define test_post_hook
 sudo ../../Ports/rudix/rudix.py remove $(DistName)
 endef

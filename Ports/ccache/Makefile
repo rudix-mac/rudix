@@ -18,6 +18,6 @@ for x in c++ cc g++ gcc ; do \
 install -m 644 $(BuildDir)/{*.txt,*.html} $(InstallDir)/$(DocDir)/ccache
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/ccache --version
 endef

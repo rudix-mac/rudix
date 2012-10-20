@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).tar.bz2
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/cscope -V
 endef

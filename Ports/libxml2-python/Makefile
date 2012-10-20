@@ -10,7 +10,7 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define final_inner_hook
+define test_inner_hook
 $(Python) -c 'import libxml2'
 $(Python) -c 'import libxslt'
 endef

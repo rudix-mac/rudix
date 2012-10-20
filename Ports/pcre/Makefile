@@ -16,7 +16,7 @@ define test_post_hook
 cd $(SourceDir) ; ./RunTest
 endef
 
-define final_inner_hook
+define test_inner_hook
 /usr/local/bin/pcre-config --version
 /usr/local/bin/pcregrep Version Makefile
 endef

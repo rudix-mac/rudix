@@ -18,6 +18,6 @@ define install_post_hook
 mv $(InstallDir)/usr/libexec $(InstallDir)/$(Prefix)/libexec
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/svn --version
 endef

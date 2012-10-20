@@ -20,6 +20,6 @@ else
 GnuConfigureExtra += --enable-static --enable-shared
 endif
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/neon-config --version
 endef

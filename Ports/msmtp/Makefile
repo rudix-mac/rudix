@@ -25,6 +25,6 @@ define install_post_hook
 install -m 644 $(SourceDir)/doc/msmtp* $(InstallDir)/$(DocDir)/$(Name)  
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/msmtp --version
 endef

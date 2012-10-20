@@ -19,6 +19,6 @@ install -m 644 $(SourceDir)/doc/*.txt $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(SourceDir)/doc/html/* $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/ncftp --version
 endef

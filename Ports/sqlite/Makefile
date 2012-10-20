@@ -17,6 +17,6 @@ ifdef ONLY_STATIC_LIBS
 GnuConfigureExtra += --enable-static --disable-shared
 endif
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/sqlite3 -version
 endef

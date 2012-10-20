@@ -37,7 +37,7 @@ define test_inner_hook
 cd $(BuildDir) ; $(make) test
 endef
 
-define final_inner_hook
+define test_inner_hook
 /usr/local/bin/7z
 /usr/local/bin/7za
 /usr/local/bin/7zr

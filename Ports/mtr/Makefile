@@ -21,6 +21,6 @@ define install_post_hook
 install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define final_inner_hook
+define test_inner_hook
 sudo $(SBinDir)/mtr --version
 endef

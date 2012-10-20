@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/docs/index.txt
 LicenseFile=	$(SourceDir)/license.txt
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/pip --version
 endef

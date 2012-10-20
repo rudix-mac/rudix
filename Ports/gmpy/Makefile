@@ -15,6 +15,6 @@ LicenseFile=	$(SourceDir)/lgpl-2.1.txt
 define test_inner_hook
 endef
 
-define final_inner_hook
+define test_inner_hook
 cd $(SourceDir) ; $(Python) test/gmpy_test.py
 endef

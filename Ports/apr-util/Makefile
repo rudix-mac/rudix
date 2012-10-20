@@ -14,6 +14,6 @@ LicenseFile=	$(BuildDir)/LICENSE
 
 GnuConfigureExtra += --with-apr=$(BinDir)/apr-1-config
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/apu-1-config --version
 endef

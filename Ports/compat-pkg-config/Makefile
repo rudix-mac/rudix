@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = pkg-config-$(Version)
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/pkg-config --version
 endef

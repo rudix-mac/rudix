@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/COPYING
 
 EnvExtra += MACOSX_DEPLOYMENT_TARGET=10.3
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/pprof --version
 endef

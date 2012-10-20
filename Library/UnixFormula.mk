@@ -15,7 +15,7 @@ cd $(BuildDir) ; $(make) \
 $(install_base_documentation)
 endef
 
-define test_inner_hook
+define test_build
 cd $(BuildDir) ; $(make) test
 endef
 

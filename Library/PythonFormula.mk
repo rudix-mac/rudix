@@ -38,9 +38,8 @@ $(Python) -m compileall -d / $(PortDir)/$(InstallDir)
 $(install_base_documentation)
 endef
 
-define test_inner_hook
-cd $(BuildDir) ; \
-$(Python) setup.py test || $(call error_color,One or more tests failed)
+define test_build
+cd $(BuildDir) ; $(Python) setup.py test || $(call error_color,One or more tests failed)
 endef
 
 buildclean:

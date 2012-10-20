@@ -46,7 +46,7 @@ define final_post_hook
 sudo ./rudix.py remove rudix
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/rudix
 sudo $(BinDir)/rudix install wget
 $(BinDir)/rudix available | wc -l

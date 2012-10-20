@@ -16,6 +16,6 @@ MakeInstallExtra += -B
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
 MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/$(Prefix)/share/man
 
-define final_inner_hook
+define test_inner_hook
 $(SBinDir)/ssldump -version
 endef

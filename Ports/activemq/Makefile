@@ -40,7 +40,7 @@ rm -rf $(InstallDir)/$(LibDir)/activemq/example
 rm -rf $(InstallDir)/$(LibDir)/activemq/data/*
 endef
 
-define final_inner_hook
+define test_inner_hook
 sudo /usr/local/bin/activemq start
 sleep 10
 sudo /usr/local/bin/activemq status

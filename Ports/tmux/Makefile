@@ -14,6 +14,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/NOTES
 LicenseFile=	LICENSE
 
-define final_inner_hook
-$(BinDir)/tmux -c true
+define test_inner_hook
+$(BinDir)/tmux -V
 endef

@@ -21,6 +21,6 @@ cd $(InstallDir)/$(BinDir) ; ln -sf ctags exuberant-ctags ; ln -sf etags exubera
 cd $(InstallDir)/$(ManDir)/man1 ; ln -sf ctags.1 exuberant-ctags.1 ; ln -sf etags.1 exuberant-etags.1
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/ctags --version
 endef

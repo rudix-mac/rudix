@@ -18,8 +18,5 @@ endef
 
 define test_inner_hook
 cd $(SourceDir)/test ; ./run.py
-endef
-
-define final_inner_hook
-/usr/local/bin/txt2tags -h
+$(BinDir)/txt2tags -h
 endef

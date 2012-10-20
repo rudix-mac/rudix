@@ -21,6 +21,6 @@ install -m 644 $(SourceDir)/{COMPAT,POSIX,RBASH,Y2K} $(InstallDir)/$(DocDir)/$(N
 chmod 755 $(InstallDir)$(BinDir)/bashbug
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/bash --version
 endef

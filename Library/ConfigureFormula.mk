@@ -39,7 +39,7 @@ $(install_base_documentation)
 $(install_extra_documentation)
 endef
 
-define test_inner_hook
+define test_build
 cd $(BuildDir) ; $(make) test check || $(call error_color,One or more tests failed)
 endef
 

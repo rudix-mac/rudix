@@ -19,7 +19,3 @@ LicenseFile=	$(BuildDir)/docs/COPYING
 define install_post_hook
 rm -rf $(InstallDir)/etc
 endef
-
-define test_inner_hook
-$(if $(RUDIX_UNIVERSAL),$(call test_universal))
-endef

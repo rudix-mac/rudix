@@ -16,6 +16,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/pkg-config --version
 endef

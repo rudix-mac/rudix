@@ -45,7 +45,7 @@ tar jxf $(PortDir)/git-manpages-$(Version).tar.gz \
 rm -rf $(InstallDir)/Applications/
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/git --version
 perl -e 'use Git'
 python -c 'import git_remote_helpers'

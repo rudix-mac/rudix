@@ -23,6 +23,6 @@ define install_post_hook
 rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/gettext -h
 endef

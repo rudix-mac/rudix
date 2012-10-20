@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).zip
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define final_inner_hook
+define test_inner_hook
 $(Python) -c 'import keyring'
 endef
