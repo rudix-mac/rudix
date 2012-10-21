@@ -4,4 +4,4 @@ tmux is a terminal multiplexer: it enables a number of terminals (or windows) to
   * License: BSD
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+  * Upgraded to version 1.7

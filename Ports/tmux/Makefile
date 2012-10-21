@@ -6,7 +6,7 @@ GnuConfigureExtra=
 
 Title=		tmux
 Name=		tmux
-Version=	1.6
+Version=	1.7
 Revision=	0
 URL=		http://downloads.sourceforge.net/tmux
 Source=		$(Name)-$(Version).tar.gz
