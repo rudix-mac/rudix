@@ -1,0 +1,4 @@
+#!/bin/sh
+install -m 644 /etc/powerdns/recursor.conf-dist \
+	/etc/powerdns/recursor.conf
+exit 0
