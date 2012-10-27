@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20121020
+BuildSystem = 20121026
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -354,10 +354,13 @@ $(test_universal)
 $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
-sudo ../../Ports/rudix/rudix.py remove $(DistName)
-sudo ../../Ports/rudix/rudix.py install $(PkgFile)
+@$(call info_color,Uninstalling previous package)
+sudo ../../Library/poof.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
+@$(call info_color,Installing the new package)
+sudo installer -pkg $(PkgFile) -target /
 endef
 
 define test_post_hook
-sudo ../../Ports/rudix/rudix.py remove $(DistName)
+@$(call info_color,Uninstalling package)
+sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
 endef
