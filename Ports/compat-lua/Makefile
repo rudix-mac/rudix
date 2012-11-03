@@ -25,6 +25,6 @@ define check_post_hook
 otool -L $(InstallDir)/$(BinDir)/lua | grep libedit
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/lua -v
 endef

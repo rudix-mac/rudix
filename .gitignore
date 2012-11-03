@@ -1,6 +1,6 @@
-syntax: glob
 .DS_Store
 retrieve
+checksum
 prep
 build
 install
@@ -9,7 +9,9 @@ test
 check
 pkg
 final
+static
 *~
+\#*\#
 *.pmdoc
 *.pkg
 *-install

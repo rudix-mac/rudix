@@ -26,6 +26,6 @@ mv $(InstallDir)/$(SysConfDir)/irssi.conf \
 	$(InstallDir)/$(SysConfDir)/irssi.conf.default
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/irssi --version
 endef

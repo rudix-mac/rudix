@@ -4,4 +4,5 @@ Multilanguage implementation of ctags.
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+  * Fixed (null) errors
+  * Restored symlinks to exuberant-ctags and exuberant-etags

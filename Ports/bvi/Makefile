@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).src.tar.gz
 ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/COPYING
 
-define final_inner_hook
+define test_inner_hook
 /usr/local/bin/bvi -c q
 endef

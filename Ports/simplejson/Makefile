@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define final_inner_hook
+define test_inner_hook
 $(Python) -c 'import simplejson'
 endef

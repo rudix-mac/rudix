@@ -15,7 +15,7 @@ BuildDir=	$(SourceDir)/src
 MakeExtra += ARCH="$(LdFlags)" CCLINK="$(LdFlags)"
 MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)/$(Prefix)
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/redis-cli -v
 $(BinDir)/redis-server --version
 endef

@@ -1,12 +1,8 @@
-include ../../Library/Config.mk
-# Don't set arch
-RUDIX_UNIVERSAL=
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	R15B01
+Version=	R15B02
 Revision=	0
 URL=		http://www.erlang.org/download/
 Source=		otp_src_$(Version).tar.gz
@@ -30,6 +26,10 @@ tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \
 tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C \
 	$(InstallDir)/$(LibDir)/erlang
 install -d $(InstallDir)/$(DocDir)/$(Name)
+endef
+
+define test_inner_hook
+$(BinDir)/erl -version
 endef
 
 realdistclean: distclean

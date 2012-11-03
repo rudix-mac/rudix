@@ -16,6 +16,6 @@ define install_post_hook
 install -m 644 $(SourceDir)/docs/*.txt $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/nmap localhost
 endef

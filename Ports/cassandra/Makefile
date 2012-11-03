@@ -28,7 +28,7 @@ rm -rf $(InstallDir)/$(LibDir)/cassandra/example
 rm -rf $(InstallDir)/$(LibDir)/cassandra/data/*
 endef
 
-define final_inner_hook
+define test_inner_hook
 sudo /usr/local/bin/cassandra start
 sleep 10
 sudo /usr/local/bin/cassandra status

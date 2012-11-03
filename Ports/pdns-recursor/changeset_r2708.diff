@@ -1,0 +1,20 @@
+Index: /trunk/pdns/pdns/cachecleaner.hh
+===================================================================
+--- /trunk/pdns/pdns/cachecleaner.hh	(revision 2328)
++++ /trunk/pdns/pdns/cachecleaner.hh	(revision 2708)
+@@ -19,5 +19,5 @@
+ 
+   typedef typename T::template nth_index<1>::type sequence_t;
+-  sequence_t& sidx=collection.get<1>();
++  sequence_t& sidx=collection.template get<1>();
+ 
+   unsigned int tried=0, lookAt, erased=0;
+@@ -63,6 +63,6 @@
+ {
+   typedef typename T::template nth_index<1>::type sequence_t;
+-  sequence_t& sidx=collection.get<1>();
+-  typename sequence_t::iterator si=collection.project<1>(iter);
++  sequence_t& sidx=collection.template get<1>();
++  typename sequence_t::iterator si=collection.template project<1>(iter);
+   if(front)
+     sidx.relocate(sidx.begin(), si); // at the beginning of the delete queue

@@ -25,6 +25,6 @@ install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf $(InstallDir)/$(Prefix)/etc/lftp.conf.default
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/lftp --version
 endef

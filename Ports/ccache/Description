@@ -4,5 +4,4 @@ ccache is a compiler cache. It speeds up recompilation by caching previous compi
   * License: GPL
 
 Release Notes:
-  *  Upgraded to version 3.1.7
-
+  *  Upgraded to version 3.1.8

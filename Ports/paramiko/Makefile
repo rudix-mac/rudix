@@ -16,6 +16,6 @@ define test_inner_hook
 cd $(BuildDir) ; python test.py
 endef
 
-define final_inner_hook
+define test_inner_hook
 python -c 'import paramiko'
 endef

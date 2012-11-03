@@ -19,6 +19,6 @@ install -d $(InstallDir)/$(ManDir)/man1
 install -m 664 $(SourceDir)/dtach.1 $(InstallDir)/$(ManDir)/man1
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/dtach --version
 endef

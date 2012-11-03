@@ -22,6 +22,6 @@ install -m 644 $(SourceDir)/{FUTURES,LIMITATIONS,POSIX.STD,PROBLEMS} \
 	$(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/gawk --version
 endef

@@ -11,6 +11,12 @@ else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
 
+ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
+GnuConfigureExtra += --disable-shared --enable-static
+else ifeq ($(RUDIX_BUILD_STATIC_LIBS),no)
+GnuConfigureExtra += --enable-shared --disable-static
+endif
+
 define gnu_configure
 ./configure $(GnuConfigureExtra) \
 	--prefix=$(Prefix) \
@@ -56,7 +62,7 @@ $(install_base_documentation)
 $(install_gnu_documentation)
 endef
 
-define test_inner_hook
+define test_build
 cd $(BuildDir) ; $(make) check || $(call error_color,One or more tests failed)
 endef
 

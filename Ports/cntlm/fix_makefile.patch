@@ -1,0 +1,52 @@
+--- Makefile.orig	2012-09-09 23:34:26.000000000 -0300
++++ Makefile	2012-09-09 23:37:47.000000000 -0300
+@@ -2,10 +2,10 @@
+ # You can tweak these three variables to make things install where you
+ # like, but do not touch more unless you know what you are doing. ;)
+ #
+-DESTDIR=
+-SYSCONFDIR=$(DESTDIR)/etc
+-BINDIR=$(DESTDIR)/usr/sbin
+-MANDIR=$(DESTDIR)/usr/share/man
++#DESTDIR=
++SYSCONFDIR=$(DESTDIR)/usr/local/etc
++BINDIR=$(DESTDIR)/usr/local/bin
++MANDIR=$(DESTDIR)/usr/local/share/man
+ 
+ #
+ # Careful now...
+@@ -15,7 +15,7 @@
+ NAME=cntlm
+ CC=gcc
+ VER=`cat VERSION`
+-CFLAGS+=$(FLAGS) -std=c99 -Wall -Wno-unused-but-set-variable -pedantic -O3 -D__BSD_VISIBLE -D_ALL_SOURCE -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200112 -D_ISOC99_SOURCE -D_REENTRANT -D_BSD_SOURCE -DVERSION=\"`cat VERSION`\"
++CFLAGS+=$(FLAGS) -std=c99 -Wall -pedantic -O3 -D__BSD_VISIBLE -D_ALL_SOURCE -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200112 -D_ISOC99_SOURCE -D_REENTRANT -D_BSD_SOURCE -DVERSION=\"`cat VERSION`\"
+ OS=$(shell uname -s)
+ OSLDFLAGS=$(shell [ $(OS) = "SunOS" ] && echo "-lrt -lsocket -lnsl")
+ LDFLAGS:=-lpthread $(OSLDFLAGS)
+@@ -49,10 +49,10 @@
+ 		install -M 644 -f $(MANDIR)/man1 doc/$(NAME).1; \
+ 		install -M 600 -c $(SYSCONFDIR) doc/$(NAME).conf; \
+ 	elif [ "`uname -s`" = "Darwin" ]; then \
+-		install -d -m 755 -s $(NAME) $(BINDIR)/$(NAME); \
+-		install -d -m 644 doc/$(NAME).1 $(MANDIR)/man1/$(NAME).1; \
++		install -m 755 $(NAME) $(BINDIR)/$(NAME); \
++		install -m 644 doc/$(NAME).1 $(MANDIR)/man1/$(NAME).1; \
+ 		[ -f $(SYSCONFDIR)/$(NAME).conf -o -z "$(SYSCONFDIR)" ] \
+-			|| install -d -m 600 doc/$(NAME).conf $(SYSCONFDIR)/$(NAME).conf; \
++			|| install -m 600 doc/$(NAME).conf $(SYSCONFDIR)/$(NAME).conf; \
+ 	else \
+ 		install -D -m 755 -s $(NAME) $(BINDIR)/$(NAME); \
+ 		install -D -m 644 doc/$(NAME).1 $(MANDIR)/man1/$(NAME).1; \
+--- Makefile.orig	2012-09-09 23:38:38.000000000 -0300
++++ Makefile	2012-09-09 23:39:45.000000000 -0300
+@@ -44,6 +44,9 @@
+ 
+ install: $(NAME)
+ 	# Special handling for install(1)
++	install -d $(BINDIR)
++	install -d $(SYSCONFDIR)
++	install -d $(MANDIR)/man1
+ 	if [ "`uname -s`" = "AIX" ]; then \
+ 		install -M 755 -S -f $(BINDIR) $(NAME); \
+ 		install -M 644 -f $(MANDIR)/man1 doc/$(NAME).1; \

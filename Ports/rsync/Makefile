@@ -19,6 +19,6 @@ cd $(InstallDir)/$(Prefix)/share/man/man1 ; ln -sf rsync.1 rsync3.1
 cd $(InstallDir)/$(Prefix)/share/man/man5 ; ln -sf rsyncd.conf.5 rsyncd3.conf.5
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/rsync --version
 endef

@@ -1,0 +1,7 @@
+#!/bin/sh
+[ ! -f /usr/local/etc/a2ps.cfg ] && \
+  install -m 644 /usr/local/etc/a2ps.cfg.default  /usr/local/etc/a2ps.cfg
+
+[ ! -f /usr/local/etc/a2ps-site.cfg ] && \
+  install -m 644 /usr/local/etc/a2ps-site.cfg.default  /usr/local/etc/a2ps-site.cfg
+exit 0

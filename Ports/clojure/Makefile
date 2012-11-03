@@ -24,6 +24,6 @@ sed "s/@VERSION@/$(Version)/g" clojure.sh >$(InstallDir)/$(BinDir)/clojure
 chmod +x $(InstallDir)/$(BinDir)/clojure
 endef
 
-define final_inner_hook
+define test_inner_hook
 echo '(println "Hello World!")' | $(BinDir)/clojure
 endef

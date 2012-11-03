@@ -22,6 +22,6 @@ install -d $(InstallDir)/$(BinDir)
 cd $(InstallDir)/$(BinDir) ; ln -sf ../lib/jython-$(Version)/bin/jython .
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/jython --version
 endef

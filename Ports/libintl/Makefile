@@ -19,14 +19,10 @@ GnuConfigureExtra += --disable-csharp
 GnuConfigureExtra += --disable-libasprintf
 GnuConfigureExtra += --with-included-glib
 
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
-
 define install_post_hook
 rm -rf $(InstallDir)/$(DocDir)/gettext/examples
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/gettext -h
 endef

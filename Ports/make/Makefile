@@ -23,6 +23,6 @@ cd $(InstallDir)$(BinDir) ; ln -sf gnumake make
 cd $(InstallDir)$(Prefix)/share/man/man1 ; ln -sf gnumake.1 make.1
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/make --version
 endef

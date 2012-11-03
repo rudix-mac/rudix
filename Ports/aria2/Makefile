@@ -12,7 +12,7 @@ LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-included-gettext
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/aria2c --version
 $(BinDir)/aria2c http://rudix.googlecode.com/hg/Ports/rudix/rudix.py
 rm -f rudix.py

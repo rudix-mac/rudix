@@ -17,6 +17,6 @@ LicenseFile=	$(SourceDir)/README
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/usr/local
 MakeInstallExtra += mandir=$(PortDir)/$(InstallDir)/usr/local/share/man
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/autossh -V
 endef

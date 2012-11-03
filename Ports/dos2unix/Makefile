@@ -22,7 +22,7 @@ endif
 define test_inner_hook
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(BinDir)/dos2unix -V
 $(BinDir)/unix2dos -V
 endef

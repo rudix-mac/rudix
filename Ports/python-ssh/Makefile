@@ -18,6 +18,6 @@ define test_inner_hook
 cd $(BuildDir) ; $(Python) test.py
 endef
 
-define final_inner_hook
+define test_inner_hook
 $(Python) -c 'import ssh'
 endef

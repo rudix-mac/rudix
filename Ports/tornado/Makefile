@@ -10,6 +10,6 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE-2.0
 
-define final_inner_hook
+define test_inner_hook
 $(Python) -c 'import tornado'
 endef

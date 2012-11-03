@@ -1,0 +1,24 @@
+--- Makefile.orig	2012-10-22 14:06:41.000000000 -0200
++++ Makefile	2012-10-22 14:07:41.000000000 -0200
+@@ -1,7 +1,7 @@
+ # user editable stuff:
+-SBINDIR=/usr/sbin/
+-BINDIR=/usr/bin/
+-CONFIGDIR="/etc/powerdns/"
++SBINDIR=/usr/local/sbin/
++BINDIR=/usr/local/bin/
++CONFIGDIR="/usr/local/etc/powerdns/"
+ OPTFLAGS?=-O3
+ CXXFLAGS:= $(CXXFLAGS) -Wall $(OPTFLAGS) $(PROFILEFLAGS) $(ARCHFLAGS) -pthread
+ CFLAGS:=$(CFLAGS) -Wall $(OPTFLAGS) $(PROFILEFLAGS) $(ARCHFLAGS) -pthread
+@@ -78,8 +78,8 @@
+ 	strip $(DESTDIR)/$(BINDIR)/rec_control
+ 	-mkdir -p $(DESTDIR)/$(CONFIGDIR)
+ 	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(DESTDIR)/$(CONFIGDIR)/recursor.conf-dist
+-	-mkdir -p $(DESTDIR)/usr/share/man/man1
+-	cp pdns_recursor.1 rec_control.1 $(DESTDIR)/usr/share/man/man1
++	-mkdir -p $(DESTDIR)/usr/local/share/man/man1
++	cp pdns_recursor.1 rec_control.1 $(DESTDIR)/usr/local/share/man/man1
+ 	$(OS_SPECIFIC_INSTALL)	
+ 
+ clean: binclean

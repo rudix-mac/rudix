@@ -20,4 +20,5 @@ MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/usr/local/share/man
 
 define test_inner_hook
 $(BuildDir)/tree
+$(BinDir)/tree
 endef

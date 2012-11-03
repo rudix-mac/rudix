@@ -34,7 +34,3 @@ ln -sf /usr/local/lib/tomcat6/bin/startup.sh tomcat6-startup.sh ; \
 ln -sf /usr/local/lib/tomcat6/bin/shutdown.sh tomcat6-shutdown.sh
 touch install
 endef
-
-define test_inner_hook
-touch test
-endef

@@ -15,3 +15,9 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
+define install_post_hook
+mv $(InstallDir)/$(SysConfDir)/a2ps.cfg \
+	$(InstallDir)/$(SysConfDir)/a2ps.cfg.default
+mv $(InstallDir)/$(SysConfDir)/a2ps-site.cfg \
+	$(InstallDir)/$(SysConfDir)/a2ps-site.cfg.default
+endef
