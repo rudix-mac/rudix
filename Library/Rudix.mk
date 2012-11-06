@@ -130,9 +130,16 @@ pmdoc:
 	$(create_pmdoc)
 	$(sanitize_pmdoc)
 
+
+# The rules above are very weak (temporary):
+
 wiki:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkwikipage.py
+
+page:
+	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
+		../../Library/mkpage.py
 
 upload: pkg test
 	@$(call info_color,Sending $(PkgFile))
