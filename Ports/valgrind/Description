@@ -1,0 +1,7 @@
+Valgrind is an instrumentation framework for building dynamic analysis tools. There are Valgrind tools that can automatically detect many memory management and threading bugs, and profile your programs in detail.
+
+  * Site: http://valgrind.org/
+  * License: GPL
+
+Release Notes:
+  * Adopted by Rudix
