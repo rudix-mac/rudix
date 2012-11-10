@@ -1,0 +1,20 @@
+--- src/main.c.orig	2012-11-09 22:47:08.000000000 -0200
++++ src/main.c	2012-11-09 22:48:01.000000000 -0200
+@@ -68,7 +68,7 @@
+ int no_promisc = 0;
+ int bytes_per_flow = 0;
+ int max_flows = 0;
+-int max_desired_fds = 0;
++int max_desired_fds = MAX_FD_GUESS;
+ int console_only = 0;
+ int strip_nonprint = 0;
+ 
+@@ -152,7 +152,7 @@
+       if ((max_desired_fds = atoi(optarg)) < (NUM_RESERVED_FDS + 2)) {
+ 	DEBUG(1) ("warning: -f flag must be used with argument >= %d",
+ 		  NUM_RESERVED_FDS + 2);
+-	max_desired_fds = 0;
++	max_desired_fds = MAX_FD_GUESS;
+       }
+       break;
+     case 'h':

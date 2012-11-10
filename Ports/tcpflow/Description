@@ -1,0 +1,7 @@
+tcpflow is a program that captures data transmitted as part of TCP connections (flows), and stores the data in a way that is convenient for protocol analysis or debugging.
+
+  * Site: http://www.circlemud.org/jelson/software/tcpflow/
+  * License: GPL
+
+Release Notes:
+  * Adopted by Rudix
