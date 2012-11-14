@@ -1,16 +1,10 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Site=		http://xmp.sourceforge.net/
-License=	GPL
-Description=	Extended module player
-
-Title=		XMP $(VERSION)
+Title=		Extended Module player
 Name=		xmp
-Version=	3.3.0
+Version=	3.5.0
 Revision=	0
-URL=		http://downloads.sourceforge.net/xmp
+URL=		http://sourceforge.net/projects/xmp/files/xmp/$(Version)
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(BuildDir)/README
@@ -18,4 +12,8 @@ LicenseFile=	$(BuildDir)/docs/COPYING
 
 define install_post_hook
 rm -rf $(InstallDir)/etc
+endef
+
+define test_inner_hook
+$(BinDir)/xmp --version
 endef
