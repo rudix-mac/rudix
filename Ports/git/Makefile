@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		Git
 Name=		git
-Version=	1.7.11
+Version=	1.8.0
 Revision=	0
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
@@ -21,15 +21,12 @@ LdFlags += -framework CoreFoundation -liconv
 endif
 
 define install_post_hook
-rm -rf $(InstallDir)$(Prefix)/Library
-# Place the Git application into the right folder
-install -d $(InstallDir)/Applications
-mv $(InstallDir)$(Prefix)/share/git-gui/lib/Git\ Gui.app \
-	$(InstallDir)/Applications
+# FIXME: remove Git Gui.app
+rm -rf $(InstallDir)$(Prefix)/share/git-gui/lib/Git\ Gui.app
 # Fix Perl module position
-install -d $(InstallDir)/Library/Perl/Updates/5.12.3
+install -d $(InstallDir)/Library/Perl/Updates/5.12.4
 mv $(InstallDir)$(LibDir)/perl5/site_perl/*.pm \
-	$(InstallDir)/Library/Perl/Updates/5.12.3
+	$(InstallDir)/Library/Perl/Updates/5.12.4
 # Fix Python module position
 install -d $(InstallDir)/Library/Python/2.7
 mv $(InstallDir)$(LibDir)/python2.7/site-packages \
@@ -37,12 +34,11 @@ mv $(InstallDir)$(LibDir)/python2.7/site-packages \
 rmdir $(InstallDir)$(LibDir)/python2.7
 # Nothing interesting is resting here
 rm -rf $(InstallDir)$(LibDir)
-# Manpages
-install -d $(InstallDir)$(Prefix)/share/man
+rm -rf $(InstallDir)$(Prefix)/Library
+# Install manual pages
+install -d $(InstallDir)$(ManDir)
 tar jxf $(PortDir)/git-manpages-$(Version).tar.gz \
-	-C $(InstallDir)$(Prefix)/share/man
-# App
-rm -rf $(InstallDir)/Applications/
+	-C $(InstallDir)$(ManDir)
 endef
 
 define test_inner_hook
@@ -50,3 +46,6 @@ $(BinDir)/git --version
 perl -e 'use Git'
 python -c 'import git_remote_helpers'
 endef
+
+realdistclean: distclean
+	rm -f retrieve $(Source) git-manpages-$(Version).tar.gz
