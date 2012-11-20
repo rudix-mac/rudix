@@ -1,0 +1,7 @@
+LuaJIT is a Just-In-Time Compiler (JIT) for the Lua programming language.
+
+  * Site: http://luajit.org/
+  * License: MIT
+
+Release Notes:
+  * Adopted by Rudix
