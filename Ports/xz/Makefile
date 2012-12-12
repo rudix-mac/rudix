@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		XZ Utils
 Name=		xz
-Version=	5.0.3
-Revision=	2
+Version=	5.0.4
+Revision=	0
 URL=		http://tukaani.org/xz/
 Source=		$(Name)-$(Version).tar.bz2
 
