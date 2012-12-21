@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20121026
+BuildSystem = 20121221
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -130,23 +130,14 @@ pmdoc:
 	$(create_pmdoc)
 	$(sanitize_pmdoc)
 
-
-# The rules above are very weak (temporary):
-
-wiki:
-	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
-		../../Library/mkwikipage.py
-
+# FIXME: The rules above are weak/temporary, they need work:
 page:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkpage.py
 
 upload: pkg test
-	@$(call info_color,Sending $(PkgFile))
-	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
-	@echo "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
-	@echo git tag $(DistName)-$(Version)-$(Revision)
-
+	@$(call info_color,Uploading $(PkgFile))
+	../../Library/googlecode_upload.py -n -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 
 # FIXME: Temporary hack to build static packages.
 static: buildclean installclean
@@ -169,9 +160,9 @@ help:
 	@echo "  realdistclean - After distclean, remove source"
 
 about:
-	@echo "$(Name): $(Title) $(Version)-$(Revision)"
+	@echo "$(Title): $(Name)-$(Version)-$(Revision)"
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload help about
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc upload help about
 
 #
 # Functions
@@ -362,12 +353,15 @@ $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
 @$(call info_color,Uninstalling previous package)
+@echo "Administrator (root) credentials required"
 sudo ../../Library/poof.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
 @$(call info_color,Installing the new package)
+@echo "Administrator (root) credentials required"
 sudo installer -pkg $(PkgFile) -target /
 endef
 
 define test_post_hook
 @$(call info_color,Uninstalling package)
+@echo "Administrator (root) credentials required"
 sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
 endef

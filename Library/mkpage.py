@@ -20,6 +20,10 @@ pkg-snowleopard: {PkgFile}
 
 	sudo rudix install {Name}
 
+* Mountain Lion: [{{page.pkg-mountainlion}}](http://code.google.com/p/rudix-mountainlion/downloads/detail?name={{page.pkg-mountainlion}}).
+* Lion: [{{page.pkg-lion}}](http://code.google.com/p/rudix/downloads/detail?name={{page.pkg-lion}}).
+* Snow Leopard: [{{page.pkg-snowleopard}}](http://code.google.com/p/rudix-snowleopard/downloads/detail?name={{page.pkg-snowleopard}}).
+
 ## Usage ##
 
 	/usr/local/bin/
