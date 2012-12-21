@@ -55,7 +55,7 @@ import getpass
 import base64
 import time
 import sys
-
+import netrc
 
 def upload(file, project_name, user_name, password, summary, description, labels=None):
   """Upload a file to a Google Code project's file server.
@@ -192,6 +192,7 @@ def upload_find_auth(file_path, project_name, summary, description,
     # Returns 403 Forbidden instead of 401 Unauthorized for bad
     # credentials as of 2007-07-17.
     if status in [httplib.FORBIDDEN, httplib.UNAUTHORIZED]:
+      print 'Error: Upload failed with status code', status
       # Rest for another try.
       user_name = password = None
       tries = tries - 1
@@ -216,6 +217,8 @@ def main():
                     help='Your Google Code username')
   parser.add_option('-w', '--password', dest='password',
                     help='Your Google Code password')
+  parser.add_option('-n', '--netrc', dest='netrc', action='store_true',
+                    help='Read credentials from .netrc')
   parser.add_option('-l', '--labels', dest='labels',
                     help='An optional list of comma-separated labels to attach '
                     'to the file')
@@ -243,6 +246,16 @@ def main():
   if os.path.isfile(options.description):
     with open(options.description) as f:
       options.description = f.read()
+
+  if options.netrc:
+    try:
+      rc = netrc.netrc()
+      auth = rc.authenticators('code.google.com')
+    except IOError:
+      print 'Warning: Could not load credentials from ~/.netrc.'
+      auth = None
+    if auth:
+      options.user, options.password = auth[0], auth[2]
 
   status, reason, url = upload_find_auth(file_path, options.project,
                                          options.summary, options.description,
