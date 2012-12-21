@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2012-12-21 10:52:35.000000000 -0200
++++ src/Makefile.in	2012-12-21 10:52:53.000000000 -0200
+@@ -6,7 +6,7 @@
+ localedir=$(prefix)/share/locale
+ CC=@CC@
+ CFLAGS= @CFLAGS@ -DLOCALEDIR=\"$(localedir)\" @GNUTLS_CFLAGS@
+-LIBS=@LIBINTL@ @LIBS@ @GNUTLS_LIBS@
++LIBS=@LIBINTL@ @LIBS@ @GNUTLS_LIBS@ @LDFLAGS@
+ EXE=../wput
+ GETOPT=@GETOPT@
+ MEMDBG=@MEMDBG@
