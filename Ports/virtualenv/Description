@@ -1,8 +1,23 @@
 Virtual Python Environment builder.
 
-  * Site: http://pypi.python.org/pypi/virtualenv
-  * License: Python
+* Site: http://pypi.python.org/pypi/virtualenv/
+* License: Python
 
 Release Notes:
-  * Upgraded to version 1.7.2
-  * Featuring in Rudix
+
+* Upgraded to version 1.8.4
+
+Install with Rudix command line:
+
+	sudo rudix install virtualenv
+
+Basic usage and help:
+
+	virtualenv --help
+	virtualenv my_env
+
+Manifest:
+
+	/usr/local/bin/virtualenv
+	/usr/local/share/doc/virtualenv/
+	/Library/Python/*/virtualenv*
