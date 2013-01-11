@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Cscope
 Name=		cscope
-Version=	15.8
+Version=	15.8a
 Revision=	0
-URL=		http://downloads.sourceforge.net/cscope
-Source=		$(Name)-$(Version).tar.bz2
+URL=		http://sourceforge.net/projects/cscope/files/cscope/$(Version)
+Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING

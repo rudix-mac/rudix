@@ -1,7 +1,23 @@
 Cscope is a developer's tool for browsing source code.
 
-  * Site: http://cscope.sourceforge.net/
-  * License: BSD
+* Site: http://cscope.sourceforge.net/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 15.8
+
+* Upgraded to version 15.8a
+
+Install with Rudix command line:
+
+	sudo rudix install cscope
+
+Basic usage and help:
+
+	cscope
+
+Manifest:
+
+	/usr/local/bin/cscope
+	/usr/local/bin/ocs
+	/usr/local/share/doc/cscope/
+	/usr/local/share/man/man1/cscope.1
