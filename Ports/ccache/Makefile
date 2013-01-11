@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		ccache
 Name=		ccache
-Version=	3.1.8
+Version=	3.1.9
 Revision=	0
 URL=		http://samba.org/ftp/ccache/
 Source=		$(Name)-$(Version).tar.bz2
