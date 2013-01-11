@@ -15,9 +15,3 @@ Basic usage and help:
 
 	pip help
 	pip freeze
-
-Manifest:
-
-	/usr/local/bin/pip*
-	/usr/local/share/doc/pip/
-	/Library/Python/*/site-packages/pip*
