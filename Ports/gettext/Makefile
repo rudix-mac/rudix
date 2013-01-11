@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		GNU gettext
 Name=		gettext
-Version=	0.18.1.1
-Revision=	6
+Version=	0.18.2
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		$(Name)-$(Version).tar.gz
 

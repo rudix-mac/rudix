@@ -1,7 +1,17 @@
 The GNU gettext utilities are a set of tools that provides a framework to help produce multi-lingual messages.
 
-  * Site: http://www.gnu.org/software/gettext/
-  * License: GPL
+* Site: http://www.gnu.org/software/gettext/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Upgraded to version 0.18.2
+
+Install with Rudix command line:
+
+	sudo rudix install gettext
+
+Basic usage and help:
+
+	gettext --help
+	gcc -lintl prog.c
