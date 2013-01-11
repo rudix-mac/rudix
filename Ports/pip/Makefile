@@ -1,9 +1,9 @@
 include ../../Library/Python.mk
 
-Title=		pip (Python Module)
+Title=		Python pip
 Name=		pip
-Version=	1.1
-Revision=	1
+Version=	1.2.1
+Revision=	0
 URL=		http://pypi.python.org/packages/source/p/pip/
 Source=		$(Name)-$(Version).tar.gz
 
