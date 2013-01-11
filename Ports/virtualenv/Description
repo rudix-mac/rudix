@@ -15,9 +15,3 @@ Basic usage and help:
 
 	virtualenv --help
 	virtualenv my_env
-
-Manifest:
-
-	/usr/local/bin/virtualenv
-	/usr/local/share/doc/virtualenv/
-	/Library/Python/*/virtualenv*
