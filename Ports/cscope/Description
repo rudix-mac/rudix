@@ -14,10 +14,3 @@ Install with Rudix command line:
 Basic usage and help:
 
 	cscope
-
-Manifest:
-
-	/usr/local/bin/cscope
-	/usr/local/bin/ocs
-	/usr/local/share/doc/cscope/
-	/usr/local/share/man/man1/cscope.1
