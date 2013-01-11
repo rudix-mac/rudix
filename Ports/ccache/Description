@@ -14,10 +14,3 @@ Install with Rudix command line:
 Basic usage and help:
 
 	ccache --help
-
-Manifest:
-
-	/usr/local/bin/ccache
-	/usr/local/libexec/ccache/
-	/usr/local/share/doc/ccache/
-	/usr/local/share/man/man1/ccache.1
