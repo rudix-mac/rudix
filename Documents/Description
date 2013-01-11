@@ -1,8 +1,24 @@
-Provide some description here, just a single paragraph is enough.
+Provide some description here, just a single paragraph or two is enough.
 
-  * Site: http://home.url.com/
-  * License: GPL, BSD, MIT, Public Domain, etc.
+* Site: http://home.url.com/
+* License: GPL, BSD, MIT, Python, Public Domain, etc.
 
 Release Notes:
-  * What's changed?
-  * A few items (or just one) is OK
+
+* What's changed?
+* A few items (or just one) is OK
+
+Install with Rudix command line:
+
+	sudo rudix install foo
+
+Basic usage and help:
+
+	foo --help
+	foo action
+
+Manifest:
+
+	/usr/local/bin/foo
+	/usr/local/share/doc/foo/
+	/usr/local/lib/libfoo*

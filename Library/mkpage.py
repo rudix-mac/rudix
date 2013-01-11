@@ -7,30 +7,19 @@ template = '''---
 layout: package
 title: {Title}
 description: {Summary}
-pkg-mountainlion: {PkgFile}
-pkg-lion: {PkgFile}
-pkg-snowleopard: {PkgFile}
 ---
 
-# {Name}: {Title} #
+# {Title} ({Name}) #
 
 {Description}
 
-## Install ##
+## Download ##
 
-	sudo rudix install {Name}
+Packages in separate:
 
-* Mountain Lion: [{{page.pkg-mountainlion}}](http://code.google.com/p/rudix-mountainlion/downloads/detail?name={{page.pkg-mountainlion}}).
-* Lion: [{{page.pkg-lion}}](http://code.google.com/p/rudix/downloads/detail?name={{page.pkg-lion}}).
-* Snow Leopard: [{{page.pkg-snowleopard}}](http://code.google.com/p/rudix-snowleopard/downloads/detail?name={{page.pkg-snowleopard}}).
-
-## Usage ##
-
-	/usr/local/bin/
-
-## Manifest ##
-
-	/usr/local/...
+* OS X Mountain Lion (10.8) [{PkgFile}](http://code.google.com/p/rudix-mountainlion/downloads/detail?name={PkgFile}).
+* Mac OS X Lion (10.7) [{PkgFile}](http://code.google.com/p/rudix/downloads/detail?name={PkgFile}).
+* Mac OS X Snow Leopard (10.6) [{PkgFile}](http://code.google.com/p/rudix-snowleopard/downloads/detail?name={PkgFile}).
 '''
 
 class Global_Env_Dict(object):

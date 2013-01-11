@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# List or remove Mac OS X packages
-# Copyright (c) 2011-2012 Rudá Moura
+# Poof: List or remove Mac OS X packages
+# Copyright (c) 2011-2013 Rudá Moura <ruda.moura@gmail.com>
 #
 
-"""Poof is an utility to list or remove Mac OS X packages.
+"""Poof is a command line utility to list or remove Mac OS X packages.
 
 NO WARRANTY!
 
@@ -76,25 +76,29 @@ def package_info(package_id):
 
 def package_files(package_id):
     sh = Shell()
-    ok, files = sh.pkgutil('--only-files --files ' + package_id)
-    return files
-
-def package_dirs(package_id):
-    sh = Shell()
+    ok, files = sh.pkgutil('--files ' + package_id)
     ok, dirs = sh.pkgutil('--only-dirs --files ' + package_id)
-    return dirs
+    # Files minus directories
+    files = list(set(files) - set(dirs))
+    # Guess AppStore receipt
+    for dir in dirs:
+        if dir.endswith('.app'):
+            dirs.append(dir + '/Contents/_MASReceipt')
+            files.append(dir + '/Contents/_MASReceipt/receipt')
+            break
+    return files, dirs
 
 def package_forget(package_id):
     sh = Shell()
     ok, msg = sh.pkgutil('--verbose --forget ' + package_id)
     return msg
 
-def package_remove(package_id, force=True):
+def package_remove(package_id, force=True, verbose=False):
     info = package_info(package_id)
     prefix = info['volume']
     if info['location']:
         prefix += info['location'] + os.sep
-    files = package_files(package_id)
+    files, dirs = package_files(package_id)
     files = [prefix+x for x in files]
     clean = True
     for path in files:
@@ -103,12 +107,14 @@ def package_remove(package_id, force=True):
         except OSError, e:
             clean = False
             print e
-    dirs = package_dirs(package_id)
-    dirs.reverse()
     dirs = [prefix+x for x in dirs]
+    dirs.sort(lambda p1, p2: p1.count('/') - p2.count('/'),
+              reverse=True)
     for dir in dirs:
         try:
             os.rmdir(dir)
+            if verbose:
+                print 'Removing', dir
         except OSError, e:
             clean = False
             print e
