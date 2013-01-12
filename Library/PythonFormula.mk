@@ -1,21 +1,25 @@
 # PythonFormula.mk - Pyhton Formula
 #
-# Copyright (c) 2011-2012 Ruda Moura
+# Copyright (c) 2011-2013 Ruda Moura
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
 #
-# Python versions
+# Select Python version
 #
-# Default
-Python = $(Python2.7)
-PythonSitePackages = $(PythonSitePackages2.7)
-# 2.7
-Python2.7 = /usr/bin/python2.7
-PythonSitePackages2.7 = /Library/Python/2.7/site-packages
-# 2.6
-Python2.6 = /usr/bin/python2.6
-PythonSitePackages2.6 = /Library/Python/2.6/site-packages
+ifeq ($(OSXVersion),10.8)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.7)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.6)
+Python = /usr/bin/python2.6
+PythonSitePackages = /Library/Python/2.6/site-packages
+else
+Python = /usr/bin/python2.5
+PythonSitePackages = /Library/Python/2.5/site-packages
+endif
 
 define build_inner_hook
 cd $(BuildDir) ; \

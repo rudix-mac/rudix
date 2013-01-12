@@ -1,11 +1,11 @@
 #
 # Rudix.mk - The BuildSystem itself
 #
-# Copyright (c) 2005-2012 Rudá Moura
+# Copyright (c) 2005-2013 Rudá Moura
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20121221
+BuildSystem = 20130112
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -20,12 +20,25 @@ PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 #
 # Build flags options
 #
+OSXVersion = $(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
-ifeq ($(RUDIX_UNIVERSAL),yes)
+ifeq ($(OSXVersion),10.8)
+ArchFlags = -arch x86_64
+RUDIX_UNIVERSAL=no
+RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+else ifeq ($(OSXVersion),10.7)
+ArchFlags = -arch x86_64
+RUDIX_UNIVERSAL=no
+RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+else ifeq ($(OSXVersion),10.6)
 ArchFlags = -arch i386 -arch x86_64
-else ifeq ($(RUDIX_UNIVERSAL),no)
-ArchFlags = -arch $(Arch)
+RUDIX_UNIVERSAL=yes
+RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+else
+ArchFlags = -arch i386 -arch ppc
+RUDIX_UNIVERSAL=yes
+RUDIX_DISABLE_DEPENDENCY_TRACKING=yes
 endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)
