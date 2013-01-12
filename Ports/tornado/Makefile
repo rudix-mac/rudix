@@ -2,9 +2,9 @@ include ../../Library/Python.mk
 
 Title=		Tornado
 Name=		tornado
-Version=	2.3
+Version=	2.4.1
 Revision=	0
-URL=		http://github.com/downloads/facebook/tornado/
+URL=		https://github.com/downloads/facebook/tornado
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
