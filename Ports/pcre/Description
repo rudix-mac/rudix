@@ -1,7 +1,17 @@
 The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 
-  * Site: http://www.pcre.org/
-  * License: BSD
+* Site: http://www.pcre.org/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 8.30
+
+* Upgraded to version 8.32
+
+Install with Rudix command line:
+
+	sudo rudix install pcre
+
+Basic usage and help:
+
+	pcregrep foo *.c
+	pcre-config --cflags --libs
