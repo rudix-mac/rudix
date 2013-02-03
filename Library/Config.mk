@@ -8,5 +8,5 @@ RUDIX_ENABLE_NLS=yes
 RUDIX_BUILD_WITH_STATIC_LIBS=yes
 RUDIX_BUILD_STATIC_LIBS=no
 RUDIX_PARALLEL_EXECUTION=yes
-RUDIX_LABELS=Rudix-2013,OSX-MountainLion,XCode-4.5
+RUDIX_LABELS=Rudix-2013,OSX-MountainLion,XCode-4.6
 RUDIX_PACKAGEMAKER=/Applications/Utilities/PackageMaker.app/Contents/MacOS/packagemaker
