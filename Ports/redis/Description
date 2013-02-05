@@ -1,7 +1,17 @@
 Redis is an open source, advanced key-value store.
 
-  * Site: http://redis.io/
-  * License: BSD
+* Site: http://redis.io/
+* License: BSD
 
 Release Notes
-  * Upgraded to version 2.4.15
+
+* Upgraded to version 2.6.9
+
+Install with Rudix command line:
+
+	sudo rudix install redis
+
+Basic usage and help:
+
+	redis-cli --help
+	redis-server --help
