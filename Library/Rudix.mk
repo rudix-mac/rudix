@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20130112
+BuildSystem = 20130216
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -128,7 +128,7 @@ installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg *.pmdoc
+	rm -rf pkg *.pkg Distribution Resources
 
 clean: installclean
 	rm -rf checksum prep build test $(SourceDir) *~
@@ -138,10 +138,6 @@ distclean: clean pkgclean
 
 realdistclean: distclean
 	rm -f retrieve $(Source)
-
-pmdoc:
-	$(create_pmdoc)
-	$(sanitize_pmdoc)
 
 # FIXME: The rules above are weak/temporary, they need work:
 page:
@@ -175,7 +171,7 @@ help:
 about:
 	@echo "$(Title): $(Name)-$(Version)-$(Revision)"
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc upload help about
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about
 
 #
 # Functions
@@ -219,44 +215,37 @@ for x in $(wildcard *.patch patches/*.patch) ; do \
 	patch -p0 -d $(SourceDir) < $$x ; done
 endef
 
-define create_pmdoc
-../../Library/mkpmdoc.py \
-	--name $(Name) \
+define create_distribution
+../../Library/synthesize_distribution.py \
+	--title "$(Title) $(Version)" \
+	--pkgid $(PkgId) \
+	--name $(DistName) \
+	--installpkg $(Name)install.pkg
+endef
+
+define create_resources
+mkdir -p Resources/en.lproj
+cp -av $(ReadMeFile) Resources/en.lproj/ReadMe
+cp -av $(LicenseFile) Resources/en.lproj/License
+cp -av ../../Library/Introduction Resources/en.lproj/Welcome
+cp -av ../../Library/rudix.png Resources/en.lproj/background
+endef
+
+define create_installpkg
+pkgbuild \
+	--identifier $(PkgId) \
 	--version $(Version)-$(Revision) \
-	--title "$(Title)" \
-	--description Description \
-	--readme $(ReadMeFile) \
-	--license $(LicenseFile) \
-	--components '$(Components)' \
-	--index --pkgref \
-	.
+	--root $(InstallDir) \
+	--install-location / \
+	$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
+	$(Name)install.pkg
 endef
 
 define create_pkg
-$(RUDIX_PACKAGEMAKER) \
-	--doc $(Name).pmdoc \
-	--id $(PkgId) \
-	--version $(Version)-$(Revision) \
-	--title "$(Title) $(Version)" \
-$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
-	--out $(PortDir)/$(PkgFile)
-endef
-
-define apply_recommendations
-rm -f $(Name).pmdoc/*-contents.xml
-open $(Name).pmdoc
-../../Library/apply_recommendations.sh $(Name).pmdoc
-endef
-
-define sanitize_pmdoc
-for x in $(Name).pmdoc/*-contents.xml ; do \
-	perl -p -i -e 's/o="[^"]*"/o="root"/ ; s/pt="[^"]*"/pt="$(Name)-install"/' $$x ; done
-for x in $(Name).pmdoc/*.xml ; do \
-	xmllint --format --output $$x $$x ; done
-endef
-
-define check_pmdoc
-grep root $(Name).pmdoc/*-contents.xml >/dev/null
+productbuild \
+	--distribution Distribution \
+	--resources Resources \
+	$(PkgFile)
 endef
 
 define configure
@@ -352,10 +341,9 @@ endef
 
 define pkg_inner_hook
 $(strip_macho)
-$(create_pmdoc)
-$(apply_recommendations)
-$(sanitize_pmdoc)
-$(check_pmdoc)
+$(create_installpkg)
+$(create_distribution)
+$(create_resources)
 $(create_pkg)
 endef
 
