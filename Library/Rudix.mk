@@ -268,12 +268,12 @@ $(MAKE) $(MakeFlags)
 endef
 
 define verify_universal
-lipo $1 -verify_arch i386 x86_64 2>/dev/null || $(call warning_color,file $1 is not an Universal Binary)
+../../Library/fatty.py $1 || $(call warning_color,file $1 is not an Universal Binary)
 endef
 
 ifeq ($(RUDIX_UNIVERSAL),yes)
 define test_universal
-@$(call info_color,Starting Universal Binaries test)
+@$(call info_color,Testing for Universal Binaries)
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
 for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
