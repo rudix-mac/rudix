@@ -20,25 +20,16 @@ PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 #
 # Build flags options
 #
-OSXVersion = $(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 ifeq ($(OSXVersion),10.8)
-ArchFlags = -arch x86_64
-RUDIX_UNIVERSAL=no
-RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.7)
-ArchFlags = -arch x86_64
-RUDIX_UNIVERSAL=no
-RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.6)
-ArchFlags = -arch i386 -arch x86_64
-RUDIX_UNIVERSAL=yes
-RUDIX_DISABLE_DEPENDENCY_TRACKING=no
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch ppc -arch i386,-arch i386)
 else
-ArchFlags = -arch i386 -arch ppc
-RUDIX_UNIVERSAL=yes
-RUDIX_DISABLE_DEPENDENCY_TRACKING=yes
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch ppc -arch i386,-arch i386)
 endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)

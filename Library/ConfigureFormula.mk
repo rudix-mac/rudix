@@ -39,9 +39,11 @@ $(install_base_documentation)
 $(install_extra_documentation)
 endef
 
+ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define test_build
 cd $(BuildDir) ; $(make) test check || $(call error_color,One or more tests failed)
 endef
+endif
 
 buildclean:
 	cd $(BuildDir) ; $(make) clean

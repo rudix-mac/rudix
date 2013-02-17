@@ -15,9 +15,11 @@ cd $(BuildDir) ; $(make) \
 $(install_base_documentation)
 endef
 
+ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define test_build
 cd $(BuildDir) ; $(make) test
 endef
+endif
 
 buildclean:
 	cd $(BuildDir) ; $(make) clean
