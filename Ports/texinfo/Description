@@ -1,0 +1,17 @@
+Texinfo is the official documentation format of the GNU project.
+
+* Site: http://savannah.gnu.org/projects/texinfo
+* License: GPL
+
+Release Notes:
+
+* Adopted version 5.0
+
+Install with Rudix command line:
+
+	sudo rudix install texinfo
+
+Basic usage and help:
+
+	/usr/local/bin/info --help
+	/usr/local/bin/texindex --help
