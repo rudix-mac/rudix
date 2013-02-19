@@ -1,0 +1,16 @@
+Trac is an enhanced wiki and issue tracking system for software development projects. 
+
+* Site: http://trac.edgewall.org
+* License: BSD
+
+Release Notes:
+
+* Adopted version 1.0.1
+
+Install with Rudix command line:
+
+	sudo rudix install trac
+
+Basic usage and help:
+
+	tracd
