@@ -25,9 +25,9 @@ NumCPU = $(shell sysctl -n hw.ncpu)
 ifeq ($(OSXVersion),10.8)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.7)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch x86_64 -arch i386,-arch x86_64)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.6)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch ppc -arch i386,-arch i386)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch i386)
 else
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch ppc -arch i386,-arch i386)
 endif
