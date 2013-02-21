@@ -1,12 +1,12 @@
-# GNUFormula.mk - GNU Configure Formula
+# GNU Configure Formula
 #
-# Copyright (c) 2011-2012 Ruda Moura
+# Copyright (c) 2011-2013 Rudix
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
 ifeq ($(RUDIX_ENABLE_NLS),yes)
 GnuConfigureExtra += --enable-nls
-BuildRequires += /usr/local/lib/libintl.la
+BuildRequires += $(LibDir)/libintl.la
 else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
@@ -48,15 +48,15 @@ endef
 
 define build_inner_hook
 $(call info_color,Running Configure)
-cd $(BuildDir) ; \
+cd $(BuildDir) && \
 env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
 $(gnu_configure)
 $(call info_color,Done)
-cd $(BuildDir) ; $(make) $(MakeExtra)
+cd $(BuildDir) && $(make) $(MakeExtra)
 endef
 
 define install_inner_hook
-cd $(BuildDir) ; \
+cd $(BuildDir) && \
 $(make) install DESTDIR="$(PortDir)/$(InstallDir)" $(MakeInstallExtra)
 $(install_base_documentation)
 $(install_gnu_documentation)
@@ -64,10 +64,11 @@ endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define test_build
-cd $(BuildDir) ; $(make) check || $(call error_color,One or more tests failed)
+cd $(BuildDir) && \
+$(make) check || $(call error_color,One or more tests failed)
 endef
 endif
 
 buildclean:
-	cd $(BuildDir) ; $(make) clean
+	cd $(BuildDir) && $(make) clean
 	rm -f build
