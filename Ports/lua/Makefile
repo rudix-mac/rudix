@@ -2,10 +2,11 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.2.1
+Version=	5.2.2
 Revision=	0
-URL=		http://www.lua.org/ftp/
-Source=		$(Name)-$(Version).tar.gz
+#URL=		http://www.lua.org/ftp/
+URL=		http://www.lua.org/work/
+Source=		$(Name)-$(Version)-rc1.tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	license.txt
@@ -23,5 +24,5 @@ otool -L $(InstallDir)/$(BinDir)/lua | grep libedit
 endef
 
 define test_inner_hook
-$(BinDir)/lua -v
+$(BinDir)/lua -v | grep $(Version)
 endef

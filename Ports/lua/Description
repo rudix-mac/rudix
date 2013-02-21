@@ -1,7 +1,16 @@
 Lua is a powerful, fast, lightweight, embeddable scripting language.
 
-  * Site: http://www.lua.org/
-  * License: MIT
+* Site: http://www.lua.org/
+* License: MIT
 
 Release Notes:
-  * Upgraded to version 5.2.1
+
+* Upgraded to version 5.2.2-rc1
+
+Install with Rudix command line:
+
+	sudo rudix install lua
+
+Basic usage and help:
+
+	lua
