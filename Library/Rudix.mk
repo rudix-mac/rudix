@@ -134,7 +134,7 @@ pkgclean:
 	rm -rf pkg *.pkg Distribution Resources
 
 clean: installclean
-	rm -rf checksum prep build test $(SourceDir) *~
+	rm -rf checksum prep build check test $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f config.cache*
