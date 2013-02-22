@@ -24,3 +24,5 @@ static
 *.jar
 *.orig
 config.cache
+Distribution
+Resources

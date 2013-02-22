@@ -5,7 +5,6 @@ Provide some description here, just a single paragraph or two is enough.
 
 Release Notes:
 
-* What's changed?
 * A few items (or just one) is OK
 
 Install with Rudix command line:
@@ -15,10 +14,3 @@ Install with Rudix command line:
 Basic usage and help:
 
 	foo --help
-	foo action
-
-Manifest:
-
-	/usr/local/bin/foo
-	/usr/local/share/doc/foo/
-	/usr/local/lib/libfoo*
