@@ -88,6 +88,15 @@ build: prep $(BuildRequires)
 	@$(call info_color,Done)
 	@touch $@
 
+# Check build
+check: build
+	@$(call info_color,Checking build)
+	@$(call check_pre_hook)
+	@$(call check_inner_hook)
+	@$(call check_post_hook)
+	@$(call info_color,Done)
+	@touch $@
+
 # Install into a temporary directory
 install: build
 	@$(call info_color,Installing)
@@ -107,7 +116,7 @@ pkg: install
 	@touch $@
 
 # Run all tests
-test: pkg
+test: pkg check
 	@$(call info_color,Testing)
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
@@ -339,7 +348,6 @@ $(create_pkg)
 endef
 
 define test_pre_hook
-$(test_build)
 $(test_universal)
 $(test_non_native_dylib)
 $(test_apache_modules)

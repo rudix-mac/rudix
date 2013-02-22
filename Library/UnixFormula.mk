@@ -16,11 +16,11 @@ $(install_base_documentation)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
-define test_build
+define check_inner_hook
 cd $(BuildDir) && $(make) test
 endef
 endif
 
 buildclean:
 	cd $(BuildDir) && $(make) clean
-	rm -f build
+	rm -f build check

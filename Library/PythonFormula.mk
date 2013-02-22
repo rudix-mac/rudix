@@ -43,7 +43,7 @@ $(install_base_documentation)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
-define test_build
+define check_inner_hook
 cd $(BuildDir) && \
 $(Python) setup.py test || $(call error_color,One or more tests failed)
 endef
@@ -51,4 +51,4 @@ endif
 
 buildclean:
 	cd $(BuildDir) && $(Python) setup.py clean
-	rm -f build
+	rm -f build check
