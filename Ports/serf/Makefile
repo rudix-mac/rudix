@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://serf.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 ifdef ONLY_STATIC_LIBS

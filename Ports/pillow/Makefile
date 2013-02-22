@@ -10,7 +10,6 @@ Revision=	0
 URL=		http://pypi.python.org/packages/source/P/Pillow/
 Source=		Pillow-$(Version).zip
 
-ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/PKG-INFO
 
 UncompressedName = Pillow-$(Version)

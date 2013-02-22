@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/gmp/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 #GnuConfigureExtra += --enable-fat=yes
 GnuConfigureExtra += --enable-cxx

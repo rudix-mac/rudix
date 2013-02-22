@@ -7,8 +7,6 @@ Revision=	4
 URL=		http://www.webdav.org/cadaver/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-ssl
 

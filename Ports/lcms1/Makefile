@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/lcms/files/lcms/$(Version)/
 Source=		lcms-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.1st
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = lcms-$(Version)
 

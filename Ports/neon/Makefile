@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://www.webdav.org/neon/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
 GnuConfigureExtra += --with-ssl=openssl

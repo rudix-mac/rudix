@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/xmp/files/xmp/$(Version)
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/docs/COPYING
 
 define install_post_hook
 rm -rf $(InstallDir)/etc

@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://mirror.irssi.org/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-perl=no # disabled for now
 

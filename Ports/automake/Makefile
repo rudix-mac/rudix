@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/automake/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 EnvExtra += AUTOCONF=/usr/local/bin/autoconf
 

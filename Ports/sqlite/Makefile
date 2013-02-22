@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://www.sqlite.org/
 Source=		$(Name)-autoconf-$(AltVersion).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/INSTALL
 
 UncompressedName = sqlite-autoconf-$(AltVersion)

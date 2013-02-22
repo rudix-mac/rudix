@@ -10,7 +10,6 @@ URL=		http://sourceforge.net/projects/wput/files/$(Name)/$(Version)
 Source=		$(Name)-$(Version).tgz
 
 ReadMeFile=	Description
-LicenseFile=	$(SourceDir)/COPYING
 
 # Due static-gettext
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)

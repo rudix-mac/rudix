@@ -7,5 +7,3 @@ Revision=	1
 URL=		http://camaya.net/download/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING

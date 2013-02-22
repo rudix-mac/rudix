@@ -10,7 +10,6 @@ Revision=	1
 URL=		http://repo.varnish-cache.org/source/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define install_post_hook

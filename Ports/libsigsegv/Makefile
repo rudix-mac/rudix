@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/libsigsegv/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 #ifdef STATIC_ONLY
 #CONFIG_OPTS+=	--enable-static=yes --enable-shared=no

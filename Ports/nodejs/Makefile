@@ -10,7 +10,6 @@ Revision=	0
 URL=		http://nodejs.org/dist/v$(Version)
 Source=		$(Name)-v$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName = $(Name)-v$(Version)

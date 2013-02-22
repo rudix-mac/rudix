@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://downloads.sourceforge.net/cntlm
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 define install_post_hook

@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://luajit.org/download
 Source=		LuaJIT-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 define test_build

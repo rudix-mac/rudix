@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://feedparser.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook

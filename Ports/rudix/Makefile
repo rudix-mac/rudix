@@ -7,7 +7,6 @@ Revision=	0
 URL=		https://github.com/downloads/rudix-mac/package-manager
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook

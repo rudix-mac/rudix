@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/gnuplot/files/gnuplot/$(Version)/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/Copyright
 
 GnuConfigureExtra += --with-readline=builtin

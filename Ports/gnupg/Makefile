@@ -7,5 +7,3 @@ Revision=	0
 URL=		ftp://ftp.gnupg.org/gcrypt/gnupg/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING

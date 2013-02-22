@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://www.lag.net/paramiko/download/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook

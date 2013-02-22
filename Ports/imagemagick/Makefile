@@ -10,7 +10,6 @@ Revision=	0
 URL=		http://www.imagemagick.org/download
 Source=		ImageMagick-$(Version)-7.tar.bz2
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName = ImageMagick-$(Version)-7

@@ -9,8 +9,6 @@ Revision=	4
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 #GnuConfigureExtra += --with-included-gettext
 

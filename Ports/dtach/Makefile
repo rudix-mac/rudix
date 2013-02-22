@@ -7,8 +7,6 @@ Revision=	8
 URL=		http://downloads.sourceforge.net/dtach
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define install_inner_hook
 $(install_base_documentation)

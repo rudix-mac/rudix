@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://www.lua.org/work/
 Source=		$(Name)-$(Version)-rc1.tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	license.txt
 
 MakeExtra += macosx MYLDFLAGS="$(LdFlags)"

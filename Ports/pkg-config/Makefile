@@ -13,8 +13,6 @@ Revision=	1
 URL=		http://pkgconfig.freedesktop.org/releases/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define test_inner_hook
 $(BinDir)/pkg-config --version

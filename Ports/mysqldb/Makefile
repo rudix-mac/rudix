@@ -13,7 +13,6 @@ URL=		http://download.sourceforge.net/sourceforge/mysql-python/
 URL=		http://sourceforge.net/projects/mysql-python/files/mysql-python/$(Version)/
 Source=		MySQL-python-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/PKG-INFO
 
 UncompressedName = MySQL-python-$(Version)

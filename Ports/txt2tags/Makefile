@@ -9,8 +9,6 @@ Revision=	1
 URL=		http://txt2tags.googlecode.com/files/
 Source=		$(Name)-$(Version).tgz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define prep_post_hook
 cp txt2tags.Makefile $(SourceDir)/Makefile

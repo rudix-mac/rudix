@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv

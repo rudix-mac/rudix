@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/swig/files/swig/swig-$(Version)
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 GnuConfigureExtra += --disable-ccache # due configure error

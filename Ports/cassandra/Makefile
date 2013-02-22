@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://www.apache.org/dist/cassandra/apache-cassandra/$(Version)/
 Source=		apache-$(Name)-$(Version)-bin.tar.gz
 
-ReadMeFile=	$(InstallDir)/$(LibDir)/cassandra/README.txt
 LicenseFile=	$(InstallDir)/$(LibDir)/cassandra/LICENSE
 
 define install_inner_hook

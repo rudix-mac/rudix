@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://pypi.python.org/packages/source/s/simplejson
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define test_inner_hook

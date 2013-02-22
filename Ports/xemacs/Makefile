@@ -14,8 +14,6 @@ Revision=	0
 URL=		http://ftp.xemacs.org/pub/xemacs/beta/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ConfigureExtra += --with-mule
 

@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://www.mpg123.de/download/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-cpu=x86-64
 

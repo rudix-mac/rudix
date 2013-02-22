@@ -12,7 +12,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/optipng/files/OptiPNG/$(Name)-$(Version)/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README.txt
 LicenseFile=	$(BuildDir)/LICENSE.txt
 
 GnuMakeInstallExtra+= mandir=$(ManDir)

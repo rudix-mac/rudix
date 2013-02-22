@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://elinks.or.cz/download/
 Source=		$(Name)-current-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = elinks-$(Version)-20120407
 

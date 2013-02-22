@@ -7,8 +7,6 @@ Revision=	3
 URL=		http://ftp.gnu.org/gnu/gmp/
 Source=		gmp-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = gmp-$(Version)
 

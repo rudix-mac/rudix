@@ -9,8 +9,6 @@ Revision=	3
 URL=		http://lynx.isc.org/release/
 Source=		$(Name)$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = lynx2-8-7
 

@@ -10,7 +10,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/w3m/files/w3m/w3m-$(Version)
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	LICENSE
 
 GnuConfigureExtra += --enable-cplusplu

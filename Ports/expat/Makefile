@@ -22,7 +22,6 @@ build: prep $(DEPENDS)
 install: build
 	cd $(BUILDDIR) ; make DESTDIR=$(INSTALLDIR) install
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{COPYING,Changes,README,doc/*} $(INSTALLDOCDIR)
 	rm $(INSTALLDIR)/usr/local/share/doc/expat/*.1
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x $(INSTALLDIR)/usr/local/lib/lib*.dylib

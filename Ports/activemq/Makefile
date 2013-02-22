@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://www.apache.org/dist//activemq/apache-activemq/$(Version)/
 Source=		apache-$(Name)-$(Version)-bin.tar.gz
 
-ReadMeFile=	$(InstallDir)/$(LibDir)/activemq/README.txt
 LicenseFile=	$(InstallDir)/$(LibDir)/activemq/LICENSE
 
 UncompressedName=apache-activemq-$(Version)

@@ -8,8 +8,6 @@ Revision=	1
 URL=		http://ftp.gnu.org/gnu/m4/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 
 define install_post_hook

@@ -9,5 +9,4 @@ Revision=	0
 URL=		http://pypi.python.org/packages/source/m/mercurial_keyring/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/PKG-INFO

@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://mirrors.zerg.biz/stunnel/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define install_post_hook
 mv $(InstallDir)/usr/local/etc/stunnel/stunnel.conf-sample \

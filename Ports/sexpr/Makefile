@@ -7,7 +7,6 @@ Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)_$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=$(Name)_$(Version)

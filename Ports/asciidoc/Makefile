@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/asciidoc/files/asciidoc/$(Version)/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
 
 define install_post_hook
 mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \

@@ -7,8 +7,6 @@ Revision=	13
 URL=		http://ftp.easysw.com/pub/htmldoc/$(Version)/
 Source=		$(Name)-$(Version)-source.tar.bz2
 
-ReadMeFile=	$(SourceDir)/README.txt
-LicenseFile=	$(SourceDir)/COPYING.txt
 
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
 MakeInstallExtra += bindir=$(PortDir)/$(InstallDir)/$(BinDir)

@@ -9,8 +9,6 @@ Revision=	4
 URL=		http://ftp.gnu.org/gnu/findutils/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation

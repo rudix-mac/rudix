@@ -9,8 +9,6 @@ Revision=	11
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifdef ONLY_STATIC_LIBS
 GnuConfigureExtra += --enable-static --disable-shared

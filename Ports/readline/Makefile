@@ -7,8 +7,6 @@ Revision=	2
 URL=		http://ftp.gnu.org/gnu/readline/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-curses
 GnuMakeInstallExtra += install-doc

@@ -7,8 +7,6 @@ Revision=	3
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define install_post_hook
 install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)

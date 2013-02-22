@@ -7,7 +7,6 @@ Revision=	1
 URL=		http://pypi.python.org/packages/source/m/meld3/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYRIGHT.txt
 
 define test_inner_hook

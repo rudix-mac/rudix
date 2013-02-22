@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://cairographics.org/releases/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 EnvExtra+=PKG_CONFIG_PATH="$(LibDir)/pkgconfig:/usr/X11R6/lib/pkgconfig"
 GnuConfigureExtra+=--with-html-dir=$(DocDir)/cairo

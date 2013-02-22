@@ -10,7 +10,6 @@ URL=		http://downloads.sourceforge.net/$(Name)
 URL=		http://sourceforge.net/projects/p7zip/files/p7zip/$(Version)/
 Source=		$(Name)_$(Version)_src_all.tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/DOCS/License.txt
 
 UncompressedName = $(Name)_$(Version)

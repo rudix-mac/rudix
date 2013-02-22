@@ -12,8 +12,6 @@ Revision=	2
 URL=		ftp://invisible-island.net/dialog/
 Source=		$(Name)-$(Version)-$(AltVersion).tgz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = $(Name)-$(Version)-$(AltVersion)
 

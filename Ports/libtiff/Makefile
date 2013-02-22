@@ -7,7 +7,6 @@ Revision=	0
 URL=		ftp://ftp.remotesensing.org/pub/libtiff
 Source=		tiff-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName = tiff-$(Version)

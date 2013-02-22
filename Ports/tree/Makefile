@@ -12,7 +12,6 @@ Revision=	0
 URL=		http://mama.indstate.edu/users/ice/tree/src/
 Source=		$(Name)-$(Version).tgz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/usr/local

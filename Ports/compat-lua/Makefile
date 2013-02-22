@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://www.lua.org/ftp/
 Source=		lua-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName = lua-$(Version)

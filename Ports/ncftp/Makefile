@@ -7,7 +7,6 @@ Revision=	2
 Source=		$(Name)-$(Version)-src.tar.bz2
 URL=		ftp://ftp.ncftp.com/ncftp
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/doc/LICENSE.txt
 
 #GnuConfigureExtra += --disable-universal 

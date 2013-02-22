@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define retrieve_post_hook
 $(fetch) $(URL)/git-manpages-$(Version).tar.gz

@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://rpm5.org/files/popt/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 # ifdef WITHOUT_NLS
 # NLS=		--disable-nls

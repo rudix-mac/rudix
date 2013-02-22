@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://ftp.yars.free.net/pub/source/lftp
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules

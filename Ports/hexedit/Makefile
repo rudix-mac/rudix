@@ -8,6 +8,5 @@ URL=		http://www.chez.com/prigaux/
 Source=		$(Name)-$(Version).src.tgz
 
 ReadMeFile=	$(PortDir)/ReadMe.txt
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = hexedit

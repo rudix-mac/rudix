@@ -10,8 +10,6 @@ Revision=	0
 URL=		http://libtorrent.rakshasa.no/downloads/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-kqueue
 GnuConfigureExtra += --with-openssl

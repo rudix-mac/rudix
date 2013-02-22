@@ -7,8 +7,6 @@ Revision=	6
 URL=		http://downloads.sourceforge.net/frotz
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)$(Prefix)
 MakeInstallExtra += MAN_PREFIX=$(PortDir)/$(InstallDir)$(ManDir)

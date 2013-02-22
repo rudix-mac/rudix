@@ -7,8 +7,6 @@ Revision=	1
 URL=		ftp://ftp.bitwizard.nl/mtr/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ConfigureExtra += --without-gtk
 LdFlags += -lresolv

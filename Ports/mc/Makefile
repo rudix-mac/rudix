@@ -12,8 +12,6 @@ Revision=	0
 URL=		http://www.midnight-commander.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 #GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += --with-screen=ncurses

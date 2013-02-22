@@ -9,5 +9,4 @@ Revision=	0
 URL=		http://pypi.python.org/packages/source/t/twitter/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/PKG-INFO

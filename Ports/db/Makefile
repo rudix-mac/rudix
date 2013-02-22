@@ -12,7 +12,6 @@ Revision=	0
 URL=		http://download.oracle.com/otn/berkeley-db/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 ifdef STATIC_ONLY

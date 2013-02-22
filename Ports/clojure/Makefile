@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://repo1.maven.org/maven2/org/clojure/clojure/$(Version)
 Source=		$(Name)-$(Version).zip
 
-ReadMeFile=	$(InstallDir)/$(LibDir)/clojure-$(Version)/README.txt
 LicenseFile=	$(InstallDir)/$(LibDir)/clojure-$(Version)/epl-v10.html
 
 define prep_inner_hook

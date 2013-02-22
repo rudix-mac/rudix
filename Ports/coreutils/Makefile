@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/coreutils/
 Source=		$(Name)-$(Version).tar.xz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation

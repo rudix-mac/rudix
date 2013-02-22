@@ -7,7 +7,6 @@ Revision=	1
 URL=		http://www.apache.org/dist/apr
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/LICENSE
 
 GnuConfigureExtra += --with-installbuilddir=/usr/local/share/apr-1/build-1

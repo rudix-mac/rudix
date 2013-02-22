@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://www.harding.motd.ca/autossh/
 Source=		$(Name)-$(Version).tgz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/README
 
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/usr/local
 MakeInstallExtra += mandir=$(PortDir)/$(InstallDir)/usr/local/share/man

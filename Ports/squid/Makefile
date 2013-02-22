@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://www.squid-cache.org/Versions/v2/$(Version)/
 Source=		$(Name)-$(Version).$(AltVersion).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName = $(Name)-$(Version).$(AltVersion)

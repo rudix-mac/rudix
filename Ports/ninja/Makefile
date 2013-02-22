@@ -8,8 +8,6 @@ Revision=	0
 URL=		git://github.com/martine
 Source=		ninja.git
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define retrieve_inner_hook
 git clone $(URL)/$(Source) $(SourceDir)

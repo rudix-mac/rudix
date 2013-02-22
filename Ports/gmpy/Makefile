@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://gmpy.googlecode.com/files/
 Source=		$(Name)-$(Version).zip
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/lgpl-2.1.txt
 
 define test_inner_hook

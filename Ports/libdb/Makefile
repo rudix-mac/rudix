@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://download.oracle.com/otn/berkeley-db/
 Source=		db-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName = db-$(Version)

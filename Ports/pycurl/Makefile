@@ -9,5 +9,3 @@ Revision=	1
 URL=		http://pycurl.sourceforge.net/download/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING2

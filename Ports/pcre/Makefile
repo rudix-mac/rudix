@@ -7,7 +7,6 @@ Revision=	0
 URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENCE
 
 GnuConfigureExtra += --enable-utf8

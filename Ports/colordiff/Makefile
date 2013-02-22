@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://colordiff.sourceforge.net/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
 
 define prep_post_hook
 cd $(BuildDir) ; mv INSTALL _INSTALL

@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://downloads.sourceforge.net/aria2
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README.rst
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-included-gettext
 

@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://valgrind.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --enable-only64bit
 #GnuConfigureExtra += --enable-only32bit

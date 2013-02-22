@@ -15,7 +15,6 @@ REVISION=	0
 URL=		http://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/
 SOURCE=		$(NAME)-$(VERSION).tar.bz2
 
-README=		$(BUILDDIR)/README
 LICENSE=	$(BUILDDIR)/COPYRIGHT
 
 # Need this to compile with Perl
@@ -36,7 +35,6 @@ install: build
 	cd $(INSTALLDIR)/usr/local/bin ; ln -sf epic5 irc
 	cd $(INSTALLDIR)/usr/local/share/man/man1 ; ln -sf epic5.1 irc.1
 	install -d $(INSTALLDOCDIR)
-	install -m 644 $(BUILDDIR)/{BUG_FORM,COPYRIGHT,KNOWNBUGS,README,UPDATES,VOTES} $(INSTALLDOCDIR)
 	strip $(INSTALLDIR)/usr/local/bin/*
 	strip -x -S $(INSTALLDIR)/usr/local/libexec/*
 	touch install

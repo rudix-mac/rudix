@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://sourceforge.net/projects/jython/files/jython-dev/2.7.0a2/
 Source=		jython_installer-$(Version).jar
 
-ReadMeFile=	$(InstallDir)/$(LibDir)/jython-$(Version)/README.txt
 LicenseFile=	$(InstallDir)/$(LibDir)/jython-$(Version)/LICENSE.txt
 
 define prep_inner_hook

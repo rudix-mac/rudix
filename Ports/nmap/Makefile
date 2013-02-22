@@ -8,7 +8,6 @@ URL=		http://nmap.org/dist/
 Source=		$(Name)-$(Version).tar.bz2
 
 ReadMeFile=	$(SourceDir)/HACKING
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --without-zenmap
 

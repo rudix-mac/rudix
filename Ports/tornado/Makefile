@@ -7,7 +7,6 @@ Revision=	0
 URL=		https://github.com/downloads/facebook/tornado
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE-2.0
 
 define test_inner_hook

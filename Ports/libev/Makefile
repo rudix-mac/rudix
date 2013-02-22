@@ -7,5 +7,4 @@ Revision=	2
 URL=		http://dist.schmorp.de/libev/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE

@@ -12,7 +12,5 @@ Source=		$(Name)-src-$(Version).tar.bz2
 
 UncompressedName = $(Name)
 
-ReadMeFile=	$(SourceDir)/doc/README.txt
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --disable-pic14-port --disable-pic16-port

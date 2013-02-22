@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://downloads.powerdns.com/releases/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define test_inner_hook
 $(SBinDir)/pdns_recursor --version || [ $$? == 99 ]

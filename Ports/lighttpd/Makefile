@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://download.lighttpd.net/lighttpd/releases-1.4.x/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --libdir=$(LibDir)/lighttpd

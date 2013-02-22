@@ -11,8 +11,6 @@ Revision=	0
 URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.33
 Source=		$(Name)-$(Version).tar.xz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifdef ONLY_STATIC_LIBS
 GnuConfigureExtra += --enable-static --disable-shared

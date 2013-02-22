@@ -1,11 +1,11 @@
 #
-# Rudix.mk - The BuildSystem itself
+# The BuildSystem itself
 #
-# Copyright (c) 2005-2013 Rudá Moura
+# Copyright (c) 2005-2013 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20130216
+BuildSystem = 20130221
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -16,6 +16,9 @@ InstallDir = $(Name)-install
 DistName = $(Name)
 PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version)-$(Revision).pkg
+
+ReadMeFile = $(SourceDir)/README
+LicenseFile = $(SourceDir)/COPYING
 
 #
 # Build flags options

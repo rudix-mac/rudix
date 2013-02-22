@@ -10,7 +10,6 @@ Revision=	1
 URL=		http://effbot.org/media/downloads/
 Source=		Imaging-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
 UncompressedName = Imaging-$(Version)

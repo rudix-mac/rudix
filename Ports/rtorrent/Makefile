@@ -12,8 +12,6 @@ Source=		$(Name)-$(Version).tar.gz
 
 EnvExtra += PKG_CONFIG_PATH="/usr/lib/pkgconfig"
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define test_inner_hook
 $(BinDir)/rtorrent -h

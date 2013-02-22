@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://pypi.python.org/packages/source/p/pylibmc/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook

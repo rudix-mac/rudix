@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://caml.inria.fr/pub/distrib/ocaml-3.12/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 

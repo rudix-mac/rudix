@@ -7,8 +7,6 @@ Revision=	9
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).src.tar.gz
 
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
 
 define test_inner_hook
 /usr/local/bin/bvi -c q

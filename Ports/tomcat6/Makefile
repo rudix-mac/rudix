@@ -9,7 +9,6 @@ Revision=	0
 URL=		http://archive.apache.org/dist/tomcat/tomcat-6/v$(Version)/bin/
 Source=		apache-tomcat-$(Version).tar.gz
 
-ReadMeFile=	README
 LicenseFile=	LICENSE
 
 define prep_inner_hook

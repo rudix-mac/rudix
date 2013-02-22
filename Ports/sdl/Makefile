@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://www.libsdl.org/release
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = sdl-$(Version) # Just in case…
 

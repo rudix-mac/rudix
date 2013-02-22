@@ -10,8 +10,6 @@ Source=		gettext-$(Version).tar.gz
 UncompressedName=gettext-$(Version)
 BuildDir=$(SourceDir)/gettext-runtime
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-java

@@ -11,7 +11,6 @@ Revision=	0
 URL=		http://downloads.xiph.org/releases/flac/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 # collect2: ld terminated with signal 10 [Bus error]

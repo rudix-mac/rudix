@@ -7,7 +7,6 @@ Revision=	2
 URL=		http://sourceforge.net/projects/pychecker/files/pychecker/$(Version)/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 define test_inner_hook

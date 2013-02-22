@@ -9,8 +9,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/gawk/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation

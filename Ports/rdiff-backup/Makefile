@@ -9,5 +9,3 @@ Revision=	4
 URL=		http://savannah.nongnu.org/download/rdiff-backup/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING

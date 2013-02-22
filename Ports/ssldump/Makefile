@@ -7,7 +7,6 @@ Revision=	3
 URL=		http://www.rtfm.com/ssldump/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 GnuConfigureExtra += --host=i386-freebsd

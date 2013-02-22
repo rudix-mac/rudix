@@ -9,7 +9,6 @@ Revision=	4
 URL=		ftp://ftp.mutt.org/mutt/devel/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)

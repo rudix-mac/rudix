@@ -7,7 +7,6 @@ Revision=	0
 URL=		ftp://ftp.cac.washington.edu/mail/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define build_inner_hook

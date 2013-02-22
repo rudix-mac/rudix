@@ -9,8 +9,6 @@ Revision=	0
 URL=		https://github.com/downloads/spaetz/offlineimap
 Source=		$(Name)-v$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 UncompressedName = spaetz-offlineimap-c9e9690
 

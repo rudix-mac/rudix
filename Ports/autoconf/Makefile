@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://ftp.gnu.org/gnu/autoconf/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define test_inner_hook
 $(BinDir)/autoconf --version

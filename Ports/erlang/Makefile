@@ -9,7 +9,6 @@ Source=		otp_src_$(Version).tar.gz
 
 UncompressedName=otp_src_$(Version)
 
-ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/EPLICENCE
 
 define retrieve_post_hook

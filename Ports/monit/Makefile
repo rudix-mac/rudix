@@ -7,8 +7,6 @@ Revision=	0
 URL=		http://mmonit.com/monit/dist/
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 define install_post_hook
 chmod +w $(PortDir)/$(InstallDir)/$(BinDir)/monit

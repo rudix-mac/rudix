@@ -8,7 +8,6 @@ Revision=	0
 URL=		http://go.googlecode.com/files
 Source=		$(Name)$(Version).src.tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=go

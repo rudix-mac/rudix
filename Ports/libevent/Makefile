@@ -7,7 +7,6 @@ Revision=	0
 URL=		http://github.com/downloads/libevent/libevent/
 Source=		$(Name)-$(Version)-stable.tar.gz
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName = $(Name)-$(Version)-stable
