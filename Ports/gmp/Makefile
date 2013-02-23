@@ -8,3 +8,7 @@ URL=		http://ftp.gnu.org/gnu/gmp/
 Source=		$(Name)-$(Version).tar.bz2
 
 GnuConfigureExtra += --enable-cxx
+
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
