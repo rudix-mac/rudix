@@ -1,7 +1,16 @@
 Guile is the GNU Ubiquitous Intelligent Language for Extensions, the official extension language for the GNU operating system.
 
-  * Site: http://www.gnu.org/software/guile/
-  * License: LGPL
+* Site: http://www.gnu.org/software/guile/
+* License: LGPL
 
 Release Notes:
-  * Upgraded to version 1.8.8
+
+* Upgraded to version 1.8.8
+
+Install with Rudix command line:
+
+	sudo rudix install guile
+
+Basic usage and help:
+
+	guile
