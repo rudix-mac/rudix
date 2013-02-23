@@ -50,5 +50,5 @@ endef
 endif
 
 buildclean:
-	cd $(BuildDir) && $(Python) setup.py clean
+	cd $(BuildDir) && $(Python) setup.py clean || $(call warning_color,Cannot clean)
 	rm -f build check

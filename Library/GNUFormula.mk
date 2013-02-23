@@ -70,5 +70,5 @@ endef
 endif
 
 buildclean:
-	cd $(BuildDir) && $(make) clean
+	cd $(BuildDir) && $(make) clean || $(call warning_color,Cannot clean)
 	rm -f build check
