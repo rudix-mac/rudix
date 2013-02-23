@@ -27,3 +27,7 @@ endef
 define final_post_hook
 $(BinDir)/guile -v | grep $(Version)
 endef
+
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
