@@ -5,11 +5,11 @@ include ../../Library/GNU.mk
 Title=		GNU Zile
 Name=		zile
 Version=	2.4.9
-Revision=	0
+Revision=	1
 URL=		http://ftp.gnu.org/gnu/zile/
 Source=		$(Name)-$(Version).tar.gz
 
 
 define test_inner_hook
-$(BinDir)/zile --version
+$(BinDir)/zile --version | grep $(Version)
 endef
