@@ -1,17 +1,15 @@
+BuildRequires += $(LibDir)/libxmp.a # static-libxmp
+
 include ../../Library/GNU.mk
 
 Title=		Extended Module player
 Name=		xmp
-Version=	3.5.0
+Version=	4.0.1
 Revision=	0
-URL=		http://sourceforge.net/projects/xmp/files/xmp/$(Version)
+URL=		http://downloads.sourceforge.net/project/xmp/xmp/$(Version)
 Source=		$(Name)-$(Version).tar.gz
 
-
-define install_post_hook
-rm -rf $(InstallDir)/etc
-endef
-
 define test_inner_hook
-$(BinDir)/xmp --version
+$(BinDir)/xmp --version | grep $(Version)
+$(BinDir)/xmp $(SourceDir)/delicate_oooz\!.mod
 endef

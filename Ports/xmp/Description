@@ -1,8 +1,14 @@
 The Extended Module Player, or xmp, is a portable command-line module player for Unix and Unix-like systems.
 
-  * Site: http://xmp.sourceforge.net
-  * License: GPL
+* Site: http://xmp.sourceforge.net
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 3.5.0
 
+* Upgraded to version 4.0.1
+* Built with libxmp 4.0.2
+
+Installation and usage:
+
+	sudo rudix install xmp
+	xmp --help
