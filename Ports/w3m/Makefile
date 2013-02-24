@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libgc.la # static-gc
 BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libgc.la # static-gc
 
 include ../../Library/GNU.mk
 
@@ -18,10 +18,6 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation
 endif
 
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
-
 define test_inner_hook
-$(BinDir)/w3m -version
+$(BinDir)/w3m -version | grep $(Version)
 endef

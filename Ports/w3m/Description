@@ -1,7 +1,13 @@
 w3m is a text-based web browser as well as a pager like `more' or `less'.
 
-  * Site: http://w3m.sourceforge.net/
-  * License: GPL
+* Site: http://w3m.sourceforge.net/
+* License: GPL
 
 Release Notes:
-  * Featuring in Rudix
+
+* Bump release
+
+Installation and usage:
+
+	sudo rudix install w3m
+	w3m -help
