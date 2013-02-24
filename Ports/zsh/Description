@@ -1,7 +1,15 @@
 Zsh is a shell designed for interactive use, although it is also a powerful scripting language. Many of the useful features of bash, ksh, and tcsh were incorporated into zsh; many original features were added.
 
-  * Site: http://zsh.sourceforge.net/
-  * License: GPL
+* Site: http://zsh.sourceforge.net/
+* License: GPL
 
 Release Notes:
-  * Adopted by Rudix
+
+* Upgraded to version 5.0.2
+* Included info documentation
+
+Installation and usage:
+
+	sudo rudix install zsh
+	/usr/local/bin/zsh
+	zsh5
