@@ -161,18 +161,19 @@ static: buildclean installclean
 help:
 	@echo "Construction rules:"
 	@echo "  retrieve - Retrieve source"
-	@echo "  prep - After Prepare source to compile"
+	@echo "  prep - Expand source"
 	@echo "  build - Build source"
+	@echo "  check - Check build"
 	@echo "  install - Install into a temporary directory"
-	@echo "  pkg - Create package"
-	@echo "  test - Run all tests"
+	@echo "  pkg - Create a package"
+	@echo "  test - Run tests"
 	@echo "Clean-up rules:"
 	@echo "  clean - Clean up until retrieve"
 	@echo "  distclean - After clean, remove config.cache and package"
 	@echo "  realdistclean - After distclean, remove source"
 
 about:
-	@echo "$(Title): $(Name)-$(Version)-$(Revision)"
+	@echo "$(Name)-$(Version)-$(Revision)\t$(Title) $(Version)"
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about
 
