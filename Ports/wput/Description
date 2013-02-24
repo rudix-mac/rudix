@@ -1,7 +1,13 @@
 Wput is a command-line ftp-client that looks like wget but instead of downloading, uploads files or whole directories to remote ftp-servers.
 
-  * Site: http://wput.sourceforge.net/
-  * License: GPL
+* Site: http://wput.sourceforge.net/
+* License: GPL
 
 Release Notes:
-  * Adopted
+
+* Bumped release
+
+installation and usage:
+
+	sudo rudix install wput
+	wput --help
