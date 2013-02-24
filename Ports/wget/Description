@@ -1,7 +1,13 @@
 GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols.
 
-  * Site: http://www.gnu.org/software/wget/
-  * License: GPL
+* Site: http://www.gnu.org/software/wget/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 1.14
+
+* Bumped release
+
+Installation and usage:
+
+	sudo rudix install wget
+	wget --help
