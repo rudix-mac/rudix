@@ -1,0 +1,16 @@
+DASH is a POSIX-compliant implementation of /bin/sh that aims to be as small as possible.
+
+* Site: http://gondor.apana.org.au/~herbert/dash/
+* License: BSD
+
+Release Notes:
+
+* Adopted DASH version 0.5.7
+
+Install with Rudix command line:
+
+	sudo rudix install dash
+
+Basic usage and help:
+
+	dash
