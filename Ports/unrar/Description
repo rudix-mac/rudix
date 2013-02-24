@@ -1,7 +1,13 @@
 Extract, list, and test RAR archives.
 
-  * Site: http://www.rarlab.com/
-  * License: Freeware
+* Site: http://www.rarlab.com/
+* License: Freeware
 
 Release Notes:
-  * Upgraded to version 4.1.4
+
+* Upgraded to version 4.2.4
+
+Installation and usage:
+
+	sudo rudix install unrar
+	unrar

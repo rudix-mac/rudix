@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		unRAR
 Name=		unrar
-Version=	4.1.4
+Version=	4.2.4
 Revision=	0
 URL=		http://www.rarlab.com/rar/
 Source=		$(Name)src-$(Version).tar.gz
@@ -20,4 +20,8 @@ endef
 define install_post_hook
 install -d $(InstallDir)/$(BinDir)
 install -m 755 $(BuildDir)/unrar $(InstallDir)/$(BinDir)
+endef
+
+define test_inner_hook
+$(BinDir)/unrar
 endef
