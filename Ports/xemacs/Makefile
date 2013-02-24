@@ -1,15 +1,10 @@
-# Restored from Rudix-2010
-
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 
-include ../../Library/Config.mk
-RUDIX_PARALLEL_EXECUTION=no
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
+include ../../Library/Configure.mk
 
 Title=		XEmacs
 Name=		xemacs
-Version=	21.5.32
+Version=	21.5.33
 Revision=	0
 URL=		http://ftp.xemacs.org/pub/xemacs/beta/
 Source=		$(Name)-$(Version).tar.gz
@@ -30,5 +25,5 @@ for x in ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 gnuserv.1 ; do \
 endef
 
 define test_inner_hook
-$(BinDir)/xemacs --version
+$(BinDir)/xemacs --version | grep 21.5
 endef
