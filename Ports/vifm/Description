@@ -1,7 +1,13 @@
 Vifm is a ncurses based file manager with vi like keybindings.
 
-  * Site: http://vifm.sourceforge.net/index.html
-  * License: GPL
+* Site: http://vifm.sourceforge.net/index.html
+* License: GPL
 
 Release Notes:
-  * Featuring in Rudix
+
+* Upgraded to version 0.7.3a
+
+Installation and usage:
+
+	sudo rudix install vifm
+	vifm --help
