@@ -5,13 +5,10 @@ The PCRE library is a set of functions that implement regular expression pattern
 
 Release Notes:
 
-* Upgraded to version 8.32
+* Built with unicode-properties, pcregrep-libz and pcregrep-libvz2 enabled
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install pcre
-
-Basic usage and help:
-
-	pcregrep foo *.c
 	pcre-config --cflags --libs
+	pcregrep foo *.c
