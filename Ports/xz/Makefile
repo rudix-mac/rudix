@@ -1,12 +1,13 @@
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+
 include ../../Library/GNU.mk
 
 Title=		XZ Utils
 Name=		xz
 Version=	5.0.4
-Revision=	0
+Revision=	1
 URL=		http://tukaani.org/xz/
 Source=		$(Name)-$(Version).tar.bz2
-
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
