@@ -1,0 +1,13 @@
+Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
+
+* Site: http://vim.org/
+* License: Charityware (GPL-compatible)
+
+Release Notes:
+
+* Adopted Vim version 7.3
+
+Installation and usage:
+
+	sudo rudix install vim
+	/usr/local/bin/vim
