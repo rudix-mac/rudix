@@ -1,7 +1,14 @@
 Bash is the shell, or command language interpreter, that will appear in the GNU operating system.
 
-  * Site: http://www.gnu.org/software/bash/
-  * License: GPL
+* Site: http://www.gnu.org/software/bash/
+* License: GPL
 
 Release Notes:
-  * Applied patches bash42-001 to bash42-029
+
+* Built with patches bash42-001, ..., bash42-042
+
+Installation and usage:
+
+	sudo rudix install bash
+	/usr/local/bin/bash
+	bash5
