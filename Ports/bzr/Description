@@ -1,7 +1,13 @@
 Bazaar is a version control system that helps you track project history over time and to collaborate easily with others.
 
-  * Site: http://bazaar-vcs.org/
-  * License: GPL
+* Site: http://bazaar-vcs.org/
+* License: GPL
 
 Release Notes
-  * Upgraded to version 2.5.1
+
+* Bumped release
+
+Installation and usage:
+
+	sudo rudix install bzr
+	bzr 
