@@ -1,15 +1,15 @@
---- Makefile.orig	2012-06-20 14:35:14.000000000 -0300
-+++ Makefile	2012-06-20 14:39:21.000000000 -0300
+--- Makefile.orig	2012-10-17 17:14:35.000000000 -0300
++++ Makefile	2013-02-27 23:35:38.000000000 -0300
 @@ -1,6 +1,6 @@
  INSTALL_DIR=/usr/local/bin
 -MAN_DIR=/usr/local/man/man1
 -ETC_DIR=/etc
 +MAN_DIR=/usr/local/share/man/man1
 +ETC_DIR=/usr/local/etc
- VERSION=1.0.10
+ VERSION=$(shell egrep '^my .version' colordiff.pl |cut -f 2 -d "'")
  DIST_FILES=COPYING INSTALL Makefile README \
- 	colordiff.pl colordiffrc colordiffrc-lightbg cdiff.sh BUGS TODO CHANGES colordiff.1 \
-@@ -28,17 +28,16 @@
+ 	colordiff.pl colordiffrc colordiffrc-lightbg cdiff.sh BUGS CHANGES colordiff.1 \
+@@ -27,17 +27,16 @@
  	if [ ! -f ${DESTDIR}${INSTALL_DIR}/cdiff ] ; then \
  	  install cdiff.sh ${DESTDIR}${INSTALL_DIR}/cdiff; \
  	fi

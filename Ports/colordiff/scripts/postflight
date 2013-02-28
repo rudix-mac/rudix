@@ -1,0 +1,3 @@
+#!/bin/sh
+[ ! -f /usr/local/etc/colordiffrc ] && cp -f /usr/local/etc/colordiffrc.default /usr/local/etc/colordiffrc
+exit 0

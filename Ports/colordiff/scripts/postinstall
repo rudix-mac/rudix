@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/colordiffrc ] && \
+install -m 644 $3/usr/local/etc/colordiffrc.default \
+	$3/usr/local/etc/colordiffrc
+exit 0
