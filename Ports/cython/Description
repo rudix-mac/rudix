@@ -1,0 +1,13 @@
+Cython is a language that makes writing C extensions for the Python language as easy as Python itself.
+
+* Site: http://www.cython.org/
+* License: Apache License
+
+Release Notes:
+
+* Adopted Cython version 0.18
+
+Installation and usage:
+
+	sudo rudix install cython
+	cython --help
