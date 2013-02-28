@@ -1,8 +1,14 @@
 Multilanguage implementation of ctags.
 
-  * Site: http://ctags.sourceforge.net/
-  * License: GPL
+* Site: http://ctags.sourceforge.net/
+* License: GPL
 
 Release Notes:
-  * Fixed (null) errors
-  * Restored symlinks to exuberant-ctags and exuberant-etags
+
+* Bumped release
+
+Installation and usage:
+
+	sudo rudix install ctags
+	/usr/local/bin/ctags
+	exuberant-ctags

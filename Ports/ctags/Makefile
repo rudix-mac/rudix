@@ -4,10 +4,9 @@ OptFlags=-O1 # https://trac.macports.org/changeset/93604
 Title=		Exuberant Ctags
 Name=		ctags
 Version=	5.8
-Revision=	6
+Revision=	7
 URL=		http://downloads.sourceforge.net/ctags
 Source=		$(Name)-$(Version).tar.gz
-
 
 GnuConfigureExtra = --enable-etags
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
@@ -20,5 +19,5 @@ cd $(InstallDir)/$(ManDir)/man1 ; ln -sf ctags.1 exuberant-ctags.1 ; ln -sf etag
 endef
 
 define test_inner_hook
-$(BinDir)/ctags --version
+$(BinDir)/ctags --version | grep $(Version)
 endef
