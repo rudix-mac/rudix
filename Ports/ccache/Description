@@ -5,12 +5,9 @@ ccache is a compiler cache. It speeds up recompilation by caching previous compi
 
 Release Notes:
 
-*  Upgraded to version 3.1.9
+* Bumped release
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install ccache
-
-Basic usage and help:
-
 	ccache --help

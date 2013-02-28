@@ -3,10 +3,11 @@ include ../../Library/GNU.mk
 Title=		ccache
 Name=		ccache
 Version=	3.1.9
-Revision=	0
+Revision=	1
 URL=		http://samba.org/ftp/ccache/
 Source=		$(Name)-$(Version).tar.bz2
 
+ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define install_post_hook
@@ -18,5 +19,5 @@ install -m 644 $(BuildDir)/{*.txt,*.html} $(InstallDir)/$(DocDir)/ccache
 endef
 
 define test_inner_hook
-$(BinDir)/ccache --version
+$(BinDir)/ccache --version | grep $(Version)
 endef
