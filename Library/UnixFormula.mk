@@ -6,7 +6,7 @@
 
 define build_inner_hook
 cd $(BuildDir) && \
-$(make) $(MakeExtra) CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+$(make) $(MakeExtra) CFLAGS=$(CFlags) CXXFLAGS=$(CxxFlags) LDFLAGS=$(LdFlags)
 endef
 
 define install_inner_hook
@@ -17,7 +17,7 @@ endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define check_inner_hook
-cd $(BuildDir) && $(make) test
+cd $(BuildDir) && $(make) test || $(call error_color,One or more tests failed)
 endef
 endif
 
