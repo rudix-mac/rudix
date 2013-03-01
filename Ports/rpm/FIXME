@@ -1,0 +1,4 @@
+checking nspr.h usability... no
+checking nspr.h presence... no
+checking for nspr.h... no
+configure: error: missing required NSPR / NSS header
