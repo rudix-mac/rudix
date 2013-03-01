@@ -1,15 +1,17 @@
 include ../../Library/Unix.mk
+CFlags=
+LdFlags=
 
-Title=		Lua (Version 5.1)
+Title=		Lua
 Name=		compat-lua
 Version=	5.1.5
-Revision=	0
+Revision=	1
 URL=		http://www.lua.org/ftp/
 Source=		lua-$(Version).tar.gz
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-UncompressedName = lua-$(Version)
+UncompressedName=lua-$(Version)
 
 MakeExtra += macosx MYLDFLAGS="$(LdFlags)"
 MakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)

@@ -1,7 +1,13 @@
-Lua (Version 5.1) is a powerful, fast, lightweight, embeddable scripting language.
+Lua is a powerful, fast, lightweight, embeddable scripting language.
 
-  * Site: http://www.lua.org/
-  * License: MIT
+* Site: http://www.lua.org/
+* License: MIT
 
 Release Notes:
-  * Upgraded to version 5.1.5
+
+* Lua 5.1.5
+
+Installation and usage:
+
+	sudo rudix install compat-lua
+	lua
