@@ -1,7 +1,13 @@
 GnuPG is a complete and free implementation of the OpenPGP standard.
 
-  * Site: http://gnupg.org/
-  * License: GPL
+* Site: http://gnupg.org/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 1.4.12
+
+* Upgraded to version 1.4.13
+
+Installation and usage:
+
+	sudo rudix install gnupg
+	gpg --help
