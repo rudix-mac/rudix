@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		Cabextract
 Name=		cabextract
 Version=	1.4
-Revision=	3
+Revision=	4
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
 
