@@ -1,0 +1,13 @@
+lzop is a file compressor which is very similar to gzip.
+
+* Site: http://www.lzop.org
+* License: GPL
+
+Release Notes:
+
+* Adopted Lzop version 1.03
+
+Installation and usage:
+
+	sudo rudix install lzop
+	lzop --help
