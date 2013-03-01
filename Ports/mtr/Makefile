@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		MTR
 Name=		mtr
-Version=	0.82
-Revision=	1
+Version=	0.83
+Revision=	0
 URL=		ftp://ftp.bitwizard.nl/mtr/
 Source=		$(Name)-$(Version).tar.gz
-
 
 ConfigureExtra += --without-gtk
 LdFlags += -lresolv
@@ -20,5 +19,5 @@ install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
-sudo $(SBinDir)/mtr --version
+$(SBinDir)/mtr --version
 endef
