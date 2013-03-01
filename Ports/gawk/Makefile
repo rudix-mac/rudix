@@ -1,18 +1,13 @@
-BuildRequires += $(LibDir)/libintl.la
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
 Title=		GNU awk
 Name=		gawk
-Version=	4.0.1
+Version=	4.0.2
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/gawk/
 Source=		$(Name)-$(Version).tar.gz
-
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -liconv -framework CoreFoundation
-endif
 
 define install_post_hook
 rm -f $(InstallDir)/$(BinDir)/*-$(Version)
@@ -21,5 +16,5 @@ install -m 644 $(SourceDir)/{FUTURES,LIMITATIONS,POSIX.STD,PROBLEMS} \
 endef
 
 define test_inner_hook
-$(BinDir)/gawk --version
+$(BinDir)/gawk --version | grep $(Version)
 endef

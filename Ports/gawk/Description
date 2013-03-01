@@ -1,7 +1,13 @@
 The GNU Awk interpreter.
 
-  * Site: http://www.gnu.org/software/gawk/
-  * License: GPL
+* Site: http://www.gnu.org/software/gawk/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 4.0.1
+
+* Upgraded to version 4.0.2
+
+Installation and usage:
+
+	sudo rudix install gawk
+	gawk --help
