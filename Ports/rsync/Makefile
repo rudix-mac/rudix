@@ -3,10 +3,9 @@ include ../../Library/GNU.mk
 Title=		Rsync
 Name=		rsync
 Version=	3.0.9
-Revision=	2
+Revision=	3
 URL=		http://samba.org/ftp/rsync/src/
 Source=		$(Name)-$(Version).tar.gz
-
 
 GnuConfigureExtra += --with-included-popt
 GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
@@ -18,5 +17,5 @@ cd $(InstallDir)/$(Prefix)/share/man/man5 ; ln -sf rsyncd.conf.5 rsyncd3.conf.5
 endef
 
 define test_inner_hook
-$(BinDir)/rsync --version
+$(BinDir)/rsync --version | grep $(Version)
 endef
