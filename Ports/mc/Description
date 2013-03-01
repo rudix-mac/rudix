@@ -1,7 +1,13 @@
 GNU Midnight Commander is a visual file manager.
 
-  * Site: http://www.midnight-commander.org/
-  * License: GPL
+* Site: http://www.midnight-commander.org/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 4.8.3
+
+* Upgraded to version 4.8.7
+
+Installation and usage:
+
+	sudo rudix install mc
+	mc
