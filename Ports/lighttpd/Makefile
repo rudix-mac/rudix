@@ -4,11 +4,10 @@ include ../../Library/GNU.mk
 
 Title=		Lighttpd
 Name=		lighttpd
-Version=	1.4.31
+Version=	1.4.32
 Revision=	0
 URL=		http://download.lighttpd.net/lighttpd/releases-1.4.x/
 Source=		$(Name)-$(Version).tar.bz2
-
 
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --libdir=$(LibDir)/lighttpd
@@ -16,5 +15,9 @@ GnuConfigureExtra += --libdir=$(LibDir)/lighttpd
 define install_post_hook
 install -d $(InstallDir)/$(SysConfDir)/lighttpd
 install -d $(InstallDir)/$(LocalStateDir)/{www,log/lighttpd,run}
-install -m 664 lighttpd.conf.default $(InstallDir)/$(SysConfDir)/lighttpd
+install -m 644 lighttpd.conf.default $(InstallDir)/$(SysConfDir)/lighttpd
+endef
+
+define test_inner_hook
+$(SBinDir)/lighttpd --version | grep $(Version)
 endef
