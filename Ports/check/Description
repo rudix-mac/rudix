@@ -4,4 +4,9 @@ Check: A unit testing framework for C.
   * License: LGPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Upgraded to version 0.9.9
+
+Installation and Usage:
+
+	sudo rudix install check
