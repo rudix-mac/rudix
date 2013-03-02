@@ -2,14 +2,13 @@ include ../../Library/GNU.mk
 
 Title=		GNU libintl
 Name=		libintl
-Version=	0.18.1.1
-Revision=	7
+Version=	0.18.2
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
 
 UncompressedName=gettext-$(Version)
 BuildDir=$(SourceDir)/gettext-runtime
-
 
 GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-java
