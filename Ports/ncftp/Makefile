@@ -3,10 +3,11 @@ include ../../Library/GNU.mk
 Title=		NcFTP Client
 Name=		ncftp
 Version=	3.2.5
-Revision=	2
+Revision=	3
 Source=		$(Name)-$(Version)-src.tar.bz2
 URL=		ftp://ftp.ncftp.com/ncftp
 
+ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/doc/LICENSE.txt
 
 #GnuConfigureExtra += --disable-universal 
