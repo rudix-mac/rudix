@@ -2,13 +2,14 @@ include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	R15B02
+Version=	R16B
 Revision=	0
 URL=		http://www.erlang.org/download/
 Source=		otp_src_$(Version).tar.gz
 
 UncompressedName=otp_src_$(Version)
 
+ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/EPLICENCE
 
 define retrieve_post_hook
