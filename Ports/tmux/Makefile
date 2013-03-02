@@ -1,13 +1,14 @@
-BuildRequires+=	/usr/local/lib/libevent.la # static-libevent
+BuildRequires += $(LibDir)/libevent.la # static-libevent
+BuildRequires += $(BinDir)/pkg-config # pkgconfig
 
 include ../../Library/GNU.mk
-# Due "libevent not found"
+# FIXME: Due "libevent not found" or "curses not found"
 GnuConfigureExtra=
 
 Title=		tmux
 Name=		tmux
 Version=	1.7
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/tmux
 Source=		$(Name)-$(Version).tar.gz
 
