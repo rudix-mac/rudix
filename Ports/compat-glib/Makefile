@@ -1,17 +1,17 @@
-BuildRequires += $(LibDir)/libintl.la
+# Requires xz to extract source
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(BinDir)/pkg-config # pkgconfig
 
 include ../../Library/GNU.mk
 
 Title=		GLib
 Name=		compat-glib
-Version=	2.28.8
-Revision=	1
-URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.28/
-Source=		glib-$(Version).tar.bz2
+Version=	2.32.4
+Revision=	0
+URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.32
+Source=		glib-$(Version).tar.xz
 
+UncompressedName=glib-$(Version)
 
-UncompressedName = glib-$(Version)
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
+EnvExtra += LIBFFI_CFLAGS="-I/usr/include/ffi"
+EnvExtra += LIBFFI_LIBS="-L/usr/local/lib -lffi"

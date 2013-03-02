@@ -1,5 +1,5 @@
---- po/Makefile.in.in.orig	2010-02-27 20:10:56.000000000 -0300
-+++ po/Makefile.in.in	2010-02-27 20:11:32.000000000 -0300
+--- po/Makefile.in.in.orig	2012-06-09 10:15:07.000000000 -0300
++++ po/Makefile.in.in	2012-06-09 10:15:25.000000000 -0300
 @@ -28,7 +28,7 @@
  datarootdir = @datarootdir@
  datadir = @datadir@

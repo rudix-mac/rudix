@@ -1,7 +1,12 @@
 GLib provides the core application building blocks for libraries and applications written in C.
 
-  * Site: http://www.gtk.org/
-  * License: GPL
+* Site: http://www.gtk.org/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 0.28.8
+
+* Upgraded to version 0.32.4
+
+Installation and usage:
+
+	sudo rudix install compat-glib
