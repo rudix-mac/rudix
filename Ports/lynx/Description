@@ -4,4 +4,10 @@ Lynx is a text browser for the World Wide Web.
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Upgraded to version 2.8.8dev.15
+
+Installation and usage:
+
+	sudo rudix install lynx
+	lynx

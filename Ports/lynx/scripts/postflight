@@ -1,6 +1,0 @@
-#!/bin/sh
-
-[ ! -f /usr/local/etc/lynx.cfg ] && cp -f /usr/local/etc/lynx.cfg.default /usr/local/etc/lynx.cfg
-[ ! -f /usr/local/etc/lynx.lss ] && cp -f /usr/local/etc/lynx.lss.default /usr/local/etc/lynx.lss
-
-exit 0
