@@ -1,7 +1,13 @@
 ELinks is an advanced and well-established feature-rich text mode web browser.
 
-  * Site: http://elinks.cz/
-  * License: GPL
+* Site: http://elinks.cz/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Upgraded to version 0.13-20130302
+
+Installation and usage:
+
+	sudo rudix install elinks
+	elinks
