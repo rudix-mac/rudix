@@ -12,6 +12,7 @@ final
 static
 *~
 \#*\#
+master
 *.pmdoc
 *.pkg
 *-install
