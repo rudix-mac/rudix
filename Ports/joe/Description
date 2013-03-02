@@ -1,0 +1,13 @@
+JOE is a full featured terminal-based screen editor.
+
+* Site: http://
+* License: GPL
+
+Release Notes:
+
+* Adopted JOE version 3.7
+
+Installation and usage:
+
+	sudo rudix install joe
+	joe --help
