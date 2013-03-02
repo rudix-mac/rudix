@@ -1,0 +1,13 @@
+talloc is a hierarchical, reference counted memory pool system with destructors. It is the core memory allocator used in Samba.
+
+* Site: http://talloc.samba.org/
+* License: GPL
+
+Release Notes:
+
+* Adopted Talloc version 2.0.8
+
+Installation and usage:
+
+	sudo rudix install talloc
+	talloc --help
