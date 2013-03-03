@@ -10,4 +10,4 @@ Release Notes:
 Installation and usage:
 
 	sudo rudix install nspr
-	nspr --help
+	nspr-config --help
