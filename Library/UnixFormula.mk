@@ -11,7 +11,7 @@ endef
 
 define install_inner_hook
 cd $(BuildDir) && \
-$(make) DESTDIR="$(PortDir)/$(InstallDir)" $(MakeInstallExtra) install
+$(MAKE) DESTDIR="$(DestDir)" $(MakeInstallExtra) install
 $(install_base_documentation)
 endef
 

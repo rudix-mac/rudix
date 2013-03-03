@@ -39,7 +39,7 @@ for x in $(wildcard \
 	$(BuildDir)/NEWS* \
 	$(BuildDir)/LICENSE* \
 	$(BuildDir)/ChangeLog*) ; do \
-	install -m 644 $$x $(PortDir)/$(InstallDir)/$(DocDir)/$(Name) ; \
+	install -m 644 $$x $(DestDir)$(DocDir)/$(Name) ; \
 done
 rm -f $(InstallDir)/$(InfoDir)/dir
 rm -f $(InstallDir)/$(LibDir)/charset.alias
@@ -57,7 +57,7 @@ endef
 
 define install_inner_hook
 cd $(BuildDir) && \
-$(MAKE) install DESTDIR="$(PortDir)/$(InstallDir)" $(MakeInstallExtra)
+$(MAKE) install DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
 $(install_gnu_documentation)
 endef

@@ -35,10 +35,10 @@ cd $(BuildDir) && \
 $(Python) \
 	setup.py install $(SetupInstallExtra) \
 	--no-compile \
-	--root=$(PortDir)/$(InstallDir) \
+	--root=$(DestDir) \
 	--prefix=$(Prefix) \
 	--install-lib=$(PythonSitePackages)
-cd $(BuildDir) && $(Python) -m compileall -d / $(PortDir)/$(InstallDir)
+cd $(BuildDir) && $(Python) -m compileall -d / $(DestDir)
 $(install_base_documentation)
 endef
 

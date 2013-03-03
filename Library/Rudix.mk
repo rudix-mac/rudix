@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20130221
+BuildSystem = 20130303
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -13,6 +13,7 @@ PortDir := $(shell pwd)
 SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
+DestDir= $(PortDir)/$(InstallDir)
 DistName = $(Name)
 PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version)-$(Revision).pkg
@@ -267,30 +268,30 @@ endef
 ifeq ($(RUDIX_UNIVERSAL),yes)
 define test_universal
 @$(call info_color,Testing for Universal Binaries)
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(BinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(SBinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.dylib) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do \
+for x in $(wildcard $(DestDir)$(PythonSitePackages)/*/*.so) ; do \
 	$(call verify_universal,$$x) ; done
 endef
 endif
 
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
-for x in $(wildcard $(InstallDir)/$(BinDir)/*) ; do \
+for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
 	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
-for x in $(wildcard $(InstallDir)/$(SBinDir)/*) ; do \
+for x in $(wildcard $(InstallDir)$(SBinDir)/*) ; do \
 	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
-for x in $(wildcard $(InstallDir)/$(LibDir)/*.dylib) ; do \
+for x in $(wildcard $(InstallDir)$(LibDir)/*.dylib) ; do \
 	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Library $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
@@ -304,9 +305,9 @@ done
 endef
 
 define install_base_documentation
-install -d $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+install -d $(InstallDir)$(DocDir)/$(Name)
+install -m 644 $(ReadMeFile) $(InstallDir)$(DocDir)/$(Name)
+install -m 644 $(LicenseFile) $(InstallDir)$(DocDir)/$(Name)
 endef
 
 define test_documentation
@@ -318,13 +319,13 @@ endef
 ifeq ($(RUDIX_STRIP_PACKAGE),yes)
 define strip_macho
 $(call info_color,Stripping binaries)
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(BinDir)/*) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(SBinDir)/*) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
 endef
 endif
