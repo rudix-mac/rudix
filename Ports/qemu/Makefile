@@ -10,7 +10,7 @@ include ../../Library/ConfigureFormula.mk
 
 Title=		QEMU
 Name=		qemu
-Version=	1.3.0
+Version=	1.4.0
 Revision=	0
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
