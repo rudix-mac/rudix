@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Automake
 Name=		automake
-Version=	1.12.1
+Version=	1.13.1
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/automake/
 Source=		$(Name)-$(Version).tar.gz
