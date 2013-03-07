@@ -7,10 +7,9 @@ include ../../Library/GNU.mk
 Title=		mpop
 Name=		mpop
 Version=	1.0.27
-Revision=	0
+Revision=	1
 URL=		http://sourceforge.net/projects/mpop/files/mpop/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
-
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
