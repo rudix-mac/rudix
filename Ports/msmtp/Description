@@ -4,5 +4,6 @@ msmtp is an SMTP client.
   * License: GPL
 
 Release Notes:
-  * Build with libidn
-  * Upgraded to version 1.4.28
+
+* Upgraded to version 1.4.30
+
