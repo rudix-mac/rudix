@@ -1,9 +1,13 @@
 QEMU is a generic and open source machine emulator and virtualizer.
 
-  * Site: http://wiki.qemu.org/
-  * License: GPL
+* Site: http://wiki.qemu.org/
+* License: GPL
 
 Release Notes:
 
 * Upgraded to version 1.4.0
 
+Installation and Usage:
+
+	sudo rudix install qemu
+	qemu

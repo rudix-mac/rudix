@@ -3,10 +3,7 @@ BuildRequires += /usr/local/lib/libglib-2.0.la
 BuildRequires += /usr/local/lib/pkgconfig/pixman-1.pc
 BuildRequires += /usr/local/lib/libintl.la
 
-include ../../Library/Config.mk
-RUDIX_UNIVERSAL=no
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
+include ../../Library/Configure.mk
 
 Title=		QEMU
 Name=		qemu
@@ -17,6 +14,7 @@ Source=		$(Name)-$(Version).tar.bz2
 
 ReadMeFile=	$(SourceDir)/qemu-doc.html
 LicenseFile=	$(SourceDir)/LICENSE
+
 ConfigureExtra += --with-system-pixman
 
 # i686-apple-darwin11-llvm-gcc-4.2 global register variable and inline asm
