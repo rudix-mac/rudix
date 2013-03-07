@@ -1,0 +1,12 @@
+The old libntlm (note lower case) was a library that implement Microsoft's NTLM authentication.
+
+* Site: http://www.nongnu.org/libntlm/
+* License: LGPL
+
+Release Notes:
+
+* Adopted Libntlm version 1.3
+
+Installation and usage:
+
+	sudo rudix install libntlm
