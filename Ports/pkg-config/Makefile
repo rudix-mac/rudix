@@ -8,8 +8,8 @@ include ../../Library/GNU.mk
 Title=		pkg-config
 Name=		pkg-config
 AltName=	pkg
-Version=	0.26
-Revision=	2
+Version=	0.27
+Revision=	0
 URL=		http://pkgconfig.freedesktop.org/releases/
 Source=		$(Name)-$(Version).tar.gz
 
