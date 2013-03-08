@@ -1,10 +1,12 @@
 PycURL is a Python interface to libcurl.
 
-Site: http://pycurl.sourceforge.net/
-License: LGPL or MIT
+* Site: http://pycurl.sourceforge.net/
+* License: LGPL/MIT
 
-Changes from previous release:
+Release Notes:
+
 * Rebuild on Xcode 4.3
 
-Usage:
->>> import pycurl
+Installation and Usage:
+
+	sudo rudix install pycurl
