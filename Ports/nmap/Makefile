@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		Nmap
 Name=		nmap
 Version=	6.01
-Revision=	0
+Revision=	1
 URL=		http://nmap.org/dist/
 Source=		$(Name)-$(Version).tar.bz2
 
