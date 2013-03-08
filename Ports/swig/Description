@@ -1,8 +1,12 @@
 SWIG is a tool that connects programs written in C/C++ with a variety of high-level programming languages.
 
-  * Site: http://www.swig.org/
-  * License: GPL
+* Site: http://www.swig.org/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 2.0.7
 
+* Upgraded to version 2.0.9
+
+Installation and Usage:
+
+	sudo rudix install swig

@@ -1,10 +1,10 @@
-BuildRequires += $(LibDir)/libpcre.la
+BuildRequires += $(LibDir)/libpcre.la # static-pcre
 
 include ../../Library/GNU.mk
 
 Title=		SWIG
 Name=		swig
-Version=	2.0.7
+Version=	2.0.9
 Revision=	0
 URL=		http://sourceforge.net/projects/swig/files/swig/swig-$(Version)
 Source=		$(Name)-$(Version).tar.gz
