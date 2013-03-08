@@ -3,7 +3,7 @@ include ../../Library/Configure.mk
 Title=		NHC98
 Name=		nhc98
 Version=	1.22
-Revision=	2
+Revision=	3
 URL=		http://www.haskell.org/nhc98/
 Source=		$(Name)src-$(Version).tar.gz
 
