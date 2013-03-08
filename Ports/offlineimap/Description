@@ -1,8 +1,12 @@
 OfflineIMAP is a tool to simplify your e-mail reading.
 
-  * Site: http://offlineimap.org/
-  * License: GPL
+* Site: http://offlineimap.org/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 6.5.4
-  * Featuring in Rudix 2012
+
+* Upgraded to version 6.5.4
+
+Installation and Usage:
+
+	sudo rudix install offlineimap

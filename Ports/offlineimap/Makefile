@@ -5,10 +5,9 @@ include ../../Library/Python.mk
 Title=		Offline IMAP
 Name=		offlineimap
 Version=	6.5.4
-Revision=	0
+Revision=	1
 URL=		https://github.com/downloads/spaetz/offlineimap
 Source=		$(Name)-v$(Version).tar.gz
-
 
 UncompressedName = spaetz-offlineimap-c9e9690
 
