@@ -1,7 +1,13 @@
 PyChecker is a tool for finding bugs in python source code.
 
-  * Site: http://pychecker.sourceforge.net/
-  * License: BSD
+* Site: http://pychecker.sourceforge.net/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 0.8.19
+
+* Upgraded to version 0.8.19
+
+Installation and Usage:
+
+	sudo rudix install pychecker
+	pychecker --help
