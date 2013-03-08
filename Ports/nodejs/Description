@@ -1,7 +1,14 @@
 Node.js is a platform for easily building fast, scalable network applications.
 
-  * Site: http://nodejs.org/
-  * License: BSD
+* Site: http://nodejs.org/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 0.8.11
+
+* Upgraded to version 0.8.22
+
+Installation and Usage:
+
+	sudo rudix install node
+	node
+	npm

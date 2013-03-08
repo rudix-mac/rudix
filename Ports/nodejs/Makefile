@@ -1,18 +1,15 @@
-include ../../Library/Config.mk
-RUDIX_UNIVERSAL=
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
+include ../../Library/Configure.mk
 
 Title=		NodeJS
 Name=		node
-Version=	0.8.11
+Version=	0.8.22
 Revision=	0
 URL=		http://nodejs.org/dist/v$(Version)
 Source=		$(Name)-v$(Version).tar.gz
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-UncompressedName = $(Name)-v$(Version)
+UncompressedName=$(Name)-v$(Version)
 
 EnvExtra += OPENSSL_CFLAGS=-I/usr/include OPENSSL_LIBS=-lcrypto
 
