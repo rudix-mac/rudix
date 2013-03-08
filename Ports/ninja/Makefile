@@ -4,10 +4,9 @@ include ../../Library/Rudix.mk
 Title=		ninja
 Name=		ninja
 Version=	120715
-Revision=	0
+Revision=	1
 URL=		git://github.com/martine
 Source=		ninja.git
-
 
 define retrieve_inner_hook
 git clone $(URL)/$(Source) $(SourceDir)
