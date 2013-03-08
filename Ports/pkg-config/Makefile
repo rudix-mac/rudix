@@ -9,10 +9,14 @@ Title=		pkg-config
 Name=		pkg-config
 AltName=	pkg
 Version=	0.26
-Revision=	1
+Revision=	2
 URL=		http://pkgconfig.freedesktop.org/releases/
 Source=		$(Name)-$(Version).tar.gz
 
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
+LdFlags += -framework CoreFoundation # static-gettext
+LdFlags += -framework Carbon # static-glib
+endif
 
 define test_inner_hook
 $(BinDir)/pkg-config --version
