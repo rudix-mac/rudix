@@ -1,7 +1,12 @@
 Ragel compiles executable finite state machines from regular languages. Ragel targets C, C++, Objective-C, D, Java and Ruby.
 
-  * Site: http://www.complang.org/ragel/
-  * License: GPL
+* Site: http://www.complang.org/ragel/
+* License: GPL
 
 Release Notes:
-  * Ported to Rudix
+
+* Upgraded to version 6.8
+
+Installation and Usage:
+
+	sudo rudix install ragel
