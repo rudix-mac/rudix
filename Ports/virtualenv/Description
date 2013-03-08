@@ -5,13 +5,9 @@ Virtual Python Environment builder.
 
 Release Notes:
 
-* Upgraded to version 1.8.4
+* Upgraded to version 1.9.1
 
-Install with Rudix command line:
+Installation and Usage:
 
 	sudo rudix install virtualenv
-
-Basic usage and help:
-
-	virtualenv --help
-	virtualenv my_env
+	virtualenv
