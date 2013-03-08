@@ -5,13 +5,9 @@ Pip installs packages. Python packages. An easy_install replacement.
 
 Release Notes:
 
-* Upgraded to version 1.2.1
+* Upgraded to version 1.3.1
 
-Install with Rudix command line:
+Installation and Usage:
 
 	sudo rudix install pip
-
-Basic usage and help:
-
-	pip help
-	pip freeze
+	pip
