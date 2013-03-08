@@ -4,4 +4,9 @@ The OCaml system is the main implementation of the Caml language.
   * License: LGPL
 
 Release Notes:
-  * Upgraded to version 3.12.1
+
+* Upgraded to version 4.00.1
+
+Installation and Usage:
+
+	sudo rudix install ocaml

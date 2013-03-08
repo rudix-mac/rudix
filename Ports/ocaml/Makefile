@@ -3,13 +3,12 @@ include ../../Library/Rudix.mk
 
 Title=		OCaml
 Name=		ocaml
-Version=	3.12.1
+Version=	4.00.1
 Revision=	0
-URL=		http://caml.inria.fr/pub/distrib/ocaml-3.12/
+URL=		http://caml.inria.fr/pub/distrib/ocaml-4.00
 Source=		$(Name)-$(Version).tar.bz2
 
 LicenseFile=	$(SourceDir)/LICENSE
-
 
 # * The Makefiles do not support parallel make (e.g. make -j2).
 # Fix: do not pass the -j option to make, and be patient.
