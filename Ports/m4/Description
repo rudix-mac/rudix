@@ -4,4 +4,10 @@ GNU M4 is an implementation of the traditional Unix macro processor.
   * License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Version 1.4.16
+
+Installation and Usage:
+
+	sudo rudix install m4
+	/usr/local/bin/m4

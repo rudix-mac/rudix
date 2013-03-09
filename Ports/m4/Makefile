@@ -4,11 +4,9 @@ include ../../Library/GNU.mk
 Title=		GNU M4
 Name=		m4
 Version=	1.4.16
-Revision=	1
+Revision=	2
 URL=		http://ftp.gnu.org/gnu/m4/
 Source=		$(Name)-$(Version).tar.bz2
-
-
 
 define install_post_hook
 cd $(InstallDir)$(BinDir) ; ln -sf m4 gm4
