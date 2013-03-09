@@ -5,7 +5,7 @@ ccache is a compiler cache. It speeds up recompilation by caching previous compi
 
 Release Notes:
 
-* Bumped release
+* Don't create symbolic links to compilers
 
 Installation and usage:
 
