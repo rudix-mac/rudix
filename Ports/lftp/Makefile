@@ -1,15 +1,15 @@
-BuildRequires += $(LibDir)/libintl.la # gettext
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libreadline.a # static-readline
 
 include ../../Library/GNU.mk
 
 Title=		LFTP
 Name=		lftp
-Version=	4.4.3
+Version=	4.4.4
 Revision=	0
-URL=		http://ftp.yars.free.net/pub/source/lftp
+#URL=		http://ftp.yar.ru/pub/source/lftp
+URL=		http://lftp.cybermirror.org
 Source=		$(Name)-$(Version).tar.bz2
-
 
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules
