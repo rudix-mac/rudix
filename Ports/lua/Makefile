@@ -10,9 +10,9 @@ Source=		$(Name)-$(Version)-rc1.tar.gz
 
 LicenseFile=	license.txt
 
-MakeExtra += macosx MYLDFLAGS="$(LdFlags)"
-MakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
-MakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
+MakeExtra += macosx
+MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
+MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 
 define install_post_hook
 install -m 644 $(SourceDir)/doc/* $(PortDir)/$(InstallDir)/$(DocDir)/$(Name)
