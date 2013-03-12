@@ -1,7 +1,12 @@
 PowerDNS Authoritative Server.
 
-  * Site: http://www.powerdns.com/
-  * License: GPL
+* Site: http://www.powerdns.com/
+* License: GPL
 
 Release Notes:
-  * Adopted
+
+* Upgraded to version 3.2
+
+Installation and Usage:
+
+	sudo rudix install pdns
