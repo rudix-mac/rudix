@@ -5,11 +5,13 @@ include ../../Library/Unix.mk
 
 Title=		Dos2Unix
 Name=		dos2unix
-Version=	5.3.3
+Version=	6.0.3
 Revision=	0
 URL=		http://waterlan.home.xs4all.nl/dos2unix/
 Source=		$(Name)-$(Version).tar.gz
 
+ReadMeFile=	$(SourceDir)/README.txt
+LicenseFile=	$(SourceDir)/COPYING.txt
 
 MakeInstallExtra += prefix=$(Prefix) docsubdir=dos2unix
 
