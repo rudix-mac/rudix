@@ -3,10 +3,10 @@ include ../../Library/Unix.mk
 Title=		Lua
 Name=		lua
 Version=	5.2.2
-Revision=	0
+Revision=	1
 #URL=		http://www.lua.org/ftp/
 URL=		http://www.lua.org/work/
-Source=		$(Name)-$(Version)-rc1.tar.gz
+Source=		$(Name)-$(Version)-rc3.tar.gz
 
 LicenseFile=	license.txt
 

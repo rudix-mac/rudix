@@ -5,12 +5,9 @@ Lua is a powerful, fast, lightweight, embeddable scripting language.
 
 Release Notes:
 
-* Upgraded to version 5.2.2-rc1
+* Upgraded to version 5.2.2-rc3
 
-Install with Rudix command line:
+Installation and Usage:
 
 	sudo rudix install lua
-
-Basic usage and help:
-
 	lua
