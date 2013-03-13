@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Title=		Artistic Style
 Name=		astyle
 Version=	2.02.1
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/astyle
 Source=		$(Name)_$(Version)_macosx.tar.gz
 
