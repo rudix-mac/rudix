@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Title=		ColorDiff
 Name=		colordiff
 Version=	1.0.13
-Revision=	0
+Revision=	1
 URL=		http://www.colordiff.org
 Source=		$(Name)-$(Version).tar.gz
 
