@@ -6,7 +6,7 @@
 
 define build_inner_hook
 cd $(BuildDir) && \
-$(make) $(MakeExtra) CFLAGS=$(CFlags) CXXFLAGS=$(CxxFlags) LDFLAGS=$(LdFlags)
+$(make) $(MakeExtra) CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 endef
 
 define install_inner_hook
