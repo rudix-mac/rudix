@@ -5,9 +5,9 @@ GNU libintl (GNU gettext runtime).
 
 Release Notes:
 
-* Upgraded to version 0.18.2
+* Upgraded to version 0.18.2.1
 
-Installation and usage:
+Installation and Usage:
 
 	sudo rudix install libintl
-	gcc -lintl prog.c
+	gcc -lintl program.c
