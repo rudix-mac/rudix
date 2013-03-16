@@ -1,7 +1,12 @@
 Apache Portable Runtime library.
 
-  * Site: http://apr.apache.org/
-  * License: Apache License
+* Site: http://apr.apache.org/
+* License: Apache License
 
 Release Notes:
-  * Upgraded to version 1.4.6
+
+* Upgraded to version 1.4.6
+
+Installation:
+
+	sudo rudix install apr
