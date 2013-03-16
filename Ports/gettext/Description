@@ -5,13 +5,9 @@ The GNU gettext utilities are a set of tools that provides a framework to help p
 
 Release Notes:
 
-* Upgraded to version 0.18.2
+* Upgraded to version 0.18.2.1
 
-Install with Rudix command line:
+Installation and Usage:
 
 	sudo rudix install gettext
-
-Basic usage and help:
-
-	gettext --help
-	gcc -lintl prog.c
+	cc -lintl program.c
