@@ -9,5 +9,6 @@ Revision=	0
 URL=		http://download.edgewall.org/trac/
 Source=		Trac-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+define test_inner_hook
+$(BinDir)/trac-admin --version
+endef
