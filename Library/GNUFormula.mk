@@ -6,7 +6,6 @@
 
 ifeq ($(RUDIX_ENABLE_NLS),yes)
 GnuConfigureExtra += --enable-nls
-BuildRequires += $(LibDir)/libintl.la
 else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
