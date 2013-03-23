@@ -1,8 +1,12 @@
 Enterprise-class centralized version control for the masses.
 
-  * Site: http://subversion.apache.org/
-  * License: Apache License
+* Site: http://subversion.apache.org/
+* License: Apache License
 
 Release Notes:
-  * Upgraded to version 1.7.5
-  * Featuring in Rudix
+
+* Upgraded to version 1.7.8
+
+Installation and Usage:
+
+	sudo rudix install subversion
