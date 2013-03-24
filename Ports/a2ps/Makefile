@@ -1,8 +1,8 @@
-# Qichang Liang <kcleung@cs.otago.ac.nz>
+# Contributor: Qichang Liang <kcleung@cs.otago.ac.nz>
 
 include ../../Library/GNU.mk
 
-Title=		a2ps
+Title=		GNU a2ps
 Name=		a2ps
 Version=	4.14
 Revision=	1
