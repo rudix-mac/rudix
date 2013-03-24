@@ -9,17 +9,9 @@ title: {Title}
 description: {Summary}
 ---
 
-# {Title} ({Name}) #
+# {Name}: {Title} #
 
 {Description}
-
-## Download ##
-
-Packages in separate:
-
-* OS X Mountain Lion (10.8) [{PkgFile}](http://code.google.com/p/rudix-mountainlion/downloads/detail?name={PkgFile}).
-* Mac OS X Lion (10.7) [{PkgFile}](http://code.google.com/p/rudix/downloads/detail?name={PkgFile}).
-* Mac OS X Snow Leopard (10.6) [{PkgFile}](http://code.google.com/p/rudix-snowleopard/downloads/detail?name={PkgFile}).
 '''
 
 class Global_Env_Dict(object):

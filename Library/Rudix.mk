@@ -147,6 +147,7 @@ realdistclean: distclean
 page:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkpage.py
+	mv $(Name).md ~/Sites/rudix.org/packages/
 
 upload: pkg test
 	@$(call info_color,Uploading $(PkgFile))
