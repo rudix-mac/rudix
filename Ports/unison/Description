@@ -1,0 +1,13 @@
+Unison is a file-synchronization tool for Unix and Windows.
+
+* Site: http://www.cis.upenn.edu/~bcpierce/unison/
+* License: GPL
+
+Release Notes:
+
+* Adopted Unison File Synchronizer version 2.40.102
+
+Installation and usage:
+
+	sudo rudix install unison
+	unison --help
