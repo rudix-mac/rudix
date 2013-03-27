@@ -1,0 +1,12 @@
+libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.
+
+* Site: http://www.nongnu.org/libpipeline/
+* License: GPL
+
+Release Notes:
+
+* Adopted Libpipeline version 1.2.2
+
+Installation and usage:
+
+	sudo rudix install libpipeline
