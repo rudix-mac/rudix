@@ -1,0 +1,11 @@
+--- test/utils.h.orig	2013-03-26 23:11:15.000000000 -0300
++++ test/utils.h	2013-03-26 23:11:23.000000000 -0300
+@@ -11,7 +11,7 @@
+  * taken from POSIX.1-2001 example
+  */
+ 
+-extern uint32_t lcg_seed;
++uint32_t lcg_seed;
+ #ifdef USE_OPENMP
+ #pragma omp threadprivate(lcg_seed)
+ #endif
