@@ -6,8 +6,10 @@ QEMU is a generic and open source machine emulator and virtualizer.
 Release Notes:
 
 * Upgraded to version 1.4.0
+* Enabled Cocoa display
+* Disabled SDL and VNC support
 
 Installation and Usage:
 
 	sudo rudix install qemu
-	qemu
+	qemu-system-i386
