@@ -11,6 +11,12 @@ GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-csharp
 GnuConfigureExtra += --with-included-glib
 
+ifneq ($(OSXVersion),10.6)
+define prep_post_hook
+patch -p0 -d $(SourceDir) < lion-stpncpy.diff
+endef
+endif
+
 define install_post_hook
 rm -rf $(InstallDir)/$(DocDir)/gettext/csharpdoc
 rm -rf $(InstallDir)/$(DocDir)/gettext/examples
