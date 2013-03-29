@@ -1,4 +1,7 @@
 include ../../Library/GNU.mk
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
 
 Title=		Erlang/OTP
 Name=		erlang
@@ -17,8 +20,9 @@ $(fetch) $(URL)/otp_doc_html_$(Version).tar.gz
 $(fetch) $(URL)/otp_doc_man_$(Version).tar.gz
 endef
 
-#GnuConfigureExtra += --enable-darwin-universal
+ifneq ($(OSXVersion),10.6)
 GnuConfigureExtra += --enable-darwin-64bit
+endif
 
 define install_post_hook
 tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \
