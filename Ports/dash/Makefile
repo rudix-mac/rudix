@@ -1,4 +1,7 @@
 include ../../Library/GNU.mk
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
 
 Title=		DASH
 Name=		dash
