@@ -1,17 +1,15 @@
-#BuildRequires += $(LibDir)/libapr-1.la
-
 include ../../Library/GNU.mk
 
-Title=		APR-util
+Title=		Apache Portable Runtime Utility
 Name=		apr-util
-Version=	1.4.1
-Revision=	1
+Version=	1.5.1
+Revision=	0
 URL=		http://www.apache.org/dist/apr/
 Source=		$(Name)-$(Version).tar.bz2
 
 LicenseFile=	$(BuildDir)/LICENSE
 
-GnuConfigureExtra += --with-apr=$(BinDir)/apr-1-config
+GnuConfigureExtra += --with-apr=/usr/bin/apr-1-config
 
 define test_inner_hook
 $(BinDir)/apu-1-config --version

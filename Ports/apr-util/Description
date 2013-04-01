@@ -1,8 +1,14 @@
-Companion library to APR.
+Apache Portable Runtime Utility library.
 
-  * Site: http://apr.apache.org/
-  * License: Apache License
+* Site: http://apr.apache.org/
+* License: Apache License
 
 Release Notes:
-  * Build with APR version 1.4.6
-  * Upgraded to version 1.4.1
+
+* Upgraded to version 1.5.1
+* Built with native APR
+
+Installation and Usage:
+
+	sudo rudix install apr-util
+	/usr/local/bin/apu-1-config
