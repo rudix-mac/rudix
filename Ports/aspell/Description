@@ -1,7 +1,13 @@
 GNU Aspell spell checker
 
-  * Site: http://aspell.net/
-  * License: LGPL
+* Site: http://aspell.net/
+* License: LGPL
 
 Release Notes:
-  * Upgraded to version 0.60.6.1
+
+* Upgraded to version 0.60.6.1
+
+Installation and Usage:
+
+	sudo rudix install aspell
+	aspell --help
