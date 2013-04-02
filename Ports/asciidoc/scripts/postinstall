@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/asciidoc/asciidoc.conf ] && \
+	install -m 644 $3/usr/local/etc/asciidoc/asciidoc.conf.default \
+	$3 /usr/local/etc/asciidoc/asciidoc.conf
+exit 0
