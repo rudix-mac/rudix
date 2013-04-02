@@ -1,4 +1,4 @@
-Automake is a tool for automatically generating `Makefile.in' files compliant with the GNU Coding Standards.
+Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
 
 * Site: http://www.gnu.org/software/automake/
 * License: GPL
