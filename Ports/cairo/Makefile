@@ -1,21 +1,15 @@
-BuildRequires += $(BinDir)/pkg-config
-BuildRequires += $(LibDir)/libpixman-1.la
+BuildRequires += $(BinDir)/pkg-config # pkg-config
+BuildRequires += $(LibDir)/libpixman-1.la # static-pixman
+BuildRequires += $(BinDir)/xz # xz
 
 include ../../Library/GNU.mk
 
 Title=		Cairo
 Name=		cairo
-Version=	1.12.0
+Version=	1.12.14
 Revision=	0
-URL=		http://cairographics.org/releases/
-Source=		$(Name)-$(Version).tar.gz
+URL=		http://cairographics.org/releases
+Source=		$(Name)-$(Version).tar.xz
 
-
-EnvExtra+=PKG_CONFIG_PATH="$(LibDir)/pkgconfig:/usr/X11R6/lib/pkgconfig"
-GnuConfigureExtra+=--with-html-dir=$(DocDir)/cairo
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra+=--enable-static --disable-shared
-else
-GnuConfigureExtra+=--enable-static --enable-shared
-endif
+EnvExtra += PKG_CONFIG_PATH="$(LibDir)/pkgconfig:/usr/X11R6/lib/pkgconfig"
+GnuConfigureExtra += --with-html-dir=$(DocDir)/cairo
