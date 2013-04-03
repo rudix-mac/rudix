@@ -1,0 +1,13 @@
+ack is a tool like grep, optimized for programmers.
+
+* Site: http://betterthangrep.com/
+* License: Artistic License
+
+Release Notes:
+
+* Adopted Ack! version 1.9.6
+
+Installation and Usage:
+
+	sudo rudix install ack
+	ack --help
