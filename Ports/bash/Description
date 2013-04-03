@@ -5,10 +5,9 @@ Bash is the shell, or command language interpreter, that will appear in the GNU 
 
 Release Notes:
 
-* Built with patches bash42-001, ..., bash42-042
+* Built with patches bash42-001 ... bash42-045
 
-Installation and usage:
+Installation and Usage:
 
 	sudo rudix install bash
-	/usr/local/bin/bash
-	bash5
+	bash4

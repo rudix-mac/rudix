@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 Title=		GNU Bash
 Name=		bash
 Version=	4.2
-Revision=	5
+Revision=	6
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
 
@@ -19,5 +19,5 @@ chmod 755 $(InstallDir)$(BinDir)/bashbug
 endef
 
 define test_inner_hook
-$(BinDir)/bash --version | grep $(Version)
+$(BinDir)/bash --version
 endef
