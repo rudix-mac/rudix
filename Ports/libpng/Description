@@ -1,7 +1,13 @@
 Portable Network Graphics - An Open, Extensible Image Format with Lossless Compression.
 
-  * Site: http://www.libpng.org/pub/png/
-  * License: BSD
+* Site: http://www.libpng.org/pub/png/
+* License: BSD
 
 Release Notes:
-  * PNG version 1.5.10
+
+* Upgraded to version 1.5.14
+
+Installation and Usage:
+
+	sudo rudix install libpng
+	libpng-config
