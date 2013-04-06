@@ -1,7 +1,12 @@
 The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance.
 
-  * Site: http://cassandra.apache.org/
-  * License: ?
+* Site: http://cassandra.apache.org/
+* License: Apache License
 
 Release Notes:
-  * Featuring in Rudix 2012
+
+* Upgraded to version 1.2.3
+
+Installation and Usage:
+
+	sudo rudix install cassandra
