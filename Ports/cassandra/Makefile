@@ -21,19 +21,16 @@ tar zxf $(PortDir)/$(Source) -C $(InstallDir)$(LibDir)
 mv $(InstallDir)$(LibDir)/apache-cassandra-$(Version) \
 	$(InstallDir)$(LibDir)/cassandra
 rm -rf $(InstallDir)$(LibDir)/cassandra/bin/linux-x86-*
-install -d $(InstallDir)$(BinDir)
-cd $(InstallDir)/$(BinDir) ; ln -sf ../lib/cassandra/bin/cassandra .
-mv $(InstallDir)/$(LibDir)/cassandra/conf \
+#install -d $(InstallDir)$(BinDir)
+#ln -sf $(LibDir)/cassandra/bin/cassandra $(InstallDir)$(BinDir)
+mv $(InstallDir)$(LibDir)/cassandra/conf \
 	$(InstallDir)$(LibDir)/cassandra/conf.default
-#mv $(InstallDir)/$(LibDir)/cassandra/webapps \
-#	$(InstallDir)$(LibDir)/cassandra/webapps.default
 rm -rf $(InstallDir)$(LibDir)/cassandra/example
 rm -rf $(InstallDir)$(LibDir)/cassandra/data/*
 endef
 
 define test_inner_hook
-sudo $(BinDir)/cassandra start
+sudo $(LibDir)/cassandra/bin/cassandra
 sleep 15
-sudo $(BinDir)/cassandra status
-sudo $(BinDir)/cassandra stop
+sudo killall java
 endef
