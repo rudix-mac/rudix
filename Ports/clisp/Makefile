@@ -1,3 +1,5 @@
+BuildRequires += $(LibDir)/libsigsegv.la
+
 include ../../Library/Configure.mk
 
 Title=		CLISP
@@ -10,6 +12,8 @@ Source=		$(Name)-$(Version).tar.gz
 ReadMeFile=	$(SourceDir)/SUMMARY
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
+BuildDir=$(SourceDir)/src
+
 #ifdef WITH_STATIC_NLS
 #LDFLAGS+=	-framework CoreFoundation -liconv
 #endif
@@ -19,7 +23,6 @@ LicenseFile=	$(SourceDir)/COPYRIGHT
 #DEPENDS+=	$(LibDir)/libintl.la
 #DEPENDS+=	$(LibDir)/libsigsegv.la
 #DEPENDS+=	$(LibDir)/libavcall.la
-
 
 ifdef FOO
 install: build
