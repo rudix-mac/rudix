@@ -1,0 +1,13 @@
+jhead is used to display and manipulate data contained in the Exif header of JPEG images from digital cameras.
+
+* Site: http://www.sentex.net/~mwandel/jhead/
+* License: Public Domain
+
+Release Notes:
+
+* Adopted Jpeg Header Manipulation version 2.97
+
+Installation and usage:
+
+	sudo rudix install jhead
+	jhead --help
