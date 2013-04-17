@@ -1,0 +1,13 @@
+Psycopg is the most popular PostgreSQL adapter for the Python programming language.
+
+* Site: http://initd.org/psycopg/
+* License: GPL
+
+Release Notes:
+
+* Adopted Psycopg version 2.5
+
+Installation and usage:
+
+	sudo rudix install psycopg
+	psycopg --help
