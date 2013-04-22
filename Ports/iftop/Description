@@ -1,7 +1,13 @@
 Display bandwidth usage on an interface
 
-Site: http://www.ex-parrot.com/pdw/iftop/
-License: GPL
+* Site: http://www.ex-parrot.com/pdw/iftop/
+* License: GPL
 
-Changes from previous release:
+Release Notes:
+
 * Upgraded to version 1.0pre2
+
+Installation and usage:
+
+	sudo rudix install iftop
+	/usr/local/sbin/iftop -h
