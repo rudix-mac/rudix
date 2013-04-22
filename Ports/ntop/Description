@@ -1,10 +1,12 @@
-ntop is a network traffic probe that shows the network usage, similar to what the popular top Unix command does.
+Ntop is a network traffic probe that shows the network usage, similar to what the popular top Unix command does.
 
-Site: http://www.ntop.org/products/ntop/
-License: GPL
+* Site: http://www.ntop.org/products/ntop/
+* License: GPL
 
-Changes from previous release:
-* Adopted
+Release Notes:
 
-Usage:
-$ /usr/local/bin/ntop
+* Upgraded to version 5.0.1
+
+Installation and usage:
+
+	sudo rudix install ntop
