@@ -10,4 +10,3 @@ Release Notes:
 Installation and usage:
 
 	sudo rudix install psycopg
-	psycopg --help
