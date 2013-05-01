@@ -1,7 +1,13 @@
 Mpg123 is a real time MPEG audio player/decoder for layers 1,2 and 3 (MPEG 1.0 layer 3 aka MP3 most commonly tested).
 
-  * Site: http://www.mpg123.de/
-  * License: LGPL
+* Site: http://www.mpg123.de/
+* License: LGPL
 
 Release Notes:
-  * Upgraded to version 1.13.6
+
+* Upgraded to version 1.15.3
+
+Installation and usage:
+
+	sudo rudix install mpg123
+	mpg123 --help
