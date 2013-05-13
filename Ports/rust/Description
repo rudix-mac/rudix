@@ -1,0 +1,13 @@
+Rust is a curly-brace, block-structured expression language.
+
+* Site: http://www.rust-lang.org
+* License: MIT/Apache
+
+Release Notes:
+
+* Adopted Rust version 0.6
+
+Installation and usage:
+
+	sudo rudix install rust
+	rust --help
