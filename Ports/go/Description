@@ -1,7 +1,13 @@
 Go is an expressive, concurrent, garbage-collected programming language.
 
-  * Site: http://golang.org/
-  * License: BSD
+* Site: http://golang.org/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 1.0.2
+
+* Upgraded to version 1.1
+
+Installation and usage:
+
+	sudo rudix install go
+	go help
