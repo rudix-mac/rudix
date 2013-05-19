@@ -1,0 +1,13 @@
+The OpenSource IPsec-based VPN Solution.
+
+* Site: http://www.strongswan.org/
+* License: GPL
+
+Release Notes:
+
+* Adopted StrongSwan version 5.0.3
+
+Installation and usage:
+
+	sudo rudix install strongswan
+	ipsec --help
