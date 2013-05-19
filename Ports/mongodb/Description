@@ -1,0 +1,13 @@
+MongoDB (from "humongous") is an open source document database, and the leading NoSQL database.
+
+* Site: http://www.mongodb.org/
+* License: AGPL
+
+Release Notes:
+
+* Adopted MongoDB version 2.4.0
+
+Installation and usage:
+
+	sudo rudix install mongodb
+	mongod --help
