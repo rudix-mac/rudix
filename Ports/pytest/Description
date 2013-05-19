@@ -1,0 +1,13 @@
+The py.test testing tool makes it easy to write small tests, yet scales to support complex functional testing.
+
+* Site: http://pytest.org/
+* License: MIT
+
+Release Notes:
+
+* Adopted PyTest version 2.3.5
+
+Installation and usage:
+
+	sudo rudix install pytest
+	pytest --help
