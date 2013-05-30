@@ -1,8 +1,13 @@
 Rudix Package Manager - RPM ;)
 
-  * Site: http://rudix.org/
-  * License: BSD
+* Site: http://rudix.org/
+* License: BSD
 
 Release Notes:
-  * Repository support for Mountain Lion, Lion or Snow Leopard.
-  * Removed rudix.pdf documentation.
+
+* Updated to use Rudix 2013 packages.
+
+Installation and usage:
+
+	sudo rudix install rudix
+	sudo rudix update

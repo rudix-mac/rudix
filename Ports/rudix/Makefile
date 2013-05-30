@@ -2,11 +2,14 @@ include ../../Library/Unix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.10
+Version=	12.99
 Revision=	0
-URL=		https://github.com/downloads/rudix-mac/package-manager
-Source=		$(Name)-$(Version).tar.gz
+URL=		https://github.com/rudix-mac/package-manager/archive
+Source=		$(Version).tar.gz
 
+UncompressedName=package-manager-$(Version)
+
+ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook
