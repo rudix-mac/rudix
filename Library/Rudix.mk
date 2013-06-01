@@ -175,7 +175,7 @@ help:
 	@echo "  realdistclean - After distclean, remove source"
 
 about:
-	@echo "$(Name)-$(Version)-$(Revision)\t$(Title) $(Version)"
+	@echo "$(Name),$(Version),$(Revision),$(Title)"
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about
 
