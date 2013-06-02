@@ -1,0 +1,13 @@
+The Revision Control System (RCS) manages multiple revisions of files.
+
+* Site: http://www.gnu.org/software/rcs/
+* License: GPL
+
+Release Notes:
+
+* Adopted GNU RCS version 5.9.0
+
+Installation and usage:
+
+	sudo rudix install rcs
+	rcs --help
