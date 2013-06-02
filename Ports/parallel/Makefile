@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Parallel
 Name=		parallel
-Version=	20130222
+Version=	20130522
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/parallel/
 Source=		${Name}-${Version}.tar.bz2

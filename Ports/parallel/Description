@@ -5,7 +5,7 @@ GNU parallel is a shell tool for executing jobs concurrently locally or using re
 
 Release Notes:
 
-* Adopted GNU Parallel version 20130222
+* Upgraded to version 20130522
 
 Installation and usage:
 
