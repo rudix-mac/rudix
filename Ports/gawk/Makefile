@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU awk
 Name=		gawk
-Version=	4.0.2
+Version=	4.1.0
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/gawk/
 Source=		$(Name)-$(Version).tar.gz
@@ -16,5 +16,5 @@ install -m 644 $(SourceDir)/{FUTURES,LIMITATIONS,POSIX.STD,PROBLEMS} \
 endef
 
 define test_inner_hook
-$(BinDir)/gawk --version | grep $(Version)
+$(BinDir)/gawk --version
 endef
