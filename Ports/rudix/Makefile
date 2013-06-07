@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.99
+Version=	13.6
 Revision=	0
 URL=		https://github.com/rudix-mac/package-manager/archive
 Source=		$(Version).tar.gz

@@ -5,9 +5,10 @@ Rudix Package Manager - RPM ;)
 
 Release Notes:
 
-* Updated to use Rudix 2013 packages.
+* Rudix Package Manager 13.6
 
 Installation and usage:
 
 	sudo rudix install rudix
 	sudo rudix update
+	sudo rudix help
