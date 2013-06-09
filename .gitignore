@@ -17,10 +17,12 @@ master
 *.pkg
 *-install
 *-build
+*.tar
+*.lz
 *.xz
 *.tgz
-*.tar.gz
-*.tar.bz2
+*.gz
+*.bz2
 *.zip
 *.jar
 *.orig
