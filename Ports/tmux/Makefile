@@ -2,17 +2,15 @@ BuildRequires += $(LibDir)/libevent.la # static-libevent
 BuildRequires += $(BinDir)/pkg-config # pkgconfig
 
 include ../../Library/GNU.mk
-# FIXME: Due "libevent not found" or "curses not found"
-GnuConfigureExtra=
 
-Title=		tmux
+Title=		Terminal Multiplexer
 Name=		tmux
-Version=	1.7
-Revision=	1
+Version=	1.8
+Revision=	0
 URL=		http://downloads.sourceforge.net/tmux
 Source=		$(Name)-$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/NOTES
+ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
 define test_inner_hook
