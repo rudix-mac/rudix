@@ -4,9 +4,10 @@ include ../../Library/Python.mk
 
 Title=		Paramiko (Python SSH module)
 Name=		paramiko
-Version=	1.7.7.1
+Version=	1.10.1
 Revision=	0
 URL=		http://www.lag.net/paramiko/download/
+URL=		https://pypi.python.org/packages/source/p/paramiko
 Source=		$(Name)-$(Version).tar.gz
 
 LicenseFile=	$(SourceDir)/LICENSE

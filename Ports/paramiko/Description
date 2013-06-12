@@ -5,7 +5,7 @@ Paramiko is a module for python 2.2 that implements the SSH2 protocol for secure
 
 Release Notes:
 
-* Paramiko 1.7.7.1
+* Upgraded to version 1.10.1
 
 Installation and usage:
 
