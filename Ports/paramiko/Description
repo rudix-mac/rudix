@@ -1,7 +1,15 @@
 Paramiko is a module for python 2.2 that implements the SSH2 protocol for secure connections to remote machines.
 
-  * Site: http://www.lag.net/paramiko/
-  * License: LGPL
+* Site: http://www.lag.net/paramiko/
+* License: LGPL
 
 Release Notes:
-  * Featuring in Rudix
+
+* Paramiko 1.7.7.1
+
+Installation and usage:
+
+	sudo rudix install paramiko
+	sudo rudix install pycrypto
+	python -c 'import paramiko'
+	pydoc paramiko
