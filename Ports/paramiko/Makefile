@@ -1,4 +1,5 @@
 BuildRequires += $(DocDir)/pycrypto # pycrypto
+Requires += org.rudix.pkg.pycrypto,pycrypto,../pycrypto/pycryptoinstall.pkg
 
 include ../../Library/Python.mk
 
