@@ -28,13 +28,45 @@ Distribution = '''<?xml version="1.0" encoding="utf-8" standalone="no"?>
     <pkg-ref id="{pkgid}" auth="Root">#{installpkg}</pkg-ref>
 </installer-script>'''
 
-def synthesize(title, pkgid, name, installpkg):
-    return Distribution.format(title=title, pkgid=pkgid, name=name, installpkg=installpkg)
+DistributionMany = '''<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.apple.PackageMaker" authoringToolVersion="3.0.6" authoringToolBuild="201">
+    <title>{title}</title>
+    <options customize="never" allow-external-scripts="no"/>
+    <domains enable_anywhere="true"/>
+    <background file="background" alignment="bottomleft" scaling="none"/>
+    <welcome file="Welcome"/>
+    <readme file="ReadMe"/>
+    <license file="License"/>
+{choices}
+</installer-script>
+'''
+
+def synthesize(title, pkgid, name, installpkg, requires):
+    if not requires:
+        return Distribution.format(title=title, pkgid=pkgid, name=name, installpkg=installpkg)
+    requires.insert(0, ','.join((pkgid, name, installpkg)))
+    extra = ['    <choices-outline>']
+    for n in range(len(requires)):
+        extra.append('        <line choice="choice%d"/>' % n)
+    extra.append('    </choices-outline>')
+    n = 0
+    for dep in requires:
+        pkgid, name, installpkg = dep.split(',')
+        extra.append('    <choice id="choice%d" title="%s-install">' % (n, name))
+        extra.append('        <pkg-ref id="%s"/>' % pkgid)
+        extra.append('    </choice>')
+        n += 1
+    for dep in requires:
+        pkgid, name, installpkg = dep.split(',')
+        extra.append('    <pkg-ref id="%s" auth="Root">%s</pkg-ref>' % (pkgid, installpkg))
+    choices = '\n'.join(extra)
+    return DistributionMany.format(title=title, choices=choices)
 
 def main(argv=None):
     if not argv:
         argv = sys.argv
-    opts, args = getopt(argv[1:], '', ['title=', 'pkgid=', 'name=', 'installpkg=' ])
+    requires = []
+    opts, args = getopt(argv[1:], '', ['title=', 'pkgid=', 'name=', 'installpkg=', 'requires=' ])
     for opt, arg in opts:
         if opt == '--title':
             title = arg
@@ -44,8 +76,10 @@ def main(argv=None):
             name = arg
         if opt == '--installpkg':
             installpkg = arg
+        if opt == '--requires':
+            requires.append(arg)
     with open('Distribution', 'w') as dist:
-        dist.write(synthesize(title, pkgid, name, installpkg))
+        dist.write(synthesize(title, pkgid, name, installpkg, requires))
     
 if __name__ == '__main__':
     sys.exit(main())

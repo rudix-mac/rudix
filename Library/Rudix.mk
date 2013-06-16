@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20130303
+BuildSystem = 20130616
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -226,7 +226,8 @@ define create_distribution
 	--title "$(Title) $(Version)" \
 	--pkgid $(PkgId) \
 	--name $(DistName) \
-	--installpkg $(Name)install.pkg
+	--installpkg $(Name)install.pkg \
+	$(if $(Requires),$(foreach req,$(Requires), --requires $(req)))
 endef
 
 define create_resources
