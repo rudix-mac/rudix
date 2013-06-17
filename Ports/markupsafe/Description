@@ -1,0 +1,14 @@
+MarkupSafe is a library for Python that implements a unicode string that is aware of HTML escaping rules and can be used to implement automatic string escaping.
+
+* Site: http://www.pocoo.org/projects/markupsafe/
+* License: BSD
+
+Release Notes:
+
+* Adopted MarkupSafe (Python library) version 0.18
+
+Installation and usage:
+
+	sudo rudix install markupsafe
+	python -c 'import markupsafe'
+	pydoc markupsafe
