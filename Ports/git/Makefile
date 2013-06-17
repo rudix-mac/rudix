@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		Git
 Name=		git
-Version=	1.8.0
+Version=	1.8.3.1
 Revision=	0
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
