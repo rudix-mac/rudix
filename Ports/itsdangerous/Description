@@ -1,0 +1,14 @@
+Various helpers to pass trusted data to untrusted environments and back.
+
+* Site: http://pythonhosted.org/itsdangerous/
+* License: BSD
+
+Release Notes:
+
+* Adopted ItIsDangerous (Python Module) version 0.21
+
+Installation and usage:
+
+	sudo rudix install itsdangerous
+	python -c 'import itsdangerous'
+	pydoc itsdangerous
