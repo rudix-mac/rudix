@@ -1,4 +1,4 @@
-Requires += org.rudix.pkg.markupsafe,markupsafe,../markupsafe/markupsafeinstall.pkg
+Requires += org.rudix.pkg.markupsafe,markupsafe,markupsafeinstall.pkg
 
 include ../../Library/Python.mk
 

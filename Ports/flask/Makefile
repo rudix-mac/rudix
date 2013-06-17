@@ -1,7 +1,7 @@
-Requires += org.rudix.pkg.werkzeug,werkzeug,../werkzeug/werkzeuginstall.pkg
-Requires += org.rudix.pkg.markupsafe,markupsafe,../markupsafe/markupsafeinstall.pkg
-Requires += org.rudix.pkg.jinja2,jinja2,../jinja2/jinja2install.pkg
-Requires += org.rudix.pkg.itsdangerous,itsdangerous,../itsdangerous/itsdangerousinstall.pkg
+Requires += org.rudix.pkg.werkzeug,werkzeug,werkzeuginstall.pkg
+Requires += org.rudix.pkg.markupsafe,markupsafe,markupsafeinstall.pkg
+Requires += org.rudix.pkg.jinja2,jinja2,jinja2install.pkg
+Requires += org.rudix.pkg.itsdangerous,itsdangerous,itsdangerousinstall.pkg
 
 include ../../Library/Python.mk
 
