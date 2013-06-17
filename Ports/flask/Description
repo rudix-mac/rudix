@@ -1,0 +1,14 @@
+Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions.
+
+* Site: http://flask.pocoo.org
+* License: BSD
+
+Release Notes:
+
+* Adopted Flask (microframework for Python) version 0.10
+
+Installation and usage:
+
+	sudo rudix install flask
+	python -c 'import flask'
+	pydoc flask
