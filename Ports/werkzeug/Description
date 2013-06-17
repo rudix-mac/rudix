@@ -1,0 +1,14 @@
+Werkzeug is a WSGI utility library for Python.
+
+* Site: http://werkzeug.pocoo.org
+* License: BSD
+
+Release Notes:
+
+* Adopted Werkzeug (WSGI utils for Python) version 0.9.1
+
+Installation and usage:
+
+	sudo rudix install werkzeug
+	import -c 'import werkzeug'
+	pydoc werkzeug
