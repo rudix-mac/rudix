@@ -5,13 +5,10 @@ Tornado is an open source version of the scalable, non-blocking web server and t
 
 Release Notes:
 
-* Upgraded to version 2.4.1
+* Upgraded to version 3.1
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install tornado
-
-Basic usage and help:
-
-	pydoc tornado
 	python -c 'import tornado'
+	pydoc tornado
