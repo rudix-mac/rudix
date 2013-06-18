@@ -1,7 +1,13 @@
 Monit is a utility for managing and monitoring, processes, files, directories and filesystems.
 
-  * Site: http://mmonit.com/monit/
-  * License: AGPL
+* Site: http://mmonit.com/monit/
+* License: AGPL
 
 Release Notes:
-  * Featuring in Rudix
+
+* Upgraded to version 5.5.1
+
+Installation and usage:
+
+	sudo rudix install monit
+	monit -h

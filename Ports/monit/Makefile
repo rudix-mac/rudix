@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Monit
 Name=		monit
-Version=	5.3.2
+Version=	5.5.1
 Revision=	0
 URL=		http://mmonit.com/monit/dist/
 Source=		$(Name)-$(Version).tar.gz
-
 
 define install_post_hook
 chmod +w $(PortDir)/$(InstallDir)/$(BinDir)/monit
