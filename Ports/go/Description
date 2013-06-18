@@ -6,6 +6,7 @@ Go is an expressive, concurrent, garbage-collected programming language.
 Release Notes:
 
 * Upgraded to version 1.1.1
+* Added documenation: AUTHORS, PATENTS, CONTRIBUTORS, VERSION
 
 Installation and usage:
 

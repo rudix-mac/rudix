@@ -7,7 +7,7 @@ include ../../Library/Rudix.mk
 Title=		The Go Programming Language
 Name=		go
 Version=	1.1.1
-Revision=	0
+Revision=	1
 URL=		http://go.googlecode.com/files
 Source=		$(Name)$(Version).src.tar.gz
 
@@ -33,6 +33,7 @@ cp -a $(BuildDir)/include $(InstallDir)/$(LibDir)/go
 install -d $(InstallDir)/$(DataDir)/emacs/site-lisp
 install -m 644 $(BuildDir)/misc/emacs/*.el $(InstallDir)/$(DataDir)/emacs/site-lisp
 $(install_base_documentation)
+install -m 644 $(SourceDir)/{AUTHORS,PATENTS,CONTRIBUTORS,VERSION} $(InstallDir)/$(DocDir)/go
 endef
 
 define test_inner_hook
