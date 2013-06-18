@@ -1,3 +1,5 @@
+Requires += org.rudix.pkg.meld3,meld3,meld3install.pkg
+
 include ../../Library/Python.mk
 
 Title=		Supervisor
