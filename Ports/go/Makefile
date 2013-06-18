@@ -6,7 +6,7 @@ include ../../Library/Rudix.mk
 
 Title=		The Go Programming Language
 Name=		go
-Version=	1.1
+Version=	1.1.1
 Revision=	0
 URL=		http://go.googlecode.com/files
 Source=		$(Name)$(Version).src.tar.gz
