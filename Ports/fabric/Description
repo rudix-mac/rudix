@@ -1,7 +1,13 @@
 Fabric is a Python library and command-line tool for streamlining the use of SSH.
 
-  * Site: http://fabfile.org/
-  * License: BSD
+* Site: http://fabfile.org/
+* License: BSD
 
 Release notes:
-  * Fabric 1.4.2
+
+* Upgraded to version 1.6.1
+
+Installation and usage:
+
+	sudo rudix install fabric
+	fab --help
