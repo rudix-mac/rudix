@@ -1,3 +1,0 @@
-#!/bin/sh
-/usr/sbin/pkgutil --forget org.rudix.pkg.ssh
-exit 0
