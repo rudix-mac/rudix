@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		SQLite
 Name=		sqlite
-Version=	3.7.13
-AltVersion=	3071300
+Version=	3.7.17
+AltVersion=	3071700
 Revision=	0
-URL=		http://www.sqlite.org/
+URL=		http://www.sqlite.org/2013
 Source=		$(Name)-autoconf-$(AltVersion).tar.gz
 
 LicenseFile=	$(SourceDir)/INSTALL
