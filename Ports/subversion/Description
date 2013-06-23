@@ -5,8 +5,9 @@ Enterprise-class centralized version control for the masses.
 
 Release Notes:
 
-* Upgraded to version 1.7.8
+* Upgraded to version 1.8.0
 
 Installation and Usage:
 
 	sudo rudix install subversion
+	/usr/local/bin/svn --help
