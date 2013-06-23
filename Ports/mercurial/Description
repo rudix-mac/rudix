@@ -1,7 +1,13 @@
 Mercurial is a free, distributed source control management tool.
 
-  * Site: http://mercurial.selenic.com/
-  * License: GPL
+* Site: http://mercurial.selenic.com/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 2.2.2
+
+* Upgraded to version 2.6
+
+Installation and usage:
+
+	sudo rudix install mercurial
+	hg --help

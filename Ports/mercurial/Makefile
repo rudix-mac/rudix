@@ -4,7 +4,7 @@ include ../../Library/Python.mk
 
 Title=		Mercurial
 Name=		mercurial
-Version=	2.2.2
+Version=	2.6
 Revision=	0
 URL=		http://www.selenic.com/mercurial/release/
 Source=		$(Name)-$(Version).tar.gz
