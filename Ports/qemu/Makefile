@@ -8,8 +8,8 @@ include ../../Library/Configure.mk
 
 Title=		QEMU
 Name=		qemu
-Version=	1.4.0
-Revision=	1
+Version=	1.4.2
+Revision=	0
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
 

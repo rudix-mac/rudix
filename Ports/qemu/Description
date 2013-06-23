@@ -5,9 +5,7 @@ QEMU is a generic and open source machine emulator and virtualizer.
 
 Release Notes:
 
-* Upgraded to version 1.4.0
-* Enabled Cocoa display
-* Disabled SDL and VNC support
+* Upgraded to version 1.4.2
 
 Installation and Usage:
 
