@@ -5,13 +5,10 @@ Redis is an open source, advanced key-value store.
 
 Release Notes
 
-* Upgraded to version 2.6.9
+* Upgraded to version 2.6.14
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install redis
-
-Basic usage and help:
-
 	redis-cli --help
 	redis-server --help
