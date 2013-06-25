@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		MongoDB
 Name=		mongodb
-Version=	2.4.0
+Version=	2.4.4
 Revision=	0
 URL=		http://downloads.mongodb.org/src
 Source=		$(Name)-src-r$(Version).tar.gz
