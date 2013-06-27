@@ -1,9 +1,13 @@
 msmtp is an SMTP client.
 
-  * Site: http://msmtp.sourceforge.net/
-  * License: GPL
+* Site: http://msmtp.sourceforge.net/
+* License: GPL
 
 Release Notes:
 
-* Upgraded to version 1.4.30
+* Upgraded to version 1.4.31
 
+Installation and usage:
+
+	sudo rudix install msmtp
+	mstmp --help

@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/pkg-config
+BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libidn.la # static-libidn
 
@@ -6,7 +6,7 @@ include ../../Library/GNU.mk
 
 Title=		msmtp
 Name=		msmtp
-Version=	1.4.30
+Version=	1.4.31
 Revision=	0
 URL=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
