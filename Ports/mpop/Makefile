@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/pkg-config
+BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libidn.la # static-libidn
 
@@ -6,8 +6,8 @@ include ../../Library/GNU.mk
 
 Title=		mpop
 Name=		mpop
-Version=	1.0.27
-Revision=	1
+Version=	1.0.28
+Revision=	0
 URL=		http://sourceforge.net/projects/mpop/files/mpop/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
 

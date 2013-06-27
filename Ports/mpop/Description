@@ -1,8 +1,13 @@
-mpop is a POP3 client: it retrieves mail from POP3 mailboxes.
+mpop is a POP3 client, it retrieves mail from POP3 mailboxes.
 
-  * Site: http://mpop.sourceforge.net/
-  * License: GPL
+* Site: http://mpop.sourceforge.net/
+* License: GPL
 
 Release Notes:
-  * Build with libidn
-  * Upgraded to version 1.0.27
+
+* Upgraded to version 1.0.28
+
+Installation and usage:
+
+	sudo rudix install mpop
+	mpop --help
