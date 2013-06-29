@@ -2,9 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		PCRE
 Name=		pcre
-Version=	8.32
-Revision=	1
-URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+Version=	8.33
+Revision=	0
+#URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+URL=		http://downloads.sourceforge.net/pcre
 Source=		$(Name)-$(Version).tar.bz2
 
 LicenseFile=	$(SourceDir)/LICENCE

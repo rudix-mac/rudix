@@ -5,7 +5,7 @@ The PCRE library is a set of functions that implement regular expression pattern
 
 Release Notes:
 
-* Built with unicode-properties, pcregrep-libz and pcregrep-libvz2 enabled
+* Upgraded to version 8.33
 
 Installation and usage:
 
