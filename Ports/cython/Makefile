@@ -2,7 +2,7 @@ include ../../Library/Python.mk
 
 Title=		Cython
 Name=		cython
-Version=	0.18
+Version=	0.19.1
 Revision=	0
 URL=		http://www.cython.org/release
 Source=		Cython-$(Version).tar.gz

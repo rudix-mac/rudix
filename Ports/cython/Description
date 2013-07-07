@@ -5,7 +5,7 @@ Cython is a language that makes writing C extensions for the Python language as 
 
 Release Notes:
 
-* Adopted Cython version 0.18
+* Upgraded to version 0.19.1
 
 Installation and usage:
 
