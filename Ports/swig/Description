@@ -5,8 +5,9 @@ SWIG is a tool that connects programs written in C/C++ with a variety of high-le
 
 Release Notes:
 
-* Upgraded to version 2.0.9
+* Upgraded to version 2.0.10
 
 Installation and Usage:
 
 	sudo rudix install swig
+	swig
