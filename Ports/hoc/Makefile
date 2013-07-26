@@ -3,16 +3,17 @@ include ../../Library/Unix.mk
 Title=		HOC
 Name=		hoc
 Version=	1.1
-Revision=	8
+Revision=	9
 URL=		http://netlib.bell-labs.com/~bwk/
 Source=		$(Name).sh
 
+LicenseFile=	LICENSE
 
 define explode
 mkdir -p $(Name)-$(Version) ; cd $(Name)-$(Version) ; sh ../$(Source)
 endef
 
-# Can't compile in parallel
+# Can't do parallel build
 define make
 make
 endef

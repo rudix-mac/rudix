@@ -1,7 +1,13 @@
-From Kernighan and Pike: High Order Calculator.
+High Order Calculator.
 
-  * Site: http://cm.bell-labs.com/cm/cs/upe/index.html
-  * License: non-free
+* Site: http://cm.bell-labs.com/cm/cs/upe/index.html
+* License: non-free
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* HOC 1.1
+
+Installation and usage:
+
+	sudo rudix install hoc
+	hoc
