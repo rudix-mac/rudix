@@ -1,4 +1,4 @@
-html2text: Turn HTML into equivalent Markdown-structured text.
+Turn HTML into equivalent Markdown-structured text.
 
 * Site: https://github.com/aaronsw/html2text
 * License: GPL
@@ -7,10 +7,7 @@ Release Notes:
 
 * Adopted html2text version 3.200.3
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install html2text
-
-Basic usage and help:
-
 	html2text --help
