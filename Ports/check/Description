@@ -1,11 +1,11 @@
-Check: A unit testing framework for C.
+Check is a unit testing framework for C.
 
 * Site: http://check.sourceforge.net/
 * License: LGPL
 
 Release Notes:
 
-* Upgraded to version 0.9.9
+* Upgraded to version 0.9.10
 
 Installation and Usage:
 
