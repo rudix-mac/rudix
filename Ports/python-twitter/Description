@@ -1,12 +1,13 @@
-python-twitter: A python wrapper around the Twitter API.
+A python wrapper around the Twitter API.
 
 * Site: http://code.google.com/p/python-twitter/
 * License: Apache License 2.0
 
 Release Notes:
 
-* Upgraded to version 0.8.5
+* Upgraded to version 1.0
 
-Installation and Usage:
+Installation and usage:
 
 	sudo rudix install
+	python -c 'import twitter'
