@@ -7,6 +7,7 @@ Release Notes:
 
 * Upgraded to version 1.1.1
 * Added documenation: AUTHORS, PATENTS, CONTRIBUTORS, VERSION
+* Fix missing files in /usr/local/lib/go/src/
 
 Installation and usage:
 

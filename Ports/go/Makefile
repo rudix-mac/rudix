@@ -7,7 +7,7 @@ include ../../Library/Rudix.mk
 Title=		The Go Programming Language
 Name=		go
 Version=	1.1.1
-Revision=	1
+Revision=	2
 URL=		http://go.googlecode.com/files
 Source=		$(Name)$(Version).src.tar.gz
 
@@ -24,8 +24,7 @@ install -d $(InstallDir)/$(BinDir)
 install -m 755 $(BuildDir)/bin/* $(InstallDir)/$(BinDir)
 install -d $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/pkg $(InstallDir)/$(LibDir)/go
-install -d $(InstallDir)/$(LibDir)/go/src
-cp -a $(BuildDir)/src/pkg $(InstallDir)/$(LibDir)/go/src
+cp -a $(BuildDir)/src $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/lib $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/doc $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/api $(InstallDir)/$(LibDir)/go
