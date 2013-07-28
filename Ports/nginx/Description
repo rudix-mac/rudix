@@ -1,11 +1,11 @@
-Nginx [engine x] is a HTTP and reverse proxy server, as well as a mail proxy server.
+Nginx (engine x) is a HTTP and reverse proxy server, as well as a mail proxy server.
 
 * Site: http://nginx.org/
 * License: BSD
 
 Release Notes:
 
-* Upgraded to version 1.2.7
+* Upgraded to version 1.4.2
 
 Installation and Usage:
 

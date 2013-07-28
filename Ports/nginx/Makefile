@@ -4,7 +4,7 @@ include ../../Library/Configure.mk
 
 Title=		Nginx
 Name=		nginx
-Version=	1.2.7
+Version=	1.4.2
 Revision=	0
 URL=		http://nginx.org/download/
 Source=		$(Name)-$(Version).tar.gz
