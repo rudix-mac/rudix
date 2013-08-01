@@ -1,3 +1,5 @@
+# FIXME: Won't build if /usr/lib/libreadline.dylib is libedit.
+
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libreadline.a # static-readline
 
@@ -5,7 +7,7 @@ include ../../Library/GNU.mk
 
 Title=		LFTP
 Name=		lftp
-Version=	4.4.4
+Version=	4.4.8
 Revision=	0
 #URL=		http://ftp.yar.ru/pub/source/lftp
 URL=		http://lftp.cybermirror.org

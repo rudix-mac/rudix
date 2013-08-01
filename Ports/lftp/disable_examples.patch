@@ -1,0 +1,20 @@
+--- src/Makefile.in.orig	2013-08-01 17:58:28.000000000 -0300
++++ src/Makefile.in	2013-08-01 18:01:02.000000000 -0300
+@@ -52,8 +52,6 @@
+ build_triplet = @build@
+ host_triplet = @host@
+ bin_PROGRAMS = lftp$(EXEEXT)
+-noinst_PROGRAMS = example1$(EXEEXT) example2$(EXEEXT) \
+-	example1-cmd$(EXEEXT)
+ subdir = src
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	$(top_srcdir)/build-aux/depcomp ChangeLog
+@@ -301,7 +299,7 @@
+ 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
+ 	$(CXXFLAGS) $(proto_sftp_la_LDFLAGS) $(LDFLAGS) -o $@
+ @WITH_MODULES_TRUE@am_proto_sftp_la_rpath = -rpath $(pkgverlibdir)
+-PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
++PROGRAMS = $(bin_PROGRAMS)
+ am_example1_OBJECTS = example1.$(OBJEXT)
+ example1_OBJECTS = $(am_example1_OBJECTS)
+ example1_DEPENDENCIES = liblftp-tasks.la

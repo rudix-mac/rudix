@@ -5,9 +5,9 @@ LFTP is sophisticated ftp/http client, file transfer program supporting a number
 
 Release Notes:
 
-* Upgraded to version 4.4.4
+* Upgraded to version 4.4.8
 
-Installation and Usage:
+Installation and usage:
 
 	sudo rudix install lftp
 	lftp
