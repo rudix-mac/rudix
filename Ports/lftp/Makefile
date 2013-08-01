@@ -16,6 +16,12 @@ Source=		$(Name)-$(Version).tar.bz2
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-modules
 
+ifeq ($(OSXVersion),10.6)
+define prep_post_hook
+cd $(SourceDir) && patch -p1 < $(PortDir)/inflateReset.diff
+endef
+endif
+
 define install_post_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} $(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf $(InstallDir)/$(Prefix)/etc/lftp.conf.default
