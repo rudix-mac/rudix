@@ -1,4 +1,5 @@
 BuildRequires += $(BinDir)/libtool # libtool
+Requires += org.rudix.pkg.libtool,libtool,libtoolinstall.pkg
 
 include ../../Library/GNU.mk
 
