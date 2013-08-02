@@ -1,7 +1,13 @@
 The GNU grep command searches one or more input files for lines containing a match to a specified pattern.
 
-  * Site: http://www.gnu.org/software/grep/
-  * License: GPL
+* Site: http://www.gnu.org/software/grep/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 2.12
+
+* Upgraded to version 2.14
+
+Installation and usage:
+
+	sudo rudix install grep
+	/usr/local/bin/grep --help
