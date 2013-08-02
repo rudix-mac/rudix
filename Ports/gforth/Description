@@ -1,7 +1,13 @@
 Gforth is a fast and portable implementation of the ANS Forth language.
 
-  * Site: http://www.gnu.org/software/gforth/
-  * License: GPL
+* Site: http://www.gnu.org/software/gforth/
+* License: GPL
 
 Release Notes:
-  * Featuring in Rudix
+
+* Upgraded to version 0.7.2
+
+Installation and usage:
+
+	sudo rudix install gforth
+	gforth
