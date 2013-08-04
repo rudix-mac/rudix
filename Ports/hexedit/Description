@@ -1,7 +1,13 @@
 View and edit files in hexadecimal or ASCII.
 
-  * Site: http://www.chez.com/prigaux/hexedit.html
-  * Site: GPL
+* Site: http://www.chez.com/prigaux/hexedit.html
+* Site: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* HexEdit 1.2.12
+
+Installation and usage:
+
+	sudo rudix install hexedit
+	hexedit --help
