@@ -5,14 +5,9 @@ include ../../Library/GNU.mk
 Title=		GNU Make
 Name=		make
 Version=	3.82
-Revision=	3
+Revision=	4
 URL=		http://ftp.gnu.org/gnu/make/
 Source=		$(Name)-$(Version).tar.bz2
-
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif
 
 GnuConfigureExtra += --program-prefix=gnu
 
