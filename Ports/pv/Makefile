@@ -1,4 +1,10 @@
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+
 include ../../Library/GNU.mk
+
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
 
 Title=		Pipe Viewer
 Name=		pv
