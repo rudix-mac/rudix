@@ -1,7 +1,13 @@
 Rzip is a compression program, similar in functionality to gzip or bzip2.
 
-  * Site: http://rzip.samba.org/
-  * License: GPL
+* Site: http://rzip.samba.org/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Rzip 2.1
+
+Installation and usage:
+
+	sudo rudix install rzip
+	rzip
