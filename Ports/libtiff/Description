@@ -1,7 +1,12 @@
 TIFF Library and Utilities.
 
-  * Site: http://www.libtiff.org/
-  * License: BSD
+* Site: http://www.libtiff.org/
+* License: BSD
 
 Release Notes:
-  * libtiff 3.6.1
+
+* libtiff 3.6.1
+
+Installation and usage:
+
+	sudo rudix install libtiff
