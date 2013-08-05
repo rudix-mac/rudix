@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 Title=		TCP Flow Recorder
 Name=		tcpflow
 Version=	0.21
-Revision=	0
+Revision=	1
 URL=		http://www.circlemud.org/pub/jelson/tcpflow/
 Source=		$(Name)-$(Version).tar.gz
 
