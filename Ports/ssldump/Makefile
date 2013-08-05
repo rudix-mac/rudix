@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		SSLdump
 Name=		ssldump
 Version=	0.9b3
-Revision=	3
+Revision=	4
 URL=		http://www.rtfm.com/ssldump/
 Source=		$(Name)-$(Version).tar.gz
 
