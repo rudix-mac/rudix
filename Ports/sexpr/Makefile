@@ -3,10 +3,11 @@ include ../../Library/GNU.mk
 Title=		sfsexp
 Name=		sexpr
 Version=	1.2.1
-Revision=	1
+Revision=	2
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)_$(Version).tar.gz
 
+ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=$(Name)_$(Version)

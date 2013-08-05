@@ -1,7 +1,12 @@
 The small, fast s-expression library.
 
-  * Site: http://sexpr.sourceforge.net/
-  * License: BSD
+* Site: http://sexpr.sourceforge.net/
+* License: LGPL
 
-Release Notes
-  * Rebuild on new Xcode
+Release Notes:
+
+* sexpr 1.2.1
+
+Installation and usage:
+
+	sudo rudix install sexpr
