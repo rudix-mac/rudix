@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Title=		SIMH
 Name=		simh
 Version=	3.8.1
-Revision=	3
+Revision=	4
 URL=		http://simh.trailing-edge.com/sources/
 Source=		$(Name)v38-1.zip
 
@@ -24,6 +24,7 @@ endef
 
 define install_inner_hook
 install -d $(InstallDir)/$(BinDir)
+rm -rf $(BuildDir)/BIN/*.dSYM
 install -m 755 $(BuildDir)/BIN/* $(InstallDir)/$(BinDir)
 $(install_base_documentatio)
 endef

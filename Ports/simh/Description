@@ -1,7 +1,13 @@
 SIMH is a highly portable, multi-system simulator.
 
-  * Site: http://simh.trailing-edge.com/
-  * License: MIT
+* Site: http://simh.trailing-edge.com/
+* License: MIT
 
 Release Notes:
-  * SIMH 3.8.1
+
+* SIMH 3.8.1
+
+Installation and usage:
+
+	sudo rudix install simh
+	simh
