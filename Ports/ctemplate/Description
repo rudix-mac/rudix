@@ -1,7 +1,12 @@
 Powerful but simple template language for C++.
 
-  * Site: http://code.google.com/p/google-ctemplate/
-  * License: BSD
+* Site: http://code.google.com/p/google-ctemplate/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 2.2
+
+* Upgraded to version 2.2
+
+Installation and usage:
+
+	sudo rudix install ctemplate
