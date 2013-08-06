@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		libzip
 Name=		libzip
 Version=	0.10.1
-Revision=	0
+Revision=	1
 URL=		http://nih.at/libzip/
 Source=		$(Name)-$(Version).tar.bz2
 
