@@ -1,7 +1,12 @@
 Libunistring provides functions for manipulating Unicode strings.
 
-  * Site: http://www.gnu.org/s/libunistring/
-  * License: GPL
+* Site: http://www.gnu.org/s/libunistring/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* GNU libunistring 0.9.3
+
+Installation and usage:
+
+	sudo rudix install libunistring
