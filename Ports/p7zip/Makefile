@@ -1,11 +1,10 @@
 include ../../Library/Config.mk
-RUDIX_UNIVERSAL=
 include ../../Library/Rudix.mk
 
 Title=		P7ZIP
 Name=		p7zip
 Version=	9.20.1
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/$(Name)
 URL=		http://sourceforge.net/projects/p7zip/files/p7zip/$(Version)/
 Source=		$(Name)_$(Version)_src_all.tar.bz2

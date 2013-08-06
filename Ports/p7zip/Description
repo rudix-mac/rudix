@@ -1,7 +1,13 @@
 p7zip is a port of 7za.exe for POSIX systems like Unix.
 
-  * Site: http://p7zip.sourceforge.net/
-  * License: LGPL
+* Site: http://p7zip.sourceforge.net/
+* License: LGPL
 
 Release Notes:
-  * Upgraded to version 9.20.1
+
+* Upgraded to version 9.20.1
+
+Installation and usage:
+
+	sudo rudix install p7zip
+	p7zip
