@@ -1,7 +1,13 @@
 OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.
 
-  * Site: http://optipng.sourceforge.net/
-  * License: zlib
+* Site: http://optipng.sourceforge.net/
+* License: zlib
 
 Release Notes:
-  * Upgraded to version 0.7
+
+* Upgraded to version 0.7.4
+
+Installation and usage:
+
+	sudo rudix install optipng
+	optipng --help
