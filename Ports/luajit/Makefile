@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		LuaJIT
 Name=		luajit
-Version=	2.0.0
+Version=	2.0.2
 Revision=	0
 URL=		http://luajit.org/download
 Source=		LuaJIT-$(Version).tar.gz
