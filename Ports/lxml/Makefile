@@ -1,9 +1,9 @@
 include ../../Library/Python.mk
 
-Title=		lxml
+Title=		XML and HTML with Python
 Name=		lxml
-Version=	2.3.3
-Revision=	1
+Version=	3.2.3
+Revision=	0
 URL=		http://pypi.python.org/packages/source/l/lxml/
 Source=		$(Name)-$(Version).tar.gz
 
