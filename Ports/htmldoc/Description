@@ -1,8 +1,13 @@
 HTMLDOC converts HTML files and web pages into indexed HTML, PS or PDF files.
 
-  * Site: http://www.htmldoc.org/
-  * License: GPL
+* Site: http://www.htmldoc.org/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
 
+* HTMLDOC 1.8.27
+
+Installation and usage:
+
+	sudo rudix install htmldoc
+	htmldoc --help
