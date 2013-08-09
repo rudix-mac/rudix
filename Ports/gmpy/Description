@@ -1,7 +1,14 @@
 Multiple-precision arithmetic for Python.
 
-  * Site: http://code.google.com/p/gmpy/
-  * License: LGPL
+* Site: http://code.google.com/p/gmpy/
+* License: LGPL
 
 Release Notes:
-  * GMPY 1.15
+
+* Upgraded to version 1.16
+
+Installationd and usage:
+
+	sudo rudix install gmpy
+	python -c 'import gmpy'
+	pydoc gmpy
