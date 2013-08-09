@@ -1,7 +1,13 @@
 Iperf was developed by NLANR/DAST as a modern alternative for measuring maximum TCP and UDP bandwidth performance.
 
-  * Site: http://iperf.sourceforge.net/
-  * License: BSD
+* Site: http://iperf.sourceforge.net/
+* License: BSD
 
 Release Notes:
-  * Iperf 2.0.5
+
+* Iperf 2.0.5
+
+Installation and usage:
+
+	sudo rudix install iperf
+	iperf --help
