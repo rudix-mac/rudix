@@ -1,7 +1,12 @@
 Python bindings for libxml2.
 
-  * Site: http://xmlsoft.org/python.html
-  * License: MIT
+* Site: http://xmlsoft.org/python.html
+* License: MIT
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* libxml2-python 2.6.21
+
+Installation and usage:
+
+	sudo rudix install libxml2-python
