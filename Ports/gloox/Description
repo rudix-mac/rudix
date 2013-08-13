@@ -1,7 +1,12 @@
 Full-featured Jabber/XMPP client library written in C++.
 
-  * Site: http://camaya.net/gloox
-  * License: GPL
+* Site: http://camaya.net/gloox
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* Upgraded to version 1.0.3
+
+Installation and usage:
+
+	sudo rudix install gloox
