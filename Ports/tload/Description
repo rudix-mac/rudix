@@ -1,7 +1,13 @@
 Tload for Mac OS X.
 
-  * Site: https://github.com/ruda/tload/
-  * License: GPL
+* Site: https://github.com/ruda/tload/
+* License: GPL
 
 Release Notes:
-  * (Re-)Adopted Tload 3.2.8
+
+* Tload 3.2.8
+
+Installation and usage:
+
+	sudo rudix install tload
+	tload
