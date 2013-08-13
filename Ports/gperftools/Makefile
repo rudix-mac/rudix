@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Gperftools
 Name=		gperftools
-Version=	2.0
-Revision=	1
+Version=	2.1
+Revision=	0
 URL=		http://gperftools.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
-
 
 EnvExtra += MACOSX_DEPLOYMENT_TARGET=10.3
 
