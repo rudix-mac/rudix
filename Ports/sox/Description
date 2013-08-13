@@ -1,8 +1,14 @@
 SOund eXchange - universal sound sample translator.
 
-  * Site: http://sox.sourceforge.net/
-  * License: ?
+* Site: http://sox.sourceforge.net/
+* License: GPL+LGPL
 
 Release Notes:
-  * Upgraded to version 14.4.0
 
+* Upgraded to version 14.4.1
+* Built with LAME, Flac and Ogg/Vorbis support
+
+Installation and usage:
+
+	sudo rudix install sox
+	sox --help

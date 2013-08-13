@@ -1,12 +1,16 @@
+BuildRequires += $(LibDir)/libmp3lame.la # static-lame
+BuildRequires += $(LibDir)/libFLAC.la # static-flac
+BuildRequires += $(LibDir)/libogg.la # static-libogg
+BuildRequires += $(LibDir)/libvorbis.la # static-libvorbis
+
 include ../../Library/GNU.mk
 
 Title=		SoX
 Name=		sox
-Version=	14.4.0
+Version=	14.4.1
 Revision=	0
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
-
 
 define test_inner_hook
 $(BinDir)/sox --version
