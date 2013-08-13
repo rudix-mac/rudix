@@ -7,10 +7,7 @@ Release Notes:
 
 * Adopted version 1.0.1
 
-Install with Rudix command line:
+Installation and usage:
 
 	sudo rudix install trac
-
-Basic usage and help:
-
-	tracd
+	trac-admin --help

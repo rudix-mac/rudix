@@ -1,4 +1,4 @@
-# requires Python Genshi >= 0.6
+Requires += org.rudix.pkg.genshi,genshi,genshiinstall.pkg
 
 include ../../Library/Python.mk
 
