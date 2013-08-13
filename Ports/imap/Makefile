@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Title=		IMAP UW
 Name=		imap
 Version=	2007f
-Revision=	0
+Revision=	1
 URL=		ftp://ftp.cac.washington.edu/mail/
 Source=		$(Name)-$(Version).tar.gz
 
