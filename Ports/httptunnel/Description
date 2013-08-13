@@ -1,7 +1,12 @@
 httptunnel creates a bidirectional virtual data connection tunnelled in HTTP requests.
 
-  * Site: http://www.nocrew.org/software/httptunnel/
-  * License: GPL
+* Site: http://www.nocrew.org/software/httptunnel/
+* License: GPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* httptunnel 3.3
+
+Installation and usage:
+
+	sudo rudix install httptunnel
