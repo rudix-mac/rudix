@@ -1,7 +1,14 @@
-Keyring - Store and access your passwords safely.
+Store and access your passwords safely.
 
-  * Site: http://pypi.python.org/pypi/keyring
-  * License: PSF
+* Site: http://pypi.python.org/pypi/keyring
+* License: PSF
 
 Release Notes:
-  * Upgraded to version 0.9.2
+
+* Upgraded to version 1.6.1
+
+Installation and usage:
+
+	sudo rudix install keyring
+	python -c 'import keyring'
+	pydoc keyring
