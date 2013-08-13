@@ -1,7 +1,14 @@
 Parse Atom and RSS feeds in Python.
 
-  * Site: http://code.google.com/p/feedparser/
-  * License: MIT
+* Site: http://code.google.com/p/feedparser/
+* License: MIT
 
 Release Notes:
-  * Upgraded to version 5.1.2
+
+* Upgraded to version 5.1.3
+
+Installation and usage:
+
+	sudo rudix install feedparser
+	python -c 'import feedparser'
+	pydoc feedparser

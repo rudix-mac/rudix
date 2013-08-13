@@ -2,7 +2,7 @@ include ../../Library/Python.mk
 
 Title=		Universal Feed Parser (Python Module)
 Name=		feedparser
-Version=	5.1.2
+Version=	5.1.3
 Revision=	0
 URL=		http://feedparser.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.bz2
