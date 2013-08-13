@@ -1,7 +1,13 @@
 FLAC is an Open Source lossless audio codec.
 
-  * Site: http://flac.sourceforge.net/
-  * License: BSD
+* Site: http://flac.sourceforge.net/
+* License: BSD
 
 Release Notes:
-  * FLAC 1.2.1
+
+* Upgraded to version 1.3.0
+
+Installation and usage:
+
+	sudo rudix install flac
+	flac --help
