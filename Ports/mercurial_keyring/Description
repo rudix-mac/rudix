@@ -1,8 +1,12 @@
 Mercurial Keyring is a Mercurial extension used to securely save authentication passwords in password databases.
 
-  * Site: http://pypi.python.org/pypi/mercurial_keyring
-  * License: GPL
+* Site: http://pypi.python.org/pypi/mercurial_keyring
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 0.5.1
-  * Featuring in Rudix
+
+* Upgraded to version 0.5.7
+
+Installation and usage:
+
+	sudo rudix install mercurial_keyring
