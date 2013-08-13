@@ -1,19 +1,13 @@
-Tree is a recursive directory listing command that produces 
-a depth indented listing of files, which is colorized ala dircolors 
-if the LS_COLORS environment variable is set and output is to tty. 
-Tree has been ported and reported to work under the following 
-operating systems: 
-  - Linux
-  - FreeBSD 
-  - OS X
-  - Solaris
-  - HP/UX
-  - Cygwin
-  - HP Nonstop
-  - OS/2.
+Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors.
 
-  * Site: http://mama.indstate.edu/users/ice/tree/
-  * License: GPL Version 2
+* Site: http://mama.indstate.edu/users/ice/tree/
+* License: GPL Version 2
 
 Release Notes:
-  * Ported to rudix
+
+* Tree 1.6.0
+
+Installation and usage:
+
+	sudo rudix install tree
+	tree

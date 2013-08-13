@@ -1,14 +1,12 @@
 # Package Maintainer: Qichang Liang
 # email: kcleung@cs.otago.ac.nz
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/UnixFormula.mk
+include ../../Library/Unix.mk
 
 Title=		tree
 Name=		tree
 Version=	1.6.0
-Revision=	0
+Revision=	1
 URL=		http://mama.indstate.edu/users/ice/tree/src/
 Source=		$(Name)-$(Version).tgz
 
