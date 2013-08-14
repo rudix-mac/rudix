@@ -1,7 +1,12 @@
 Little CMS intends to be a small-footprint color management engine.
 
-  * Site: http://www.littlecms.com/
-  * License: MIT
+* Site: http://www.littlecms.com/
+* License: MIT
 
 Release Notes:
-  * Upgraded to version 2.3
+
+* Upgraded to version 2.5
+
+Installation and usage:
+
+	sudo rudix install lcms
