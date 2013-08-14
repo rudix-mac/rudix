@@ -1,9 +1,15 @@
 Python Twitter Tools (PTT) includes a Twitter API, command-line tool, and IRC bot.
 
-Site: http://mike.verdone.ca/twitter/
-License: MIT
+* Site: http://mike.verdone.ca/twitter/
+* License: MIT
 
 Release Notes:
-* Featuring in Rudix
 
+* Upgraded to version 1.10.0
 
+Installation and usage:
+
+	sudo rudix install twitter
+	twitter --help
+	python -c 'import twitter'
+	pydoc twitter
