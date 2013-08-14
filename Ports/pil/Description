@@ -1,7 +1,14 @@
 The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter.
 
-  * Site: http://www.pythonware.com/products/pil/
-  * License: BSD
+* Site: http://www.pythonware.com/products/pil/
+* License: BSD
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* PIL 1.1.7
+
+Installation and usage:
+
+	sudo rudix install pil
+	python -c 'import Image'
+	pydoc Image
