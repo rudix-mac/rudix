@@ -1,0 +1,13 @@
+EPIC is an IRC client for UNIX-like systems.
+
+* Site: http://epicsol.org/
+* License: 
+
+Release Notes:
+
+* EPIC5 1.1.6
+
+Installation and usage:
+
+	sudo rudix install epic5
+	epic5
