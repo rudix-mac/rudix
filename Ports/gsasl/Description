@@ -9,5 +9,4 @@ Release Notes:
 
 Installation and usage:
 
-	sudo rudix install libgsasl
-	libgsasl --help
+	sudo rudix install gsasl
