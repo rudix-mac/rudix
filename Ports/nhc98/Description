@@ -4,7 +4,8 @@ nhc98 is a small, easy to install, standards-compliant compiler for Haskell 98.
 * License: BSD
 
 Release Notes:
-* Rebuild on Xcode 4.3
+
+* nhc98 1.22
 
 Installation and Usage:
 
