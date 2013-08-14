@@ -1,7 +1,12 @@
 Little CMS intends to be a small-footprint color management engine.
 
-  * Site: http://www.littlecms.com/
-  * License: MIT
+* Site: http://www.littlecms.com/
+* License: MIT
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* lcms 1.19
+
+Installation and usage:
+
+	sudo rudix install compat-lcms

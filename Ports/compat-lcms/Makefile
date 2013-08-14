@@ -1,17 +1,15 @@
-BuildRequires += $(LibDir)/libjpeg.la
+BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
+BuildRequires += $(LibDir)/libtiff.la # static-libtiff
 
 include ../../Library/GNU.mk
 
-Title=		Little CMS (Version 1)
-Name=		lcms1
+Title=		Little CMS
+Name=		compat-lcms
 Version=	1.19
-Revision=	0
-URL=		http://sourceforge.net/projects/lcms/files/lcms/$(Version)/
+Revision=	1
+URL=		http://downloads.sourceforge.net/lcms
 Source=		lcms-$(Version).tar.gz
 
+UncompressedName=lcms-$(Version)
 
-UncompressedName = lcms-$(Version)
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
+ReadMeFile=	$(SourceDir)/README.1ST
