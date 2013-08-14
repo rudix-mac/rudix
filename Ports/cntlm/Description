@@ -1,8 +1,12 @@
 Cntlm is an NTLM / NTLM Session Response / NTLMv2 authenticating HTTP proxy.
 
-  * Site: http://cntlm.sourceforge.net
-  * License: GPL
+* Site: http://cntlm.sourceforge.net
+* License: GPL
 
 Release Notes:
-  * Ported to Rudix
 
+* Cntlm 0.92.3
+
+Installation and usage:
+
+	sudo rudix install cntlm

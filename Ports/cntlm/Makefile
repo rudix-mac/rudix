@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		Cntlm
 Name=		cntlm
 Version=	0.92.3
-Revision=	0
+Revision=	1
 URL=		http://downloads.sourceforge.net/cntlm
 Source=		$(Name)-$(Version).tar.bz2
 
