@@ -1,7 +1,13 @@
 BitTorrent client for ncurses.
 
-  * Site: http://libtorrent.rakshasa.no/
-  * License: GPL
+* Site: http://libtorrent.rakshasa.no/
+* License: GPL
 
 Release Notes:
-  * Upgraded to version 0.9.2
+
+* Upgraded to version 0.9.2
+
+Installation and usage:
+
+	sudo rudix install rtorrent
+	rtorrent
