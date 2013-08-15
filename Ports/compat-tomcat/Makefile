@@ -3,13 +3,14 @@ RUDIX_STRIP_PACKAGE=no
 include ../../Library/Rudix.mk
 
 Title=		Apache Tomcat
-Name=		tomcat6
-Version=	6.0.35
+Name=		compat-tomcat
+Version=	6.0.37
 Revision=	0
 URL=		http://archive.apache.org/dist/tomcat/tomcat-6/v$(Version)/bin/
 Source=		apache-tomcat-$(Version).tar.gz
 
-LicenseFile=	LICENSE
+ReadMeFile=	$(DestDir)$(LibDir)/tomcat6/RELEASE-NOTES
+LicenseFile=	$(DestDir)$(LibDir)/tomcat6/LICENSE
 
 define prep_inner_hook
 touch prep
