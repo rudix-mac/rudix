@@ -12,3 +12,9 @@ LicenseFile=	$(SourceDir)/COPYRIGHT
 UncompressedName = tiff-$(Version)
 
 EnvExtra += GL_CFLAGS="-I/usr/X11/include" GL_LIBS="-framework OpenGL"
+
+ifneq ($(OSXVersion),10.8)
+define prep_post_hook
+cd $(SourceDir) && patch -p0 < $(PortDir)/tiffgt.c.diff
+endef
+endif

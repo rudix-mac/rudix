@@ -1,0 +1,13 @@
+--- tools/tiffgt.c.orig	2013-08-15 20:37:11.000000000 -0300
++++ tools/tiffgt.c	2013-08-15 20:37:19.000000000 -0300
+@@ -31,8 +31,8 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
+-include <OpenGL/gl.h>
+-include <GLUT/glut.h>
++#include <OpenGL/gl.h>
++#include <GLUT/glut.h>
+ 
+ #include "tiffio.h"
+ #include "tiffiop.h"
