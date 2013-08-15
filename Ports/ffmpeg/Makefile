@@ -1,29 +1,22 @@
-BuildRequires += $(BinDir)/yasm
-BuildRequires += $(LibDir)/libmp3lame.la
+BuildRequires += $(BinDir)/yasm # yasm
+BuildRequires += $(LibDir)/libmp3lame.la # static-lame
 
-include ../../Library/Config.mk
+include ../../Library/Configure.mk
 RUDIX_UNIVERSAL=no
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
 
 Title=		FFmpeg
 Name=		ffmpeg
-Version=	0.11
+Version=	0.11.3
 Revision=	0
 URL=		http://ffmpeg.org/releases/
 Source=		$(Name)-$(Version).tar.bz2
 
-ReadMeFile=	$(SourceDir)/doc/ffmpeg.html
+ReadMeFile=	README
 LicenseFile=	$(SourceDir)/LICENSE
 
 ConfigureExtra += --enable-gpl
 ConfigureExtra += --enable-libmp3lame
-ConfigureExtra += --enable-shared
 
 define test_inner_hook
 $(BinDir)/ffmpeg -version
 endef
-
-#		--cc="gcc-4.0" \
-#		--enable-pthreads \
-#		--mandir=/usr/local/share/man ; $(make)
