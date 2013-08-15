@@ -1,7 +1,12 @@
-Oracle Berkeley DB 11g.
+Oracle Berkeley DB 12c.
 
-  * Site: http://www.oracle.com/technetwork/products/berkeleydb/
-  * License: BSD
+* Site: http://www.oracle.com/technetwork/products/berkeleydb/
+* License: BSD
 
 Release Notes:
-  * Upgraded to version 5.3.21
+
+* Upgraded to version 6.0.20
+
+Installation and usage:
+
+	sudo rudix install db
