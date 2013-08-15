@@ -1,22 +1,20 @@
-BuildRequires += $(LibDir)/libintl.la
+WITH_HCACHE?=yes
+
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
 Title=		Mutt
 Name=		mutt
 Version=	1.5.21
-Revision=	4
+Revision=	5
 URL=		ftp://ftp.mutt.org/mutt/devel/
 Source=		$(Name)-$(Version).tar.gz
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -liconv -framework CoreFoundation
-endif
-
 ifeq ($(WITH_HCACHE),yes)
-BuildRequires += $(LibDir)/libdb.la
+BuildRequires += $(LibDir)/libdb.la # static-db
 GnuConfigureExtra += --enable-hcache
 endif
 
@@ -41,6 +39,6 @@ $(BinDir)/mutt -v
 endef
 endif
 
-# WARNING: Put this on mutt.pmdoc
+# TODO: fix permissions
 # chown root:mail	$(BinDir)/mutt_dotlock
 # chmod g+s 		$(BinDir)/mutt_dotlock
