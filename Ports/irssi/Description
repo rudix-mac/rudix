@@ -1,7 +1,13 @@
 Irssi is a terminal based IRC client for UNIX systems.
 
-  * Site: http://irssi.org/
-  * License: GPL
+* Site: http://irssi.org/
+* License: GPL
 
 Release Notes:
-  * Irssi 0.8.15
+
+* Irssi 0.8.15
+
+Installation and usage:
+
+	sudo rudix install irssi
+	irssi

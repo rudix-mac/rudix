@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/pkg-config
+BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 
@@ -7,16 +7,15 @@ include ../../Library/GNU.mk
 Title=		Irssi
 Name=		irssi
 Version=	0.8.15
-Revision=	0
+Revision=	1
 URL=		http://mirror.irssi.org/
 Source=		$(Name)-$(Version).tar.bz2
-
 
 GnuConfigureExtra += --with-perl=no # disabled for now
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv	# static-get
-LdFlags += -framework Carbon		# FSFindFolder
+LdFlags += -framework CoreFoundation -liconv   # static-get
+LdFlags += -framework Carbon           # FSFindFolder
 endif
 
 define install_post_hook
