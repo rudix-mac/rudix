@@ -1,0 +1,13 @@
+pigz is a fully functional replacement for gzip that exploits multiple processors and multiple cores to the hilt when compressing data.
+
+* Site: http://zlib.net/pigz/
+* License: zlib
+
+Release Notes:
+
+* Adopted pigz (parallel gzip) version 2.3
+
+Installation and usage:
+
+	sudo rudix install pigz
+	pigz --help
