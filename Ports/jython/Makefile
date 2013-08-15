@@ -3,18 +3,19 @@ include ../../Library/Rudix.mk
 
 Title=		Jython
 Name=		jython
-Version=	2.7a2
+Version=	2.7
 Revision=	0
-URL=		http://sourceforge.net/projects/jython/files/jython-dev/2.7.0a2/
-Source=		jython_installer-$(Version).jar
+URL=		http://search.maven.org/remotecontent?filepath=org/python/jython-installer/$(Version)-b1
+Source=		jython-installer-$(Version)-b1.jar
 
-LicenseFile=	$(InstallDir)/$(LibDir)/jython-$(Version)/LICENSE.txt
+ReadMeFile=	$(DestDir)$(LibDir)/jython-$(Version)/README.txt
+LicenseFile=	$(DestDir)$(LibDir)/jython-$(Version)/LICENSE.txt
 
 define prep_inner_hook
 endef
 
 define install_inner_hook
-java -jar jython_installer-$(Version).jar \
+java -jar jython-installer-$(Version)-b1.jar \
 	-s -d $(InstallDir)/$(LibDir)/jython-$(Version)
 $(install_base_documentation)
 install -d $(InstallDir)/$(BinDir)
