@@ -1,0 +1,13 @@
+GNU Emacs is an extensible, customizable text editor—and more.
+
+* Site: http://www.gnu.org/software/emacs/
+* License: GPL
+
+Release Notes:
+
+* GNU Emacs version 24.3
+
+Installation and usage:
+
+	sudo rudix install emacs
+	/usr/local/bin/emacs --help
