@@ -1,0 +1,13 @@
+The Reliable, High Performance TCP/HTTP Load Balancer.
+
+* Site: http://haproxy.1wt.eu
+* License: GPL/LGPL
+
+Release Notes:
+
+* Adopted HAProxy version 1.4.24
+
+Installation and usage:
+
+	sudo rudix install haproxy
+	/usr/local/sbin/haproxy
