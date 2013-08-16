@@ -1,0 +1,12 @@
+Libjpeg is a widely used C library for reading and writing JPEG image files.
+
+* Site: http://www.ijg.org/
+* License: BSD-like
+
+Release Notes:
+
+* Upgraded to version 8d
+
+Installation and usage:
+
+	sudo rudix install compat-libjpeg
