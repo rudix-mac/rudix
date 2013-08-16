@@ -2,13 +2,13 @@ BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
 BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc # static-pixman
 BuildRequires += /usr/local/lib/libintl.la # static-gettext
-BuildRequires += $(BinDir)/libtool # libtool
+BuildRequires += $(BinDir)/libtool # static-libtool
 
 include ../../Library/Configure.mk
 
 Title=		QEMU
 Name=		qemu
-Version=	1.4.2
+Version=	1.6.0
 Revision=	0
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
@@ -26,7 +26,7 @@ EnvExtra += CC=clang
 EnvExtra += LIBTOOL=/usr/local/bin/libtool
 
 ConfigureExtra += --enable-cocoa
-ConfigureExtra += --disable-vnc
+#ConfigureExtra += --disable-vnc
 #ConfigureExtra += --disable-bsd-user
 #ConfigureExtra += --disable-darwin-user
 
