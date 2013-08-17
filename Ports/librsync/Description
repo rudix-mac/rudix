@@ -1,7 +1,12 @@
 librsync is a free software library that implements the rsync remote-delta algorithm.
 
-  * Site: http://librsync.sourceforge.net/
-  * License: LGPL
+* Site: http://librsync.sourceforge.net/
+* License: LGPL
 
 Release Notes:
-  * Rebuild on Xcode 4.3
+
+* librsync 0.9.7
+
+Installation and usage:
+
+	sudo rudix install librsync
