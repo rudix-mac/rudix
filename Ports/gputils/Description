@@ -1,0 +1,13 @@
+GPUTILS is a collection of tools for the Microchip (TM) PIC microcontrollers.
+
+* Site: http://
+* License: GPL
+
+Release Notes:
+
+* Adopted GNU PIC Utilities version 1.2.0
+
+Installation and usage:
+
+	sudo rudix install gputils
+	gputils --help
