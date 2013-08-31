@@ -9,7 +9,7 @@ include ../../Library/Configure.mk
 Title=		QEMU
 Name=		qemu
 Version=	1.6.0
-Revision=	0
+Revision=	1
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
 
@@ -35,5 +35,13 @@ rm -rf $(DestDir)$(SysConfDir)
 endef
 
 define test_inner_hook
-$(BinDir)/qemu-system-i386 --version
+$(BinDir)/qemu-ga --version >/dev/null
+$(BinDir)/qemu-io --version >/dev/null
+$(BinDir)/qemu-nbd --version >/dev/null
+$(BinDir)/qemu-system-i386 --version >/dev/null
+$(BinDir)/qemu-system-x86_64 --version >/dev/null
+for x in $(BinDir)/qemu-system-* ; do \
+	$$x --version > /dev/null ; \
+	otool -L $$x | grep -v libjpeg.8.dylib >/dev/null; \
+done
 endef

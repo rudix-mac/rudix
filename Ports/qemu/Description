@@ -6,8 +6,10 @@ QEMU is a generic and open source machine emulator and virtualizer.
 Release Notes:
 
 * Upgraded to version 1.6.0
+* Fixed missing libjpeg load [https://github.com/rudix-mac/rudix/issues/19]
 
 Installation and Usage:
 
 	sudo rudix install qemu
 	qemu-system-i386
+	qemu-system-x86_64
