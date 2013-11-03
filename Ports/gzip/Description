@@ -1,0 +1,14 @@
+GNU Gzip is a popular data compression program originally written by Jean-loup Gailly for the GNU project.
+
+* Site: http://www.gnu.org/software/gzip/
+* License: GPL
+
+Release Notes:
+
+* Adopted GNU Gzip version 1.6
+
+Installation and usage:
+
+	sudo rudix install gzip
+	gnugzip --help
+	info gnugzip
