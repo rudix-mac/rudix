@@ -24,6 +24,11 @@ description: {Summary}
   <th>Older versions</th>
 </tr>
 <tr>
+  <td>Mavericks (10.9)</td>
+  <td><a href="http://code.google.com/p/rudix-mavericks/downloads/detail?name={PkgFile}">{PkgFile}</a></td>
+  <td><a href="http://code.google.com/p/rudix-mavericks/downloads/list?can=3&q={Name}">More...</a></td>
+</tr>
+<tr>
   <td>Mountain Lion (10.8)</td>
   <td><a href="http://code.google.com/p/rudix-mountainlion/downloads/detail?name={PkgFile}">{PkgFile}</a></td>
   <td><a href="http://code.google.com/p/rudix-mountainlion/downloads/list?can=2&q={Name}">More...</a></td>

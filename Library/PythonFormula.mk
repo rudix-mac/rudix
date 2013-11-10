@@ -7,7 +7,10 @@
 #
 # Select Python version
 #
-ifeq ($(OSXVersion),10.8)
+ifeq ($(OSXVersion),10.9)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.8)
 Python = /usr/bin/python2.7
 PythonSitePackages = /Library/Python/2.7/site-packages
 else ifeq ($(OSXVersion),10.7)
