@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20130616
+BuildSystem = 20131110
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -26,7 +26,9 @@ LicenseFile = $(SourceDir)/COPYING
 #
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
-ifeq ($(OSXVersion),10.8)
+ifeq ($(OSXVersion),10.9)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.8)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.7)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
