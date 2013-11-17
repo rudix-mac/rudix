@@ -5,7 +5,8 @@ S-Lang is a multi-platform programmer's library designed to allow a developer to
 
 Release Notes:
 
-* Adopted S-Lang version 2.2.4
+* S-Lang version 2.2.4
+* No longer built as Universal [https://github.com/rudix-mac/rudix/issues/23]
 
 Installation and usage:
 
