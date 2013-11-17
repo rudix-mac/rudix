@@ -1,9 +1,12 @@
 include ../../Library/GNU.mk
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
 
 Title=		S-Lang
 Name=		slang
 Version=	2.2.4
-Revision=	1
+Revision=	2
 URL=		ftp://space.mit.edu/pub/davis/slang/v2.2
 Source=		$(Name)-$(Version).tar.gz
 
