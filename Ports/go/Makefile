@@ -1,4 +1,3 @@
-include ../../Library/Config.mk
 ifeq ($(OSXVersion),10.6)
 RUDIX_STRIP_PACKAGE=no
 endif

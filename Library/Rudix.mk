@@ -1,11 +1,41 @@
 #
-# The BuildSystem itself
+# The Rudix BuildSystem itself.
 #
-# Copyright (c) 2005-2013 Rudix
+# Copyright © 2005-2014 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20131110
+BuildSystem = 20140218
+
+# User preferences
+-include ~/.rudix.conf
+
+ifeq ($(OSXVersion),10.9)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.8)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.7)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL?=yes
+else
+RUDIX_UNIVERSAL?=yes
+endif
+ifeq ($(RUDIX_UNIVERSAL),yes)
+RUDIX_DISABLE_DEPENDENCY_TRACKING?=yes
+else
+RUDIX_DISABLE_DEPENDENCY_TRACKING?=no
+endif
+
+RUDIX?=rudix-mavericks
+RUDIX_SAVE_CONFIGURE_CACHE?=yes
+RUDIX_STRIP_PACKAGE?=yes
+RUDIX_ENABLE_NLS?=yes
+RUDIX_BUILD_WITH_STATIC_LIBS?=yes
+RUDIX_BUILD_STATIC_LIBS?=no
+RUDIX_PARALLEL_EXECUTION?=yes
+RUDIX_LABELS?=Rudix-2014,OSX-Mavericks,XCode-5.0.2
+RUDIX_RUN_ALL_TESTS?=yes
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -24,6 +54,7 @@ LicenseFile = $(SourceDir)/COPYING
 #
 # Build flags options
 #
+OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 ifeq ($(OSXVersion),10.9)
@@ -63,8 +94,29 @@ ManDir = $(DataDir)/man
 InfoDir = $(DataDir)/info
 
 #
-# Framework
+# Select Python version
 #
+ifeq ($(OSXVersion),10.9)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.8)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.7)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.6)
+Python = /usr/bin/python2.6
+PythonSitePackages = /Library/Python/2.6/site-packages
+else
+Python = /usr/bin/python2.5
+PythonSitePackages = /Library/Python/2.5/site-packages
+endif
+
+#
+# Framework (hooks)
+#
+
 all: pkg
 
 # Retrieve source
@@ -178,8 +230,6 @@ help:
 
 about:
 	@echo "$(Name),$(Version),$(Revision),$(Title)"
-
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about
 
 #
 # Functions
@@ -374,3 +424,5 @@ define test_post_hook
 @echo "Administrator (root) credentials required"
 sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
 endef
+
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about

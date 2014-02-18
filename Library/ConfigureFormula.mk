@@ -1,7 +1,8 @@
-# Generic Configure Formula
 #
-# Copyright (c) 2011-2013 Rudix
-# Authors: Ruda Moura, Leonardo Santagada
+# Generic Configure Formula.
+#
+# Copyright © 2011-2014 Rudix
+# Authors: Rudá Moura, Leonardo Santagada
 #
 
 define install_extra_documentation

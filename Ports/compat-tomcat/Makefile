@@ -1,4 +1,3 @@
-include ../../Library/Config.mk
 RUDIX_STRIP_PACKAGE=no
 include ../../Library/Rudix.mk
 
