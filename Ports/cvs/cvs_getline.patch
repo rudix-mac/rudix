@@ -1,0 +1,10 @@
+--- lib/getline.h.orig	2014-02-18 22:29:54.000000000 -0300
++++ lib/getline.h	2014-02-18 22:30:32.000000000 -0300
+@@ -10,6 +10,7 @@
+ #endif  /* GCC.  */
+ 
+ #define GETLINE_NO_LIMIT -1
++#define getline cvs_getline
+ 
+ int
+   getline __PROTO ((char **_lineptr, size_t *_n, FILE *_stream));
