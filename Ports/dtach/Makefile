@@ -3,9 +3,11 @@ include ../../Library/GNU.mk
 Title=		Dtach
 Name=		dtach
 Version=	0.8
-Revision=	9
+Revision=	10
+Site=		http://dtach.sourceforge.net
 URL=		http://downloads.sourceforge.net/dtach
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 define install_inner_hook
 $(install_base_documentation)
