@@ -34,7 +34,6 @@ RUDIX_ENABLE_NLS?=yes
 RUDIX_BUILD_WITH_STATIC_LIBS?=yes
 RUDIX_BUILD_STATIC_LIBS?=no
 RUDIX_PARALLEL_EXECUTION?=yes
-RUDIX_LABELS?=Rudix-2014,OSX-Mavericks,XCode-5.0.2
 RUDIX_RUN_ALL_TESTS?=yes
 
 Vendor = org.rudix
@@ -202,10 +201,6 @@ page:
 	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
 		../../Library/mkpage.py
 	mv $(Name).md ~/Sites/rudix.org/packages/
-
-upload: pkg test
-	@$(call info_color,Uploading $(PkgFile))
-	../../Library/googlecode_upload.py -n -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
 
 # FIXME: Temporary hack to build static packages.
 static: buildclean installclean
@@ -425,4 +420,4 @@ define test_post_hook
 sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
 endef
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean upload help about
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
