@@ -5,10 +5,14 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140218
+BuildSystem = 20140222
 
 # User preferences
 -include ~/.rudix.conf
+
+OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
+Arch = $(shell sysctl -n hw.machine)
+NumCPU = $(shell sysctl -n hw.ncpu)
 
 ifeq ($(OSXVersion),10.9)
 RUDIX_UNIVERSAL?=no
@@ -21,13 +25,13 @@ RUDIX_UNIVERSAL?=yes
 else
 RUDIX_UNIVERSAL?=yes
 endif
+
 ifeq ($(RUDIX_UNIVERSAL),yes)
 RUDIX_DISABLE_DEPENDENCY_TRACKING?=yes
 else
 RUDIX_DISABLE_DEPENDENCY_TRACKING?=no
 endif
 
-RUDIX?=rudix-mavericks
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
@@ -53,9 +57,6 @@ LicenseFile = $(SourceDir)/COPYING
 #
 # Build flags options
 #
-OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
-Arch = $(shell sysctl -n hw.machine)
-NumCPU = $(shell sysctl -n hw.ncpu)
 ifeq ($(OSXVersion),10.9)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.8)
@@ -65,7 +66,7 @@ ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-a
 else ifeq ($(OSXVersion),10.6)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch i386)
 else
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL),)-arch ppc -arch i386,-arch i386)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
 endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)

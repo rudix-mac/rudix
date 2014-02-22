@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2013 Rudix
-# Author: Rudá Moura <ruda.moura@gmail.com>
-#
-# Test if a given file is universal binary (fat binary)
-# Return code: 0 for yes or 1 for no, 2 for another error
+# Test if a given file is universal binary (fat binary).
 #
 #            “You're the One for me, fatty” (Morrissey)
 #
+# Copyright © 2013-2014 Rudix
+# Author: Rudá Moura
+
+'''Test if a given file is universal binary (fat binary).'''
 
 import sys
 import os
@@ -39,4 +39,4 @@ def fatty(path):
 
 if __name__ == '__main__':
     if sys.argv[1:]:
-        sys.exit( fatty(sys.argv[1]) )
+        sys.exit(fatty(sys.argv[1]))
