@@ -2,6 +2,7 @@ include ../../Library/Python.mk
 
 Title=		Python pip
 Name=		pip
+DistName=	python-pip
 Version=	1.5.4
 Revision=	0
 Site=		https://github.com/pypa/pip
