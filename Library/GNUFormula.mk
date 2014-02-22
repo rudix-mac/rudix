@@ -1,7 +1,8 @@
-# GNU Configure Formula
 #
-# Copyright (c) 2011-2013 Rudix
-# Authors: Ruda Moura, Leonardo Santagada
+# GNU Configure Formula.
+#
+# Copyright © 2011-2014 Rudix
+# Authors: Rudá Moura, Leonardo Santagada
 #
 
 ifeq ($(RUDIX_ENABLE_NLS),yes)

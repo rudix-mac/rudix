@@ -1,28 +1,9 @@
-# Pyhton Formula
 #
-# Copyright (c) 2011-2013 Rudix
-# Authors: Ruda Moura, Leonardo Santagada
+# Python Formula.
 #
-
+# Copyright © 2011-2014 Rudix
+# Authors: Rudá Moura, Leonardo Santagada
 #
-# Select Python version
-#
-ifeq ($(OSXVersion),10.9)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.8)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.7)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.6)
-Python = /usr/bin/python2.6
-PythonSitePackages = /Library/Python/2.6/site-packages
-else
-Python = /usr/bin/python2.5
-PythonSitePackages = /Library/Python/2.5/site-packages
-endif
 
 define build_inner_hook
 cd $(BuildDir) && \
