@@ -2,10 +2,13 @@ include ../../Library/GNU.mk
 
 Title=		GNU gettext
 Name=		gettext
-Version=	0.18.2.1
+Version=	0.18.3.1
 Revision=	0
+Site=		http://www.gnu.org/software/gettext/
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		$(Name)-$(Version).tar.gz
+Checksum=	a32c19a6e39450748f6e56d2ac6b8b0966a5ab05
+License=	GPL
 
 GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-csharp
