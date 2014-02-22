@@ -4,9 +4,11 @@ OptFlags=-O1 # https://trac.macports.org/changeset/93604
 Title=		Exuberant Ctags
 Name=		ctags
 Version=	5.8
-Revision=	7
+Revision=	8
+Site=		http://ctags.sourceforge.net/
 URL=		http://downloads.sourceforge.net/ctags
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 GnuConfigureExtra = --enable-etags
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
