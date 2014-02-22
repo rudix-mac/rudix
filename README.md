@@ -1,10 +1,21 @@
-**Welcome to Rudix 2013!**
+**Welcome to Rudix!**
 
-[Rudix](http://rudix.org/) is a collection of pre-built Unix software delivered as packages for
-OS X Mountain Lion (10.8), OS X Lion (10.7) and Mac OS X Snow Leopard (10.6).
-“The hassle-free way to get Unix programs on Mac OS X.”
+Rudix is collection of pre-built Unix software delivered as packages for OS X.
+“The hassle-free way to get Unix programs on OS X”.
 
 Authors:
 
-* Rudá Moura <ruda.moura@gmail.com> - Creator and main developer (2005-2013).
-* Leonardo Santagada <santagada@gmail.com> - main developer (2012).
+* Rudá Moura <ruda.moura@gmail.com>: Creator and main developer (2005-2014).
+* Leonardo Santagada <santagada@gmail.com>: Main developer (2012).
+
+Why Rudix?
+
+Ready to use, don't need to compile anything (forget about Xcode). Included dependencies when applicable. A wide selection of packages. Developer friendly.
+
+Easy install:
+
+    curl -O https://raw.github.com/rudix-mac/package-manager/master/rudix.py
+    sudo python rudix.py install rudix
+    rudix help
+
+You will be probably asked for administrator password.

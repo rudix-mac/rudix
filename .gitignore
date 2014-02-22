@@ -26,6 +26,7 @@ master
 *.zip
 *.jar
 *.orig
+*.py?
 config.cache
 Distribution
 Resources
