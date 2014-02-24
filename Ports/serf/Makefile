@@ -8,7 +8,3 @@ URL=		http://serf.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.bz2
 
 LicenseFile=	$(SourceDir)/LICENSE
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif

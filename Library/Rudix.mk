@@ -37,6 +37,7 @@ RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
 RUDIX_BUILD_WITH_STATIC_LIBS?=yes
 RUDIX_BUILD_STATIC_LIBS?=no
+RUDIX_BUILD_STATIC?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
@@ -47,12 +48,18 @@ SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
 DestDir= $(PortDir)/$(InstallDir)
-DistName = $(Name)
-PkgId = $(Vendor).pkg.$(DistName)
-PkgFile = $(DistName)-$(Version)-$(Revision).pkg
-
 ReadMeFile = $(SourceDir)/README
 LicenseFile = $(SourceDir)/COPYING
+
+ifeq ($(RUDIX_BUILD_STATIC),yes)
+RUDIX_BUILD_STATIC_LIBS=yes
+DistName = static-$(Name)
+else
+DistName = $(Name)
+endif
+
+PkgId = $(Vendor).pkg.$(DistName)
+PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 
 #
 # Build flags options
@@ -196,19 +203,6 @@ distclean: clean pkgclean
 
 realdistclean: distclean
 	rm -f retrieve $(Source)
-
-# FIXME: The rules above are weak/temporary, they need work:
-page:
-	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
-		../../Library/mkpage.py
-	mv $(Name).md ~/Sites/rudix.org/packages/
-
-# FIXME: Temporary hack to build static packages.
-static: buildclean installclean
-	make pkg \
-		RUDIX_BUILD_STATIC_LIBS=yes \
-		DistName=static-$(Name)
-	@touch $@
 
 help:
 	@echo "Construction rules:"
