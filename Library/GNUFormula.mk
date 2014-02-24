@@ -65,10 +65,10 @@ endef
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define check_inner_hook
 cd $(BuildDir) && \
-$(make) check || $(call error_color,One or more tests failed)
+$(MAKE) check || $(call error_color,One or more tests failed)
 endef
 endif
 
 buildclean:
-	cd $(BuildDir) && $(make) clean || $(call warning_color,Cannot clean)
+	cd $(BuildDir) && $(MAKE) clean || $(call warning_color,Cannot clean)
 	rm -f build check
