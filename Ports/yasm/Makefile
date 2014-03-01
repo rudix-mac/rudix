@@ -3,9 +3,11 @@ include ../../Library/GNU.mk
 Title=		Yasm
 Name=		yasm
 Version=	1.2.0
-Revision=	1
+Revision=	2
+Site=		http://yasm.tortall.net/
 URL=		http://www.tortall.net/projects/yasm/releases/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	README
 

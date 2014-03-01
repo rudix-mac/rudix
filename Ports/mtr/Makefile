@@ -2,10 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		MTR
 Name=		mtr
-Version=	0.83
+Version=	0.85
 Revision=	0
-URL=		ftp://ftp.bitwizard.nl/mtr/
-Source=		$(Name)-$(Version).tar.gz
+Site=		http://www.bitwizard.nl/mtr/
+URL=		https://github.com/traviscross/mtr/archive
+Source=		v$(Version).tar.gz
+License=	GPL
 
 ConfigureExtra += --without-gtk
 LdFlags += -lresolv
