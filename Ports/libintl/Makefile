@@ -2,10 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		GNU libintl
 Name=		libintl
-Version=	0.18.2.1
+Version=	0.18.3.1
 Revision=	0
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
+License=	GPL
 
 UncompressedName=gettext-$(Version)
 BuildDir=$(SourceDir)/gettext-runtime
