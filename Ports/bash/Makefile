@@ -1,15 +1,15 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-
 include ../../Library/GNU.mk
 
 Title=		GNU Bash
 Name=		bash
-Version=	4.2
-Revision=	6
+Version=	4.3
+Revision=	0
+Site=		http://www.gnu.org/software/bash/
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
+License=	GPL
 
-#GnuConfigureExtra += --with-included-gettext
+GnuConfigureExtra += --with-included-gettext
 
 define install_post_hook
 cd $(InstallDir)$(BinDir) ; ln -sf bash bash4
@@ -19,5 +19,5 @@ chmod 755 $(InstallDir)$(BinDir)/bashbug
 endef
 
 define test_inner_hook
-$(BinDir)/bash --version
+$(BinDir)/bash --version | grep $(Version)
 endef
