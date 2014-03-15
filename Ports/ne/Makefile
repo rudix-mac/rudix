@@ -3,9 +3,11 @@ include ../../Library/Unix.mk
 Title=		Nice Editor
 Name=		ne
 Version=	2.5
-Revision=	0
+Revision=	1
+Site=		http://ne.dsi.unimi.it
 URL=		http://ne.dsi.unimi.it
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 define build_inner_hook
 cd $(BuildDir) && $(MAKE)
@@ -18,5 +20,5 @@ rm -f $(InstallDir)/$(InfoDir)/dir
 endef
 
 define test_inner_hook
-$(BinDir)/ne --help
+$(BinDir)/ne --help | grep $(Version)
 endef
