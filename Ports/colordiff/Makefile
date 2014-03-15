@@ -3,9 +3,11 @@ include ../../Library/Unix.mk
 Title=		ColorDiff
 Name=		colordiff
 Version=	1.0.13
-Revision=	1
+Revision=	2
+Site=		http://www.colordiff.org
 URL=		http://www.colordiff.org
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 define prep_post_hook
 cd $(BuildDir) ; mv INSTALL _INSTALL
