@@ -21,5 +21,5 @@ install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
-$(SBinDir)/mtr --version
+sudo $(SBinDir)/mtr --version | grep $(Version)
 endef
