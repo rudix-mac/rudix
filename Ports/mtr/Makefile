@@ -4,9 +4,9 @@ Title=		MTR
 Name=		mtr
 Version=	0.85
 Revision=	0
-Site=		http://www.bitwizard.nl/mtr/
-URL=		https://github.com/traviscross/mtr/archive
-Source=		v$(Version).tar.gz
+Site=		https://github.com/traviscross/mtr
+URL=		ftp://www.bitwizard.nl/mtr/
+Source=		mtr-$(Version).tar.gz
 License=	GPL
 
 ConfigureExtra += --without-gtk

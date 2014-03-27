@@ -1,0 +1,11 @@
+--- asn.c.orig  2014-03-24 07:41:19.000000000 +1100
++++ asn.c 2014-03-24 07:41:26.000000000 +1100
+@@ -21,7 +21,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
+
+-#ifndef __APPLE__
++#ifdef __APPLE__
+ #define BIND_8_COMPAT
+ #endif
+ #include <arpa/nameser.h>
