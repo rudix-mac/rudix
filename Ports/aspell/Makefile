@@ -14,5 +14,5 @@ LdFlags += -framework CoreFoundation
 endif
 
 define test_inner_hook
-$(BinDir)/aspell --version
+$(BinDir)/aspell --version | grep $(Version)
 endef
