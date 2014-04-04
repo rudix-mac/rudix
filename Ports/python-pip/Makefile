@@ -11,7 +11,7 @@ Source=		$(Name)-$(Version).tar.gz
 Checksum=	35ccb7430356186cf253615b70f8ee580610f734
 License=	Python License
 
-ReadMeFile=	$(SourceDir)/README.rst
+ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define test_inner_hook
