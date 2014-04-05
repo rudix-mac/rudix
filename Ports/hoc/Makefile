@@ -1,6 +1,6 @@
 include ../../Library/Unix.mk
 
-Title=		HOC
+Title=		High Order Calculator
 Name=		hoc
 Version=	1.1
 Revision=	9
