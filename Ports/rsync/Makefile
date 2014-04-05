@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		Rsync
 Name=		rsync
-Version=	3.0.9
-Revision=	3
+Version=	3.1.0
+Revision=	0
 URL=		http://samba.org/ftp/rsync/src/
 Source=		$(Name)-$(Version).tar.gz
 
