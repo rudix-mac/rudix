@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 
 Title=		Terminal Multiplexer
 Name=		tmux
-Version=	1.8
+Version=	1.9a
 Revision=	0
 URL=		http://downloads.sourceforge.net/tmux
 Source=		$(Name)-$(Version).tar.gz
@@ -20,5 +20,5 @@ endef
 endif
 
 define test_inner_hook
-$(BinDir)/tmux -V
+$(BinDir)/tmux -V | grep $(Version)
 endef
