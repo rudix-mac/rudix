@@ -5,8 +5,8 @@ include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.14
-Revision=	1
+Version=	1.15
+Revision=	0
 URL=		http://ftp.gnu.org/gnu/wget/
 Source=		$(Name)-$(Version).tar.gz
 
