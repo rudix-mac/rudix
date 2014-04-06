@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ ! -d /usr/local/include/freetype ] && ln -s /usr/local/include/freetype2/ /usr/local/include/freetype
+[ ! -f /usr/local/include/ft2build.h ] && ln -s /usr/local/include/freetype2/ft2build.h /usr/local/include/ft2build.h
+
+exit 0
