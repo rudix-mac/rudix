@@ -1,10 +1,10 @@
 BuildRequires += $(BinDir)/scons
 
-include ../../Library/GNU.mk
+include ../../Library/Scons.mk
 
 Title=		MongoDB
 Name=		mongodb
-Version=	2.4.4
+Version=	2.6.0
 Revision=	0
 URL=		http://downloads.mongodb.org/src
 Source=		$(Name)-src-r$(Version).tar.gz

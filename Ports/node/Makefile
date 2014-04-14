@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		NodeJS
 Name=		node
-Version=	0.10.11
+Version=	0.10.26
 Revision=	0
 URL=		http://nodejs.org/dist/v$(Version)
 Source=		$(Name)-v$(Version).tar.gz
