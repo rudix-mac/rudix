@@ -1,7 +1,7 @@
 # Scons Formula
 #
 # Copyright (c) 2011-2014 Rudix
-# Authors: Ruda Moura, Leonardo Santagada
+# Authors: Ruda Moura, Leonardo Santagada, Caio Begotti
 #
 
 Scons = $(shell which scons)
