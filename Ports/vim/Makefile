@@ -2,11 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Vim
 Name=		vim
-Version=	7.3
+Version=	7.4
 Revision=	0
 URL=		ftp://ftp.vim.org/pub/vim/unix
 Source=		$(Name)-$(Version).tar.bz2
-UncompressedName=vim73
+UncompressedName=vim74
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	LICENSE
