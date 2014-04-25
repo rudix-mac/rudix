@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140222
+BuildSystem = 20140426
 
 # User preferences
 -include ~/.rudix.conf
@@ -403,16 +403,16 @@ $(test_apache_modules)
 $(test_documentation)
 @$(call info_color,Uninstalling previous package)
 @echo "Administrator (root) credentials required"
-sudo ../../Library/poof.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
+sudo ../../Library/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
 @$(call info_color,Installing the new package)
 @echo "Administrator (root) credentials required"
-sudo installer -pkg $(PkgFile) -target /
+sudo ../../Library/installer.py $(PkgFile)
 endef
 
 define test_post_hook
 @$(call info_color,Uninstalling package)
 @echo "Administrator (root) credentials required"
-sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
+sudo ../../Library/remover.py $(Vendor).pkg.$(DistName)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
