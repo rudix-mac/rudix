@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# Update to a new version.
+# Update port to a new version.
 #
 # Copyright © 2013-2014 Rudix
-# Author: Rudá Moura
+# Author: Rudá Moura <ruda.moura@gmail.com>
 
 if [ $# -eq 0 ] ; then
     echo "Usage: $0 VERSION [NAME]"
@@ -23,3 +23,5 @@ BEGIN        { OFS="\t"; }
 /^Version=/  { print $1, version; next; }
 /^Revision=/ { print $1, 0; next; }
              { print; }' Makefile > Makefile.new && mv Makefile.new Makefile
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

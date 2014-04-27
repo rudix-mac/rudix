@@ -6,9 +6,9 @@
 #            “You're the One for me, fatty” (Morrissey)
 #
 # Copyright © 2013-2014 Rudix
-# Author: Rudá Moura
+# Author: Rudá Moura <ruda.moura@gmail.com>
 
-'''Test if a given file is universal binary (fat binary).'''
+"""Test if a given file is Universal Binary (Fat Binary)."""
 
 import sys
 import os
@@ -40,3 +40,5 @@ def fatty(path):
 if __name__ == '__main__':
     if sys.argv[1:]:
         sys.exit(fatty(sys.argv[1]))
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
