@@ -412,7 +412,8 @@ endef
 define test_post_hook
 @$(call info_color,Uninstalling package)
 @echo "Administrator (root) credentials required"
-sudo ../../Library/remover.py $(Vendor).pkg.$(DistName)
+sudo ../../Library/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || \
+	$(call warning_color,Possible dirty uninstall)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
