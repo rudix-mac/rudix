@@ -1,0 +1,11 @@
+--- ragel/javacodegen.cpp.orig	2014-04-27 23:09:34.000000000 -0300
++++ ragel/javacodegen.cpp	2014-04-27 23:10:08.000000000 -0300
+@@ -1184,7 +1184,7 @@
+ {
+ 	item_count++;
+ 
+-	out << setw(5) << setiosflags(ios::right) << item;
++	out << setw(5) << std::setiosflags(ios::right) << item;
+ 	
+ 	if ( !last ) {
+ 		if ( item_count % SAIIC == 0 ) {
