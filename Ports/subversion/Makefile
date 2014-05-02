@@ -6,7 +6,7 @@ include ../../Library/GNU.mk
 
 Title=		Apache Subversion
 Name=		subversion
-Version=	1.8.0
+Version=	1.8.8
 Revision=	0
 URL=		http://www.us.apache.org/dist/subversion/
 Source=		$(Name)-$(Version).tar.bz2
@@ -14,5 +14,5 @@ Source=		$(Name)-$(Version).tar.bz2
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook
-$(BinDir)/svn --version
+$(BinDir)/svn --version | grep $(Version)
 endef
