@@ -1,18 +1,20 @@
+# https://pypi.python.org/pypi/pip/
+
 include ../../Library/Python.mk
 
 Title=		Python pip
-Name=		pip
-DistName=	python-pip
-Version=	1.5.4
+Name=		python-pip
+Version=	1.5.6
 Revision=	0
-Site=		https://github.com/pypa/pip
+Site=		https://pip.pypa.io/
 URL=		http://pypi.python.org/packages/source/p/pip/
-Source=		$(Name)-$(Version).tar.gz
-Checksum=	35ccb7430356186cf253615b70f8ee580610f734
-License=	Python License
+Source=		pip-$(Version).tar.gz
+License=	MIT
 
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSE.txt
+
+UncompressedName=pip-$(Version)
 
 define test_inner_hook
 $(BinDir)/pip --version | grep $(Version)
