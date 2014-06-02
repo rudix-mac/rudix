@@ -12,10 +12,9 @@ Title=		{title}
 Name=		{name}
 Version=	{version}
 Revision=	{revision}
-Site=           {site}
+Site=		{site}
 URL=		{url}
 Source=		{source}
-License=        {license}
 """
 
 def create_makefile(params, path):
@@ -43,8 +42,10 @@ def process(args):
               'source': args.source,
               'license': args.license,
     }
-    if args.create_makefile:
-        path = 'Makefile'
+    if args.create:
+        import os
+        os.mkdir(args.name)
+        path = os.path.join(args.name, 'Makefile')
     else:
         path = '/dev/stdout'
     return create_makefile(params, path)
@@ -55,31 +56,31 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('name',
-                        help='the name of the new port. Use all lowercase.')
+                        help='the name of the port. Use all lowercase.')
     parser.add_argument('--version',
-                        default='1.0',
-                        help='set port version.')
+                        default='1.2.3',
+                        help='set version.')
     parser.add_argument('--title',
                         default=None,
-                        help='set port title. Default to the same as name.')
+                        help='set title. Default: equals to name.')
     parser.add_argument('--site',
-                        default='http://...',
-                        help='set port original home page.')
+                        default='http://',
+                        help='set home page.')
     parser.add_argument('--url',
-                        default='http://...',
-                        help='set port base download page.')
+                        default='http://',
+                        help='set download page/link.')
     parser.add_argument('--source',
-                        default='$(NAME)-$(VERSION).tar.gz',
-                        help='set port source name and version format.')
+                        default='$(Name)-$(Version).tar.gz',
+                        help='set source name and version format.')
     parser.add_argument('--license',
                         default='GPL',
-                        help='set port license. Default to GPL.')
+                        help='set license. Default: GPL.')
     parser.add_argument('--formula',
                         default='GNU',
-                        help='set build formula to use. Default to GNU.')
-    parser.add_argument('-y', '--create-makefile',
+                        help='set build formula to use. Default: GNU.')
+    parser.add_argument('--create',
                         action='store_true',
-                        help='create Makefile for the port in current dir.')
+                        help='create directory and Makefile.')
     args = parser.parse_args()
     sys.exit(process(args))
 
