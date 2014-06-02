@@ -5,9 +5,9 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140426
+BuildSystem = 20140601
 
-# User preferences
+# Get user preferences (if defined)
 -include ~/.rudix.conf
 
 OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
@@ -204,22 +204,35 @@ distclean: clean pkgclean
 realdistclean: distclean
 	rm -f retrieve $(Source)
 
+static: prep installclean buildclean
+	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
+
 help:
-	@echo "Construction rules:"
-	@echo "  retrieve - Retrieve source"
-	@echo "  prep - Expand source"
-	@echo "  build - Build source"
-	@echo "  check - Check build"
+	@echo "Rudix BuildSystem"
+	@echo "-----------------"
+	@echo "Port rules:"
+	@echo "  retrieve - Retrieve source from the Internet"
+	@echo "  prep - Expand/uncompress source"
+	@echo "  build - Build port"
+	@echo "  check - Check build (run internal tests)"
 	@echo "  install - Install into a temporary directory"
-	@echo "  pkg - Create a package"
-	@echo "  test - Run tests"
+	@echo "  pkg - Create package from the temporary directory"
+	@echo "  test - Run tests (install and run more test)"
 	@echo "Clean-up rules:"
-	@echo "  clean - Clean up until retrieve"
-	@echo "  distclean - After clean, remove config.cache and package"
-	@echo "  realdistclean - After distclean, remove source"
+	@echo "  clean - Clean files but leaves retrieve alone"
+	@echo "  distclean - Do clean, plus remove config.cache and package"
+	@echo "  realdistclean - Do distclean, plus remove source"
+	@echo "Other rules:"
+	@echo "  help - This help message"
+	@echo "  about - Display information about the port."
+	@echo "  static - Create package with static libraries."
 
 about:
-	@echo "$(Name),$(Version),$(Revision),$(Title)"
+	@echo "---"
+	@echo "$(Title) ($(Name)-$(Version)-$(Revision))"
+	@echo "Site: $(Site)"
+	@echo "License: $(License)"
+	@echo "Source: $(URL)/$(Source)"
 
 #
 # Functions
