@@ -1,13 +1,13 @@
 include ../../Library/GNU.mk
 
-Title=		LibJpeg
+Title=		LibJPEG
 Name=		libjpeg
-Version=	9
+Version=	9a
 Revision=	0
 URL=		http://www.ijg.org/files/
 Source=		jpegsrc.v$(Version).tar.gz
 
-ReadMeFile=	$(SourceDir)/usage.txt
-LicenseFile=	$(SourceDir)/README
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	LICENSE
 
-UncompressedName= jpeg-$(Version)
+UncompressedName=jpeg-$(Version)
