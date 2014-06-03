@@ -1,19 +1,25 @@
+BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
+
 include ../../Library/GNU.mk
 
 Title=		LibTIFF
 Name=		libtiff
-Version=	4.0.1
+Version=	4.0.3
 Revision=	0
+Site=		http://www.remotesensing.org/libtiff
 URL=		ftp://ftp.remotesensing.org/pub/libtiff
 Source=		tiff-$(Version).tar.gz
+License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-UncompressedName = tiff-$(Version)
+UncompressedName=tiff-$(Version)
 
-EnvExtra += GL_CFLAGS="-I/usr/X11/include" GL_LIBS="-framework OpenGL"
+#GnuConfigureExtra += --with-apple-opengl-framework
+GnuConfigureExtra += --with-jpeg-include-dir=$(IncludeDir)
+GnuConfigureExtra += --with-jpeg-lib-dir=$(LibDir)
 
-ifneq ($(OSXVersion),10.8)
+ifeq ($(OSXVersion),$(filter $(OSXVersion),10.7 10.6))
 define prep_post_hook
 cd $(SourceDir) && patch -p0 < $(PortDir)/tiffgt.c.diff
 endef
