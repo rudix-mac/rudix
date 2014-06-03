@@ -1,13 +1,15 @@
-BuildRequires += $(LibDir)/libintl.la
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
 Title=		Lynx
 Name=		lynx
 Version=	2.8.8
-Revision=	0
+Revision=	1
+Site=		http://lynx.isc.org
 URL=		http://lynx.isc.org/current/
-Source=		$(Name)$(Version)dev.15.tar.bz2
+Source=		$(Name)$(Version)rel.2.tar.bz2
+License=	GPL
 
 UncompressedName=lynx2-8-8
 
@@ -25,5 +27,5 @@ install -m 644 $(SourceDir)/{CHANGES,COPYHEADER*,PROBLEMS} $(InstallDir)/$(DocDi
 endef
 
 define test_inner_hook
-$(BinDir)/lynx --version
+$(BinDir)/lynx --version | grep $(Version)
 endef
