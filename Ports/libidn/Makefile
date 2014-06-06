@@ -1,9 +1,9 @@
 include ../../Library/GNU.mk
 
-Title=		GNU Libidn
+Title=		GNU IDN Library
 Name=		libidn
 Version=	1.28
-Revision=	0
+Revision=	1
 Site=		http://www.gnu.org/software/libidn/
 URL=		http://ftp.gnu.org/gnu/libidn/
 Source=		$(Name)-$(Version).tar.gz
