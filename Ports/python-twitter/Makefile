@@ -2,10 +2,12 @@ include ../../Library/Python.mk
 
 Title=		Python Twitter
 Name=		python-twitter
-Version=	1.0
+Version=	1.1.6
 Revision=	0
-URL=		http://python-twitter.googlecode.com/files/
-Source=		$(Name)-$(Version).tar.gz
+Site=		https://code.google.com/p/python-twitter/
+URL=		https://github.com/bear/python-twitter/archive
+Source=		v$(Version).tar.gz
+License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.md
 
