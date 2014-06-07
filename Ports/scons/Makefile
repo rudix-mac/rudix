@@ -7,7 +7,7 @@ Revision=	0
 Site=		http://www.scons.org
 URL=		http://downloads.sourceforge.net/scons
 Source=		$(Name)-$(Version).tar.gz
-License=	BSD
+License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
