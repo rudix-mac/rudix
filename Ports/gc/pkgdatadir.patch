@@ -1,9 +1,9 @@
---- Makefile.in.orig	2012-05-23 23:22:41.000000000 -0300
-+++ Makefile.in	2012-05-23 23:22:54.000000000 -0300
-@@ -73,7 +73,7 @@
- 
- 
- VPATH = @srcdir@
+--- Makefile.in.orig	2014-06-06 23:36:31.000000000 -0300
++++ Makefile.in	2014-06-06 23:37:16.000000000 -0300
+@@ -117,7 +117,7 @@
+   test $$has_opt = yes
+ am__make_dryrun = (target_option=n; $(am__make_running_with_option))
+ am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(docdir)
  pkgincludedir = $(includedir)/@PACKAGE@
