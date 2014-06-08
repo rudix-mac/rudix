@@ -3,9 +3,11 @@ include ../../Library/GNU.mk
 Title=		Argtable
 Name=		argtable
 Version=	2.13
-Revision=	2
-URL=		http://prdownloads.sourceforge.net/argtable
+Revision=	3
+Site=		http://argtable.sourceforge.net
+URL=		http://downloads.sourceforge.net/argtable
 Source=		$(Name)2-13.tar.gz
+License=	LGPL
 
 UncompressedName = $(Name)2-13
 
