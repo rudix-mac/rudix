@@ -4,8 +4,10 @@ Title=		Redis
 Name=		redis
 Version=	2.8.9
 Revision=	0
+Site=		http://redis.io/
 URL=		http://download.redis.io/releases/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 BuildDir=	$(SourceDir)/src
 

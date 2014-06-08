@@ -6,8 +6,10 @@ Title=		NHC98
 Name=		nhc98
 Version=	1.22
 Revision=	4
+Site=		http://www.haskell.org/nhc98/
 URL=		http://www.haskell.org/nhc98/
 Source=		$(Name)src-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/docs/index.html
 LicenseFile=	$(SourceDir)/COPYRIGHT

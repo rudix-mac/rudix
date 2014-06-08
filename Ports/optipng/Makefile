@@ -6,8 +6,10 @@ Title=		OptiPNG
 Name=		optipng
 Version=	0.7.4
 Revision=	0
+Site=		http://optipng.sourceforge.net/
 URL=		http://downloads.sourceforge.net/optipng
 Source=		$(Name)-$(Version).tar.gz
+License=	zlib
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt

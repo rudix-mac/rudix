@@ -5,8 +5,10 @@ Title=		Apache Tomcat
 Name=		tomcat
 Version=	7.0.42
 Revision=	0
+Site=		http://tomcat.apache.org/
 URL=		http://archive.apache.org/dist/tomcat/tomcat-7/v$(Version)/bin
 Source=		apache-tomcat-$(Version).tar.gz
+License=	Apache License
 
 ReadMeFile=	$(DestDir)$(LibDir)/tomcat/RELEASE-NOTES
 LicenseFile=	$(DestDir)$(LibDir)/tomcat/LICENSE

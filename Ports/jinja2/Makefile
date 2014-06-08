@@ -6,8 +6,10 @@ Title=		Jinja2 (Template engine for Python)
 Name=		jinja2
 Version=	2.7
 Revision=	0
+Site=		http://jinja.pocoo.org
 URL=		https://pypi.python.org/packages/source/J/Jinja2
 Source=		Jinja2-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE

@@ -8,8 +8,10 @@ Title=		msmtp
 Name=		msmtp
 Version=	1.4.31
 Revision=	0
+Site=		http://msmtp.sourceforge.net/
 URL=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)

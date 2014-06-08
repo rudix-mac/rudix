@@ -7,8 +7,10 @@ Title=		Python Imaging Library
 Name=		pil
 Version=	1.1.7
 Revision=	2
+Site=		http://www.pythonware.com/products/pil/
 URL=		http://effbot.org/media/downloads/
 Source=		Imaging-$(Version).tar.gz
+License=	BSD
 
 LicenseFile=	LICENSE
 

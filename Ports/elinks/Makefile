@@ -4,8 +4,10 @@ Title=		ELinks
 Name=		elinks
 Version=	0.13
 Revision=	3
+Site=		http://elinks.cz/
 URL=		http://elinks.or.cz/download/
 Source=		$(Name)-current-$(Version).tar.bz2
+License=	GPL
 
 UncompressedName=elinks-$(Version)-20140427
 

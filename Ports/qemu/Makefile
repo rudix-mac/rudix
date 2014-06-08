@@ -10,8 +10,10 @@ Title=		QEMU
 Name=		qemu
 Version=	1.6.0
 Revision=	1
+Site=		http://wiki.qemu.org/
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/qemu-doc.html
 LicenseFile=	$(SourceDir)/LICENSE

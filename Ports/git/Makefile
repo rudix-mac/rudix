@@ -19,8 +19,10 @@ Title=		Git
 Name=		git
 Version=	1.8.3.1
 Revision=	0
+Site=		http://git-scm.com/
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 define retrieve_post_hook
 $(fetch) $(URL)/git-manpages-$(Version).tar.gz

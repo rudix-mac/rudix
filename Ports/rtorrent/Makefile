@@ -8,8 +8,10 @@ Title=		rTorrent
 Name=		rtorrent
 Version=	0.9.2
 Revision=	1
+Site=		http://libtorrent.rakshasa.no/
 URL=		http://libtorrent.rakshasa.no/downloads/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 EnvExtra += libcurl_CFLAGS="-I/usr/include/curl" libcurl_LIBS="-lcurl"
 

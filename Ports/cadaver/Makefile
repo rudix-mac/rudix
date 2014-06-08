@@ -4,8 +4,10 @@ Title=		Cadaver
 Name=		cadaver
 Version=	0.23.3
 Revision=	5
+Site=		http://www.webdav.org/cadaver/
 URL=		http://www.webdav.org/cadaver/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 GnuConfigureExtra += --with-ssl
 

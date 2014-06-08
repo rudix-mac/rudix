@@ -4,8 +4,10 @@ Title=		GNU Tar
 Name=		tar
 Version=	1.27
 Revision=	0
+Site=		http://www.gnu.org/software/tar/
 URL=		http://ftp.gnu.org/gnu/tar/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu
 

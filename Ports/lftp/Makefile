@@ -7,8 +7,10 @@ Title=		LFTP
 Name=		lftp
 Version=	4.5.0
 Revision=	0
+Site=		http://lftp.yar.ru/
 URL=		http://lftp.yar.ru/ftp
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 # readline
 CFlags += "-I/usr/local/include"

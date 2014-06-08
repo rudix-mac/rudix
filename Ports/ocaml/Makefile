@@ -4,8 +4,10 @@ Title=		OCaml
 Name=		ocaml
 Version=	4.00.1
 Revision=	0
+Site=		http://caml.inria.fr/
 URL=		http://caml.inria.fr/pub/distrib/ocaml-4.00
 Source=		$(Name)-$(Version).tar.bz2
+License=	LGPL
 
 LicenseFile=	$(SourceDir)/LICENSE
 

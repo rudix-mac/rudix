@@ -9,8 +9,10 @@ Title=		Mobile Shell
 Name=		mosh
 Version=	1.2.4
 Revision=	0
+Site=		http://mosh.mit.edu/
 URL=		http://mosh.mit.edu/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/COPYING

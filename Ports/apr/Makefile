@@ -4,8 +4,10 @@ Title=		Apache Portable Runtime
 Name=		apr
 Version=	1.4.6
 Revision=	2
+Site=		http://apr.apache.org/
 URL=		http://www.apache.org/dist/apr
 Source=		$(Name)-$(Version).tar.bz2
+License=	Apache License
 
 LicenseFile=	$(BuildDir)/LICENSE
 

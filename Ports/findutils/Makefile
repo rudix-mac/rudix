@@ -4,8 +4,10 @@ Title=		GNU Find Utilities
 Name=		findutils
 Version=	4.4.2
 Revision=	5
+Site=		http://www.gnu.org/software/findutils/
 URL=		http://ftp.gnu.org/gnu/findutils/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu
 GnuConfigureExtra += --with-included-regex

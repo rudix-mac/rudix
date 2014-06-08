@@ -9,8 +9,10 @@ Title=		Flask (microframework for Python)
 Name=		flask
 Version=	0.10
 Revision=	0
+Site=		http://flask.pocoo.org
 URL=		http://pypi.python.org/packages/source/F/Flask
 Source=		Flask-$(Version).tar.gz
+License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 

@@ -7,8 +7,10 @@ Title=		tree
 Name=		tree
 Version=	1.6.0
 Revision=	1
+Site=		http://mama.indstate.edu/users/ice/tree/
 URL=		http://mama.indstate.edu/users/ice/tree/src/
 Source=		$(Name)-$(Version).tgz
+License=	GPL Version 2
 
 LicenseFile=	$(SourceDir)/LICENSE
 

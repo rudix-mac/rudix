@@ -4,8 +4,10 @@ Title=		Ack!
 Name=		ack
 Version=	1.9.6
 Revision=	0
+Site=		http://betterthangrep.com/
 URL=		http://betterthangrep.com
 Source=		ack-standalone
+License=	Artistic License
 
 ReadMeFile=	README
 LicenseFile=	LICENSE

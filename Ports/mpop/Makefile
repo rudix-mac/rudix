@@ -8,8 +8,10 @@ Title=		mpop
 Name=		mpop
 Version=	1.0.28
 Revision=	0
+Site=		http://mpop.sourceforge.net/
 URL=		http://sourceforge.net/projects/mpop/files/mpop/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv

@@ -4,8 +4,10 @@ Title=		Nmap
 Name=		nmap
 Version=	6.01
 Revision=	1
+Site=		http://nmap.org/
 URL=		http://nmap.org/dist/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/HACKING
 

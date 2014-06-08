@@ -4,8 +4,10 @@ Title=		NodeJS
 Name=		node
 Version=	0.10.26
 Revision=	0
+Site=		http://nodejs.org/
 URL=		http://nodejs.org/dist/v$(Version)
 Source=		$(Name)-v$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE

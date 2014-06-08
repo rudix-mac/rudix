@@ -7,8 +7,10 @@ Name=		dialog
 Version=	1.2
 AltVersion=	20121230
 Revision=	0
+Site=		http://invisible-island.net/dialog/dialog.html
 URL=		ftp://invisible-island.net/dialog/
 Source=		$(Name)-$(Version)-$(AltVersion).tgz
+License=	LGPL
 
 UncompressedName=$(Name)-$(Version)-$(AltVersion)
 

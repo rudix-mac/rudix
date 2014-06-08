@@ -6,8 +6,10 @@ Name=		cassandra
 Version=	1.2.3
 Revision=	0
 #URL=		http://www.apache.org/dist/cassandra/apache-cassandra/$(Version)
+Site=		http://cassandra.apache.org/
 URL=		http://www.us.apache.org/dist/cassandra/$(Version)
 Source=		apache-$(Name)-$(Version)-bin.tar.gz
+License=	Apache License
 
 ReadMeFile=	$(InstallDir)$(LibDir)/cassandra/README.txt
 LicenseFile=	$(InstallDir)$(LibDir)/cassandra/LICENSE.txt

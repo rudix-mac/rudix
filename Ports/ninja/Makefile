@@ -4,8 +4,10 @@ Title=		ninja
 Name=		ninja
 Version=	120715
 Revision=	1
+Site=		http://martine.github.com/ninja/
 URL=		git://github.com/martine
 Source=		ninja.git
+License=	Apache License
 
 define retrieve_inner_hook
 git clone $(URL)/$(Source) $(SourceDir)

@@ -4,8 +4,10 @@ Title=		Cabextract
 Name=		cabextract
 Version=	1.4
 Revision=	4
+Site=		http://www.cabextract.org.uk/
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 define install_post_hook
 install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)

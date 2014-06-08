@@ -4,8 +4,10 @@ Title=		GNU MP
 Name=		gmp
 Version=	5.1.2
 Revision=	0
+Site=		http://gmplib.org/
 URL=		http://ftp.gnu.org/gnu/gmp/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 GnuConfigureExtra += --enable-cxx
 GnuConfigureExtra += --with-pic

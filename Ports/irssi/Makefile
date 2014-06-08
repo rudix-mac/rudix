@@ -8,8 +8,10 @@ Title=		Irssi
 Name=		irssi
 Version=	0.8.15
 Revision=	1
+Site=		http://irssi.org/
 URL=		http://mirror.irssi.org/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 GnuConfigureExtra += --with-perl=no # disabled for now
 

@@ -6,8 +6,10 @@ Title=		Valgrind
 Name=		valgrind
 Version=	3.8.1
 Revision=	1
+Site=		http://valgrind.org/
 URL=		http://valgrind.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ifeq ($(OSXVersion),10.6)
 GnuConfigureExtra += --enable-only32bit

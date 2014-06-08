@@ -4,8 +4,10 @@ Title=		Jython
 Name=		jython
 Version=	2.7
 Revision=	0
+Site=		http://www.jython.org/
 URL=		http://search.maven.org/remotecontent?filepath=org/python/jython-installer/$(Version)-b1
 Source=		jython-installer-$(Version)-b1.jar
+License=	Python License
 
 ReadMeFile=	$(DestDir)$(LibDir)/jython-$(Version)/README.txt
 LicenseFile=	$(DestDir)$(LibDir)/jython-$(Version)/LICENSE.txt

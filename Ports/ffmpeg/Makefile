@@ -8,8 +8,10 @@ Title=		FFmpeg
 Name=		ffmpeg
 Version=	0.11.3
 Revision=	0
+Site=		http://ffmpeg.mplayerhq.hu/
 URL=		http://ffmpeg.org/releases/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ReadMeFile=	README
 LicenseFile=	$(SourceDir)/LICENSE

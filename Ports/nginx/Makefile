@@ -6,8 +6,10 @@ Title=		Nginx
 Name=		nginx
 Version=	1.4.2
 Revision=	0
+Site=		http://nginx.org/
 URL=		http://nginx.org/download/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 

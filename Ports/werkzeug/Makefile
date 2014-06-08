@@ -4,8 +4,10 @@ Title=		Werkzeug (WSGI utils for Python)
 Name=		werkzeug
 Version=	0.9.1
 Revision=	0
+Site=		http://werkzeug.pocoo.org
 URL=		https://pypi.python.org/packages/source/W/Werkzeug
 Source=		Werkzeug-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSE

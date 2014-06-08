@@ -6,8 +6,10 @@ Title=		txt2tags
 Name=		txt2tags
 Version=	2.6
 Revision=	2
+Site=		http://txt2tags.org/
 URL=		http://txt2tags.googlecode.com/files/
 Source=		$(Name)-$(Version).tgz
+License=	GPL
 
 define prep_post_hook
 cp txt2tags.Makefile $(SourceDir)/Makefile

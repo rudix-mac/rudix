@@ -4,6 +4,7 @@ Title=		GNU libintl
 Name=		libintl
 Version=	0.18.3.1
 Revision=	0
+Site=		http://www.gnu.org/software/gettext/
 URL=		http://ftp.gnu.org/gnu/gettext/
 Source=		gettext-$(Version).tar.gz
 License=	GPL

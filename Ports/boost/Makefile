@@ -5,8 +5,10 @@ Name=		boost
 Version=	1.53.0
 AltVersion=	1_53_0
 Revision=	0
+Site=		http://www.boost.org/
 URL=		http://downloads.sourceforge.net/boost
 Source=		$(Name)_$(AltVersion).tar.bz2
+License=	MIT-like
 
 ReadMeFile=	$(SourceDir)/index.html
 LicenseFile=	$(SourceDir)/LICENSE_1_0.txt

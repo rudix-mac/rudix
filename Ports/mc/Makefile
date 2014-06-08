@@ -9,8 +9,10 @@ Title=		Midnight Commander
 Name=		mc
 Version=	4.8.7
 Revision=	0
+Site=		http://www.midnight-commander.org/
 URL=		http://www.midnight-commander.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 #GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += --with-screen=ncurses

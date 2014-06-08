@@ -7,8 +7,10 @@ Title=		Fabric
 Name=		fabric
 Version=	1.6.1
 Revision=	0
+Site=		http://fabfile.org/
 URL=		http://pypi.python.org/packages/source/F/Fabric/
 Source=		Fabric-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE

@@ -5,8 +5,10 @@ Name=		htmldoc
 Version=	1.8.27
 Revision=	14
 #URL=		http://ftp.easysw.com/pub/htmldoc/$(Version)/
+Site=		http://www.htmldoc.org/
 URL=		http://www.msweet.org/files/project1/
 Source=		$(Name)-$(Version)-source.tar.bz2
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYING.txt

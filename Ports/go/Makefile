@@ -7,8 +7,10 @@ Title=		The Go Programming Language
 Name=		go
 Version=	1.1.1
 Revision=	2
+Site=		http://golang.org/
 URL=		http://go.googlecode.com/files
 Source=		$(Name)$(Version).src.tar.gz
+License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 

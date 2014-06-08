@@ -8,8 +8,10 @@ Title=		Mutt
 Name=		mutt
 Version=	1.5.21
 Revision=	5
+Site=		http://www.mutt.org/
 URL=		ftp://ftp.mutt.org/mutt/devel/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 

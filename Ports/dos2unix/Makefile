@@ -7,8 +7,10 @@ Title=		Dos2Unix
 Name=		dos2unix
 Version=	6.0.3
 Revision=	0
+Site=		http://waterlan.home.xs4all.nl/dos2unix.html
 URL=		http://waterlan.home.xs4all.nl/dos2unix/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYING.txt

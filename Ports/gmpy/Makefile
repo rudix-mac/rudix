@@ -6,8 +6,10 @@ Title=		GMPY (GMP Python Module)
 Name=		gmpy
 Version=	1.16
 Revision=	0
+Site=		http://code.google.com/p/gmpy/
 URL=		http://gmpy.googlecode.com/files/
 Source=		$(Name)-$(Version).zip
+License=	LGPL
 
 LicenseFile=	$(SourceDir)/lgpl-2.1.txt
 
