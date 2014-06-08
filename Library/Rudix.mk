@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140601
+BuildSystem = 20140607
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -282,7 +282,7 @@ define create_distribution
 	--pkgid $(PkgId) \
 	--name $(DistName) \
 	--installpkg $(Name)install.pkg \
-	$(if $(Requires),$(foreach req,$(Requires), --requires $(req)))
+	$(if $(Requires),$(foreach req,$(Requires),--requires $(req)))
 endef
 
 define create_resources
@@ -341,15 +341,21 @@ endif
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
 for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+	if ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 for x in $(wildcard $(InstallDir)$(SBinDir)/*) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+	if  ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 for x in $(wildcard $(InstallDir)$(LibDir)/*.dylib) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Library $$x linked with non-native dynamic library) ; \
+	if ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Library $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 endef
