@@ -1,4 +1,0 @@
-#!/bin/sh
-[ -f $3/usr/local/sbin/rudix.py ] && rm -f $3/usr/local/sbin/rudix.py
-[ -f $3/etc/paths.d/rudix ] && rm -f $3/etc/paths.d/rudix
-exit 0
