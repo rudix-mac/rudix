@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140607
+BuildSystem = 20140627
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -77,7 +77,7 @@ ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch
 endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)
-CxxFlags = $(CFlags)
+CxxFlags = $(ArchFlags) $(OptFlags)
 LdFlags = $(ArchFlags)
 
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)

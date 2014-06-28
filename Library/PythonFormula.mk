@@ -11,7 +11,7 @@ env 	CFLAGS="$(CFlags)" \
 	CXXFLAGS="$(CxxFlags)" \
 	LDFLAGS="$(LdFlags)" \
 	ARCHFLAGS="$(ArchFlags)" $(EnvExtra) \
-$(Python) setup.py build $(SetupExtra)
+$(Python) setup.py $(SetupExtra) build
 endef
 
 define install_inner_hook
