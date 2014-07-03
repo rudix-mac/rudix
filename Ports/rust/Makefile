@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		Rust
 Name=		rust
-Version=	0.9
+Version=	0.11.0
 Revision=	0
 Site=		http://www.rust-lang.org
 URL=		http://static.rust-lang.org/dist
