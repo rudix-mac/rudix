@@ -3,12 +3,13 @@ RUDIX_STRIP_PACKAGE=no
 endif
 include ../../Library/Rudix.mk
 
-Title=		The Go Programming Language
+Description=	The Go Programming Language
+Title=		Go Language
 Name=		go
-Version=	1.1.1
-Revision=	2
+Version=	1.3
+Revision=	0
 Site=		http://golang.org/
-URL=		http://go.googlecode.com/files
+URL=		http://golang.org/dl
 Source=		$(Name)$(Version).src.tar.gz
 License=	BSD
 
@@ -37,7 +38,7 @@ install -m 644 $(SourceDir)/{AUTHORS,PATENTS,CONTRIBUTORS,VERSION} $(InstallDir)
 endef
 
 define test_inner_hook
-$(BinDir)/go help
+$(BinDir)/go version | grep $(Version)
 $(BinDir)/go run tests/hello.go
 $(BinDir)/go run tests/rat_scan.go
 endef
