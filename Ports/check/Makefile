@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Check
 Name=		check
-Version=	0.9.10
+Version=	0.9.13
 Revision=	0
 Site=		http://check.sourceforge.net/
 URL=		http://downloads.sourceforge.net/check
