@@ -17,8 +17,9 @@ License=	GPL
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/COPYING
 
-EnvExtra += OPENSSL_CFLAGS=-I/usr/include OPENSSL_LIBS=-lcrypto
+EnvExtra += OPENSSL_CFLAGS=-I/usr/include
+EnvExtra += OPENSSL_LIBS=-lcrypto
 
 define test_inner_hook
-$(BinDir)/mosh --version ||  [ $$? == 255 ]
+$(BinDir)/mosh --version 2>&1 | grep $(Version)
 endef
