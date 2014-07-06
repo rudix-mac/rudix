@@ -4,7 +4,7 @@ include ../../Library/Configure.mk
 
 Title=		Nginx
 Name=		nginx
-Version=	1.4.2
+Version=	1.7.2
 Revision=	0
 Site=		http://nginx.org/
 URL=		http://nginx.org/download/
@@ -38,8 +38,5 @@ mv $(InstallDir)/$(DataDir)/nginx/html/50x.html $(InstallDir)/$(DataDir)/nginx/h
 endef
 
 define test_inner_hook
-endef
-
-define test_inner_hook
-$(BinDir)/nginx -v
+$(BinDir)/nginx -v 2>&1 | grep $(Version)
 endef
