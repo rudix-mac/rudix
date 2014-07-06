@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU MP
 Name=		gmp
-Version=	5.1.2
+Version=	5.1.3
 Revision=	0
 Site=		http://gmplib.org/
 URL=		http://ftp.gnu.org/gnu/gmp/
