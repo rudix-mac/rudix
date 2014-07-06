@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		NodeJS
 Name=		node
-Version=	0.10.26
+Version=	0.10.29
 Revision=	0
 Site=		http://nodejs.org/
 URL=		http://nodejs.org/dist/v$(Version)
@@ -14,9 +14,10 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=$(Name)-v$(Version)
 
-EnvExtra += OPENSSL_CFLAGS=-I/usr/include OPENSSL_LIBS=-lcrypto
+EnvExtra += OPENSSL_CFLAGS=-I/usr/include
+EnvExtra += OPENSSL_LIBS=-lcrypto
 
 define test_inner_hook
-$(BinDir)/node --version
+$(BinDir)/node --version | grep $(Version)
 $(BinDir)/npm --version
 endef
