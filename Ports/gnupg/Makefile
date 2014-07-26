@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GnuPG
 Name=		gnupg
-Version=	1.4.16
+Version=	1.4.18
 Revision=	0
 Site=		http://gnupg.org/
 URL=		ftp://ftp.gnupg.org/gcrypt/gnupg/
