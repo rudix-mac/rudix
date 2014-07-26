@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140627
+BuildSystem = 20140726
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf

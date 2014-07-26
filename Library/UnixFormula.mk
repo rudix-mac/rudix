@@ -5,9 +5,11 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
+MakeExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+
 define build_inner_hook
 cd $(BuildDir) && \
-$(make) $(MakeExtra) CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+$(make) $(MakeExtra)
 endef
 
 define install_inner_hook

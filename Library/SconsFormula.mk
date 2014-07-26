@@ -5,9 +5,10 @@
 #
 
 Scons = $(shell which scons)
+SconsExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 
 define build_inner_hook
-cd $(BuildDir) && $(Scons) $(SconsExtra) CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+cd $(BuildDir) && $(Scons) $(SconsExtra)
 endef
 
 # http://wiki.gentoo.org/wiki/SCons#Why_you_should_NOT_use_SCons_in_your_project

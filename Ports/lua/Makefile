@@ -12,15 +12,11 @@ License=	MIT
 
 LicenseFile=	license.txt
 
+OptFlags=
+MakeExtra = MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
 MakeExtra += macosx
 MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
 MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
-
-OptFlags=
-define build_inner_hook
-cd $(BuildDir) && \
-$(make) $(MakeExtra) MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
-endef
 
 define install_post_hook
 install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)

@@ -46,11 +46,12 @@ rm -f $(InstallDir)/$(LibDir)/charset.alias
 rm -f $(InstallDir)/$(DataDir)/locale/locale.alias
 endef
 
+EnvExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+
 define build_inner_hook
 $(call info_color,Running Configure)
 cd $(BuildDir) && \
-env CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)" $(EnvExtra) \
-$(gnu_configure)
+env $(EnvExtra) $(gnu_configure)
 $(call info_color,Done)
 cd $(BuildDir) && $(make) $(MakeExtra)
 endef

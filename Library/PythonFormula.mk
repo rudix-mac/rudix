@@ -5,13 +5,14 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
+EnvExtra = CFLAGS="$(CFlags)" \
+	   CXXFLAGS="$(CxxFlags)" \
+	   LDFLAGS="$(LdFlags)" \
+	   ARCHFLAGS="$(ArchFlags)"
+
 define build_inner_hook
 cd $(BuildDir) && \
-env 	CFLAGS="$(CFlags)" \
-	CXXFLAGS="$(CxxFlags)" \
-	LDFLAGS="$(LdFlags)" \
-	ARCHFLAGS="$(ArchFlags)" $(EnvExtra) \
-$(Python) setup.py $(SetupExtra) build
+env $(EnvExtra) $(Python) setup.py $(SetupExtra) build
 endef
 
 define install_inner_hook
