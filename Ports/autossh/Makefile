@@ -4,8 +4,8 @@ include ../../Library/Configure.mk
 
 Title=		autossh
 Name=		autossh
-Version=	1.4c
-Revision=	1
+Version=	1.4d
+Revision=	0
 Site=		http://www.harding.motd.ca/autossh/
 URL=		http://www.harding.motd.ca/autossh/
 Source=		$(Name)-$(Version).tgz
@@ -17,5 +17,5 @@ MakeInstallExtra += prefix=$(DestDir)$(Prefix)
 MakeInstallExtra += mandir=$(DestDir)$(ManDir)
 
 define test_inner_hook
-$(BinDir)/autossh -V
+$(BinDir)/autossh -V | grep $(Version)
 endef
