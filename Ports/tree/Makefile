@@ -3,21 +3,25 @@
 
 include ../../Library/Unix.mk
 
-Title=		tree
+Summary=	Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors
+Title=		Tree
 Name=		tree
-Version=	1.6.0
-Revision=	1
+Version=	1.7.0
+Revision=	0
 Site=		http://mama.indstate.edu/users/ice/tree/
 URL=		http://mama.indstate.edu/users/ice/tree/src/
 Source=		$(Name)-$(Version).tgz
-License=	GPL Version 2
+License=	GPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/usr/local
-MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/usr/local/share/man
+MakeInstallExtra += prefix=$(DestDir)$(Prefix)
+MakeInstallExtra += MANDIR=$(DestDir)$(ManDir)
+
+define check_inner_hook
+$(BuildDir)/tree
+endef
 
 define test_inner_hook
-$(BuildDir)/tree
-$(BinDir)/tree
+$(BinDir)/tree --version | grep v$(Version)
 endef
