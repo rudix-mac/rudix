@@ -1,17 +1,17 @@
 BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
 BuildRequires += $(LibDir)/libtiff.la # static-libtiff
-BuildRequires += $(LibDir)/liblcms.la # static-compat-lcms
+BuildRequires += $(LibDir)/liblcms2.la # static--lcms
 
 include ../../Library/Python.mk
 
 Title=		Python Imaging Library (fork)
-Name=		pillow
-Version=	2.1.0
+Name=		python-pillow
+Version=	2.5.3
 Revision=	0
 Site=		http://pypi.python.org/pypi/Pillow
 URL=		http://pypi.python.org/packages/source/P/Pillow/
 Source=		Pillow-$(Version).zip
-License=	BSD?
+License=	PIL Software License
 
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/PKG-INFO
