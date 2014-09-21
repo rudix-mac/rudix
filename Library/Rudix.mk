@@ -368,9 +368,9 @@ done
 endef
 
 define install_base_documentation
-install -d $(InstallDir)$(DocDir)/$(Name)
-install -m 644 $(ReadMeFile) $(InstallDir)$(DocDir)/$(Name)
-install -m 644 $(LicenseFile) $(InstallDir)$(DocDir)/$(Name)
+install -d $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
 endef
 
 define test_documentation
