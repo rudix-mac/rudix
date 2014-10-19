@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		GNU Bash
 Name=		bash
 Version=	4.3
-Revision=	1
+Revision=	2
 Site=		http://www.gnu.org/software/bash/
 URL=		http://ftp.gnu.org/gnu/bash/
 Source=		bash-$(Version).tar.gz
