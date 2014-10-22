@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20140803
+BuildSystem = 20141022
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -14,7 +14,9 @@ OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
-ifeq ($(OSXVersion),10.9)
+ifeq ($(OSXVersion),10.10)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.9)
 RUDIX_UNIVERSAL?=no
 else ifeq ($(OSXVersion),10.8)
 RUDIX_UNIVERSAL?=no
@@ -64,7 +66,9 @@ PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 #
 # Build flags options
 #
-ifeq ($(OSXVersion),10.9)
+ifeq ($(OSXVersion),10.10)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.9)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 else ifeq ($(OSXVersion),10.8)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
@@ -103,7 +107,10 @@ InfoDir = $(DataDir)/info
 #
 # Select Python version
 #
-ifeq ($(OSXVersion),10.9)
+ifeq ($(OSXVersion),10.10)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.9)
 Python = /usr/bin/python2.7
 PythonSitePackages = /Library/Python/2.7/site-packages
 else ifeq ($(OSXVersion),10.8)

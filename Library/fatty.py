@@ -27,6 +27,8 @@ def _lipo_command(osx_version=ProductVersion):
         cmd = 'lipo {path} -verify_arch x86_64 i386'
     elif osx_version.startswith('10.9.'):
         cmd = 'lipo {path} -verify_arch x86_64 i386'
+    elif osx_version.startswith('10.10.'):
+        cmd = 'lipo {path} -verify_arch x86_64 i386'
     else:
         cmd = 'lipo {path} -verify_arch i386 ppc'
     return cmd
