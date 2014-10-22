@@ -1,6 +1,6 @@
 include ../../Library/GNU.mk
 
-Title=		Dtach
+Title=		dtach
 Name=		dtach
 Version=	0.8
 Revision=	10
@@ -19,5 +19,5 @@ install -m 644 $(SourceDir)/dtach.1 $(InstallDir)/$(ManDir)/man1/dtach.1
 endef
 
 define test_inner_hook
-$(BinDir)/dtach --version
+$(BinDir)/dtach --version | grep $(Version)
 endef

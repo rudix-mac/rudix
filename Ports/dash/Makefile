@@ -6,12 +6,12 @@ endif
 
 Title=		DASH
 Name=		dash
-Version=	0.5.7
-Revision=	1
+Version=	0.5.8
+Revision=	0
 Site=		http://gondor.apana.org.au/~herbert/dash/
 URL=		http://gondor.apana.org.au/~herbert/dash/files
 Source=		$(Name)-$(Version).tar.gz
-Checksum=	a3ebc16f2e2c7ae8adf64e5e62ae3dcb631717c6
+Checksum=	cd058935bba545427caa375337afe8a6309477d2
 License=	BSD
 
 ReadMeFile=	README
