@@ -1,0 +1,124 @@
+Jeremy Bornstein wrote:
+
+I recently had the need to transfer files only with different mod
+dates (and to *not* transfer them based on file size differences).
+This is because I'm backing up files remotely on an untrusted machine,
+so I'm encrypting them with gpg before transfer.  I discovered that
+rsync didn't already have a --date-only flag, so I added one and am
+enclosing the diffs in case you (as I hope) decide to include this
+option in future releases.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/date-only.diff
+    ./configure                                 (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/generator.c b/generator.c
+--- a/generator.c
++++ b/generator.c
+@@ -63,6 +63,7 @@ extern int append_mode;
+ extern int make_backups;
+ extern int csum_length;
+ extern int ignore_times;
++extern int date_only;
+ extern int size_only;
+ extern OFF_T max_size;
+ extern OFF_T min_size;
+@@ -571,6 +572,9 @@ void itemize(const char *fnamecmp, struct file_struct *file, int ndx, int statre
+ /* Perform our quick-check heuristic for determining if a file is unchanged. */
+ int unchanged_file(char *fn, struct file_struct *file, STRUCT_STAT *st)
+ {
++	if (date_only)
++		return cmp_time(st->st_mtime, file->modtime) == 0;
++
+ 	if (st->st_size != F_LENGTH(file))
+ 		return 0;
+ 
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -108,6 +108,7 @@ int safe_symlinks = 0;
+ int copy_unsafe_links = 0;
+ int munge_symlinks = 0;
+ int size_only = 0;
++int date_only = 0;
+ int daemon_bwlimit = 0;
+ int bwlimit = 0;
+ int fuzzy_basis = 0;
+@@ -757,6 +758,7 @@ void usage(enum logcode F)
+   rprintf(F," -I, --ignore-times          don't skip files that match in size and mod-time\n");
+   rprintf(F," -M, --remote-option=OPTION  send OPTION to the remote side only\n");
+   rprintf(F,"     --size-only             skip files that match in size\n");
++  rprintf(F,"     --date-only             skip files that match in mod-time\n");
+   rprintf(F,"     --modify-window=NUM     compare mod-times with reduced accuracy\n");
+   rprintf(F," -T, --temp-dir=DIR          create temporary files in directory DIR\n");
+   rprintf(F," -y, --fuzzy                 find similar file for basis if no dest file\n");
+@@ -912,6 +914,7 @@ static struct poptOption long_options[] = {
+   {"chmod",            0,  POPT_ARG_STRING, 0, OPT_CHMOD, 0, 0 },
+   {"ignore-times",    'I', POPT_ARG_NONE,   &ignore_times, 0, 0, 0 },
+   {"size-only",        0,  POPT_ARG_NONE,   &size_only, 0, 0, 0 },
++  {"date-only",        0,  POPT_ARG_NONE,   &date_only, 0, 0, 0 },
+   {"one-file-system", 'x', POPT_ARG_NONE,   0, 'x', 0, 0 },
+   {"no-one-file-system",0, POPT_ARG_VAL,    &one_file_system, 0, 0, 0 },
+   {"no-x",             0,  POPT_ARG_VAL,    &one_file_system, 0, 0, 0 },
+@@ -2647,6 +2650,9 @@ void server_options(char **args, int *argc_p)
+ 	else if (missing_args == 1 && !am_sender)
+ 		args[ac++] = "--ignore-missing-args";
+ 
++	if (date_only)
++		args[ac++] = "--date-only";
++
+ 	if (modify_window_set) {
+ 		if (asprintf(&arg, "--modify-window=%d", modify_window) < 0)
+ 			goto oom;
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -413,6 +413,7 @@ to the detailed description below for a complete description.  verb(
+      --contimeout=SECONDS    set daemon connection timeout in seconds
+  -I, --ignore-times          don't skip files that match size and time
+      --size-only             skip files that match in size
++     --date-only             skip files that match in mod-time
+      --modify-window=NUM     compare mod-times with reduced accuracy
+  -T, --temp-dir=DIR          create temporary files in directory DIR
+  -y, --fuzzy                 find similar file for basis if no dest file
+@@ -603,6 +604,12 @@ time to just looking for files that have changed in size.  This is useful
+ when starting to use rsync after using another mirroring system which may
+ not preserve timestamps exactly.
+ 
++dit(bf(--date-only)) Normally rsync will skip any files that are
++already the same size and have the same modification time-stamp. With the
++--date-only option, files will be skipped if they have the same
++timestamp, regardless of size. This may be useful when the remote
++files have passed through a size-changing filter, e.g. for encryption.
++
+ dit(bf(--modify-window)) When comparing two timestamps, rsync treats the
+ timestamps as being equal if they differ by no more than the modify-window
+ value.  This is normally 0 (for an exact match), but you may find it useful
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -489,6 +489,7 @@ to the detailed description below for a
+      \-\-contimeout=SECONDS    set daemon connection timeout in seconds
+  \-I, \-\-ignore\-times          don'\&t skip files that match size and time
+      \-\-size\-only             skip files that match in size
++     \-\-date\-only             skip files that match in mod\-time
+      \-\-modify\-window=NUM     compare mod\-times with reduced accuracy
+  \-T, \-\-temp\-dir=DIR          create temporary files in directory DIR
+  \-y, \-\-fuzzy                 find similar file for basis if no dest file
+@@ -699,6 +700,13 @@ time to just looking for files that have
+ when starting to use rsync after using another mirroring system which may
+ not preserve timestamps exactly.
+ .IP 
++.IP "\fB\-\-date\-only\fP"
++Normally rsync will skip any files that are
++already the same size and have the same modification time\-stamp. With the
++\-\-date\-only option, files will be skipped if they have the same
++timestamp, regardless of size. This may be useful when the remote
++files have passed through a size\-changing filter, e.g. for encryption.
++.IP 
+ .IP "\fB\-\-modify\-window\fP"
+ When comparing two timestamps, rsync treats the
+ timestamps as being equal if they differ by no more than the modify\-window

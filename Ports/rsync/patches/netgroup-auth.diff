@@ -1,0 +1,33 @@
+This allows you to use the samba style @netgroup names in hosts allow
+and hosts deny.
+
+This patch still needs autoconf support for portability.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/netgroup-auth.diff
+    ./configure                           (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/access.c b/access.c
+--- a/access.c
++++ b/access.c
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include "rsync.h"
++#include <netdb.h>
+ 
+ static int allow_forward_dns;
+ 
+@@ -33,6 +34,9 @@ static int match_hostname(const char **host_ptr, const char *addr, const char *t
+ 	if (!host || !*host)
+ 		return 0;
+ 
++	if (*tok == '@' && tok[1])
++		return innetgr(tok + 1, host, NULL, NULL);
++
+ 	/* First check if the reverse-DNS-determined hostname matches. */
+ 	if (iwildmatch(tok, host))
+ 		return 1;

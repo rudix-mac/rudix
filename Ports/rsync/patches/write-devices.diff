@@ -1,0 +1,269 @@
+This patch adds the --write-devices option, which will try to write
+data into a device when used as a destination.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/write-devices.diff
+    ./configure                      (optional if already run)
+    make
+
+This patch has not yet been tested by me (Wayne), but was provided
+Darryl Dixon.  Thanks!
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/generator.c b/generator.c
+--- a/generator.c
++++ b/generator.c
+@@ -39,6 +39,7 @@ extern int preserve_acls;
+ extern int preserve_xattrs;
+ extern int preserve_links;
+ extern int preserve_devices;
++extern int write_devices;
+ extern int preserve_specials;
+ extern int preserve_hard_links;
+ extern int preserve_executability;
+@@ -1673,7 +1674,7 @@ static void recv_generator(char *fname, struct file_struct *file, int ndx,
+ 
+ 	fnamecmp_type = FNAMECMP_FNAME;
+ 
+-	if (statret == 0 && !S_ISREG(sx.st.st_mode)) {
++	if (statret == 0 && !(S_ISREG(sx.st.st_mode) || (write_devices && IS_DEVICE(sx.st.st_mode)))) {
+ 		if (delete_item(fname, sx.st.st_mode, del_opts | DEL_FOR_FILE) != 0)
+ 			goto cleanup;
+ 		statret = -1;
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -50,6 +50,7 @@ int append_mode = 0;
+ int keep_dirlinks = 0;
+ int copy_dirlinks = 0;
+ int copy_links = 0;
++int write_devices = 0;
+ int preserve_links = 0;
+ int preserve_hard_links = 0;
+ int preserve_acls = 0;
+@@ -706,6 +707,7 @@ void usage(enum logcode F)
+   rprintf(F," -o, --owner                 preserve owner (super-user only)\n");
+   rprintf(F," -g, --group                 preserve group\n");
+   rprintf(F,"     --devices               preserve device files (super-user only)\n");
++  rprintf(F," -w  --write-devices         write to devices as regular files (implies --inplace)\n");
+   rprintf(F,"     --specials              preserve special files\n");
+   rprintf(F," -D                          same as --devices --specials\n");
+   rprintf(F," -t, --times                 preserve modification times\n");
+@@ -887,6 +889,7 @@ static struct poptOption long_options[] = {
+   {"no-D",             0,  POPT_ARG_NONE,   0, OPT_NO_D, 0, 0 },
+   {"devices",          0,  POPT_ARG_VAL,    &preserve_devices, 1, 0, 0 },
+   {"no-devices",       0,  POPT_ARG_VAL,    &preserve_devices, 0, 0, 0 },
++  {"write-devices",   'w', POPT_ARG_NONE,   0, 'w', 0, 0 },
+   {"specials",         0,  POPT_ARG_VAL,    &preserve_specials, 1, 0, 0 },
+   {"no-specials",      0,  POPT_ARG_VAL,    &preserve_specials, 0, 0, 0 },
+   {"links",           'l', POPT_ARG_VAL,    &preserve_links, 1, 0, 0 },
+@@ -1787,6 +1790,11 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 			return 0;
+ #endif
+ 
++		case 'w':
++			write_devices = 1;
++			inplace = 1;
++			break;
++
+ 		default:
+ 			/* A large opt value means that set_refuse_options()
+ 			 * turned this option off. */
+@@ -2755,6 +2763,9 @@ void server_options(char **args, int *argc_p)
+ 	if (relative_paths && !implied_dirs && (!am_sender || protocol_version >= 30))
+ 		args[ac++] = "--no-implied-dirs";
+ 
++	if (write_devices)
++		args[ac++] = "--write-devices";
++
+ 	if (remove_source_files == 1)
+ 		args[ac++] = "--remove-source-files";
+ 	else if (remove_source_files)
+diff --git a/receiver.c b/receiver.c
+--- a/receiver.c
++++ b/receiver.c
+@@ -39,6 +39,7 @@ extern int protocol_version;
+ extern int relative_paths;
+ extern int preserve_hard_links;
+ extern int preserve_perms;
++extern int write_devices;
+ extern int preserve_xattrs;
+ extern int basis_dir_cnt;
+ extern int make_backups;
+@@ -229,7 +230,7 @@ int open_tmpfile(char *fnametmp, const char *fname, struct file_struct *file)
+ }
+ 
+ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+-			const char *fname, int fd, OFF_T total_size)
++			const char *fname, int fd, struct file_struct *file)
+ {
+ 	static char file_sum1[MAX_DIGEST_LEN];
+ 	struct map_struct *mapbuf;
+@@ -245,12 +246,12 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ 	OFF_T preallocated_len = 0;
+ #endif
+ 
+-	if (preallocate_files && fd != -1 && total_size > 0 && (!inplace || total_size > size_r)) {
++	if (preallocate_files && fd != -1 && F_LENGTH(file) > 0 && (!inplace || F_LENGTH(file) > size_r)) {
+ 		/* Try to preallocate enough space for file's eventual length.  Can
+ 		 * reduce fragmentation on filesystems like ext4, xfs, and NTFS. */
+-		if (do_fallocate(fd, 0, total_size) == 0) {
++		if (do_fallocate(fd, 0, F_LENGTH(file)) == 0) {
+ #ifdef PREALLOCATE_NEEDS_TRUNCATE
+-			preallocated_len = total_size;
++			preallocated_len = F_LENGTH(file);
+ #endif
+ 		} else
+ 			rsyserr(FWARNING, errno, "do_fallocate %s", full_fname(fname));
+@@ -279,7 +280,7 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ 		if (append_mode == 2 && mapbuf) {
+ 			for (j = CHUNK_SIZE; j < sum.flength; j += CHUNK_SIZE) {
+ 				if (INFO_GTE(PROGRESS, 1))
+-					show_progress(offset, total_size);
++					show_progress(offset, F_LENGTH(file));
+ 				sum_update(map_ptr(mapbuf, offset, CHUNK_SIZE),
+ 					   CHUNK_SIZE);
+ 				offset = j;
+@@ -287,7 +288,7 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ 			if (offset < sum.flength) {
+ 				int32 len = (int32)(sum.flength - offset);
+ 				if (INFO_GTE(PROGRESS, 1))
+-					show_progress(offset, total_size);
++					show_progress(offset, F_LENGTH(file));
+ 				sum_update(map_ptr(mapbuf, offset, len), len);
+ 			}
+ 		}
+@@ -301,7 +302,7 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ 
+ 	while ((i = recv_token(f_in, &data)) != 0) {
+ 		if (INFO_GTE(PROGRESS, 1))
+-			show_progress(offset, total_size);
++			show_progress(offset, F_LENGTH(file));
+ 
+ 		if (allowed_lull)
+ 			maybe_send_keepalive(time(NULL), MSK_ALLOW_FLUSH | MSK_ACTIVE_RECEIVER);
+@@ -371,20 +372,20 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ 
+ #ifdef HAVE_FTRUNCATE
+ 	/* inplace: New data could be shorter than old data.
+-	 * preallocate_files: total_size could have been an overestimate.
++	 * preallocate_files: F_LENGTH(file) could have been an overestimate.
+ 	 *     Cut off any extra preallocated zeros from dest file. */
+ 	if ((inplace
+ #ifdef PREALLOCATE_NEEDS_TRUNCATE
+ 	  || preallocated_len > offset
+ #endif
+-	  ) && fd != -1 && do_ftruncate(fd, offset) < 0) {
++	  ) && fd != -1 && !IS_DEVICE(file->mode) && do_ftruncate(fd, offset) < 0) {
+ 		rsyserr(FERROR_XFER, errno, "ftruncate failed on %s",
+ 			full_fname(fname));
+ 	}
+ #endif
+ 
+ 	if (INFO_GTE(PROGRESS, 1))
+-		end_progress(total_size);
++		end_progress(F_LENGTH(file));
+ 
+ 	if (fd != -1 && offset > 0 && sparse_end(fd, offset) != 0) {
+ 	    report_write_error:
+@@ -408,9 +409,9 @@ static int receive_data(int f_in, char *fname_r, int fd_r, OFF_T size_r,
+ }
+ 
+ 
+-static void discard_receive_data(int f_in, OFF_T length)
++static void discard_receive_data(int f_in, struct file_struct *file)
+ {
+-	receive_data(f_in, NULL, -1, 0, NULL, -1, length);
++	receive_data(f_in, NULL, -1, 0, NULL, -1, file);
+ }
+ 
+ static void handle_delayed_updates(char *local_name)
+@@ -666,7 +667,7 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 					"(Skipping batched update for%s \"%s\")\n",
+ 					redoing ? " resend of" : "",
+ 					fname);
+-				discard_receive_data(f_in, F_LENGTH(file));
++				discard_receive_data(f_in, file);
+ 				file->flags |= FLAG_FILE_SENT;
+ 				continue;
+ 			}
+@@ -678,13 +679,13 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 		if (!do_xfers) { /* log the transfer */
+ 			log_item(FCLIENT, file, iflags, NULL);
+ 			if (read_batch)
+-				discard_receive_data(f_in, F_LENGTH(file));
++				discard_receive_data(f_in, file);
+ 			continue;
+ 		}
+ 		if (write_batch < 0) {
+ 			log_item(FCLIENT, file, iflags, NULL);
+ 			if (!am_server)
+-				discard_receive_data(f_in, F_LENGTH(file));
++				discard_receive_data(f_in, file);
+ 			if (inc_recurse)
+ 				send_msg_int(MSG_SUCCESS, ndx);
+ 			continue;
+@@ -774,7 +775,7 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 		} else if (do_fstat(fd1,&st) != 0) {
+ 			rsyserr(FERROR_XFER, errno, "fstat %s failed",
+ 				full_fname(fnamecmp));
+-			discard_receive_data(f_in, F_LENGTH(file));
++			discard_receive_data(f_in, file);
+ 			close(fd1);
+ 			if (inc_recurse)
+ 				send_msg_int(MSG_NO_SEND, ndx);
+@@ -789,18 +790,32 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 			 */
+ 			rprintf(FERROR_XFER, "recv_files: %s is a directory\n",
+ 				full_fname(fnamecmp));
+-			discard_receive_data(f_in, F_LENGTH(file));
++			discard_receive_data(f_in, file);
+ 			close(fd1);
+ 			if (inc_recurse)
+ 				send_msg_int(MSG_NO_SEND, ndx);
+ 			continue;
+ 		}
+ 
+-		if (fd1 != -1 && !S_ISREG(st.st_mode)) {
++		if (fd1 != -1 && !(S_ISREG(st.st_mode) || (write_devices && IS_DEVICE(st.st_mode)))) {
+ 			close(fd1);
+ 			fd1 = -1;
+ 		}
+ 
++		/* On Linux systems (at least), st_size is typically 0 for devices.
++		 * If so, try to determine the actual device size. */
++		if (fd1 != -1 && IS_DEVICE(st.st_mode) && st.st_size == 0) {
++			OFF_T off = lseek(fd1, 0, SEEK_END);
++			if (off == (OFF_T) -1)
++				rsyserr(FERROR, errno, "failed to seek to end of %s to determine size", fname);
++			else {
++				st.st_size = off;
++				off = lseek(fd1, 0, SEEK_SET);
++				if (off != 0)
++					rsyserr(FERROR, errno, "failed to seek back to beginning of %s to read it", fname);
++			}
++		}
++
+ 		/* If we're not preserving permissions, change the file-list's
+ 		 * mode based on the local permissions and some heuristics. */
+ 		if (!preserve_perms) {
+@@ -832,7 +847,7 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 		}
+ 
+ 		if (fd2 == -1) {
+-			discard_receive_data(f_in, F_LENGTH(file));
++			discard_receive_data(f_in, file);
+ 			if (fd1 != -1)
+ 				close(fd1);
+ 			if (inc_recurse)
+@@ -847,8 +862,7 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 			rprintf(FINFO, "%s\n", fname);
+ 
+ 		/* recv file data */
+-		recv_ok = receive_data(f_in, fnamecmp, fd1, st.st_size,
+-				       fname, fd2, F_LENGTH(file));
++		recv_ok = receive_data(f_in, fnamecmp, fd1, st.st_size, fname, fd2, file);
+ 
+ 		log_item(log_code, file, iflags, NULL);
+ 

@@ -1,0 +1,354 @@
+This patch adds backward-compatibility support for the --acls option.
+Since the main release has never had ACL support, the trunk doesn't
+need this code.  If you want to make rsync 3.0.x communicate with an
+older (patched) release, use this.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/acls.diff
+    ./configure                         (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/acls.c b/acls.c
+--- a/acls.c
++++ b/acls.c
+@@ -31,6 +31,7 @@ extern int list_only;
+ extern int orig_umask;
+ extern int numeric_ids;
+ extern int inc_recurse;
++extern int protocol_version;
+ extern int preserve_devices;
+ extern int preserve_specials;
+ 
+@@ -112,6 +113,18 @@ static const char *str_acl_type(SMB_ACL_TYPE_T type)
+ 	return "unknown ACL type!";
+ }
+ 
++#define OTHER_TYPE(t) (SMB_ACL_TYPE_ACCESS+SMB_ACL_TYPE_DEFAULT-(t))
++#define BUMP_TYPE(t) ((t = OTHER_TYPE(t)) == SMB_ACL_TYPE_DEFAULT)
++
++static int old_count_racl_entries(const rsync_acl *racl)
++{
++	return racl->names.count
++	     + (racl->user_obj != NO_ENTRY)
++	     + (racl->group_obj != NO_ENTRY)
++	     + (racl->mask_obj != NO_ENTRY)
++	     + (racl->other_obj != NO_ENTRY);
++}
++
+ static int calc_sacl_entries(const rsync_acl *racl)
+ {
+ 	/* A System ACL always gets user/group/other permission entries. */
+@@ -581,6 +594,96 @@ int get_acl(const char *fname, stat_x *sxp)
+ 	return 0;
+ }
+ 
++/* === OLD Send functions === */
++
++/* Send the ida list over the file descriptor. */
++static void old_send_ida_entries(int f, const ida_entries *idal, char tag_char)
++{
++	id_access *ida;
++	size_t count = idal->count;
++	for (ida = idal->idas; count--; ida++) {
++		if (tag_char == 'U') {
++			if (!(ida->access & NAME_IS_USER))
++				continue;
++			add_uid(ida->id);
++		} else {
++			if (ida->access & NAME_IS_USER)
++				continue;
++			add_gid(ida->id);
++		}
++		write_byte(f, tag_char);
++		write_byte(f, ida->access);
++		write_int(f, ida->id);
++	}
++}
++
++/* Send an rsync ACL over the file descriptor. */
++static void old_send_rsync_acl(int f, const rsync_acl *racl)
++{
++	size_t count = old_count_racl_entries(racl);
++	write_int(f, count);
++	if (racl->user_obj != NO_ENTRY) {
++		write_byte(f, 'u');
++		write_byte(f, racl->user_obj);
++	}
++	old_send_ida_entries(f, &racl->names, 'U');
++	if (racl->group_obj != NO_ENTRY) {
++		write_byte(f, 'g');
++		write_byte(f, racl->group_obj);
++	}
++	old_send_ida_entries(f, &racl->names, 'G');
++	if (racl->mask_obj != NO_ENTRY) {
++		write_byte(f, 'm');
++		write_byte(f, racl->mask_obj);
++	}
++	if (racl->other_obj != NO_ENTRY) {
++		write_byte(f, 'o');
++		write_byte(f, racl->other_obj);
++	}
++}
++
++/* Send the ACL from the stat_x structure down the indicated file descriptor.
++ * This also frees the ACL data. */
++void old_send_acl(stat_x *sxp, int f)
++{
++	SMB_ACL_TYPE_T type;
++	rsync_acl *racl, *new_racl;
++	item_list *racl_list;
++	int ndx;
++
++	type = SMB_ACL_TYPE_ACCESS;
++	racl = sxp->acc_acl;
++	racl_list = &access_acl_list;
++	do {
++		if (!racl) {
++			racl = new(rsync_acl);
++			if (!racl)
++				out_of_memory("send_acl");
++			*racl = empty_rsync_acl;
++			if (type == SMB_ACL_TYPE_ACCESS) {
++				rsync_acl_fake_perms(racl, sxp->st.st_mode);
++				sxp->acc_acl = racl;
++			} else
++				sxp->def_acl = racl;
++		}
++
++		if ((ndx = find_matching_rsync_acl(racl, type, racl_list)) != -1) {
++			write_byte(f, type == SMB_ACL_TYPE_ACCESS ? 'a' : 'd');
++			write_int(f, ndx);
++		} else {
++			new_racl = EXPAND_ITEM_LIST(racl_list, rsync_acl, 1000);
++			write_byte(f, type == SMB_ACL_TYPE_ACCESS ? 'A' : 'D');
++			old_send_rsync_acl(f, racl);
++			*new_racl = *racl;
++			*racl = empty_rsync_acl;
++		}
++		racl = sxp->def_acl;
++		racl_list = &default_acl_list;
++	} while (BUMP_TYPE(type) && S_ISDIR(sxp->st.st_mode));
++
++	free_acl(sxp);
++}
++
+ /* === Send functions === */
+ 
+ /* Send the ida list over the file descriptor. */
+@@ -656,6 +759,11 @@ static void send_rsync_acl(int f, rsync_acl *racl, SMB_ACL_TYPE_T type,
+  * This also frees the ACL data. */
+ void send_acl(int f, stat_x *sxp)
+ {
++	if (protocol_version < 30) {
++		old_send_acl(sxp, f);
++		return;
++	}
++
+ 	if (!sxp->acc_acl) {
+ 		sxp->acc_acl = create_racl();
+ 		rsync_acl_fake_perms(sxp->acc_acl, sxp->st.st_mode);
+@@ -673,6 +781,160 @@ void send_acl(int f, stat_x *sxp)
+ 	}
+ }
+ 
++/* === OLD Receive functions */
++
++static void old_recv_rsync_acl(rsync_acl *racl, int f)
++{
++	static item_list temp_ida_list = EMPTY_ITEM_LIST;
++	SMB_ACL_TAG_T tag_type = 0;
++	uchar computed_mask_bits = 0;
++	id_access *ida;
++	size_t count;
++
++	if (!(count = read_int(f)))
++		return;
++
++	while (count--) {
++		char tag = read_byte(f);
++		uchar access = read_byte(f);
++		if (access & ~ (4 | 2 | 1)) {
++			rprintf(FERROR, "old_recv_rsync_acl: bogus permset %o\n",
++				access);
++			exit_cleanup(RERR_STREAMIO);
++		}
++		switch (tag) {
++		case 'u':
++			if (racl->user_obj != NO_ENTRY) {
++				rprintf(FERROR, "old_recv_rsync_acl: error: duplicate USER_OBJ entry\n");
++				exit_cleanup(RERR_STREAMIO);
++			}
++			racl->user_obj = access;
++			continue;
++		case 'U':
++			tag_type = SMB_ACL_USER;
++			break;
++		case 'g':
++			if (racl->group_obj != NO_ENTRY) {
++				rprintf(FERROR, "old_recv_rsync_acl: error: duplicate GROUP_OBJ entry\n");
++				exit_cleanup(RERR_STREAMIO);
++			}
++			racl->group_obj = access;
++			continue;
++		case 'G':
++			tag_type = SMB_ACL_GROUP;
++			break;
++		case 'm':
++			if (racl->mask_obj != NO_ENTRY) {
++				rprintf(FERROR, "old_recv_rsync_acl: error: duplicate MASK entry\n");
++				exit_cleanup(RERR_STREAMIO);
++			}
++			racl->mask_obj = access;
++			continue;
++		case 'o':
++			if (racl->other_obj != NO_ENTRY) {
++				rprintf(FERROR, "old_recv_rsync_acl: error: duplicate OTHER entry\n");
++				exit_cleanup(RERR_STREAMIO);
++			}
++			racl->other_obj = access;
++			continue;
++		default:
++			rprintf(FERROR, "old_recv_rsync_acl: unknown tag %c\n",
++				tag);
++			exit_cleanup(RERR_STREAMIO);
++		}
++		ida = EXPAND_ITEM_LIST(&temp_ida_list, id_access, -10);
++		ida->access = access | (tag_type == SMB_ACL_USER ? NAME_IS_USER : 0);
++		ida->id = read_int(f);
++		computed_mask_bits |= access;
++	}
++
++	/* Transfer the count id_access items out of the temp_ida_list
++	 * into the names ida_entries list in racl. */
++	if (temp_ida_list.count) {
++#ifdef SMB_ACL_NEED_SORT
++		if (temp_ida_list.count > 1) {
++			qsort(temp_ida_list.items, temp_ida_list.count,
++			      sizeof (id_access), id_access_sorter);
++		}
++#endif
++		if (!(racl->names.idas = new_array(id_access, temp_ida_list.count)))
++			out_of_memory("unpack_smb_acl");
++		memcpy(racl->names.idas, temp_ida_list.items,
++		       temp_ida_list.count * sizeof (id_access));
++	} else
++		racl->names.idas = NULL;
++
++	racl->names.count = temp_ida_list.count;
++
++	/* Truncate the temporary list now that its idas have been saved. */
++	temp_ida_list.count = 0;
++
++	if (!racl->names.count) {
++		/* If we received a superfluous mask, throw it away. */
++		if (racl->mask_obj != NO_ENTRY) {
++			/* Mask off the group perms with it first. */
++			racl->group_obj &= racl->mask_obj | NO_ENTRY;
++			racl->mask_obj = NO_ENTRY;
++		}
++	} else if (racl->mask_obj == NO_ENTRY) /* Must be non-empty with lists. */
++		racl->mask_obj = (computed_mask_bits | racl->group_obj) & 7;
++}
++
++/* Receive the ACL info the sender has included for this file-list entry. */
++void old_recv_acl(struct file_struct *file, int f)
++{
++	SMB_ACL_TYPE_T type;
++	item_list *racl_list;
++
++	if (S_ISLNK(file->mode))
++		return;
++
++	type = SMB_ACL_TYPE_ACCESS;
++	racl_list = &access_acl_list;
++	do {
++		char tag = read_byte(f);
++		int ndx;
++
++		if (tag == 'A' || tag == 'a') {
++			if (type != SMB_ACL_TYPE_ACCESS) {
++				rprintf(FERROR, "receive_acl %s: duplicate access ACL\n",
++					f_name(file, NULL));
++				exit_cleanup(RERR_STREAMIO);
++			}
++		} else if (tag == 'D' || tag == 'd') {
++			if (type == SMB_ACL_TYPE_ACCESS) {
++				rprintf(FERROR, "receive_acl %s: expecting access ACL; got default\n",
++					f_name(file, NULL));
++				exit_cleanup(RERR_STREAMIO);
++			}
++		} else {
++			rprintf(FERROR, "receive_acl %s: unknown ACL type tag: %c\n",
++				f_name(file, NULL), tag);
++			exit_cleanup(RERR_STREAMIO);
++		}
++		if (tag == 'A' || tag == 'D') {
++			acl_duo *duo_item;
++			ndx = racl_list->count;
++			duo_item = EXPAND_ITEM_LIST(racl_list, acl_duo, 1000);
++			duo_item->racl = empty_rsync_acl;
++			old_recv_rsync_acl(&duo_item->racl, f);
++			duo_item->sacl = NULL;
++		} else {
++			ndx = read_int(f);
++			if (ndx < 0 || (size_t)ndx >= racl_list->count) {
++				rprintf(FERROR, "receive_acl %s: %s ACL index %d out of range\n",
++					f_name(file, NULL), str_acl_type(type), ndx);
++				exit_cleanup(RERR_STREAMIO);
++			}
++		}
++		if (type == SMB_ACL_TYPE_ACCESS)
++			F_ACL(file) = ndx;
++		else
++			F_DIR_DEFACL(file) = ndx;
++		racl_list = &default_acl_list;
++	} while (BUMP_TYPE(type) && S_ISDIR(file->mode));
++}
++
+ /* === Receive functions === */
+ 
+ static uint32 recv_acl_access(int f, uchar *name_follows_ptr)
+@@ -794,6 +1056,11 @@ static int recv_rsync_acl(int f, item_list *racl_list, SMB_ACL_TYPE_T type, mode
+ /* Receive the ACL info the sender has included for this file-list entry. */
+ void receive_acl(int f, struct file_struct *file)
+ {
++	if (protocol_version < 30) {
++		old_recv_acl(file, f);
++		return;
++	}
++
+ 	F_ACL(file) = recv_rsync_acl(f, &access_acl_list, SMB_ACL_TYPE_ACCESS, file->mode);
+ 
+ 	if (S_ISDIR(file->mode))
+diff --git a/compat.c b/compat.c
+--- a/compat.c
++++ b/compat.c
+@@ -203,13 +203,6 @@ void setup_protocol(int f_out,int f_in)
+ 	if (protocol_version < 30) {
+ 		if (append_mode == 1)
+ 			append_mode = 2;
+-		if (preserve_acls && !local_server) {
+-			rprintf(FERROR,
+-			    "--acls requires protocol 30 or higher"
+-			    " (negotiated %d).\n",
+-			    protocol_version);
+-			exit_cleanup(RERR_PROTOCOL);
+-		}
+ 		if (preserve_xattrs && !local_server) {
+ 			rprintf(FERROR,
+ 			    "--xattrs requires protocol 30 or higher"
+diff -Nurp a/proto.h b/proto.h
+--- a/proto.h
++++ b/proto.h
+@@ -3,7 +3,9 @@
+ int allow_access(const char *addr, const char **host_ptr, int i);
+ void free_acl(stat_x *sxp);
+ int get_acl(const char *fname, stat_x *sxp);
++void old_send_acl(stat_x *sxp, int f);
+ void send_acl(int f, stat_x *sxp);
++void old_recv_acl(struct file_struct *file, int f);
+ void receive_acl(int f, struct file_struct *file);
+ void cache_tmp_acl(struct file_struct *file, stat_x *sxp);
+ void uncache_tmp_acls(void);

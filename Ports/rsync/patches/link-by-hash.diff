@@ -1,0 +1,577 @@
+Jason M. Felice wrote:
+
+This patch adds the --link-by-hash=DIR option, which hard links received files
+in a link farm arranged by MD4 or MD5 file hash.  The result is that the system
+will only store one copy of the unique contents of each file, regardless of the
+file's name.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/link-by-hash.diff
+    ./prepare-source
+    ./configure
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/Makefile.in b/Makefile.in
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -39,7 +39,7 @@ OBJS1=flist.o rsync.o generator.o receiver.o cleanup.o sender.o exclude.o \
+ 	util.o util2.o main.o checksum.o match.o syscall.o log.o backup.o delete.o
+ OBJS2=options.o io.o compat.o hlink.o token.o uidlist.o socket.o hashtable.o \
+ 	fileio.o batch.o clientname.o chmod.o acls.o xattrs.o
+-OBJS3=progress.o pipe.o
++OBJS3=progress.o pipe.o hashlink.o
+ DAEMON_OBJ = params.o loadparm.o clientserver.o access.o connection.o authenticate.o
+ popt_OBJS=popt/findme.o  popt/popt.o  popt/poptconfig.o \
+ 	popt/popthelp.o popt/poptparse.o
+diff --git a/checksum.c b/checksum.c
+--- a/checksum.c
++++ b/checksum.c
+@@ -21,8 +21,11 @@
+ 
+ #include "rsync.h"
+ 
++extern int checksum_len;
+ extern int checksum_seed;
+ extern int protocol_version;
++extern char *link_by_hash_dir;
++extern char link_by_hash_extra_sum[MAX_DIGEST_LEN];
+ 
+ /*
+   a simple 32 bit checksum that can be upadted from either end
+@@ -151,7 +154,7 @@ void file_checksum(const char *fname, const STRUCT_STAT *st_p, char *sum)
+ }
+ 
+ static int32 sumresidue;
+-static md_context md;
++static md_context md, md2;
+ 
+ void sum_init(int seed)
+ {
+@@ -164,6 +167,8 @@ void sum_init(int seed)
+ 		sumresidue = 0;
+ 		SIVAL(s, 0, seed);
+ 		sum_update(s, 4);
++		if (link_by_hash_dir)
++			md5_begin(&md2);
+ 	}
+ }
+ 
+@@ -182,6 +187,9 @@ void sum_update(const char *p, int32 len)
+ 		return;
+ 	}
+ 
++	if (link_by_hash_dir)
++		md5_update(&md2, (uchar *)p, len);
++
+ 	if (len + sumresidue < CSUM_CHUNK) {
+ 		memcpy(md.buffer + sumresidue, p, len);
+ 		sumresidue += len;
+@@ -214,6 +222,9 @@ int sum_end(char *sum)
+ 		return MD5_DIGEST_LEN;
+ 	}
+ 
++	if (link_by_hash_dir)
++		md5_result(&md2, (uchar *)link_by_hash_extra_sum);
++
+ 	if (sumresidue || protocol_version >= 27)
+ 		mdfour_update(&md, (uchar *)md.buffer, sumresidue);
+ 
+diff --git a/clientserver.c b/clientserver.c
+--- a/clientserver.c
++++ b/clientserver.c
+@@ -50,6 +50,7 @@ extern int logfile_format_has_i;
+ extern int logfile_format_has_o_or_i;
+ extern char *bind_address;
+ extern char *config_file;
++extern char *link_by_hash_dir;
+ extern char *logfile_format;
+ extern char *files_from;
+ extern char *tmpdir;
+@@ -548,6 +549,9 @@ static int rsync_module(int f_in, int f_out, int i, const char *addr, const char
+ 		return -1;
+ 	}
+ 
++	if (*lp_link_by_hash_dir(i))
++		link_by_hash_dir = lp_link_by_hash_dir(i);
++
+ 	if (am_daemon && am_server) {
+ 		rprintf(FLOG, "rsync allowed access on module %s from %s (%s)\n",
+ 			name, host, addr);
+diff --git a/compat.c b/compat.c
+--- a/compat.c
++++ b/compat.c
+@@ -56,6 +56,7 @@ extern char *partial_dir;
+ extern char *dest_option;
+ extern char *files_from;
+ extern char *filesfrom_host;
++extern char *link_by_hash_dir;
+ extern filter_rule_list filter_list;
+ extern int need_unsorted_flist;
+ #ifdef ICONV_OPTION
+diff --git a/hashlink.c b/hashlink.c
+new file mode 100644
+--- /dev/null
++++ b/hashlink.c
+@@ -0,0 +1,92 @@
++/*
++   Copyright (C) Cronosys, LLC 2004
++
++   This program is free software; you can redistribute it and/or modify
++   it under the terms of the GNU General Public License as published by
++   the Free Software Foundation; either version 2 of the License, or
++   (at your option) any later version.
++
++   This program is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++   GNU General Public License for more details.
++
++   You should have received a copy of the GNU General Public License
++   along with this program; if not, write to the Free Software
++   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++*/
++
++/* This file contains code used by the --link-by-hash option. */
++
++#include "rsync.h"
++#include "inums.h"
++
++extern int protocol_version;
++extern char *link_by_hash_dir;
++extern char sender_file_sum[MAX_DIGEST_LEN];
++
++char link_by_hash_extra_sum[MAX_DIGEST_LEN]; /* Only used when md4 sums are in the transfer */
++
++#ifdef HAVE_LINK
++
++/* This function is always called after a file is received, so the
++ * sender_file_sum buffer has whatever the last checksum was for the
++ * transferred file. */
++void link_by_hash(const char *fname, const char *fnametmp, struct file_struct *file)
++{
++	STRUCT_STAT st;
++	char *hashname, *last_slash, *num_str;
++	const char *hex;
++	int num = 0;
++
++	/* We don't bother to hard-link 0-length files. */
++	if (F_LENGTH(file) == 0)
++		return;
++
++	hex = sum_as_hex(protocol_version >= 30 ? sender_file_sum : link_by_hash_extra_sum);
++	if (asprintf(&hashname, "%s/%.3s/%.3s/%.3s/%s.%s.000000",
++		     link_by_hash_dir, hex, hex+3, hex+6, hex+9, big_num(F_LENGTH(file))) < 0)
++	{
++		out_of_memory("make_hash_name");
++	}
++
++	last_slash = strrchr(hashname, '/');
++	num_str = strrchr(last_slash, '.') + 1;
++
++	while (1) {
++		if (num >= 999999) { /* Surely we'll never reach this... */
++			if (DEBUG_GTE(HASHLINK, 1))
++				rprintf(FINFO, "link-by-hash: giving up after \"%s\".\n", hashname);
++			goto cleanup;
++		}
++		if (num > 0 && DEBUG_GTE(HASHLINK, 1))
++			rprintf(FINFO, "link-by-hash: max link count exceeded, starting new file \"%s\".\n", hashname);
++
++		snprintf(num_str, 7, "%d", num++);
++		if (do_stat(hashname, &st) < 0)
++			break;
++
++		if (do_link(hashname, fnametmp) < 0) {
++			if (errno == EMLINK)
++				continue;
++			rsyserr(FERROR, errno, "link \"%s\" -> \"%s\"", hashname, full_fname(fname));
++		} else {
++			if (DEBUG_GTE(HASHLINK, 2))
++				rprintf(FINFO, "link-by-hash (existing): \"%s\" -> %s\n", hashname, full_fname(fname));
++			robust_rename(fnametmp, fname, NULL, 0644);
++		}
++
++		goto cleanup;
++	}
++
++	if (DEBUG_GTE(HASHLINK, 2))
++		rprintf(FINFO, "link-by-hash (new): %s -> \"%s\"\n", full_fname(fname), hashname);
++
++	if (do_link(fname, hashname) < 0
++	 && (errno != ENOENT || make_path(hashname, MKP_DROP_NAME) < 0 || do_link(fname, hashname) < 0))
++		rsyserr(FERROR, errno, "link \"%s\" -> \"%s\"", full_fname(fname), hashname);
++
++  cleanup:
++	free(hashname);
++}
++#endif
+diff --git a/loadparm.c b/loadparm.c
+--- a/loadparm.c
++++ b/loadparm.c
+@@ -119,6 +119,7 @@ typedef struct {
+ 	char *include;
+ 	char *include_from;
+ 	char *incoming_chmod;
++	char *link_by_hash_dir;
+ 	char *lock_file;
+ 	char *log_file;
+ 	char *log_format;
+@@ -195,6 +196,7 @@ static const all_vars Defaults = {
+  /* include; */			NULL,
+  /* include_from; */		NULL,
+  /* incoming_chmod; */		NULL,
++ /* link_by_hash_dir; */	NULL,
+  /* lock_file; */		DEFAULT_LOCK_FILE,
+  /* log_file; */		NULL,
+  /* log_format; */		"%o %h [%a] %m (%u) %f %l",
+@@ -336,6 +338,7 @@ static struct parm_struct parm_table[] =
+  {"include from",      P_STRING, P_LOCAL, &Vars.l.include_from,        NULL,0},
+  {"include",           P_STRING, P_LOCAL, &Vars.l.include,             NULL,0},
+  {"incoming chmod",    P_STRING, P_LOCAL, &Vars.l.incoming_chmod,      NULL,0},
++ {"link by hash dir",  P_STRING, P_LOCAL, &Vars.l.link_by_hash_dir,    NULL,0},
+  {"list",              P_BOOL,   P_LOCAL, &Vars.l.list,                NULL,0},
+  {"lock file",         P_STRING, P_LOCAL, &Vars.l.lock_file,           NULL,0},
+  {"log file",          P_STRING, P_LOCAL, &Vars.l.log_file,            NULL,0},
+@@ -464,6 +467,7 @@ FN_LOCAL_STRING(lp_hosts_deny, hosts_deny)
+ FN_LOCAL_STRING(lp_include, include)
+ FN_LOCAL_STRING(lp_include_from, include_from)
+ FN_LOCAL_STRING(lp_incoming_chmod, incoming_chmod)
++FN_LOCAL_STRING(lp_link_by_hash_dir, link_by_hash_dir)
+ FN_LOCAL_STRING(lp_lock_file, lock_file)
+ FN_LOCAL_STRING(lp_log_file, log_file)
+ FN_LOCAL_STRING(lp_log_format, log_format)
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -160,6 +160,7 @@ char *backup_suffix = NULL;
+ char *tmpdir = NULL;
+ char *partial_dir = NULL;
+ char *basis_dir[MAX_BASIS_DIRS+1];
++char *link_by_hash_dir = NULL;
+ char *config_file = NULL;
+ char *shell_cmd = NULL;
+ char *logfile_name = NULL;
+@@ -209,7 +210,7 @@ static const char *debug_verbosity[] = {
+ 	/*2*/ "BIND,CMD,CONNECT,DEL,DELTASUM,DUP,FILTER,FLIST,ICONV",
+ 	/*3*/ "ACL,BACKUP,CONNECT2,DELTASUM2,DEL2,EXIT,FILTER2,FLIST2,FUZZY,GENR,OWN,RECV,SEND,TIME",
+ 	/*4*/ "CMD2,DELTASUM3,DEL3,EXIT2,FLIST3,ICONV2,OWN2,PROTO,TIME2",
+-	/*5*/ "CHDIR,DELTASUM4,FLIST4,FUZZY2,HASH,HLINK",
++	/*5*/ "CHDIR,DELTASUM4,FLIST4,FUZZY2,HASH,HASHLINK,HLINK",
+ };
+ 
+ #define MAX_VERBOSITY ((int)(sizeof debug_verbosity / sizeof debug_verbosity[0]) - 1)
+@@ -279,6 +280,7 @@ static struct output_struct debug_words[COUNT_DEBUG+1] = {
+ 	DEBUG_WORD(FUZZY, W_REC, "Debug fuzzy scoring (levels 1-2)"),
+ 	DEBUG_WORD(GENR, W_REC, "Debug generator functions"),
+ 	DEBUG_WORD(HASH, W_SND|W_REC, "Debug hashtable code"),
++	DEBUG_WORD(HASHLINK, W_REC, "Debug hashlink code (levels 1-2)"),
+ 	DEBUG_WORD(HLINK, W_SND|W_REC, "Debug hard-link actions (levels 1-3)"),
+ 	DEBUG_WORD(ICONV, W_CLI|W_SRV, "Debug iconv character conversions (levels 1-2)"),
+ 	DEBUG_WORD(IO, W_CLI|W_SRV, "Debug I/O routines (levels 1-4)"),
+@@ -763,6 +765,7 @@ void usage(enum logcode F)
+   rprintf(F,"     --compare-dest=DIR      also compare destination files relative to DIR\n");
+   rprintf(F,"     --copy-dest=DIR         ... and include copies of unchanged files\n");
+   rprintf(F,"     --link-dest=DIR         hardlink to files in DIR when unchanged\n");
++  rprintf(F,"     --link-by-hash=DIR      create hardlinks by hash into DIR\n");
+   rprintf(F," -z, --compress              compress file data during the transfer\n");
+   rprintf(F,"     --compress-level=NUM    explicitly set compression level\n");
+   rprintf(F,"     --skip-compress=LIST    skip compressing files with a suffix in LIST\n");
+@@ -819,7 +822,7 @@ enum {OPT_VERSION = 1000, OPT_DAEMON, OPT_SENDER, OPT_EXCLUDE, OPT_EXCLUDE_FROM,
+       OPT_FILTER, OPT_COMPARE_DEST, OPT_COPY_DEST, OPT_LINK_DEST, OPT_HELP,
+       OPT_INCLUDE, OPT_INCLUDE_FROM, OPT_MODIFY_WINDOW, OPT_MIN_SIZE, OPT_CHMOD,
+       OPT_READ_BATCH, OPT_WRITE_BATCH, OPT_ONLY_WRITE_BATCH, OPT_MAX_SIZE,
+-      OPT_NO_D, OPT_APPEND, OPT_NO_ICONV, OPT_INFO, OPT_DEBUG,
++      OPT_NO_D, OPT_APPEND, OPT_NO_ICONV, OPT_INFO, OPT_DEBUG, OPT_LINK_BY_HASH,
+       OPT_USERMAP, OPT_GROUPMAP, OPT_CHOWN, OPT_BWLIMIT,
+       OPT_SERVER, OPT_REFUSED_BASE = 9000};
+ 
+@@ -963,6 +966,7 @@ static struct poptOption long_options[] = {
+   {"compare-dest",     0,  POPT_ARG_STRING, 0, OPT_COMPARE_DEST, 0, 0 },
+   {"copy-dest",        0,  POPT_ARG_STRING, 0, OPT_COPY_DEST, 0, 0 },
+   {"link-dest",        0,  POPT_ARG_STRING, 0, OPT_LINK_DEST, 0, 0 },
++  {"link-by-hash",     0,  POPT_ARG_STRING, 0, OPT_LINK_BY_HASH, 0, 0},
+   {"fuzzy",           'y', POPT_ARG_NONE,   0, 'y', 0, 0 },
+   {"no-fuzzy",         0,  POPT_ARG_VAL,    &fuzzy_basis, 0, 0, 0 },
+   {"no-y",             0,  POPT_ARG_VAL,    &fuzzy_basis, 0, 0, 0 },
+@@ -1312,6 +1316,9 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 		iconv_opt = strdup(arg);
+ #endif
+ 
++	if (*lp_link_by_hash_dir(module_id))
++		set_refuse_options("link-by-hash");
++
+ 	/* TODO: Call poptReadDefaultConfig; handle errors. */
+ 
+ 	/* The context leaks in case of an error, but if there's a
+@@ -1787,6 +1794,21 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 			return 0;
+ #endif
+ 
++                case OPT_LINK_BY_HASH:
++#ifdef HAVE_LINK
++			arg = poptGetOptArg(pc);
++			if (sanitize_paths)
++				arg = sanitize_path(NULL, arg, NULL, 0, SP_DEFAULT);
++			link_by_hash_dir = (char *)arg;
++			break;
++#else
++			snprintf(err_buf, sizeof err_buf,
++				 "hard links are not supported on this %s\n",
++				 am_server ? "server" : "client");
++			rprintf(FERROR, "ERROR: %s", err_buf);
++			return 0;
++#endif
++
+ 		default:
+ 			/* A large opt value means that set_refuse_options()
+ 			 * turned this option off. */
+@@ -2089,6 +2111,8 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 			tmpdir = sanitize_path(NULL, tmpdir, NULL, 0, SP_DEFAULT);
+ 		if (backup_dir)
+ 			backup_dir = sanitize_path(NULL, backup_dir, NULL, 0, SP_DEFAULT);
++		if (link_by_hash_dir)
++			link_by_hash_dir = sanitize_path(NULL, link_by_hash_dir, NULL, 0, SP_DEFAULT);
+ 	}
+ 	if (daemon_filter_list.head && !am_sender) {
+ 		filter_rule_list *elp = &daemon_filter_list;
+@@ -2738,6 +2762,12 @@ void server_options(char **args, int *argc_p)
+ 	} else if (inplace)
+ 		args[ac++] = "--inplace";
+ 
++	if (link_by_hash_dir && am_sender) {
++		args[ac++] = "--link-by-hash";
++		args[ac++] = link_by_hash_dir;
++		link_by_hash_dir = NULL; /* optimize sending-side checksums */
++	}
++
+ 	if (files_from && (!am_sender || filesfrom_host)) {
+ 		if (filesfrom_host) {
+ 			args[ac++] = "--files-from";
+diff --git a/rsync.c b/rsync.c
+--- a/rsync.c
++++ b/rsync.c
+@@ -49,6 +49,7 @@ extern int flist_eof;
+ extern int file_old_total;
+ extern int keep_dirlinks;
+ extern int make_backups;
++extern char *link_by_hash_dir;
+ extern struct file_list *cur_flist, *first_flist, *dir_flist;
+ extern struct chmod_mode_struct *daemon_chmod_modes;
+ #ifdef ICONV_OPTION
+@@ -679,6 +680,10 @@ int finish_transfer(const char *fname, const char *fnametmp,
+ 	}
+ 	if (ret == 0) {
+ 		/* The file was moved into place (not copied), so it's done. */
++#ifdef HAVE_LINK
++		if (link_by_hash_dir)
++			link_by_hash(fname, fnametmp, file);
++#endif
+ 		return 1;
+ 	}
+ 	/* The file was copied, so tweak the perms of the copied file.  If it
+diff --git a/rsync.h b/rsync.h
+--- a/rsync.h
++++ b/rsync.h
+@@ -1266,7 +1266,8 @@ extern short info_levels[], debug_levels[];
+ #define DEBUG_FUZZY (DEBUG_FLIST+1)
+ #define DEBUG_GENR (DEBUG_FUZZY+1)
+ #define DEBUG_HASH (DEBUG_GENR+1)
+-#define DEBUG_HLINK (DEBUG_HASH+1)
++#define DEBUG_HASHLINK (DEBUG_HASH+1)
++#define DEBUG_HLINK (DEBUG_HASHLINK+1)
+ #define DEBUG_ICONV (DEBUG_HLINK+1)
+ #define DEBUG_IO (DEBUG_ICONV+1)
+ #define DEBUG_OWN (DEBUG_IO+1)
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -419,6 +419,7 @@ to the detailed description below for a complete description.  verb(
+      --compare-dest=DIR      also compare received files relative to DIR
+      --copy-dest=DIR         ... and include copies of unchanged files
+      --link-dest=DIR         hardlink to files in DIR when unchanged
++     --link-by-hash=DIR      create hardlinks by hash into DIR
+  -z, --compress              compress file data during the transfer
+      --compress-level=NUM    explicitly set compression level
+      --skip-compress=LIST    skip compressing files with suffix in LIST
+@@ -1874,6 +1875,48 @@ bf(--link-dest) from working properly for a non-super-user when bf(-o) was
+ specified (or implied by bf(-a)).  You can work-around this bug by avoiding
+ the bf(-o) option when sending to an old rsync.
+ 
++dit(bf(--link-by-hash=DIR)) This option hard links the destination files into
++em(DIR), a link farm arranged by MD5 file hash. The result is that the system
++will only store (usually) one copy of the unique contents of each file,
++regardless of the file's name (it will use extra files if the links overflow
++the available maximum).
++
++This patch does not take into account file permissions, extended attributes,
++or ACLs when linking things together, so you should only use this if you
++don't care about preserving those extra file attributes (or if they are
++always the same for identical files).
++
++The DIR is relative to the destination directory, so either specify a full
++path to the hash hierarchy, or specify a relative path that puts the links
++outside the destination (e.g. "../links").
++
++Keep in mind that the hierarchy is never pruned, so if you need to reclaim
++space, you should remove any files that have just one link (since they are not
++linked into any destination dirs anymore):
++
++    find $DIR -links 1 -delete
++
++The link farm's directory hierarchy is determined by the file's (32-char) MD5
++hash and the file-length.  The hash is split up into directory shards.  For
++example, if a file is 54321 bytes long, it could be stored like this:
++
++    $DIR/123/456/789/01234567890123456789012.54321.0
++
++Note that the directory layout in this patch was modified for version 3.1.0,
++so anyone using an older version of this patch should move their existing
++link hierarchy out of the way and then use the newer rsync to copy the saved
++hierarchy into its new layout.  Assuming that no files have overflowed their
++link limits, this would work:
++
++    mv $DIR $DIR.old
++    rsync -aiv --link-by-hash=$DIR $DIR.old/ $DIR.tmp/
++    rm -rf $DIR.tmp
++    rm -rf $DIR.old
++
++If some of your files are at their link limit, you'd be better of using a
++script to calculate the md5 sum of each file in the hierarchy and move it
++to its new location.
++
+ dit(bf(-z, --compress)) With this option, rsync compresses the file data
+ as it is sent to the destination machine, which reduces the amount of data
+ being transmitted -- something that is useful over a slow connection.
+diff --git a/rsyncd.conf.yo b/rsyncd.conf.yo
+--- a/rsyncd.conf.yo
++++ b/rsyncd.conf.yo
+@@ -284,6 +284,21 @@ message telling them to try later.  The default is 0, which means no limit.
+ A negative value disables the module.
+ See also the "lock file" parameter.
+ 
++dit(bf(link by hash dir)) When the "link by hash dir" parameter is set to a
++non-empty string, received files will be hard linked into em(DIR), a link farm
++arranged by MD5 file hash. See the bf(--link-by-hash) option for a full
++explanation.
++
++The em(DIR) must be accessible inside any chroot restrictions for the module,
++but can exist outside the transfer location if there is an inside-the-chroot
++path to the module (see "use chroot").  Note that a user-specified option does
++not allow this outside-the-transfer-area placement.
++
++If this parameter is set, it will disable the bf(--link-by-hash) command-line
++option for copies into the module.
++
++The default is for this parameter to be unset.
++
+ dit(bf(log file)) When the "log file" parameter is set to a non-empty
+ string, the rsync daemon will log messages to the indicated file rather
+ than using syslog. This is particularly useful on systems (such as AIX)
+diff -Nurp a/proto.h b/proto.h
+--- a/proto.h
++++ b/proto.h
+@@ -110,6 +110,7 @@ int atomic_create(struct file_struct *fi
+ 		  dev_t rdev, stat_x *sxp, int del_for_flag);
+ void check_for_finished_files(int itemizing, enum logcode code, int check_redo);
+ void generate_files(int f_out, const char *local_name);
++void link_by_hash(const char *fname, const char *fnametmp, struct file_struct *file);
+ struct hashtable *hashtable_create(int size, int key64);
+ void hashtable_destroy(struct hashtable *tbl);
+ void *hashtable_find(struct hashtable *tbl, int64 key, int allocate_if_missing);
+@@ -200,6 +201,7 @@ char *lp_hosts_deny(int module_id);
+ char *lp_include(int module_id);
+ char *lp_include_from(int module_id);
+ char *lp_incoming_chmod(int module_id);
++char *lp_link_by_hash_dir(int module_id);
+ char *lp_lock_file(int module_id);
+ char *lp_log_file(int module_id);
+ char *lp_log_format(int module_id);
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -495,6 +495,7 @@ to the detailed description below for a
+      \-\-compare\-dest=DIR      also compare received files relative to DIR
+      \-\-copy\-dest=DIR         ... and include copies of unchanged files
+      \-\-link\-dest=DIR         hardlink to files in DIR when unchanged
++     \-\-link\-by\-hash=DIR      create hardlinks by hash into DIR
+  \-z, \-\-compress              compress file data during the transfer
+      \-\-compress\-level=NUM    explicitly set compression level
+      \-\-skip\-compress=LIST    skip compressing files with suffix in LIST
+@@ -2132,6 +2133,49 @@ Note that rsync versions prior to 2.6.1
+ specified (or implied by \fB\-a\fP).  You can work\-around this bug by avoiding
+ the \fB\-o\fP option when sending to an old rsync.
+ .IP 
++.IP "\fB\-\-link\-by\-hash=DIR\fP"
++This option hard links the destination files into
++\fIDIR\fP, a link farm arranged by MD5 file hash. The result is that the system
++will only store (usually) one copy of the unique contents of each file,
++regardless of the file\(cq\&s name (it will use extra files if the links overflow
++the available maximum).
++.IP 
++This patch does not take into account file permissions, extended attributes,
++or ACLs when linking things together, so you should only use this if you
++don\(cq\&t care about preserving those extra file attributes (or if they are
++always the same for identical files).
++.IP 
++The DIR is relative to the destination directory, so either specify a full
++path to the hash hierarchy, or specify a relative path that puts the links
++outside the destination (e.g. \(dq\&../links\(dq\&).
++.IP 
++Keep in mind that the hierarchy is never pruned, so if you need to reclaim
++space, you should remove any files that have just one link (since they are not
++linked into any destination dirs anymore):
++.IP 
++find $DIR \-links 1 \-delete
++.IP 
++The link farm\(cq\&s directory hierarchy is determined by the file\(cq\&s (32\-char) MD5
++hash and the file\-length.  The hash is split up into directory shards.  For
++example, if a file is 54321 bytes long, it could be stored like this:
++.IP 
++$DIR/123/456/789/01234567890123456789012.54321.0
++.IP 
++Note that the directory layout in this patch was modified for version 3.1.0,
++so anyone using an older version of this patch should move their existing
++link hierarchy out of the way and then use the newer rsync to copy the saved
++hierarchy into its new layout.  Assuming that no files have overflowed their
++link limits, this would work:
++.IP 
++mv $DIR $DIR.old
++rsync \-aiv \-\-link\-by\-hash=$DIR $DIR.old/ $DIR.tmp/
++rm \-rf $DIR.tmp
++rm \-rf $DIR.old
++.IP 
++If some of your files are at their link limit, you\(cq\&d be better of using a
++script to calculate the md5 sum of each file in the hierarchy and move it
++to its new location.
++.IP 
+ .IP "\fB\-z, \-\-compress\fP"
+ With this option, rsync compresses the file data
+ as it is sent to the destination machine, which reduces the amount of data
+diff -Nurp a/rsyncd.conf.5 b/rsyncd.conf.5
+--- a/rsyncd.conf.5
++++ b/rsyncd.conf.5
+@@ -316,6 +316,22 @@ message telling them to try later.  The
+ A negative value disables the module.
+ See also the \(dq\&lock file\(dq\& parameter.
+ .IP 
++.IP "\fBlink by hash dir\fP"
++When the \(dq\&link by hash dir\(dq\& parameter is set to a
++non\-empty string, received files will be hard linked into \fIDIR\fP, a link farm
++arranged by MD5 file hash. See the \fB\-\-link\-by\-hash\fP option for a full
++explanation.
++.IP 
++The \fIDIR\fP must be accessible inside any chroot restrictions for the module,
++but can exist outside the transfer location if there is an inside\-the\-chroot
++path to the module (see \(dq\&use chroot\(dq\&).  Note that a user\-specified option does
++not allow this outside\-the\-transfer\-area placement.
++.IP 
++If this parameter is set, it will disable the \fB\-\-link\-by\-hash\fP command\-line
++option for copies into the module.
++.IP 
++The default is for this parameter to be unset.
++.IP 
+ .IP "\fBlog file\fP"
+ When the \(dq\&log file\(dq\& parameter is set to a non\-empty
+ string, the rsync daemon will log messages to the indicated file rather

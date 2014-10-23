@@ -1,0 +1,305 @@
+This adds the --ignore-case option, which makes rsync compare filenames
+in a case-insensitive manner.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/ignore-case.diff
+    ./configure                            (optional if already run)
+    make
+
+TODO:
+
+ - Make this code handle multibyte character encodings, and honor the
+   --iconv setting when converting case.
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/exclude.c b/exclude.c
+--- a/exclude.c
++++ b/exclude.c
+@@ -21,6 +21,7 @@
+  */
+ 
+ #include "rsync.h"
++#include "ifuncs.h"
+ 
+ extern int am_server;
+ extern int am_sender;
+@@ -687,16 +688,15 @@ static int rule_matches(const char *fname, filter_rule *ex, int name_is_dir)
+ 		if (litmatch_array(pattern, strings, slash_handling))
+ 			return ret_match;
+ 	} else if (anchored_match) {
+-		if (strcmp(name, pattern) == 0)
++		if (ic_strEQ(name, pattern))
+ 			return ret_match;
+ 	} else {
+ 		int l1 = strlen(name);
+ 		int l2 = strlen(pattern);
+-		if (l2 <= l1 &&
+-		    strcmp(name+(l1-l2),pattern) == 0 &&
+-		    (l1==l2 || name[l1-(l2+1)] == '/')) {
++		if (l2 <= l1
++		 && ic_strEQ(name + (l1-l2), pattern)
++		 && (l1 == l2 || name[l1 - (l2+1)] == '/'))
+ 			return ret_match;
+-		}
+ 	}
+ 
+ 	return !ret_match;
+diff --git a/flist.c b/flist.c
+--- a/flist.c
++++ b/flist.c
+@@ -34,6 +34,7 @@ extern int am_generator;
+ extern int inc_recurse;
+ extern int always_checksum;
+ extern int module_id;
++extern int ignore_case;
+ extern int ignore_errors;
+ extern int numeric_ids;
+ extern int recurse;
+@@ -3030,6 +3031,7 @@ int f_name_cmp(const struct file_struct *f1, const struct file_struct *f2)
+ {
+ 	int dif;
+ 	const uchar *c1, *c2;
++	uchar ch1, ch2;
+ 	enum fnc_state state1, state2;
+ 	enum fnc_type type1, type2;
+ 	enum fnc_type t_path = protocol_version >= 29 ? t_PATH : t_ITEM;
+@@ -3140,7 +3142,15 @@ int f_name_cmp(const struct file_struct *f1, const struct file_struct *f2)
+ 			if (type1 != type2)
+ 				return type1 == t_PATH ? 1 : -1;
+ 		}
+-	} while ((dif = (int)*c1++ - (int)*c2++) == 0);
++		ch1 = *c1++;
++		ch2 = *c2++;
++		if (ignore_case) {
++			if (isupper(ch1))
++				ch1 = tolower(ch1);
++			if (isupper(ch2))
++				ch2 = tolower(ch2);
++		}
++	} while ((dif = (int)ch1 - (int)ch2) == 0);
+ 
+ 	return dif;
+ }
+diff --git a/ifuncs.h b/ifuncs.h
+--- a/ifuncs.h
++++ b/ifuncs.h
+@@ -104,3 +104,38 @@ free_stat_x(stat_x *sx_p)
+     }
+ #endif
+ }
++
++static inline int
++strEQ(const char *s1, const char *s2)
++{
++	return strcmp(s1, s2) == 0;
++}
++
++static inline int
++strnEQ(const char *s1, const char *s2, size_t n)
++{
++	return strncmp(s1, s2, n) == 0;
++}
++
++static inline int
++ic_strEQ(const char *s1, const char *s2)
++{
++	extern int ignore_case;
++	if (ignore_case)
++		return strcasecmp(s1, s2) == 0;
++	return strcmp(s1, s2) == 0;
++}
++
++static inline int
++ic_strnEQ(const char *s1, const char *s2, size_t n)
++{
++	extern int ignore_case;
++	if (ignore_case)
++		return strncasecmp(s1, s2, n) == 0;
++	return strncmp(s1, s2, n) == 0;
++}
++
++#define strNE(s1,s2) (!strEQ(s1,s2))
++#define strnNE(s1,s2,n) (!strnEQ(s1,s2,n))
++#define ic_strNE(s1,s2) (!ic_strEQ(s1,s2))
++#define ic_strnNE(s1,s2) (!ic_strnEQ(s1,s2,n))
+diff --git a/lib/wildmatch.c b/lib/wildmatch.c
+--- a/lib/wildmatch.c
++++ b/lib/wildmatch.c
+@@ -53,6 +53,8 @@
+ #define ISUPPER(c) (ISASCII(c) && isupper(c))
+ #define ISXDIGIT(c) (ISASCII(c) && isxdigit(c))
+ 
++extern int ignore_case;
++
+ #ifdef WILD_TEST_ITERATIONS
+ int wildmatch_iteration_count;
+ #endif
+@@ -72,6 +74,8 @@ static int dowild(const uchar *p, const uchar *text, const uchar*const *a)
+     for ( ; (p_ch = *p) != '\0'; text++, p++) {
+ 	int matched, special;
+ 	uchar t_ch, prev_ch;
++	if (ignore_case && ISUPPER(p_ch))
++	    p_ch = tolower(p_ch);
+ 	while ((t_ch = *text) == '\0') {
+ 	    if (*a == NULL) {
+ 		if (p_ch != '*')
+@@ -237,12 +241,21 @@ static int dowild(const uchar *p, const uchar *text, const uchar*const *a)
+  * of "text" and any strings in array "a". */
+ static int doliteral(const uchar *s, const uchar *text, const uchar*const *a)
+ {
++    uchar s_ch, t_ch;
+     for ( ; *s != '\0'; text++, s++) {
+ 	while (*text == '\0') {
+ 	    if ((text = *a++) == NULL)
+ 		return FALSE;
+ 	}
+-	if (*text != *s)
++	s_ch = *s;
++	t_ch = *text;
++	if (ignore_case) {
++	    if (ISUPPER(s_ch))
++		s_ch = tolower(s_ch);
++	    if (ISUPPER(t_ch))
++		t_ch = tolower(t_ch);
++	}
++	if (t_ch != s_ch)
+ 	    return FALSE;
+     }
+ 
+@@ -288,10 +301,14 @@ static const uchar *trailing_N_elements(const uchar*const **a_ptr, int count)
+ int wildmatch(const char *pattern, const char *text)
+ {
+     static const uchar *nomore[1]; /* A NULL pointer. */
++    int ret;
+ #ifdef WILD_TEST_ITERATIONS
+     wildmatch_iteration_count = 0;
+ #endif
+-    return dowild((const uchar*)pattern, (const uchar*)text, nomore) == TRUE;
++    force_lower_case = ignore_case;
++    ret = dowild((const uchar*)pattern, (const uchar*)text, nomore) == TRUE;
++    force_lower_case = 0;
++    return ret;
+ }
+ 
+ /* Match the "pattern" against the forced-to-lower-case "text" string. */
+@@ -331,12 +348,14 @@ int wildmatch_array(const char *pattern, const char*const *texts, int where)
+     if (!text)
+ 	return FALSE;
+ 
++    force_lower_case = ignore_case;
++
+     if ((matched = dowild(p, text, a)) != TRUE && where < 0
+      && matched != ABORT_ALL) {
+ 	while (1) {
+ 	    if (*text == '\0') {
+ 		if ((text = (uchar*)*a++) == NULL)
+-		    return FALSE;
++		    break;
+ 		continue;
+ 	    }
+ 	    if (*text++ == '/' && (matched = dowild(p, text, a)) != FALSE
+@@ -344,6 +363,9 @@ int wildmatch_array(const char *pattern, const char*const *texts, int where)
+ 		break;
+ 	}
+     }
++
++    force_lower_case = 0;
++
+     return matched == TRUE;
+ }
+ 
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -120,6 +120,7 @@ OFF_T max_size = -1;
+ OFF_T min_size = -1;
+ int ignore_errors = 0;
+ int modify_window = 0;
++int ignore_case = 0;
+ int blocking_io = -1;
+ int checksum_seed = 0;
+ int inplace = 0;
+@@ -777,6 +778,7 @@ void usage(enum logcode F)
+   rprintf(F,"     --files-from=FILE       read list of source-file names from FILE\n");
+   rprintf(F," -0, --from0                 all *-from/filter files are delimited by 0s\n");
+   rprintf(F," -s, --protect-args          no space-splitting; only wildcard special-chars\n");
++  rprintf(F,"     --ignore-case           ignore case when comparing filenames\n");
+   rprintf(F,"     --address=ADDRESS       bind address for outgoing socket to daemon\n");
+   rprintf(F,"     --port=PORT             specify double-colon alternate port number\n");
+   rprintf(F,"     --sockopts=OPTIONS      specify custom TCP options\n");
+@@ -1001,6 +1003,8 @@ static struct poptOption long_options[] = {
+   {"read-batch",       0,  POPT_ARG_STRING, &batch_name, OPT_READ_BATCH, 0, 0 },
+   {"write-batch",      0,  POPT_ARG_STRING, &batch_name, OPT_WRITE_BATCH, 0, 0 },
+   {"only-write-batch", 0,  POPT_ARG_STRING, &batch_name, OPT_ONLY_WRITE_BATCH, 0, 0 },
++  {"ignore-case",      0,  POPT_ARG_VAL,    &ignore_case, 1, 0, 0 },
++  {"no-ignore-case",   0,  POPT_ARG_VAL,    &ignore_case, 0, 0, 0 },
+   {"files-from",       0,  POPT_ARG_STRING, &files_from, 0, 0, 0 },
+   {"from0",           '0', POPT_ARG_VAL,    &eol_nulls, 1, 0, 0},
+   {"no-from0",         0,  POPT_ARG_VAL,    &eol_nulls, 0, 0, 0},
+@@ -2659,6 +2663,9 @@ void server_options(char **args, int *argc_p)
+ 		args[ac++] = arg;
+ 	}
+ 
++	if (ignore_case)
++		args[ac++] = "--ignore-case";
++
+ 	if (partial_dir && am_sender) {
+ 		if (partial_dir != tmp_partialdir) {
+ 			args[ac++] = "--partial-dir";
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -433,6 +433,7 @@ to the detailed description below for a complete description.  verb(
+      --files-from=FILE       read list of source-file names from FILE
+  -0, --from0                 all *from/filter files are delimited by 0s
+  -s, --protect-args          no space-splitting; wildcard chars only
++     --ignore-case           ignore case when comparing filenames
+      --address=ADDRESS       bind address for outgoing socket to daemon
+      --port=PORT             specify double-colon alternate port number
+      --sockopts=OPTIONS      specify custom TCP options
+@@ -1744,6 +1745,10 @@ default (with is overridden by both the environment and the command-line).
+ This option will eventually become a new default setting at some
+ as-yet-undetermined point in the future.
+ 
++dit(bf(--ignore-case)) This option tells rsync to ignore upper-/lower-case
++differences when comparing filenames.  This can avoid problems when sending
++files to a filesystem that ignores these differences.
++
+ dit(bf(-T, --temp-dir=DIR)) This option instructs rsync to use DIR as a
+ scratch directory when creating temporary copies of the files transferred
+ on the receiving side.  The default behavior is to create each temporary
+diff --git a/wildtest.c b/wildtest.c
+--- a/wildtest.c
++++ b/wildtest.c
+@@ -30,6 +30,7 @@
+ int fnmatch_errors = 0;
+ #endif
+ 
++int ignore_case = 0;
+ int wildmatch_errors = 0;
+ 
+ typedef char bool;
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -509,6 +509,7 @@ to the detailed description below for a
+      \-\-files\-from=FILE       read list of source\-file names from FILE
+  \-0, \-\-from0                 all *from/filter files are delimited by 0s
+  \-s, \-\-protect\-args          no space\-splitting; wildcard chars only
++     \-\-ignore\-case           ignore case when comparing filenames
+      \-\-address=ADDRESS       bind address for outgoing socket to daemon
+      \-\-port=PORT             specify double\-colon alternate port number
+      \-\-sockopts=OPTIONS      specify custom TCP options
+@@ -1994,6 +1995,11 @@ default (with is overridden by both the
+ This option will eventually become a new default setting at some
+ as\-yet\-undetermined point in the future.
+ .IP 
++.IP "\fB\-\-ignore\-case\fP"
++This option tells rsync to ignore upper\-/lower\-case
++differences when comparing filenames.  This can avoid problems when sending
++files to a filesystem that ignores these differences.
++.IP 
+ .IP "\fB\-T, \-\-temp\-dir=DIR\fP"
+ This option instructs rsync to use DIR as a
+ scratch directory when creating temporary copies of the files transferred

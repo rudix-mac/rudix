@@ -1,0 +1,65 @@
+This patch adds a --slow-down=USECs option that causes the sender to scan
+the filelist more slowly, and the generator to scan for deletions more
+slowly.  It doesn't do anything to make anyone slow down during the normal
+transfer processing, though.
+
+The idea is to lessen rsync's impact on disk I/O.  Unfortunately, there
+should really be a way to affect more of rsync's processing, perhaps by
+specifying a maximum disk I/O rate (and have that affect a maximum stat()
+rate or something like that).
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/slow-down.diff
+    ./configure                           (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/flist.c b/flist.c
+--- a/flist.c
++++ b/flist.c
+@@ -69,6 +69,7 @@ extern int sender_symlink_iconv;
+ extern int output_needs_newline;
+ extern int sender_keeps_checksum;
+ extern int unsort_ndx;
++extern unsigned long sleep_asec;
+ extern uid_t our_uid;
+ extern struct stats stats;
+ extern char *filesfrom_host;
+@@ -1762,6 +1763,9 @@ static void send_directory(int f, struct file_list *flist, char *fbuf, int len,
+ 		}
+ 
+ 		send_file_name(f, flist, fbuf, NULL, flags, filter_level);
++		/* Sleep for a bit, to avoid hammering the disk. */
++		if (sleep_asec)
++			usleep(sleep_asec);
+ 	}
+ 
+ 	fbuf[len] = '\0';
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -111,6 +111,7 @@ int size_only = 0;
+ int daemon_bwlimit = 0;
+ int bwlimit = 0;
+ int fuzzy_basis = 0;
++unsigned long sleep_asec = 0;
+ size_t bwlimit_writemax = 0;
+ int ignore_existing = 0;
+ int ignore_non_existing = 0;
+@@ -793,6 +794,7 @@ void usage(enum logcode F)
+   rprintf(F,"     --password-file=FILE    read daemon-access password from FILE\n");
+   rprintf(F,"     --list-only             list the files instead of copying them\n");
+   rprintf(F,"     --bwlimit=RATE          limit socket I/O bandwidth\n");
++  rprintf(F,"     --slow-down=USECs       sleep N usec while creating the filelist\n");
+ #ifdef HAVE_SETVBUF
+   rprintf(F,"     --outbuf=N|L|B          set output buffering to None, Line, or Block\n");
+ #endif
+@@ -991,6 +993,7 @@ static struct poptOption long_options[] = {
+   {"itemize-changes", 'i', POPT_ARG_NONE,   0, 'i', 0, 0 },
+   {"no-itemize-changes",0, POPT_ARG_VAL,    &itemize_changes, 0, 0, 0 },
+   {"no-i",             0,  POPT_ARG_VAL,    &itemize_changes, 0, 0, 0 },
++  {"slow-down",        0,  POPT_ARG_LONG,   &sleep_asec, 0, 0, 0 },
+   {"bwlimit",          0,  POPT_ARG_STRING, &bwlimit_arg, OPT_BWLIMIT, 0, 0 },
+   {"no-bwlimit",       0,  POPT_ARG_VAL,    &bwlimit, 0, 0, 0 },
+   {"backup",          'b', POPT_ARG_VAL,    &make_backups, 1, 0, 0 },

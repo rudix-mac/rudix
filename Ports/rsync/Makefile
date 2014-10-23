@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Rsync
 Name=		rsync
-Version=	3.1.0
+Version=	3.1.1
 Revision=	0
 Site=		http://samba.org/rsync/
 URL=		http://samba.org/ftp/rsync/src/
@@ -11,6 +11,13 @@ License=	GPL
 
 GnuConfigureExtra += --with-included-popt
 GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
+
+define prep_post_hook
+patch -p1 -d $(SourceDir) < patches/fileflags.diff
+patch -p1 -d $(SourceDir) < patches/crtimes.diff
+patch -p1 -d $(SourceDir) < patches/hfs-compression.diff
+cd $(BuildDir) && ./prepare-source
+endef
 
 define install_post_hook
 cd $(InstallDir)/$(BinDir) ; ln -sf rsync rsync3
