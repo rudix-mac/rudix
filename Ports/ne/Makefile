@@ -4,8 +4,8 @@ Title=		Nice Editor
 Name=		ne
 Version=	2.5
 Revision=	1
-Site=		http://ne.dsi.unimi.it
-URL=		http://ne.dsi.unimi.it
+Site=		http://ne.di.unimi.it
+URL=		http://ne.di.unimi.it
 Source=		$(Name)-$(Version).tar.gz
 License=	GPL
 
