@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Hello
 Name=		hello
-Version=	2.8
+Version=	2.9
 Revision=	0
 Site=		http://www.gnu.org/software/hello/
 URL=		http://ftp.gnu.org/gnu/hello/
