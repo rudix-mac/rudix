@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		NodeJS
 Name=		node
-Version=	0.10.29
+Version=	0.10.32
 Revision=	0
 Site=		http://nodejs.org/
 URL=		http://nodejs.org/dist/v$(Version)
