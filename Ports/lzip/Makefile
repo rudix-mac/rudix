@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Lzip
 Name=		lzip
-Version=	1.15
+Version=	1.16
 Revision=	0
 Site=           http://www.nongnu.org/lzip/
 URL=		http://download.savannah.gnu.org/releases/lzip/
