@@ -6,7 +6,7 @@ include ../../Library/Rudix.mk
 Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
-Version=	1.3
+Version=	1.3.3
 Revision=	0
 Site=		http://golang.org/
 URL=		http://golang.org/dl
