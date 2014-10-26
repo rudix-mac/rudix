@@ -5,21 +5,21 @@ endif
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	R16B03
+Version=	17.3
 Revision=	0
 Site=		http://www.erlang.org/
 URL=		http://www.erlang.org/download/
-Source=		otp_src_$(Version)-1.tar.gz
+Source=		otp_src_$(Version).tar.gz
 License=	EPL
-
-UncompressedName=otp_src_$(Version)-1
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/EPLICENCE
 
+UncompressedName=otp_src_$(Version)
+
 define retrieve_post_hook
-$(fetch) $(URL)/otp_doc_html_$(Version)-1.tar.gz
-$(fetch) $(URL)/otp_doc_man_$(Version)-1.tar.gz
+$(fetch) $(URL)/otp_doc_html_$(Version).tar.gz
+$(fetch) $(URL)/otp_doc_man_$(Version).tar.gz
 endef
 
 ifneq ($(OSXVersion),10.6)
@@ -27,9 +27,9 @@ GnuConfigureExtra += --enable-darwin-64bit
 endif
 
 define install_post_hook
-tar -zxf $(PortDir)/otp_doc_man_$(Version)-1.tar.gz -C \
+tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \
 	$(InstallDir)/$(LibDir)/erlang
-tar -zxf $(PortDir)/otp_doc_html_$(Version)-1.tar.gz -C \
+tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C \
 	$(InstallDir)/$(LibDir)/erlang
 install -d $(InstallDir)/$(DocDir)/$(Name)
 endef
