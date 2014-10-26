@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Description=	A full-featured and high-performance event loop that is loosely modelled after libevent
 Title=		Libev
 Name=		libev
-Version=	4.18
+Version=	4.19
 Revision=	0
 Site=		http://software.schmorp.de/pkg/libev
 URL=		http://dist.schmorp.de/libev/
