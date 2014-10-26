@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		XZ Utils
 Name=		xz
-Version=	5.0.5
+Version=	5.0.7
 Revision=	0
 Site=		http://tukaani.org/xz/
 URL=		http://tukaani.org/xz/
