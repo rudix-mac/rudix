@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Screen
 Name=		screen
-Version=	4.0.3
+Version=	4.2.1
 Revision=	0
 Site=		http://www.gnu.org/software/screen/
 URL=		http://ftp.gnu.org/gnu/screen/
