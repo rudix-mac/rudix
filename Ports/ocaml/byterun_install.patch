@@ -1,11 +1,11 @@
---- Makefile.orig	2012-06-16 18:17:24.000000000 -0300
-+++ Makefile	2012-06-16 18:18:16.000000000 -0300
-@@ -281,7 +281,7 @@
- 	cd $(LIBDIR); rm -f dllbigarray.so dlllabltk.so dllnums.so \
- 	  dllthreads.so dllunix.so dllgraphics.so dllmldbm.so dllstr.so \
- 	  dlltkanim.so
+--- Makefile.orig	2014-10-26 13:33:11.000000000 -0200
++++ Makefile	2014-10-26 13:34:46.000000000 -0200
+@@ -312,7 +312,7 @@
+ 	cp VERSION $(INSTALL_LIBDIR)/
+ 	cd $(INSTALL_LIBDIR); rm -f dllbigarray.so dllnums.so dllthreads.so \
+ 	  dllunix.so dllgraphics.so dllstr.so
 -	cd byterun; $(MAKE) install
 +	cd byterun; $(MAKE) BINDIR=$(BINDIR) install
- 	cp ocamlc $(BINDIR)/ocamlc$(EXE)
- 	cp ocaml $(BINDIR)/ocaml$(EXE)
+ 	cp ocamlc $(INSTALL_BINDIR)/ocamlc$(EXE)
+ 	cp ocaml $(INSTALL_BINDIR)/ocaml$(EXE)
  	cd stdlib; $(MAKE) install
