@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Fish Shell
 Name=		fish
-Version=	2.1.0
+Version=	2.1.1
 Revision=	0
 Site=		http://fishshell.com
 URL=		http://fishshell.com/files/$(Version)
