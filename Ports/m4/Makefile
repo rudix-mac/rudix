@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 
 Title=		GNU M4
 Name=		m4
-Version=	1.4.16
-Revision=	2
+Version=	1.4.17
+Revision=	0
 Site=		http://www.gnu.org/software/m4/
 URL=		http://ftp.gnu.org/gnu/m4/
 Source=		$(Name)-$(Version).tar.bz2
