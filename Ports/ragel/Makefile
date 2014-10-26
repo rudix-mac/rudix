@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Ragel State Machine Compiler
 Name=		ragel
-Version=	6.8
+Version=	6.9
 Revision=	0
-Site=		http://www.complang.org/ragel/
-URL=		http://www.complang.org/ragel/
+Site=		http://www.colm.net/open-source/ragel/
+URL=		http://www.colm.net/wp-content/uploads/2014/10
 Source=		$(Name)-$(Version).tar.gz
 License=	GPL
 
