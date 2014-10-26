@@ -3,7 +3,7 @@ include ../../Library/Unix.mk
 Site=		https://github.com/rudix-mac/rpm/
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	2014.6
+Version=	2014.10
 Revision=	0
 URL=		https://github.com/rudix-mac/rpm/archive
 Source=		$(Version).tar.gz
