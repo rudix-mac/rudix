@@ -4,7 +4,7 @@ include ../../Library/Python.mk
 
 Title=		Offline IMAP
 Name=		offlineimap
-Version=	6.5.5
+Version=	6.5.6
 Revision=	0
 Site=		http://offlineimap.org/
 URL=		https://github.com/OfflineIMAP/offlineimap/archive
