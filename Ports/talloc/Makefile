@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		Talloc
 Name=		talloc
-Version=	2.1.0
+Version=	2.1.1
 Revision=	0
 Site=		http://talloc.samba.org/
 URL=		http://samba.org/ftp/talloc
@@ -13,20 +13,6 @@ ReadMeFile=	README
 LicenseFile=	LICENSE
 
 ConfigureExtra += --without-gettext
-
-ifeq ($(OSXVersion),10.8)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.7)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.6)
-Python = /usr/bin/python2.6
-PythonSitePackages = /Library/Python/2.6/site-packages
-else
-Python = /usr/bin/python2.5
-PythonSitePackages = /Library/Python/2.5/site-packages
-endif
 
 define install_post_hook
 install -d $(InstallDir)/$(PythonSitePackages)

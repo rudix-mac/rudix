@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		Memcached
 Name=		memcached
-Version=	1.4.20
+Version=	1.4.21
 Revision=	0
 Site=		http://memcached.org/
 URL=		http://www.memcached.org/files/

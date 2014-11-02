@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Libpcap
 Name=		libpcap
-Version=	1.5.3
+Version=	1.6.2
 Revision=	0
 Site=		http://www.tcpdump.org
 URL=		http://www.tcpdump.org/release

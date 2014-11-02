@@ -6,10 +6,10 @@ include ../../Library/GNU.mk
 
 Title=		GLib
 Name=		glib
-Version=	2.34.3
+Version=	2.40.2
 Revision=	0
 Site=		http://www.gtk.org/
-URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.34
+URL=		http://ftp.gnome.org/pub/gnome/sources/glib/2.40
 Source=		$(Name)-$(Version).tar.xz
 License=	GPL
 

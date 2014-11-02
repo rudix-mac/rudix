@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU RCS
 Name=		rcs
-Version=	5.9.2
+Version=	5.9.3
 Revision=	0
 Site=		http://www.gnu.org/software/rcs/
 URL=		http://ftp.gnu.org/gnu/rcs/
