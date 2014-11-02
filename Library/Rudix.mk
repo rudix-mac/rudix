@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20141022
+BuildSystem = 20141029
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -323,6 +323,10 @@ endef
 
 define make
 $(MAKE) $(MakeFlags)
+endef
+
+define make_install
+$(MAKE) $(MakeInstallFlags) install
 endef
 
 define verify_universal
