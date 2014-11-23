@@ -1,0 +1,13 @@
+--- test/utils.h.orig	2014-07-04 21:50:35.000000000 -0300
++++ test/utils.h	2014-11-23 11:12:37.000000000 -0200
+@@ -17,8 +17,8 @@
+  * taken from POSIX.1-2001 example
+  */
+ 
+-extern prng_t prng_state_data;
+-extern prng_t *prng_state;
++prng_t prng_state_data;
++prng_t *prng_state;
+ #ifdef USE_OPENMP
+ #pragma omp threadprivate(prng_state_data)
+ #pragma omp threadprivate(prng_state)
