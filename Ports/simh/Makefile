@@ -2,14 +2,14 @@ include ../../Library/Unix.mk
 
 Title=		SIMH
 Name=		simh
-Version=	3.8.1
-Revision=	4
+Version=	3.9
+Revision=	0
 Site=		http://simh.trailing-edge.com/
 URL=		http://simh.trailing-edge.com/sources/
-Source=		$(Name)v38-1.zip
+Source=		$(Name)v39-0.zip
 License=	MIT
 
-ReadMeFile=	$(SourceDir)/0readme_38.txt
+ReadMeFile=	$(SourceDir)/0readme_39.txt
 LicenseFile=	LICENSE.txt
 
 MakeExtra += OSTYPE="darwin"

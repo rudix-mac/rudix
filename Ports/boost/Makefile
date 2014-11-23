@@ -2,8 +2,8 @@ include ../../Library/Rudix.mk
 
 Title=		Boost C++ Libraries
 Name=		boost
-Version=	1.53.0
-AltVersion=	1_53_0
+Version=	1.57.0
+AltVersion=	1_57_0
 Revision=	0
 Site=		http://www.boost.org/
 URL=		http://downloads.sourceforge.net/boost

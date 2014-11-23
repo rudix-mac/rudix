@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 Title=		Dialog
 Name=		dialog
 Version=	1.2
-AltVersion=	20121230
+AltVersion=	20140911
 Revision=	0
 Site=		http://invisible-island.net/dialog/dialog.html
 URL=		ftp://invisible-island.net/dialog/
