@@ -1,10 +1,11 @@
 include ../../Library/GNU.mk
 
+Description=	Pixman is a low-level software library for pixel manipulation
 Title=		Pixman
 Name=		pixman
 Version=	0.32.6
 Revision=	0
-Site=		http://cgit.freedesktop.org/pixman/
+Site=		http://pixman.org
 URL=		http://www.cairographics.org/releases/
 Source=		$(Name)-$(Version).tar.gz
 License=	GPL
