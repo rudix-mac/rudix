@@ -1,21 +1,21 @@
-BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
-BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc # static-pixman
-BuildRequires += /usr/local/lib/libintl.la # static-gettext
-BuildRequires += $(BinDir)/libtool # static-libtool
+BuildRequires += $(BinDir)/pkg-config             # pkg-config
+BuildRequires += $(LibDir)/libglib-2.0.la         # static-glib
+BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc  # static-pixman
+BuildRequires += /usr/local/lib/libintl.la        # static-gettext
+BuildRequires += $(BinDir)/libtool                # static-libtool
 
 include ../../Library/Configure.mk
 
 Title=		QEMU
 Name=		qemu
-Version=	1.6.0
-Revision=	1
+Version=	2.1.2
+Revision=	0
 Site=		http://wiki.qemu.org/
 URL=		http://wiki.qemu.org/download/
 Source=		$(Name)-$(Version).tar.bz2
 License=	GPL
 
-ReadMeFile=	$(SourceDir)/qemu-doc.html
+ReadMeFile=	README
 LicenseFile=	$(SourceDir)/LICENSE
 
 ConfigureExtra += --with-system-pixman
