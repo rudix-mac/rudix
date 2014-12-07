@@ -16,6 +16,8 @@ License=	GPL
 
 ReadMeFile=	$(SourceDir)/HACKING
 
+GnuConfigureExtra += --without-zenmap
+
 define install_post_hook
 install -m 644 $(SourceDir)/docs/*.txt $(InstallDir)/$(DocDir)/$(Name)
 endef
