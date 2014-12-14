@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		FLAC
 Name=		flac
-Version=	1.3.0
+Version=	1.3.1
 Revision=	0
 Site=		http://flac.sourceforge.net/
 URL=		http://downloads.xiph.org/releases/flac/
