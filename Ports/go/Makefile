@@ -6,7 +6,7 @@ include ../../Library/Rudix.mk
 Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
-Version=	1.3.3
+Version=	1.4
 Revision=	0
 Site=		http://golang.org/
 URL=		http://golang.org/dl
@@ -32,7 +32,6 @@ cp -a $(BuildDir)/doc $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/api $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/include $(InstallDir)/$(LibDir)/go
 install -d $(InstallDir)/$(DataDir)/emacs/site-lisp
-install -m 644 $(BuildDir)/misc/emacs/*.el $(InstallDir)/$(DataDir)/emacs/site-lisp
 $(install_base_documentation)
 install -m 644 $(SourceDir)/{AUTHORS,PATENTS,CONTRIBUTORS,VERSION} $(InstallDir)/$(DocDir)/go
 endef
