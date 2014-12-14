@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Gperftools
 Name=		gperftools
-Version=	2.1
+Version=	2.3
 Revision=	0
 Site=		http://code.google.com/p/gperftools/
-URL=		http://gperftools.googlecode.com/files/
+URL=		https://googledrive.com/host/0B6NtGsLhIcf7MWxMMF9JdTN3UVk
 Source=		$(Name)-$(Version).tar.gz
 License=	BSD
 

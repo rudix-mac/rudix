@@ -4,7 +4,7 @@ include ../../Library/Unix.mk
 
 Title=		HAProxy
 Name=		haproxy
-Version=	1.5.1
+Version=	1.5.9
 Revision=	0
 Site=		http://www.haproxy.org
 URL=		http://www.haproxy.org/download/1.5/src
