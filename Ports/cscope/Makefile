@@ -2,13 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		Cscope
 Name=		cscope
-Version=	15.8
+Version=	15.8a
 Revision=	0
-URL=		http://downloads.sourceforge.net/cscope
-Source=		$(Name)-$(Version).tar.bz2
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+Site=		http://cscope.sourceforge.net/
+URL=		http://sourceforge.net/projects/cscope/files/cscope/$(Version)
+Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 define test_inner_hook
 $(BinDir)/cscope -V

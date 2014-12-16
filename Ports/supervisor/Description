@@ -1,7 +1,0 @@
-Supervisor is a client/server system that allows its users to monitor and control a number of processes on UNIX-like operating systems.
-
-  * Site: http://supervisord.org/index.html
-  * License: BSD Like
-
-Release Notes:
-  * Featuring in Rudix

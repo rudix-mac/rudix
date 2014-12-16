@@ -1,11 +1,13 @@
 include ../../Library/Python.mk
 
-Title=		lxml
+Title=		XML and HTML with Python
 Name=		lxml
-Version=	2.3.3
-Revision=	1
+Version=	3.4.1
+Revision=	0
+Site=		http://lxml.de/
 URL=		http://pypi.python.org/packages/source/l/lxml/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSES.txt

@@ -1,7 +1,0 @@
-ssldump is an SSLv3/TLS network protocol analyzer.
-
-  * Site: http://www.rtfm.com/ssldump/
-  * License: BSD
-
-Release Notes:
-  * Rebuild on Xcode 4.3

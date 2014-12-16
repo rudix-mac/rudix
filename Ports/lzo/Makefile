@@ -1,16 +1,10 @@
-include ../../Library/Config.mk
-RUDIX_UNIVERSAL=no # Due configure: error: ACC conformance test failed. Stop
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		LZO
 Name=		lzo
-Version=	2.06
-Revision=	1
+Version=	2.08
+Revision=	0
+Site=		http://www.oberhumer.com/opensource/lzo/
 URL=		http://www.oberhumer.com/opensource/lzo/download/
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-GnuConfigureExtra += --enable-shared
+License=	GPL

@@ -2,16 +2,14 @@ include ../../Library/GNU.mk
 
 Title=		Libao
 Name=		libao
-Version=	1.1.0
-Revision=	2
+Version=	1.2.0
+Revision=	0
+Site=		http://xiph.org/ao/
 URL=		http://downloads.xiph.org/releases/ao/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-else
-GnuConfigureExtra += --enable-static --enable-shared
-endif
+define test_inner_hook
+test -f $(LibDir)/libao.la
+test -f $(LibDir)/pkgconfig/ao.pc
+endef

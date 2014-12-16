@@ -1,0 +1,28 @@
+--- Makefile.orig	2014-04-18 14:35:39.000000000 -0300
++++ Makefile	2014-09-21 17:07:02.000000000 -0300
+@@ -30,7 +30,7 @@
+ # Uncomment options below for your particular OS:
+ 
+ # Linux defaults:
+-CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++#CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+ #CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+ #LDFLAGS=-s
+ 
+@@ -53,11 +53,11 @@
+ #OBJS+=strverscmp.o
+ 
+ # Uncomment for OS X:
+-#CC=cc
+-#CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
+-#LDFLAGS=
+-#MANDIR=/usr/share/man/man1
+-#OBJS+=strverscmp.o
++CC=cc
++CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
++LDFLAGS=
++MANDIR=/usr/share/man/man1
++OBJS+=strverscmp.o
+ 
+ # Uncomment for HP/UX:
+ #CC=cc

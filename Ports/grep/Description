@@ -1,7 +1,0 @@
-The GNU grep command searches one or more input files for lines containing a match to a specified pattern.
-
-  * Site: http://www.gnu.org/software/grep/
-  * License: GPL
-
-Release Notes:
-  * Upgraded to version 2.12

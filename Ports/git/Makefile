@@ -2,15 +2,27 @@ BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
+ifeq ($(OSXVersion),10.8)
+PythonVersion=2.7
+PerlVersion=5.12.4
+endif
+ifeq ($(OSXVersion),10.7)
+PythonVersion=2.7
+PerlVersion=5.12.3
+endif
+ifeq ($(OSXVersion),10.6)
+PythonVersion=2.6
+PerlVersion=5.10.0
+endif
+
 Title=		Git
 Name=		git
-Version=	1.7.11
+Version=	1.8.3.1
 Revision=	0
+Site=		http://git-scm.com/
 URL=		http://git-core.googlecode.com/files/
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	GPL
 
 define retrieve_post_hook
 $(fetch) $(URL)/git-manpages-$(Version).tar.gz
@@ -21,28 +33,22 @@ LdFlags += -framework CoreFoundation -liconv
 endif
 
 define install_post_hook
-rm -rf $(InstallDir)$(Prefix)/Library
-# Place the Git application into the right folder
-install -d $(InstallDir)/Applications
-mv $(InstallDir)$(Prefix)/share/git-gui/lib/Git\ Gui.app \
-	$(InstallDir)/Applications
 # Fix Perl module position
-install -d $(InstallDir)/Library/Perl/Updates/5.12.3
+install -d $(InstallDir)/Library/Perl/Updates/$(PerlVersion)
 mv $(InstallDir)$(LibDir)/perl5/site_perl/*.pm \
-	$(InstallDir)/Library/Perl/Updates/5.12.3
+	$(InstallDir)/Library/Perl/Updates/$(PerlVersion)
 # Fix Python module position
-install -d $(InstallDir)/Library/Python/2.7
-mv $(InstallDir)$(LibDir)/python2.7/site-packages \
-	$(InstallDir)/Library/Python/2.7
-rmdir $(InstallDir)$(LibDir)/python2.7
+install -d $(InstallDir)/Library/Python/$(PythonVersion)
+mv $(InstallDir)$(LibDir)/python$(PythonVersion)/site-packages \
+	$(InstallDir)/Library/Python/$(PythonVersion)
+rmdir $(InstallDir)$(LibDir)/python$(PythonVersion)
 # Nothing interesting is resting here
 rm -rf $(InstallDir)$(LibDir)
-# Manpages
-install -d $(InstallDir)$(Prefix)/share/man
+rm -rf $(InstallDir)$(Prefix)/Library
+# Install manual pages
+install -d $(InstallDir)$(ManDir)
 tar jxf $(PortDir)/git-manpages-$(Version).tar.gz \
-	-C $(InstallDir)$(Prefix)/share/man
-# App
-rm -rf $(InstallDir)/Applications/
+	-C $(InstallDir)$(ManDir)
 endef
 
 define test_inner_hook
@@ -50,3 +56,6 @@ $(BinDir)/git --version
 perl -e 'use Git'
 python -c 'import git_remote_helpers'
 endef
+
+realdistclean: distclean
+	rm -f retrieve $(Source) git-manpages-$(Version).tar.gz

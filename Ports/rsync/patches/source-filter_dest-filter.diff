@@ -1,0 +1,552 @@
+CAUTION:  This patch compiles, but is otherwise totally untested!
+
+This patch also implements --times-only.
+
+Implementation details for the --source-filter and -dest-filter options:
+
+ - These options open a *HUGE* security hole in daemon mode unless they
+   are refused in your rsyncd.conf!
+
+ - Filtering disables rsync alogrithm. (This should be fixed.)
+
+ - Source filter makes temporary files in /tmp. (Should be overridable.)
+
+ - If source filter fails, data is send unfiltered. (Should be changed
+   to abort.)
+
+ - Failure of destination filter, causes data loss!!! (Should be changed
+   to abort.)
+
+ - If filter changes size of file, you should use --times-only option to
+   prevent repeated transfers of unchanged files.
+
+ - If the COMMAND contains single quotes, option-passing breaks.  (Needs
+   to be fixed.)
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/source-filter_dest-filter.diff
+    ./prepare-source
+    ./configure                                (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/generator.c b/generator.c
+--- a/generator.c
++++ b/generator.c
+@@ -63,6 +63,7 @@ extern int append_mode;
+ extern int make_backups;
+ extern int csum_length;
+ extern int ignore_times;
++extern int times_only;
+ extern int size_only;
+ extern OFF_T max_size;
+ extern OFF_T min_size;
+@@ -571,7 +572,7 @@ void itemize(const char *fnamecmp, struct file_struct *file, int ndx, int statre
+ /* Perform our quick-check heuristic for determining if a file is unchanged. */
+ int unchanged_file(char *fn, struct file_struct *file, STRUCT_STAT *st)
+ {
+-	if (st->st_size != F_LENGTH(file))
++	if (!times_only && st->st_size != F_LENGTH(file))
+ 		return 0;
+ 
+ 	/* if always checksum is set then we use the checksum instead
+diff --git a/main.c b/main.c
+--- a/main.c
++++ b/main.c
+@@ -154,7 +154,7 @@ pid_t wait_process(pid_t pid, int *status_ptr, int flags)
+ }
+ 
+ /* Wait for a process to exit, calling io_flush while waiting. */
+-static void wait_process_with_flush(pid_t pid, int *exit_code_ptr)
++void wait_process_with_flush(pid_t pid, int *exit_code_ptr)
+ {
+ 	pid_t waited_pid;
+ 	int status;
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -108,6 +108,7 @@ int safe_symlinks = 0;
+ int copy_unsafe_links = 0;
+ int munge_symlinks = 0;
+ int size_only = 0;
++int times_only = 0;
+ int daemon_bwlimit = 0;
+ int bwlimit = 0;
+ int fuzzy_basis = 0;
+@@ -166,6 +167,8 @@ char *logfile_name = NULL;
+ char *logfile_format = NULL;
+ char *stdout_format = NULL;
+ char *password_file = NULL;
++char *source_filter = NULL;
++char *dest_filter = NULL;
+ char *rsync_path = RSYNC_PATH;
+ char *backup_dir = NULL;
+ char backup_dir_buf[MAXPATHLEN];
+@@ -757,6 +760,7 @@ void usage(enum logcode F)
+   rprintf(F," -I, --ignore-times          don't skip files that match in size and mod-time\n");
+   rprintf(F," -M, --remote-option=OPTION  send OPTION to the remote side only\n");
+   rprintf(F,"     --size-only             skip files that match in size\n");
++  rprintf(F,"     --times-only            skip files that match in mod-time\n");
+   rprintf(F,"     --modify-window=NUM     compare mod-times with reduced accuracy\n");
+   rprintf(F," -T, --temp-dir=DIR          create temporary files in directory DIR\n");
+   rprintf(F," -y, --fuzzy                 find similar file for basis if no dest file\n");
+@@ -799,6 +803,8 @@ void usage(enum logcode F)
+   rprintf(F,"     --write-batch=FILE      write a batched update to FILE\n");
+   rprintf(F,"     --only-write-batch=FILE like --write-batch but w/o updating destination\n");
+   rprintf(F,"     --read-batch=FILE       read a batched update from FILE\n");
++  rprintf(F,"     --source-filter=COMMAND filter file through COMMAND at source\n");
++  rprintf(F,"     --dest-filter=COMMAND   filter file through COMMAND at destination\n");
+   rprintf(F,"     --protocol=NUM          force an older protocol version to be used\n");
+ #ifdef ICONV_OPTION
+   rprintf(F,"     --iconv=CONVERT_SPEC    request charset conversion of filenames\n");
+@@ -912,6 +918,7 @@ static struct poptOption long_options[] = {
+   {"chmod",            0,  POPT_ARG_STRING, 0, OPT_CHMOD, 0, 0 },
+   {"ignore-times",    'I', POPT_ARG_NONE,   &ignore_times, 0, 0, 0 },
+   {"size-only",        0,  POPT_ARG_NONE,   &size_only, 0, 0, 0 },
++  {"times-only",       0,  POPT_ARG_NONE,   &times_only , 0, 0, 0 },
+   {"one-file-system", 'x', POPT_ARG_NONE,   0, 'x', 0, 0 },
+   {"no-one-file-system",0, POPT_ARG_VAL,    &one_file_system, 0, 0, 0 },
+   {"no-x",             0,  POPT_ARG_VAL,    &one_file_system, 0, 0, 0 },
+@@ -1035,6 +1042,8 @@ static struct poptOption long_options[] = {
+   {"password-file",    0,  POPT_ARG_STRING, &password_file, 0, 0, 0 },
+   {"blocking-io",      0,  POPT_ARG_VAL,    &blocking_io, 1, 0, 0 },
+   {"no-blocking-io",   0,  POPT_ARG_VAL,    &blocking_io, 0, 0, 0 },
++  {"source-filter",    0,  POPT_ARG_STRING, &source_filter, 0, 0, 0 },
++  {"dest-filter",      0,  POPT_ARG_STRING, &dest_filter, 0, 0, 0 },
+ #ifdef HAVE_SETVBUF
+   {"outbuf",           0,  POPT_ARG_STRING, &outbuf_mode, 0, 0, 0 },
+ #endif
+@@ -2292,6 +2301,16 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 		}
+ 	}
+ 
++	if (source_filter || dest_filter) {
++		if (whole_file == 0) {
++			snprintf(err_buf, sizeof err_buf,
++				 "--no-whole-file cannot be used with --%s-filter\n",
++				 source_filter ? "source" : "dest");
++			return 0;
++		}
++		whole_file = 1;
++	}
++
+ 	if (files_from) {
+ 		char *h, *p;
+ 		int q;
+@@ -2647,6 +2666,25 @@ void server_options(char **args, int *argc_p)
+ 	else if (missing_args == 1 && !am_sender)
+ 		args[ac++] = "--ignore-missing-args";
+ 
++	if (times_only && am_sender)
++		args[ac++] = "--times-only";
++
++	if (source_filter && !am_sender) {
++		/* Need to single quote the arg to keep the remote shell
++		 * from splitting it.  FIXME: breaks if command has single quotes. */
++	        if (asprintf(&arg, "--source-filter='%s'", source_filter) < 0)
++			goto oom;
++		args[ac++] = arg;
++	}
++
++	if (dest_filter && am_sender) {
++		/* Need to single quote the arg to keep the remote shell
++		 * from splitting it.  FIXME: breaks if command has single quotes. */
++	        if (asprintf(&arg, "--dest-filter='%s'", dest_filter) < 0)
++			goto oom;
++		args[ac++] = arg;
++	}
++
+ 	if (modify_window_set) {
+ 		if (asprintf(&arg, "--modify-window=%d", modify_window) < 0)
+ 			goto oom;
+diff --git a/pipe.c b/pipe.c
+--- a/pipe.c
++++ b/pipe.c
+@@ -27,6 +27,7 @@ extern int am_server;
+ extern int blocking_io;
+ extern int filesfrom_fd;
+ extern int munge_symlinks;
++extern mode_t orig_umask;
+ extern char *logfile_name;
+ extern int remote_option_cnt;
+ extern const char **remote_options;
+@@ -178,3 +179,77 @@ pid_t local_child(int argc, char **argv, int *f_in, int *f_out,
+ 
+ 	return pid;
+ }
++
++pid_t run_filter(char *command[], int out, int *pipe_to_filter)
++{
++	pid_t pid;
++	int pipefds[2];
++
++	if (DEBUG_GTE(CMD, 1))
++		print_child_argv("opening connection using:", command);
++
++	if (pipe(pipefds) < 0) {
++		rsyserr(FERROR, errno, "pipe");
++		exit_cleanup(RERR_IPC);
++	}
++
++	pid = do_fork();
++	if (pid == -1) {
++		rsyserr(FERROR, errno, "fork");
++		exit_cleanup(RERR_IPC);
++	}
++
++	if (pid == 0) {
++		if (dup2(pipefds[0], STDIN_FILENO) < 0
++		 || close(pipefds[1]) < 0
++		 || dup2(out, STDOUT_FILENO) < 0) {
++			rsyserr(FERROR, errno, "Failed dup/close");
++			exit_cleanup(RERR_IPC);
++		}
++		umask(orig_umask);
++		set_blocking(STDIN_FILENO);
++		if (blocking_io)
++			set_blocking(STDOUT_FILENO);
++		execvp(command[0], command);
++		rsyserr(FERROR, errno, "Failed to exec %s", command[0]);
++		exit_cleanup(RERR_IPC);
++	}
++
++	if (close(pipefds[0]) < 0) {
++		rsyserr(FERROR, errno, "Failed to close");
++		exit_cleanup(RERR_IPC);
++	}
++
++	*pipe_to_filter = pipefds[1];
++
++	return pid;
++}
++
++pid_t run_filter_on_file(char *command[], int out, int in)
++{
++	pid_t pid;
++
++	if (DEBUG_GTE(CMD, 1))
++		print_child_argv("opening connection using:", command);
++
++	pid = do_fork();
++	if (pid == -1) {
++		rsyserr(FERROR, errno, "fork");
++		exit_cleanup(RERR_IPC);
++	}
++
++	if (pid == 0) {
++		if (dup2(in, STDIN_FILENO) < 0
++		 || dup2(out, STDOUT_FILENO) < 0) {
++			rsyserr(FERROR, errno, "Failed to dup2");
++			exit_cleanup(RERR_IPC);
++		}
++		if (blocking_io)
++			set_blocking(STDOUT_FILENO);
++		execvp(command[0], command);
++		rsyserr(FERROR, errno, "Failed to exec %s", command[0]);
++		exit_cleanup(RERR_IPC);
++	}
++
++	return pid;
++}
+diff --git a/receiver.c b/receiver.c
+--- a/receiver.c
++++ b/receiver.c
+@@ -56,6 +56,7 @@ extern int delay_updates;
+ extern mode_t orig_umask;
+ extern struct stats stats;
+ extern char *tmpdir;
++extern char *dest_filter;
+ extern char *partial_dir;
+ extern char *basis_dir[MAX_BASIS_DIRS+1];
+ extern char sender_file_sum[MAX_DIGEST_LEN];
+@@ -534,6 +535,8 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 	const char *parent_dirname = "";
+ #endif
+ 	int ndx, recv_ok;
++	pid_t pid = 0;
++	char *filter_argv[MAX_FILTER_ARGS + 1];
+ 
+ 	if (DEBUG_GTE(RECV, 1))
+ 		rprintf(FINFO, "recv_files(%d) starting\n", cur_flist->used);
+@@ -541,6 +544,23 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 	if (delay_updates)
+ 		delayed_bits = bitbag_create(cur_flist->used + 1);
+ 
++	if (dest_filter) {
++		char *p;
++		char *sep = " \t";
++		int i;
++		for (p = strtok(dest_filter, sep), i = 0;
++		     p && i < MAX_FILTER_ARGS;
++		     p = strtok(0, sep))
++			filter_argv[i++] = p;
++		filter_argv[i] = NULL;
++		if (p) {
++			rprintf(FERROR,
++				"Too many arguments to dest-filter (> %d)\n",
++				MAX_FILTER_ARGS);
++			exit_cleanup(RERR_SYNTAX);
++		}
++	}
++
+ 	while (1) {
+ 		cleanup_disable();
+ 
+@@ -846,6 +866,9 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 		else if (!am_server && INFO_GTE(NAME, 1) && INFO_EQ(PROGRESS, 1))
+ 			rprintf(FINFO, "%s\n", fname);
+ 
++		if (dest_filter)
++			pid = run_filter(filter_argv, fd2, &fd2);
++
+ 		/* recv file data */
+ 		recv_ok = receive_data(f_in, fnamecmp, fd1, st.st_size,
+ 				       fname, fd2, F_LENGTH(file));
+@@ -860,6 +883,16 @@ int recv_files(int f_in, int f_out, char *local_name)
+ 			exit_cleanup(RERR_FILEIO);
+ 		}
+ 
++		if (dest_filter) {
++			int status;
++			wait_process_with_flush(pid, &status);
++			if (status != 0) {
++				rprintf(FERROR, "filter %s exited code: %d\n",
++					dest_filter, status);
++				continue;
++			}
++		}
++
+ 		if ((recv_ok && (!delay_updates || !partialptr)) || inplace) {
+ 			if (partialptr == fname)
+ 				partialptr = NULL;
+diff --git a/rsync.h b/rsync.h
+--- a/rsync.h
++++ b/rsync.h
+@@ -148,6 +148,7 @@
+ #define IOERR_DEL_LIMIT (1<<2)
+ 
+ #define MAX_ARGS 1000
++#define MAX_FILTER_ARGS 100
+ #define MAX_BASIS_DIRS 20
+ #define MAX_SERVER_ARGS (MAX_BASIS_DIRS*2 + 100)
+ 
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -413,6 +413,7 @@ to the detailed description below for a complete description.  verb(
+      --contimeout=SECONDS    set daemon connection timeout in seconds
+  -I, --ignore-times          don't skip files that match size and time
+      --size-only             skip files that match in size
++     --times-only            skip files that match in mod-time
+      --modify-window=NUM     compare mod-times with reduced accuracy
+  -T, --temp-dir=DIR          create temporary files in directory DIR
+  -y, --fuzzy                 find similar file for basis if no dest file
+@@ -454,6 +455,8 @@ to the detailed description below for a complete description.  verb(
+      --write-batch=FILE      write a batched update to FILE
+      --only-write-batch=FILE like --write-batch but w/o updating dest
+      --read-batch=FILE       read a batched update from FILE
++     --source-filter=COMMAND filter file through COMMAND at source
++     --dest-filter=COMMAND   filter file through COMMAND at destination
+      --protocol=NUM          force an older protocol version to be used
+      --iconv=CONVERT_SPEC    request charset conversion of filenames
+      --checksum-seed=NUM     set block/file checksum seed (advanced)
+@@ -2543,6 +2546,33 @@ file previously generated by bf(--write-batch).
+ If em(FILE) is bf(-), the batch data will be read from standard input.
+ See the "BATCH MODE" section for details.
+ 
++dit(bf(--source-filter=COMMAND)) This option allows the user to specify a
++filter program that will be applied to the contents of all transferred
++regular files before the data is sent to destination.  COMMAND will receive
++the data on its standard input and it should write the filtered data to
++standard output.  COMMAND should exit non-zero if it cannot process the
++data or if it encounters an error when writing the data to stdout.
++
++Example: --source-filter="gzip -9" will cause remote files to be
++compressed.
++Use of --source-filter automatically enables --whole-file.
++If your filter does not output the same number of bytes that it received on
++input, you should use --times-only to disable size and content checks on
++subsequent rsync runs.
++
++dit(bf(--dest-filter=COMMAND)) This option allows you to specify a filter
++program that will be applied to the contents of all transferred regular
++files before the data is written to disk.  COMMAND will receive the data on
++its standard input and it should write the filtered data to standard
++output.  COMMAND should exit non-zero if it cannot process the data or if
++it encounters an error when writing the data to stdout.
++
++Example: --dest-filter="gzip -9" will cause remote files to be compressed.
++Use of --dest-filter automatically enables --whole-file.
++If your filter does not output the same number of bytes that it
++received on input, you should use --times-only to disable size and
++content checks on subsequent rsync runs.
++
+ dit(bf(--protocol=NUM)) Force an older protocol version to be used.  This
+ is useful for creating a batch file that is compatible with an older
+ version of rsync.  For instance, if rsync 2.6.4 is being used with the
+diff --git a/sender.c b/sender.c
+--- a/sender.c
++++ b/sender.c
+@@ -44,6 +44,7 @@ extern int inplace;
+ extern int batch_fd;
+ extern int write_batch;
+ extern int file_old_total;
++extern char *source_filter;
+ extern struct stats stats;
+ extern struct file_list *cur_flist, *first_flist, *dir_flist;
+ 
+@@ -201,6 +202,26 @@ void send_files(int f_in, int f_out)
+ 	int f_xfer = write_batch < 0 ? batch_fd : f_out;
+ 	int save_io_error = io_error;
+ 	int ndx, j;
++	char *filter_argv[MAX_FILTER_ARGS + 1];
++	char *tmp = 0;
++	int unlink_tmp = 0;
++
++	if (source_filter) {
++		char *p;
++		char *sep = " \t";
++		int i;
++		for (p = strtok(source_filter, sep), i = 0;
++		     p && i < MAX_FILTER_ARGS;
++		     p = strtok(0, sep))
++			filter_argv[i++] = p;
++		filter_argv[i] = NULL;
++		if (p) {
++			rprintf(FERROR,
++				"Too many arguments to source-filter (> %d)\n",
++				MAX_FILTER_ARGS);
++			exit_cleanup(RERR_SYNTAX);
++		}
++	}
+ 
+ 	if (DEBUG_GTE(SEND, 1))
+ 		rprintf(FINFO, "send_files starting\n");
+@@ -335,6 +356,7 @@ void send_files(int f_in, int f_out)
+ 			exit_cleanup(RERR_PROTOCOL);
+ 		}
+ 
++		unlink_tmp = 0;
+ 		fd = do_open(fname, O_RDONLY, 0);
+ 		if (fd == -1) {
+ 			if (errno == ENOENT) {
+@@ -356,6 +378,33 @@ void send_files(int f_in, int f_out)
+ 			continue;
+ 		}
+ 
++		if (source_filter) {
++			int fd2;
++			char *tmpl = "/tmp/rsync-filtered_sourceXXXXXX";
++
++			tmp = strdup(tmpl);
++			fd2 = mkstemp(tmp);
++			if (fd2 == -1) {
++				rprintf(FERROR, "mkstemp %s failed: %s\n",
++					tmp, strerror(errno));
++			} else {
++				int status;
++				pid_t pid = run_filter_on_file(filter_argv, fd2, fd);
++				close(fd);
++				close(fd2);
++				wait_process_with_flush(pid, &status);
++				if (status != 0) {
++					rprintf(FERROR,
++					    "bypassing source filter %s; exited with code: %d\n",
++					    source_filter, status);
++					fd = do_open(fname, O_RDONLY, 0);
++				} else {
++					fd = do_open(tmp, O_RDONLY, 0);
++					unlink_tmp = 1;
++				}
++			}
++		}
++
+ 		/* map the local file */
+ 		if (do_fstat(fd, &st) != 0) {
+ 			io_error |= IOERR_GENERAL;
+@@ -406,6 +455,8 @@ void send_files(int f_in, int f_out)
+ 			}
+ 		}
+ 		close(fd);
++		if (unlink_tmp)
++			unlink(tmp);
+ 
+ 		free_sums(s);
+ 
+diff -Nurp a/proto.h b/proto.h
+--- a/proto.h
++++ b/proto.h
+@@ -248,6 +248,7 @@ void maybe_log_item(struct file_struct *
+ void log_delete(const char *fname, int mode);
+ void log_exit(int code, const char *file, int line);
+ pid_t wait_process(pid_t pid, int *status_ptr, int flags);
++void wait_process_with_flush(pid_t pid, int *exit_code_ptr);
+ void write_del_stats(int f);
+ void read_del_stats(int f);
+ int child_main(int argc, char *argv[]);
+@@ -272,6 +273,8 @@ int pm_process( char *FileName,
+ pid_t piped_child(char **command, int *f_in, int *f_out);
+ pid_t local_child(int argc, char **argv, int *f_in, int *f_out,
+ 		  int (*child_main)(int, char*[]));
++pid_t run_filter(char *command[], int out, int *pipe_to_filter);
++pid_t run_filter_on_file(char *command[], int out, int in);
+ void set_current_file_index(struct file_struct *file, int ndx);
+ void end_progress(OFF_T size);
+ void show_progress(OFF_T ofs, OFF_T size);
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -489,6 +489,7 @@ to the detailed description below for a
+      \-\-contimeout=SECONDS    set daemon connection timeout in seconds
+  \-I, \-\-ignore\-times          don'\&t skip files that match size and time
+      \-\-size\-only             skip files that match in size
++     \-\-times\-only            skip files that match in mod\-time
+      \-\-modify\-window=NUM     compare mod\-times with reduced accuracy
+  \-T, \-\-temp\-dir=DIR          create temporary files in directory DIR
+  \-y, \-\-fuzzy                 find similar file for basis if no dest file
+@@ -530,6 +531,8 @@ to the detailed description below for a
+      \-\-write\-batch=FILE      write a batched update to FILE
+      \-\-only\-write\-batch=FILE like \-\-write\-batch but w/o updating dest
+      \-\-read\-batch=FILE       read a batched update from FILE
++     \-\-source\-filter=COMMAND filter file through COMMAND at source
++     \-\-dest\-filter=COMMAND   filter file through COMMAND at destination
+      \-\-protocol=NUM          force an older protocol version to be used
+      \-\-iconv=CONVERT_SPEC    request charset conversion of filenames
+      \-\-checksum\-seed=NUM     set block/file checksum seed (advanced)
+@@ -2894,6 +2897,35 @@ file previously generated by \fB\-\-writ
+ If \fIFILE\fP is \fB\-\fP, the batch data will be read from standard input.
+ See the \(dq\&BATCH MODE\(dq\& section for details.
+ .IP 
++.IP "\fB\-\-source\-filter=COMMAND\fP"
++This option allows the user to specify a
++filter program that will be applied to the contents of all transferred
++regular files before the data is sent to destination.  COMMAND will receive
++the data on its standard input and it should write the filtered data to
++standard output.  COMMAND should exit non\-zero if it cannot process the
++data or if it encounters an error when writing the data to stdout.
++.IP 
++Example: \-\-source\-filter=\(dq\&gzip \-9\(dq\& will cause remote files to be
++compressed.
++Use of \-\-source\-filter automatically enables \-\-whole\-file.
++If your filter does not output the same number of bytes that it received on
++input, you should use \-\-times\-only to disable size and content checks on
++subsequent rsync runs.
++.IP 
++.IP "\fB\-\-dest\-filter=COMMAND\fP"
++This option allows you to specify a filter
++program that will be applied to the contents of all transferred regular
++files before the data is written to disk.  COMMAND will receive the data on
++its standard input and it should write the filtered data to standard
++output.  COMMAND should exit non\-zero if it cannot process the data or if
++it encounters an error when writing the data to stdout.
++.IP 
++Example: \-\-dest\-filter=\(dq\&gzip \-9\(dq\& will cause remote files to be compressed.
++Use of \-\-dest\-filter automatically enables \-\-whole\-file.
++If your filter does not output the same number of bytes that it
++received on input, you should use \-\-times\-only to disable size and
++content checks on subsequent rsync runs.
++.IP 
+ .IP "\fB\-\-protocol=NUM\fP"
+ Force an older protocol version to be used.  This
+ is useful for creating a batch file that is compatible with an older

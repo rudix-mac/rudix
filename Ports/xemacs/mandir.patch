@@ -1,0 +1,11 @@
+--- configure.orig	2012-11-17 15:40:31.000000000 -0200
++++ configure	2012-11-17 15:40:41.000000000 -0200
+@@ -1114,7 +1114,7 @@
+ psdir='${docdir}'
+ libdir='${exec_prefix}/lib'
+ localedir='${datarootdir}/locale'
+-mandir='${datarootdir}/man'
++mandir='${datarootdir}/man/man1'
+ 
+ ac_prev=
+ ac_dashdash=

@@ -1,7 +1,0 @@
-Tornado is an open source version of the scalable, non-blocking web server and tools that power FriendFeed.
-
-  * Site: http://www.tornadoweb.org/
-  * License: Apache
-
-Release Notes:
-  * Upgraded to version 2.3

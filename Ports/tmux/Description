@@ -1,7 +1,0 @@
-tmux is a terminal multiplexer: it enables a number of terminals (or windows) to be created, accessed, and controlled from a single screen.
-
-  * Site: http://tmux.sourceforge.net/
-  * License: BSD
-
-Release Notes:
-  * Upgraded to version 1.7

@@ -6,10 +6,11 @@ Title=		Apache HTTPd
 Name=		httpd
 Version=	2.4.2
 Revision=	0
+Site=		http://httpd.apache.org/
 URL=		http://ftp.unicamp.br/pub/apache//httpd/
 Source=		$(Name)-$(Version).tar.bz2
+License=	Apache
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 GnuConfigureExtra += --enable-layout=Rudix

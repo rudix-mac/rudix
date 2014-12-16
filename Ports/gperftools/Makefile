@@ -2,13 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		Gperftools
 Name=		gperftools
-Version=	2.0
-Revision=	1
-URL=		http://gperftools.googlecode.com/files/
+Version=	2.3
+Revision=	0
+Site=		http://code.google.com/p/gperftools/
+URL=		https://googledrive.com/host/0B6NtGsLhIcf7MWxMMF9JdTN3UVk
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	BSD
 
 EnvExtra += MACOSX_DEPLOYMENT_TARGET=10.3
 

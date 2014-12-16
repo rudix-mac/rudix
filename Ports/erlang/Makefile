@@ -1,24 +1,30 @@
 include ../../Library/GNU.mk
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	R15B02
+Version=	17.3
 Revision=	0
+Site=		http://www.erlang.org/
 URL=		http://www.erlang.org/download/
 Source=		otp_src_$(Version).tar.gz
-
-UncompressedName=otp_src_$(Version)
+License=	EPL
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/EPLICENCE
+
+UncompressedName=otp_src_$(Version)
 
 define retrieve_post_hook
 $(fetch) $(URL)/otp_doc_html_$(Version).tar.gz
 $(fetch) $(URL)/otp_doc_man_$(Version).tar.gz
 endef
 
-#GnuConfigureExtra += --enable-darwin-universal
+ifneq ($(OSXVersion),10.6)
 GnuConfigureExtra += --enable-darwin-64bit
+endif
 
 define install_post_hook
 tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \

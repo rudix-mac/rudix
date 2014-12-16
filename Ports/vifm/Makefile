@@ -1,19 +1,16 @@
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		Vifm
 Name=		vifm
-Version=	0.7.2
+Version=	0.7.3a
 Revision=	0
+Site=		http://vifm.sourceforge.net/index.html
 URL=		http://sourceforge.net/projects/vifm/files/vifm/
 Source=		$(Name)-$(Version).tar.bz2
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-define explode
-mkdir -p $(Name)-$(Version) ; cd $(Name)-$(Version) ; tar zxvf ../$(Source)
-endef
+License=	GPL
 
 GnuConfigureExtra += --with-gtk=no
+
+define test_inner_hook
+$(BinDir)/vifm --version | grep $(Version)
+endef

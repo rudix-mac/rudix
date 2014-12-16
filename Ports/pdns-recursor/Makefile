@@ -4,13 +4,12 @@ include ../../Library/GNU.mk
 
 Title=		PowerDNS Recursor
 Name=		pdns-recursor
-Version=	3.3
+Version=	3.5.2
 Revision=	0
+Site=		http://www.powerdns.com/
 URL=		http://downloads.powerdns.com/releases/
 Source=		$(Name)-$(Version).tar.bz2
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	GPL
 
 define test_inner_hook
 $(SBinDir)/pdns_recursor --version || [ $$? == 99 ]

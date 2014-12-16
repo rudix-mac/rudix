@@ -1,11 +1,47 @@
 #
-# Rudix.mk - The BuildSystem itself
+# The Rudix BuildSystem itself.
 #
-# Copyright (c) 2005-2012 Rudá Moura
+# Copyright © 2005-2014 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20121026
+BuildSystem = 20141029
+
+# Get user preferences (if defined)
+-include ~/.rudix.conf
+
+OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
+Arch = $(shell sysctl -n hw.machine)
+NumCPU = $(shell sysctl -n hw.ncpu)
+
+ifeq ($(OSXVersion),10.10)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.9)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.8)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.7)
+RUDIX_UNIVERSAL?=no
+else ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL?=yes
+else
+RUDIX_UNIVERSAL?=yes
+endif
+
+ifeq ($(RUDIX_UNIVERSAL),yes)
+RUDIX_DISABLE_DEPENDENCY_TRACKING?=yes
+else
+RUDIX_DISABLE_DEPENDENCY_TRACKING?=no
+endif
+
+RUDIX_SAVE_CONFIGURE_CACHE?=yes
+RUDIX_STRIP_PACKAGE?=yes
+RUDIX_ENABLE_NLS?=yes
+RUDIX_BUILD_WITH_STATIC_LIBS?=yes
+RUDIX_BUILD_STATIC_LIBS?=no
+RUDIX_BUILD_STATIC?=no
+RUDIX_PARALLEL_EXECUTION?=yes
+RUDIX_RUN_ALL_TESTS?=yes
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -13,23 +49,39 @@ PortDir := $(shell pwd)
 SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
+DestDir= $(PortDir)/$(InstallDir)
+ReadMeFile = $(SourceDir)/README
+LicenseFile = $(SourceDir)/COPYING
+
+ifeq ($(RUDIX_BUILD_STATIC),yes)
+RUDIX_BUILD_STATIC_LIBS=yes
+DistName = static-$(Name)
+else
 DistName = $(Name)
+endif
+
 PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 
 #
 # Build flags options
 #
-Arch = $(shell sysctl -n hw.machine)
-NumCPU = $(shell sysctl -n hw.ncpu)
-ifeq ($(RUDIX_UNIVERSAL),yes)
-ArchFlags = -arch i386 -arch x86_64
-else ifeq ($(RUDIX_UNIVERSAL),no)
-ArchFlags = -arch $(Arch)
+ifeq ($(OSXVersion),10.10)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.9)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.8)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.7)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+else ifeq ($(OSXVersion),10.6)
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch i386)
+else
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
 endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags)
-CxxFlags = $(CFlags)
+CxxFlags = $(ArchFlags) $(OptFlags)
 LdFlags = $(ArchFlags)
 
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
@@ -53,8 +105,32 @@ ManDir = $(DataDir)/man
 InfoDir = $(DataDir)/info
 
 #
-# Framework
+# Select Python version
 #
+ifeq ($(OSXVersion),10.10)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.9)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.8)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.7)
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
+else ifeq ($(OSXVersion),10.6)
+Python = /usr/bin/python2.6
+PythonSitePackages = /Library/Python/2.6/site-packages
+else
+Python = /usr/bin/python2.5
+PythonSitePackages = /Library/Python/2.5/site-packages
+endif
+
+#
+# Framework (hooks)
+#
+
 all: pkg
 
 # Retrieve source
@@ -84,6 +160,15 @@ build: prep $(BuildRequires)
 	@$(call info_color,Done)
 	@touch $@
 
+# Check build
+check: build
+	@$(call info_color,Checking build)
+	@$(call check_pre_hook)
+	@$(call check_inner_hook)
+	@$(call check_post_hook)
+	@$(call info_color,Done)
+	@touch $@
+
 # Install into a temporary directory
 install: build
 	@$(call info_color,Installing)
@@ -103,7 +188,7 @@ pkg: install
 	@touch $@
 
 # Run all tests
-test: pkg
+test: pkg check
 	@$(call info_color,Testing)
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
@@ -115,10 +200,10 @@ installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg *.pmdoc
+	rm -rf pkg *.pkg Distribution Resources
 
 clean: installclean
-	rm -rf checksum prep build test $(SourceDir) *~
+	rm -rf checksum prep build check test $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f config.cache*
@@ -126,45 +211,35 @@ distclean: clean pkgclean
 realdistclean: distclean
 	rm -f retrieve $(Source)
 
-pmdoc:
-	$(create_pmdoc)
-	$(sanitize_pmdoc)
-
-wiki:
-	@env Name="$(Name)" Title="$(Title)" PkgFile="$(PkgFile)" \
-		../../Library/mkwikipage.py
-
-upload: pkg test
-	@$(call info_color,Sending $(PkgFile))
-	../../Library/googlecode_upload.py -p $(RUDIX) -s "$(Title)" -d Description -l $(RUDIX_LABELS) $(PkgFile)
-	@echo "$(Title): $(DistName)-$(Version)-$(Revision) http://code.google.com/p/rudix/wiki/$(DistName)"
-	@echo git tag $(DistName)-$(Version)-$(Revision)
-
-
-# FIXME: Temporary hack to build static packages.
-static: buildclean installclean
-	make pkg \
-		RUDIX_BUILD_STATIC_LIBS=yes \
-		DistName=static-$(Name)
-	@touch $@
+static: prep installclean buildclean
+	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
 
 help:
-	@echo "Construction rules:"
-	@echo "  retrieve - Retrieve source"
-	@echo "  prep - After Prepare source to compile"
-	@echo "  build - Build source"
+	@echo "Rudix BuildSystem"
+	@echo "-----------------"
+	@echo "Port rules:"
+	@echo "  retrieve - Retrieve source from the Internet"
+	@echo "  prep - Expand/uncompress source"
+	@echo "  build - Build port"
+	@echo "  check - Check build (run internal tests)"
 	@echo "  install - Install into a temporary directory"
-	@echo "  pkg - Create package"
-	@echo "  test - Run all tests"
+	@echo "  pkg - Create package from the temporary directory"
+	@echo "  test - Run tests (install and run more test)"
 	@echo "Clean-up rules:"
-	@echo "  clean - Clean up until retrieve"
-	@echo "  distclean - After clean, remove config.cache and package"
-	@echo "  realdistclean - After distclean, remove source"
+	@echo "  clean - Clean files but leaves retrieve alone"
+	@echo "  distclean - Do clean, plus remove config.cache and package"
+	@echo "  realdistclean - Do distclean, plus remove source"
+	@echo "Other rules:"
+	@echo "  help - This help message"
+	@echo "  about - Display information about the port."
+	@echo "  static - Create package with static libraries."
 
 about:
-	@echo "$(Name): $(Title) $(Version)-$(Revision)"
-
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean sanitizepmdoc wiki upload help about
+	@echo "---"
+	@echo "$(Title) ($(Name)-$(Version)-$(Revision))"
+	@echo "Site: $(Site)"
+	@echo "License: $(License)"
+	@echo "Source: $(URL)/$(Source)"
 
 #
 # Functions
@@ -208,44 +283,38 @@ for x in $(wildcard *.patch patches/*.patch) ; do \
 	patch -p0 -d $(SourceDir) < $$x ; done
 endef
 
-define create_pmdoc
-../../Library/mkpmdoc.py \
-	--name $(Name) \
+define create_distribution
+../../Library/synthesize_distribution.py \
+	--title "$(Title) $(Version)" \
+	--pkgid $(PkgId) \
+	--name $(DistName) \
+	--installpkg $(Name)install.pkg \
+	$(if $(Requires),$(foreach req,$(Requires),--requires $(req)))
+endef
+
+define create_resources
+mkdir -p Resources/en.lproj
+cp -av $(ReadMeFile) Resources/en.lproj/ReadMe
+cp -av $(LicenseFile) Resources/en.lproj/License
+cp -av ../../Library/Introduction Resources/en.lproj/Welcome
+cp -av ../../Library/rudix.png Resources/en.lproj/background
+endef
+
+define create_installpkg
+pkgbuild \
+	--identifier $(PkgId) \
 	--version $(Version)-$(Revision) \
-	--title "$(Title)" \
-	--description Description \
-	--readme $(ReadMeFile) \
-	--license $(LicenseFile) \
-	--components '$(Components)' \
-	--index --pkgref \
-	.
+	--root $(InstallDir) \
+	--install-location / \
+	$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
+	$(Name)install.pkg
 endef
 
 define create_pkg
-$(RUDIX_PACKAGEMAKER) \
-	--doc $(Name).pmdoc \
-	--id $(PkgId) \
-	--version $(Version)-$(Revision) \
-	--title "$(Title) $(Version)" \
-$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
-	--out $(PortDir)/$(PkgFile)
-endef
-
-define apply_recommendations
-rm -f $(Name).pmdoc/*-contents.xml
-open $(Name).pmdoc
-../../Library/apply_recommendations.sh $(Name).pmdoc
-endef
-
-define sanitize_pmdoc
-for x in $(Name).pmdoc/*-contents.xml ; do \
-	perl -p -i -e 's/o="[^"]*"/o="root"/ ; s/pt="[^"]*"/pt="$(Name)-install"/' $$x ; done
-for x in $(Name).pmdoc/*.xml ; do \
-	xmllint --format --output $$x $$x ; done
-endef
-
-define check_pmdoc
-grep root $(Name).pmdoc/*-contents.xml >/dev/null
+productbuild \
+	--distribution Distribution \
+	--resources Resources \
+	$(PkgFile)
 endef
 
 define configure
@@ -256,38 +325,48 @@ define make
 $(MAKE) $(MakeFlags)
 endef
 
+define make_install
+$(MAKE) $(MakeInstallFlags) install
+endef
+
 define verify_universal
-lipo $1 -verify_arch i386 x86_64 2>/dev/null || $(call warning_color,file $1 is not an Universal Binary)
+../../Library/fatty.py $1 || $(call warning_color,file $1 is not an Universal Binary)
 endef
 
 ifeq ($(RUDIX_UNIVERSAL),yes)
 define test_universal
-@$(call info_color,Starting Universal Binaries test)
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+@$(call info_color,Testing for Universal Binaries)
+for x in $(wildcard $(DestDir)$(BinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(SBinDir)/*) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.dylib) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.a) ; do \
 	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(PythonSitePackages)/*/*.so) ; do \
+for x in $(wildcard $(DestDir)$(PythonSitePackages)/*/*.so) ; do \
 	$(call verify_universal,$$x) ; done
 endef
 endif
 
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
-for x in $(wildcard $(InstallDir)/$(BinDir)/*) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
+	if ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
-for x in $(wildcard $(InstallDir)/$(SBinDir)/*) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Binary $$x linked with non-native dynamic library) ; \
+for x in $(wildcard $(InstallDir)$(SBinDir)/*) ; do \
+	if  ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
-for x in $(wildcard $(InstallDir)/$(LibDir)/*.dylib) ; do \
-	if otool -L $$x | grep -q '/usr/local/lib/' ; then $(call warning_color,Library $$x linked with non-native dynamic library) ; \
+for x in $(wildcard $(InstallDir)$(LibDir)/*.dylib) ; do \
+	if ../../Library/display_dylibs.py \
+		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
+	then $(call error_color,Library $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 endef
@@ -300,9 +379,9 @@ done
 endef
 
 define install_base_documentation
-install -d $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(ReadMeFile) $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(LicenseFile) $(InstallDir)/$(DocDir)/$(Name)
+install -d $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
 endef
 
 define test_documentation
@@ -314,13 +393,13 @@ endef
 ifeq ($(RUDIX_STRIP_PACKAGE),yes)
 define strip_macho
 $(call info_color,Stripping binaries)
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(BinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(BinDir)/*) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(SBinDir)/*) ; do \
+for x in $(wildcard $(DestDir)$(SBinDir)/*) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.dylib) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.dylib) ; do \
 	strip -x $$x ; done
-for x in $(wildcard $(PortDir)/$(InstallDir)/$(LibDir)/*.a) ; do \
+for x in $(wildcard $(DestDir)$(LibDir)/*.a) ; do \
 	strip -x $$x ; done
 endef
 endif
@@ -341,26 +420,30 @@ endef
 
 define pkg_inner_hook
 $(strip_macho)
-$(create_pmdoc)
-$(apply_recommendations)
-$(sanitize_pmdoc)
-$(check_pmdoc)
+$(create_installpkg)
+$(create_distribution)
+$(create_resources)
 $(create_pkg)
 endef
 
 define test_pre_hook
-$(test_build)
 $(test_universal)
 $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
 @$(call info_color,Uninstalling previous package)
-sudo ../../Library/poof.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
+@echo "Administrator (root) credentials required"
+sudo ../../Library/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
 @$(call info_color,Installing the new package)
-sudo installer -pkg $(PkgFile) -target /
+@echo "Administrator (root) credentials required"
+sudo ../../Library/installer.py $(PkgFile)
 endef
 
 define test_post_hook
 @$(call info_color,Uninstalling package)
-sudo ../../Library/poof.py $(Vendor).pkg.$(DistName)
+@echo "Administrator (root) credentials required"
+sudo ../../Library/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || \
+	$(call warning_color,Possible dirty uninstall)
 endef
+
+.PHONY: buildclean installclean pkgclean clean distclean realdistclean help about

@@ -4,11 +4,12 @@ Title=		Squid
 Name=		squid
 Version=	2.7
 AltVersion=	STABLE9-20110824
-Revision=	0
+Revision=	1
+Site=		http://www.squid-cache.org/
 URL=		http://www.squid-cache.org/Versions/v2/$(Version)/
 Source=		$(Name)-$(Version).$(AltVersion).tar.bz2
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName = $(Name)-$(Version).$(AltVersion)

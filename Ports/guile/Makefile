@@ -1,23 +1,25 @@
 BuildRequires += $(LibDir)/libgmp.la  # gmp version 5
 BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libltdl.la # static-libtool
 
 include ../../Library/GNU.mk
 
 Title=		GNU Guile
 Name=		guile
 Version=	1.8.8
-Revision=	0
+Revision=	1
+Site=		http://www.gnu.org/software/guile/
 URL=		http://ftp.gnu.org/gnu/guile/
 Source=		guile-$(Version).tar.gz
+License=	LGPL
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 EnvExtra += 	LIBFFI_CFLAGS="-I/usr/include/ffi"
 EnvExtra +=	LIBFFI_LIBS="-L/usr/local/lib -lffi"
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv # for static libintl
+LdFlags += -framework CoreFoundation -liconv
 endif
 
 define install_post_hook
@@ -25,5 +27,9 @@ install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Na
 endef
 
 define final_post_hook
-$(BinDir)/guile -v
+$(BinDir)/guile -v | grep $(Version)
 endef
+
+ifeq ($(OSXVersion),10.6)
+RUDIX_UNIVERSAL=no
+endif

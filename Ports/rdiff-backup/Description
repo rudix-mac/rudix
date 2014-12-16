@@ -1,7 +1,0 @@
-Rdiff-backup backs up one directory to another, possibly over a network.
-
-  * Site: http://rdiff-backup.nongnu.org/
-  * License: GPL
-
-Release Notes:
-  * Fix issue 64 (Symbol not found: _rs_file_copy_cb)

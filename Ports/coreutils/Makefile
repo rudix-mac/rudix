@@ -1,25 +1,15 @@
-# Requires xz package to uncompress .tar.gz
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		GNU Core Utilities
 Name=		coreutils
-Version=	8.15
+Version=	8.23
 Revision=	0
+Site=		http://www.gnu.org/software/coreutils/
 URL=		http://ftp.gnu.org/gnu/coreutils/
 Source=		$(Name)-$(Version).tar.xz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-define prep_post_hook
-perl -p -i -e s/'intl '//g $(SourceDir)/configure
-endef
-endif
+License=	GPL
 
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes
 GnuConfigureExtra +=  --program-prefix=gnu
@@ -27,4 +17,8 @@ GnuConfigureExtra +=  --program-prefix=gnu
 define install_post_hook
 $(PortDir)/mklinks.sh $(InstallDir)$(BinDir)
 $(PortDir)/mklinks.sh $(InstallDir)$(Prefix)/share/man/man1
+endef
+
+define test_inner_hook
+$(BinDir)/gnuyes --version | grep $(Version)
 endef

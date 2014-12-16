@@ -1,14 +1,20 @@
+# Nmap bundles with the libraries it requires
+
+# BUG: libdnet won't build as shared library
+RUDIX_BUILD_STATIC_LIBS=
+
 include ../../Library/GNU.mk
 
 Title=		Nmap
 Name=		nmap
-Version=	6.01
+Version=	6.40
 Revision=	0
+Site=		http://nmap.org/
 URL=		http://nmap.org/dist/
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/HACKING
-LicenseFile=	$(SourceDir)/COPYING
 
 GnuConfigureExtra += --without-zenmap
 

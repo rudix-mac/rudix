@@ -1,8 +1,0 @@
-Multilanguage implementation of ctags.
-
-  * Site: http://ctags.sourceforge.net/
-  * License: GPL
-
-Release Notes:
-  * Fixed (null) errors
-  * Restored symlinks to exuberant-ctags and exuberant-etags

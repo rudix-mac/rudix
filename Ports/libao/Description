@@ -1,8 +1,0 @@
-Libao is a cross-platform audio library that allows programs to output audio using a simple API on a wide variety of platforms.
-
-  * Site: http://xiph.org/ao/
-  * License: GPL
-
-Release Notes:
-  * Rebuild on Xcode 4.3
-

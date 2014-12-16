@@ -1,7 +1,0 @@
-GNU libintl (GNU gettext runtime).
-
-  * Site: http://www.gnu.org/software/gettext/
-  * License: GPL
-
-Release Notes:
-  * Rebuild on Xcode 4.3

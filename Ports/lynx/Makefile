@@ -1,18 +1,17 @@
-BuildRequires += /usr/local/lib/libintl.la
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
 Title=		Lynx
 Name=		lynx
-Version=	2.8.7
-Revision=	3
-URL=		http://lynx.isc.org/release/
-Source=		$(Name)$(Version).tar.bz2
+Version=	2.8.8
+Revision=	1
+Site=		http://lynx.isc.org
+URL=		http://lynx.isc.org/current/
+Source=		$(Name)$(Version)rel.2.tar.bz2
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-UncompressedName = lynx2-8-7
+UncompressedName=lynx2-8-8
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation
@@ -28,5 +27,5 @@ install -m 644 $(SourceDir)/{CHANGES,COPYHEADER*,PROBLEMS} $(InstallDir)/$(DocDi
 endef
 
 define test_inner_hook
-$(call test_universal)
+$(BinDir)/lynx --version | grep $(Version)
 endef

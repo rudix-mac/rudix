@@ -4,17 +4,15 @@ include ../../Library/Python.mk
 
 Title=		Offline IMAP
 Name=		offlineimap
-Version=	6.5.4
+Version=	6.5.6
 Revision=	0
-URL=		https://github.com/downloads/spaetz/offlineimap
-Source=		$(Name)-v$(Version).tar.gz
+Site=		http://offlineimap.org/
+URL=		https://github.com/OfflineIMAP/offlineimap/archive
+Source=		v$(Version).tar.gz
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+ReadMeFile=	$(SourceDir)/README.md
 
-UncompressedName = spaetz-offlineimap-c9e9690
-
-#define prep_post_hook
-## http://www.mail-archive.com/fink-users@lists.sourceforge.net/msg31539.html
-#/usr/bin/sed -i -e 's/^from/import locale; from/' $(Name)/bin/offlineimap
-#endef
+define test_inner_hook
+$(BinDir)/offlineimap --version | grep $(Version)
+endef

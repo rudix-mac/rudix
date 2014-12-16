@@ -1,23 +1,22 @@
-BuildRequires += $(LibDir)/libpng.la
+BuildRequires += $(LibDir)/libpng.la # static-libpng
 
-include ../../Library/Config.mk
-RUDIX_ENABLE_NLS=
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/Configure.mk
 
 Title=		OptiPNG
 Name=		optipng
-Version=	0.7
+Version=	0.7.5
 Revision=	0
-URL=		http://sourceforge.net/projects/optipng/files/OptiPNG/$(Name)-$(Version)/
+Site=		http://optipng.sourceforge.net/
+URL=		http://downloads.sourceforge.net/optipng
 Source=		$(Name)-$(Version).tar.gz
+License=	zlib
 
-ReadMeFile=	$(BuildDir)/README.txt
-LicenseFile=	$(BuildDir)/LICENSE.txt
+ReadMeFile=	$(SourceDir)/README.txt
+LicenseFile=	$(SourceDir)/LICENSE.txt
 
-GnuMakeInstallExtra+= mandir=$(ManDir)
-GnuConfigureExtra += --with-system-libpng
+MakeInstallExtra += mandir=$(ManDir)
+ConfigureExtra += --with-system-libpng
 
-define gnu_configure
-./configure $(GnuConfigureExtra)
+define test_inner_hook
+$(BinDir)/optipng --version | grep $(Version)
 endef

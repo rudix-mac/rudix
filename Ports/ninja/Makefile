@@ -1,26 +1,16 @@
-include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 
-Title=		ninja
+Title=		Ninja Build System
 Name=		ninja
-Version=	120715
+Version=	1.5.1
 Revision=	0
-URL=		git://github.com/martine
-Source=		ninja.git
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-define retrieve_inner_hook
-git clone $(URL)/$(Source) $(SourceDir)
-endef
-
-define prep_inner_hook
-$(apply_patches)
-endef
+Site=		http://martine.github.com/ninja/
+URL=		https://github.com/martine/ninja/archive
+Source=		v$(Version).tar.gz
+License=	Apache License
 
 define build_inner_hook
-cd $(BuildDir) ; ./bootstrap.py
+cd $(BuildDir) && ./bootstrap.py
 endef
 
 define install_inner_hook
@@ -30,5 +20,5 @@ $(install_base_documentation)
 endef
 
 define test_inner_hook
-cd $(BuildDir) ; ./ninja
+cd $(BuildDir) && ./ninja
 endef

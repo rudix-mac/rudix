@@ -3,13 +3,8 @@ include ../../Library/GNU.mk
 Title=		Libusb
 Name=		libusb
 Version=	1.0.9
-Revision=	0
-URL=		http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-$(Version)/
+Revision=	1
+Site=		http://www.libusb.org/
+URL=		http://downloads.sourceforge.net/libusb
 Source=		$(Name)-$(Version).tar.bz2
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
+License=	LGPL

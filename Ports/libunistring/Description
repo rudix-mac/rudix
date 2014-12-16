@@ -1,7 +1,0 @@
-Libunistring provides functions for manipulating Unicode strings.
-
-  * Site: http://www.gnu.org/s/libunistring/
-  * License: GPL
-
-Release Notes:
-  * Rebuild on Xcode 4.3

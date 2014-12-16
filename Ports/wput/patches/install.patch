@@ -1,0 +1,21 @@
+--- Makefile.in.orig	2014-06-07 18:01:07.000000000 -0300
++++ Makefile.in	2014-06-07 18:02:47.000000000 -0300
+@@ -16,12 +16,12 @@
+ 
+ install: all
+ 	cd po && $(MAKE) $(MAKEDEFS) $@
+-	mkdir -p $(bindir) 
+-	mkdir -p $(mandir) 
+-	install -m0755 wput $(bindir)
+-	install -m0644 doc/wput.1.gz $(mandir)
+-	ln -s $(bindir)/wput $(bindir)/wdel
+-	install -m0644 doc/wdel.1.gz $(mandir)
++	mkdir -p $(DESTDIR)$(bindir) 
++	mkdir -p $(DESTDIR)$(mandir) 
++	install -m0755 wput $(DESTDIR)$(bindir)
++	install -m0644 doc/wput.1.gz $(DESTDIR)$(mandir)
++	cd $(DESTDIR)$(bindir) && ln -s wput wdel
++	install -m0644 doc/wdel.1.gz $(DESTDIR)$(mandir)
+ 	@echo "----------------"
+ 	@echo "Wput and Wdel installed. See 'wput/wdel -h' or 'man wput/wdel' for"
+ 	@echo "usage information."

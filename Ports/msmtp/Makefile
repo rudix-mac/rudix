@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/pkg-config
+BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libidn.la # static-libidn
 
@@ -6,13 +6,13 @@ include ../../Library/GNU.mk
 
 Title=		msmtp
 Name=		msmtp
-Version=	1.4.28
+Version=	1.4.31
 Revision=	0
+Site=		http://msmtp.sourceforge.net/
 URL=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv

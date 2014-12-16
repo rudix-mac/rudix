@@ -3,11 +3,12 @@ include ../../Library/Unix.mk
 Title=		IMAP UW
 Name=		imap
 Version=	2007f
-Revision=	0
+Revision=	1
+Site=		http://www.washington.edu/imap/
 URL=		ftp://ftp.cac.washington.edu/mail/
 Source=		$(Name)-$(Version).tar.gz
+License=	Apache License 2.0
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define build_inner_hook

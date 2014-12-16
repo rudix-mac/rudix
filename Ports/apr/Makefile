@@ -1,13 +1,14 @@
 include ../../Library/GNU.mk
 
-Title=		APR
+Title=		Apache Portable Runtime
 Name=		apr
 Version=	1.4.6
-Revision=	1
+Revision=	2
+Site=		http://apr.apache.org/
 URL=		http://www.apache.org/dist/apr
 Source=		$(Name)-$(Version).tar.bz2
+License=	Apache License
 
-ReadMeFile=	$(BuildDir)/README
 LicenseFile=	$(BuildDir)/LICENSE
 
 GnuConfigureExtra += --with-installbuilddir=/usr/local/share/apr-1/build-1
@@ -17,10 +18,6 @@ define install_post_hook
 install -m 644 $(BuildDir)/docs/* $(InstallDir)/$(DocDir)/$(Name)
 rm $(InstallDir)$(LibDir)/apr.exp
 endef
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
 
 define test_inner_hook
 $(BinDir)/apr-1-config --version

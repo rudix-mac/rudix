@@ -1,16 +1,16 @@
-include ../../Library/Config.mk
-RUDIX_UNIVERSAL=
 include ../../Library/Rudix.mk
 
 Title=		P7ZIP
 Name=		p7zip
 Version=	9.20.1
-Revision=	0
+Revision=	1
+Site=		http://p7zip.sourceforge.net/
 URL=		http://downloads.sourceforge.net/$(Name)
+Site=		http://p7zip.sourceforge.net/
 URL=		http://sourceforge.net/projects/p7zip/files/p7zip/$(Version)/
 Source=		$(Name)_$(Version)_src_all.tar.bz2
+License=	LGPL
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/DOCS/License.txt
 
 UncompressedName = $(Name)_$(Version)

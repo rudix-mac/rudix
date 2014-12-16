@@ -2,12 +2,14 @@ include ../../Library/Python.mk
 
 Title=		Tornado
 Name=		tornado
-Version=	2.3
+Version=	3.1
 Revision=	0
-URL=		http://github.com/downloads/facebook/tornado/
+Site=		http://www.tornadoweb.org/
+URL=		https://pypi.python.org/packages/source/t/tornado
 Source=		$(Name)-$(Version).tar.gz
+License=	Apache
 
-ReadMeFile=	$(SourceDir)/README
+ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	LICENSE-2.0
 
 define test_inner_hook

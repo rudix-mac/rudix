@@ -1,7 +1,0 @@
-libusb is a C library which gives applications easy access to USB devices on many different operating systems.
-
-  * Site: http://www.libusb.org/
-  * License: LGPL
-
-Release Notes:
-  * Featuring in Rudix 2012

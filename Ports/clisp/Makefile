@@ -1,14 +1,20 @@
+BuildRequires += $(LibDir)/libsigsegv.la
+
 include ../../Library/Configure.mk
 
 Title=		CLISP
 Name=		clisp
 Version=	2.49
 Revision=	0
+Site=		http://www.clisp.org/
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/SUMMARY
 LicenseFile=	$(SourceDir)/COPYRIGHT
+
+BuildDir=$(SourceDir)/src
 
 #ifdef WITH_STATIC_NLS
 #LDFLAGS+=	-framework CoreFoundation -liconv
@@ -19,7 +25,6 @@ LicenseFile=	$(SourceDir)/COPYRIGHT
 #DEPENDS+=	$(LibDir)/libintl.la
 #DEPENDS+=	$(LibDir)/libsigsegv.la
 #DEPENDS+=	$(LibDir)/libavcall.la
-
 
 ifdef FOO
 install: build

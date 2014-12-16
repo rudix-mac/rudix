@@ -1,13 +1,14 @@
-include ../../Library/Config.mk
 include ../../Library/Rudix.mk
 
 Title=		Boost C++ Libraries
 Name=		boost
-Version=	1.49.0
-AltVersion=	1_49_0
-Revision=	1
+Version=	1.57.0
+AltVersion=	1_57_0
+Revision=	0
+Site=		http://www.boost.org/
 URL=		http://downloads.sourceforge.net/boost
 Source=		$(Name)_$(AltVersion).tar.bz2
+License=	MIT-like
 
 ReadMeFile=	$(SourceDir)/index.html
 LicenseFile=	$(SourceDir)/LICENSE_1_0.txt
@@ -29,4 +30,5 @@ $(install_base_documentation)
 endef
 
 define test_inner_hook
+$(BinDir)/bjam -v | grep Boost.Jam
 endef

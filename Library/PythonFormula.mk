@@ -1,47 +1,39 @@
-# PythonFormula.mk - Pyhton Formula
 #
-# Copyright (c) 2011-2012 Ruda Moura
-# Authors: Ruda Moura, Leonardo Santagada
+# Python Formula.
+#
+# Copyright © 2011-2014 Rudix
+# Authors: Rudá Moura, Leonardo Santagada
 #
 
-#
-# Python versions
-#
-# Default
-Python = $(Python2.7)
-PythonSitePackages = $(PythonSitePackages2.7)
-# 2.7
-Python2.7 = /usr/bin/python2.7
-PythonSitePackages2.7 = /Library/Python/2.7/site-packages
-# 2.6
-Python2.6 = /usr/bin/python2.6
-PythonSitePackages2.6 = /Library/Python/2.6/site-packages
+EnvExtra = CFLAGS="$(CFlags)" \
+	   CXXFLAGS="$(CxxFlags)" \
+	   LDFLAGS="$(LdFlags)" \
+	   ARCHFLAGS="$(ArchFlags)"
 
 define build_inner_hook
-cd $(BuildDir) ; \
-env CFLAGS="$(CFlags)" \
-	CXXFLAGS="$(CxxFlags)" \
-	LDFLAGS="$(LdFlags)" \
-	ARCHFLAGS="$(ArchFlags)" $(EnvExtra) \
-$(Python) setup.py build $(SetupExtra)
+cd $(BuildDir) && \
+env $(EnvExtra) $(Python) setup.py $(SetupExtra) build
 endef
 
 define install_inner_hook
-cd $(BuildDir) ; \
-$(Python) setup.py install $(SetupInstallExtra) \
+cd $(BuildDir) && \
+$(Python) \
+	setup.py install $(SetupInstallExtra) \
 	--no-compile \
-	--root=$(PortDir)/$(InstallDir) \
+	--root=$(DestDir) \
 	--prefix=$(Prefix) \
 	--install-lib=$(PythonSitePackages)
-cd $(BuildDir) ; \
-$(Python) -m compileall -d / $(PortDir)/$(InstallDir)
+cd $(BuildDir) && $(Python) -m compileall -d / $(DestDir)
 $(install_base_documentation)
 endef
 
-define test_build
-cd $(BuildDir) ; $(Python) setup.py test || $(call error_color,One or more tests failed)
+ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
+define check_inner_hook
+cd $(BuildDir) && \
+$(Python) setup.py test || $(call error_color,One or more tests failed)
 endef
+endif
 
 buildclean:
-	cd $(BuildDir) ; $(Python) setup.py clean
-	rm -f build
+	cd $(BuildDir) && $(Python) setup.py clean || $(call warning_color,Cannot clean)
+	rm -f build check

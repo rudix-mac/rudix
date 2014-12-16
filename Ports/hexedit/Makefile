@@ -1,13 +1,13 @@
 include ../../Library/GNU.mk
 
-Title=		hexedit
+Title=		Hexedit
 Name=		hexedit
 Version=	1.2.12
-Revision=	6
+Revision=	7
+Site=		http://www.chez.com/prigaux/hexedit.html
 URL=		http://www.chez.com/prigaux/
 Source=		$(Name)-$(Version).src.tgz
+License=	GPL
 
-ReadMeFile=	$(PortDir)/ReadMe.txt
-LicenseFile=	$(SourceDir)/COPYING
-
+ReadMeFile=	README
 UncompressedName = hexedit

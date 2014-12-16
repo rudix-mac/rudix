@@ -1,3 +1,0 @@
-#!/bin/sh
-[ ! -f /usr/local/etc/asciidoc/asciidoc.conf ] && cp -f /usr/local/etc/asciidoc/asciidoc.conf.default /usr/local/etc/asciidoc/asciidoc.conf
-exit 0

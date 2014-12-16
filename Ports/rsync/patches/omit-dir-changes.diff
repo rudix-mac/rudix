@@ -1,0 +1,169 @@
+This patch from Antti Tapaninen added the --omit-dir-changes option, which
+tells rsync to not affect any attributes on the directories in the transfer.
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/omit-dir-changes.diff
+    ./configure                              (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/generator.c b/generator.c
+--- a/generator.c
++++ b/generator.c
+@@ -44,6 +44,7 @@ extern int preserve_hard_links;
+ extern int preserve_executability;
+ extern int preserve_perms;
+ extern int preserve_times;
++extern int omit_dir_changes;
+ extern int delete_mode;
+ extern int delete_before;
+ extern int delete_during;
+@@ -485,6 +486,7 @@ void itemize(const char *fnamecmp, struct file_struct *file, int ndx, int statre
+ 	     const char *xname)
+ {
+ 	if (statret >= 0) { /* A from-dest-dir statret can == 1! */
++		int omit_changes = omit_dir_changes && S_ISDIR(sxp->st.st_mode);
+ 		int keep_time = !preserve_times ? 0
+ 		    : S_ISDIR(file->mode) ? preserve_times & PRESERVE_DIR_TIMES
+ 		    : S_ISLNK(file->mode) ? preserve_times & PRESERVE_LINK_TIMES
+@@ -511,10 +513,11 @@ void itemize(const char *fnamecmp, struct file_struct *file, int ndx, int statre
+ 		} else if (preserve_executability
+ 		 && ((sxp->st.st_mode & 0111 ? 1 : 0) ^ (file->mode & 0111 ? 1 : 0)))
+ 			iflags |= ITEM_REPORT_PERMS;
+-		if (uid_ndx && am_root && (uid_t)F_OWNER(file) != sxp->st.st_uid)
++		if (uid_ndx && am_root && !omit_changes
++		 && (uid_t)F_OWNER(file) != sxp->st.st_uid)
+ 			iflags |= ITEM_REPORT_OWNER;
+-		if (gid_ndx && !(file->flags & FLAG_SKIP_GROUP)
+-		    && sxp->st.st_gid != (gid_t)F_GROUP(file))
++		if (gid_ndx && !omit_changes
++		 && !(file->flags & FLAG_SKIP_GROUP) && sxp->st.st_gid != (gid_t)F_GROUP(file))
+ 			iflags |= ITEM_REPORT_GROUP;
+ #ifdef SUPPORT_ACLS
+ 		if (preserve_acls && !S_ISLNK(file->mode)) {
+@@ -1391,7 +1394,7 @@ static void recv_generator(char *fname, struct file_struct *file, int ndx,
+ 		real_ret = statret;
+ 		if (file->flags & FLAG_DIR_CREATED)
+ 			statret = -1;
+-		if (!preserve_perms) { /* See comment in non-dir code below. */
++		if (!preserve_perms || omit_dir_changes) { /* See comment in non-dir code below. */
+ 			file->mode = dest_mode(file->mode, sx.st.st_mode,
+ 					       dflt_perms, statret == 0);
+ 		}
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -61,6 +61,7 @@ int preserve_specials = 0;
+ int preserve_uid = 0;
+ int preserve_gid = 0;
+ int preserve_times = 0;
++int omit_dir_changes = 0;
+ int update_only = 0;
+ int cvs_exclude = 0;
+ int dry_run = 0;
+@@ -711,6 +712,7 @@ void usage(enum logcode F)
+   rprintf(F," -t, --times                 preserve modification times\n");
+   rprintf(F," -O, --omit-dir-times        omit directories from --times\n");
+   rprintf(F," -J, --omit-link-times       omit symlinks from --times\n");
++  rprintf(F,"     --omit-dir-changes      omit directories from any attribute changes\n");
+   rprintf(F,"     --super                 receiver attempts super-user activities\n");
+ #ifdef SUPPORT_XATTRS
+   rprintf(F,"     --fake-super            store/recover privileged attrs using xattrs\n");
+@@ -873,6 +875,7 @@ static struct poptOption long_options[] = {
+   {"omit-link-times", 'J', POPT_ARG_VAL,    &omit_link_times, 1, 0, 0 },
+   {"no-omit-link-times",0, POPT_ARG_VAL,    &omit_link_times, 0, 0, 0 },
+   {"no-J",             0,  POPT_ARG_VAL,    &omit_link_times, 0, 0, 0 },
++  {"omit-dir-changes", 0,  POPT_ARG_NONE,   &omit_dir_changes, 0, 0, 0 },
+   {"modify-window",    0,  POPT_ARG_INT,    &modify_window, OPT_MODIFY_WINDOW, 0, 0 },
+   {"super",            0,  POPT_ARG_VAL,    &am_root, 2, 0, 0 },
+   {"no-super",         0,  POPT_ARG_VAL,    &am_root, 0, 0, 0 },
+@@ -2157,6 +2160,9 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 		parse_filter_str(&filter_list, backup_dir_buf, rule_template(0), 0);
+ 	}
+ 
++	if (omit_dir_changes)
++		omit_dir_times = 1;
++
+ 	if (preserve_times) {
+ 		preserve_times = PRESERVE_FILE_TIMES;
+ 		if (!omit_dir_times)
+@@ -2408,6 +2414,8 @@ void server_options(char **args, int *argc_p)
+ 			argstr[x++] = 'O';
+ 		if (omit_link_times)
+ 			argstr[x++] = 'J';
++		if (omit_dir_changes == 1)
++			args[ac++] = "--omit-dir-changes";
+ 		if (fuzzy_basis) {
+ 			argstr[x++] = 'y';
+ 			if (fuzzy_basis > 1)
+diff --git a/rsync.c b/rsync.c
+--- a/rsync.c
++++ b/rsync.c
+@@ -33,6 +33,7 @@ extern int preserve_xattrs;
+ extern int preserve_perms;
+ extern int preserve_executability;
+ extern int preserve_times;
++extern int omit_dir_changes;
+ extern int am_root;
+ extern int am_server;
+ extern int am_daemon;
+@@ -489,9 +490,11 @@ int set_file_attrs(const char *fname, struct file_struct *file, stat_x *sxp,
+ 		get_acl(fname, sxp);
+ #endif
+ 
+-	change_uid = am_root && uid_ndx && sxp->st.st_uid != (uid_t)F_OWNER(file);
++	change_uid = am_root && uid_ndx && sxp->st.st_uid != (uid_t)F_OWNER(file)
++		  && !(omit_dir_changes && S_ISDIR(sxp->st.st_mode));
+ 	change_gid = gid_ndx && !(file->flags & FLAG_SKIP_GROUP)
+-		  && sxp->st.st_gid != (gid_t)F_GROUP(file);
++		  && sxp->st.st_gid != (gid_t)F_GROUP(file)
++		  && !(omit_dir_changes && S_ISDIR(sxp->st.st_mode));
+ #ifndef CAN_CHOWN_SYMLINK
+ 	if (S_ISLNK(sxp->st.st_mode)) {
+ 		;
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -374,6 +374,7 @@ to the detailed description below for a complete description.  verb(
+  -t, --times                 preserve modification times
+  -O, --omit-dir-times        omit directories from --times
+  -J, --omit-link-times       omit symlinks from --times
++     --omit-dir-changes      omit directories from any attribute changes
+      --super                 receiver attempts super-user activities
+      --fake-super            store/recover privileged attrs using xattrs
+  -S, --sparse                handle sparse files efficiently
+@@ -1192,6 +1193,10 @@ directories.
+ dit(bf(-J, --omit-link-times)) This tells rsync to omit symlinks when
+ it is preserving modification times (see bf(--times)).
+ 
++dit(bf(--omit-dir-changes)) This tells rsync to omit directories when applying
++any preserved attributes (owner, group, times, permissions) to already existing
++directories.
++
+ dit(bf(--super)) This tells the receiving side to attempt super-user
+ activities even if the receiving rsync wasn't run by the super-user.  These
+ activities include: preserving users via the bf(--owner) option, preserving
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -450,6 +450,7 @@ to the detailed description below for a
+  \-t, \-\-times                 preserve modification times
+  \-O, \-\-omit\-dir\-times        omit directories from \-\-times
+  \-J, \-\-omit\-link\-times       omit symlinks from \-\-times
++     \-\-omit\-dir\-changes      omit directories from any attribute changes
+      \-\-super                 receiver attempts super\-user activities
+      \-\-fake\-super            store/recover privileged attrs using xattrs
+  \-S, \-\-sparse                handle sparse files efficiently
+@@ -1368,6 +1369,11 @@ directories.
+ This tells rsync to omit symlinks when
+ it is preserving modification times (see \fB\-\-times\fP).
+ .IP 
++.IP "\fB\-\-omit\-dir\-changes\fP"
++This tells rsync to omit directories when applying
++any preserved attributes (owner, group, times, permissions) to already existing
++directories.
++.IP 
+ .IP "\fB\-\-super\fP"
+ This tells the receiving side to attempt super\-user
+ activities even if the receiving rsync wasn\(cq\&t run by the super\-user.  These

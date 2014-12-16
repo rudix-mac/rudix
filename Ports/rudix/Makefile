@@ -1,24 +1,23 @@
 include ../../Library/Unix.mk
 
+Site=		https://github.com/rudix-mac/rpm/
 Title=		Rudix Package Manager
 Name=		rudix
-Version=	12.10
+Version=	2014.10
 Revision=	0
-URL=		https://github.com/downloads/rudix-mac/package-manager
-Source=		$(Name)-$(Version).tar.gz
+URL=		https://github.com/rudix-mac/rpm/archive
+Source=		$(Version).tar.gz
+License=	BSD
 
-ReadMeFile=	$(SourceDir)/README.md
+UncompressedName=rpm-$(Version)
+
+ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook
-$(Python) tests.py
+cd $(BuildDir) && make test
 endef
 
 define test_inner_hook
-$(BinDir)/rudix
-sudo $(BinDir)/rudix install wget
-$(BinDir)/rudix available | wc -l
-$(BinDir)/rudix search rudix
-$(BinDir)/rudix update
-sudo $(BinDir)/rudix remove wget
+$(BinDir)/rudix --version | grep $(Version)
 endef

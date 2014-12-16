@@ -1,0 +1,8 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/lynx.cfg ] && \
+    install -m 644 $3/usr/local/etc/lynx.cfg.default \
+        $3/usr/local/etc/lynx.cfg
+[ ! -f $3/usr/local/etc/lynx.lss ] && \
+    install -m 644 $3/usr/local/etc/lynx.lss.default \
+        $3/usr/local/etc/lynx.lss
+exit 0

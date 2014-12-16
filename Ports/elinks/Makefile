@@ -1,19 +1,15 @@
-include ../../Library/Config.mk
-RUDIX_UNIVERSAL=
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
 Title=		ELinks
 Name=		elinks
 Version=	0.13
-Revision=	0
+Revision=	3
+Site=		http://elinks.cz/
 URL=		http://elinks.or.cz/download/
 Source=		$(Name)-current-$(Version).tar.bz2
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-UncompressedName = elinks-$(Version)-20120407
+UncompressedName=elinks-$(Version)-20140427
 
 define make
 make
@@ -24,5 +20,5 @@ rm -rf $(InstallDir)/$(LibDir)
 endef
 
 define test_inner_hook
-/usr/local/bin/elinks --version
+$(BinDir)/elinks --version | grep $(Version)
 endef

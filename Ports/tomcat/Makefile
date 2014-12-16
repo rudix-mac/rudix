@@ -1,16 +1,17 @@
-include ../../Library/Config.mk
 RUDIX_STRIP_PACKAGE=no
 include ../../Library/Rudix.mk
 
 Title=		Apache Tomcat
 Name=		tomcat
-Version=	7.0.27
+Version=	7.0.42
 Revision=	0
+Site=		http://tomcat.apache.org/
 URL=		http://archive.apache.org/dist/tomcat/tomcat-7/v$(Version)/bin
 Source=		apache-tomcat-$(Version).tar.gz
+License=	Apache License
 
-ReadMeFile=	README
-LicenseFile=	LICENSE
+ReadMeFile=	$(DestDir)$(LibDir)/tomcat/RELEASE-NOTES
+LicenseFile=	$(DestDir)$(LibDir)/tomcat/LICENSE
 
 define prep_inner_hook
 endef

@@ -1,7 +1,0 @@
-GNU cflow analyzes a collection of C source files and prints a graph, charting control flow within the program.
-
-  * Site: http://www.gnu.org/software/cflow/
-  * License: GPL
-
-Release Notes:
-  * Rebuild on Xcode 4.3

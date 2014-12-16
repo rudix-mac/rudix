@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/nsd/nsd.conf ] && \
+    install -m 644 $3/usr/local/etc/nsd/nsd.conf.sample \
+        $3/usr/local/etc/nsd/nsd.conf
+exit 0

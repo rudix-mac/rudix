@@ -1,0 +1,136 @@
+This patch adds the --sparse-block option.  Andrea Righi writes:
+
+  In some filesystems, typically optimized for large I/O throughputs (like
+  IBM GPFS, IBM SAN FS, or distributed filesystems in general) a lot of
+  lseek() operations can strongly impact on performances. In this cases it
+  can be helpful to enlarge the block size used to handle sparse files
+  directly from a command line parameter.
+
+  For example, using a sparse write size of 32KB, I've been able to
+  increase the transfer rate of an order of magnitude copying the output
+  files of scientific applications from GPFS to GPFS or GPFS to SAN FS.
+
+  -Andrea
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/sparse-block.diff
+    ./configure                               (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/fileio.c b/fileio.c
+--- a/fileio.c
++++ b/fileio.c
+@@ -34,6 +34,7 @@
+ #define ALIGNED_LENGTH(len) ((((len) - 1) | (ALIGN_BOUNDRY-1)) + 1)
+ 
+ extern int sparse_files;
++extern int sparse_files_block_size;
+ 
+ static OFF_T sparse_seek = 0;
+ 
+@@ -130,7 +131,7 @@ int write_file(int f, char *buf, int len)
+ 	while (len > 0) {
+ 		int r1;
+ 		if (sparse_files > 0) {
+-			int len1 = MIN(len, SPARSE_WRITE_SIZE);
++			int len1 = MIN(len, sparse_files_block_size);
+ 			r1 = write_sparse(f, buf, len1);
+ 		} else {
+ 			if (!wf_writeBuf) {
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -75,6 +75,7 @@ int remove_source_files = 0;
+ int one_file_system = 0;
+ int protocol_version = PROTOCOL_VERSION;
+ int sparse_files = 0;
++long sparse_files_block_size = SPARSE_WRITE_SIZE;
+ int preallocate_files = 0;
+ int do_compression = 0;
+ int def_compress_level = NOT_SPECIFIED;
+@@ -716,6 +717,7 @@ void usage(enum logcode F)
+   rprintf(F,"     --fake-super            store/recover privileged attrs using xattrs\n");
+ #endif
+   rprintf(F," -S, --sparse                handle sparse files efficiently\n");
++  rprintf(F,"     --sparse-block=SIZE     set the block size used to handle sparse files\n");
+ #ifdef SUPPORT_PREALLOCATION
+   rprintf(F,"     --preallocate           allocate dest files before writing them\n");
+ #else
+@@ -924,6 +926,7 @@ static struct poptOption long_options[] = {
+   {"sparse",          'S', POPT_ARG_VAL,    &sparse_files, 1, 0, 0 },
+   {"no-sparse",        0,  POPT_ARG_VAL,    &sparse_files, 0, 0, 0 },
+   {"no-S",             0,  POPT_ARG_VAL,    &sparse_files, 0, 0, 0 },
++  {"sparse-block",     0,  POPT_ARG_LONG,   &sparse_files_block_size, 0, 0, 0 },
+   {"preallocate",      0,  POPT_ARG_NONE,   &preallocate_files, 0, 0, 0},
+   {"inplace",          0,  POPT_ARG_VAL,    &inplace, 1, 0, 0 },
+   {"no-inplace",       0,  POPT_ARG_VAL,    &inplace, 0, 0, 0 },
+@@ -2570,6 +2573,12 @@ void server_options(char **args, int *argc_p)
+ 		args[ac++] = arg;
+ 	}
+ 
++	if (sparse_files_block_size) {
++		if (asprintf(&arg, "--sparse-block=%lu", sparse_files_block_size) < 0)
++			goto oom;
++		args[ac++] = arg;
++	}
++
+ 	if (io_timeout) {
+ 		if (asprintf(&arg, "--timeout=%d", io_timeout) < 0)
+ 			goto oom;
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -377,6 +377,7 @@ to the detailed description below for a complete description.  verb(
+      --super                 receiver attempts super-user activities
+      --fake-super            store/recover privileged attrs using xattrs
+  -S, --sparse                handle sparse files efficiently
++     --sparse-block=SIZE     set block size used to handle sparse files
+      --preallocate           allocate dest files before writing
+  -n, --dry-run               perform a trial run with no changes made
+  -W, --whole-file            copy files whole (w/o delta-xfer algorithm)
+@@ -1248,6 +1249,15 @@ filesystem, but with this option rsync will probably copy more slowly.  If the
+ destination is not an extent-supporting filesystem (such as ext4, xfs, NTFS,
+ etc.), this option may have no positive effect at all.
+ 
++dit(bf(--sparse-block=SIZE)) Change the block size used to handle sparse files
++to SIZE bytes.  This option only has an effect if the bf(--sparse) (bf(-S))
++option was also specified.  The default block size used by rsync to detect a
++file hole is 1024 bytes; when the receiver writes data to the destination file
++and option bf(--sparse) is used, rsync checks every 1024-bytes chunk to detect
++if they are actually filled with data or not.  With certain filesystems,
++optimized to receive data streams for example, enlarging this block size can
++strongly increase performance.  The option can be used to tune this block size.
++
+ dit(bf(-n, --dry-run)) This makes rsync perform a trial run that doesn't
+ make any changes (and produces mostly the same output as a real run).  It
+ is most commonly used in combination with the bf(-v, --verbose) and/or
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -453,6 +453,7 @@ to the detailed description below for a
+      \-\-super                 receiver attempts super\-user activities
+      \-\-fake\-super            store/recover privileged attrs using xattrs
+  \-S, \-\-sparse                handle sparse files efficiently
++     \-\-sparse\-block=SIZE     set block size used to handle sparse files
+      \-\-preallocate           allocate dest files before writing
+  \-n, \-\-dry\-run               perform a trial run with no changes made
+  \-W, \-\-whole\-file            copy files whole (w/o delta\-xfer algorithm)
+@@ -1431,6 +1432,16 @@ filesystem, but with this option rsync w
+ destination is not an extent\-supporting filesystem (such as ext4, xfs, NTFS,
+ etc.), this option may have no positive effect at all.
+ .IP 
++.IP "\fB\-\-sparse\-block=SIZE\fP"
++Change the block size used to handle sparse files
++to SIZE bytes.  This option only has an effect if the \fB\-\-sparse\fP (\fB\-S\fP)
++option was also specified.  The default block size used by rsync to detect a
++file hole is 1024 bytes; when the receiver writes data to the destination file
++and option \fB\-\-sparse\fP is used, rsync checks every 1024\-bytes chunk to detect
++if they are actually filled with data or not.  With certain filesystems,
++optimized to receive data streams for example, enlarging this block size can
++strongly increase performance.  The option can be used to tune this block size.
++.IP 
+ .IP "\fB\-n, \-\-dry\-run\fP"
+ This makes rsync perform a trial run that doesn\(cq\&t
+ make any changes (and produces mostly the same output as a real run).  It

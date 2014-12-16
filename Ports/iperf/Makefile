@@ -3,9 +3,12 @@ include ../../Library/GNU.mk
 Title=		Iperf
 Name=		iperf
 Version=	2.0.5
-Revision=	1
-URL=		http://sourceforge.net/projects/iperf/files/
+Revision=	2
+Site=		http://iperf.sourceforge.net/
+URL=		http://downloads.sourceforge.net/iperf
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+define test_inner_hook
+$(BinDir)/iperf
+endef

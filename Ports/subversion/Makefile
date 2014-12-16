@@ -1,23 +1,20 @@
-BuildRequires += $(BinDir)/pkg-config
-BuildRequires += $(LibDir)/libneon.la
-BuildRequires += $(LibDir)/libintl.la
+BuildRequires += $(BinDir)/pkg-config # pkg-config
+BuildRequires += $(LibDir)/libneon.la # static-neon
+BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
 Title=		Apache Subversion
 Name=		subversion
-Version=	1.7.6
+Version=	1.8.10
 Revision=	0
-URL=		http://ftp.unicamp.br/pub/apache/subversion/
+Site=		http://subversion.apache.org/
+URL=		http://www.us.apache.org/dist/subversion/
 Source=		$(Name)-$(Version).tar.bz2
+License=	Apache License
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
-define install_post_hook
-mv $(InstallDir)/usr/libexec $(InstallDir)/$(Prefix)/libexec
-endef
-
 define test_inner_hook
-$(BinDir)/svn --version
+$(BinDir)/svn --version | grep $(Version)
 endef

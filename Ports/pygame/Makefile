@@ -30,7 +30,6 @@ URL=		http://www.pygame.org/ftp/
 Source=		$(Name)-$(Version)release.tar.gz
 UncompressedName= $(Name)-$(Version)release
 
-ReadMeFile=	$(BuildDir)/README.txt
 LicenseFile=	$(BuildDir)/LGPL
 
 Components= <component id="SDL" path="$(PortDir)/$(InstallDir)/Library/Frameworks/SDL.framework" version="1.2.14"/>

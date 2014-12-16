@@ -1,7 +1,0 @@
-SQLite is a in-process library that implements a self-contained transactional SQL database engine.
-
-  * Site: http://www.sqlite.org/
-  * License: Public Domain
-
-Release Notes:
-  * Upgraded to version 3.7.13

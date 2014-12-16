@@ -1,26 +1,28 @@
-BuildRequires += $(BinDir)/pkg-config
-BuildRequires += $(LibDir)/libintl.la
-BuildRequires += $(LibDir)/libglib-2.0.la
-BuildRequires += $(LibDir)/libgmodule-2.0.la
+BuildRequires += $(BinDir)/pkg-config # comapt-pkg-config
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
+BuildRequires += $(LibDir)/libgmodule-2.0.la # static-glib
 
 include ../../Library/GNU.mk
 
 Title=		Midnight Commander
 Name=		mc
-Version=	4.8.3
+Version=	4.8.7
 Revision=	0
+Site=		http://www.midnight-commander.org/
 URL=		http://www.midnight-commander.org/downloads/
 Source=		$(Name)-$(Version).tar.bz2
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	GPL
 
 #GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += --with-screen=ncurses
-GnuConfigureExtra += --with-x
+GnuConfigureExtra += --without-x
 #GnuConfigureExtra += --enable-vfs-smb
 #GnuConfigureExtra += --with-glib-static # Bogus?
-#GnuConfigureExtra += --enable-static --disable-shared
+
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
+LdFlags += -framework CoreFoundation -liconv -framework CoreServices
+endif
 
 define fetch
 curl -f -O -C - -L -k
@@ -33,5 +35,5 @@ install -d $(InstallDir)/$(Prefix)/etc/mc
 endef
 
 define final_post_hook
-$(BinDir)/mc --version
+$(BinDir)/mc --version | grep $(Version)
 endef

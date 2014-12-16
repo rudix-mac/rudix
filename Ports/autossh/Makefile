@@ -1,22 +1,21 @@
 # Author: Stefan Jol <stefanjol@gmail.com>
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/ConfigureFormula.mk
+include ../../Library/Configure.mk
 
 Title=		autossh
 Name=		autossh
-Version=	1.4c
+Version=	1.4d
 Revision=	0
+Site=		http://www.harding.motd.ca/autossh/
 URL=		http://www.harding.motd.ca/autossh/
 Source=		$(Name)-$(Version).tgz
+License=	Unknown (Freeware)
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/README
+LicenseFile=	LICENSE
 
-MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/usr/local
-MakeInstallExtra += mandir=$(PortDir)/$(InstallDir)/usr/local/share/man
+MakeInstallExtra += prefix=$(DestDir)$(Prefix)
+MakeInstallExtra += mandir=$(DestDir)$(ManDir)
 
 define test_inner_hook
-$(BinDir)/autossh -V
+$(BinDir)/autossh -V | grep $(Version)
 endef

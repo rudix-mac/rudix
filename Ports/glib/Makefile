@@ -1,22 +1,17 @@
 # Requires xz to extract source
+BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(BinDir)/pkg-config # pkgconfig
 
 include ../../Library/GNU.mk
 
-BuildRequires += $(LibDir)/libintl.la
-
 Title=		GLib
 Name=		glib
-Version=	2.33.2
+Version=	2.40.2
 Revision=	0
-URL=		http://ftp.gnome.org/pub/GNOME/sources/glib/2.33
+Site=		http://www.gtk.org/
+URL=		http://ftp.gnome.org/pub/gnome/sources/glib/2.40
 Source=		$(Name)-$(Version).tar.xz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif
+License=	GPL
 
 EnvExtra += LIBFFI_CFLAGS="-I/usr/include/ffi"
 EnvExtra += LIBFFI_LIBS="-L/usr/local/lib -lffi"

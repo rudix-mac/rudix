@@ -2,13 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		AsciiDoc
 Name=		asciidoc
-Version=	8.6.7
+Version=	8.6.9
 Revision=	0
+Site=		http://www.methods.co.nz/asciidoc/
 URL=		http://sourceforge.net/projects/asciidoc/files/asciidoc/$(Version)/
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
+License=	GPL
 
 define install_post_hook
 mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \
@@ -17,9 +16,8 @@ endef
 
 # Do nothing
 define test_inner_hook
-echo Nothing to test here
 endef
 
 define test_inner_hook
-/usr/local/bin/asciidoc
+$(BinDir)/asciidoc
 endef

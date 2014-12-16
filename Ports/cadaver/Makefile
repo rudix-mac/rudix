@@ -1,14 +1,13 @@
 include ../../Library/GNU.mk
 
-Title=		cadaver
+Title=		Cadaver
 Name=		cadaver
 Version=	0.23.3
-Revision=	4
+Revision=	5
+Site=		http://www.webdav.org/cadaver/
 URL=		http://www.webdav.org/cadaver/
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	GPL
 
 GnuConfigureExtra += --with-ssl
 
@@ -25,5 +24,5 @@ install -m 644 $(SourceDir)/{FAQ,INTEROP} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
-$(call test_universal)
+$(BinDir)/cadaver --version | grep $(Version)
 endef

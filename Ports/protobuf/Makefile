@@ -2,10 +2,16 @@ include ../../Library/GNU.mk
 
 Title=		Protocol Buffers
 Name=		protobuf
-Version=	2.4.1
-Revision=	3
-URL=		http://protobuf.googlecode.com/files/
+Version=	2.6.1
+Revision=	0
+Site=		https://developers.google.com/protocol-buffers/
+URL=		https://github.com/google/protobuf/releases/download/$(Version)
 Source=		$(Name)-$(Version).tar.bz2
+License=	BSD
 
-ReadMeFile=	$(SourceDir)/README.txt
-LicenseFile=	$(SourceDir)/COPYING.txt
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/LICENSE
+
+define test_inner_hook
+$(BinDir)/protoc --version | grep $(Version)
+endef

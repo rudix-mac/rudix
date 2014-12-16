@@ -2,13 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		MTR
 Name=		mtr
-Version=	0.82
-Revision=	1
-URL=		ftp://ftp.bitwizard.nl/mtr/
-Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+Version=	0.85
+Revision=	0
+Site=		https://github.com/traviscross/mtr
+URL=		ftp://www.bitwizard.nl/mtr/
+Source=		mtr-$(Version).tar.gz
+License=	GPL
 
 ConfigureExtra += --without-gtk
 LdFlags += -lresolv
@@ -22,5 +21,5 @@ install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
-sudo $(SBinDir)/mtr --version
+sudo $(SBinDir)/mtr --version | grep $(Version)
 endef

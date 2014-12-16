@@ -1,20 +1,18 @@
-# Autoconf 2.62 or better is required.
-BuildRequires += $(BinDir)/autoconf
+BuildRequires += $(BinDir)/autoconf # autoconf >= 2.62
 
 include ../../Library/GNU.mk
 
 Title=		GNU Automake
 Name=		automake
-Version=	1.12.1
+Version=	1.14.1
 Revision=	0
+Site=		http://www.gnu.org/software/automake/
 URL=		http://ftp.gnu.org/gnu/automake/
 Source=		$(Name)-$(Version).tar.gz
+License=	GPL
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
-
-EnvExtra += AUTOCONF=/usr/local/bin/autoconf
+EnvExtra += AUTOCONF=$(BinDir)/autoconf
 
 define test_inner_hook
-$(BinDir)/automake --version
+$(BinDir)/automake --version | grep $(Version)
 endef

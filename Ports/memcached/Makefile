@@ -1,23 +1,22 @@
-BuildRequires += $(LibDir)/libevent.la
+BuildRequires += $(LibDir)/libevent.la # static-libevent
 
-include ../../Library/Config.mk
-include ../../Library/Rudix.mk
-include ../../Library/GNUFormula.mk
+include ../../Library/GNU.mk
 
-Title=		memcached
+Title=		Memcached
 Name=		memcached
-Version=	1.4.13
+Version=	1.4.21
 Revision=	0
-URL=		http://memcached.googlecode.com/files/
+Site=		http://memcached.org/
+URL=		http://www.memcached.org/files/
 Source=		$(Name)-$(Version).tar.gz
+License=	BSD
 
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+ReadMeFile=	$(SourceDir)/README.md
 
 define install_post_hook
 install -m 644 $(SourceDir)/{doc/CONTRIBUTORS,doc/*.txt} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_post_hook
-cd $(SourceDir) ; make test
+define test_inner_hook
+$(BinDir)/memcached -h | grep $(Version)
 endef

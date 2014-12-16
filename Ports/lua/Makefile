@@ -2,26 +2,32 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.2.1
-Revision=	0
+Version=	5.2.3
+Revision=	1
+Site=		http://www.lua.org/
 URL=		http://www.lua.org/ftp/
+#URL=		http://www.lua.org/work/
 Source=		$(Name)-$(Version).tar.gz
+Checksum=	926b7907bc8d274e063d42804666b40a3f3c124c
+License=	MIT
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	license.txt
 
-MakeExtra += macosx MYLDFLAGS="$(LdFlags)"
-MakeInstallExtra += INSTALL_TOP=$(PortDir)/$(InstallDir)$(Prefix)
-MakeInstallExtra += INSTALL_MAN=$(PortDir)/$(InstallDir)$(ManDir)/man1
+OptFlags=
+MakeExtra = MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
+MakeExtra += macosx
+MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
+MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 
 define install_post_hook
-install -m 644 $(SourceDir)/doc/* $(PortDir)/$(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 
 define check_post_hook
-otool -L $(InstallDir)/$(BinDir)/lua | grep libedit
+otool -L $(InstallDir)$(BinDir)/lua | grep libedit
+nm $(InstallDir)$(BinDir)/lua | grep _readline
 endef
 
 define test_inner_hook
-$(BinDir)/lua -v
+$(BinDir)/lua -v | grep $(Version)
 endef

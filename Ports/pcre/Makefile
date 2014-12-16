@@ -1,26 +1,27 @@
 include ../../Library/GNU.mk
 
+Description=	Perl Compatible Regular Expressions library
 Title=		PCRE
 Name=		pcre
-Version=	8.30
+Version=	8.36
 Revision=	0
-URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+Site=		http://www.pcre.org/
+#URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+URL=		http://downloads.sourceforge.net/pcre
 Source=		$(Name)-$(Version).tar.bz2
+Checksum=	9a074e9cbf3eb9f05213fd9ca5bc188644845ccc
+License=	BSD
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENCE
 
-GnuConfigureExtra += --enable-utf8
-
-define test_post_hook
-cd $(SourceDir) ; ./RunTest
-endef
+GnuConfigureExtra += --enable-jit
+GnuConfigureExtra += --enable-utf
+GnuConfigureExtra += --enable-unicode-properties
+GnuConfigureExtra += --enable-pcregrep-libz
+GnuConfigureExtra += --enable-pcregrep-libbz2
+GnuConfigureExtra += --enable-pcretest-libedit
 
 define test_inner_hook
-/usr/local/bin/pcre-config --version
-/usr/local/bin/pcregrep Version Makefile
+$(BinDir)/pcre-config --version | grep $(Version)
+$(BinDir)/pcregrep $(Version) Makefile
 endef
-
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-endif

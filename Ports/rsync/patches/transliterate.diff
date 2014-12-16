@@ -1,0 +1,221 @@
+This patch adds an option --tr=BAD/GOOD to transliterate filenames.  It
+can be used to remove characters illegal on the destination filesystem.
+Jeff Weber expressed interest in this:
+
+http://lists.samba.org/archive/rsync/2007-October/018996.html
+
+To use this patch, run these commands for a successful build:
+
+    patch -p1 <patches/transliterate.diff
+    ./configure                                 (optional if already run)
+    make
+
+based-on: 7cb0de6326c915a72253fd103dae93308031ec3f
+diff --git a/flist.c b/flist.c
+--- a/flist.c
++++ b/flist.c
+@@ -73,6 +73,7 @@ extern uid_t our_uid;
+ extern struct stats stats;
+ extern char *filesfrom_host;
+ extern char *usermap, *groupmap;
++extern char *tr_opt;
+ 
+ extern char curr_dir[MAXPATHLEN];
+ 
+@@ -99,6 +100,8 @@ int file_total = 0; /* total of all active items over all file-lists */
+ int file_old_total = 0; /* total of active items that will soon be gone */
+ int flist_eof = 0; /* all the file-lists are now known */
+ 
++char tr_substitutions[256];
++
+ #define NORMAL_NAME 0
+ #define SLASH_ENDING_NAME 1
+ #define DOTDIR_NAME 2
+@@ -668,6 +671,23 @@ static void send_file_entry(int f, const char *fname, struct file_struct *file,
+ 		stats.total_size += F_LENGTH(file);
+ }
+ 
++static void transliterate(char *path, int len)
++{
++	while (1) {
++		/* Find position of any char in tr_opt in path, or the end of the path. */
++		int span = strcspn(path, tr_opt);
++		if ((len -= span) == 0)
++			return;
++		path += span;
++		if ((*path = tr_substitutions[*(uchar*)path]) == '\0')
++			memmove(path, path+1, len--); /* copies the trailing '\0' too. */
++		else {
++			path++;
++			len--;
++		}
++	}
++}
++
+ static struct file_struct *recv_file_entry(int f, struct file_list *flist, int xflags)
+ {
+ 	static int64 modtime;
+@@ -733,9 +753,13 @@ static struct file_struct *recv_file_entry(int f, struct file_list *flist, int x
+ 			outbuf.len = 0;
+ 		}
+ 		thisname[outbuf.len] = '\0';
++		basename_len = outbuf.len;
+ 	}
+ #endif
+ 
++	if (tr_opt)
++		transliterate(thisname, basename_len);
++
+ 	if (*thisname
+ 	 && (clean_fname(thisname, CFN_REFUSE_DOT_DOT_DIRS) < 0 || (!relative_paths && *thisname == '/'))) {
+ 		rprintf(FERROR, "ABORTING due to unsafe pathname from sender: %s\n", thisname);
+@@ -2451,6 +2475,15 @@ struct file_list *recv_file_list(int f)
+ 			parse_name_map(usermap, True);
+ 		if (groupmap)
+ 			parse_name_map(groupmap, False);
++		if (tr_opt) { /* Parse FROM/TO string and populate tr_substitutions[] */
++			char *f, *t;
++			if ((t = strchr(tr_opt, '/')) != NULL)
++				*t++ = '\0';
++			else
++				t = "";
++			for (f = tr_opt; *f; f++)
++				tr_substitutions[*(uchar*)f] = *t ? *t++ : '\0';
++		}
+ 	}
+ 
+ 	start_read = stats.total_read;
+diff --git a/options.c b/options.c
+--- a/options.c
++++ b/options.c
+@@ -192,6 +192,7 @@ int logfile_format_has_i = 0;
+ int logfile_format_has_o_or_i = 0;
+ int always_checksum = 0;
+ int list_only = 0;
++char *tr_opt = NULL;
+ 
+ #define MAX_BATCH_NAME_LEN 256	/* Must be less than MAXPATHLEN-13 */
+ char *batch_name = NULL;
+@@ -803,6 +804,7 @@ void usage(enum logcode F)
+ #ifdef ICONV_OPTION
+   rprintf(F,"     --iconv=CONVERT_SPEC    request charset conversion of filenames\n");
+ #endif
++  rprintf(F,"     --tr=BAD/GOOD           transliterate filenames\n");
+   rprintf(F,"     --checksum-seed=NUM     set block/file checksum seed (advanced)\n");
+   rprintf(F," -4, --ipv4                  prefer IPv4\n");
+   rprintf(F," -6, --ipv6                  prefer IPv6\n");
+@@ -1023,6 +1025,7 @@ static struct poptOption long_options[] = {
+   {"iconv",            0,  POPT_ARG_STRING, &iconv_opt, 0, 0, 0 },
+   {"no-iconv",         0,  POPT_ARG_NONE,   0, OPT_NO_ICONV, 0, 0 },
+ #endif
++  {"tr",               0,  POPT_ARG_STRING, &tr_opt, 0, 0, 0 },
+   {"ipv4",            '4', POPT_ARG_VAL,    &default_af_hint, AF_INET, 0, 0 },
+   {"ipv6",            '6', POPT_ARG_VAL,    &default_af_hint, AF_INET6, 0, 0 },
+   {"8-bit-output",    '8', POPT_ARG_VAL,    &allow_8bit_chars, 1, 0, 0 },
+@@ -2338,6 +2341,24 @@ int parse_arguments(int *argc_p, const char ***argv_p)
+ 		}
+ 	}
+ 
++	if (tr_opt) {
++		if (*tr_opt == '/' && tr_opt[1]) {
++			snprintf(err_buf, sizeof err_buf,
++				"Do not start the --tr arg with a slash\n");
++			return 0;
++		}
++		if (*tr_opt && *tr_opt != '/') {
++			need_unsorted_flist = 1;
++			arg = strchr(tr_opt, '/');
++			if (arg && strchr(arg+1, '/')) {
++				snprintf(err_buf, sizeof err_buf,
++					"--tr cannot transliterate slashes\n");
++				return 0;
++			}
++		} else
++			tr_opt = NULL;
++	}
++
+ 	am_starting_up = 0;
+ 
+ 	return 1;
+@@ -2755,6 +2776,12 @@ void server_options(char **args, int *argc_p)
+ 	if (relative_paths && !implied_dirs && (!am_sender || protocol_version >= 30))
+ 		args[ac++] = "--no-implied-dirs";
+ 
++	if (tr_opt) {
++		if (asprintf(&arg, "--tr=%s", tr_opt) < 0)
++			goto oom;
++		args[ac++] = arg;
++	}
++
+ 	if (remove_source_files == 1)
+ 		args[ac++] = "--remove-source-files";
+ 	else if (remove_source_files)
+diff --git a/rsync.yo b/rsync.yo
+--- a/rsync.yo
++++ b/rsync.yo
+@@ -456,6 +456,7 @@ to the detailed description below for a complete description.  verb(
+      --read-batch=FILE       read a batched update from FILE
+      --protocol=NUM          force an older protocol version to be used
+      --iconv=CONVERT_SPEC    request charset conversion of filenames
++     --tr=BAD/GOOD           transliterate filenames
+      --checksum-seed=NUM     set block/file checksum seed (advanced)
+  -4, --ipv4                  prefer IPv4
+  -6, --ipv6                  prefer IPv6
+@@ -2581,6 +2582,22 @@ daemon uses the charset specified in its "charset" configuration parameter
+ regardless of the remote charset you actually pass.  Thus, you may feel free to
+ specify just the local charset for a daemon transfer (e.g. bf(--iconv=utf8)).
+ 
++dit(bf(--tr=BAD/GOOD)) Transliterates filenames on the receiver, after the
++iconv conversion (if any).  This can be used to remove characters illegal
++on the destination filesystem.  If you use this option, consider saving a
++"find . -ls" listing of the source in the destination to help you determine
++the original filenames in case of need.
++
++The argument consists of a string of characters to remove, optionally
++followed by a slash and a string of corresponding characters with which to
++replace them.  The second string may be shorter, in which case any leftover
++characters in the first string are simply deleted.  For example,
++bf(--tr=':\/!') replaces colons with exclamation marks and deletes backslashes.
++Slashes cannot be transliterated because it would cause havoc.
++
++If the receiver is invoked over a remote shell, use bf(--protect-args) to
++stop the shell from interpreting any nasty characters in the argument.
++
+ dit(bf(-4, --ipv4) or bf(-6, --ipv6)) Tells rsync to prefer IPv4/IPv6
+ when creating sockets.  This only affects sockets that rsync has direct
+ control over, such as the outgoing socket when directly contacting an
+diff -Nurp a/rsync.1 b/rsync.1
+--- a/rsync.1
++++ b/rsync.1
+@@ -532,6 +532,7 @@ to the detailed description below for a
+      \-\-read\-batch=FILE       read a batched update from FILE
+      \-\-protocol=NUM          force an older protocol version to be used
+      \-\-iconv=CONVERT_SPEC    request charset conversion of filenames
++     \-\-tr=BAD/GOOD           transliterate filenames
+      \-\-checksum\-seed=NUM     set block/file checksum seed (advanced)
+  \-4, \-\-ipv4                  prefer IPv4
+  \-6, \-\-ipv6                  prefer IPv6
+@@ -2934,6 +2935,23 @@ daemon uses the charset specified in its
+ regardless of the remote charset you actually pass.  Thus, you may feel free to
+ specify just the local charset for a daemon transfer (e.g. \fB\-\-iconv=utf8\fP).
+ .IP 
++.IP "\fB\-\-tr=BAD/GOOD\fP"
++Transliterates filenames on the receiver, after the
++iconv conversion (if any).  This can be used to remove characters illegal
++on the destination filesystem.  If you use this option, consider saving a
++\(dq\&find . \-ls\(dq\& listing of the source in the destination to help you determine
++the original filenames in case of need.
++.IP 
++The argument consists of a string of characters to remove, optionally
++followed by a slash and a string of corresponding characters with which to
++replace them.  The second string may be shorter, in which case any leftover
++characters in the first string are simply deleted.  For example,
++\fB\-\-tr='\&:\e/!'\&\fP replaces colons with exclamation marks and deletes backslashes.
++Slashes cannot be transliterated because it would cause havoc.
++.IP 
++If the receiver is invoked over a remote shell, use \fB\-\-protect\-args\fP to
++stop the shell from interpreting any nasty characters in the argument.
++.IP 
+ .IP "\fB\-4, \-\-ipv4\fP or \fB\-6, \-\-ipv6\fP"
+ Tells rsync to prefer IPv4/IPv6
+ when creating sockets.  This only affects sockets that rsync has direct

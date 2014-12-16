@@ -2,13 +2,12 @@ include ../../Library/Unix.mk
 
 Title=		Redis
 Name=		redis
-Version=	2.4.15
+Version=	2.8.17
 Revision=	0
-URL=		http://redis.googlecode.com/files/
+Site=		http://redis.io/
+URL=		http://download.redis.io/releases/
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	BSD
 
 BuildDir=	$(SourceDir)/src
 

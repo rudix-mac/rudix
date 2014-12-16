@@ -1,0 +1,10 @@
+#!/bin/sh
+# -*- mode: shell-script -*-
+
+if [ ! -d $3/usr/local/lib/cassandra/conf ] ; then
+    install -d -m 755 $3/usr/local/lib/cassandra/conf
+    cp -a $3/usr/local/lib/cassandra/conf.default/* \
+	$3/usr/local/lib/cassandra/conf/
+fi
+
+exit 0

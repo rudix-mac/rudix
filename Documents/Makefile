@@ -1,43 +1,21 @@
-###
-# A template Makefile
-# Remove the comments before commiting
-###
+include ../../Library/GNU.mk				# Required
+#include ../../Library/Configure.mk			# Alternative
+#include ../../Library/Unix.mk				# Alternative
+#include ../../Library/Python.mk			# Alternative
 
-###
-# Includes section
-#
-# This includes most config options
-include ../../Library/Config.mk
-# This is the base build system, it defines targets and a ton of macros
-include ../../Library/Rudix.mk
-# Next you chould choose one of the *Formulas that best fit your Port
-# if it is a python project
-#include ../../Library/PythonFormula.mk
-# or if it uses gnu configure / autotools
-#include ../../Library/GNUFormula.mk
-# or if it is just a make; make install simple package
-#include ../../Library/UnixFormula.mk
-###
+Title=		My Package				# Optional
+Name=		package					# Required
+Version=	1.2.3					# Required
+Revision=	0					# Required
+Site=		http://my.packages.com/			# Optional
+URL=		http://my.package.com/download/		# Required
+Source=		$(Name)-$(Version).tar.gz		# Required
+License=	GPL					# Optional
 
-###
-# Metadata section
-#
-Title=		Title Here
-Name=		simplename
-Version=	0.6.5
-# packages should start at revision 0
-Revision=	0
-URL=		http://url.to.download.package/
-# url is going to be concatenated to source to download the source
-Source=		$(Name)-$(Version).tar.gz
-# or tar.bz2 or zip
+ReadMeFile=     $(SourceDir)/README.txt			# Optional
+LicenseFile=    $(SourceDir)/COPYING.txt		# Optional
 
-ReadMeFile=	$(SourceDir)/README.txt
-LicenseFile=	$(SourceDir)/LICENSE.txt
-# rudix build needs this files, if the package don't have them you can create
-# those files on the port dir
-
-# if the directory created by uncompressing the tarball isn't
-# named $(Name)-$(Version) put the correct one in here
-#UncompressedName = $(Name)-$(Version)-source
-###
+# Optional, but recommended
+define test_inner_hook
+$(BinDir)/mypackage --version | grep $(Version)
+endef)

@@ -1,0 +1,11 @@
+--- setup.py.orig	2014-03-10 16:10:50.000000000 -0300
++++ setup.py	2014-03-11 21:14:37.000000000 -0300
+@@ -106,7 +106,7 @@
+     license = 'GNU LGPL',
+     keywords = 'test unittest doctest automatic discovery',
+     url = 'http://readthedocs.org/docs/nose/',
+-    data_files = [('man/man1', ['nosetests.1'])],
++    data_files = [('share/man/man1', ['nosetests.1'])],
+     package_data = {'': ['*.txt',
+                          'examples/*.py',
+                          'examples/*/*.py']},

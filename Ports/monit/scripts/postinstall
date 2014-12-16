@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/monitrc ] && \
+    install -m 600 $3/usr/local/etc/monitrc.default \
+    $3/usr/local/etc/monitrc
+exit 0

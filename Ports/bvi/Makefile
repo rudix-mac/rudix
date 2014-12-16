@@ -3,13 +3,12 @@ include ../../Library/GNU.mk
 Title=		Bvi
 Name=		bvi
 Version=	1.3.2
-Revision=	9
+Revision=	10
+Site=		http://bvi.sourceforge.net/
 URL=		http://downloads.sourceforge.net/$(Name)
 Source=		$(Name)-$(Version).src.tar.gz
-
-ReadMeFile=	$(BuildDir)/README
-LicenseFile=	$(BuildDir)/COPYING
+License=	GPL
 
 define test_inner_hook
-/usr/local/bin/bvi -c q
+$(BinDir)/bvi -c q
 endef

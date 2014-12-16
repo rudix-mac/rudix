@@ -1,13 +1,16 @@
 include ../../Library/GNU.mk
 
-Title=		GC
+Title=		Boehm-Demers-Weiser Garbage Collector
 Name=		gc
-Version=	7.2
+Version=	7.2e
 Revision=	0
-URL=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
+Site=		http://hboehm.info/gc/
+URL=		http://hboehm.info/gc/gc_source/
 Source=		$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	$(SourceDir)/include/gc.h
+
+UncompressedName=gc-7.2
 
 GnuConfigureExtra += --enable-cplusplu

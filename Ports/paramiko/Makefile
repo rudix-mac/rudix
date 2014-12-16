@@ -1,21 +1,25 @@
-BuildRequires += /Library/Python/2.7/site-packages/Crypto/
+BuildRequires += $(DocDir)/pycrypto # pycrypto
+Requires += org.rudix.pkg.pycrypto,pycrypto,pycryptoinstall.pkg
 
 include ../../Library/Python.mk
 
-Title=		Paramiko
+Title=		Paramiko (Python SSH module)
 Name=		paramiko
-Version=	1.7.7.1
+Version=	1.10.1
 Revision=	0
+Site=		http://www.lag.net/paramiko/
 URL=		http://www.lag.net/paramiko/download/
+Site=		http://www.lag.net/paramiko/
+URL=		https://pypi.python.org/packages/source/p/paramiko
 Source=		$(Name)-$(Version).tar.gz
+License=	LGPL
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook
-cd $(BuildDir) ; python test.py
+cd $(BuildDir) ; $(Python) test.py
 endef
 
 define test_inner_hook
-python -c 'import paramiko'
+$(Python) -c 'import paramiko'
 endef

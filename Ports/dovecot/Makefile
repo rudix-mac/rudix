@@ -1,14 +1,13 @@
 include ../../Library/GNU.mk
 
-Title=		dovecot
+Title=		Dovecot (Secure IMAP server)
 Name=		dovecot
-Version=	2.1.7
+Version=	2.2.15
 Revision=	0
-URL=		http://dovecot.org/releases/2.1/
+Site=		http://dovecot.org/
+URL=		http://dovecot.org/releases/2.2
 Source=		$(Name)-$(Version).tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	MIT+LGPL
 
 define test_inner_hook
 sudo $(SBinDir)/dovecot -c tests/dovecot.conf

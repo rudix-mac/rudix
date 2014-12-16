@@ -4,22 +4,17 @@ include ../../Library/GNU.mk
 
 Title=		Neon
 Name=		neon
-Version=	0.29.6
+Version=	0.30.1
 Revision=	0
+Site=		http://www.webdav.org/neon/
 URL=		http://www.webdav.org/neon/
 Source=		$(Name)-$(Version).tar.gz
+License=	LGPL
 
-ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
 GnuConfigureExtra += --with-ssl=openssl
 
-ifdef ONLY_STATIC_LIBS
-GnuConfigureExtra += --enable-static --disable-shared
-else
-GnuConfigureExtra += --enable-static --enable-shared
-endif
-
 define test_inner_hook
-$(BinDir)/neon-config --version
+$(BinDir)/neon-config --version | grep $(Version)
 endef

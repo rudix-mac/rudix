@@ -3,11 +3,16 @@ include ../../Library/GNU.mk
 Title=		Argtable
 Name=		argtable
 Version=	2.13
-Revision=	1
-URL=		http://sourceforge.net/projects/argtable/files/argtable/argtable-$(Version)/
+Revision=	3
+Site=		http://argtable.sourceforge.net
+URL=		http://downloads.sourceforge.net/argtable
 Source=		$(Name)2-13.tar.gz
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/COPYING
+License=	LGPL
 
 UncompressedName = $(Name)2-13
+
+GnuConfigureExtra += --docdir=$(DataDir)/doc/argtable
+
+define test_inner_hook
+cd $(BuildDir)/example && make LDFLAGS=-L$(LibDir)
+endef
