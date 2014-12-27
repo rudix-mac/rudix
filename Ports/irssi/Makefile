@@ -6,12 +6,13 @@ include ../../Library/GNU.mk
 
 Title=		Irssi
 Name=		irssi
-Version=	0.8.15
-Revision=	1
+Version=	0.8.17
+Revision=	0
 Site=		http://irssi.org/
 URL=		http://mirror.irssi.org/
 Source=		$(Name)-$(Version).tar.bz2
 License=	GPL
+ReadMeFile=	$(SourceDir)/README.md
 
 GnuConfigureExtra += --with-perl=no # disabled for now
 
@@ -26,5 +27,5 @@ mv $(InstallDir)/$(SysConfDir)/irssi.conf \
 endef
 
 define test_inner_hook
-$(BinDir)/irssi --version
+$(BinDir)/irssi --version | grep $(Version)
 endef
