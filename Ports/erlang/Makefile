@@ -5,7 +5,7 @@ endif
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	17.3
+Version=	17.4
 Revision=	0
 Site=		http://www.erlang.org/
 URL=		http://www.erlang.org/download/
@@ -35,6 +35,7 @@ install -d $(InstallDir)/$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
+$(BinDir)/erlc
 $(BinDir)/erl -version
 endef
 
