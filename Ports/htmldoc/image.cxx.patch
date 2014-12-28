@@ -1,0 +1,11 @@
+--- htmldoc/image.cxx.orig	2014-12-27 21:58:52.000000000 -0200
++++ htmldoc/image.cxx	2014-12-27 21:59:10.000000000 -0200
+@@ -1382,7 +1382,7 @@
+   jpeg_stdio_src(&cinfo, fp);
+   jpeg_read_header(&cinfo, (boolean)1);
+ 
+-  cinfo.quantize_colors = 0;
++  cinfo.quantize_colors = (boolean)0;
+ 
+   if (gray || cinfo.num_components == 1)
+   {

@@ -1,0 +1,11 @@
+--- configure.orig	2014-12-27 22:31:54.000000000 -0200
++++ configure	2014-12-27 22:32:57.000000000 -0200
+@@ -4906,7 +4906,7 @@
+ POST=:
+ if test "x$with_gui" != xno; then
+     if test "x$FLTKCONFIG" != x; then
+-	LIBS="$LIBS `$FLTKCONFIG --use-images --ldflags`"
++	LIBS="$LIBS `$FLTKCONFIG --use-images --ldstaticflags`"
+ 	$as_echo "#define HAVE_LIBFLTK 1" >>confdefs.h
+ 
+ 	POST="$FLTKCONFIG --post"
