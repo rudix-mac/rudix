@@ -8,27 +8,18 @@ Revision=	0
 Site=		http://www.boost.org/
 URL=		http://downloads.sourceforge.net/boost
 Source=		$(Name)_$(AltVersion).tar.bz2
-License=	MIT-like
+License=	Boost Software License
 
-ReadMeFile=	$(SourceDir)/index.html
-LicenseFile=	$(SourceDir)/LICENSE_1_0.txt
+ReadMeFile=	README
+LicenseFile=$(SourceDir)/LICENSE_1_0.txt
 
 UncompressedName = $(Name)_$(AltVersion)
 
 define build_inner_hook
-cd $(BuildDir) ; ./bootstrap.sh ; ./bjam
+cd $(BuildDir) && ./bootstrap.sh --prefix=$(Prefix) --with-icu && ./b2
 endef
 
 define install_inner_hook
-install -d $(InstallDir)$(BinDir)
-install -m 755 $(BuildDir)/tools/build/v2/engine/bin.*/* $(InstallDir)$(BinDir)
-install -d $(InstallDir)$(LibDir)
-install -m 644 $(BuildDir)/stage/lib/libboost_*.dylib $(InstallDir)$(LibDir)
-install -m 644 $(BuildDir)/stage/lib/libboost_*.a $(InstallDir)$(LibDir)
-cd $(BuildDir) ; find boost -type d -exec install -d $(PortDir)/$(InstallDir)$(IncludeDir)/{} \; ; find boost ! -name \*.orig -type f -exec install -m 644 {} $(PortDir)/$(InstallDir)$(IncludeDir)/{} \;
+cd $(BuildDir) && ./b2 install --prefix=$(DestDir)$(Prefix)
 $(install_base_documentation)
-endef
-
-define test_inner_hook
-$(BinDir)/bjam -v | grep Boost.Jam
 endef
