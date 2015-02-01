@@ -12,9 +12,9 @@ ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/doc/LICENSE.txt
 
 define install_post_hook
-install -m 644 $(SourceDir)/*.txt $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(SourceDir)/doc/*.txt $(InstallDir)/$(DocDir)/$(Name)
-install -m 644 $(SourceDir)/doc/html/* $(InstallDir)/$(DocDir)/$(Name)
+install -m 644 $(SourceDir)/*.txt $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(SourceDir)/doc/*.txt $(DestDir)$(DocDir)/$(Name)
+install -m 644 $(SourceDir)/doc/html/* $(DestDir)$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
