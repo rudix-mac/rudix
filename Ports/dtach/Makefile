@@ -11,10 +11,10 @@ License=	GPL
 define install_inner_hook
 $(install_base_documentation)
 $(install_gnu_documentation)
-install -d $(InstallDir)/$(BinDir)
-install -m 755 $(SourceDir)/dtach $(InstallDir)/$(BinDir)/dtach
-install -d $(InstallDir)/$(ManDir)/man1
-install -m 644 $(SourceDir)/dtach.1 $(InstallDir)/$(ManDir)/man1/dtach.1
+install -d $(DestDir)$(BinDir)
+install -m 755 $(SourceDir)/dtach $(DestDir)$(BinDir)/dtach
+install -d $(DestDir)$(ManDir)/man1
+install -m 644 $(SourceDir)/dtach.1 $(DestDir)$(ManDir)/man1/dtach.1
 endef
 
 define test_inner_hook
