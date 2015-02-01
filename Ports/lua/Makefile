@@ -2,12 +2,11 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.2.3
-Revision=	1
+Version=	5.3.0
+Revision=	0
 Site=		http://www.lua.org/
-#URL=		http://www.lua.org/work/
-Source=		http://www.lua.org/ftp//$(Name)-$(Version).tar.gz
-Checksum=	926b7907bc8d274e063d42804666b40a3f3c124c
+Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
+Checksum=	1c46d1c78c44039939e820126b86a6ae12dadfba
 License=	MIT
 
 LicenseFile=	license.txt
@@ -18,13 +17,13 @@ MakeExtra += macosx
 MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
 MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 
-define install_post_hook
-install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
+define check_post_hook
+otool -L $(BuildDir)/src/lua | grep libedit
+nm $(BuildDir)/src/lua | grep _readline
 endef
 
-define check_post_hook
-otool -L $(InstallDir)$(BinDir)/lua | grep libedit
-nm $(InstallDir)$(BinDir)/lua | grep _readline
+define install_post_hook
+install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 
 define test_inner_hook
