@@ -13,7 +13,7 @@ GnuMakeInstallExtra += install-doc
 
 define install_post_hook
 install -m 644 $(SourceDir)/doc/*.html \
-	$(InstallDir)/$(DocDir)/$(Name)
-chmod u+w $(InstallDir)$(LibDir)/*.dylib || true
-rmdir $(InstallDir)$(BinDir) || true
+	$(DestDir)/$(DocDir)/$(Name)
+chmod u+w $(DestDir)$(LibDir)/*.dylib || true
+rmdir $(DestDir)$(BinDir) || true
 endef
