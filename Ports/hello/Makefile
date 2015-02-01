@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		GNU Hello
 Name=		hello
-Version=	2.9
+Version=	2.10
 Revision=	0
 Site=		http://www.gnu.org/software/hello/
-Source=		http://ftp.gnu.org/gnu/hello//$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/hello/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook
