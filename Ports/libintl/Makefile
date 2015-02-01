@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU libintl
 Name=		libintl
-Version=	0.19.3
+Version=	0.19.4
 Revision=	0
 Site=		http://www.gnu.org/software/gettext/
 Source=		http://ftp.gnu.org/gnu/gettext//gettext-$(Version).tar.gz
@@ -18,9 +18,9 @@ GnuConfigureExtra += --disable-libasprintf
 GnuConfigureExtra += --with-included-glib
 
 define install_post_hook
-rm -rf $(InstallDir)/$(DocDir)/gettext/csharpdoc
-rm -rf $(InstallDir)/$(DocDir)/gettext/examples
-rm -rf $(InstallDir)/$(DocDir)/gettext/javadoc2
+rm -rf $(DestDir)$(DocDir)/gettext/csharpdoc
+rm -rf $(DestDir)$(DocDir)/gettext/examples
+rm -rf $(DestDir)$(DocDir)/gettext/javadoc2
 endef
 
 define test_inner_hook
