@@ -5,7 +5,7 @@ Name=		simh
 Version=	3.9
 Revision=	0
 Site=		http://simh.trailing-edge.com/
-Source=		http://simh.trailing-edge.com/sources//$(Name)v39-0.zip
+Source=		http://simh.trailing-edge.com/sources/$(Name)v39-0.zip
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/0readme_39.txt
@@ -15,7 +15,7 @@ MakeExtra += OSTYPE="darwin"
 MakeExtra += NETWORK_OPT="-DUSE_NETWORK -lpcap"
 
 define prep_inner_hook
-unzip $(Source) -d $(SourceDir)
+unzip $(shell basename $(Source)) -d $(SourceDir)
 $(apply_patches)
 endef
 
