@@ -10,9 +10,7 @@ Checksum=	64f6d5056d3e417a943648c23cb22218b7079ced
 License=	GPL
 
 # Avoid HTTP error 406
-define fetch
-curl -f -O -C - -L -A Mozilla/4.0
-endef
+FetchExtra += -A Mozilla/4.0
 
 define install_post_hook
 install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)
