@@ -1,8 +1,9 @@
 include ../../Library/GNU.mk
 
-Title=		Expat
+Title=		Expat XML Parser
 Name=		expat
 Version=	2.1.0
 Revision=	0
-URL=		http://downloads.sourceforge.net/expat
-Source=		$(Name)-$(Version).tar.gz
+Site=		http://expat.sourceforge.net
+Source=		http://downloads.sourceforge.net/expat/$(Name)-$(Version).tar.gz
+License=	MIT
