@@ -80,10 +80,9 @@ else
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
 endif
 OptFlags = -Os
-CFlags = $(ArchFlags) $(OptFlags)
-CxxFlags = $(ArchFlags) $(OptFlags)
-LdFlags = $(ArchFlags)
-
+CFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CFLAGS)
+CxxFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CXXFLAGS)
+LdFlags = $(ArchFlags) $(RUDIX_EXTRA_LDFLAGS)
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif
