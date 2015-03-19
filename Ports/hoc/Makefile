@@ -5,21 +5,17 @@ Name=		hoc
 Version=	1.1
 Revision=	9
 Site=		http://cm.bell-labs.com/cm/cs/upe/index.html
-Source=		http://netlib.bell-labs.com/~bwk//$(Name).sh
+Site=		http://cm.bell-labs.com/cm/cs/who/bwk/
+Source=		http://netlib.bell-labs.com/~bwk/$(Name).sh
 License=	non-free
-
 LicenseFile=	LICENSE
 
 define explode
-mkdir -p $(Name)-$(Version) ; cd $(Name)-$(Version) ; sh ../$(Source)
+mkdir -p $(Name)-$(Version) && cd $(Name)-$(Version) && sh ../hoc.sh
 endef
 
-# Can't do parallel build
 define make
 make
-endef
-
-define test_inner_hook
 endef
 
 define test_inner_hook
