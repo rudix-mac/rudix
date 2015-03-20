@@ -134,65 +134,65 @@ all: pkg
 
 # Retrieve source
 retrieve:
-	@$(call info_color,Retrieving)
+	@$(call info_color,*** Retrieving $(Source) ***)
 	@$(call retrieve_pre_hook)
 	@$(call retrieve_inner_hook)
 	@$(call retrieve_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done retrieve ***)
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve
-	@$(call info_color,Preparing)
+	@$(call info_color,*** Preparing $(DistName) ***)
 	@$(call prep_pre_hook)
 	@$(call prep_inner_hook)
 	@$(call prep_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done prep ***)
 	@touch $@
 
 # Build source
 build: prep $(BuildRequires)
-	@$(call info_color,Building)
+	@$(call info_color,*** Building $(DistName) ***)
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
 	@$(call build_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done build ***)
 	@touch $@
 
 # Check build
 check: build
-	@$(call info_color,Checking build)
+	@$(call info_color,*** Checking $(DistName) ***)
 	@$(call check_pre_hook)
 	@$(call check_inner_hook)
 	@$(call check_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done check ***)
 	@touch $@
 
 # Install into a temporary directory
 install: build
-	@$(call info_color,Installing)
+	@$(call info_color,*** Installing $(DistName) ***)
 	@$(call install_pre_hook)
 	@$(call install_inner_hook)
 	@$(call install_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done install ***)
 	@touch $@
 
 # Create package
 pkg: install
-	@$(call info_color,Packing)
+	@$(call info_color,*** Packing $(PkgFile) ***)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
 	@$(call pkg_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done pkg ***)
 	@touch $@
 
 # Run all tests
 test: pkg check
-	@$(call info_color,Testing)
+	@$(call info_color,*** Testing $(DistName) and $(PkgFile) ***)
 	@$(call test_pre_hook)
 	@$(call test_inner_hook)
 	@$(call test_post_hook)
-	@$(call info_color,Done)
+	@$(call info_color,*** Done test ***)
 	@touch $@
 
 installclean:
