@@ -5,7 +5,7 @@ Name=		zsh
 Version=	5.0.7
 Revision=	0
 Site=		http://www.zsh.org
-Source=		http://sourceforge.net/projects/zsh/files/zsh/$(Version)/$(Name)-$(Version).tar.bz2
+Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.bz2
 Checksum=	1500191d16af8a71aec4f719a92775a074682096
 License=	GPL
 
@@ -14,7 +14,7 @@ LicenseFile=	$(SourceDir)/LICENCE
 MakeInstallExtra+=install.info
 
 define retrieve_post_hook
-$(fetch) http://sourceforge.net/projects/zsh/files/zsh-doc/$(Version)/zsh-$(Version)-doc.tar.bz2
+$(fetch) http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.bz2
 endef
 
 define install_post_hook
