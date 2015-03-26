@@ -2,12 +2,18 @@ include ../../Library/GNU.mk
 
 Title=		Cabextract
 Name=		cabextract
-Version=	1.4
-Revision=	4
+Version=	1.6
+Revision=	0
 Site=		http://www.cabextract.org.uk/
 URL=		http://www.cabextract.org.uk/
 Source=		$(Name)-$(Version).tar.gz
+Checksum=	64f6d5056d3e417a943648c23cb22218b7079ced
 License=	GPL
+
+# Avoid HTTP error 406
+define fetch
+curl -f -O -C - -L -A Mozilla/4.0
+endef
 
 define install_post_hook
 install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)
