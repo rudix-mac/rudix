@@ -2,7 +2,7 @@ include ../../Library/Rudix.mk
 
 Title=		Ninja Build System
 Name=		ninja
-Version=	1.5.1
+Version=	1.5.3
 Revision=	0
 Site=		http://martine.github.com/ninja/
 URL=		https://github.com/martine/ninja/archive
