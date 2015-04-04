@@ -1,18 +1,22 @@
-BuildRequires += $(IncludeDir)/boost/graph/adjacency_list.hpp
-#BuildRequires += $(LibDir)/libgc.la
+BuildRequires += $(IncludeDir)/boost/graph/adjacency_list.hpp # boost
+BuildRequires += $(BinDir)/gpasm # gptools
 
 include ../../Library/GNU.mk
 
 Title=		SDCC
 Name=		sdcc
-Version=	3.1.0
+Version=	3.4.0
 Revision=	0
 Site=		http://sdcc.sourceforge.net/
 URL=		http://sourceforge.net/projects/sdcc/files/sdcc/$(Version)
 Source=		$(Name)-src-$(Version).tar.bz2
 License=	GPL
 
-UncompressedName = $(Name)
+GnuConfigureExtra += --disable-werror
+GnuConfigureExtra += --disable-ds390-port --disable-ds400-port --disable-mcs51-port
 
+MakeFlags =
 
-GnuConfigureExtra += --disable-pic14-port --disable-pic16-port
+define test_inner_hook
+$(BinDir)/sdcc --version | grep $(Version)
+endef

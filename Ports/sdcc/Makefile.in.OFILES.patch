@@ -1,0 +1,11 @@
+--- support/sdbinutils/bfd/Makefile.in.orig	2012-11-08 05:44:00.000000000 -0200
++++ support/sdbinutils/bfd/Makefile.in	2015-04-04 16:59:07.000000000 -0300
+@@ -1087,7 +1087,7 @@
+ # BFD_MACHINES	Architecture-specific routines the configured targets need.
+ # COREFILE	Core file routines for a native configuration
+ # bfd64_libs	Routines for 64bit support
+-OFILES = $(BFD_BACKENDS) $(BFD_MACHINES) @COREFILE@ @bfd64_libs@
++OFILES = $(BFD_MACHINES) @COREFILE@ @bfd64_libs@
+ 
+ # Since BFD64_LIBS is optional and we can't have substitution in
+ # libbfd_la_SOURCES, we put BFD64_LIBS in OFILES instead.
