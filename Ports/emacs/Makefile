@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Emacs
 Name=		emacs
-Version=	24.4
+Version=	24.5
 Revision=	0
 Site=		http://www.gnu.org/software/emacs/
 URL=		http://ftp.gnu.org/gnu/emacs/
