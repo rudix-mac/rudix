@@ -5,8 +5,7 @@ Name=		sed
 Version=	4.2.2
 Revision=	0
 Site=		http://www.gnu.org/software/sed/
-URL=		http://ftp.gnu.org/gnu/sed/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/sed//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

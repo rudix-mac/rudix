@@ -7,8 +7,7 @@ Name=		coreutils
 Version=	8.23
 Revision=	0
 Site=		http://www.gnu.org/software/coreutils/
-URL=		http://ftp.gnu.org/gnu/coreutils/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://ftp.gnu.org/gnu/coreutils//$(Name)-$(Version).tar.xz
 License=	GPL
 
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes

@@ -5,8 +5,7 @@ Name=		vifm
 Version=	0.7.3a
 Revision=	0
 Site=		http://vifm.sourceforge.net/index.html
-URL=		http://sourceforge.net/projects/vifm/files/vifm/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://sourceforge.net/projects/vifm/files/vifm//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 GnuConfigureExtra += --with-gtk=no

@@ -5,8 +5,7 @@ Name=		gmp
 Version=	5.1.3
 Revision=	0
 Site=		http://gmplib.org/
-URL=		http://ftp.gnu.org/gnu/gmp/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://ftp.gnu.org/gnu/gmp//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 GnuConfigureExtra += --enable-cxx

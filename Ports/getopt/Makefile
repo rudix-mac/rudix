@@ -7,8 +7,7 @@ Name=		getopt
 Version=	1.1.5
 Revision=	0
 Site=		http://software.frodo.looijaard.name/getopt/
-URL=		http://software.frodo.looijaard.name/getopt/files
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://software.frodo.looijaard.name/getopt/files/$(Name)-$(Version).tar.gz
 License=	GPL
 
 LdFlags += -framework CoreFoundation -liconv -lintl

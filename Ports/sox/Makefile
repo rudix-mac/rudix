@@ -10,8 +10,7 @@ Name=		sox
 Version=	14.4.1
 Revision=	0
 Site=		http://sox.sourceforge.net/
-URL=		http://downloads.sourceforge.net/$(Name)
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL+LGPL
 
 define test_inner_hook

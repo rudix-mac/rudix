@@ -5,8 +5,7 @@ Title=		Rudix Package Manager
 Name=		rudix
 Version=	2014.10
 Revision=	0
-URL=		https://github.com/rudix-mac/rpm/archive
-Source=		$(Version).tar.gz
+Source=		https://github.com/rudix-mac/rpm/archive/$(Version).tar.gz
 License=	BSD
 
 UncompressedName=rpm-$(Version)

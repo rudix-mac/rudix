@@ -5,8 +5,7 @@ Name=		sexpr
 Version=	1.2.1
 Revision=	2
 Site=		http://sexpr.sourceforge.net/
-URL=		http://downloads.sourceforge.net/$(Name)
-Source=		$(Name)_$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/$(Name)/$(Name)_$(Version).tar.gz
 License=	LGPL
 
 ReadMeFile=	$(SourceDir)/README.txt

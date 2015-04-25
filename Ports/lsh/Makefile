@@ -9,6 +9,5 @@ Name=		lsh
 Version=	2.1
 Revision=	0
 Site=		http://www.lysator.liu.se/~nisse/lsh/
-URL=		http://www.lysator.liu.se/~nisse/archive/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.lysator.liu.se/~nisse/archive//$(Name)-$(Version).tar.gz
 License=	GPL

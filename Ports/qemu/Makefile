@@ -11,8 +11,7 @@ Name=		qemu
 Version=	2.1.2
 Revision=	0
 Site=		http://wiki.qemu.org/
-URL=		http://wiki.qemu.org/download/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://wiki.qemu.org/download//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ReadMeFile=	README

@@ -7,8 +7,7 @@ Name=		optipng
 Version=	0.7.5
 Revision=	0
 Site=		http://optipng.sourceforge.net/
-URL=		http://downloads.sourceforge.net/optipng
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/optipng/$(Name)-$(Version).tar.gz
 License=	zlib
 
 ReadMeFile=	$(SourceDir)/README.txt

@@ -20,12 +20,11 @@ Name=		git
 Version=	1.8.3.1
 Revision=	0
 Site=		http://git-scm.com/
-URL=		http://git-core.googlecode.com/files/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://git-core.googlecode.com/files/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define retrieve_post_hook
-$(fetch) $(URL)/git-manpages-$(Version).tar.gz
+$(fetch) http://git-core.googlecode.com/files/git-manpages-$(Version).tar.gz
 endef
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
@@ -58,4 +57,4 @@ python -c 'import git_remote_helpers'
 endef
 
 realdistclean: distclean
-	rm -f retrieve $(Source) git-manpages-$(Version).tar.gz
+	rm -f retrieve $(shell basename $(Source)) git-manpages-$(Version).tar.gz

@@ -7,8 +7,7 @@ Name=		memcached
 Version=	1.4.21
 Revision=	0
 Site=		http://memcached.org/
-URL=		http://www.memcached.org/files/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.memcached.org/files//$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md

@@ -7,8 +7,7 @@ Name=		mercurial
 Version=	2.9.2
 Revision=	0
 Site=		http://mercurial.selenic.com/
-URL=		http://www.selenic.com/mercurial/release/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.selenic.com/mercurial/release//$(Name)-$(Version).tar.gz
 License=	GPL
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)

@@ -5,8 +5,7 @@ Name=		python-pexpect
 Version=	3.1
 Revision=	0
 Site=           http://pexpect.readthedocs.org/en/latest/
-URL=		https://pypi.python.org/packages/source/p/pexpect/
-Source=		pexpect-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/p/pexpect//pexpect-$(Version).tar.gz
 License=        ISC
 
 ReadMeFile=	$(SourceDir)/PKG-INFO

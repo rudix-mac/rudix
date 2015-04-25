@@ -7,8 +7,7 @@ Name=		a2ps
 Version=	4.14
 Revision=	1
 Site=		http://www.gnu.org/software/a2ps/
-URL=		http://ftp.gnu.org/gnu/a2ps/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/a2ps//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define install_post_hook

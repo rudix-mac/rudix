@@ -5,8 +5,7 @@ Name=		db
 Version=	6.0.20
 Revision=	0
 Site=		http://www.oracle.com/technetwork/products/berkeleydb/
-URL=		http://download.oracle.com/berkeley-db
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://download.oracle.com/berkeley-db/$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README

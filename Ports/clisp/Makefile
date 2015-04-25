@@ -7,8 +7,7 @@ Name=		clisp
 Version=	2.49
 Revision=	0
 Site=		http://www.clisp.org/
-URL=		http://downloads.sourceforge.net/$(Name)
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/SUMMARY

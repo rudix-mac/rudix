@@ -9,8 +9,7 @@ Name=		tree
 Version=	1.7.0
 Revision=	0
 Site=		http://mama.indstate.edu/users/ice/tree/
-URL=		http://mama.indstate.edu/users/ice/tree/src/
-Source=		$(Name)-$(Version).tgz
+Source=		http://mama.indstate.edu/users/ice/tree/src//$(Name)-$(Version).tgz
 License=	GPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE

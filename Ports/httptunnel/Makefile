@@ -5,8 +5,7 @@ Name=		httptunnel
 Version=	3.3
 Revision=	4
 Site=		http://www.nocrew.org/software/httptunnel/
-URL=		http://www.nocrew.org/software/httptunnel/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.nocrew.org/software/httptunnel//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define install_post_hook

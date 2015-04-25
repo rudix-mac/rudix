@@ -6,8 +6,7 @@ Name=		pixman
 Version=	0.32.6
 Revision=	0
 Site=		http://pixman.org
-URL=		http://www.cairographics.org/releases/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.cairographics.org/releases//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

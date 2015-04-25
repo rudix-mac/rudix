@@ -5,8 +5,7 @@ Name=		markupsafe
 Version=	0.18
 Revision=	0
 Site=		http://www.pocoo.org/projects/markupsafe/
-URL=		https://pypi.python.org/packages/source/M/MarkupSafe
-Source=		MarkupSafe-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/M/MarkupSafe/MarkupSafe-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.rst

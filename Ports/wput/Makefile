@@ -7,8 +7,7 @@ Name=		wput
 Version=	0.6.2
 Revision=	0
 Site=		http://wput.sourceforge.net/
-URL=		http://downloads.sourceforge.net/wput
-Source=		$(Name)-$(Version).tgz
+Source=		http://downloads.sourceforge.net/wput/$(Name)-$(Version).tgz
 License=	GPL
 
 ReadMeFile=	README

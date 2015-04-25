@@ -4,8 +4,7 @@ Title=		LibJPEG
 Name=		libjpeg
 Version=	9a
 Revision=	0
-URL=		http://www.ijg.org/files/
-Source=		jpegsrc.v$(Version).tar.gz
+Source=		http://www.ijg.org/files/jpegsrc.v$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE

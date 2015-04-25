@@ -7,8 +7,7 @@ Name=		nsd
 Version=	4.0.3
 Revision=	0
 Site=		http://www.nlnetlabs.nl/projects/nsd/
-URL=		http://www.nlnetlabs.nl/downloads/nsd
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.nlnetlabs.nl/downloads/nsd/$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/doc/README

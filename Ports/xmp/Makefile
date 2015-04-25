@@ -8,8 +8,7 @@ Name=		xmp
 Version=	4.0.7
 Revision=	0
 Site=		http://xmp.sourceforge.net
-URL=		http://downloads.sourceforge.net/xmp
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/xmp/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

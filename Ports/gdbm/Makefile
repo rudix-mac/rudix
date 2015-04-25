@@ -5,8 +5,7 @@ Name=		gdbm
 Version=	1.11
 Revision=	0
 Site=		http://www.gnu.org.ua/software/gdbm/
-URL=		ftp://ftp.gnu.org/gnu/gdbm
-Source=		$(Name)-$(Version).tar.gz
+Source=		ftp://ftp.gnu.org/gnu/gdbm/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

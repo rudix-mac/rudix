@@ -8,8 +8,7 @@ Name=		pylibmc
 Version=	1.2.3
 Revision=	2
 Site=		http://pypi.python.org/pypi/pylibmc
-URL=		http://pypi.python.org/packages/source/p/pylibmc/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/p/pylibmc//$(Name)-$(Version).tar.gz
 License=	Python License
 
 ReadMeFile=	$(SourceDir)/README.rst

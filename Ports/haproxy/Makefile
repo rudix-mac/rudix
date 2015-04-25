@@ -7,8 +7,7 @@ Name=		haproxy
 Version=	1.5.9
 Revision=	0
 Site=		http://www.haproxy.org
-URL=		http://www.haproxy.org/download/1.5/src
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.haproxy.org/download/1.5/src/$(Name)-$(Version).tar.gz
 License=	GPL/LGPL
 
 LicenseFile=	$(SourceDir)/LICENSE

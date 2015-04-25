@@ -7,8 +7,7 @@ Name=		flac
 Version=	1.3.1
 Revision=	0
 Site=		http://flac.sourceforge.net/
-URL=		http://downloads.xiph.org/releases/flac/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://downloads.xiph.org/releases/flac//$(Name)-$(Version).tar.xz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYING.Xiph

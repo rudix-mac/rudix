@@ -6,8 +6,7 @@ Name=		global
 Version=	6.3.2
 Revision=	0
 Site=		https://www.gnu.org/software/global/
-URL=		http://ftp.gnu.org/gnu/global/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/global//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

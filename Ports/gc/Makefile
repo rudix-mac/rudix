@@ -5,8 +5,7 @@ Name=		gc
 Version=	7.2e
 Revision=	0
 Site=		http://hboehm.info/gc/
-URL=		http://hboehm.info/gc/gc_source/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://hboehm.info/gc/gc_source//$(Name)-$(Version).tar.gz
 
 ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	$(SourceDir)/include/gc.h

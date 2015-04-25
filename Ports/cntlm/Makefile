@@ -5,8 +5,7 @@ Name=		cntlm
 Version=	0.92.3
 Revision=	2
 Site=		http://cntlm.sourceforge.net
-URL=		http://downloads.sourceforge.net/cntlm
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://downloads.sourceforge.net/cntlm/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

@@ -5,8 +5,7 @@ Name=		pygments
 Version=	1.6
 Revision=	0
 Site=		http://pygments.org
-URL=		https://pypi.python.org/packages/source/P/Pygments/
-Source=		Pygments-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/P/Pygments//Pygments-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/PKG-INFO

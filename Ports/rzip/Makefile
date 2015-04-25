@@ -5,8 +5,7 @@ Name=		rzip
 Version=	2.1
 Revision=	16
 Site=		http://rzip.samba.org/
-URL=		http://rzip.samba.org/ftp/rzip/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://rzip.samba.org/ftp/rzip//$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	README

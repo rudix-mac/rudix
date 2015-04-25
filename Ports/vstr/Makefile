@@ -5,6 +5,5 @@ Name=		vstr
 Version=	1.0.15
 Revision=	0
 Site=		http://www.and.org/vstr/
-URL=		http://www.and.org/vstr/latest
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://www.and.org/vstr/latest/$(Name)-$(Version).tar.bz2
 License=	LGPL

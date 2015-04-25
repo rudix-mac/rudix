@@ -5,8 +5,7 @@ Name=		tcsh
 Version=	6.18.01
 Revision=	1
 Site=		http://www.tcsh.org/Home
-URL=		ftp://ftp.astron.com/pub/tcsh/
-Source=		$(Name)-$(Version).tar.gz
+Source=		ftp://ftp.astron.com/pub/tcsh//$(Name)-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/Copyright

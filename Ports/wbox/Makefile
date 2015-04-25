@@ -5,8 +5,7 @@ Name=		wbox
 Version=	5
 Revision=	1
 Site=		http://hping.org/wbox/
-URL=		http://hping.org/wbox/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://hping.org/wbox//$(Name)-$(Version).tar.gz
 License=	BSD
 
 define test_inner_hook

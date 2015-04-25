@@ -5,8 +5,7 @@ Name=		hoc
 Version=	1.1
 Revision=	9
 Site=		http://cm.bell-labs.com/cm/cs/upe/index.html
-URL=		http://netlib.bell-labs.com/~bwk/
-Source=		$(Name).sh
+Source=		http://netlib.bell-labs.com/~bwk//$(Name).sh
 License=	non-free
 
 LicenseFile=	LICENSE

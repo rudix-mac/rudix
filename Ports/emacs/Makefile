@@ -7,8 +7,7 @@ Name=		emacs
 Version=	24.4
 Revision=	0
 Site=		http://www.gnu.org/software/emacs/
-URL=		http://ftp.gnu.org/gnu/emacs/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://ftp.gnu.org/gnu/emacs//$(Name)-$(Version).tar.xz
 License=	GPL
 
 define test_inner_hook

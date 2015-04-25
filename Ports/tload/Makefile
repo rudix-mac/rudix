@@ -6,8 +6,7 @@ Name=		tload
 Version=	3.2.8
 Revision=	2
 Site=		https://github.com/ruda/tload/
-URL=		https://github.com/ruda/tload/archive/
-Source=		$(Version).tar.gz
+Source=		https://github.com/ruda/tload/archive//$(Version).tar.gz
 License=	GPL
 
 define install_inner_hook

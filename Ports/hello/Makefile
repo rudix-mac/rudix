@@ -5,8 +5,7 @@ Name=		hello
 Version=	2.9
 Revision=	0
 Site=		http://www.gnu.org/software/hello/
-URL=		http://ftp.gnu.org/gnu/hello/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/hello//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

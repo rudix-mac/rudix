@@ -7,8 +7,7 @@ Name=		ssldump
 Version=	0.9b3
 Revision=	5
 Site=		http://www.rtfm.com/ssldump/
-URL=		http://www.rtfm.com/ssldump/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.rtfm.com/ssldump//$(Name)-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

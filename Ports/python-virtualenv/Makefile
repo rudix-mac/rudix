@@ -5,8 +5,7 @@ Name=		python-virtualenv
 Version=	1.11.4
 Revision=	0
 Site=		http://www.virtualenv.org
-URL=		http://pypi.python.org/packages/source/v/virtualenv/
-Source=		virtualenv-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/v/virtualenv//virtualenv-$(Version).tar.gz
 Checksum=	60b6a01091aa1a88366888ab16e31b9855221d9a
 License=	MIT
 

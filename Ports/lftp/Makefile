@@ -8,8 +8,7 @@ Name=		lftp
 Version=	4.6.0
 Revision=	0
 Site=		http://lftp.yar.ru/
-URL=		http://lftp.yar.ru/ftp
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ifeq ($(OSXVersion),$(filter $(OSXVersion),10.10 10.9 10.8))

@@ -8,8 +8,7 @@ Name=		jed
 Version=	0.99
 Revision=	0
 Site=		http://www.jedsoft.org/jed/
-URL=		ftp://space.mit.edu/pub/davis/jed/v$(Version)
-Source=		$(Name)-$(Version)-19.tar.bz2
+Source=		ftp://space.mit.edu/pub/davis/jed/v$(Version)/$(Name)-$(Version)-19.tar.bz2
 
 UncompressedName=jed-$(Version)-19
 

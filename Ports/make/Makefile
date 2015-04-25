@@ -7,8 +7,7 @@ Name=		make
 Version=	4.0
 Revision=	0
 Site=		http://www.gnu.org/software/make/
-URL=		http://ftp.gnu.org/gnu/make/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://ftp.gnu.org/gnu/make//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

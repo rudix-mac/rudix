@@ -8,8 +8,7 @@ Name=		tmux
 Version=	1.9a
 Revision=	0
 Site=		http://tmux.sourceforge.net/
-URL=		http://downloads.sourceforge.net/tmux
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/tmux/$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README

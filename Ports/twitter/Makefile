@@ -5,8 +5,7 @@ Name=		twitter
 Version=	1.10.0
 Revision=	0
 Site=		http://mike.verdone.ca/twitter/
-URL=		http://pypi.python.org/packages/source/t/twitter/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/t/twitter//$(Name)-$(Version).tar.gz
 License=	MIT
 
 LicenseFile=	$(SourceDir)/PKG-INFO

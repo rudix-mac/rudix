@@ -7,8 +7,7 @@ Name=		autossh
 Version=	1.4d
 Revision=	0
 Site=		http://www.harding.motd.ca/autossh/
-URL=		http://www.harding.motd.ca/autossh/
-Source=		$(Name)-$(Version).tgz
+Source=		http://www.harding.motd.ca/autossh//$(Name)-$(Version).tgz
 License=	Unknown (Freeware)
 
 LicenseFile=	LICENSE

@@ -6,8 +6,7 @@ Version=	2.7
 AltVersion=	STABLE9-20110824
 Revision=	1
 Site=		http://www.squid-cache.org/
-URL=		http://www.squid-cache.org/Versions/v2/$(Version)/
-Source=		$(Name)-$(Version).$(AltVersion).tar.bz2
+Source=		http://www.squid-cache.org/Versions/v2/$(Version)//$(Name)-$(Version).$(AltVersion).tar.bz2
 License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

@@ -5,8 +5,7 @@ Name=		cython
 Version=	0.21.1
 Revision=	0
 Site=		http://www.cython.org/
-URL=		http://www.cython.org/release
-Source=		Cython-$(Version).tar.gz
+Source=		http://www.cython.org/release/Cython-$(Version).tar.gz
 License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.txt

@@ -5,8 +5,7 @@ Name=		autoconf
 Version=	2.69
 Revision=	2
 Site=		http://www.gnu.org/software/autoconf/
-URL=		http://ftp.gnu.org/gnu/autoconf/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/autoconf//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

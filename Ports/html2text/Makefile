@@ -5,8 +5,7 @@ Name=		html2text
 Version=	3.200.3
 Revision=	1
 Site=		https://github.com/aaronsw/html2text
-URL=		https://github.com/aaronsw/html2text/tarball
-Source=		master
+Source=		https://github.com/aaronsw/html2text/tarball/master
 License=	GPL
 UncompressedName=aaronsw-html2text-8ddc844
 

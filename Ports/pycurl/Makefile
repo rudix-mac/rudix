@@ -5,8 +5,7 @@ Name=		pycurl
 Version=	7.19.0
 Revision=	2
 Site=		http://pycurl.sourceforge.net/
-URL=		http://pycurl.sourceforge.net/download/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pycurl.sourceforge.net/download//$(Name)-$(Version).tar.gz
 License=	LGPL/MIT
 
 define test_inner_hook

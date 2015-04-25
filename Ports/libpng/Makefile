@@ -5,8 +5,7 @@ Name=		libpng
 Version=	1.6.14
 Revision=	0
 Site=		http://www.libpng.org/pub/png/
-URL=		http://downloads.sourceforge.net/libpng
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://downloads.sourceforge.net/libpng/$(Name)-$(Version).tar.xz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE

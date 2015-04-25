@@ -8,8 +8,7 @@ Name=		sdcc
 Version=	3.4.0
 Revision=	0
 Site=		http://sdcc.sourceforge.net/
-URL=		http://sourceforge.net/projects/sdcc/files/sdcc/$(Version)
-Source=		$(Name)-src-$(Version).tar.bz2
+Source=		http://sourceforge.net/projects/sdcc/files/sdcc/$(Version)/$(Name)-src-$(Version).tar.bz2
 License=	GPL
 
 GnuConfigureExtra += --disable-werror

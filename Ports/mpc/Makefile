@@ -10,8 +10,7 @@ Name=		mpc
 Version=	1.0.2
 Revision=	0
 Site=		http://www.multiprecision.org/
-URL=		ftp://ftp.gnu.org/gnu/mpc/
-Source=		$(Name)-$(Version).tar.gz
+Source=		ftp://ftp.gnu.org/gnu/mpc//$(Name)-$(Version).tar.gz
 License=	LGPL
 LicenseFile=	$(SourceDir)/COPYING.LESSER
 

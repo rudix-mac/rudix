@@ -5,8 +5,7 @@ Name=		scons
 Version=	2.3.1
 Revision=	0
 Site=		http://www.scons.org
-URL=		http://downloads.sourceforge.net/scons
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/scons/$(Name)-$(Version).tar.gz
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.txt

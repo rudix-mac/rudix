@@ -6,8 +6,7 @@ Name=		zlib
 Version=	1.2.8
 Revision=	0
 Site=		http://www.zlib.net
-URL=		http://zlib.net
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://zlib.net/$(Name)-$(Version).tar.gz
 
 LicenseFile=	LICENSE
 

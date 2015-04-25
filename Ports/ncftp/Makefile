@@ -6,7 +6,6 @@ Version=	3.2.5
 Revision=	4
 Source=		$(Name)-$(Version)-src.tar.bz2
 Site=		http://www.ncftp.com/
-URL=		ftp://ftp.ncftp.com/ncftp
 License=	The Clarified Artistic License
 
 ReadMeFile=	$(SourceDir)/README.txt

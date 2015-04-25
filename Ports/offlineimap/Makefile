@@ -7,8 +7,7 @@ Name=		offlineimap
 Version=	6.5.6
 Revision=	0
 Site=		http://offlineimap.org/
-URL=		https://github.com/OfflineIMAP/offlineimap/archive
-Source=		v$(Version).tar.gz
+Source=		https://github.com/OfflineIMAP/offlineimap/archive/v$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md

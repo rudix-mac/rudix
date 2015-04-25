@@ -7,8 +7,7 @@ Name=		gnuplot
 Version=	4.6.3
 Revision=	0
 Site=		http://www.gnuplot.info/
-URL=		http://sourceforge.net/projects/gnuplot/files/gnuplot/$(Version)/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://sourceforge.net/projects/gnuplot/files/gnuplot/$(Version)//$(Name)-$(Version).tar.gz
 License=	GPL
 
 LicenseFile=	$(SourceDir)/Copyright

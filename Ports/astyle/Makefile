@@ -5,8 +5,7 @@ Name=		astyle
 Version=	2.04
 Revision=	0
 Site=		http://astyle.sourceforge.net
-URL=		http://downloads.sourceforge.net/astyle
-Source=		$(Name)_$(Version)_macosx.tar.gz
+Source=		http://downloads.sourceforge.net/astyle/$(Name)_$(Version)_macosx.tar.gz
 License=	LGPL
 
 ReadMeFile=	$(SourceDir)/doc/index.html

@@ -5,8 +5,7 @@ Name=		ncdu
 Version=	1.10
 Revision=	0
 Site=		http://dev.yorhel.nl/ncdu
-URL=		http://dev.yorhel.nl/download/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://dev.yorhel.nl/download//$(Name)-$(Version).tar.gz
 License=	MIT
 
 define test_inner_hook

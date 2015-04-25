@@ -5,9 +5,8 @@ Name=		lua
 Version=	5.2.3
 Revision=	1
 Site=		http://www.lua.org/
-URL=		http://www.lua.org/ftp/
 #URL=		http://www.lua.org/work/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.lua.org/ftp//$(Name)-$(Version).tar.gz
 Checksum=	926b7907bc8d274e063d42804666b40a3f3c124c
 License=	MIT
 

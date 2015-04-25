@@ -9,8 +9,7 @@ Name=		dash
 Version=	0.5.8
 Revision=	0
 Site=		http://gondor.apana.org.au/~herbert/dash/
-URL=		http://gondor.apana.org.au/~herbert/dash/files
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://gondor.apana.org.au/~herbert/dash/files/$(Name)-$(Version).tar.gz
 Checksum=	cd058935bba545427caa375337afe8a6309477d2
 License=	BSD
 

@@ -5,8 +5,7 @@ Name=		argtable
 Version=	2.13
 Revision=	3
 Site=		http://argtable.sourceforge.net
-URL=		http://downloads.sourceforge.net/argtable
-Source=		$(Name)2-13.tar.gz
+Source=		http://downloads.sourceforge.net/argtable/$(Name)2-13.tar.gz
 License=	LGPL
 
 UncompressedName = $(Name)2-13

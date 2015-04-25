@@ -10,8 +10,7 @@ Name=		nmap
 Version=	6.40
 Revision=	0
 Site=		http://nmap.org/
-URL=		http://nmap.org/dist/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://nmap.org/dist//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/HACKING

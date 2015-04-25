@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2014 Rudix
+# Copyright © 2005-2015 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20141029
+BuildSystem = 20150425
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -209,7 +209,7 @@ distclean: clean pkgclean
 	rm -f config.cache*
 
 realdistclean: distclean
-	rm -f retrieve $(Source)
+	rm -f retrieve $(shell basename $(Source))
 
 static: prep installclean buildclean
 	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
@@ -239,7 +239,7 @@ about:
 	@echo "$(Title) ($(Name)-$(Version)-$(Revision))"
 	@echo "Site: $(Site)"
 	@echo "License: $(License)"
-	@echo "Source: $(URL)/$(Source)"
+	@echo "Source: $(Source)"
 
 #
 # Functions
@@ -262,18 +262,18 @@ endef
 
 define verify_checksum
 if test "$(Checksum)" != "" ; then \
-	echo "$(Checksum)  $(Source)" > checksum ; \
+	echo "$(Checksum)  $(shell basename $(Source))" > checksum ; \
 	shasum --warn --check checksum ; \
 fi
 endef
 
 define explode
-case `file -b --mime-type $(Source)` in \
-	application/x-tar) tar xf $(Source) ;; \
-	application/x-gzip) tar zxf $(Source) ;; \
-	application/x-bzip2) tar jxf $(Source) ;; \
-	application/x-xz) tar zxf $(Source) ;; \
-	application/zip) tar zxf $(Source) ;; \
+case `file -b --mime-type $(shell basename $(Source))` in \
+	application/x-tar) tar xf $(shell basename $(Source)) ;; \
+	application/x-gzip) tar zxf $(shell basename $(Source)) ;; \
+	application/x-bzip2) tar jxf $(shell basename $(Source)) ;; \
+	application/x-xz) tar zxf $(shell basename $(Source)) ;; \
+	application/zip) tar zxf $(shell basename $(Source)) ;; \
 	*) false ;; \
 esac
 endef
@@ -408,7 +408,7 @@ endif
 # Common inner hooks
 #
 define retrieve_inner_hook
-$(fetch) $(URL)/$(Source)
+$(fetch) $(FetchExtra) $(Source)
 endef
 
 define prep_inner_hook

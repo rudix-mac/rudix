@@ -7,8 +7,7 @@ Name=           aspell
 Version=        0.60.6.1
 Revision=	1
 Site=		http://aspell.net/
-URL=            http://ftp.gnu.org/gnu/aspell/
-Source=         $(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/aspell//$(Name)-$(Version).tar.gz
 License=	LGPL
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)

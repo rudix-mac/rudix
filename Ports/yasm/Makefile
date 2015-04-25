@@ -5,8 +5,7 @@ Name=		yasm
 Version=	1.3.0
 Revision=	0
 Site=		http://yasm.tortall.net/
-URL=		http://www.tortall.net/projects/yasm/releases/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.tortall.net/projects/yasm/releases//$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	README

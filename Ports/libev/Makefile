@@ -6,8 +6,7 @@ Name=		libev
 Version=	4.19
 Revision=	0
 Site=		http://software.schmorp.de/pkg/libev
-URL=		http://dist.schmorp.de/libev/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://dist.schmorp.de/libev//$(Name)-$(Version).tar.gz
 License=	BSD/GPL
 
 LicenseFile=	$(SourceDir)/LICENSE

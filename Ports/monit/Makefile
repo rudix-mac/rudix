@@ -5,8 +5,7 @@ Name=		monit
 Version=	5.8.1
 Revision=	0
 Site=		http://mmonit.com/monit/
-URL=		http://mmonit.com/monit/dist/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://mmonit.com/monit/dist//$(Name)-$(Version).tar.gz
 License=	AGPL
 
 define install_post_hook

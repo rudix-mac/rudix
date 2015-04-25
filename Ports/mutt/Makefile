@@ -10,8 +10,7 @@ Version=	1.5.23
 Revision=	0
 Site=		http://www.mutt.org/
 #URL=		ftp://ftp.mutt.org/mutt/devel/
-URL=		https://bitbucket.org/mutt/mutt/downloads
-Source=		$(Name)-$(Version).tar.gz
+Source=		https://bitbucket.org/mutt/mutt/downloads/$(Name)-$(Version).tar.gz
 License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

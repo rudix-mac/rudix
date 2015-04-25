@@ -7,8 +7,7 @@ Name=		libtiff
 Version=	4.0.3
 Revision=	0
 Site=		http://www.remotesensing.org/libtiff
-URL=		ftp://ftp.remotesensing.org/pub/libtiff
-Source=		tiff-$(Version).tar.gz
+Source=		ftp://ftp.remotesensing.org/pub/libtiff/tiff-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

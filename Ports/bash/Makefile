@@ -5,8 +5,7 @@ Name=		bash
 Version=	4.3
 Revision=	2
 Site=		http://www.gnu.org/software/bash/
-URL=		http://ftp.gnu.org/gnu/bash/
-Source=		bash-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-included-gettext

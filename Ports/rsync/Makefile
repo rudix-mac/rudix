@@ -5,8 +5,7 @@ Name=		rsync
 Version=	3.1.1
 Revision=	0
 Site=		http://samba.org/rsync/
-URL=		http://samba.org/ftp/rsync/src/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://samba.org/ftp/rsync/src//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-included-popt

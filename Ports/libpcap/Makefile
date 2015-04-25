@@ -5,8 +5,7 @@ Name=		libpcap
 Version=	1.6.2
 Revision=	0
 Site=		http://www.tcpdump.org
-URL=		http://www.tcpdump.org/release
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.tcpdump.org/release/$(Name)-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE

@@ -8,8 +8,7 @@ Name=		gawk
 Version=	4.1.0
 Revision=	1
 Site=		http://www.gnu.org/software/gawk/
-URL=		http://ftp.gnu.org/gnu/gawk/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/gawk//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-readline=/usr/local

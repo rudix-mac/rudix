@@ -8,8 +8,7 @@ Name=		joe
 Version=	3.7
 Revision=	0
 Site=		http://
-URL=		http://downloads.sourceforge.net/joe-editor
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/joe-editor/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define install_post_hook

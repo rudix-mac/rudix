@@ -5,8 +5,7 @@ Name=		ninja
 Version=	1.5.3
 Revision=	0
 Site=		http://martine.github.com/ninja/
-URL=		https://github.com/martine/ninja/archive
-Source=		v$(Version).tar.gz
+Source=		https://github.com/martine/ninja/archive/v$(Version).tar.gz
 License=	Apache License
 
 define build_inner_hook

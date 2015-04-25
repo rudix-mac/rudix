@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2013-2014 Rudix
+# Copyright © 2013-2015 Rudix
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 """Create a new port for Rudix."""
@@ -13,8 +13,8 @@ Name=		{name}
 Version=	{version}
 Revision=	{revision}
 Site=		{site}
-URL=		{url}
 Source=		{source}
+License=        {license}
 """
 
 def create_makefile(params, path):
@@ -38,7 +38,6 @@ def process(args):
               'version': args.version,
               'revision': '0',
               'site': args.site,
-              'url': args.url,
               'source': args.source,
               'license': args.license,
     }
@@ -61,16 +60,13 @@ if __name__ == '__main__':
                         default='1.2.3',
                         help='set version.')
     parser.add_argument('--title',
-                        default=None,
+                        default='My Package',
                         help='set title. Default: equals to name.')
     parser.add_argument('--site',
-                        default='http://',
+                        default='http://example.org/',
                         help='set home page.')
-    parser.add_argument('--url',
-                        default='http://',
-                        help='set download page/link.')
     parser.add_argument('--source',
-                        default='$(Name)-$(Version).tar.gz',
+                        default='http://example.org/$(Name)-$(Version).tar.gz',
                         help='set source name and version format.')
     parser.add_argument('--license',
                         default='GPL',

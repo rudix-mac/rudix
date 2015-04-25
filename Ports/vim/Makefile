@@ -5,8 +5,7 @@ Name=		vim
 Version=	7.4
 Revision=	0
 Site=		http://www.vim.org
-URL=		ftp://ftp.vim.org/pub/vim/unix
-Source=		$(Name)-$(Version).tar.bz2
+Source=		ftp://ftp.vim.org/pub/vim/unix/$(Name)-$(Version).tar.bz2
 License=	Charityware (GPL-compatible)
 UncompressedName=vim74
 

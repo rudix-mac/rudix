@@ -9,8 +9,7 @@ Name=		go
 Version=	1.4
 Revision=	0
 Site=		http://golang.org/
-URL=		http://golang.org/dl
-Source=		$(Name)$(Version).src.tar.gz
+Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE

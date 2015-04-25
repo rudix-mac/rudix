@@ -7,8 +7,7 @@ Name=		grep
 Version=	2.20
 Revision=	0
 Site=		http://www.gnu.org/software/grep/
-URL=		http://ftp.gnu.org/gnu/grep/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://ftp.gnu.org/gnu/grep//$(Name)-$(Version).tar.xz
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

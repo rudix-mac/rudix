@@ -7,8 +7,7 @@ Name=		supervisor
 Version=	3.0b2
 Revision=	0
 Site=		http://supervisord.org/index.html
-URL=		http://pypi.python.org/packages/source/s/supervisor/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/s/supervisor//$(Name)-$(Version).tar.gz
 License=	BSD Like
 
 ReadMeFile=	$(SourceDir)/README.rst

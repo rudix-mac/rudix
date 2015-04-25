@@ -5,8 +5,7 @@ Name=		node
 Version=	0.10.32
 Revision=	0
 Site=		http://nodejs.org/
-URL=		http://nodejs.org/dist/v$(Version)
-Source=		$(Name)-v$(Version).tar.gz
+Source=		http://nodejs.org/dist/v$(Version)/$(Name)-v$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md

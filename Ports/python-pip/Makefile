@@ -7,8 +7,7 @@ Name=		python-pip
 Version=	1.5.6
 Revision=	0
 Site=		https://pip.pypa.io/
-URL=		http://pypi.python.org/packages/source/p/pip/
-Source=		pip-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/p/pip//pip-$(Version).tar.gz
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/PKG-INFO

@@ -5,8 +5,7 @@ Name=		mpg123
 Version=	1.15.3
 Revision=	0
 Site=		http://www.mpg123.de/
-URL=		http://www.mpg123.de/download/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://www.mpg123.de/download//$(Name)-$(Version).tar.bz2
 License=	LGPL
 
 define install_post_hook

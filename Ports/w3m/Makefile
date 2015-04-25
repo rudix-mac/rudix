@@ -8,8 +8,7 @@ Name=		w3m
 Version=	0.5.3
 Revision=	0
 Site=		http://w3m.sourceforge.net/
-URL=		http://sourceforge.net/projects/w3m/files/w3m/w3m-$(Version)
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://sourceforge.net/projects/w3m/files/w3m/w3m-$(Version)/$(Name)-$(Version).tar.gz
 License=	GPL
 
 LicenseFile=	LICENSE

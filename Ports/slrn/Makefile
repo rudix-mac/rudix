@@ -8,8 +8,7 @@ Name=		slrn
 Version=	1.0.2
 Revision=	0
 Site=		http://slrn.sourceforge.net
-URL=		http://www.jedsoft.org/releases/slrn
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.jedsoft.org/releases/slrn/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

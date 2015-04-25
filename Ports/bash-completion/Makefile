@@ -5,8 +5,7 @@ Name=		bash-completion
 Version=	2.1
 Revision=	0
 Site=		http://bash-completion.alioth.debian.org
-URL=		http://bash-completion.alioth.debian.org/files
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://bash-completion.alioth.debian.org/files/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 define install_post_hook

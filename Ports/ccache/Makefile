@@ -5,8 +5,7 @@ Name=		ccache
 Version=	3.1.10
 Revision=	0
 Site=		https://ccache.samba.org
-URL=		https://samba.org/ftp/ccache/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		https://samba.org/ftp/ccache//$(Name)-$(Version).tar.bz2
 Checksum=	f78154d526b98546c27e5ef480354f3ce021abe2
 License=	GPL
 

@@ -5,8 +5,7 @@ Name=		tig
 Version=	2.0.3
 Revision=	0
 Site=		http://jonas.nitro.dk/tig/
-URL=		http://jonas.nitro.dk/tig/releases/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://jonas.nitro.dk/tig/releases//$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.adoc

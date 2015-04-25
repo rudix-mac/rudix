@@ -10,8 +10,7 @@ Name=		cairo
 Version=	1.12.14
 Revision=	0
 Site=		http://cairographics.org/
-URL=		http://cairographics.org/releases
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://cairographics.org/releases/$(Name)-$(Version).tar.xz
 License=	LGPL
 
 EnvExtra += PKG_CONFIG_PATH="$(LibDir)/pkgconfig:/usr/X11R6/lib/pkgconfig"

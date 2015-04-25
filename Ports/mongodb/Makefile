@@ -7,8 +7,7 @@ Name=		mongodb
 Version=	2.6.0
 Revision=	0
 Site=		http://www.mongodb.org/
-URL=		http://downloads.mongodb.org/src
-Source=		$(Name)-src-r$(Version).tar.gz
+Source=		http://downloads.mongodb.org/src/$(Name)-src-r$(Version).tar.gz
 License=	AGPL
 LicenseFile=	$(SourceDir)/GNU-AGPL-3.0.txt
 

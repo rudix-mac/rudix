@@ -5,8 +5,7 @@ Name=		redis
 Version=	3.0.0
 Revision=	0
 Site=		http://redis.io/
-URL=		http://download.redis.io/releases/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://download.redis.io/releases//$(Name)-$(Version).tar.gz
 License=	BSD
 
 BuildDir=	$(SourceDir)/src

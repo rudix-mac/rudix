@@ -5,8 +5,7 @@ Name=		pigz
 Version=	2.3
 Revision=	0
 Site=		http://zlib.net/pigz/
-URL=		http://zlib.net/pigz/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://zlib.net/pigz//$(Name)-$(Version).tar.gz
 License=	zlib
 
 ReadMeFile=	$(SourceDir)/README

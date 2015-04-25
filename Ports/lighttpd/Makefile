@@ -7,8 +7,7 @@ Name=		lighttpd
 Version=	1.4.35
 Revision=	0
 Site=		http://www.lighttpd.net
-URL=		http://download.lighttpd.net/lighttpd/releases-1.4.x/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://download.lighttpd.net/lighttpd/releases-1.4.x//$(Name)-$(Version).tar.bz2
 License=	BSD
 
 GnuConfigureExtra += --with-openssl

@@ -6,8 +6,7 @@ Version=	1.57.0
 AltVersion=	1_57_0
 Revision=	0
 Site=		http://www.boost.org/
-URL=		http://downloads.sourceforge.net/boost
-Source=		$(Name)_$(AltVersion).tar.bz2
+Source=		http://downloads.sourceforge.net/boost/$(Name)_$(AltVersion).tar.bz2
 License=	Boost Software License
 
 ReadMeFile=	README

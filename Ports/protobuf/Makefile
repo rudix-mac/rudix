@@ -5,8 +5,7 @@ Name=		protobuf
 Version=	2.6.1
 Revision=	0
 Site=		https://developers.google.com/protocol-buffers/
-URL=		https://github.com/google/protobuf/releases/download/$(Version)
-Source=		$(Name)-$(Version).tar.bz2
+Source=		https://github.com/google/protobuf/releases/download/$(Version)/$(Name)-$(Version).tar.bz2
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md

@@ -5,8 +5,7 @@ Name=		rust
 Version=	0.12.0
 Revision=	0
 Site=		http://www.rust-lang.org
-URL=		http://static.rust-lang.org/dist
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://static.rust-lang.org/dist/$(Name)-$(Version).tar.gz
 License=	MIT/Apache
 
 ReadMeFile=	$(SourceDir)/README.md

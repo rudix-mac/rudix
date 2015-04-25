@@ -7,8 +7,7 @@ Name=		neon
 Version=	0.30.1
 Revision=	0
 Site=		http://www.webdav.org/neon/
-URL=		http://www.webdav.org/neon/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.webdav.org/neon//$(Name)-$(Version).tar.gz
 License=	LGPL
 
 LicenseFile=	LICENSE

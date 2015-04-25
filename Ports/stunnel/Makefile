@@ -5,8 +5,7 @@ Name=		stunnel
 Version=	5.01
 Revision=	0
 Site=		http://www.stunnel.org/
-URL=		https://www.stunnel.org/downloads
-Source=		$(Name)-$(Version).tar.gz
+Source=		https://www.stunnel.org/downloads/$(Name)-$(Version).tar.gz
 Checksum=	e974c2b7854c2de989b8b161be598cf2222a8a1a
 License=	GPL
 

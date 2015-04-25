@@ -6,8 +6,7 @@ AltName=	pkg
 Version=	0.28
 Revision=	1
 Site=		http://www.freedesktop.org/wiki/Software/pkg-config
-URL=		http://pkgconfig.freedesktop.org/releases/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pkgconfig.freedesktop.org/releases//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-internal-glib

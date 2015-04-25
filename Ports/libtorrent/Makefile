@@ -8,8 +8,7 @@ Name=		libtorrent
 Version=	0.13.2
 Revision=	1
 Site=		http://libtorrent.rakshasa.no/
-URL=		http://libtorrent.rakshasa.no/downloads/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://libtorrent.rakshasa.no/downloads//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-kqueue

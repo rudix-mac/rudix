@@ -8,8 +8,7 @@ Name=		varnish
 Version=	3.0.3
 Revision=	0
 Site=		https://www.varnish-cache.org/
-URL=		http://repo.varnish-cache.org/source/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://repo.varnish-cache.org/source//$(Name)-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE

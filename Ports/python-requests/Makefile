@@ -5,8 +5,7 @@ Name=		python-requests
 Version=	2.3.0
 Revision=	0
 Site=		http://python-requests.org
-URL=		https://github.com/kennethreitz/requests/archive
-Source=		v$(Version).tar.gz
+Source=		https://github.com/kennethreitz/requests/archive/v$(Version).tar.gz
 License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.rst

@@ -7,8 +7,7 @@ Name=		trac
 Version=	1.0.1
 Revision=	0
 Site=		http://trac.edgewall.org
-URL=		http://download.edgewall.org/trac/
-Source=		Trac-$(Version).tar.gz
+Source=		http://download.edgewall.org/trac//Trac-$(Version).tar.gz
 License=	BSD
 
 define test_inner_hook

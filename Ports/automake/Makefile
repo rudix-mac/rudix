@@ -7,8 +7,7 @@ Name=		automake
 Version=	1.14.1
 Revision=	0
 Site=		http://www.gnu.org/software/automake/
-URL=		http://ftp.gnu.org/gnu/automake/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/automake//$(Name)-$(Version).tar.gz
 License=	GPL
 
 EnvExtra += AUTOCONF=$(BinDir)/autoconf

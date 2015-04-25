@@ -5,8 +5,7 @@ Name=		ragel
 Version=	6.9
 Revision=	0
 Site=		http://www.colm.net/open-source/ragel/
-URL=		http://www.colm.net/wp-content/uploads/2014/10
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.colm.net/wp-content/uploads/2014/10/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define check_inner_hook

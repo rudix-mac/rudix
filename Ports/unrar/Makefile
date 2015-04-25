@@ -5,8 +5,7 @@ Name=		unrar
 Version=	5.0.1
 Revision=	0
 Site=		http://www.rarlab.com/
-URL=		http://www.rarlab.com/rar/
-Source=		$(Name)src-$(Version).tar.gz
+Source=		http://www.rarlab.com/rar//$(Name)src-$(Version).tar.gz
 License=	Freeware
 
 ReadMeFile=	$(SourceDir)/readme.txt

@@ -9,8 +9,7 @@ Name=		guile
 Version=	1.8.8
 Revision=	1
 Site=		http://www.gnu.org/software/guile/
-URL=		http://ftp.gnu.org/gnu/guile/
-Source=		guile-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/guile//guile-$(Version).tar.gz
 License=	LGPL
 
 LicenseFile=	$(SourceDir)/LICENSE

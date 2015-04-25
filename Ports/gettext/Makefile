@@ -5,8 +5,7 @@ Name=		gettext
 Version=	0.19.3
 Revision=	0
 Site=		http://www.gnu.org/software/gettext/
-URL=		http://ftp.gnu.org/gnu/gettext/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://ftp.gnu.org/gnu/gettext//$(Name)-$(Version).tar.xz
 Checksum=	5c8e37c5275742b6acc1257e2df9b5d1874c12e3
 License=	GPL
 

@@ -7,8 +7,7 @@ Name=		aria2
 Version=	1.18.8
 Revision=	0
 Site=		http://aria2.sourceforge.net/
-URL=		http://downloads.sourceforge.net/aria2
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://downloads.sourceforge.net/aria2/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.rst

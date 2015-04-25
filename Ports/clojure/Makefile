@@ -5,8 +5,7 @@ Name=		clojure
 Version=	1.5.1
 Revision=	0
 Site=		http://clojure.org/
-URL=		http://repo1.maven.org/maven2/org/clojure/clojure/$(Version)
-Source=		$(Name)-$(Version).zip
+Source=		http://repo1.maven.org/maven2/org/clojure/clojure/$(Version)/$(Name)-$(Version).zip
 License=	Eclipse Public License
 
 ReadMeFile=	$(SourceDir)/readme.txt

@@ -15,8 +15,7 @@ Name=		gforth
 Version=	0.7.2
 Revision=	0
 Site=		http://www.gnu.org/software/gforth/
-URL=		http://www.complang.tuwien.ac.at/forth/gforth/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.complang.tuwien.ac.at/forth/gforth//$(Name)-$(Version).tar.gz
 License=	GPL
 
 # Don't do parallel builds (won't work).

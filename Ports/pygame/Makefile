@@ -26,8 +26,7 @@ Title=		Pygame
 Name=		pygame
 Version=	1.9.1
 Revision=	1
-URL=		http://www.pygame.org/ftp/
-Source=		$(Name)-$(Version)release.tar.gz
+Source=		http://www.pygame.org/ftp/$(Name)-$(Version)release.tar.gz
 UncompressedName= $(Name)-$(Version)release
 
 LicenseFile=	$(BuildDir)/LGPL

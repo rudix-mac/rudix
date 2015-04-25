@@ -9,8 +9,7 @@ Name=		msmtp
 Version=	1.4.31
 Revision=	0
 Site=		http://msmtp.sourceforge.net/
-URL=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://sourceforge.net/projects/msmtp/files/msmtp/$(Version)/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 

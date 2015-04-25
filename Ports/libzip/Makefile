@@ -5,8 +5,7 @@ Name=		libzip
 Version=	0.12.2
 Revision=	0
 Site=		http://nih.at/libzip/
-URL=		http://nih.at/libzip/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://nih.at/libzip//$(Name)-$(Version).tar.bz2
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE

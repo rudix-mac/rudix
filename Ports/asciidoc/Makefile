@@ -5,8 +5,7 @@ Name=		asciidoc
 Version=	8.6.9
 Revision=	0
 Site=		http://www.methods.co.nz/asciidoc/
-URL=		http://sourceforge.net/projects/asciidoc/files/asciidoc/$(Version)/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://sourceforge.net/projects/asciidoc/files/asciidoc/$(Version)//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define install_post_hook

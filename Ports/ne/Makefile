@@ -5,8 +5,7 @@ Name=		ne
 Version=	2.5
 Revision=	1
 Site=		http://ne.di.unimi.it
-URL=		http://ne.di.unimi.it
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ne.di.unimi.it/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define build_inner_hook

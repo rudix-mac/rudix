@@ -9,8 +9,7 @@ Name=		irssi
 Version=	0.8.17
 Revision=	0
 Site=		http://irssi.org/
-URL=		http://mirror.irssi.org/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://mirror.irssi.org//$(Name)-$(Version).tar.bz2
 License=	GPL
 ReadMeFile=	$(SourceDir)/README.md
 

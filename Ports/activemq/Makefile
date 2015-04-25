@@ -6,8 +6,7 @@ Name=		activemq
 Version=	5.8.0
 Revision=	0
 Site=		http://activemq.apache.org/
-URL=		http://www.apache.org/dist//activemq/apache-activemq/$(Version)/
-Source=		apache-$(Name)-$(Version)-bin.tar.gz
+Source=		http://www.apache.org/dist//activemq/apache-activemq/$(Version)//apache-$(Name)-$(Version)-bin.tar.gz
 License=	Apache
 
 ReadMeFile=	$(InstallDir)$(LibDir)/activemq/README.txt

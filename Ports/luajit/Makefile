@@ -8,8 +8,7 @@ Name=		luajit
 Version=	2.0.3
 Revision=	0
 Site=		http://luajit.org/
-URL=		http://luajit.org/download
-Source=		LuaJIT-$(Version).tar.gz
+Source=		http://luajit.org/download/LuaJIT-$(Version).tar.gz
 License=	MIT
 
 LicenseFile=	$(SourceDir)/COPYRIGHT

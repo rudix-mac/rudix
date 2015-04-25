@@ -5,8 +5,7 @@ Name=		python-ipython
 Version=	2.1.0
 Revision=	0
 Site=           http://ipython.org
-URL=		http://archive.ipython.org/release/$(Version)
-Source=		ipython-$(Version).tar.gz
+Source=		http://archive.ipython.org/release/$(Version)/ipython-$(Version).tar.gz
 License=        BSD
 
 ReadMeFile=	$(SourceDir)/README.rst

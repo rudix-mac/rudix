@@ -7,8 +7,7 @@ Name=		lzop
 Version=	1.03
 Revision=	0
 Site=		http://www.lzop.org
-URL=		http://www.lzop.org/download
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.lzop.org/download/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_inner_hook

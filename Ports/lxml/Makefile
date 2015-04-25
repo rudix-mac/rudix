@@ -5,8 +5,7 @@ Name=		lxml
 Version=	3.4.1
 Revision=	0
 Site=		http://lxml.de/
-URL=		http://pypi.python.org/packages/source/l/lxml/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://pypi.python.org/packages/source/l/lxml//$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/PKG-INFO

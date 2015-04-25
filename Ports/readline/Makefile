@@ -5,8 +5,7 @@ Name=		readline
 Version=	6.3
 Revision=	0
 Site=		http://tiswww.case.edu/php/chet/readline/rltop.html
-URL=		http://ftp.gnu.org/gnu/readline/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/readline//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-curses

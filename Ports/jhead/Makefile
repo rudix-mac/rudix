@@ -5,8 +5,7 @@ Name=		jhead
 Version=	2.97
 Revision=	0
 Site=		http://www.sentex.net/~mwandel/jhead/
-URL=		http://www.sentex.net/~mwandel/jhead/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.sentex.net/~mwandel/jhead//$(Name)-$(Version).tar.gz
 License=	Public Domain
 
 ReadMeFile=	$(SourceDir)/readme.txt

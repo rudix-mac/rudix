@@ -7,8 +7,7 @@ Name=		python-pyyaml
 Version=	3.11
 Revision=	0
 Site=		http://pyyaml.org
-URL=		http://pyyaml.org/download/pyyaml
-Source=		PyYAML-$(Version).tar.gz
+Source=		http://pyyaml.org/download/pyyaml/PyYAML-$(Version).tar.gz
 License=	MIT
 LicenseFile=	$(SourceDir)/LICENSE
 

@@ -5,8 +5,7 @@ Name=		fish
 Version=	2.1.1
 Revision=	0
 Site=		http://fishshell.com
-URL=		http://fishshell.com/files/$(Version)
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://fishshell.com/files/$(Version)/$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md

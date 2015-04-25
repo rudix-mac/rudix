@@ -8,8 +8,7 @@ Name=		wget
 Version=	1.15
 Revision=	1
 Site=		http://www.gnu.org/software/wget/
-URL=		http://ftp.gnu.org/gnu/wget/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/wget//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-ssl=openssl

@@ -5,8 +5,7 @@ Name=		gputils
 Version=	1.4.0
 Revision=	0
 Site=		http://gputils.sourceforge.net
-URL=		http://downloads.sourceforge.net/gputils
-Source=		$(Name)-$(Version)-1.tar.gz
+Source=		http://downloads.sourceforge.net/gputils/$(Name)-$(Version)-1.tar.gz
 License=	GPL
 
 UncompressedName=$(Name)-$(Version)-1

@@ -5,6 +5,5 @@ Name=		libunistring
 Version=	0.9.3
 Revision=	3
 Site=		http://www.gnu.org/s/libunistring/
-URL=		http://ftp.gnu.org/gnu/libunistring/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/libunistring//$(Name)-$(Version).tar.gz
 License=	GPL

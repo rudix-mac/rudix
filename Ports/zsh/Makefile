@@ -5,8 +5,7 @@ Name=		zsh
 Version=	5.0.7
 Revision=	0
 Site=		http://www.zsh.org
-URL=		http://sourceforge.net/projects/zsh/files/zsh/$(Version)
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://sourceforge.net/projects/zsh/files/zsh/$(Version)/$(Name)-$(Version).tar.bz2
 Checksum=	1500191d16af8a71aec4f719a92775a074682096
 License=	GPL
 

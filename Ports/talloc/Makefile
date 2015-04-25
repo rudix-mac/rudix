@@ -5,8 +5,7 @@ Name=		talloc
 Version=	2.1.1
 Revision=	0
 Site=		http://talloc.samba.org/
-URL=		http://samba.org/ftp/talloc
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://samba.org/ftp/talloc/$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	README

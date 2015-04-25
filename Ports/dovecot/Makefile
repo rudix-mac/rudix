@@ -5,8 +5,7 @@ Name=		dovecot
 Version=	2.2.15
 Revision=	0
 Site=		http://dovecot.org/
-URL=		http://dovecot.org/releases/2.2
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://dovecot.org/releases/2.2/$(Name)-$(Version).tar.gz
 License=	MIT+LGPL
 
 define test_inner_hook

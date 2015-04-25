@@ -5,8 +5,7 @@ Name=		libyaml
 Version=	0.1.5
 Revision=	0
 Site=		http://pyyaml.org/
-URL=		http://pyyaml.org/download/libyaml
-Source=		yaml-$(Version).tar.gz
+Source=		http://pyyaml.org/download/libyaml/yaml-$(Version).tar.gz
 License=	MIT
 LicenseFile=	$(SourceDir)/LICENSE
 

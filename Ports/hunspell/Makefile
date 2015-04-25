@@ -7,8 +7,7 @@ Name=		hunspell
 Version=	1.3.3
 Revision=	1
 Site=           http://hunspell.sourceforge.net
-URL=		http://downloads.sourceforge.net/hunspell
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/hunspell/$(Name)-$(Version).tar.gz
 License=        GPL
 
 GnuConfigureExtra += --with-included-gettext

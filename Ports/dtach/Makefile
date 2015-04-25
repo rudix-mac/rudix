@@ -5,8 +5,7 @@ Name=		dtach
 Version=	0.8
 Revision=	10
 Site=		http://dtach.sourceforge.net
-URL=		http://downloads.sourceforge.net/dtach
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/dtach/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define install_inner_hook

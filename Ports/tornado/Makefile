@@ -5,8 +5,7 @@ Name=		tornado
 Version=	3.1
 Revision=	0
 Site=		http://www.tornadoweb.org/
-URL=		https://pypi.python.org/packages/source/t/tornado
-Source=		$(Name)-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/t/tornado/$(Name)-$(Version).tar.gz
 License=	Apache
 
 ReadMeFile=	$(SourceDir)/README.rst

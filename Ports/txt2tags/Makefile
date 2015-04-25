@@ -7,8 +7,7 @@ Name=		txt2tags
 Version=	2.6
 Revision=	2
 Site=		http://txt2tags.org/
-URL=		http://txt2tags.googlecode.com/files/
-Source=		$(Name)-$(Version).tgz
+Source=		http://txt2tags.googlecode.com/files//$(Name)-$(Version).tgz
 License=	GPL
 
 define prep_post_hook

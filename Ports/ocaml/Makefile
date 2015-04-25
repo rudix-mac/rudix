@@ -5,8 +5,7 @@ Name=		ocaml
 Version=	4.02.1
 Revision=	0
 Site=		http://caml.inria.fr/
-URL=		http://caml.inria.fr/pub/distrib/ocaml-4.02
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://caml.inria.fr/pub/distrib/ocaml-4.02/$(Name)-$(Version).tar.xz
 License=	LGPL
 
 LicenseFile=	$(SourceDir)/LICENSE

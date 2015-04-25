@@ -6,8 +6,7 @@ Name=		ctags
 Version=	5.8
 Revision=	8
 Site=		http://ctags.sourceforge.net/
-URL=		http://downloads.sourceforge.net/ctags
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/ctags/$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra = --enable-etags

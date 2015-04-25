@@ -7,8 +7,7 @@ Name=		unison
 Version=	2.40.102
 Revision=	0
 Site=		http://www.cis.upenn.edu/~bcpierce/unison/
-URL=		http://www.seas.upenn.edu/~bcpierce/unison//download/releases/stable/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.seas.upenn.edu/~bcpierce/unison//download/releases/stable//$(Name)-$(Version).tar.gz
 License=	GPL
 
 define build_inner_hook

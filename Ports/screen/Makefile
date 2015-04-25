@@ -5,8 +5,7 @@ Name=		screen
 Version=	4.2.1
 Revision=	0
 Site=		http://www.gnu.org/software/screen/
-URL=		http://ftp.gnu.org/gnu/screen/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/screen//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --with-sys-screenrc=/usr/local/etc

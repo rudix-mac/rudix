@@ -5,8 +5,7 @@ Name=		pytest
 Version=	2.3.5
 Revision=	0
 Site=		http://pytest.org/
-URL=		https://pypi.python.org/packages/source/p/pytest
-Source=		$(Name)-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/p/pytest/$(Name)-$(Version).tar.gz
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.rst

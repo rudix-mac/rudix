@@ -9,6 +9,5 @@ Name=		libgsasl
 Version=	1.8.0
 Revision=	0
 Site=		http://www.gnu.org/software/gsasl/
-URL=		http://ftp.gnu.org/gnu/gsasl/
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/gsasl//$(Name)-$(Version).tar.gz
 License=	GPL

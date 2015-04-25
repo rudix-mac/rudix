@@ -5,8 +5,7 @@ Name=		colordiff
 Version=	1.0.13
 Revision=	2
 Site=		http://www.colordiff.org
-URL=		http://www.colordiff.org
-Source=		$(Name)-$(Version).tar.gz
+Source=		http://www.colordiff.org/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define prep_post_hook

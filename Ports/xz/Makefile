@@ -7,8 +7,7 @@ Name=		xz
 Version=	5.0.7
 Revision=	0
 Site=		http://tukaani.org/xz/
-URL=		http://tukaani.org/xz/
-Source=		$(Name)-$(Version).tar.bz2
+Source=		http://tukaani.org/xz//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)

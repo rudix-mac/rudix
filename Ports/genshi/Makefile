@@ -5,8 +5,7 @@ Name=		genshi
 Version=	0.7
 Revision=	0
 Site=		http://genshi.edgewall.org
-URL=		http://ftp.edgewall.com/pub/genshi/
-Source=		Genshi-$(Version).tar.gz
+Source=		http://ftp.edgewall.com/pub/genshi//Genshi-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.txt

@@ -5,8 +5,7 @@ Name=		patchutils
 Version=	0.3.3
 Revision=	1
 Site=		http://cyberelk.net/tim/software/patchutils/
-URL=		http://cyberelk.net/tim/data/patchutils/stable/
-Source=		$(Name)-$(Version).tar.xz
+Source=		http://cyberelk.net/tim/data/patchutils/stable//$(Name)-$(Version).tar.xz
 License=	GPL
 
 
