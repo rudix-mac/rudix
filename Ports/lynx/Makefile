@@ -4,13 +4,13 @@ include ../../Library/GNU.mk
 
 Title=		Lynx
 Name=		lynx
-Version=	2.8.8
-Revision=	2
+Version=	2.8.9
+Revision=	0
 Site=		http://lynx.isc.org
-Source=		http://lynx.isc.org/current/$(Name)$(Version)rel.2.tar.bz2
+Source=		http://lynx.isc.org/current/$(Name)$(Version)dev.5.tar.bz2
 License=	GPL
 
-UncompressedName=lynx2-8-8
+UncompressedName=lynx2-8-9
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation
