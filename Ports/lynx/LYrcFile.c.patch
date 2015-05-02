@@ -1,0 +1,22 @@
+--- src/LYrcFile.c.orig 2015-01-23 00:30:07.000000000 -0200
++++ src/LYrcFile.c  2015-01-23 00:30:11.000000000 -0200
+@@ -661,8 +661,10 @@
+     ParseUnionPtr q;
+     BOOL changed = TRUE;
+     char *value = NULL;
++    char *orig_value = NULL;
+
+     StrAllocCopy(value, param);
++    orig_value = value;
+     value = LYSkipBlanks(value);
+     CTRACE2(TRACE_CFG, (tfp, "LYrcFile %s:%s\n", name, value));
+
+@@ -754,7 +756,7 @@
+    changed = FALSE;
+    break;
+     }
+-    FREE(value);
++    FREE(orig_value);
+
+     return changed;
+ }
