@@ -5,7 +5,8 @@
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
-MakeExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+MakeExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)"
+MakeExtra += CPPFLAGS="$(CppFlags)" LDFLAGS="$(LdFlags)"
 
 define build_inner_hook
 cd $(BuildDir) && \

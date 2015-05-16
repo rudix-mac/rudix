@@ -82,6 +82,7 @@ endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CFLAGS)
 CxxFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CXXFLAGS)
+CppFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CPPFLAGS)
 LdFlags = $(ArchFlags) $(RUDIX_EXTRA_LDFLAGS)
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)

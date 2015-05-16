@@ -7,6 +7,7 @@
 
 EnvExtra = CFLAGS="$(CFlags)" \
 	   CXXFLAGS="$(CxxFlags)" \
+	   CPPFLAGS="$(CppFlags)" \
 	   LDFLAGS="$(LdFlags)" \
 	   ARCHFLAGS="$(ArchFlags)"
 
