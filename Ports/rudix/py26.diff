@@ -1,0 +1,11 @@
+--- Makefile.orig	2015-05-16 15:59:16.000000000 -0300
++++ Makefile	2015-05-16 16:43:59.000000000 -0300
+@@ -3,7 +3,7 @@
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/share/man
+ DOCDIR=$(PREFIX)/share/doc/rudix
+-PYTHONLIBDIR=/Library/Python/2.7/site-packages
++PYTHONLIBDIR=/Library/Python/2.6/site-packages
+ 
+ test:
+ 	python -c 'import rudix'
