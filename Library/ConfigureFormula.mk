@@ -26,7 +26,8 @@ rm -f $(InstallDir)$(LibDir)/charset.alias
 rm -f $(InstallDir)$(DataDir)/locale/locale.alias
 endef
 
-EnvExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+EnvExtra = CFLAGS="$(CFlags)" CPPFLAGS="$(CppFlags)"
+EnvExtra += CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 
 define build_inner_hook
 $(call info_color,Running Configure)

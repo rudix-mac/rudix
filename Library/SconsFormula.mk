@@ -5,7 +5,8 @@
 #
 
 Scons = $(shell which scons)
-SconsExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
+SconsExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)"
+SconsExtra += CPPFLAGS="$(CppFlags)" LDFLAGS="$(LdFlags)"
 
 define build_inner_hook
 cd $(BuildDir) && $(Scons) $(SconsExtra)
