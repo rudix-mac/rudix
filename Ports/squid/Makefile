@@ -1,19 +1,17 @@
 include ../../Library/GNU.mk
 
-Title=		Squid
+Title=		Squid Caching Proxy
 Name=		squid
-Version=	3.5
-AltVersion=	3.5.4
+Version=	3.5.4
 Revision=	1
 Site=		http://www.squid-cache.org/
-Source=		http://www.squid-cache.org/Versions/v3/$(Version)//$(Name)-$(AltVersion).tar.bz2
+Source=		http://www.squid-cache.org/Versions/v3/3.5/$(Name)-$(Version).tar.xz
 License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYING
 
 CppFlags += -Wno-error=deprecated-declarations
 
-UncompressedName = $(Name)-$(AltVersion)
 GnuConfigureExtra += --datarootdir=$(DataDir)/squid
 GnuConfigureExtra += --with-maxfd=1024
 GnuConfigureExtra += --disable-eui
