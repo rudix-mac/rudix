@@ -5,10 +5,10 @@ include ../../Library/GNU.mk
 
 Title=		Terminal Multiplexer
 Name=		tmux
-Version=	1.9a
+Version=	2.0
 Revision=	0
 Site=		http://tmux.sourceforge.net/
-Source=		http://downloads.sourceforge.net/tmux/$(Name)-$(Version).tar.gz
+Source=		http://downloads.sourceforge.net/project/$(Name)/$(Name)/$(Name)-$(Version)/$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README
