@@ -3,12 +3,12 @@ include ../../Library/GNU.mk
 Description=	Perl Compatible Regular Expressions library
 Title=		PCRE
 Name=		pcre
-Version=	8.36
+Version=	8.37
 Revision=	0
 Site=		http://www.pcre.org/
 #URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		http://downloads.sourceforge.net/pcre/$(Name)-$(Version).tar.bz2
-Checksum=	9a074e9cbf3eb9f05213fd9ca5bc188644845ccc
+Checksum=	4c629b3f582366fae4e8912f0d9fa3140347d6e7
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENCE
