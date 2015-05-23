@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2015 Rudix
+# Copyright © 2005-2015 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 20150501
+BuildSystem = 2015.05.23
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -232,6 +232,7 @@ help:
 	@echo "Other rules:"
 	@echo "  help - This help message"
 	@echo "  about - Display information about the port."
+	@echo "  json - Display a JSON about the port."
 	@echo "  static - Create package with static libraries."
 
 about:
@@ -241,9 +242,20 @@ about:
 	@echo "License: $(License)"
 	@echo "Source: $(Source)"
 
+json:
+	@echo "{ \"title\": \"$(Title)\","
+	@echo "  \"name\": \"$(Name)\","
+	@echo "  \"version\": \"$(Version)\","
+	@echo "  \"revision\": $(Revision),"
+	@echo "  \"License\": \"$(License)\","
+	@echo "  \"site\": \"$(Site)\","
+	@echo "  \"source\": \"$(Source)\","
+	@echo "  \"checksum\": \"$(Checksum)\" }"
+
 #
 # Functions
 #
+
 define info_color
 printf "\033[32m$1\033[0m\n"
 endef
