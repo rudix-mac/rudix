@@ -2,10 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		GNU MP
 Name=		gmp
-Version=	5.1.3
+Version=	6.0.0
 Revision=	0
 Site=		http://gmplib.org/
-Source=		http://ftp.gnu.org/gnu/gmp//$(Name)-$(Version).tar.bz2
+Source=		http://ftp.gnu.org/gnu/gmp//$(Name)-$(Version)a.tar.xz
+Checksum=	1aaf78358ab9e34aeb61f3ae08174ee9118ece98
 License=	GPL
 
 GnuConfigureExtra += --enable-cxx
