@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2015.05.23
+BuildSystem = 2015.06.07
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -82,7 +82,7 @@ endif
 OptFlags = -Os
 CFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CFLAGS)
 CxxFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CXXFLAGS)
-CppFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CPPFLAGS)
+#CppFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CPPFLAGS)
 LdFlags = $(ArchFlags) $(RUDIX_EXTRA_LDFLAGS)
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
