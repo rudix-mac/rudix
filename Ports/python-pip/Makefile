@@ -2,11 +2,11 @@ include ../../Library/Python.mk
 
 Title=		Python pip
 Name=		python-pip
-Version=	6.1.1
+Version=	7.0.3
 Revision=	0
-Site=		https://pip.pypa.io/ # https://pypi.python.org/pypi/pip/
-Source=		http://pypi.python.org/packages/source/p/pip//pip-$(Version).tar.gz
-Checksum=	f649528990ba4c6b5a3f4811c63ced45405ec4d4
+Site=		https://pypi.python.org/pypi/pip/
+Source=		https://pypi.python.org/packages/source/p/pip/pip-$(Version).tar.gz
+Checksum=	5802dfe6dde45790e8a3e6f98f4f94219320f904
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.rst
