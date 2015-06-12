@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		CMake
 Name=		cmake
-Version=	3.2.2
+Version=	3.2.3
 Revision=	0
 Site=		http://www.cmake.org
 Source=		http://www.cmake.org/files/v3.2/cmake-${Version}.tar.gz
