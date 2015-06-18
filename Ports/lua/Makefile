@@ -2,11 +2,11 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.3.0
+Version=	5.3.1
 Revision=	0
 Site=		http://www.lua.org/
 Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
-Checksum=	1c46d1c78c44039939e820126b86a6ae12dadfba
+Checksum=	1676c6a041d90b6982db8cef1e5fb26000ab6dee
 License=	MIT
 
 LicenseFile=	license.txt
