@@ -1,11 +1,11 @@
 include ../../Library/GNU.mk
 
-Title=		Text-Mode Interface for Git
+Title=		Tig
 Name=		tig
-Version=	2.0.3
+Version=	2.1.1
 Revision=	0
 Site=		http://jonas.nitro.dk/tig/
-Source=		http://jonas.nitro.dk/tig/releases//$(Name)-$(Version).tar.gz
+Source=		http://jonas.nitro.dk/tig/releases/$(Name)-$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.adoc
