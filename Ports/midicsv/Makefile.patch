@@ -1,0 +1,24 @@
+--- Makefile.orig	2015-06-21 21:48:18.000000000 -0300
++++ Makefile	2015-06-21 21:54:22.000000000 -0300
+@@ -66,15 +66,15 @@
+ install:	all
+ 	install -d -m 755 $(INSTALL_DEST)/bin
+ 	install -m 755 $(PROGRAMS) $(INSTALL_DEST)/bin
+-	install -d -m 755 $(INSTALL_DEST)/man/man1
+-	install -m 644 midicsv.1 csvmidi.1 $(INSTALL_DEST)/man/man1
+-	install -d -m 755 $(INSTALL_DEST)/man/man5
+-	install -m 644 midicsv.5 $(INSTALL_DEST)/man/man5
++	install -d -m 755 $(INSTALL_DEST)/share/man/man1
++	install -m 644 midicsv.1 csvmidi.1 $(INSTALL_DEST)/share/man/man1
++	install -d -m 755 $(INSTALL_DEST)/share/man/man5
++	install -m 644 midicsv.5 $(INSTALL_DEST)/share/man/man5
+ 	
+ uninstall:
+ 	rm -f $(INSTALL_DEST)/bin/csvmidi $(INSTALL_DEST)/bin/midicsv
+-	rm -f $(INSTALL_DEST)/man/man1/csvmidi.1 $(INSTALL_DEST)/man/man1/midicsv.1
+-	rm -f $(INSTALL_DEST)/man/man5/midicsv.5
++	rm -f $(INSTALL_DEST)/share/man/man1/csvmidi.1 $(INSTALL_DEST)/share/man/man1/midicsv.1
++	rm -f $(INSTALL_DEST)/share/man/man5/midicsv.5
+ 	
+ dist:	$(WIN32EXE)
+ 	rm -f midicsv*.tar midicsv*.tar.gz
