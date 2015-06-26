@@ -7,12 +7,17 @@ Title=		Terminal Multiplexer
 Name=		tmux
 Version=	2.0
 Revision=	0
-Site=		http://tmux.sourceforge.net/
-Source=		http://downloads.sourceforge.net/project/$(Name)/$(Name)/$(Name)-$(Version)/$(Name)-$(Version).tar.gz
+Site=		http://tmux.github.io/
+Source=     https://github.com/tmux/tmux/archive/$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
+
+define build_pre_hook
+cd $(SourceDir); \
+sh ./autogen.sh
+endef
 
 ifeq ($(OSXVersion),10.6)
 define prep_post_hook
