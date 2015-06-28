@@ -1,0 +1,11 @@
+--- lregex.c.orig	2007-09-09 23:36:48.000000000 -0300
++++ lregex.c	2015-06-27 22:35:32.000000000 -0300
+@@ -408,7 +408,7 @@
+ 		const char* regexfile = parameter + 1;
+ 		FILE* const fp = fopen (regexfile, "r");
+ 		if (fp == NULL)
+-			error (WARNING | PERROR, regexfile);
++			error (WARNING | PERROR, "%s", regexfile);
+ 		else
+ 		{
+ 			vString* const regex = vStringNew ();
