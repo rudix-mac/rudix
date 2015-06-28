@@ -1,14 +1,19 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
+# Is there any patches to apply for this version?
+# curl http://www.mpfr.org/mpfr-3.1.3/allpatches
+
+BuildRequires += $(LibDir)/libgmp.la  # static-gmp
+
 include ../../Library/GNU.mk
 
 Title=		GNU MPFR
 Name=		mpfr
-Version=	3.1.2
+Version=	3.1.3
 Revision=	0
 Site=		http://www.mpfr.org/
-Source=		http://www.mpfr.org/mpfr-current//$(Name)-$(Version).tar.xz
-License=	LGPL
+Source=		http://www.mpfr.org/mpfr-current/$(Name)-$(Version).tar.xz
+License=	LGPLv3
 
 GnuConfigureExtra += --with-pic
 
