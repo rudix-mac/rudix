@@ -232,7 +232,7 @@ help:
 	@echo "Other rules:"
 	@echo "  help - This help message"
 	@echo "  about - Display information about the port."
-	@echo "  json - Display a JSON about the port."
+	@echo "  json - Export port to JSON."
 	@echo "  static - Create package with static libraries."
 
 about:
@@ -243,12 +243,12 @@ about:
 	@echo "Source: $(Source)"
 
 json:
-	@echo "{ \"title\": \"$(Title)\","
+	@echo "{ \"site\": \"$(Site)\","
+	@echo "  \"title\": \"$(Title)\","
 	@echo "  \"name\": \"$(Name)\","
 	@echo "  \"version\": \"$(Version)\","
 	@echo "  \"revision\": $(Revision),"
-	@echo "  \"License\": \"$(License)\","
-	@echo "  \"site\": \"$(Site)\","
+	@echo "  \"license\": \"$(License)\","
 	@echo "  \"source\": \"$(Source)\","
 	@echo "  \"checksum\": \"$(Checksum)\" }"
 
