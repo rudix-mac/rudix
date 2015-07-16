@@ -5,11 +5,15 @@ include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.15
-Revision=	1
+Version=	1.16.3
+Revision=	0
 Site=		http://www.gnu.org/software/wget/
-Source=		http://ftp.gnu.org/gnu/wget//$(Name)-$(Version).tar.gz
+Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.xz
+Checksum=	a7d24a8512720893b0a8c5c436f324e9ed43874d
 License=	GPL
+
+EnvExtra += OPENSSL_CFLAGS=-I/usr/include
+EnvExtra += OPENSSL_LIBS="-lcrypto -lssl"
 
 GnuConfigureExtra += --with-ssl=openssl
 GnuConfigureExtra += --with-libidn=$(Prefix)
