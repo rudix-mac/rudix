@@ -1,0 +1,11 @@
+--- mem_config.in.orig	2014-02-09 09:52:52.000000000 -0200
++++ mem_config.in	2015-07-17 21:51:44.000000000 -0300
+@@ -14,7 +14,7 @@
+ #undef AC_APPLE_UNIVERSAL_BUILD
+ 
+ /* the location of <cinttypes> */
+-#undef CINTTYPES_H
++#define CINTTYPES_H <inttypes.h>
+ 
+ /* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+    systems. This function is required for `alloca.c' support on those systems.

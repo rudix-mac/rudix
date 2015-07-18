@@ -1,0 +1,21 @@
+--- libmemcached/byteorder.cc.orig	2014-02-09 09:52:42.000000000 -0200
++++ libmemcached/byteorder.cc	2015-07-17 21:55:41.000000000 -0300
+@@ -62,18 +62,10 @@
+ 
+ uint64_t memcached_ntohll(uint64_t value)
+ {
+-#ifdef HAVE_HTONLL
+-  return ntohll(value);
+-#else
+   return swap64(value);
+-#endif
+ }
+ 
+ uint64_t memcached_htonll(uint64_t value)
+ {
+-#ifdef HAVE_HTONLL
+-  return htonll(value);
+-#else
+   return swap64(value);
+-#endif
+ }
