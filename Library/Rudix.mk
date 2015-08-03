@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2015.06.08
+BuildSystem = 2015.08.03
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -286,6 +286,7 @@ case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-bzip2) tar jxf $(shell basename $(Source)) ;; \
 	application/x-xz) tar zxf $(shell basename $(Source)) ;; \
 	application/zip) unzip -q $(shell basename $(Source)) ;; \
+	application/x-lzip) lunzip -c $(shell basename $(Source)) | tar xf - ;; \
 	*) false ;; \
 esac
 endef
