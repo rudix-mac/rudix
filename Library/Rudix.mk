@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2015.08.03
+BuildSystem = 2015.08.06
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -269,7 +269,12 @@ printf "\033[31mError: $1\033[0m\n"
 endef
 
 define fetch
-curl -f -O -C - -L
+curl \
+	--fail \
+	--location \
+	--continue-at - \
+	--remote-time \
+	--remote-name
 endef
 
 define verify_checksum
