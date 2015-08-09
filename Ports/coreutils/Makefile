@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Core Utilities
 Name=		coreutils
-Version=	8.23
+Version=	8.24
 Revision=	0
 Site=		http://www.gnu.org/software/coreutils/
 Source=		http://ftp.gnu.org/gnu/coreutils//$(Name)-$(Version).tar.xz
