@@ -5,7 +5,7 @@ endif
 
 Title=		LuaJIT
 Name=		luajit
-Version=	2.0.3
+Version=	2.0.4
 Revision=	0
 Site=		http://luajit.org/
 Source=		http://luajit.org/download/LuaJIT-$(Version).tar.gz
