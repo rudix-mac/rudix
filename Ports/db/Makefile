@@ -2,11 +2,11 @@ include ../../Library/Rudix.mk
 
 Title=		Berkeley DB
 Name=		db
-Version=	6.0.20
+Version=	6.1.26
 Revision=	0
 Site=		http://www.oracle.com/technetwork/products/berkeleydb/
 Source=		http://download.oracle.com/berkeley-db/$(Name)-$(Version).tar.gz
-License=	BSD
+License=	AGPLv3
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
