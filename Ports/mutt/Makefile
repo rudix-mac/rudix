@@ -1,13 +1,16 @@
 WITH_HCACHE?=yes
+SET_MUTT_DOTLOCK?=yes
 
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+ifeq ($(WITH_HCACHE),yes)
+BuildRequires += $(LibDir)/libdb.a # static-db
+endif
 
 include ../../Library/GNU.mk
 
 Title=		Mutt
 Name=		mutt
 Version=	1.5.23
-Revision=	0
+Revision=	1
 Site=		http://www.mutt.org/
 #URL=		ftp://ftp.mutt.org/mutt/devel/
 Source=		https://bitbucket.org/mutt/mutt/downloads/$(Name)-$(Version).tar.gz
@@ -16,19 +19,18 @@ License=	GPL
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 ifeq ($(WITH_HCACHE),yes)
-BuildRequires += $(LibDir)/libdb.la # static-db
 GnuConfigureExtra += --enable-hcache
 endif
 
+GnuConfigureExtra += --sysconfdir $(SysConfDir)/mutt
+GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += -enable-pop --enable-imap --enable-smtp
 GnuConfigureExtra += --with-ssl
 
 define install_post_hook
-mv $(InstallDir)/$(Prefix)/etc/Muttrc \
-	$(InstallDir)/usr/local/etc/Muttrc.default
-mv $(InstallDir)/$(Prefix)/etc/mime.types \
-	$(InstallDir)/usr/local/etc/mime.types.default
-rm -rf $(InstallDir)/$(LibDir)
+mv $(DestDir)$(SysConfDir)/mutt/Muttrc $(DestDir)$(SysConfDir)/mutt/Muttrc.default
+mv $(DestDir)$(SysConfDir)/mutt/mime.types $(DestDir)$(SysConfDir)/mutt/mime.types.default
+rm -rf $(DestDir)/$(LibDir)
 endef
 
 ifeq ($(WITH_HCACHE),yes)
@@ -41,6 +43,10 @@ $(BinDir)/mutt -v
 endef
 endif
 
-# TODO: fix permissions
-# chown root:mail	$(BinDir)/mutt_dotlock
-# chmod g+s 		$(BinDir)/mutt_dotlock
+ifeq ($(SET_MUTT_DOTLOCK),yes)
+define pkg_pre_hook
+@echo "mutt_dotlock must be set to root:mail and g+s"
+sudo chown root:mail $(DestDir)$(BinDir)/mutt_dotlock
+sudo chmod g+s $(DestDir)$(BinDir)/mutt_dotlock
+endef
+endif

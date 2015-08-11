@@ -1,0 +1,8 @@
+#!/bin/sh
+[ ! -f $3/usr/local/etc/mutt/Muttrc ] && \
+    install -m 644 $3/usr/local/etc/mutt/Muttrc.default \
+        $3/usr/local/etc/mutt/Muttrc
+[ ! -f $3/usr/local/etc/mutt/mime.types ] && \
+    install -m 644 $3/usr/local/etc/mutt/mime.types.default \
+        $3/usr/local/etc/mutt/mime.types
+exit 0
