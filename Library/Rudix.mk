@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2015.08.06
+BuildSystem = 2015.08.11
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -323,6 +323,7 @@ pkgbuild \
 	--identifier $(PkgId) \
 	--version $(Version)-$(Revision) \
 	--root $(InstallDir) \
+	--ownership preserve-other \
 	--install-location / \
 	$(if $(wildcard $(PortDir)/scripts),--scripts $(PortDir)/scripts) \
 	$(Name)install.pkg
