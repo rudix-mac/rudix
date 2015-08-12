@@ -1,8 +1,14 @@
 #!/bin/sh
-[ ! -f $3/usr/local/etc/squid.conf ] && \
-    install -m 644 $3/usr/local/etc/squid.conf.default $3/usr/local/etc/squid.conf
-[ ! -f /usr/local/etc/mime.conf ] && \
-    install -m 644 $3/usr/local/etc/mime.conf.default $3/usr/local/etc/mime.conf
-[ ! -f /usr/local/etc/cachemgr.conf ] && \
-    install -m 644 $3/usr/local/etc/cachemgr.conf.default $3/usr/local/etc/cachemgr.conf
+[ ! -f $3/usr/local/etc/squid/squid.conf ] && \
+    install -m 644 $3/usr/local/etc/squid/squid.conf.default \
+        $3/usr/local/etc/squid/squid.conf
+[ ! -f /usr/local/etc/squid/mime.conf ] && \
+    install -m 644 $3/usr/local/etc/squid/mime.conf.default \
+        $3/usr/local/etc/squid/mime.conf
+[ ! -f /usr/local/etc/squid/cachemgr.conf ] && \
+    install -m 644 $3/usr/local/etc/squid/cachemgr.conf.default \
+        $3/usr/local/etc/squid/cachemgr.conf
+[ ! -f /usr/local/etc/squid/errorpage.css ] && \
+    install -m 644 $3/usr/local/etc/squid/errorpage.css.default \
+        $3/usr/local/etc/squid/errorpage.css
 exit 0
