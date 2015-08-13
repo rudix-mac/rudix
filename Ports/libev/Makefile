@@ -1,18 +1,18 @@
 include ../../Library/GNU.mk
 
-Description=	A full-featured and high-performance event loop that is loosely modelled after libevent
+Description=	Full-featured and high-performance event loop that is loosely modelled after libevent
 Title=		Libev
 Name=		libev
-Version=	4.19
+Version=	4.20
 Revision=	0
-Site=		http://software.schmorp.de/pkg/libev
-Source=		http://dist.schmorp.de/libev//$(Name)-$(Version).tar.gz
+Site=		http://software.schmorp.de/pkg/libev.html
+Source=		http://dist.schmorp.de/libev/$(Name)-$(Version).tar.gz
 License=	BSD/GPL
 
 LicenseFile=	$(SourceDir)/LICENSE
 
 define test_inner_hook
 cp example.c $(BuildDir)
-cc -I$(IncludeDir) -L$(LibDir) -lev $(BuildDir)/example.c -o $(BuildDir)/example
+$(CC) -I$(IncludeDir) -L$(LibDir) -lev $(BuildDir)/example.c -o $(BuildDir)/example
 $(BuildDir)/example
 endef
