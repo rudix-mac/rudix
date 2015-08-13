@@ -1,0 +1,35 @@
+--- cgi-src/Makefile.in.orig	2005-05-20 16:10:25.000000000 -0300
++++ cgi-src/Makefile.in	2015-08-13 15:19:31.000000000 -0300
+@@ -26,7 +26,7 @@
+ 
+ prefix =	@prefix@
+ exec_prefix =	@exec_prefix@
+-WEBDIR =	$(prefix)/www
++WEBDIR =	@localstatedir@/www/thttpd
+ CGIBINDIR =	$(WEBDIR)/cgi-bin
+ MANDIR =	@mandir@
+ 
+@@ -67,17 +67,12 @@
+ 	cd .. ; $(MAKE) $(MFLAGS) strerror.o
+ 
+ install:	all
+-	-mkdir -p $(CGIBINDIR)
+-	rm -f $(CGIBINDIR)/redirect
+-	cp redirect $(CGIBINDIR)/redirect
+-	rm -f $(MANDIR)/man8/redirect.8
+-	cp redirect.8 $(MANDIR)/man8/redirect.8
+-	rm -f $(CGIBINDIR)/ssi
+-	cp ssi $(CGIBINDIR)/ssi
+-	rm -f $(MANDIR)/man8/ssi.8
+-	cp ssi.8 $(MANDIR)/man8/ssi.8
+-	rm -f $(CGIBINDIR)/phf
+-	cp phf $(CGIBINDIR)/phf
++	-mkdir -p $(DESTDIR)$(CGIBINDIR)
++	cp redirect $(DESTDIR)$(CGIBINDIR)/redirect
++	cp redirect.8 $(DESTDIR)$(MANDIR)/man8/redirect.8
++	cp ssi $(DESTDIR)$(CGIBINDIR)/ssi
++	cp ssi.8 $(DESTDIR)$(MANDIR)/man8/ssi.8
++	cp phf $(DESTDIR)$(CGIBINDIR)/phf
+ 
+ clean:
+ 	rm -f $(CLEANFILES)

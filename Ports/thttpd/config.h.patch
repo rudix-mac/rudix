@@ -1,0 +1,20 @@
+--- config.h.orig	2011-09-11 13:41:37.000000000 -0300
++++ config.h	2015-08-13 14:21:33.000000000 -0300
+@@ -237,7 +237,7 @@
+ ** initializing.  If this user (or the one specified by the -u flag) does
+ ** not exist, the program will refuse to run.
+ */
+-#define DEFAULT_USER "nobody"
++#define DEFAULT_USER "_www"
+ 
+ /* CONFIGURE: When started as root, the program can automatically chdir()
+ ** to the home directory of the user specified by -u or DEFAULT_USER.
+@@ -276,7 +276,7 @@
+ 
+ /* CONFIGURE: $PATH to use for CGI programs.
+ */
+-#define CGI_PATH "/usr/local/bin:/usr/ucb:/bin:/usr/bin"
++#define CGI_PATH "/usr/local/bin:/bin:/usr/bin"
+ 
+ /* CONFIGURE: If defined, $LD_LIBRARY_PATH to use for CGI programs.
+ */

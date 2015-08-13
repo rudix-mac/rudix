@@ -1,0 +1,38 @@
+--- extras/Makefile.in.orig	2005-05-20 16:10:25.000000000 -0300
++++ extras/Makefile.in	2015-08-13 14:46:35.000000000 -0300
+@@ -26,8 +26,8 @@
+ 
+ prefix =	@prefix@
+ exec_prefix =	@exec_prefix@
+-BINDIR =	@sbindir@
+-WEBDIR =	$(prefix)/www
++BINDIR =	@bindir@
++WEBDIR =	@localstatedir@/www/thttpd
+ CGIBINDIR =	$(WEBDIR)/cgi-bin
+ MANDIR =	@mandir@
+ 
+@@ -66,18 +66,12 @@
+ 
+ 
+ install:	all
+-	rm -f $(BINDIR)/makeweb $(BINDIR)/htpasswd $(BINDIR)/syslogtocern
+-	cp makeweb $(BINDIR)/makeweb
+-	chgrp $(WEBGROUP) $(BINDIR)/makeweb
+-	chmod 2755 $(BINDIR)/makeweb
+-	cp htpasswd $(BINDIR)/htpasswd
+-	cp syslogtocern $(BINDIR)/syslogtocern
+-	rm -f $(MANDIR)/man1/makeweb.1
+-	cp makeweb.1 $(MANDIR)/man1/makeweb.1
+-	rm -f $(MANDIR)/man1/htpasswd.1
+-	cp htpasswd.1 $(MANDIR)/man1/htpasswd.1
+-	rm -f $(MANDIR)/man8/syslogtocern.8
+-	cp syslogtocern.8 $(MANDIR)/man8/syslogtocern.8
++	cp makeweb $(DESTDIR)$(BINDIR)/makeweb
++	cp htpasswd $(DESTDIR)$(BINDIR)/htpasswd
++	cp syslogtocern $(DESTDIR)$(BINDIR)/syslogtocern
++	cp makeweb.1 $(DESTDIR)$(MANDIR)/man1/makeweb.1
++	cp htpasswd.1 $(DESTDIR)$(MANDIR)/man1/htpasswd.1
++	cp syslogtocern.8 $(DESTDIR)$(MANDIR)/man8/syslogtocern.8
+ 
+ clean:
+ 	rm -f $(CLEANFILES)
