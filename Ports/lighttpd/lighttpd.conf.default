@@ -38,7 +38,7 @@ server.modules              = (
 
 ## a static document-root, for virtual-hosting take look at the
 ## server.virtual-* options
-server.document-root        = "/usr/local/var/www"
+server.document-root        = "/usr/local/var/www/lighttpd"
 
 ## where to send error-messages to
 server.errorlog             = "/usr/local/var/log/lighttpd/error.log"
@@ -187,10 +187,10 @@ server.pid-file            = "/usr/local/var/run/lighttpd.pid"
 #server.chroot              = "/"
 
 ## change uid to <uid> (default: don't care)
-#server.username            = "wwwrun"
+server.username            = "_www"
 
 ## change uid to <uid> (default: don't care)
-#server.groupname           = "wwwrun"
+server.groupname           = "_www"
 
 #### compress module
 #compress.cache-dir         = "/var/cache/lighttpd/compress/"

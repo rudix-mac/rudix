@@ -1,6 +1,5 @@
 #!/bin/sh
-
 [ ! -f $3/usr/local/etc/lighttpd/lighttpd.conf ] && \
-install -m 664 $3/usr/local/etc/lighttpd/lighttpd.conf.default $3/usr/local/etc/lighttpd/lighttpd.conf
-
+    install -m 664 $3/usr/local/etc/lighttpd/lighttpd.conf.default \
+        $3/usr/local/etc/lighttpd/lighttpd.conf
 exit 0
