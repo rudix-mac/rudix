@@ -2,7 +2,7 @@ BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
 
 include ../../Library/GNU.mk
 
-Title=		jp2a
+Title=		JPEG to ASCII
 Name=		jp2a
 Version=	1.0.6
 Revision=	0
