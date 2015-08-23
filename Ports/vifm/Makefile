@@ -2,10 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Vifm
 Name=		vifm
-Version=	0.7.3a
+Version=	0.8
 Revision=	0
-Site=		http://vifm.sourceforge.net/index.html
-Source=		http://sourceforge.net/projects/vifm/files/vifm//$(Name)-$(Version).tar.bz2
+Site=		http://vifm.info
+Source=		http://prdownloads.sourceforge.net/vifm/vifm-$(Version).tar.bz2
+CheckSum=	6988fce1eb2038f6e3910819588fe67d755099c1
 License=	GPL
 
 GnuConfigureExtra += --with-gtk=no
