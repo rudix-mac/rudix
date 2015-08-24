@@ -1,0 +1,20 @@
+--- Makefile.in.orig	2015-08-16 09:12:05.000000000 -0300
++++ Makefile.in	2015-08-23 21:53:22.000000000 -0300
+@@ -52,7 +52,7 @@
+ .PHONY: all
+ all: ccache$(EXEEXT)
+ 
+-ccache$(EXEEXT): $(ccache_objs) $(extra_libs)
++ccache$(EXEEXT): $(ccache_objs)
+ 	$(CC) $(all_cflags) -o $@ $(ccache_objs) $(all_ldflags) $(extra_libs) $(LIBS)
+ 
+ .PHONY: install
+@@ -87,7 +87,7 @@
+ quicktest: test/main$(EXEEXT)
+ 	test/main$(EXEEXT)
+ 
+-test/main$(EXEEXT): $(base_objs) $(test_objs) $(extra_libs)
++test/main$(EXEEXT): $(base_objs) $(test_objs)
+ 	$(CC) $(all_cflags) -o $@ $(base_objs) $(test_objs) $(all_ldflags) $(extra_libs) $(LIBS)
+ 
+ test/main.o: test/suites.h
