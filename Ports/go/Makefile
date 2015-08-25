@@ -1,15 +1,17 @@
 ifeq ($(OSXVersion),10.6)
 RUDIX_STRIP_PACKAGE=no
 endif
+
 include ../../Library/Rudix.mk
 
 Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
-Version=	1.4.1
+Version=	1.4.2
 Revision=	0
 Site=		http://golang.org/
 Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
+CheckSum=	460caac03379f746c473814a65223397e9c9a2f6
 License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
