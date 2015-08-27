@@ -5,14 +5,14 @@ endif
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	17.4
+Version=	18.0
 Revision=	0
 Site=		http://www.erlang.org/
 Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
-License=	EPL
+License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.md
-LicenseFile=	$(SourceDir)/EPLICENCE
+LicenseFile=	$(SourceDir)/LICENSE.txt
 
 UncompressedName=otp_src_$(Version)
 
