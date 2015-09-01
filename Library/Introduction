@@ -1,10 +1,10 @@
 The package you are installing is part of Rudix.
 
-Rudix is a collection of Unix software delivered as packages for Mac OS X. Every package is self-contained and has everything it needs to work.
+Rudix is a collection of Unix software delivered as packages for OS X.  Every package is self-contained and has everything it needs to work.
 
-Rudix tries its best not to add extra dependencies to anything but the native Mac OS X libraries.
+Rudix tries its best not to add extra dependencies to anything but the native OS X libraries.
 
-Binaries, libraries, documentation and other files will be installed in /usr/local/ folder. Python modules will be installed in the /Library/Python/2.7/site-packages/ folder.
+Binaries, libraries, documentation and other files will be installed in /usr/local/ folder. Python modules will be installed in the /Library/Python/*/site-packages/ folder.
 
 You will now be guided through the steps necessary to install this software.
 
