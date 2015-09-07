@@ -1,10 +1,10 @@
-BuildRequires += $(LibDir)/libpcre.la
+BuildRequires += $(LibDir)/libpcre.la # static-pcre
 
 include ../../Library/Unix.mk
 
 Title=		HAProxy
 Name=		haproxy
-Version=	1.5.9
+Version=	1.5.14
 Revision=	0
 Site=		http://www.haproxy.org
 Source=		http://www.haproxy.org/download/1.5/src/$(Name)-$(Version).tar.gz
@@ -20,7 +20,7 @@ MakeExtra += USE_KQUEUE=1
 MakeInstallExtra += SBINDIR=$(BinDir)
 
 define install_post_hook
-rm -f $(InstallDir)$(BinDir)/haproxy-systemd-wrapper
+rm -f $(DestDir)$(BinDir)/haproxy-systemd-wrapper
 endef
 
 define test_inner_hook
