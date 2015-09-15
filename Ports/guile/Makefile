@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libgmp.la  # gmp version 5
+BuildRequires += $(LibDir)/libgmp.la # static-gmp
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libltdl.la # static-libtool
 
@@ -7,7 +7,7 @@ include ../../Library/GNU.mk
 Title=		GNU Guile
 Name=		guile
 Version=	1.8.8
-Revision=	1
+Revision=	2
 Site=		http://www.gnu.org/software/guile/
 Source=		http://ftp.gnu.org/gnu/guile//guile-$(Version).tar.gz
 License=	LGPL
