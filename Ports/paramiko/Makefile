@@ -1,11 +1,14 @@
-BuildRequires += $(DocDir)/pycrypto # pycrypto
+BuildRequires += $(PythonSitePackages)/Crypto # pycrypto
+BuildRequires += $(PythonSitePackages)/ecdsa # python-ecdsa
+
 Requires += org.rudix.pkg.pycrypto,pycrypto,pycryptoinstall.pkg
+Requires += org.rudix.pkg.python-ecdsa,python-ecdsa,python-ecdsainstall.pkg
 
 include ../../Library/Python.mk
 
-Title=		Paramiko (Python SSH module)
+Title=		Paramiko
 Name=		paramiko
-Version=	1.10.1
+Version=	1.15.2
 Revision=	0
 Site=		http://www.lag.net/paramiko/
 Site=		http://www.lag.net/paramiko/
