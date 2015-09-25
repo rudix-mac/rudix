@@ -1,14 +1,15 @@
 Requires += org.rudix.pkg.pycrypto,pycrypto,pycryptoinstall.pkg
+Requires += org.rudix.pkg.python-ecdsa,python-ecdsa,python-ecdsainstall.pkg
 Requires += org.rudix.pkg.paramiko,paramiko,paramikoinstall.pkg
 
 include ../../Library/Python.mk
 
 Title=		Fabric
 Name=		fabric
-Version=	1.6.1
+Version=	1.10.2
 Revision=	0
 Site=		http://fabfile.org/
-Source=		http://pypi.python.org/packages/source/F/Fabric//Fabric-$(Version).tar.gz
+Source=		https://pypi.python.org/packages/source/F/Fabric/Fabric-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.rst
