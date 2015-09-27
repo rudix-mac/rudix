@@ -1,0 +1,11 @@
+--- Makefile.orig	2015-02-08 07:10:54.000000000 -0200
++++ Makefile	2015-09-27 16:29:09.000000000 -0300
+@@ -421,7 +421,7 @@
+ 	  cd $(DESTDIR)$$LIBDIR; \
+ 	  if [ $$MASTERHASH != $$DEFHASH ]; then \
+ 	    rm -f $$DEFHASH; \
+-	    $$LINK -s $(DESTDIR)$$MASTERHASH $$DEFHASH; \
++	    $$LINK -s $$MASTERHASH $$DEFHASH; \
+ 	  fi
+ 
+ munchable:	findaffix tryaffix munchlist buildhash ispell icombine
