@@ -1,0 +1,5 @@
+#!/bin/sh
+[ ! -f $3/usr/local/share/gnuchess/gnuchess.ini ] && \
+install -m 644 $3/usr/local/share/gnuchess/gnuchess.ini.default \
+	$3/usr/local/share/gnuchess/gnuchess.ini
+exit 0
