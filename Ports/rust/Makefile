@@ -2,11 +2,11 @@ include ../../Library/Configure.mk
 
 Title=		Rust Language
 Name=		rust
-Version=	1.2.0
+Version=	1.3.0
 Revision=	0
 Site=		http://www.rust-lang.org
 Source=		https://static.rust-lang.org/dist/rustc-$(Version)-src.tar.gz
-CheckSum=	3433ba9b8494097431415a120ab5b9645f469cb1
+CheckSum=	39756e4a8cf453b48c5993bd6d063fd2f6722d18
 License=	MIT+Apache License+BSD
 
 ReadMeFile=	$(SourceDir)/README.md
