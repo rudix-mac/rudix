@@ -2,6 +2,8 @@ ifeq ($(OSXVersion),10.6)
 RUDIX_STRIP_PACKAGE=no
 endif
 
+BuildRequires += $(BinDir)/go  # go >= 1.4.2-1
+
 GoRoot=$(LibDir)/go
 
 include ../../Library/Rudix.mk
@@ -9,19 +11,22 @@ include ../../Library/Rudix.mk
 Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
-Version=	1.4.2
-Revision=	1
+Version=	1.5.1
+Revision=	0
 Site=		http://golang.org/
 Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
-CheckSum=	460caac03379f746c473814a65223397e9c9a2f6
+CheckSum=	0df564746d105f4180c2b576a1553ebca9d9a124
 License=	BSD
 
+ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=go
 
 define build_inner_hook
-cd $(BuildDir)/src && env GOROOT_FINAL=$(GoRoot) ./all.bash
+cd $(BuildDir)/src && \
+	env GOROOT_BOOTSTRAP=$(GoRoot) \
+		GOROOT_FINAL=$(GoRoot) ./all.bash
 endef
 
 define install_inner_hook
@@ -38,7 +43,7 @@ cp -a $(BuildDir)/src $(InstallDir)$(GoRoot)
 cp -a $(BuildDir)/test $(InstallDir)$(GoRoot)
 
 $(install_base_documentation)
-install -m 644 $(SourceDir)/{AUTHORS,PATENTS,CONTRIBUTORS,VERSION} $(InstallDir)/$(DocDir)/go
+install -m 644 $(SourceDir)/{AUTHORS,PATENTS,CONTRIB*,VERSION} $(InstallDir)/$(DocDir)/go
 install -d $(InstallDir)$(BinDir)
 cd $(InstallDir)$(BinDir) && ln -sf ../lib/go/bin/* .
 endef
