@@ -1,14 +1,15 @@
-BuildRequires += $(LibDir)/libevent.la # static-libevent
-BuildRequires += $(BinDir)/pkg-config # pkgconfig
+BuildRequires += $(LibDir)/libevent.la	# static-libevent
+BuildRequires += $(BinDir)/pkg-config	# pkg-config
 
 include ../../Library/GNU.mk
 
 Title=		Terminal Multiplexer
 Name=		tmux
-Version=	2.0
+Version=	2.1
 Revision=	0
 Site=		http://tmux.github.io/
-Source=		https://github.com/tmux/tmux/releases/download/2.0/tmux-$(Version).tar.gz
+Source=		https://github.com/tmux/tmux/releases/download/2.1/tmux-$(Version).tar.gz
+CheckSum=	7b9a63f1d029498705e6a7bb980bc2f554d9d258
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README
