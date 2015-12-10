@@ -4,11 +4,11 @@ include ../../Library/GNU.mk
 
 Title=		ccache
 Name=		ccache
-Version=	3.2.3
+Version=	3.2.4
 Revision=	0
 Site=		https://ccache.samba.org
 Source=		https://samba.org/ftp/ccache/$(Name)-$(Version).tar.bz2
-Checksum=	f9e863340eb0c0111200949942ee9a35e48fcea9
+Checksum=	0fcd0c8c1e75a4c5cab4671b6c07a0c55d6ee215
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.txt
