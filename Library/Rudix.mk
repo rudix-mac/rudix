@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2015.10.05
+BuildSystem = 2015.12.12
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -83,11 +83,21 @@ ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-a
 else
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
 endif
+
+# Minimum OS X version supported
+ifeq ($(OSXVersion), 10.6)
+CompatFlags = -mmacosx-version-min=10.5
+else # 10.7, 10.8, 10.9, 10.10, 10.11, ...
+CompatFlags = -mmacosx-version-min=10.7
+endif
+
 OptFlags = -Os
-CFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CFLAGS)
-CxxFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CXXFLAGS)
-#CppFlags = $(ArchFlags) $(OptFlags) $(RUDIX_EXTRA_CPPFLAGS)
-LdFlags = $(ArchFlags) $(RUDIX_EXTRA_LDFLAGS)
+
+CFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
+CxxFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
+#CppFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
+LdFlags = $(ArchFlags) $(CompatFlags)
+
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif
