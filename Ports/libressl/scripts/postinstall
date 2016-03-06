@@ -1,0 +1,4 @@
+#!/bin/sh
+[ ! -d $3/usr/local/etc/ssl ] && \
+  cp -a $3/usr/local/etc/ssl.default $3/usr/local/etc/ssl
+exit 0
