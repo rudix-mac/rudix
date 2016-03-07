@@ -2,19 +2,15 @@ include ../../Library/GNU.mk
 
 Title=		Pkg-Config
 Name=		pkg-config
-Version=	0.29
+Version=	0.29.1
 Revision=	0
-Site=		http://www.freedesktop.org/wiki/Software/pkg-config
+Site=		https://www.freedesktop.org/wiki/Software/pkg-config/
 Source=		http://pkgconfig.freedesktop.org/releases/$(Name)-$(Version).tar.gz
-Checksum=	f4b19d203b3896a4293af4b62c7f908063c88a5a
+Checksum=	271ce928f6d673cc16cbced2bfd14a5f2e5d3d37
 License=	GPL
 
 GnuConfigureExtra += --with-internal-glib
 GnuConfigureExtra += --disable-host-tool
-
-# Due --with-interl-glib and Version >= 0.29
-LdFlags += -framework CoreFoundation	# CFRelease
-LdFlags += -framework Carbon		# FSFindFolder
 
 define test_inner_hook
 $(BinDir)/pkg-config --version | grep $(Version)
