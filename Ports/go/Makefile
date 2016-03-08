@@ -11,11 +11,11 @@ include ../../Library/Rudix.mk
 Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
-Version=	1.5.3
+Version=	1.6
 Revision=	0
 Site=		http://golang.org/
 Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
-Checksum=	c17563a84df8aefb6a1e703a42f1e2842615e4a6
+Checksum=	3282b6cb1e491662f7067544605d8cbf6f016553
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md
