@@ -2,11 +2,11 @@ include ../../Library/Python.mk
 
 Title=		Python virtualenv
 Name=		python-virtualenv
-Version=	13.1.2
+Version=	15.0.0
 Revision=	0
-Site=		# https://pypi.python.org/pypi/virtualenv
+Site=		https://pypi.python.org/pypi/virtualenv
 Source=		https://pypi.python.org/packages/source/v/virtualenv/virtualenv-$(Version).tar.gz
-Checksum=	766b12e9214751e547da267ffba79a84aaf7b3b0
+Checksum=	a51d035c4a5bdf0dda28a66d823b619d29c0d5e4
 License=	MIT
 
 UncompressedName=virtualenv-$(Version)
