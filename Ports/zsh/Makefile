@@ -2,11 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Z shell
 Name=		zsh
-Version=	5.0.7
+Version=	5.2
 Revision=	0
 Site=		http://www.zsh.org
-Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.bz2
-Checksum=	1500191d16af8a71aec4f719a92775a074682096
+Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
+Checksum=	a93d034fcaa470bf8557fc11a9d0e86300325936
 License=	GPL
 
 LicenseFile=	$(SourceDir)/LICENCE
@@ -14,7 +14,7 @@ LicenseFile=	$(SourceDir)/LICENCE
 MakeInstallExtra+=install.info
 
 define retrieve_post_hook
-$(fetch) http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.bz2
+$(fetch) http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
 endef
 
 define install_post_hook
