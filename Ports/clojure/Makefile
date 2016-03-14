@@ -2,7 +2,7 @@ include ../../Library/Rudix.mk
 
 Title=		Clojure
 Name=		clojure
-Version=	1.5.1
+Version=	1.8.0
 Revision=	0
 Site=		http://clojure.org/
 Source=		http://repo1.maven.org/maven2/org/clojure/clojure/$(Version)/$(Name)-$(Version).zip
