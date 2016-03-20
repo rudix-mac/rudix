@@ -2,15 +2,16 @@ include ../../Library/GNU.mk
 
 Title=		Texinfo
 Name=		texinfo
-Version=	5.1
+Version=	6.1
 Revision=	0
 Site=		http://savannah.gnu.org/projects/texinfo
-Source=		http://ftpmirror.gnu.org/texinfo//$(Name)-$(Version).tar.gz
-License=	GPL
+Source=		https://ftp.gnu.org/gnu/texinfo/texinfo-$(Version).tar.xz
+License=	GPLv3+
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
 define test_inner_hook
-$(BinDir)/info --version
+$(BinDir)/info --version | grep $(Version)
+$(BinDir)/texi2pdf --version | grep $(Version)
 endef
