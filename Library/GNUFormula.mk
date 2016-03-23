@@ -1,7 +1,7 @@
 #
 # GNU Configure Formula.
 #
-# Copyright © 2011-2014 Rudix
+# Copyright © 2011-2016 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
@@ -50,11 +50,11 @@ endef
 EnvExtra = CFLAGS="$(CFlags)" CPPFLAGS="$(CppFlags)"
 EnvExtra += CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 
+define config_inner_hook
+cd $(BuildDir) && env $(EnvExtra) $(gnu_configure)
+endef
+
 define build_inner_hook
-$(call info_color,Running Configure)
-cd $(BuildDir) && \
-env $(EnvExtra) $(gnu_configure)
-$(call info_color,Done)
 cd $(BuildDir) && $(make) $(MakeExtra)
 endef
 
@@ -71,6 +71,9 @@ cd $(BuildDir) && \
 $(MAKE) check || $(call error_color,One or more tests failed)
 endef
 endif
+
+configclean:
+	rm -f config config.cache
 
 buildclean:
 	cd $(BuildDir) && $(MAKE) clean || $(call warning_color,Cannot clean)
