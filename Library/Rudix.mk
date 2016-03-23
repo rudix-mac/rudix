@@ -195,8 +195,17 @@ install: build
 	@$(call info_color,*** Done install ***)
 	@touch $@
 
+# Strip any binaries
+strip: install
+	@$(call info_color,*** Stripping Binaries $(DistName) ***)
+	@$(call strip_pre_hook)
+	@$(call strip_inner_hook)
+	@$(call strip_post_hook)
+	@$(call info_color,*** Done strip ***)
+	@touch $@
+
 # Create package
-pkg: install
+pkg: strip
 	@$(call info_color,*** Packing $(PkgFile) ***)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
@@ -454,8 +463,11 @@ mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
-define pkg_inner_hook
+define strip_inner_hook
 $(strip_macho)
+endef
+
+define pkg_inner_hook
 $(create_installpkg)
 $(create_distribution)
 $(create_resources)
