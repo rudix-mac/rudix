@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		dtach
 Name=		dtach
 Version=	0.8
-Revision=	10
+Revision=	11
 Site=		http://dtach.sourceforge.net
 Source=		http://downloads.sourceforge.net/dtach/$(Name)-$(Version).tar.gz
 License=	GPL
