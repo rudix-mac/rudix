@@ -15,9 +15,10 @@ define install_inner_hook
 install -d $(DestDir)$(LibDir)/clojure-$(Version)
 install -m 644 $(SourceDir)/{*.xml,changes.md,*.jar,clojure.iml} \
 	$(DestDir)$(LibDir)/clojure-$(Version)
-install -d $(InstallDir)/$(BinDir)
-sed "s/@VERSION@/$(Version)/g" clojure.sh >$(InstallDir)/$(BinDir)/clojure
-chmod +x $(InstallDir)/$(BinDir)/clojure
+install -d $(DestDir)$(BinDir)
+sed "s_@LIBDIR@_$(LibDir)_g ; s/@VERSION@/$(Version)/g" \
+	clojure.sh >$(DestDir)$(BinDir)/clojure
+chmod +x $(DestDir)$(BinDir)/clojure
 $(install_base_documentation)
 endef
 
