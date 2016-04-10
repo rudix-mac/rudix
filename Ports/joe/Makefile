@@ -5,11 +5,13 @@ include ../../Library/GNU.mk
 
 Title=		JOE
 Name=		joe
-Version=	3.7
+Version=	4.2
 Revision=	0
-Site=		http://
+Site=		http://joe-editor.sourceforge.net
 Source=		http://downloads.sourceforge.net/joe-editor/$(Name)-$(Version).tar.gz
-License=	GPL
+License=	GPLv2
+
+ReadMeFile=	$(SourceDir)/README.md
 
 define install_post_hook
 for x in $(InstallDir)/$(SysConfDir)/joe/* ; do \
