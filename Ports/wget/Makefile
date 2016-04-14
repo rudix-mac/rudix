@@ -5,12 +5,12 @@ include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.16.3
+Version=	1.17.1
 Revision=	0
 Site=		http://www.gnu.org/software/wget/
 Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.xz
-Checksum=	a7d24a8512720893b0a8c5c436f324e9ed43874d
-License=	GPL
+Checksum=	8ae737ab2252607ce708f98d1dd7559ebf047f48
+License=	GPLv3
 
 EnvExtra += OPENSSL_CFLAGS=-I/usr/include
 EnvExtra += OPENSSL_LIBS="-lcrypto -lssl"
@@ -27,6 +27,7 @@ define test_inner_hook
 $(BinDir)/wget --version | grep $(Version)
 nm $(BinDir)/wget | grep -q intl
 nm $(BinDir)/wget | grep -q idn
+otool -L $(BinDir)/wget | grep libssl
 endef
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
