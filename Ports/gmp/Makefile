@@ -2,14 +2,14 @@ include ../../Library/GNU.mk
 
 Title=		GNU MP
 Name=		gmp
-Version=	6.0.0a
+Version=	6.1.0
 Revision=	0
-Site=		http://gmplib.org/
-Source=		http://ftp.gnu.org/gnu/gmp/$(Name)-$(Version).tar.xz
-Checksum=	1aaf78358ab9e34aeb61f3ae08174ee9118ece98
+Site=		https://gmplib.org/
+Source=		https://gmplib.org/download/gmp/gmp-6.1.0.tar.xz
+Checksum=	99d691607613e749aa5d7c0c2a89aeab38fec070
 License=	GPLv2/LGPLv3
 
-UncompressedName=$(Name)-6.0.0
+UncompressedName=$(Name)-6.1.0
 
 GnuConfigureExtra += --enable-cxx
 GnuConfigureExtra += --with-pic
