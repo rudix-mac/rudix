@@ -1,16 +1,16 @@
-BuildRequires += $(LibDir)/libgmp.la # static-gmp
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libltdl.la # static-libtool
+BuildRequires += $(LibDir)/libgmp.la	# static-gmp
+BuildRequires += $(LibDir)/libintl.la	# static-gettext
+BuildRequires += $(LibDir)/libltdl.la	# static-libtool
 
 include ../../Library/GNU.mk
 
 Title=		GNU Guile
 Name=		guile
 Version=	1.8.8
-Revision=	2
-Site=		http://www.gnu.org/software/guile/
-Source=		http://ftp.gnu.org/gnu/guile//guile-$(Version).tar.gz
-License=	LGPL
+Revision=	3
+Site=		https://www.gnu.org/software/guile/
+Source=		https://ftp.gnu.org/gnu/guile/guile-$(Version).tar.gz
+License=	LGPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE
 
