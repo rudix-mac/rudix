@@ -238,7 +238,7 @@ pkgclean:
 	rm -rf pkg *.pkg Distribution Resources
 
 clean: installclean
-	rm -rf checksum prep config build check test $(SourceDir) *~
+	rm -rf prep config build check test $(SourceDir) *~
 
 distclean: clean pkgclean
 	rm -f strip
@@ -284,8 +284,7 @@ json:
 	@echo "  \"version\": \"$(Version)\","
 	@echo "  \"revision\": $(Revision),"
 	@echo "  \"license\": \"$(License)\","
-	@echo "  \"source\": \"$(Source)\","
-	@echo "  \"checksum\": \"$(Checksum)\" }"
+	@echo "  \"source\": \"$(Source)\" }"
 
 #
 # Functions
@@ -313,8 +312,7 @@ curl \
 endef
 
 define verify_checksum
-if test "$(Checksum)" != "" ; then \
-	echo "$(Checksum)  $(shell basename $(Source))" > checksum ; \
+if test -f checksum ; then \
 	shasum --warn --check checksum ; \
 fi
 endef
