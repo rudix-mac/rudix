@@ -5,11 +5,11 @@ include ../../Library/GNU.mk
 
 Title=		GNU awk
 Name=		gawk
-Version=	4.1.0
-Revision=	1
+Version=	4.1.3
+Revision=	0
 Site=		http://www.gnu.org/software/gawk/
-Source=		http://ftp.gnu.org/gnu/gawk//$(Name)-$(Version).tar.gz
-License=	GPL
+Source=		http://ftp.gnu.org/gnu/gawk/$(Name)-$(Version).tar.xz
+License=	GPLv3
 
 GnuConfigureExtra += --with-readline=/usr/local
 
@@ -18,5 +18,5 @@ rm -f $(InstallDir)/$(BinDir)/*-$(Version)
 endef
 
 define test_inner_hook
-$(BinDir)/gawk --version
+$(BinDir)/gawk --version | grep $(Version)
 endef
