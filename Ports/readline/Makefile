@@ -3,10 +3,10 @@ include ../../Library/GNU.mk
 Title=		GNU Readline
 Name=		readline
 Version=	6.3
-Revision=	0
+Revision=	1
 Site=		http://tiswww.case.edu/php/chet/readline/rltop.html
 Source=		http://ftp.gnu.org/gnu/readline//$(Name)-$(Version).tar.gz
-License=	GPL
+License=	GPLv3
 
 GnuConfigureExtra += --with-curses
 GnuMakeInstallExtra += install-doc
