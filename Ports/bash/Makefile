@@ -3,10 +3,10 @@ include ../../Library/GNU.mk
 Title=		GNU Bash
 Name=		bash
 Version=	4.3
-Revision=	2
+Revision=	3
 Site=		http://www.gnu.org/software/bash/
 Source=		http://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
-License=	GPL
+License=	GPLv3
 
 GnuConfigureExtra += --with-included-gettext
 
