@@ -4,14 +4,14 @@ include ../../Library/GNU.mk
 
 Title=		GNU Core Utilities
 Name=		coreutils
-Version=	8.24
+Version=	8.25
 Revision=	0
 Site=		http://www.gnu.org/software/coreutils/
 Source=		http://ftp.gnu.org/gnu/coreutils//$(Name)-$(Version).tar.xz
-License=	GPL
+License=	GPLv3
 
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes
-GnuConfigureExtra +=  --program-prefix=gnu
+GnuConfigureExtra += --program-prefix=gnu
 
 define install_post_hook
 $(PortDir)/mklinks.sh $(InstallDir)$(BinDir)
