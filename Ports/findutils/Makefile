@@ -2,11 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		GNU Find Utilities
 Name=		findutils
-Version=	4.4.2
-Revision=	5
+Version=	4.6.0
+Revision=	0
 Site=		http://www.gnu.org/software/findutils/
-Source=		http://ftp.gnu.org/gnu/findutils//$(Name)-$(Version).tar.gz
-License=	GPL
+Source=		http://ftp.gnu.org/gnu/findutils/$(Name)-$(Version).tar.gz
+License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu
 GnuConfigureExtra += --with-included-regex
