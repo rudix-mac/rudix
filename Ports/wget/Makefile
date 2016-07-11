@@ -1,5 +1,6 @@
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libidn.la # static-libidn
+BuildRequires += $(LibDir)/libssl.la # static-libressl
 
 include ../../Library/GNU.mk
 
@@ -12,10 +13,7 @@ Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.xz
 Checksum=	8ae737ab2252607ce708f98d1dd7559ebf047f48
 License=	GPLv3
 
-EnvExtra += OPENSSL_CFLAGS=-I/usr/include
-EnvExtra += OPENSSL_LIBS="-lcrypto -lssl"
-
-GnuConfigureExtra += --with-ssl=openssl
+GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)
 GnuConfigureExtra += --with-libidn=$(Prefix)
 
 define install_post_hook
@@ -27,7 +25,7 @@ define test_inner_hook
 $(BinDir)/wget --version | grep $(Version)
 nm $(BinDir)/wget | grep -q intl
 nm $(BinDir)/wget | grep -q idn
-otool -L $(BinDir)/wget | grep libssl
+nm $(BinDir)/wget | grep -q ssl
 endef
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
