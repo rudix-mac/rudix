@@ -1,7 +1,7 @@
-BuildRequires += $(BinDir)/pkg-config # comapt-pkg-config
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
-BuildRequires += $(LibDir)/libgmodule-2.0.la # static-glib
+BuildRequires += $(BinDir)/pkg-config		# pkg-config
+BuildRequires += $(LibDir)/libintl.la		# static-gettext
+BuildRequires += $(LibDir)/libglib-2.0.la	# static-glib
+BuildRequires += $(LibDir)/libgmodule-2.0.la	# static-glib
 
 include ../../Library/GNU.mk
 
@@ -10,8 +10,8 @@ Name=		mc
 Version=	4.8.7
 Revision=	0
 Site=		http://www.midnight-commander.org/
-Source=		http://www.midnight-commander.org/downloads//$(Name)-$(Version).tar.bz2
-License=	GPL
+Source=		http://www.midnight-commander.org/downloads/$(Name)-$(Version).tar.bz2
+License=	GPLv3
 
 #GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += --with-screen=ncurses
@@ -33,6 +33,6 @@ mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
 install -d $(InstallDir)/$(Prefix)/etc/mc
 endef
 
-define final_post_hook
+define test_inner_hook
 $(BinDir)/mc --version | grep $(Version)
 endef
