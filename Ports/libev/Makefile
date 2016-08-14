@@ -1,13 +1,13 @@
 include ../../Library/GNU.mk
 
-Description=	Full-featured and high-performance event loop that is loosely modelled after libevent
+Description=	Full-featured and high-performance event loop
 Title=		Libev
 Name=		libev
-Version=	4.20
+Version=	4.22
 Revision=	0
 Site=		http://software.schmorp.de/pkg/libev.html
 Source=		http://dist.schmorp.de/libev/$(Name)-$(Version).tar.gz
-License=	BSD/GPL
+License=	BSD|GPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE
 
