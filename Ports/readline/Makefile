@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		GNU Readline
 Name=		readline
-Version=	6.3
-Revision=	1
+Version=	7.0
+Revision=	0
 Site=		http://tiswww.case.edu/php/chet/readline/rltop.html
 Source=		http://ftp.gnu.org/gnu/readline//$(Name)-$(Version).tar.gz
 License=	GPLv3
