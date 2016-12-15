@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		GNU libintl
 Name=		libintl
-Version=	0.19.7
+Version=	0.19.8.1
 Revision=	0
 Site=		http://www.gnu.org/software/gettext/
 Source=		http://ftp.gnu.org/gnu/gettext/gettext-$(Version).tar.xz
-Checksum=	4b2574b76d14c98270bf607a2a62f033524d8e8c
 License=	GPLv3
 
 UncompressedName=gettext-$(Version)
