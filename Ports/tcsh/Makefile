@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Tcsh
 Name=		tcsh
-Version=	6.19.00
+Version=	6.20.00
 Revision=	0
 Site=		http://www.tcsh.org/Home
 Source=		ftp://ftp.astron.com/pub/tcsh/$(Name)-$(Version).tar.gz
