@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		Node.js®
 Name=		node
-Version=	6.2.0
+Version=	7.2.1
 Revision=	0
 Site=		http://nodejs.org/
 Source=		http://nodejs.org/dist/v$(Version)/$(Name)-v$(Version).tar.gz
@@ -19,5 +19,5 @@ EnvExtra += OPENSSL_LIBS=-lcrypto
 
 define test_inner_hook
 $(BinDir)/node --version | grep $(Version)
-$(BinDir)/npm --version | grep 3.8.9
+$(BinDir)/npm --version | grep 3.10.9
 endef
