@@ -2,7 +2,7 @@
 #
 # Bump port revision number.
 #
-# Copyright © 2013-2014 Rudix
+# Copyright © 2013-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 if [ $# -eq 0 ] ; then

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2013 Rudix
+# Copyright © 2013-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 #
 # Synthesize a Distribution file.

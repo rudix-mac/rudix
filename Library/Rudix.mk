@@ -1,7 +1,7 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2016 Rudá Moura
+# Copyright © 2005-2017 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 

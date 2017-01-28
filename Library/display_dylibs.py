@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2014 Rudix (Ruda Moura)
-# Author: Ruda Moura <ruda.moura@gmail.com>
+# Copyright (c) 2014-2017 Rudá Moura (Rudix)
+# Author: Rudá Moura <ruda.moura@gmail.com>
 
 import sys
 import os

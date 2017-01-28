@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2013-2015 Rudix
+# Copyright © 2013-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 """Create a new port for Rudix."""

@@ -5,7 +5,7 @@
 #
 #            “You're the One for me, fatty” (Morrissey)
 #
-# Copyright © 2013-2016 Rudá Moura
+# Copyright © 2013-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 #
 

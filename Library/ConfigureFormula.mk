@@ -1,7 +1,7 @@
 #
 # Generic Configure Formula.
 #
-# Copyright © 2011-2016 Rudix
+# Copyright © 2011-2017 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 

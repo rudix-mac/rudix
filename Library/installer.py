@@ -3,7 +3,7 @@
 #
 # Install packages.
 #
-# Copyright © 2014 Rudix
+# Copyright © 2014-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 """Install one or more packages on target volume."""

@@ -1,7 +1,7 @@
 #
 # Safe set of environment variables to build packages.
 #
-# Copyright © 2013-2014 Rudix
+# Copyright © 2013-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 LANG="C"

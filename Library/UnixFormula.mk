@@ -1,7 +1,7 @@
 #
 # Unix Formula.
 #
-# Copyright © 2011-2014 Rudix
+# Copyright © 2011-2017 Rudá Moura (Rudix)
 # Authors: Ruda Moura, Leonardo Santagada
 #
 

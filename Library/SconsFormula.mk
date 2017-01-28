@@ -1,6 +1,6 @@
 # Scons Formula
 #
-# Copyright (c) 2011-2014 Rudix
+# Copyright (c) 2011-2017 Rudá Moura (Rudix)
 # Authors: Caio Begotti
 #
 

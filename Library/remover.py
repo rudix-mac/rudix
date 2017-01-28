@@ -3,7 +3,7 @@
 #
 # Remove packages.
 #
-# Copyright © 2011-2014 Rudix
+# Copyright © 2011-2017 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 
 """Remove one or more packages."""
