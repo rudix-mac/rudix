@@ -136,17 +136,8 @@ prep: retrieve
 	@$(call info_color,*** Done prep ***)
 	@touch $@
 
-# Configure source
-config: prep $(BuildRequires)
-	@$(call info_color,*** Configuring $(DistName) ***)
-	@$(call config_pre_hook)
-	@$(call config_inner_hook)
-	@$(call config_post_hook)
-	@$(call info_color,*** Done config ***)
-	@touch $@
-
 # Build source
-build: config
+build: prep
 	@$(call info_color,*** Building $(DistName) ***)
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
@@ -206,15 +197,15 @@ pkgclean:
 	rm -rf pkg *.pkg Distribution Resources
 
 clean: installclean
-	rm -rf prep config build check test $(SourceDir) *~
+	rm -rf prep build check test $(SourceDir) *~
 
 distclean: clean pkgclean
-	rm -f strip
+	rm -f strip config.cache
 
 realdistclean: distclean
 	rm -f retrieve $(shell basename $(Source))
 
-static: prep installclean buildclean configclean
+static: prep installclean buildclean
 	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
 
 help:

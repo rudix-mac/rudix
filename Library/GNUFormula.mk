@@ -50,12 +50,8 @@ endef
 EnvExtra = CFLAGS="$(CFlags)" CPPFLAGS="$(CppFlags)"
 EnvExtra += CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 
-define config_inner_hook
-cd $(BuildDir) && env $(EnvExtra) $(gnu_configure)
-endef
-
 define build_inner_hook
-cd $(BuildDir) && $(make) $(MakeExtra)
+cd $(BuildDir) && env $(EnvExtra) $(gnu_configure) && $(make) $(MakeExtra)
 endef
 
 define install_inner_hook
@@ -71,9 +67,6 @@ cd $(BuildDir) && \
 $(MAKE) check || $(call error_color,One or more tests failed)
 endef
 endif
-
-configclean:
-	rm -f config config.cache
 
 buildclean:
 	cd $(BuildDir) && $(MAKE) clean || $(call warning_color,Cannot clean)
