@@ -38,6 +38,7 @@ cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
 $(install_extra_documentation)
+$(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)

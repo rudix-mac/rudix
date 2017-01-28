@@ -17,6 +17,7 @@ define install_inner_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
+$(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)

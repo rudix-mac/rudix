@@ -26,6 +26,7 @@ $(Python) \
 	--install-lib=$(PythonSitePackages)
 cd $(BuildDir) && $(Python) -m compileall -d / $(DestDir)
 $(install_base_documentation)
+$(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)

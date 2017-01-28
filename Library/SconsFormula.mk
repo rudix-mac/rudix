@@ -16,6 +16,7 @@ endef
 define install_inner_hook
 cd $(BuildDir) && $(Scons) install --prefix=$(DestDir)$(Prefix) --full
 $(install_base_documentation)
+$(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)

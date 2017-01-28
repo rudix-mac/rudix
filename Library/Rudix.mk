@@ -163,17 +163,8 @@ install: build
 	@$(call info_color,*** Done install ***)
 	@touch $@
 
-# Strip any binaries
-strip: install
-	@$(call info_color,*** Stripping Binaries $(DistName) ***)
-	@$(call strip_pre_hook)
-	@$(call strip_inner_hook)
-	@$(call strip_post_hook)
-	@$(call info_color,*** Done strip ***)
-	@touch $@
-
 # Create package
-pkg: strip
+pkg: install
 	@$(call info_color,*** Packing $(PkgFile) ***)
 	@$(call pkg_pre_hook)
 	@$(call pkg_inner_hook)
@@ -200,7 +191,7 @@ clean: installclean
 	rm -rf prep build check test $(SourceDir) *~
 
 distclean: clean pkgclean
-	rm -f strip config.cache
+	rm -f config.cache
 
 realdistclean: distclean
 	rm -f retrieve $(shell basename $(Source))
@@ -427,10 +418,6 @@ $(verify_checksum)
 $(explode)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
-endef
-
-define strip_inner_hook
-$(strip_macho)
 endef
 
 define pkg_inner_hook
