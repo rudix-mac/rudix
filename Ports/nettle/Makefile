@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Nettle (low-level crypto library)
 Name=		nettle
 Version=	3.0
-Revision=	0
 Site=		http://www.lysator.liu.se/~nisse/nettle/
 Source=		http://www.lysator.liu.se/~nisse/archive//$(Name)-$(Version).tar.gz
 License=	LGPL/GPL

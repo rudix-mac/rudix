@@ -3,7 +3,6 @@ include ../../Library/Configure.mk
 Title=		Talloc
 Name=		talloc
 Version=	2.1.7
-Revision=	0
 Site=		http://talloc.samba.org/
 Source=		http://samba.org/ftp/talloc/$(Name)-$(Version).tar.gz
 License=	GPL

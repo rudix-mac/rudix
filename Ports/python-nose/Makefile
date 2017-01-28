@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python Nose
 Name=		python-nose
 Version=	1.3.1
-Revision=	0
 Site=           https://github.com/nose-devs/nose
 Source=		https://pypi.python.org/packages/source/n/nose//nose-$(Version).tar.gz
 License=        LGPL

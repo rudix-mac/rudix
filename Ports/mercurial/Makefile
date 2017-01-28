@@ -5,7 +5,6 @@ include ../../Library/Python.mk
 Title=		Mercurial
 Name=		mercurial
 Version=	2.9.2
-Revision=	0
 Site=		http://mercurial.selenic.com/
 Source=		http://www.selenic.com/mercurial/release//$(Name)-$(Version).tar.gz
 License=	GPL

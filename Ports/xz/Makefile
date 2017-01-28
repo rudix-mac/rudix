@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		XZ Utils
 Name=		xz
 Version=	5.2.2
-Revision=	0
 Site=		http://tukaani.org/xz/
 Source=		http://tukaani.org/xz//$(Name)-$(Version).tar.bz2
 License=	GPL

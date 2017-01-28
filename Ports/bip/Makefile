@@ -7,7 +7,6 @@ endef
 Title=		Bip
 Name=		bip
 Version=	0.8.9
-Revision=	0
 Site=		http://bip.milkypond.org
 Source=		https://projects.duckcorp.org/attachments/download/61/$(Name)-$(Version).tar.gz
 License=	GPL

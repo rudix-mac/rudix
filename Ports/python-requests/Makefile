@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python HTTP Requests
 Name=		python-requests
 Version=	2.3.0
-Revision=	0
 Site=		http://python-requests.org
 Source=		https://github.com/kennethreitz/requests/archive/v$(Version).tar.gz
 License=	Apache License

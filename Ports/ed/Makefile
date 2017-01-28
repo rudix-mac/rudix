@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		GNU ed
 Name=		ed
 Version=	1.13
-Revision=	0
 Site=		http://www.gnu.org/software/ed/
 Source=		http://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
 Checksum=	31fc89eeaa99d6505bc7367651166e925d8fa430

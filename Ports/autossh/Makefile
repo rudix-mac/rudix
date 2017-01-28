@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		autossh
 Name=		autossh
 Version=	1.4d
-Revision=	0
 Site=		http://www.harding.motd.ca/autossh/
 Source=		http://www.harding.motd.ca/autossh//$(Name)-$(Version).tgz
 License=	Unknown (Freeware)

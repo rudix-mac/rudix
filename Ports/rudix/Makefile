@@ -4,7 +4,6 @@ Site=		https://github.com/rudix-mac/rpm/
 Title=		Rudix Package Manager
 Name=		rudix
 Version=	2016.12.13
-Revision=	0
 Source=		https://github.com/rudix-mac/rpm/archive/$(Version).tar.gz
 License=	BSD
 

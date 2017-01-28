@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		libMemcached
 Name=		libmemcached
 Version=	1.0.18
-Revision=	1
 Site=		http://libmemcached.org/
 Source=		http://launchpad.net/libmemcached/1.0/$(Version)/+download//$(Name)-$(Version).tar.gz
 License=	BSD

@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Squid Caching Proxy
 Name=		squid
 Version=	3.5.7
-Revision=	0
 Site=		http://www.squid-cache.org/
 Source=		http://www.squid-cache.org/Versions/v3/3.5/$(Name)-$(Version).tar.xz
 License=	GPL

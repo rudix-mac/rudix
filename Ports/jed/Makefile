@@ -6,7 +6,6 @@ Description=	JED is a freely available text editor for Unix
 Title=		JED
 Name=		jed
 Version=	0.99
-Revision=	0
 Site=		http://www.jedsoft.org/jed/
 Source=		ftp://space.mit.edu/pub/davis/jed/v$(Version)/$(Name)-$(Version)-19.tar.bz2
 

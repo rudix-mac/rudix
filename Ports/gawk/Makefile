@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		GNU awk
 Name=		gawk
 Version=	4.1.4
-Revision=	0
 Site=		http://www.gnu.org/software/gawk/
 Source=		http://ftp.gnu.org/gnu/gawk/$(Name)-$(Version).tar.xz
 License=	GPLv3

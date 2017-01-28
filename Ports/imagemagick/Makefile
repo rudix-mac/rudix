@@ -8,7 +8,6 @@ include ../../Library/GNU.mk
 Title=		ImageMagick
 Name=		imagemagick
 Version=	6.8.6
-Revision=	0
 Site=		http://www.imagemagick.org/
 Source=		http://www.imagemagick.org/download/ImageMagick-$(Version)-8.tar.bz2
 License=	Apache 2.0

@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		ccache
 Name=		ccache
 Version=	3.2.5
-Revision=	0
 Site=		https://ccache.samba.org
 Source=		https://samba.org/ftp/ccache/$(Name)-$(Version).tar.bz2
 License=	GPLv3+

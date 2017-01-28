@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		rTorrent
 Name=		rtorrent
 Version=	0.9.2
-Revision=	1
 Site=		http://libtorrent.rakshasa.no/
 Source=		http://libtorrent.rakshasa.no/downloads//$(Name)-$(Version).tar.gz
 License=	GPL

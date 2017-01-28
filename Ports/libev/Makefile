@@ -4,7 +4,6 @@ Description=	Full-featured and high-performance event loop
 Title=		Libev
 Name=		libev
 Version=	4.22
-Revision=	0
 Site=		http://software.schmorp.de/pkg/libev.html
 Source=		http://dist.schmorp.de/libev/$(Name)-$(Version).tar.gz
 License=	BSD|GPLv2

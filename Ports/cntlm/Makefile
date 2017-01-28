@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		NTLM Authentication Proxy
 Name=		cntlm
 Version=	0.92.3
-Revision=	3
 Site=		http://cntlm.sourceforge.net
 Source=		http://downloads.sourceforge.net/cntlm/$(Name)-$(Version).tar.bz2
 License=	GPLv2

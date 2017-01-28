@@ -3,7 +3,6 @@ include ../../Library/Rudix.mk
 Title=		OCaml
 Name=		ocaml
 Version=	4.03.0
-Revision=	0
 Site=		http://caml.inria.fr/
 Source=		http://caml.inria.fr/pub/distrib/ocaml-4.03/$(Name)-$(Version).tar.xz
 License=	QPLv1+LGPLv2

@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU Gzip
 Name=		gzip
 Version=	1.6
-Revision=	0
 Site=		http://www.gnu.org/software/gzip/
 Source=		http://ftp.gnu.org/gnu/gzip//$(Name)-$(Version).tar.gz
 License=	GPL

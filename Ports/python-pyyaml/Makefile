@@ -5,7 +5,6 @@ include ../../Library/Python.mk
 Title=		PyYAML
 Name=		python-pyyaml
 Version=	3.11
-Revision=	0
 Site=		http://pyyaml.org
 Source=		http://pyyaml.org/download/pyyaml/PyYAML-$(Version).tar.gz
 License=	MIT

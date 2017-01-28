@@ -6,7 +6,6 @@ include ../../Library/Python.mk
 Title=		Python Imaging Library
 Name=		python-pil
 Version=	1.1.7
-Revision=	3
 Site=		http://www.pythonware.com/products/pil/
 Source=		http://effbot.org/media/downloads//Imaging-$(Version).tar.gz
 License=	BSD

@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Httptunnel
 Name=		httptunnel
 Version=	3.3
-Revision=	4
 Site=		http://www.nocrew.org/software/httptunnel/
 Source=		http://www.nocrew.org/software/httptunnel//$(Name)-$(Version).tar.gz
 License=	GPL

@@ -5,7 +5,6 @@ include ../../Library/Python.mk
 Title=		Python MIDI library
 Name=		python-midi
 Version=	0.2.3
-Revision=	0
 Site=		https://github.com/vishnubob/python-midi
 Source=		https://github.com/vishnubob/python-midi/archive//v$(Version).tar.gz
 License=	MIT

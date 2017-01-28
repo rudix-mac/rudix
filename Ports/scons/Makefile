@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		SCons
 Name=		scons
 Version=	2.3.1
-Revision=	0
 Site=		http://www.scons.org
 Source=		http://downloads.sourceforge.net/scons/$(Name)-$(Version).tar.gz
 License=	MIT

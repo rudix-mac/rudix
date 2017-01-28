@@ -3,7 +3,6 @@ include ../../Library/Rudix.mk
 Title=		Jython
 Name=		jython
 Version=	2.7
-Revision=	0
 Site=		http://www.jython.org/
 Source=		http://search.maven.org/remotecontent?filepath=org/python/jython-installer/$(Version)-b1/jython-installer-$(Version)-b1.jar
 License=	Python License

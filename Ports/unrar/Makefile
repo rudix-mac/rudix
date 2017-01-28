@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		unRAR
 Name=		unrar
 Version=	5.0.1
-Revision=	0
 Site=		http://www.rarlab.com/
 Source=		http://www.rarlab.com/rar//$(Name)src-$(Version).tar.gz
 License=	Freeware

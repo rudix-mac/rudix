@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Apache HTTPd
 Name=		httpd
 Version=	2.4.2
-Revision=	0
 Site=		http://httpd.apache.org/
 Source=		http://ftp.unicamp.br/pub/apache//httpd//$(Name)-$(Version).tar.bz2
 License=	Apache

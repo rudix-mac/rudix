@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		High Order Calculator
 Name=		hoc
 Version=	1.1
-Revision=	9
 Site=		http://cm.bell-labs.com/cm/cs/upe/index.html
 Site=		http://cm.bell-labs.com/cm/cs/who/bwk/
 Source=		http://netlib.bell-labs.com/~bwk/$(Name).sh

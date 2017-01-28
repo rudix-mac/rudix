@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python subprocess32
 Name=		python-subprocess32
 Version=	3.2.6
-Revision=	0
 Site=		https://code.google.com/p/python-subprocess32/
 Source=		https://pypi.python.org/packages/source/s/subprocess32/subprocess32-$(Version).tar.gz
 License=	PSF

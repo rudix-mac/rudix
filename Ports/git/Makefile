@@ -18,7 +18,6 @@ endif
 Title=		Git
 Name=		git
 Version=	1.8.3.1
-Revision=	0
 Site=		http://git-scm.com/
 Source=		http://git-core.googlecode.com/files/$(Name)-$(Version).tar.gz
 License=	GPL

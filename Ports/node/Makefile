@@ -3,7 +3,6 @@ include ../../Library/Configure.mk
 Title=		Node.js®
 Name=		node
 Version=	7.2.1
-Revision=	0
 Site=		http://nodejs.org/
 Source=		http://nodejs.org/dist/v$(Version)/$(Name)-v$(Version).tar.gz
 Checksum=	228a0c2ff23294778f226e5d7fc85fc2e80a3cd1

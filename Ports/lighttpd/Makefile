@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		Lighttpd
 Name=		lighttpd
 Version=	1.4.36
-Revision=	0
 Site=		http://www.lighttpd.net
 Source=		http://download.lighttpd.net/lighttpd/releases-1.4.x/$(Name)-$(Version).tar.xz
 License=	BSD

@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python Pexpect
 Name=		python-pexpect
 Version=	3.1
-Revision=	0
 Site=           http://pexpect.readthedocs.org/en/latest/
 Source=		https://pypi.python.org/packages/source/p/pexpect//pexpect-$(Version).tar.gz
 License=        ISC

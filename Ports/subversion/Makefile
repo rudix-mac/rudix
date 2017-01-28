@@ -10,7 +10,6 @@ include ../../Library/GNU.mk
 Title=		Apache Subversion
 Name=		subversion
 Version=	1.8.13
-Revision=	0
 Site=		http://subversion.apache.org/
 Source=		http://www.us.apache.org/dist/subversion/$(Name)-$(Version).tar.bz2
 Checksum=	aa0bd14ac6a8f0fb178cc9ff325387de01cd7452

@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		MTR
 Name=		mtr
 Version=	0.86
-Revision=	1
 Site=		https://github.com/traviscross/mtr
 Source=		ftp://www.bitwizard.nl/mtr/mtr-$(Version).tar.gz
 License=	GPLv2

@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		CLISP
 Name=		clisp
 Version=	2.49
-Revision=	0
 Site=		http://www.clisp.org/
 Source=		http://downloads.sourceforge.net/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL

@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		Irssi
 Name=		irssi
 Version=	0.8.17
-Revision=	0
 Site=		http://irssi.org/
 Source=		http://mirror.irssi.org//$(Name)-$(Version).tar.bz2
 License=	GPL

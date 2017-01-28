@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		GNU Automake
 Name=		automake
 Version=	1.15
-Revision=	0
 Site=		http://www.gnu.org/software/automake/
 Source=		http://ftp.gnu.org/gnu/automake/$(Name)-$(Version).tar.xz
 License=	GPL

@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		SWIG
 Name=		swig
 Version=	2.0.12
-Revision=	0
 Site=		http://www.swig.org/
 Source=		http://sourceforge.net/projects/swig/files/swig/swig-$(Version)/$(Name)-$(Version).tar.gz
 License=	GPL

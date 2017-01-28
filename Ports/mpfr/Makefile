@@ -10,7 +10,6 @@ include ../../Library/GNU.mk
 Title=		GNU MPFR
 Name=		mpfr
 Version=	3.1.3
-Revision=	0
 Site=		http://www.mpfr.org/
 Source=		http://www.mpfr.org/mpfr-current/$(Name)-$(Version).tar.xz
 License=	LGPLv3

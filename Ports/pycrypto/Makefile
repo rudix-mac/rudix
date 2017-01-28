@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		PyCrypto
 Name=		pycrypto
 Version=	2.6.1
-Revision=	0
 Site=		https://www.dlitz.net/software/pycrypto/
 Source=		http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto//$(Name)-$(Version).tar.gz
 License=	Public Domain

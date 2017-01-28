@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU MP
 Name=		gmp
 Version=	6.1.2
-Revision=	0
 Site=		https://gmplib.org/
 Source=		https://gmplib.org/download/gmp/gmp-6.1.0.tar.xz
 License=	GPLv2/LGPLv3

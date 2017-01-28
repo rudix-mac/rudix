@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		aria2
 Name=		aria2
 Version=	1.18.8
-Revision=	0
 Site=		http://aria2.sourceforge.net/
 Source=		http://downloads.sourceforge.net/aria2/$(Name)-$(Version).tar.bz2
 License=	GPL

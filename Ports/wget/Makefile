@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		GNU Wget
 Name=		wget
 Version=	1.18
-Revision=	0
 Site=		http://www.gnu.org/software/wget/
 Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.xz
 License=	GPLv3

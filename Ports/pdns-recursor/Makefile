@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		PowerDNS Recursor
 Name=		pdns-recursor
 Version=	3.5.2
-Revision=	0
 Site=		http://www.powerdns.com/
 Source=		http://downloads.powerdns.com/releases//$(Name)-$(Version).tar.bz2
 License=	GPL

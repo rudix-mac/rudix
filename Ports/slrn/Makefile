@@ -6,7 +6,6 @@ Description=	S-Lang read news is a newsreader
 Title=		slrn
 Name=		slrn
 Version=	1.0.2
-Revision=	0
 Site=		http://slrn.sourceforge.net
 Source=		http://www.jedsoft.org/releases/slrn/$(Name)-$(Version).tar.gz
 License=	GPL

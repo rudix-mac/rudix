@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		JOE
 Name=		joe
 Version=	4.2
-Revision=	0
 Site=		http://joe-editor.sourceforge.net
 Source=		http://downloads.sourceforge.net/joe-editor/$(Name)-$(Version).tar.gz
 License=	GPLv2

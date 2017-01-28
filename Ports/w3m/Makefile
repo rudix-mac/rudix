@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		w3m
 Name=		w3m
 Version=	0.5.3
-Revision=	0
 Site=		http://w3m.sourceforge.net/
 Source=		http://sourceforge.net/projects/w3m/files/w3m/w3m-$(Version)/$(Name)-$(Version).tar.gz
 License=	GPL

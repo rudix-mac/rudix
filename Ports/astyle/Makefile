@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		Artistic Style
 Name=		astyle
 Version=	2.04
-Revision=	0
 Site=		http://astyle.sourceforge.net
 Source=		http://downloads.sourceforge.net/astyle/$(Name)_$(Version)_macosx.tar.gz
 License=	LGPL

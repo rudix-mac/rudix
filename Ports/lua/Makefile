@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		Lua
 Name=		lua
 Version=	5.3.3
-Revision=	0
 Site=		http://www.lua.org/
 Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
 Checksum=	a0341bc3d1415b814cc738b2ec01ae56045d64ef

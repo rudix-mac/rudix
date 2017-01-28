@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		GNU Guile
 Name=		guile
 Version=	1.8.8
-Revision=	3
 Site=		https://www.gnu.org/software/guile/
 Source=		https://ftp.gnu.org/gnu/guile/guile-$(Version).tar.gz
 License=	LGPLv2

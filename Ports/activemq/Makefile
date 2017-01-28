@@ -4,7 +4,6 @@ include ../../Library/Rudix.mk
 Title=		Apache ActiveMQ
 Name=		activemq
 Version=	5.8.0
-Revision=	0
 Site=		http://activemq.apache.org/
 Source=		http://www.apache.org/dist//activemq/apache-activemq/$(Version)//apache-$(Name)-$(Version)-bin.tar.gz
 License=	Apache

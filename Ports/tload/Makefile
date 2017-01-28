@@ -4,7 +4,6 @@ Description=	tload (Mac) from procps 3.2.8
 Title=		Tload
 Name=		tload
 Version=	3.2.8
-Revision=	2
 Site=		https://github.com/ruda/tload/
 Source=		https://github.com/ruda/tload/archive//$(Version).tar.gz
 License=	GPL

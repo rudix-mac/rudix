@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		MIDI CSV
 Name=		midicsv
 Version=	1.1
-Revision=	0
 Site=		http://www.fourmilab.ch/webtools/midicsv/
 Source=		http://www.fourmilab.ch/webtools/midicsv/midicsv-$(Version).tar.gz
 License=        Public Domain

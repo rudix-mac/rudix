@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		simplejson
 Name=		simplejson
 Version=	3.3.0
-Revision=	0
 Site=		http://pypi.python.org/pypi/simplejson
 Source=		http://pypi.python.org/packages/source/s/simplejson/$(Name)-$(Version).tar.gz
 License=	BSD like

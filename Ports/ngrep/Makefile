@@ -4,7 +4,6 @@ Description=    ngrep provides a grep-like interface to the network layer
 Title=		ngrep
 Name=		ngrep
 Version=	1.45
-Revision=	0
 Site=		http://ngrep.sourceforge.net
 Source=		http://kent.dl.sourceforge.net/project/ngrep/ngrep/$(Version)//ngrep-$(Version).tar.bz2
 License=	BSD like

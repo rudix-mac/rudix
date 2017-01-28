@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		GNU gcal
 Name=		gcal
 Version=	3.6.3
-Revision=	0
 Site=		http://www.gnu.org/software/gcal/
 Source=		http://ftp.gnu.org/gnu/gcal//$(Name)-$(Version).tar.xz
 License=	GPL

@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		Frotz
 Name=		frotz
 Version=	2.43
-Revision=	7
 Site=		http://frotz.sourceforge.net/
 Source=		http://downloads.sourceforge.net/frotz/$(Name)-$(Version).tar.gz
 License=	GPL

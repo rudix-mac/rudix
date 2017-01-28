@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		Redis
 Name=		redis
 Version=	3.0.3
-Revision=	0
 Site=		http://redis.io/
 Source=		http://download.redis.io/releases/$(Name)-$(Version).tar.gz
 License=	BSD

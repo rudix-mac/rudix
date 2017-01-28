@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		ColorDiff
 Name=		colordiff
 Version=	1.0.13
-Revision=	2
 Site=		http://www.colordiff.org
 Source=		http://www.colordiff.org/$(Name)-$(Version).tar.gz
 License=	GPL

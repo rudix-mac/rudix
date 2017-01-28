@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python Twitter Tools
 Name=		twitter
 Version=	1.10.0
-Revision=	0
 Site=		http://mike.verdone.ca/twitter/
 Source=		http://pypi.python.org/packages/source/t/twitter//$(Name)-$(Version).tar.gz
 License=	MIT

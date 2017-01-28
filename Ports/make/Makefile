@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		GNU Make
 Name=		make
 Version=	4.2
-Revision=	0
 Site=		http://www.gnu.org/software/make/
 Source=		http://ftp.gnu.org/gnu/make/$(Name)-$(Version).tar.bz2
 License=	GPLv3

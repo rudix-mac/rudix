@@ -7,7 +7,6 @@ RUDIX_UNIVERSAL=no
 Title=		FFmpeg
 Name=		ffmpeg
 Version=	0.11.3
-Revision=	0
 Site=		http://ffmpeg.mplayerhq.hu/
 Source=		http://ffmpeg.org/releases//$(Name)-$(Version).tar.bz2
 License=	GPL

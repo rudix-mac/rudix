@@ -4,7 +4,6 @@ Title=		Boost C++ Libraries
 Name=		boost
 Version=	1.60.0
 AltVersion=	1_60_0
-Revision=	0
 Site=		http://www.boost.org/
 Source=		http://downloads.sourceforge.net/boost/$(Name)_$(AltVersion).tar.bz2
 License=	Boost Software License

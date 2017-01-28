@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		LFTP
 Name=		lftp
 Version=	4.6.0
-Revision=	0
 Site=		http://lftp.yar.ru/
 Source=		http://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL

@@ -4,7 +4,6 @@ include ../../Library/GNU.mk
 Title=		GNU M4
 Name=		m4
 Version=	1.4.17
-Revision=	0
 Site=		http://www.gnu.org/software/m4/
 Source=		http://ftp.gnu.org/gnu/m4//$(Name)-$(Version).tar.bz2
 License=	GPL

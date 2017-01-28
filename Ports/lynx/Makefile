@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Lynx
 Name=		lynx
 Version=	2.8.9
-Revision=	1
 Site=		http://lynx.isc.org
 Source=		http://lynx.isc.org/current/$(Name)$(Version)dev.6.tar.bz2
 License=	GPL

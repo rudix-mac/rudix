@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Monit
 Name=		monit
 Version=	5.8.1
-Revision=	0
 Site=		http://mmonit.com/monit/
 Source=		http://mmonit.com/monit/dist//$(Name)-$(Version).tar.gz
 License=	AGPL

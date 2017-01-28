@@ -5,7 +5,6 @@ MakeFlags=-j 1
 Title=		NHC98
 Name=		nhc98
 Version=	1.22
-Revision=	4
 Site=		http://www.haskell.org/nhc98/
 Source=		http://www.haskell.org/nhc98//$(Name)src-$(Version).tar.gz
 License=	BSD

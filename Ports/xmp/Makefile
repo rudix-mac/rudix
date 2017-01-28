@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		Extended Module player
 Name=		xmp
 Version=	4.0.7
-Revision=	0
 Site=		http://xmp.sourceforge.net
 Source=		http://downloads.sourceforge.net/xmp/$(Name)-$(Version).tar.gz
 License=	GPL

@@ -21,7 +21,6 @@ fi
 awk -v version=$VERSION '
 BEGIN        { OFS="\t"; }
 /^Version=/  { print $1, version; next; }
-/^Revision=/ { print $1, 0; next; }
              { print; }' Makefile > Makefile.new && mv Makefile.new Makefile
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

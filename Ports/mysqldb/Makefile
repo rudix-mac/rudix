@@ -6,7 +6,6 @@ include ../../Library/Python.mk
 Title=		MySQLdb (Python Module)
 Name=		mysqldb
 Version=	1.2.3
-Revision=	0
 Site=		http://sourceforge.net/projects/mysql-python/
 Site=		http://sourceforge.net/projects/mysql-python/
 Source=		http://sourceforge.net/projects/mysql-python/files/mysql-python/$(Version)//MySQL-python-$(Version).tar.gz

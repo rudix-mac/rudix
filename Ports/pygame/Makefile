@@ -25,7 +25,6 @@ Description= Python Game Development Library
 Title=		Pygame
 Name=		pygame
 Version=	1.9.1
-Revision=	1
 Source=		http://www.pygame.org/ftp/$(Name)-$(Version)release.tar.gz
 UncompressedName= $(Name)-$(Version)release
 

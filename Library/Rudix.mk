@@ -53,7 +53,7 @@ DistName = $(Name)
 endif
 
 PkgId = $(Vendor).pkg.$(DistName)
-PkgFile = $(DistName)-$(Version)-$(Revision).pkg
+PkgFile = $(DistName)-$(Version).pkg
 
 #
 # Build flags options
@@ -222,7 +222,7 @@ help:
 
 about:
 	@echo "---"
-	@echo "$(Title) ($(Name)-$(Version)-$(Revision))"
+	@echo "$(Title) ($(Name)-$(Version))"
 	@echo "Site: $(Site)"
 	@echo "License: $(License)"
 	@echo "Source: $(Source)"
@@ -232,7 +232,6 @@ json:
 	@echo "  \"title\": \"$(Title)\","
 	@echo "  \"name\": \"$(Name)\","
 	@echo "  \"version\": \"$(Version)\","
-	@echo "  \"revision\": $(Revision),"
 	@echo "  \"license\": \"$(License)\","
 	@echo "  \"source\": \"$(Source)\" }"
 
@@ -304,7 +303,7 @@ endef
 define create_installpkg
 pkgbuild \
 	--identifier $(PkgId) \
-	--version $(Version)-$(Revision) \
+	--version $(Version) \
 	--root $(InstallDir) \
 	--ownership preserve-other \
 	--install-location / \

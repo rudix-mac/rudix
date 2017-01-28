@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Memcached
 Name=		memcached
 Version=	1.4.30
-Revision=	0
 Site=		http://memcached.org/
 Source=		http://www.memcached.org/files/$(Name)-$(Version).tar.gz
 License=	BSD

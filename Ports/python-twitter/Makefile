@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Python Twitter
 Name=		python-twitter
 Version=	1.1.6
-Revision=	0
 Site=		https://code.google.com/p/python-twitter/
 Source=		https://github.com/bear/python-twitter/archive/v$(Version).tar.gz
 License=	Apache License

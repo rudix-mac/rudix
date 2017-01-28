@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		HTMLDOC
 Name=		htmldoc
 Version=	1.8.28
-Revision=	0
 #URL=		http://ftp.easysw.com/pub/htmldoc/$(Version)/
 Site=		http://www.htmldoc.org/
 Source=		http://www.msweet.org/files/project1//$(Name)-$(Version)-source.tar.bz2

@@ -5,7 +5,6 @@ include ../../Library/Python.mk
 Title=		Supervisor
 Name=		supervisor
 Version=	3.0b2
-Revision=	0
 Site=		http://supervisord.org/index.html
 Source=		http://pypi.python.org/packages/source/s/supervisor//$(Name)-$(Version).tar.gz
 License=	BSD Like

@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU Sed
 Name=		sed
 Version=	4.2.2
-Revision=	0
 Site=		http://www.gnu.org/software/sed/
 Source=		http://ftp.gnu.org/gnu/sed//$(Name)-$(Version).tar.gz
 License=	GPL

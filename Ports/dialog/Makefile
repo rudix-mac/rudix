@@ -6,7 +6,6 @@ Title=		Dialog
 Name=		dialog
 Version=	1.2
 AltVersion=	20140911
-Revision=	0
 Site=		http://invisible-island.net/dialog/dialog.html
 Source=		ftp://invisible-island.net/dialog//$(Name)-$(Version)-$(AltVersion).tgz
 License=	LGPL

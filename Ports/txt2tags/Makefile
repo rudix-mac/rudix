@@ -5,7 +5,6 @@ include ../../Library/Unix.mk
 Title=		txt2tags
 Name=		txt2tags
 Version=	2.6
-Revision=	2
 Site=		http://txt2tags.org/
 Source=		http://txt2tags.googlecode.com/files//$(Name)-$(Version).tgz
 License=	GPL

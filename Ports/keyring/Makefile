@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Keyring (Python Module)
 Name=		keyring
 Version=	1.6.1
-Revision=	0
 Site=		http://pypi.python.org/pypi/keyring
 Source=		http://pypi.python.org/packages/source/k/keyring//$(Name)-$(Version).zip
 License=	PSF

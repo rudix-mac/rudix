@@ -12,7 +12,6 @@ Description=	The Go Programming Language
 Title=		Go Language
 Name=		go
 Version=	1.6.2
-Revision=	0
 Site=		http://golang.org/
 Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
 Checksum=	09232ac0e76635cc9e0a1f33a81bf03ae9cb9db5

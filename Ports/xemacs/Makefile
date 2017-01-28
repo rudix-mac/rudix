@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		XEmacs
 Name=		xemacs
 Version=	21.5.33
-Revision=	0
 Site=		http://www.xemacs.org/
 Source=		http://ftp.xemacs.org/pub/xemacs/beta//$(Name)-$(Version).tar.gz
 License=	GPL

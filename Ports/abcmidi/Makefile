@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		abcMIDI
 Name=		abcmidi
 Version=	2015.08.11
-Revision=	0
 Site=		http://ifdo.pugmarks.com/%7Eseymour/runabc/top.html
 Source=		http://ifdo.pugmarks.com/%7Eseymour/runabc/abcMIDI-2015-08-11.zip
 License=        GPLv2

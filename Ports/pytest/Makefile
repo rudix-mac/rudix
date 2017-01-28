@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		PyTest
 Name=		pytest
 Version=	2.3.5
-Revision=	0
 Site=		http://pytest.org/
 Source=		https://pypi.python.org/packages/source/p/pytest/$(Name)-$(Version).tar.gz
 License=	MIT

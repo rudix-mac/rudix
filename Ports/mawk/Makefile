@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Mawk
 Name=		mawk
 Version=	1.3.4
-Revision=	1
 Site=		http://invisible-island.net/mawk/
 Source=		http://invisible-island.net/datafiles/release/mawk.tar.gz
 License=        GPLv2

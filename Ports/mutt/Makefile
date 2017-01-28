@@ -10,7 +10,6 @@ include ../../Library/GNU.mk
 Title=		Mutt
 Name=		mutt
 Version=	1.5.23
-Revision=	1
 Site=		http://www.mutt.org/
 #URL=		ftp://ftp.mutt.org/mutt/devel/
 Source=		https://bitbucket.org/mutt/mutt/downloads/$(Name)-$(Version).tar.gz

@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		Varnish Cache
 Name=		varnish
 Version=	3.0.3
-Revision=	0
 Site=		https://www.varnish-cache.org/
 Source=		http://repo.varnish-cache.org/source//$(Name)-$(Version).tar.gz
 License=	BSD

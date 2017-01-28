@@ -4,7 +4,6 @@ Description=	Perl Compatible Regular Expressions library
 Title=		PCRE
 Name=		pcre
 Version=	8.37
-Revision=	0
 Site=		http://www.pcre.org/
 #URL=		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 Source=		http://downloads.sourceforge.net/pcre/$(Name)-$(Version).tar.bz2

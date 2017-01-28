@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Stunnel
 Name=		stunnel
 Version=	5.23
-Revision=	0
 Site=		http://www.stunnel.org/
 Source=		https://www.stunnel.org/downloads/$(Name)-$(Version).tar.gz
 Checksum=	1fbbfa03efc08969778dab25fce901b94126087b

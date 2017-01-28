@@ -3,7 +3,6 @@ include ../../Library/Python.mk
 Title=		Werkzeug (WSGI utils for Python)
 Name=		werkzeug
 Version=	0.9.1
-Revision=	0
 Site=		http://werkzeug.pocoo.org
 Source=		https://pypi.python.org/packages/source/W/Werkzeug/Werkzeug-$(Version).tar.gz
 License=	BSD

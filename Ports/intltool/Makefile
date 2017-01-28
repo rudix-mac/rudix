@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Internationalization Tool Collection
 Name=		intltool
 Version=	0.50.2
-Revision=	0
 Site=		https://launchpad.net/intltool/
 Source=		https://launchpad.net/intltool/trunk/0.50.2/+download//$(Name)-$(Version).tar.gz
 License=	GPL

@@ -9,7 +9,6 @@ include ../../Library/Python.mk
 Title=		Paramiko
 Name=		paramiko
 Version=	1.15.2
-Revision=	0
 Site=		http://www.lag.net/paramiko/
 Site=		http://www.lag.net/paramiko/
 Source=		https://pypi.python.org/packages/source/p/paramiko/$(Name)-$(Version).tar.gz

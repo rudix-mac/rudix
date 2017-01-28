@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		mpop
 Name=		mpop
 Version=	1.0.28
-Revision=	0
 Site=		http://mpop.sourceforge.net/
 Source=		http://sourceforge.net/projects/mpop/files/mpop/$(Version)/$(Name)-$(Version).tar.bz2
 License=	GPL

@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU PIC Utilities
 Name=		gputils
 Version=	1.4.0
-Revision=	0
 Site=		http://gputils.sourceforge.net
 Source=		http://downloads.sourceforge.net/gputils/$(Name)-$(Version)-1.tar.gz
 License=	GPL

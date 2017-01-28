@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		OptiPNG
 Name=		optipng
 Version=	0.7.5
-Revision=	0
 Site=		http://optipng.sourceforge.net/
 Source=		http://downloads.sourceforge.net/optipng/$(Name)-$(Version).tar.gz
 License=	zlib

@@ -9,7 +9,6 @@ include ../../Library/Configure.mk
 Title=		QEMU
 Name=		qemu
 Version=	2.6.0
-Revision=	0
 Site=		http://wiki.qemu.org/
 Source=		http://wiki.qemu.org/download/$(Name)-$(Version).tar.bz2
 License=	GPL

@@ -5,7 +5,6 @@ include ../../Library/Configure.mk
 Title=		Nginx
 Name=		nginx
 Version=	1.7.2
-Revision=	0
 Site=		http://nginx.org/
 Source=		http://nginx.org/download//$(Name)-$(Version).tar.gz
 License=	BSD

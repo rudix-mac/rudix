@@ -11,7 +11,6 @@ Makefile = """include ../../Library/{formula}.mk
 Title=		{title}
 Name=		{name}
 Version=	{version}
-Revision=	{revision}
 Site=		{site}
 Source=		{source}
 License=        {license}
@@ -36,7 +35,6 @@ def process(args):
               'name': args.name,
               'title': title,
               'version': args.version,
-              'revision': '0',
               'site': args.site,
               'source': args.source,
               'license': args.license,

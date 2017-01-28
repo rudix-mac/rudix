@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		IMAP UW
 Name=		imap
 Version=	2007f
-Revision=	1
 Site=		http://www.washington.edu/imap/
 Source=		ftp://ftp.cac.washington.edu/mail//$(Name)-$(Version).tar.gz
 License=	Apache License 2.0

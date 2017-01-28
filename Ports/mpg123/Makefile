@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		MPG123
 Name=		mpg123
 Version=	1.22.4
-Revision=	0
 Site=		http://www.mpg123.de/
 Source=		http://www.mpg123.de/download/$(Name)-$(Version).tar.bz2
 License=	LGPL

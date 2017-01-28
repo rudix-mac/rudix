@@ -7,7 +7,6 @@ Summary=	Tree is a recursive directory listing command that produces a depth ind
 Title=		Tree
 Name=		tree
 Version=	1.7.0
-Revision=	0
 Site=		http://mama.indstate.edu/users/ice/tree/
 Source=		http://mama.indstate.edu/users/ice/tree/src//$(Name)-$(Version).tgz
 License=	GPLv2

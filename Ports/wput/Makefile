@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Wput
 Name=		wput
 Version=	0.6.2
-Revision=	0
 Site=		http://wput.sourceforge.net/
 Source=		http://downloads.sourceforge.net/wput/$(Name)-$(Version).tgz
 License=	GPL

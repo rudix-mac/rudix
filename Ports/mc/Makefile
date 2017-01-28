@@ -8,7 +8,6 @@ include ../../Library/GNU.mk
 Title=		Midnight Commander
 Name=		mc
 Version=	4.8.7
-Revision=	0
 Site=		http://www.midnight-commander.org/
 Source=		http://www.midnight-commander.org/downloads/$(Name)-$(Version).tar.bz2
 License=	GPLv3

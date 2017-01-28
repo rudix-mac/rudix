@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		SIMH
 Name=		simh
 Version=	3.9
-Revision=	0
 Site=		http://simh.trailing-edge.com/
 Source=		http://simh.trailing-edge.com/sources/$(Name)v39-0.zip
 License=	MIT

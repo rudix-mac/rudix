@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Fish Shell
 Name=		fish
 Version=	2.4.0
-Revision=	0
 Site=		http://fishshell.com
 Source=		http://fishshell.com/files/$(Version)/$(Name)-$(Version).tar.gz
 License=	GPLv2

@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Neon
 Name=		neon
 Version=	0.30.1
-Revision=	1
 Site=		http://www.webdav.org/neon/
 Source=		http://www.webdav.org/neon//$(Name)-$(Version).tar.gz
 License=	LGPL

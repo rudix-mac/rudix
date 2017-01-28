@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU Parallel
 Name=		parallel
 Version=	20141122
-Revision=	0
 Site=		http://savannah.gnu.org/projects/parallel/
 Source=		http://ftp.gnu.org/gnu/parallel//${Name}-${Version}.tar.bz2
 License=	GPL

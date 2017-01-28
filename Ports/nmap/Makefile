@@ -8,7 +8,6 @@ include ../../Library/GNU.mk
 Title=		Nmap
 Name=		nmap
 Version=	6.40
-Revision=	0
 Site=		http://nmap.org/
 Source=		http://nmap.org/dist//$(Name)-$(Version).tar.bz2
 License=	GPL

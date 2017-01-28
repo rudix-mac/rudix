@@ -7,7 +7,6 @@ include ../../Library/Python.mk
 Title=		Python Imaging Library (fork)
 Name=		python-pillow
 Version=	2.5.3
-Revision=	0
 Site=		http://pypi.python.org/pypi/Pillow
 Source=		http://pypi.python.org/packages/source/P/Pillow//Pillow-$(Version).zip
 License=	PIL Software License

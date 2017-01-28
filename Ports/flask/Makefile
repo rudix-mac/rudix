@@ -8,7 +8,6 @@ include ../../Library/Python.mk
 Title=		Flask (microframework for Python)
 Name=		flask
 Version=	0.10
-Revision=	0
 Site=		http://flask.pocoo.org
 Source=		http://pypi.python.org/packages/source/F/Flask/Flask-$(Version).tar.gz
 License=	BSD

@@ -8,7 +8,6 @@ include ../../Library/GNU.mk
 Title=		SoX
 Name=		sox
 Version=	14.4.1
-Revision=	0
 Site=		http://sox.sourceforge.net/
 Source=		http://downloads.sourceforge.net/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL+LGPL

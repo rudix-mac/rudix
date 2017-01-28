@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=          Ispell
 Name=           ispell
 Version=        3.4.00
-Revision=	0
 Site=		https://www.cs.hmc.edu/~geoff/ispell.html
 Source=		https://www.cs.hmc.edu/~geoff/tars/ispell-$(Version).tar.gz
 License=	BSD-Like

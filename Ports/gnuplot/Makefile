@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Gnuplot
 Name=		gnuplot
 Version=	4.6.3
-Revision=	0
 Site=		http://www.gnuplot.info/
 Source=		http://sourceforge.net/projects/gnuplot/files/gnuplot/$(Version)//$(Name)-$(Version).tar.gz
 License=	GPL

@@ -7,7 +7,6 @@ include ../../Library/GNU.mk
 Title=		PowerDNS
 Name=		pdns
 Version=	3.2
-Revision=	0
 Site=		http://www.powerdns.com/
 Source=		http://downloads.powerdns.com/releases//$(Name)-$(Version).tar.gz
 License=	GPL

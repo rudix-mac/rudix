@@ -3,7 +3,6 @@ include ../../Library/Unix.mk
 Title=		pigz (parallel gzip)
 Name=		pigz
 Version=	2.3
-Revision=	0
 Site=		http://zlib.net/pigz/
 Source=		http://zlib.net/pigz//$(Name)-$(Version).tar.gz
 License=	zlib

@@ -9,7 +9,6 @@ endif
 Title=		Pipe Viewer
 Name=		pv
 Version=	1.4.6
-Revision=	0
 Site=		http://www.ivarch.com/programs/pv.shtml
 Source=		http://www.ivarch.com/programs/sources//$(Name)-$(Version).tar.bz2
 License=	Artistic License

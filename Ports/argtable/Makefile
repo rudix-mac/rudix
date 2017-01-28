@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Argtable
 Name=		argtable
 Version=	2.13
-Revision=	3
 Site=		http://argtable.sourceforge.net
 Source=		http://downloads.sourceforge.net/argtable/$(Name)2-13.tar.gz
 License=	LGPL

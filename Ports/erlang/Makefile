@@ -6,7 +6,6 @@ endif
 Title=		Erlang/OTP
 Name=		erlang
 Version=	19.2
-Revision=	0
 Site=		http://www.erlang.org/
 Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
 License=	Apache License

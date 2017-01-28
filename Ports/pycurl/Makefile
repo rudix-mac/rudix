@@ -4,7 +4,6 @@ include ../../Library/Python.mk
 Title=		PycURL
 Name=		pycurl
 Version=	7.19.5.1
-Revision=	0
 Site=		http://pycurl.sourceforge.net/
 Source=		http://pycurl.sourceforge.net/download/$(Name)-$(Version).tar.gz
 License=	LGPL/MIT

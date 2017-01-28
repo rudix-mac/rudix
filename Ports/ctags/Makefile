@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Exuberant Ctags
 Name=		ctags
 Version=	5.8
-Revision=	9
 Site=		http://ctags.sourceforge.net/
 Source=		http://downloads.sourceforge.net/ctags/$(Name)-$(Version).tar.gz
 License=	GPL

@@ -6,7 +6,6 @@ include ../../Library/GNU.mk
 Title=		SDCC
 Name=		sdcc
 Version=	3.4.0
-Revision=	0
 Site=		http://sdcc.sourceforge.net/
 Source=		http://sourceforge.net/projects/sdcc/files/sdcc/$(Version)/$(Name)-src-$(Version).tar.bz2
 License=	GPL

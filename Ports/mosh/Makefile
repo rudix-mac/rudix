@@ -8,7 +8,6 @@ include ../../Library/GNU.mk
 Title=		Mobile Shell
 Name=		mosh
 Version=	1.2.4
-Revision=	0
 Site=		http://mosh.mit.edu/
 Source=		http://mosh.mit.edu//$(Name)-$(Version).tar.gz
 License=	GPL

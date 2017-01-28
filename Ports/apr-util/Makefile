@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		Apache Portable Runtime Utility
 Name=		apr-util
 Version=	1.5.1
-Revision=	0
 Site=		http://apr.apache.org/
 Source=		http://www.apache.org/dist/apr//$(Name)-$(Version).tar.bz2
 License=	Apache License

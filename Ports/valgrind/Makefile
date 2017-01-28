@@ -5,7 +5,6 @@ include ../../Library/GNU.mk
 Title=		Valgrind
 Name=		valgrind
 Version=	3.8.1
-Revision=	1
 Site=		http://valgrind.org/
 Source=		http://valgrind.org/downloads//$(Name)-$(Version).tar.bz2
 License=	GPL

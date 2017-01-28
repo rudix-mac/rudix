@@ -3,7 +3,6 @@ include ../../Library/GNU.mk
 Title=		EPIC5
 Name=		epic5
 Version=	1.1.10
-Revision=	0
 Site=		http://epicsol.org/
 Source=		http://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION//$(Name)-$(Version).tar.bz2
 License=	BSD
