@@ -14,21 +14,9 @@ OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
-ifeq ($(OSXVersion),10.12)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.11)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.10)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.9)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.8)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.7)
-RUDIX_UNIVERSAL?=no
-else ifeq ($(OSXVersion),10.6)
+ifeq ($(OSXVersion),10.6)
 RUDIX_UNIVERSAL?=yes
-else
+else # 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
 RUDIX_UNIVERSAL?=no
 endif
 
@@ -70,22 +58,10 @@ PkgFile = $(DistName)-$(Version)-$(Revision).pkg
 #
 # Build flags options
 #
-ifeq ($(OSXVersion),10.12)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.11)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.10)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.9)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.8)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.7)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else ifeq ($(OSXVersion),10.6)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-else
+ifeq ($(OSXVersion),10.5)
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
+else # 10.6, 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
+ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
 endif
 
 # Minimum OS X version supported
@@ -125,30 +101,15 @@ InfoDir = $(DataDir)/info
 #
 # Select Python version
 #
-ifeq ($(OSXVersion),10.12)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.11)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.10)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.9)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.8)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-else ifeq ($(OSXVersion),10.7)
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
+ifeq ($(OSXVersion),10.5)
+Python = /usr/bin/python2.5
+PythonSitePackages = /Library/Python/2.5/site-packages
 else ifeq ($(OSXVersion),10.6)
 Python = /usr/bin/python2.6
 PythonSitePackages = /Library/Python/2.6/site-packages
-else
-Python = /usr/bin/python2.5
-PythonSitePackages = /Library/Python/2.5/site-packages
+else # 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
+Python = /usr/bin/python2.7
+PythonSitePackages = /Library/Python/2.7/site-packages
 endif
 
 #
