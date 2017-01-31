@@ -2,15 +2,12 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.3.3
+Version=	5.3.4
 Site=		http://www.lua.org/
 Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
-Checksum=	a0341bc3d1415b814cc738b2ec01ae56045d64ef
 License=	MIT
-
 LicenseFile=	license.txt
 
-OptFlags=
 MakeExtra = MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
 MakeExtra += macosx
 MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
