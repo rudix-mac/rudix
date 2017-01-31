@@ -4,10 +4,10 @@ include ../../Library/GNU.mk
 
 Title=		XZ Utils
 Name=		xz
-Version=	5.2.2
+Version=	5.2.3
 Site=		http://tukaani.org/xz/
 Source=		http://tukaani.org/xz//$(Name)-$(Version).tar.bz2
-License=	GPL
+License=	GPLv2+, LGPLv2.1+, Public Domain
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
