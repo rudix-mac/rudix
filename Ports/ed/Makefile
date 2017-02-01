@@ -7,7 +7,6 @@ Name=		ed
 Version=	1.13
 Site=		http://www.gnu.org/software/ed/
 Source=		http://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
-Checksum=	31fc89eeaa99d6505bc7367651166e925d8fa430
 License=	GPLv3
 
 ConfigureExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFLags)"

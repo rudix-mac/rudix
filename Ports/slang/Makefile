@@ -9,7 +9,6 @@ Name=		slang
 Version=	2.3.0
 Site=		http://www.jedsoft.org/slang/
 Source=		http://www.jedsoft.org/releases/slang/$(Name)-$(Version).tar.bz2
-Checksum=	6e26e90307d4569e5feef195648c0858ba27f7ac
 License=	GPL
 
 ifneq ($(RUDIX_BUILD_STATIC_LIBS),yes)

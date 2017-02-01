@@ -5,7 +5,6 @@ Name=		thttpd
 Version=	2.26
 Site=		http://www.acme.com/software/thttpd/
 Source=		http://www.acme.com/software/thttpd/thttpd-$(Version).tar.gz
-CheckSum=	9b943aeeab9ef92dfd60595649cbe9cf7394968c
 License=        BSD
 
 LicenseFile=	LICENSE

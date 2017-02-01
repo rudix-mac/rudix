@@ -8,7 +8,6 @@ Name=		lcms
 Version=	2.6
 Site=		http://www.littlecms.com/
 Source=		http://downloads.sourceforge.net/lcms/$(Name)2-$(Version).tar.gz
-Checksum=	b0ecee5cb8391338e6c281d1c11dcae2bc22a5d2
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.1ST

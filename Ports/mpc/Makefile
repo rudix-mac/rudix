@@ -12,7 +12,6 @@ Name=		mpc
 Version=	1.0.3
 Site=		http://www.multiprecision.org/
 Source=		ftp://ftp.gnu.org/gnu/mpc//$(Name)-$(Version).tar.gz
-Checksum=	b8be66396c726fdc36ebb0f692ed8a8cca3bcc66
 License=	LGPLv3
 LicenseFile=	$(SourceDir)/COPYING.LESSER
 

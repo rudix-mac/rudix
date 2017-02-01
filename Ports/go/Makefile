@@ -14,7 +14,6 @@ Name=		go
 Version=	1.6.2
 Site=		http://golang.org/
 Source=		http://golang.org/dl/$(Name)$(Version).src.tar.gz
-Checksum=	09232ac0e76635cc9e0a1f33a81bf03ae9cb9db5
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md

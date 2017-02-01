@@ -5,7 +5,6 @@ Name=		cabextract
 Version=	1.6
 Site=		http://www.cabextract.org.uk/
 Source=		http://www.cabextract.org.uk/$(Name)-$(Version).tar.gz
-Checksum=	64f6d5056d3e417a943648c23cb22218b7079ced
 License=	GPL
 
 # Avoid HTTP error 406

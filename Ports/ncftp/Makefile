@@ -5,7 +5,6 @@ Name=		ncftp
 Version=	3.2.5
 Site=		http://www.ncftp.com/
 Source=		ftp://ftp.ncftp.com/ncftp/ncftp-$(Version)-src.tar.bz2
-Checksum=	bae15ab31d16c5cec029ce5737c1288c13fd90bb
 License=	The Clarified Artistic License
 
 ReadMeFile=	$(SourceDir)/README.txt

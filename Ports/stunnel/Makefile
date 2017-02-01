@@ -5,7 +5,6 @@ Name=		stunnel
 Version=	5.23
 Site=		http://www.stunnel.org/
 Source=		https://www.stunnel.org/downloads/$(Name)-$(Version).tar.gz
-Checksum=	1fbbfa03efc08969778dab25fce901b94126087b
 License=	GPL
 
 define install_post_hook
