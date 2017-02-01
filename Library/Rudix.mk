@@ -137,7 +137,7 @@ prep: retrieve
 	@touch $@
 
 # Build source
-build: prep
+build: prep $(BuildRequires)
 	@$(call info_color,*** Building $(DistName) ***)
 	@$(call build_pre_hook)
 	@$(call build_inner_hook)
