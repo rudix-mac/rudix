@@ -92,7 +92,7 @@ OptFlags = -Os
 
 CFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
 CxxFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
-#CppFlags =
+CppFlags = -I$(IncludeDir)
 LdFlags = $(ArchFlags) $(CompatFlags)
 
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
