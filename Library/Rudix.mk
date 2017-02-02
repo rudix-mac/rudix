@@ -41,6 +41,7 @@ PortDir := $(shell pwd)
 SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
+ResourcesDir = $(Name)-resources
 DestDir= $(PortDir)/$(InstallDir)
 ReadMeFile = $(SourceDir)/README
 LicenseFile = $(SourceDir)/COPYING
@@ -186,7 +187,7 @@ installclean:
 	rm -rf install $(InstallDir)
 
 pkgclean:
-	rm -rf pkg *.pkg Distribution Resources
+	rm -rf pkg *.pkg $(ResourcesDir)
 
 clean: installclean
 	rm -rf prep build check test $(SourceDir) *~
@@ -286,6 +287,7 @@ endef
 
 define create_distribution
 ../../Library/synthesize_distribution.py \
+	--output $(ResourcesDir)/Distribution \
 	--title "$(Title) $(Version)" \
 	--pkgid $(PkgId) \
 	--name $(DistName) \
@@ -294,11 +296,11 @@ define create_distribution
 endef
 
 define create_resources
-mkdir -p Resources/en.lproj
-cp -av $(ReadMeFile) Resources/en.lproj/ReadMe
-cp -av $(LicenseFile) Resources/en.lproj/License
-cp -av ../../Library/Introduction Resources/en.lproj/Welcome
-cp -av ../../Library/rudix.png Resources/en.lproj/background
+mkdir -p $(PortDir)/$(ResourcesDir)/Resources/en.lproj
+cp -av $(ReadMeFile)  $(PortDir)/$(ResourcesDir)/Resources/en.lproj/ReadMe
+cp -av $(LicenseFile) $(PortDir)/$(ResourcesDir)/Resources/en.lproj/License
+cp -av ../../Library/Introduction $(PortDir)/$(ResourcesDir)/Resources/en.lproj/Welcome
+cp -av ../../Library/rudix.png    $(PortDir)/$(ResourcesDir)/Resources/en.lproj/background
 endef
 
 define create_installpkg
@@ -314,8 +316,8 @@ endef
 
 define create_pkg
 productbuild \
-	--distribution Distribution \
-	--resources Resources \
+	--distribution $(PortDir)/$(ResourcesDir)/Distribution \
+	--resources $(PortDir)/$(ResourcesDir)/Resources \
 	$(PkgFile)
 endef
 
@@ -422,8 +424,8 @@ endef
 
 define pkg_inner_hook
 $(create_installpkg)
-$(create_distribution)
 $(create_resources)
+$(create_distribution)
 $(create_pkg)
 endef
 

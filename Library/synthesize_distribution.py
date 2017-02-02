@@ -66,7 +66,8 @@ def main(argv=None):
     if not argv:
         argv = sys.argv
     requires = []
-    opts, args = getopt(argv[1:], '', ['title=', 'pkgid=', 'name=', 'installpkg=', 'requires=' ])
+    output = 'Distribution'
+    opts, args = getopt(argv[1:], '', ['title=', 'pkgid=', 'name=', 'installpkg=', 'requires=', 'output='])
     for opt, arg in opts:
         if opt == '--title':
             title = arg
@@ -78,8 +79,11 @@ def main(argv=None):
             installpkg = arg
         if opt == '--requires':
             requires.append(arg)
-    with open('Distribution', 'w') as dist:
+        if opt == '--output':
+            output = arg
+    with open(output, 'w') as dist:
         dist.write(synthesize(title, pkgid, name, installpkg, requires))
-    
+
+
 if __name__ == '__main__':
     sys.exit(main())

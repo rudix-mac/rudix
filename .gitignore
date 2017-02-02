@@ -17,6 +17,7 @@ master
 *.pkg
 *-install
 *-build
+*-resources
 *.tar
 *.lz
 *.xz
@@ -28,5 +29,3 @@ master
 *.orig
 *.py?
 config.cache
-Distribution
-Resources
