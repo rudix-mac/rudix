@@ -302,10 +302,10 @@ endef
 
 define create_resources
 mkdir -p $(PortDir)/$(ResourcesDir)/Resources/en.lproj
-cp -av $(ReadMeFile)  $(PortDir)/$(ResourcesDir)/Resources/en.lproj/ReadMe
-cp -av $(LicenseFile) $(PortDir)/$(ResourcesDir)/Resources/en.lproj/License
-cp -av ../../Library/Introduction $(PortDir)/$(ResourcesDir)/Resources/en.lproj/Welcome
-cp -av ../../Library/rudix.png    $(PortDir)/$(ResourcesDir)/Resources/en.lproj/background
+cp -a $(ReadMeFile)  $(PortDir)/$(ResourcesDir)/Resources/en.lproj/ReadMe
+cp -a $(LicenseFile) $(PortDir)/$(ResourcesDir)/Resources/en.lproj/License
+cp -a ../../Library/Introduction $(PortDir)/$(ResourcesDir)/Resources/en.lproj/Welcome
+cp -a ../../Library/rudix.png    $(PortDir)/$(ResourcesDir)/Resources/en.lproj/background
 endef
 
 define create_installpkg
