@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/lunzip # lunzip
+PrepRequires = $(BinDir)/lunzip # lunzip
 
 include ../../Library/Configure.mk
 

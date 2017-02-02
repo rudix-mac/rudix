@@ -135,7 +135,7 @@ retrieve:
 	@touch $@
 
 # Prepare source to compile
-prep: retrieve
+prep: retrieve $(PrepRequires)
 	@$(call info_color,*** Preparing $(DistName) ***)
 	@$(call prep_pre_hook)
 	@$(call prep_inner_hook)
