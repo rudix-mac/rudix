@@ -247,15 +247,27 @@ json:
 #
 
 define info_color
-printf "\033[32m$1\033[0m\n"
+if test -t 1 ; then \
+printf "\033[32m$1\033[0m\n" ; \
+else \
+printf "$1" ; \
+fi
 endef
 
 define warning_color
-printf "\033[33mWarning: $1\033[0m\n"
+if test -t 1 ; then \
+printf "\033[33mWarning: $1\033[0m\n" ; \
+else \
+printf "$1" ; \
+fi
 endef
 
 define error_color
-printf "\033[31mError: $1\033[0m\n"
+if test -t 1 ; then \
+printf "\033[31mError: $1\033[0m\n" ; \
+else \
+printf "$1" ; \
+fi
 endef
 
 define fetch
