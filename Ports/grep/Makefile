@@ -17,6 +17,6 @@ define install_post_hook
 cd $(InstallDir)$(Prefix)/share/info ; ln -sf grep.info gnugrep.info
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/grep --version | grep $(Version)
 endef

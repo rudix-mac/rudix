@@ -9,6 +9,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pcap-config --cflags --libs | grep $(Prefix)
 endef

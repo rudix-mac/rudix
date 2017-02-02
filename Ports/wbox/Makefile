@@ -7,6 +7,6 @@ Site=		http://hping.org/wbox/
 Source=		http://hping.org/wbox//$(Name)-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 $(BinDir)/wbox -v | grep $(Version)
 endef

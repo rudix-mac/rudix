@@ -11,6 +11,6 @@ UncompressedName = sdl-$(Version) # Just in case
 
 GnuConfigureExtra += --disable-video-x11
 
-define test_inner_hook
+define test_hook
 $(BinDir)/sdl-config --version
 endef

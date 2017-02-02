@@ -7,6 +7,6 @@ Site=		https://github.com/gperftools/gperftools/
 Source=		https://github.com/gperftools/gperftools/releases/download/gperftools-$(Version)/gperftools-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pprof --version
 endef

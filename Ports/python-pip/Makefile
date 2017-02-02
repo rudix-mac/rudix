@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/LICENSE.txt
 
 UncompressedName=pip-$(Version)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pip --version | grep $(Version)
 endef

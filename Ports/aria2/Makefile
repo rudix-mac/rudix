@@ -11,7 +11,7 @@ License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.rst
 
-define test_inner_hook
+define test_hook
 $(BinDir)/aria2c --version | grep $(Version)
 nm $(BinDir)/aria2c | grep libintl
 endef

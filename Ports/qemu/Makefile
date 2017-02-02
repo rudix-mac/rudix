@@ -34,7 +34,7 @@ define install_post_hook
 rm -rf $(DestDir)$(SysConfDir)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/qemu-ga --version >/dev/null
 $(BinDir)/qemu-io --version >/dev/null
 $(BinDir)/qemu-nbd --version >/dev/null

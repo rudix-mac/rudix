@@ -14,7 +14,7 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/fab --version
 $(Python) -c 'from fabric.api import run ; run("uptime")'
 endef

@@ -19,6 +19,6 @@ define install_post_hook
 find $(InstallDir) -name '*.dSYM' | xargs rm -rf
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/valgrind --version | grep $(Version)
 endef

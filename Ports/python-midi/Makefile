@@ -12,6 +12,6 @@ License=	MIT
 ReadMeFile=	$(SourceDir)/README.mediawiki
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mididump $(SourceDir)/mary.mid | grep midi.Pattern
 endef

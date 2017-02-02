@@ -16,6 +16,6 @@ License=	Apache License
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/svn --version | grep $(Version)
 endef

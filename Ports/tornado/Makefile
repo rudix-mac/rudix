@@ -10,6 +10,6 @@ License=	Apache
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	LICENSE-2.0
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import tornado'
 endef

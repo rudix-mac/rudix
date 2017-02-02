@@ -13,6 +13,6 @@ License=	BSD
 
 ReadMeFile=	README
 
-define test_inner_hook
+define test_hook
 $(BinDir)/dash -c 'echo $$0' | grep dash
 endef

@@ -7,6 +7,6 @@ Site=		http://www.gnu.org/software/cflow/
 Source=		http://ftp.gnu.org/gnu/cflow//$(Name)-$(Version).tar.bz2
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/cflow --version
 endef

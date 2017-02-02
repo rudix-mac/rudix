@@ -12,6 +12,6 @@ UncompressedName=virtualenv-$(Version)
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define test_inner_hook
+define test_hook
 $(BinDir)/virtualenv --version | grep $(Version)
 endef

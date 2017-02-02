@@ -7,6 +7,6 @@ Site=		http://dovecot.org/
 Source=		http://dovecot.org/releases/2.2/$(Name)-$(Version).tar.gz
 License=	MIT+LGPL
 
-define test_inner_hook
+define test_hook
 sudo $(SBinDir)/dovecot -c tests/dovecot.conf
 endef

@@ -16,6 +16,6 @@ define install_post_hook
 rm -f $(InstallDir)/$(BinDir)/*-$(Version)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gawk --version | grep $(Version)
 endef

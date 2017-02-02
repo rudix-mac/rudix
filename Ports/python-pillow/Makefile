@@ -16,6 +16,6 @@ LicenseFile=	$(SourceDir)/PKG-INFO
 
 UncompressedName = Pillow-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import PIL'
 endef

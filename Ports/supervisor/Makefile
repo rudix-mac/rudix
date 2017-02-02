@@ -12,7 +12,7 @@ License=	BSD Like
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSES.txt
 
-define test_inner_hook
+define test_hook
 $(BinDir)/supervisorctl -h
 $(BinDir)/supervisord -h
 endef

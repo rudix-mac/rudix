@@ -7,10 +7,10 @@ Site=		http://www.colm.net/open-source/ragel/
 Source=		http://www.colm.net/wp-content/uploads/2014/10/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define check_inner_hook
+define check_hook
 cd $(BuildDir)/test ; ./runtests
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ragel --version | grep $(Version)
 endef

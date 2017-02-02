@@ -12,6 +12,6 @@ mv $(InstallDir)$(DataDir)/gnuchess/gnuchess.ini \
 	$(InstallDir)$(DataDir)/gnuchess/gnuchess.ini.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gnuchess --version | grep $(Version)
 endef

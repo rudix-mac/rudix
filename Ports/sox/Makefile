@@ -12,6 +12,6 @@ Site=		http://sox.sourceforge.net/
 Source=		http://downloads.sourceforge.net/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL+LGPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/sox --version
 endef

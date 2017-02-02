@@ -12,7 +12,7 @@ LicenseFile=	LICENSE
 
 UncompressedName=bootstrap-$(Version)-dist
 
-define install_inner_hook
+define install_hook
 $(install_base_documentation)
 install -d $(DestDir)$(DataDir)/bootstrap
 cp -av $(SourceDir)/* $(DestDir)$(DataDir)/bootstrap

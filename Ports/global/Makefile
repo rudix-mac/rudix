@@ -8,6 +8,6 @@ Site=		https://www.gnu.org/software/global/
 Source=		http://ftp.gnu.org/gnu/global//$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/global --version | grep $(Version)
 endef

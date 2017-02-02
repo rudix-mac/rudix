@@ -11,6 +11,6 @@ License=	GPL
 
 LicenseFile=	$(SourceDir)/COPYING.txt
 
-define test_inner_hook
+define test_hook
 $(BinDir)/bzr --version | grep $(Version)
 endef

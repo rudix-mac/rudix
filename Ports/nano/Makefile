@@ -9,6 +9,6 @@ License=	GPL
 
 #GnuConfigureExtra += --enable-utf8
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nano --version | grep $(Version)
 endef

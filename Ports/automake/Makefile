@@ -11,6 +11,6 @@ License=	GPL
 
 EnvExtra += AUTOCONF=$(BinDir)/autoconf
 
-define test_inner_hook
+define test_hook
 $(BinDir)/automake --version | grep $(Version)
 endef

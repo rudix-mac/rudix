@@ -10,7 +10,7 @@ License=	GPLv3+
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/COPYING
 
-define test_inner_hook
+define test_hook
 $(BinDir)/info --version | grep $(Version)
 $(BinDir)/texi2pdf --version | grep $(Version)
 endef

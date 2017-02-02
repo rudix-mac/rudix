@@ -16,7 +16,7 @@ else ifeq ($(RUDIX_BUILD_STATIC_LIBS),no)
 ConfigureExtra += --enable-shared --disable-static
 endif
 
-define build_inner_hook
+define build_hook
 cd $(SourceDir)/build_unix && \
 env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	../dist/$(configure) $(ConfigureExtra)	\
@@ -34,6 +34,6 @@ make DESTDIR=$(PortDir)/$(InstallDir) \
 chmod +w $(InstallDir)/$(BinDir)/*
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/db_verify -V
 endef

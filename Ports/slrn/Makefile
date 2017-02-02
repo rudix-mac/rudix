@@ -10,6 +10,6 @@ Site=		http://slrn.sourceforge.net
 Source=		http://www.jedsoft.org/releases/slrn/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/slrn --version | grep $(Version)
 endef

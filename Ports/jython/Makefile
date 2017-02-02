@@ -10,10 +10,10 @@ License=	Python License
 ReadMeFile=	$(DestDir)$(LibDir)/jython-$(Version)/README.txt
 LicenseFile=	$(DestDir)$(LibDir)/jython-$(Version)/LICENSE.txt
 
-define prep_inner_hook
+define prep_hook
 endef
 
-define install_inner_hook
+define install_hook
 java -jar jython-installer-$(Version)-b1.jar \
 	-s -d $(InstallDir)/$(LibDir)/jython-$(Version)
 $(install_base_documentation)
@@ -21,6 +21,6 @@ install -d $(InstallDir)/$(BinDir)
 cd $(InstallDir)/$(BinDir) ; ln -sf ../lib/jython-$(Version)/bin/jython .
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/jython --version
 endef

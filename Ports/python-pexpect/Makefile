@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=pexpect-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import pexpect'
 endef

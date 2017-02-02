@@ -12,6 +12,6 @@ License=	MIT
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-define test_inner_hook
+define test_hook
 $(BinDir)/luajit -v | grep $(Version)
 endef

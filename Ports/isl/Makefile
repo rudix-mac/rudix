@@ -8,6 +8,6 @@ Source=		ftp://gcc.gnu.org/pub/gcc/infrastructure/$(Name)-$(Version).tar.bz2
 License=        MIT
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 test -f $(LibDir)/libisl.la
 endef

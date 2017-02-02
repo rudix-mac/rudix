@@ -12,6 +12,6 @@ ReadMeFile=	$(SourceDir)/README.txt
 
 UncompressedName = sqlite-autoconf-3120200
 
-define test_inner_hook
+define test_hook
 $(BinDir)/sqlite3 -version | grep $(Version)
 endef

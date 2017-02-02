@@ -32,7 +32,7 @@ tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C \
 install -d $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/erlc
 $(BinDir)/erl -version
 endef

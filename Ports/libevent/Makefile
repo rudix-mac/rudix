@@ -9,6 +9,6 @@ License=	BSD
 LicenseFile=	$(SourceDir)/LICENSE
 UncompressedName=$(Name)-$(Version)-stable
 
-define test_inner_hook
+define test_hook
 test -f $(LibDir)/libevent.la
 endef

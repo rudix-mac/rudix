@@ -20,6 +20,6 @@ rm -f $(DestDir)$(LibDir)/rustlib/*.bak
 find $(DestDir)$(DocDir)/rust/html -type f | xargs chmod 644
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/rustc --version | grep $(Version)
 endef

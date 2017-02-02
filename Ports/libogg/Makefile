@@ -7,6 +7,6 @@ Site=		http://www.xiph.org/ogg/
 Source=		http://downloads.xiph.org/releases/ogg//$(Name)-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 grep libogg $(LibDir)/libogg.la
 endef

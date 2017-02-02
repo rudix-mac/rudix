@@ -7,6 +7,6 @@ Site=		http://iperf.sourceforge.net/
 Source=		http://downloads.sourceforge.net/iperf/$(Name)-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 $(BinDir)/iperf
 endef

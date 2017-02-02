@@ -9,6 +9,6 @@ License=	GPL
 
 UncompressedName=$(Name)-$(Version)pre4
 
-define test_inner_hook
+define test_hook
 $(SBinDir)/iftop -h | grep $(Version)
 endef

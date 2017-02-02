@@ -9,11 +9,11 @@ Site=		http://www.cis.upenn.edu/~bcpierce/unison/
 Source=		http://www.seas.upenn.edu/~bcpierce/unison//download/releases/stable//$(Name)-$(Version).tar.gz
 License=	GPL
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && make UISTYLE=text
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(DestDir)$(BinDir)
 install -m 755 $(BuildDir)/unison $(DestDir)$(BinDir)/unison
 $(install_base_documentation)

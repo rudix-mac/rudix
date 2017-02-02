@@ -14,6 +14,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import flask'
 endef

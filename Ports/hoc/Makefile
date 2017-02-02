@@ -17,6 +17,6 @@ define make
 make
 endef
 
-define test_inner_hook
+define test_hook
 echo "2 * PI" | $(BinDir)/hoc
 endef

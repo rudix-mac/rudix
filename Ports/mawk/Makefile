@@ -9,6 +9,6 @@ License=        GPLv2
 
 UncompressedName=mawk-$(Version)-20161120
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mawk -W version | grep $(Version)
 endef

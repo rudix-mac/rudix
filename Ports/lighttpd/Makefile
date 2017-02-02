@@ -21,7 +21,7 @@ install -m 644 lighttpd.conf.default $(DestDir)$(SysConfDir)/lighttpd
 install -d $(DestDir)$(LocalStateDir)/{www/lighttpd,log/lighttpd,run}
 endef
 
-define test_inner_hook
+define test_hook
 $(SBinDir)/lighttpd -V | grep "$(Version).*(ssl)"
 endef
 

@@ -11,12 +11,12 @@ EnvExtra += CFLAGS="$(CFlags)" \
 	    LDFLAGS="$(LdFlags)" \
 	    ARCHFLAGS="$(ArchFlags)"
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && \
 env $(EnvExtra) $(Python) setup.py $(SetupExtra) build
 endef
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) && \
 $(Python) \
 	setup.py install $(SetupInstallExtra) \
@@ -30,7 +30,7 @@ $(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
-define check_inner_hook
+define check_hook
 cd $(BuildDir) && \
 $(Python) setup.py test || $(call error_color,One or more tests failed)
 endef

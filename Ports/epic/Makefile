@@ -9,6 +9,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-define test_inner_hook
+define test_hook
 $(BinDir)/epic5 -v | grep $(Version)
 endef

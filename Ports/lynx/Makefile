@@ -24,6 +24,6 @@ mv $(InstallDir)$(Prefix)/etc/lynx.lss $(InstallDir)$(Prefix)/etc/lynx.lss.defau
 install -m 644 $(SourceDir)/{CHANGES,COPYHEADER*,PROBLEMS} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/lynx --version | grep $(Version)
 endef

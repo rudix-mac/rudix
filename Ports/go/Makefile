@@ -21,13 +21,13 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=go
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir)/src && \
 	env GOROOT_BOOTSTRAP=$(GoRoot) \
 		GOROOT_FINAL=$(GoRoot) ./all.bash
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)/$(LibDir)/go
 cp -a $(BuildDir)/{favicon.ico,robots.txt} $(InstallDir)$(GoRoot)
 cp -a $(BuildDir)/api $(InstallDir)$(GoRoot)
@@ -46,7 +46,7 @@ install -d $(InstallDir)$(BinDir)
 cd $(InstallDir)$(BinDir) && ln -sf ../lib/go/bin/* .
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/go version | grep $(Version)
 $(BinDir)/go run tests/hello.go
 $(BinDir)/go run tests/rat_scan.go

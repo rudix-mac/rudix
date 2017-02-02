@@ -15,6 +15,6 @@ ReadMeFile=	README
 #LdFlags += -framework CoreFoundation
 #endif
 
-define test_inner_hook
+define test_hook
 $(BinDir)/wput --version | grep $(Version)
 endef

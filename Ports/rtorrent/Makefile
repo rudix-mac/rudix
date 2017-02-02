@@ -13,6 +13,6 @@ License=	GPL
 
 EnvExtra += libcurl_CFLAGS="-I/usr/include/curl" libcurl_LIBS="-lcurl"
 
-define test_inner_hook
+define test_hook
 $(BinDir)/rtorrent -h
 endef

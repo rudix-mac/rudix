@@ -10,6 +10,6 @@ License=	BSD like
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import simplejson'
 endef

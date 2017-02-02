@@ -16,6 +16,6 @@ CFlags += -I$(IncludeDir)
 LdFlags += -L$(LibDir)
 SetupExtra += --with-libyaml
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import yaml'
 endef

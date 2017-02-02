@@ -10,6 +10,6 @@ License=	GPL
 GnuConfigureExtra += --with-internal-glib
 GnuConfigureExtra += --disable-host-tool
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pkg-config --version | grep $(Version)
 endef

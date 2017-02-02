@@ -7,6 +7,6 @@ Site=		http://links.twibright.com/
 Source=		http://links.twibright.com/download/$(Name)-$(Version).tar.bz2
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/links -version | grep $(Version)
 endef

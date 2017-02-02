@@ -15,6 +15,6 @@ define install_post_hook
 install -m 644 $(SourceDir)/{doc/CONTRIBUTORS,doc/*.txt} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/memcached -h | grep $(Version)
 endef

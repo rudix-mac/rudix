@@ -17,6 +17,6 @@ cd $(DestDir)/$(BinDir) ; ln -sf ctags exuberant-ctags ; ln -sf etags exuberant-
 cd $(DestDir)/$(ManDir)/man1 ; ln -sf ctags.1 exuberant-ctags.1 ; ln -sf etags.1 exuberant-etags.1
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ctags --version | grep $(Version)
 endef

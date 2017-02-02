@@ -11,6 +11,6 @@ License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define test_inner_hook
+define test_hook
 $(BinDir)/offlineimap --version | grep $(Version)
 endef

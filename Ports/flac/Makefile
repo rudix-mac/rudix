@@ -11,6 +11,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYING.Xiph
 
-define test_inner_hook
+define test_hook
 $(BinDir)/flac --version
 endef

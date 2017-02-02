@@ -15,6 +15,6 @@ LicenseFile=	$(SourceDir)/LICENSE.txt
 MakeInstallExtra += mandir=$(ManDir)
 ConfigureExtra += --with-system-libpng
 
-define test_inner_hook
+define test_hook
 $(BinDir)/optipng --version | grep $(Version)
 endef

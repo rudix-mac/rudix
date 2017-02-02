@@ -9,6 +9,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import itsdangerous'
 endef

@@ -18,7 +18,7 @@ MakeInstallExtra += bindir=$(DestDir)$(BinDir)
 MakeInstallExtra += mandir=$(DestDir)$(ManDir)
 MakeInstallExtra += datadir=$(DestDir)$(DataDir)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/htmldoc --version | grep $(Version)
 endef
 
@@ -27,6 +27,6 @@ install -m 755 $(BuildDir)/htmldoc/htmldoc.app/Contents/MacOS/htmldoc \
 	$(DestDir)$(BinDir)/htmldoc
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/htmldoc --version | grep $(Version)
 endef

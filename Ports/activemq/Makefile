@@ -13,7 +13,7 @@ LicenseFile=	$(InstallDir)$(LibDir)/activemq/LICENSE
 
 UncompressedName=apache-activemq-$(Version)
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)$(LibDir)
 tar zxf $(PortDir)/$(Source) -C $(InstallDir)/$(LibDir)
 mv $(InstallDir)$(LibDir)/apache-activemq-$(Version) \
@@ -32,7 +32,7 @@ mv $(InstallDir)/$(LibDir)/activemq/webapps \
 #rm -rf $(InstallDir)/$(LibDir)/activemq/data/*
 endef
 
-define test_inner_hook
+define test_hook
 sudo /usr/local/bin/activemq start
 sleep 15
 sudo /usr/local/bin/activemq status

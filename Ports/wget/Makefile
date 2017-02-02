@@ -19,7 +19,7 @@ mv $(InstallDir)/$(Prefix)/etc/wgetrc \
 	$(InstallDir)/$(Prefix)/etc/wgetrc.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/wget --version | grep $(Version)
 nm $(BinDir)/wget | grep -q intl
 nm $(BinDir)/wget | grep -q idn

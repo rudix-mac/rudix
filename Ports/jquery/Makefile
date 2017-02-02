@@ -10,10 +10,10 @@ License=        MIT
 ReadMeFile=	README
 LicenseFile=	LICENSE
 
-define prep_inner_hook
+define prep_hook
 endef
 
-define install_inner_hook
+define install_hook
 $(install_base_documentation)
 install -d $(DestDir)$(DataDir)/jquery/js
 install $(shell basename $(Source)) $(DestDir)$(DataDir)/jquery/js

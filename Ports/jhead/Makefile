@@ -15,6 +15,6 @@ install -d $(DestDir)$(BinDir)
 install -d $(DestDir)$(DocDir)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/jhead -V
 endef

@@ -9,6 +9,6 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/Copyright
 
-define test_inner_hook
+define test_hook
 $(BinDir)/tcsh --version | grep $(Version)
 endef

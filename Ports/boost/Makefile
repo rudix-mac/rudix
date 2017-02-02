@@ -13,11 +13,11 @@ LicenseFile=$(SourceDir)/LICENSE_1_0.txt
 
 UncompressedName = $(Name)_$(AltVersion)
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && ./bootstrap.sh --prefix=$(Prefix) --with-icu && ./b2
 endef
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) && ./b2 install --prefix=$(DestDir)$(Prefix)
 $(install_base_documentation)
 endef

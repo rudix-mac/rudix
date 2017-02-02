@@ -13,6 +13,6 @@ mv $(InstallDir)/$(SysConfDir)/axelrc \
 	$(InstallDir)/$(SysConfDir)/axelrc.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/axel -V | grep $(Version)
 endef

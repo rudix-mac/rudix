@@ -10,6 +10,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSES.txt
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import lxml'
 endef

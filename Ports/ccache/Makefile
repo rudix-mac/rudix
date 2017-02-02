@@ -21,6 +21,6 @@ for x in cc gcc clang g++ c++ llvm-gcc llvm-g++ ; do \
 endef
 endif
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ccache --version | grep $(Version)
 endef

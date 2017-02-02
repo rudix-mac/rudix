@@ -12,7 +12,7 @@ License=        ISC
 UncompressedName=lloyd-yajl-*
 MakeFlags=
 
-define test_inner_hook
+define test_hook
 echo {} | $(BinDir)/json_verify
 echo {} | $(BinDir)/json_reformat
 endef

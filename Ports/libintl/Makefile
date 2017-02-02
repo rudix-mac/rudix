@@ -22,6 +22,6 @@ rm -rf $(DestDir)$(DocDir)/gettext/examples
 rm -rf $(DestDir)$(DocDir)/gettext/javadoc2
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gettext --version | grep $(Version)
 endef

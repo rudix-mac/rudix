@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/doc/gpl.txt
 
 UncompressedName=abcmidi
 
-define test_inner_hook
+define test_hook
 $(BinDir)/abc2midi -h | grep 3.70
 endef

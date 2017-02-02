@@ -7,6 +7,6 @@ Site=		http://savannah.gnu.org/projects/parallel/
 Source=		http://ftp.gnu.org/gnu/parallel//${Name}-${Version}.tar.bz2
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/parallel --version | grep $(Version)
 endef

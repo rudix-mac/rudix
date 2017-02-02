@@ -12,6 +12,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import jinja2'
 endef

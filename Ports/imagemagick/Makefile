@@ -17,6 +17,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName = ImageMagick-$(Version)-8
 
-define test_inner_hook
+define test_hook
 $(BinDir)/convert --version
 endef

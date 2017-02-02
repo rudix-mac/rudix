@@ -14,6 +14,6 @@ cd $(InstallDir)$(BinDir) ; ln -sf gnused sed
 cd $(InstallDir)$(Prefix)/share/man/man1 ; ln -sf gnused.1 sed.1
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/sed --version | grep $(Version)
 endef

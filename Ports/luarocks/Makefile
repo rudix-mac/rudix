@@ -16,6 +16,6 @@ mv $(DestDir)$(SysConfDir)/luarocks/config-5.3.lua \
 	$(DestDir)$(SysConfDir)/luarocks/config-5.3.lua.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/luarocks --version | grep $(Version)
 endef

@@ -10,6 +10,6 @@ License=	ZPL
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYRIGHT.txt
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import meld3'
 endef

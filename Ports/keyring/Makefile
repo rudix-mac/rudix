@@ -10,6 +10,6 @@ License=	PSF
 ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import keyring'
 endef

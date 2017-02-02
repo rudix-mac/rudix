@@ -7,6 +7,6 @@ Site=		http://zsync.moria.org.uk
 Source=		http://zsync.moria.org.uk/download/$(Name)-$(Version).tar.bz2
 License=	Artistic License
 
-define test_inner_hook
+define test_hook
 $(BinDir)/zsync -V | grep $(Version)
 endef

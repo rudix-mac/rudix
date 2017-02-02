@@ -11,6 +11,6 @@ Site=		http://bip.milkypond.org
 Source=		https://projects.duckcorp.org/attachments/download/61/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/bip -v | grep $(Version)
 endef

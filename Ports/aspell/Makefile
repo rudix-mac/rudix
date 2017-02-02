@@ -13,6 +13,6 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation
 endif
 
-define test_inner_hook
+define test_hook
 $(BinDir)/aspell --version | grep $(Version)
 endef

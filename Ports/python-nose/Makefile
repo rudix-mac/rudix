@@ -12,7 +12,7 @@ LicenseFile=	$(SourceDir)/lgpl.txt
 
 UncompressedName=nose-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import nose'
 $(BinDir)/nosetests --version | grep $(Version)
 endef

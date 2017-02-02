@@ -24,6 +24,6 @@ mv $(InstallDir)/$(SysConfDir)/irssi.conf \
 	$(InstallDir)/$(SysConfDir)/irssi.conf.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/irssi --version | grep $(Version)
 endef

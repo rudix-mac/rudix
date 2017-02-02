@@ -22,6 +22,6 @@ define install_post_hook
 rm -f $(DestDir)$(BinDir)/haproxy-systemd-wrapper
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/haproxy -vv
 endef

@@ -16,10 +16,10 @@ License=	LGPL
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 cd $(BuildDir) ; $(Python) test.py
 endef
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import paramiko'
 endef

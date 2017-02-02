@@ -10,6 +10,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/COPYING
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import genshi'
 endef

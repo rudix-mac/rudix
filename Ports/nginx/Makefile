@@ -35,6 +35,6 @@ mv $(InstallDir)/$(DataDir)/nginx/html/index.html $(InstallDir)/$(DataDir)/nginx
 mv $(InstallDir)/$(DataDir)/nginx/html/50x.html $(InstallDir)/$(DataDir)/nginx/html/50x.html.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nginx -v 2>&1 | grep $(Version)
 endef

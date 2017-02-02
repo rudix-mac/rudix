@@ -14,6 +14,6 @@ mv $(InstallDir)/$(SysConfDir)/cntlm.conf \
 	$(InstallDir)/$(SysConfDir)/cntlm.conf.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/cntlm -h 2>&1 | grep $(Version)
 endef

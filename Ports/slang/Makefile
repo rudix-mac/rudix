@@ -17,7 +17,7 @@ mv $(InstallDir)$(SysConfDir)/slsh.rc \
 	$(InstallDir)$(SysConfDir)/slsh.rc.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/slsh --version | grep $(Version)
 endef
 endif

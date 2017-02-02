@@ -24,6 +24,6 @@ for x in ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 gnuserv.1 ; do \
 	mv $(InstallDir)/$(ManDir)/man1/$$x $(InstallDir)/$(ManDir)/man1/xemacs-$$x ; done
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/xemacs --version | grep 21.5
 endef

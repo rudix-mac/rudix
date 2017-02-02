@@ -8,6 +8,6 @@ Source=		http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto//$(Name)-$(Version).tar.
 License=	Public Domain
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import Crypto'
 endef

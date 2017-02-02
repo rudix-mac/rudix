@@ -10,6 +10,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/PKG-INFO
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import werkzeug'
 endef

@@ -7,6 +7,6 @@ Site=		http://www.fltk.org
 Source=		http://fltk.org/pub/fltk/$(Version)/$(Name)-$(Version)-source.tar.gz
 License=	LGPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/fltk-config --version | grep $(Version)
 endef

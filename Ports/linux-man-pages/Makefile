@@ -12,7 +12,7 @@ LicenseFile=	$(SourceDir)/man-pages-$(Version).lsm
 
 UncompressedName=man-pages-$(Version)
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) && $(make_install) DESTDIR="$(DestDir)" prefix="$(Prefix)" MANDIR=$(Prefix)/share/linux/man
 $(install_base_documentation)
 endef

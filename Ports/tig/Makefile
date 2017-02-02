@@ -9,6 +9,6 @@ License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README.adoc
 
-define test_inner_hook
+define test_hook
 $(BinDir)/tig --version | grep $(Version)
 endef

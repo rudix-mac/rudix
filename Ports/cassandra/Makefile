@@ -14,7 +14,7 @@ LicenseFile=	$(InstallDir)$(LibDir)/cassandra/LICENSE.txt
 
 UncompressedName=apache-cassandra-$(Version)
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)$(LibDir)
 tar zxf $(PortDir)/$(Source) -C $(InstallDir)$(LibDir)
 mv $(InstallDir)$(LibDir)/apache-cassandra-$(Version) \
@@ -28,7 +28,7 @@ rm -rf $(InstallDir)$(LibDir)/cassandra/example
 rm -rf $(InstallDir)$(LibDir)/cassandra/data/*
 endef
 
-define test_inner_hook
+define test_hook
 sudo $(LibDir)/cassandra/bin/cassandra
 sleep 15
 sudo killall java

@@ -12,6 +12,6 @@ rm -rf $(SourceDir)/doc/examples/
 install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mpg123 --version | grep $(Version)
 endef

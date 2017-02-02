@@ -7,7 +7,7 @@ Site=		http://dtach.sourceforge.net
 Source=		http://downloads.sourceforge.net/dtach/$(Name)-$(Version).tar.gz
 License=	GPLv2
 
-define install_inner_hook
+define install_hook
 $(install_base_documentation)
 $(install_gnu_documentation)
 install -d $(DestDir)$(BinDir)
@@ -16,6 +16,6 @@ install -d $(DestDir)$(ManDir)/man1
 install -m 644 $(SourceDir)/dtach.1 $(DestDir)$(ManDir)/man1/dtach.1
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/dtach --version | grep $(Version)
 endef

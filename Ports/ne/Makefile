@@ -9,16 +9,16 @@ License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && $(MAKE)
 endef
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) && $(MAKE) PREFIX="$(DestDir)/$(Prefix)" install
 $(install_base_documentation)
 rm -f $(InstallDir)/$(InfoDir)/dir
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ne --help | grep $(Version)
 endef

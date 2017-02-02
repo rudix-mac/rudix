@@ -15,6 +15,6 @@ define install_post_hook
 cd $(InstallDir)/$(InfoDir) && ln -sf gzip.info gnugzip.info
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gzip --version | grep $(Version)
 endef

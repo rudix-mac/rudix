@@ -18,6 +18,6 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation
 endif
 
-define test_inner_hook
+define test_hook
 $(BinDir)/w3m -version | grep $(Version)
 endef

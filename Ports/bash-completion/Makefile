@@ -13,6 +13,6 @@ mv $(InstallDir)$(SysConfDir)/profile.d/bash_completion.sh \
 rmdir $(InstallDir)$(SysConfDir)/profile.d
 endef
 
-define test_inner_hook
+define test_hook
 . $(SysConfDir)/bash_completion.sh
 endef

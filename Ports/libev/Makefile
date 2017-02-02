@@ -10,7 +10,7 @@ License=	BSD|GPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 cp example.c $(BuildDir)
 $(CC) -I$(IncludeDir) -L$(LibDir) -lev $(BuildDir)/example.c -o $(BuildDir)/example
 $(BuildDir)/example

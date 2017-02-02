@@ -13,7 +13,7 @@ define prep_post_hook
 cp txt2tags.Makefile $(SourceDir)/Makefile
 endef
 
-define test_inner_hook
+define test_hook
 cd $(SourceDir)/test ; ./run.py
 $(BinDir)/txt2tags --version
 endef

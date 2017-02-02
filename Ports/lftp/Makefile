@@ -33,6 +33,6 @@ mv $(InstallDir)/$(Prefix)/etc/lftp.conf \
 #	for x in *.so ; do ln -sf $$x $${x%.so}.bundle ; done
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/lftp --version | grep $(Version)
 endef

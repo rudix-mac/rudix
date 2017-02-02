@@ -13,6 +13,6 @@ LicenseFile=	$(SourceDir)/COPYRIGHT-BSD2.txt
 
 UncompressedName=$(Name)-src-$(AltVersion)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/fossil version
 endef

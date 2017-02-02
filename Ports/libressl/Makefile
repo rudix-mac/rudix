@@ -13,6 +13,6 @@ define install_post_hook
 mv $(InstallDir)$(SysConfDir)/ssl $(InstallDir)$(SysConfDir)/ssl.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/openssl version | grep $(Version)
 endef

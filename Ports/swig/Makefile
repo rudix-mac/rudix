@@ -13,6 +13,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 GnuConfigureExtra += --disable-ccache # due configure error
 
-define test_inner_hook
+define test_hook
 $(BinDir)/swig -version | grep $(Version)
 endef

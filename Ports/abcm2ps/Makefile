@@ -13,6 +13,6 @@ MakeInstallExtra += prefix=$(DestDir)$(Prefix)
 MakeInstallExtra += bindir=$(DestDir)$(BinDir)
 MakeInstallExtra += docdir=$(DestDir)$(DocDir)/abcm2ps
 
-define test_inner_hook
+define test_hook
 $(BinDir)/abcm2ps -V 2>&1 | grep $(Version)
 endef

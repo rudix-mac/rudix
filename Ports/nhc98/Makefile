@@ -28,6 +28,6 @@ perl -pi -e "s!$(SourceDir)/script/cabal-parse!$(LibDir)/nhc98/ix86-Darwin10/cab
 	$(InstallDir)$(LibDir)/nhc98/ix86-Darwin10/config
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nhc --version
 endef

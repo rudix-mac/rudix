@@ -12,10 +12,10 @@ UncompressedName=rpm-$(Version)
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
-define check_inner_hook
+define check_hook
 cd $(BuildDir) && make test
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/rudix --version | grep $(Version)
 endef

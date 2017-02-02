@@ -21,6 +21,6 @@ rm -f $(InstallDir)/$(BinDir)/zsh.old
 cd $(InstallDir)/$(BinDir) ; ln -sf zsh zsh5
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/zsh --version | grep $(Version)
 endef

@@ -21,6 +21,6 @@ ifeq ($(OSXVersion),10.6)
 RUDIX_UNIVERSAL=no
 endif
 
-define test_inner_hook
+define test_hook
 test -f $(LibDir)/libmpc.la
 endef

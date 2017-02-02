@@ -10,6 +10,6 @@ License=	GPLv2/LGPLv3
 GnuConfigureExtra += --enable-cxx
 GnuConfigureExtra += --with-pic
 
-define test_inner_hook
+define test_hook
 cd $(BuildDir)/demos ; make factorize isprime pexpr primes qcn
 endef

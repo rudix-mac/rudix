@@ -20,6 +20,6 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
 endif
 
-define test_inner_hook
+define test_hook
 $(BinDir)/dialog --version
 endef

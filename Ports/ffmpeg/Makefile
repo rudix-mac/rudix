@@ -17,6 +17,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 ConfigureExtra += --enable-gpl
 ConfigureExtra += --enable-libmp3lame
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ffmpeg -version
 endef

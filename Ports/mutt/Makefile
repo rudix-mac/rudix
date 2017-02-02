@@ -33,11 +33,11 @@ rm -rf $(DestDir)/$(LibDir)
 endef
 
 ifeq ($(WITH_HCACHE),yes)
-define test_inner_hook
+define test_hook
 $(BinDir)/mutt -v | grep HCACHE
 endef
 else
-define test_inner_hook
+define test_hook
 $(BinDir)/mutt -v
 endef
 endif

@@ -14,6 +14,6 @@ define install_post_hook
 rm -rf $(InstallDir)$(LocalStateDir)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/emacs --version | grep $(Version)
 endef

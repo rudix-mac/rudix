@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=subprocess32-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import subprocess32'
 endef

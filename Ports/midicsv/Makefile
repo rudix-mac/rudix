@@ -10,7 +10,7 @@ LicenseFile=	COPYRIGHT
 
 MakeInstallExtra += INSTALL_DEST=$(DestDir)$(Prefix)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/midicsv -u 2>&1 | grep $(Version)
 $(BinDir)/csvmidi -u 2>&1 | grep $(Version)
 endef

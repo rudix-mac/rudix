@@ -11,6 +11,6 @@ Site=		http://www.powerdns.com/
 Source=		http://downloads.powerdns.com/releases//$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(SBinDir)/pdns_recursor --version || [ $$? == 99 ]
 endef

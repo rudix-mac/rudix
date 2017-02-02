@@ -11,6 +11,6 @@ LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName=pychecker-$(Version)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pychecker --version | grep $(Version)
 endef

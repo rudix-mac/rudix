@@ -9,6 +9,6 @@ License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import twitter'
 endef

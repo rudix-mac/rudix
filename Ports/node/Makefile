@@ -15,7 +15,7 @@ UncompressedName=$(Name)-v$(Version)
 EnvExtra += OPENSSL_CFLAGS=-I/usr/include
 EnvExtra += OPENSSL_LIBS=-lcrypto
 
-define test_inner_hook
+define test_hook
 $(BinDir)/node --version | grep $(Version)
 $(BinDir)/npm --version | grep 3.10.9
 endef

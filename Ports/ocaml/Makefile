@@ -12,11 +12,11 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 # * The Makefiles do not support parallel make (e.g. make -j2).
 # Fix: do not pass the -j option to make, and be patient.
-define build_inner_hook
+define build_hook
 cd $(SourceDir) ; ./configure ; $(MAKE) world.opt
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)/usr/local/bin
 cd $(SourceDir) ; $(MAKE) \
 		BINDIR=$(PortDir)/$(InstallDir)/usr/local/bin \

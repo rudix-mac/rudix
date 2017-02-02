@@ -19,7 +19,7 @@ define install_post_hook
 rmdir $(InstallDir)/tmp
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nsd -v 2>&1 | grep $(Version)
 otool -L $(BinDir)/nsd | grep ssl
 otool -L $(BinDir)/nsd | grep crypto

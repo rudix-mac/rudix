@@ -16,10 +16,10 @@ LicenseFile=	$(SourceDir)/LICENSE
 MakeInstallExtra += prefix=$(DestDir)$(Prefix)
 MakeInstallExtra += MANDIR=$(DestDir)$(ManDir)
 
-define check_inner_hook
+define check_hook
 $(BuildDir)/tree
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/tree --version | grep v$(Version)
 endef

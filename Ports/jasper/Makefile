@@ -9,6 +9,6 @@ License=        JasPer
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/jasper --version | grep $(Version)
 endef

@@ -9,6 +9,6 @@ License=	MIT
 
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import httplib2'
 endef

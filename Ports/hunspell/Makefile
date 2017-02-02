@@ -13,6 +13,6 @@ GnuConfigureExtra += --with-included-gettext
 #GnuConfigureExtra += --with-readline
 GnuConfigureExtra += --with-ui
 
-define test_inner_hook
+define test_hook
 $(BinDir)/hunspell --version | grep $(Version)
 endef

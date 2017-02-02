@@ -7,6 +7,6 @@ Site=		http://cyberelk.net/tim/software/patchutils/
 Source=		http://cyberelk.net/tim/data/patchutils/stable/$(Name)-$(Version).tar.xz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/combinediff --version | grep $(Version)
 endef

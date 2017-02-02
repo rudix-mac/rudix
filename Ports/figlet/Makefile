@@ -9,5 +9,5 @@ License=	The Academic Free License
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 endef

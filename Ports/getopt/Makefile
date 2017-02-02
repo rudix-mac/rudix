@@ -13,6 +13,6 @@ LdFlags += -framework CoreFoundation -liconv -lintl
 MakeExtra += LIBCGETOPT=0
 MakeInstallExtra += mandir=$(InstallDir)$(ManDir)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/getopt --version
 endef

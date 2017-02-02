@@ -11,6 +11,6 @@ UncompressedName=$(Name)-$(Version)-1
 
 GnuConfigureExtra += --disable-html-doc
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gpasm --version 2>&1 | grep $(Version)
 endef

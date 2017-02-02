@@ -18,7 +18,7 @@ GnuConfigureExtra += --enable-pcregrep-libz
 GnuConfigureExtra += --enable-pcregrep-libbz2
 GnuConfigureExtra += --enable-pcretest-libedit
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pcre-config --version | grep $(Version)
 $(BinDir)/pcregrep $(Version) Makefile
 endef

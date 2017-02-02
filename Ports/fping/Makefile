@@ -10,7 +10,7 @@ License=        BSD?
 GnuConfigureExtra += --sbindir=$(BinDir)
 GnuConfigureExtra += --enable-ipv4 --enable-ipv6
 
-define test_inner_hook
+define test_hook
 $(BinDir)/fping -v | grep $(Version)
 $(BinDir)/fping6 -v | grep $(Version)
 endef

@@ -10,6 +10,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/protoc --version | grep $(Version)
 endef

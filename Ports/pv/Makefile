@@ -15,6 +15,6 @@ License=	Artistic License
 
 LicenseFile=	$(SourceDir)/doc/COPYING
 
-define test_inner_hook
+define test_hook
 $(BinDir)/pv --version
 endef

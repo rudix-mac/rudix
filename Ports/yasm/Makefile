@@ -13,6 +13,6 @@ define install_post_hook
 install -m 644 $(BuildDir)/{GNU*,*.txt} $(InstallDir)/$(DocDir)/yasm/
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/yasm --version | grep $(Version)
 endef

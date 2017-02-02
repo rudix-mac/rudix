@@ -11,6 +11,6 @@ BuildDir=$(SourceDir)/nspr
 ReadMeFile=README
 LicenseFile=$(BuildDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nspr-config --version
 endef

@@ -9,6 +9,6 @@ Site=		http://libmemcached.org/
 Source=		http://launchpad.net/libmemcached/1.0/$(Version)/+download//$(Name)-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 $(BinDir)/memcat --version
 endef

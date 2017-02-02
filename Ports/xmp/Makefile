@@ -10,6 +10,6 @@ Site=		http://xmp.sourceforge.net
 Source=		http://downloads.sourceforge.net/xmp/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/xmp --version | grep $(Version)
 endef

@@ -22,6 +22,6 @@ define install_post_hook
 install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/lua -v | grep $(Version)
 endef

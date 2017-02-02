@@ -35,6 +35,6 @@ install_name_tool -change \
 	$(InstallDir)$(PythonSitePackages)/talloc.so
 endef
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import talloc'
 endef

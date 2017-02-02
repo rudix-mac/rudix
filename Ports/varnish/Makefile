@@ -16,6 +16,6 @@ define install_post_hook
 cd $(InstallDir)/$(Prefix)/etc/varnish ; mv default.vcl default.vcl.default
 endef
 
-define test_inner_hook
+define test_hook
 $(SBinDir)/varnishd -V
 endef

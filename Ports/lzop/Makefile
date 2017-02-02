@@ -9,6 +9,6 @@ Site=		http://www.lzop.org
 Source=		http://www.lzop.org/download/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/lzop --version | grep $(Version)
 endef

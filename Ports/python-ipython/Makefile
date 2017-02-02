@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/COPYING.rst
 
 UncompressedName=ipython-$(Version)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ipython --version | grep $(Version)
 endef

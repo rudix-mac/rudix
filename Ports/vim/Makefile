@@ -11,6 +11,6 @@ UncompressedName=vim74
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/vim --version | grep $(Version)
 endef

@@ -12,7 +12,7 @@ install -m 644 $(SourceDir)/{DISCLAIMER,FAQ,HACKING} $(InstallDir)/$(DocDir)/$(N
 install -m 644 $(SourceDir)/doc/*.txt $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/hts --version
 $(BinDir)/htc --version
 endef

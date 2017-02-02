@@ -32,6 +32,6 @@ mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
 install -d $(InstallDir)/$(Prefix)/etc/mc
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mc --version | grep $(Version)
 endef

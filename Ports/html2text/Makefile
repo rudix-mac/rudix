@@ -10,6 +10,6 @@ UncompressedName=aaronsw-html2text-8ddc844
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define test_inner_hook
+define test_hook
 $(BinDir)/html2text --version
 endef

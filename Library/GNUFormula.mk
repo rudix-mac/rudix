@@ -50,11 +50,11 @@ endef
 EnvExtra += CFLAGS="$(CFlags)" CPPFLAGS="$(CppFlags)"
 EnvExtra += CXXFLAGS="$(CxxFlags)" LDFLAGS="$(LdFlags)"
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && env $(EnvExtra) $(gnu_configure) && $(make) $(MakeExtra)
 endef
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
@@ -63,7 +63,7 @@ $(strip_macho)
 endef
 
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
-define check_inner_hook
+define check_hook
 cd $(BuildDir) && \
 $(MAKE) check || $(call error_color,One or more tests failed)
 endef

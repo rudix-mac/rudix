@@ -15,6 +15,6 @@ mv $(DestDir)$(SysConfDir)/fish/config.fish \
 	$(DestDir)$(SysConfDir)/fish/config.fish.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/fish 2>&1  --version | grep $(Version)
 endef

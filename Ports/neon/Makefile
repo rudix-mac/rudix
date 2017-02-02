@@ -13,6 +13,6 @@ LicenseFile=	LICENSE
 
 GnuConfigureExtra += --with-ssl=openssl
 
-define test_inner_hook
+define test_hook
 $(BinDir)/neon-config --version | grep $(Version)
 endef

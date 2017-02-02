@@ -10,7 +10,7 @@ License=	Eclipse Public License
 ReadMeFile=	$(SourceDir)/readme.txt
 LicenseFile=	$(SourceDir)/epl-v10.html
 
-define install_inner_hook
+define install_hook
 install -d $(DestDir)$(LibDir)/clojure-$(Version)
 install -m 644 $(SourceDir)/{*.xml,changes.md,*.jar,clojure.iml} \
 	$(DestDir)$(LibDir)/clojure-$(Version)
@@ -21,6 +21,6 @@ chmod +x $(DestDir)$(BinDir)/clojure
 $(install_base_documentation)
 endef
 
-define test_inner_hook
+define test_hook
 echo '(println "Hello World!")' | $(BinDir)/clojure
 endef

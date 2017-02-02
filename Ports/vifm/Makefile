@@ -9,6 +9,6 @@ License=	GPL
 
 GnuConfigureExtra += --with-gtk=no
 
-define test_inner_hook
+define test_hook
 $(BinDir)/vifm --version | grep $(Version)
 endef

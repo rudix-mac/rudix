@@ -14,6 +14,6 @@ LicenseFile=	LICENSE
 
 UncompressedName = Imaging-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import Image'
 endef

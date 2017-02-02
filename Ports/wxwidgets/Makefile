@@ -9,6 +9,6 @@ License=	LGPL
 ReadMeFile=	$(SourceDir)/docs/readme.txt
 LicenseFile=	$(SourceDir)/docs/licence.txt
 
-define test_inner_hook
+define test_hook
 $(BinDir)/wx-config --version | grep $(Version)
 endef

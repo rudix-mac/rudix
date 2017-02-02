@@ -27,6 +27,6 @@ sudo chown root:_www $(DestDir)$(BinDir)/makeweb
 sudo chmod 2755 $(DestDir)$(BinDir)/makeweb
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/thttpd -V | grep $(Version)
 endef

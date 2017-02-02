@@ -11,13 +11,13 @@ License=	Apache License
 ReadMeFile=	$(DestDir)$(LibDir)/tomcat/RELEASE-NOTES
 LicenseFile=	$(DestDir)$(LibDir)/tomcat/LICENSE
 
-define prep_inner_hook
+define prep_hook
 endef
 
-define build_inner_hook
+define build_hook
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)/$(LibDir)
 tar zxf $(PortDir)/$(Source) -C $(InstallDir)/$(LibDir)
 mv $(InstallDir)/$(LibDir)/apache-tomcat-$(Version) \
@@ -32,7 +32,7 @@ ln -sf $(LibDir)/tomcat/bin/shutdown.sh tomcat-shutdown.sh
 touch install
 endef
 
-define test_inner_hook
+define test_hook
 sudo $(BinDir)/tomcat-startup.sh
 sleep 10
 sudo $(BinDir)/tomcat-shutdown.sh

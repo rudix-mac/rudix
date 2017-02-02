@@ -13,6 +13,6 @@ UncompressedName=jed-$(Version)-19
 
 EnvExtra += JED_ROOT=$(DataDir)/jed
 
-define test_inner_hook
+define test_hook
 $(BinDir)/jed --version | grep $(Version)
 endef

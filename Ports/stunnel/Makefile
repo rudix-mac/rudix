@@ -12,6 +12,6 @@ mv $(DestDir)$(SysConfDir)/stunnel/stunnel.conf-sample \
 	$(DestDir)$(SysConfDir)/stunnel/stunnel.conf.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/stunnel -version 2>&1 | grep $(Version)
 endef

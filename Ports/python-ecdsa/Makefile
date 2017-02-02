@@ -12,6 +12,6 @@ UncompressedName=ecdsa-$(Version)
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import ecdsa'
 endef

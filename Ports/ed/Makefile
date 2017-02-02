@@ -18,6 +18,6 @@ cd $(DestDir)$(InfoDir) && ln -sf ed.info gnued.info
 cd $(DestDir)$(ManDir)/man1 && ln -sf ed.1 gnued.1
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ed --version | grep $(Version)
 endef

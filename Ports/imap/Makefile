@@ -9,14 +9,14 @@ License=	Apache License 2.0
 
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) ; make EXTRACFLAGS="$(CFlags)" EXTRALDFLAGS="$(LdFlags)" oxp
 endef
 
-define test_inner_hook
+define test_hook
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)/usr/local/sbin
 install -m 755 $(BuildDir)/imapd/imapd $(InstallDir)/usr/local/sbin
 install -m 755 $(BuildDir)/ipopd/ipop2d $(InstallDir)/usr/local/sbin

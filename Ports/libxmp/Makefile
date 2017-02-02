@@ -9,6 +9,6 @@ License=	LGPL
 
 LicenseFile=	$(SourceDir)/docs/COPYING.LIB
 
-define test_inner_hook
+define test_hook
 grep $(Version) $(LibDir)/pkgconfig/libxmp.pc
 endef

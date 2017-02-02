@@ -17,6 +17,6 @@ install -m 644 $(BuildDir)/docs/* $(InstallDir)/$(DocDir)/$(Name)
 rm $(InstallDir)$(LibDir)/apr.exp
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/apr-1-config --version
 endef

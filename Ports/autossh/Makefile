@@ -14,6 +14,6 @@ LicenseFile=	LICENSE
 MakeInstallExtra += prefix=$(DestDir)$(Prefix)
 MakeInstallExtra += mandir=$(DestDir)$(ManDir)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/autossh -V | grep $(Version)
 endef

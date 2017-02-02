@@ -8,6 +8,6 @@ Site=		https://www.gnu.org/software/idutils/
 Source=		http://ftp.gnu.org/gnu/idutils//$(Name)-$(Version).tar.xz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mkid --version | grep $(Version)
 endef

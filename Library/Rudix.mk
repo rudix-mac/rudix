@@ -129,7 +129,7 @@ all: pkg
 retrieve:
 	@$(call info_color,*** Retrieving $(Source) ***)
 	@$(call retrieve_pre_hook)
-	@$(call retrieve_inner_hook)
+	@$(call retrieve_hook)
 	@$(call retrieve_post_hook)
 	@$(call info_color,*** Done retrieve ***)
 	@touch $@
@@ -138,7 +138,7 @@ retrieve:
 prep: retrieve $(PrepRequires)
 	@$(call info_color,*** Preparing $(DistName) ***)
 	@$(call prep_pre_hook)
-	@$(call prep_inner_hook)
+	@$(call prep_hook)
 	@$(call prep_post_hook)
 	@$(call info_color,*** Done prep ***)
 	@touch $@
@@ -147,7 +147,7 @@ prep: retrieve $(PrepRequires)
 build: prep $(BuildRequires)
 	@$(call info_color,*** Building $(DistName) ***)
 	@$(call build_pre_hook)
-	@$(call build_inner_hook)
+	@$(call build_hook)
 	@$(call build_post_hook)
 	@$(call info_color,*** Done build ***)
 	@touch $@
@@ -156,7 +156,7 @@ build: prep $(BuildRequires)
 check: build
 	@$(call info_color,*** Checking $(DistName) ***)
 	@$(call check_pre_hook)
-	@$(call check_inner_hook)
+	@$(call check_hook)
 	@$(call check_post_hook)
 	@$(call info_color,*** Done check ***)
 	@touch $@
@@ -165,7 +165,7 @@ check: build
 install: build
 	@$(call info_color,*** Installing $(DistName) ***)
 	@$(call install_pre_hook)
-	@$(call install_inner_hook)
+	@$(call install_hook)
 	@$(call install_post_hook)
 	@$(call info_color,*** Done install ***)
 	@touch $@
@@ -174,7 +174,7 @@ install: build
 pkg: install
 	@$(call info_color,*** Packing $(PkgFile) ***)
 	@$(call pkg_pre_hook)
-	@$(call pkg_inner_hook)
+	@$(call pkg_hook)
 	@$(call pkg_post_hook)
 	@$(call info_color,*** Done pkg ***)
 	@touch $@
@@ -183,7 +183,7 @@ pkg: install
 test: pkg check
 	@$(call info_color,*** Testing $(DistName) and $(PkgFile) ***)
 	@$(call test_pre_hook)
-	@$(call test_inner_hook)
+	@$(call test_hook)
 	@$(call test_post_hook)
 	@$(call info_color,*** Done test ***)
 	@touch $@
@@ -428,18 +428,18 @@ endif
 #
 # Common inner hooks
 #
-define retrieve_inner_hook
+define retrieve_hook
 $(fetch) $(FetchExtra) $(Source)
 endef
 
-define prep_inner_hook
+define prep_hook
 $(verify_checksum)
 $(uncompress_source)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
-define pkg_inner_hook
+define pkg_hook
 $(create_installpkg)
 $(create_resources)
 $(create_distribution)

@@ -17,6 +17,6 @@ rm -rf $(DestDir)$(DocDir)/gettext/csharpdoc
 rm -rf $(DestDir)$(DocDir)/gettext/examples
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gettext --version | grep $(Version)
 endef

@@ -17,6 +17,6 @@ define install_post_hook
 rm -rf $(InstallDir)/$(LibDir)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/elinks --version | grep $(Version)
 endef

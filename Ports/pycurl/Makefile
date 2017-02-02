@@ -18,6 +18,6 @@ define check_post_hook
 nm $(BuildDir)/build/*/pycurl.so | grep ssl
 endef
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import pycurl'
 endef

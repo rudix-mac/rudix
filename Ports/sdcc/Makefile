@@ -15,6 +15,6 @@ GnuConfigureExtra += --disable-ds390-port --disable-ds400-port --disable-mcs51-p
 
 MakeFlags =
 
-define test_inner_hook
+define test_hook
 $(BinDir)/sdcc --version | grep $(Version)
 endef

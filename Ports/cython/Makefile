@@ -10,7 +10,7 @@ License=	Apache License
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import cython'
 $(BinDir)/cython --version 2>&1 | grep $(Version)
 endef

@@ -9,6 +9,6 @@ License=	GPL
 
 ReadMeFile=	README
 
-define test_inner_hook
+define test_hook
 $(BinDir)/rzip -V
 endef

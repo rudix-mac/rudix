@@ -17,6 +17,6 @@ define prep_post_hook
 rm -rf $(SourceDir)/autom4te.cache $(SourceDir)/{.deps,Makefile}
 endef
 
-define test_inner_hook
+define test_hook
 $(SBinDir)/ngrep -V | grep V$(Version)
 endef

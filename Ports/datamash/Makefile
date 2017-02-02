@@ -7,6 +7,6 @@ Site=		https://www.gnu.org/software/datamash/
 Source=		http://ftp.gnu.org/gnu/datamash/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define test_inner_hook
+define test_hook
 $(BinDir)/datamash --version | grep $(Version)
 endef

@@ -12,6 +12,6 @@ License=	GPL
 
 GnuConfigureExtra += --with-help2man=/usr/bin/true
 
-define test_inner_hook
+define test_hook
 $(BinDir)/zile --version | grep $(Version)
 endef

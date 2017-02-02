@@ -22,9 +22,9 @@ install -d $(InstallDir)/$(BinDir)
 install -m 755 $(BuildDir)/bin/astyle $(InstallDir)/$(BinDir)
 endef
 
-define test_inner_hook
+define test_hook
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/astyle  --version
 endef

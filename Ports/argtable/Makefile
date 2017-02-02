@@ -11,6 +11,6 @@ UncompressedName = $(Name)2-13
 
 GnuConfigureExtra += --docdir=$(DataDir)/doc/argtable
 
-define test_inner_hook
+define test_hook
 cd $(BuildDir)/example && make LDFLAGS=-L$(LibDir)
 endef

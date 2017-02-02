@@ -13,7 +13,7 @@ LicenseFile=	LICENSE.txt
 MakeExtra += OSTYPE="darwin"
 MakeExtra += NETWORK_OPT="-DUSE_NETWORK -lpcap"
 
-define prep_inner_hook
+define prep_hook
 unzip $(shell basename $(Source)) -d $(SourceDir)
 $(apply_patches)
 endef
@@ -22,13 +22,13 @@ define prep_post_hook
 mkdir -p $(BuildDir)/BIN
 endef
 
-define install_inner_hook
+define install_hook
 install -d $(InstallDir)/$(BinDir)
 rm -rf $(BuildDir)/BIN/*.dSYM
 install -m 755 $(BuildDir)/BIN/* $(InstallDir)/$(BinDir)
 $(install_base_documentatio)
 endef
 
-define test_inner_hook
+define test_hook
 for x in $(BuildDir)/BIN/* ; do echo 'bye' | ./$$x ; done
 endef

@@ -13,6 +13,6 @@ define install_post_hook
 cd $(InstallDir)/$(BinDir) && ln -sf gnutar tar
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gnutar --version
 endef

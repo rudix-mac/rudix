@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/Copyright.txt
 
 ConfigureExtra += --docdir=$(DocDir)/cmake
 
-define test_inner_hook
+define test_hook
 $(BinDir)/cmake --version | grep $(Version)
 endef

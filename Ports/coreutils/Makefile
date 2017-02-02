@@ -17,6 +17,6 @@ $(PortDir)/mklinks.sh $(InstallDir)$(BinDir)
 $(PortDir)/mklinks.sh $(InstallDir)$(Prefix)/share/man/man1
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gnuyes --version | grep $(Version)
 endef

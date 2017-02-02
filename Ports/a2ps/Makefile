@@ -16,6 +16,6 @@ mv $(InstallDir)/$(SysConfDir)/a2ps-site.cfg \
 	$(InstallDir)/$(SysConfDir)/a2ps-site.cfg.default
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/a2ps --version | grep $(Version)
 endef

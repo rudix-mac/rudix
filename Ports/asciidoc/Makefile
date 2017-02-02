@@ -13,9 +13,9 @@ mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \
 endef
 
 # Do nothing
-define test_inner_hook
+define test_hook
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/asciidoc
 endef

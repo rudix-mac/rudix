@@ -18,7 +18,7 @@ done
 rm -f $(DestDir)$(BinDir)/bashbug
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/bash --version | grep $(Version)
 # CVE-2014-6271
 env X="() { :;} ; echo CVE-2014-6271 ; exit 1" $(BinDir)/bash -c true

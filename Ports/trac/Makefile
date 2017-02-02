@@ -9,6 +9,6 @@ Site=		http://trac.edgewall.org
 Source=		http://download.edgewall.org/trac//Trac-$(Version).tar.gz
 License=	BSD
 
-define test_inner_hook
+define test_hook
 $(BinDir)/trac-admin --version
 endef

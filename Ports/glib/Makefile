@@ -13,6 +13,6 @@ License=	GPL
 EnvExtra += LIBFFI_CFLAGS="-I/usr/include/ffi"
 EnvExtra += LIBFFI_LIBS="-L/usr/local/lib -lffi"
 
-define test_inner_hook
+define test_hook
 $(BinDir)/gapplication version | grep $(Version)
 endef

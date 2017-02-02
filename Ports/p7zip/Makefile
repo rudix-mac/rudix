@@ -14,11 +14,11 @@ UncompressedName = $(Name)_$(Version)
 
 MakeExtra += all3
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) ; $(make) $(MakeExtra)
 endef
 
-define install_inner_hook
+define install_hook
 cd $(BuildDir) ; $(make) \
 	DEST_HOME="$(PortDir)/$(InstallDir)/$(Prefix)" \
 	DEST_MAN="$(PortDir)/$(InstallDir)/$(ManDir)" $(MakeInstallExtra) install
@@ -30,11 +30,11 @@ ln -s ../lib/p7zip/7za $(InstallDir)/$(BinDir)/7za
 ln -s ../lib/p7zip/7zr $(InstallDir)/$(BinDir)/7zr
 endef
 
-define test_inner_hook
+define test_hook
 cd $(BuildDir) ; $(make) test
 endef
 
-define test_inner_hook
+define test_hook
 /usr/local/bin/7z
 /usr/local/bin/7za
 /usr/local/bin/7zr

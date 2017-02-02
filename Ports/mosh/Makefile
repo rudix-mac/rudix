@@ -18,6 +18,6 @@ LicenseFile=	$(SourceDir)/COPYING
 EnvExtra += OPENSSL_CFLAGS=-I/usr/include
 EnvExtra += OPENSSL_LIBS=-lcrypto
 
-define test_inner_hook
+define test_hook
 $(BinDir)/mosh --version 2>&1 | grep $(Version)
 endef

@@ -15,6 +15,6 @@ install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)
 install -m 644 $(SourceDir)/doc/{magic,*.html} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/cabextract --version | grep $(Version)
 endef

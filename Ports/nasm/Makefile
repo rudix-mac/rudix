@@ -11,6 +11,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 MakeInstallExtra += INSTALLROOT=$(PortDir)/$(InstallDir)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/nasm -v | grep $(Version)
 endef

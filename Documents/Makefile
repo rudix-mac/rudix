@@ -16,6 +16,6 @@ ReadMeFile=     $(SourceDir)/README.txt			# Optional
 LicenseFile=    $(SourceDir)/COPYING.txt		# Optional
 
 # Optional, but recommended
-define test_inner_hook
+define test_hook
 $(BinDir)/mypackage --version | grep $(Version)
 endef)

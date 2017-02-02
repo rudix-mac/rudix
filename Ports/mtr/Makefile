@@ -19,7 +19,7 @@ define install_post_hook
 install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define test_inner_hook
+define test_hook
 sudo $(BinDir)/mtr --version | grep $(Version)
 endef
 

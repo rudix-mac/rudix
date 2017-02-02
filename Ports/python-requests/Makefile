@@ -12,6 +12,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=requests-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import requests'
 endef

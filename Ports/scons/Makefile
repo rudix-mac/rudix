@@ -10,6 +10,6 @@ License=	MIT
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
-define test_inner_hook
+define test_hook
 $(BinDir)/scons --version | grep $(Version)
 endef

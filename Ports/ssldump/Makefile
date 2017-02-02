@@ -19,6 +19,6 @@ MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)
 MakeInstallExtra += MANDIR=$(PortDir)/$(InstallDir)/$(ManDir)
 MakeInstallExtra += BINDIR=$(PortDir)/$(InstallDir)/$(BinDir)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ssldump -v | grep $(Version)
 endef

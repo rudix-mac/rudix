@@ -10,10 +10,10 @@ LicenseFile=	LICENSE
 
 MakeExtra += all
 
-define build_inner_hook
+define build_hook
 cd $(BuildDir) && cp local.h.bsd local.h && make all
 endef
 
-define test_inner_hook
+define test_hook
 $(BinDir)/ispell -v | grep $(Version)
 endef

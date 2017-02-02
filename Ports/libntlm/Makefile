@@ -7,6 +7,6 @@ Site=		http://www.nongnu.org/libntlm/
 Source=		http://www.nongnu.org/libntlm/releases//$(Name)-$(Version).tar.gz
 License=	LGPL
 
-define test_inner_hook
+define test_hook
 cat $(LibDir)/libntlm.la | grep libntlm
 endef

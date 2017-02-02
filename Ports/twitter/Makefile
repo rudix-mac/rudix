@@ -9,7 +9,7 @@ License=	MIT
 
 LicenseFile=	$(SourceDir)/PKG-INFO
 
-define test_inner_hook
+define test_hook
 stat $(BinDir)/twitter
 $(Python) -c 'import twitter'
 endef

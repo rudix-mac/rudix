@@ -10,6 +10,6 @@ License=	GPLv3
 GnuConfigureExtra += --with-sys-screenrc=/usr/local/etc
 GnuConfigureExtra += -enable-telnet
 
-define test_inner_hook
+define test_hook
 $(BinDir)/screen --version | grep 'Screen version'
 endef

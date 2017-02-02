@@ -11,6 +11,6 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 UncompressedName=$(Name)2-$(Version)
 
-define test_inner_hook
+define test_hook
 $(Python) -c 'import psycopg2'
 endef

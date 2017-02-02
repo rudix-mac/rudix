@@ -13,6 +13,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	LICENSE
 
-define test_inner_hook
+define test_hook
 $(BinDir)/tmux -V | grep $(Version)
 endef

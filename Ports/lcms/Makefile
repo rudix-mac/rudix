@@ -14,7 +14,7 @@ ReadMeFile=	$(SourceDir)/README.1ST
 
 UncompressedName=lcms2-$(Version)
 
-define test_inner_hook
+define test_hook
 $(BinDir)/jpgicc
 $(BinDir)/tificc
 endef
