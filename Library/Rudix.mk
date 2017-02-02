@@ -281,7 +281,7 @@ case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-xz) tar zxf $(shell basename $(Source)) || unxz -c $(shell basename $(Source)) | tar xf - ;; \
 	application/zip) unzip -q $(shell basename $(Source)) ;; \
 	application/x-lzip) lunzip -c $(shell basename $(Source)) | tar xf - ;; \
-	*) false ;; \
+	*) $(call error_color,Unknown compression type) && false ;; \
 esac
 endef
 
