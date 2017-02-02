@@ -9,7 +9,7 @@ Source=		http://netlib.bell-labs.com/~bwk/$(Name).sh
 License=	non-free
 LicenseFile=	LICENSE
 
-define explode
+define uncompress_source
 mkdir -p $(Name)-$(Version) && cd $(Name)-$(Version) && sh ../hoc.sh
 endef
 

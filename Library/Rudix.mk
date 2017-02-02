@@ -273,7 +273,7 @@ if test -f checksum ; then \
 fi
 endef
 
-define explode
+define uncompress_source
 case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-tar) tar xf $(shell basename $(Source)) ;; \
 	application/x-gzip) tar zxf $(shell basename $(Source)) ;; \
@@ -422,7 +422,7 @@ endef
 
 define prep_inner_hook
 $(verify_checksum)
-$(explode)
+$(uncompress_source)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
