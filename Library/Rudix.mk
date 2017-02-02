@@ -207,38 +207,43 @@ static: prep installclean buildclean
 	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
 
 help:
-	@echo "Rudix BuildSystem"
-	@echo "-----------------"
-	@echo "Port rules:"
+	@echo "Rudix buildsystem options."
+	@echo
+	@echo "Port phase rules"
 	@echo "  retrieve - Retrieve source from the Internet"
-	@echo "  prep - Expand/uncompress source"
-	@echo "  build - Build port"
-	@echo "  check - Check build (run internal tests)"
-	@echo "  install - Install into a temporary directory"
-	@echo "  pkg - Create package from the temporary directory"
-	@echo "  test - Run tests (install and run more test)"
+	@echo "  prep     - Prepare and uncompress source"
+	@echo "  build    - Build port from shource"
+	@echo "  check    - Check build (run internal tests)"
+	@echo "  install  - Install into a temporary directory"
+	@echo "  pkg      - Create package for distribution"
+	@echo "  test     - Run tests (install package and run more test)"
+	@echo
 	@echo "Clean-up rules:"
-	@echo "  clean - Clean files but leaves retrieve alone"
-	@echo "  distclean - Do clean, plus remove config.cache and package"
-	@echo "  realdistclean - Do distclean, plus remove source"
+	@echo "  clean - Clean but keep package"
+	@echo "  distclean - Clean package and original source"
+	@echo "  realdistclean - Clean up everything"
+	@echo
 	@echo "Other rules:"
 	@echo "  help - This help message"
-	@echo "  about - Display information about the port."
-	@echo "  json - Export port to JSON."
-	@echo "  static - Create package with static libraries."
+	@echo "  about - Display information about the port"
+	@echo "  json - Display information in JSON format"
+	@echo "  static - Create package with static libraries"
 
 about:
-	@echo "---"
-	@echo "$(Title) ($(Name)-$(Version))"
+	@$(call info_color,*** $(Name)-$(Version) ***)
+	@echo "Title: $(Title)"
+	@echo "Name: $(Name)"
+	@echo "Version: $(Version)"
 	@echo "Site: $(Site)"
 	@echo "License: $(License)"
 	@echo "Source: $(Source)"
 
 json:
-	@echo "{ \"site\": \"$(Site)\","
-	@echo "  \"title\": \"$(Title)\","
+
+	@echo "{ \"title\": \"$(Title)\","
 	@echo "  \"name\": \"$(Name)\","
 	@echo "  \"version\": \"$(Version)\","
+	@echo "  \"site\": \"$(Site)\","
 	@echo "  \"license\": \"$(License)\","
 	@echo "  \"source\": \"$(Source)\" }"
 
