@@ -74,6 +74,11 @@ InfoDir       = $(DataDir)/info
 ExamplesDir   = $(DataDir)/examples
 
 #
+# Safe language options
+#
+EnvExtra = LANG=C LC_ALL=C
+
+#
 # Build flags options
 #
 ifeq ($(OSXVersion),10.5)

@@ -9,7 +9,7 @@ SconsExtra = CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)"
 SconsExtra += CPPFLAGS="$(CppFlags)" LDFLAGS="$(LdFlags)"
 
 define build_inner_hook
-cd $(BuildDir) && $(Scons) $(SconsExtra)
+cd $(BuildDir) && env $(EnvExtra) $(Scons) $(SconsExtra)
 endef
 
 # http://wiki.gentoo.org/wiki/SCons#Why_you_should_NOT_use_SCons_in_your_project

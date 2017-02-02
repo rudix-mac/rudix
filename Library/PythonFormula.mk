@@ -5,11 +5,11 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-EnvExtra = CFLAGS="$(CFlags)" \
-	   CXXFLAGS="$(CxxFlags)" \
-	   CPPFLAGS="$(CppFlags)" \
-	   LDFLAGS="$(LdFlags)" \
-	   ARCHFLAGS="$(ArchFlags)"
+EnvExtra += CFLAGS="$(CFlags)" \
+	    CXXFLAGS="$(CxxFlags)" \
+	    CPPFLAGS="$(CppFlags)" \
+	    LDFLAGS="$(LdFlags)" \
+	    ARCHFLAGS="$(ArchFlags)"
 
 define build_inner_hook
 cd $(BuildDir) && \
