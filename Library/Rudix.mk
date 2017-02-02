@@ -56,6 +56,23 @@ PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version).pkg
 
 #
+# Install dir options
+#
+Prefix        = /usr/local
+BinDir        = $(Prefix)/bin
+SBinDir       = $(Prefix)/sbin
+IncludeDir    = $(Prefix)/include
+LibDir        = $(Prefix)/lib
+LibExecDir    = $(Prefix)/libexec
+SysConfDir    = $(Prefix)/etc
+LocalStateDir = $(Prefix)/var
+DataDir       = $(Prefix)/share
+DocDir        = $(DataDir)/doc
+ManDir        = $(DataDir)/man
+InfoDir       = $(DataDir)/info
+ExamplesDir   = $(DataDir)/examples
+
+#
 # Build flags options
 #
 ifeq ($(OSXVersion),10.5)
@@ -75,28 +92,12 @@ OptFlags = -Os
 
 CFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
 CxxFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
-#CppFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
+#CppFlags =
 LdFlags = $(ArchFlags) $(CompatFlags)
 
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif
-
-#
-# Install dir options
-#
-Prefix = /usr/local
-BinDir = $(Prefix)/bin
-SBinDir = $(Prefix)/sbin
-IncludeDir = $(Prefix)/include
-LibDir = $(Prefix)/lib
-LibExecDir = $(Prefix)/libexec
-SysConfDir = $(Prefix)/etc
-LocalStateDir = $(Prefix)/var
-DataDir = $(Prefix)/share
-DocDir = $(DataDir)/doc
-ManDir = $(DataDir)/man
-InfoDir = $(DataDir)/info
 
 #
 # Select Python version
