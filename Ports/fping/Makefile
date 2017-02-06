@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Fping
 Name=		fping
-Version=	3.10
+Version=	3.15
 Site=           http://fping.org
 Source=		http://fping.org/dist/$(Name)-$(Version).tar.gz
 License=        BSD?
