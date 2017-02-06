@@ -7,7 +7,7 @@ include ../../Library/GNU.mk
 
 Title=		Cairo
 Name=		cairo
-Version=	1.12.14
+Version=	1.15.4
 Site=		http://cairographics.org/
 Source=		http://cairographics.org/releases/$(Name)-$(Version).tar.xz
 License=	LGPL
