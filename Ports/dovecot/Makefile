@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Dovecot (Secure IMAP server)
 Name=		dovecot
-Version=	2.2.15
+Version=	2.2.27
 Site=		http://dovecot.org/
 Source=		http://dovecot.org/releases/2.2/$(Name)-$(Version).tar.gz
 License=	MIT+LGPL
