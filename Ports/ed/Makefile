@@ -4,7 +4,7 @@ include ../../Library/Configure.mk
 
 Title=		GNU ed
 Name=		ed
-Version=	1.13
+Version=	1.4
 Site=		http://www.gnu.org/software/ed/
 Source=		http://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
 License=	GPLv3
