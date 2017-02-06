@@ -6,7 +6,7 @@ include ../../Library/Python.mk
 
 Title=		Fabric
 Name=		fabric
-Version=	1.10.2
+Version=	1.13.1
 Site=		http://fabfile.org/
 Source=		https://pypi.python.org/packages/source/F/Fabric/Fabric-$(Version).tar.gz
 License=	BSD
