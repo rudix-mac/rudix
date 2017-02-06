@@ -4,7 +4,7 @@ include ../../Library/Configure.mk
 
 Title=		LuaRocks
 Name=		luarocks
-Version=	2.3.0
+Version=	2.4.1
 Site=		https://luarocks.org/
 Source=		http://keplerproject.github.io/luarocks/releases/luarocks-$(Version).tar.gz
 License=        MIT
