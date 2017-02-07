@@ -4,9 +4,9 @@ include ../../Library/Unix.mk
 
 Title=		Getopt
 Name=		getopt
-Version=	1.1.5
+Version=	1.1.6
 Site=		http://software.frodo.looijaard.name/getopt/
-Source=		http://software.frodo.looijaard.name/getopt/files/$(Name)-$(Version).tar.gz
+Source=		http://frodo.looijaard.name/system/files/software/getopt/$(Name)-$(Version).tar.gz
 License=	GPL
 
 LdFlags += -framework CoreFoundation -liconv -lintl
