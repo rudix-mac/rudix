@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Bash Completion
 Name=		bash-completion
-Version=	2.1
+Version=	2.5
 Site=		http://bash-completion.alioth.debian.org
 Source=		http://bash-completion.alioth.debian.org/files/$(Name)-$(Version).tar.bz2
 License=	GPL

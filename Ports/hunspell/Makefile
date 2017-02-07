@@ -4,9 +4,9 @@ include ../../Library/GNU.mk
 
 Title=		Hunspell
 Name=		hunspell
-Version=	1.3.3
+Version=	1.6.0
 Site=           http://hunspell.sourceforge.net
-Source=		http://downloads.sourceforge.net/hunspell/$(Name)-$(Version).tar.gz
+Source=		https://github.com/hunspell/hunspell/archive/v$(Version).tar.gz
 License=        GPL
 
 GnuConfigureExtra += --with-included-gettext

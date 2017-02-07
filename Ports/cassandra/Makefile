@@ -3,7 +3,7 @@ include ../../Library/Rudix.mk
 
 Title=		Apache Cassandra
 Name=		cassandra
-Version=	1.2.3
+Version=	3.10
 #URL=		http://www.apache.org/dist/cassandra/apache-cassandra/$(Version)
 Site=		http://cassandra.apache.org/
 Source=		http://www.us.apache.org/dist/cassandra/$(Version)/apache-$(Name)-$(Version)-bin.tar.gz

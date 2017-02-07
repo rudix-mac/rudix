@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		DejaGnu
 Name=		dejagnu
-Version=	1.5.3
+Version=	1.6
 Site=		https://gnu.org/software/dejagnu/
 Source=		https://ftp.gnu.org/pub/gnu/dejagnu/dejagnu-$(Version).tar.gz
 License=        GPLv3

@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GnuPG
 Name=		gnupg
-Version=	1.4.21
+Version=	2.0.30
 Site=		http://gnupg.org/
 Source=		https://gnupg.org/ftp/gcrypt/gnupg/gnupg-$(Version).tar.bz2
 License=	GPLv3

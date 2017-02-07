@@ -2,7 +2,7 @@ include ../../Library/Python.mk
 
 Title=		Cython
 Name=		cython
-Version=	0.23
+Version=	0.25.2
 Site=		http://www.cython.org/
 Source=		http://www.cython.org/release/Cython-$(Version).tar.gz
 License=	Apache License
