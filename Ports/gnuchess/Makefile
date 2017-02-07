@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Chess
 Name=		gnuchess
-Version=	6.2.2
+Version=	6.2.4
 Site=		https://www.gnu.org/software/chess/
 Source=		http://ftp.gnu.org/gnu/chess/gnuchess-$(Version).tar.gz
 License=        GPL
