@@ -2,9 +2,9 @@ include ../../Library/Python.mk
 
 Title=		Python httplib2
 Name=		httplib2
-Version=	0.7.7
-Site=		http://code.google.com/p/httplib2/
-Source=		http://pypi.python.org/packages/source/h/httplib2//$(Name)-$(Version).tar.gz
+Version=	0.9.2
+Site=		https://github.com/jcgregorio/httplib2
+Source=		https://github.com/jcgregorio/httplib2/archive/$(Version).tar.gz
 License=	MIT
 
 LicenseFile=	$(SourceDir)/PKG-INFO
