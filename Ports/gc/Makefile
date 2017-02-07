@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Boehm-Demers-Weiser GC
 Name=		gc
-Version=	7.2f
+Version=	7.2g
 Site=		http://hboehm.info/gc/
 Source=		http://hboehm.info/gc/gc_source//$(Name)-$(Version).tar.gz
 
