@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Grep
 Name=		grep
-Version=	2.21
+Version=	2.28
 Site=		http://www.gnu.org/software/grep/
 Source=		http://ftp.gnu.org/gnu/grep//$(Name)-$(Version).tar.xz
 License=	GPL
