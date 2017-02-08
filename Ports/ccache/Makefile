@@ -9,7 +9,7 @@ Site=		https://ccache.samba.org
 Source=		https://samba.org/ftp/ccache/$(Name)-$(Version).tar.bz2
 License=	GPLv3+
 
-ReadMeFile=	$(SourceDir)/README.txt
+ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 ifeq ($(CREATE_LIBEXEC_LINKS),yes)
