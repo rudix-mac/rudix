@@ -5,9 +5,9 @@ include ../../Library/GNU.mk
 
 Title=		JOE
 Name=		joe
-Version=	4.2
+Version=	4.4
 Site=		http://joe-editor.sourceforge.net
-Source=		http://downloads.sourceforge.net/joe-editor/$(Name)-$(Version).tar.gz
+Source=		https://sourceforge.net/projects/joe-editor/files/JOE%20sources/$(Name)-$(Version)/$(Name)-$(Version).tar.gz
 License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README.md
