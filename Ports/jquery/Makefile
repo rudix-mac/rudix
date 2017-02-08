@@ -2,9 +2,9 @@ include ../../Library/Rudix.mk
 
 Title=		jQuery
 Name=		jquery
-Version=	2.1.3
+Version=	3.1.1
 Site=		https://jquery.com
-Source=		http://code.jquery.com/jquery-2.1.3.min.js
+Source=		http://code.jquery.com/$(Name)-$(Version).min.js
 License=        MIT
 
 ReadMeFile=	README
