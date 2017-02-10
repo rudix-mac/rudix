@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		Iperf
 Name=		iperf
-Version=	2.0.5
-Site=		http://iperf.sourceforge.net/
-Source=		http://downloads.sourceforge.net/iperf/$(Name)-$(Version).tar.gz
+Version=	3.1.6
+Site=		https://github.com/esnet/iperf
+Source=		http://downloads.es.net/pub/iperf/$(Name)-$(Version).tar.gz
 License=	BSD
 
 define test_hook

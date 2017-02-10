@@ -4,9 +4,9 @@ include ../../Library/GNU.mk
 
 Title=		Internationalization Tool Collection
 Name=		intltool
-Version=	0.50.2
+Version=	0.51.0
 Site=		https://launchpad.net/intltool/
-Source=		https://launchpad.net/intltool/trunk/0.50.2/+download//$(Name)-$(Version).tar.gz
+Source=		https://launchpad.net/intltool/trunk/$(Version)/+download/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_hook
