@@ -5,7 +5,7 @@ Name=		bmake
 Version=	20170326
 Site=		http://www.crufty.net/help/sjg/bmake.htm
 Source=		http://www.crufty.net/ftp/pub/sjg/bmake-20170326.tar.gz
-#License=	BSD
+License=	BSD
 Description=	bmake tool
 
 define build_hook
