@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Pkg-Config
 Name=		pkg-config
-Version=	0.29.1
+Version=	0.29.2
 Site=		https://www.freedesktop.org/wiki/Software/pkg-config/
 Source=		http://pkgconfig.freedesktop.org/releases/$(Name)-$(Version).tar.gz
 License=	GPL
