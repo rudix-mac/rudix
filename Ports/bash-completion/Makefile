@@ -2,10 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Bash Completion
 Name=		bash-completion
-Version=	2.5
-Site=		http://bash-completion.alioth.debian.org
-Source=		http://bash-completion.alioth.debian.org/files/$(Name)-$(Version).tar.bz2
+Version=	2.7
+Site=       https://github.com/scop/bash-completion/
+Source=     https://github.com/scop/$(Name)/releases/download/$(Version)/$(Name)-$(Version).tar.xz
 License=	GPL
+ReadMeFile=	$(SourceDir)/README.md
 
 define install_post_hook
 mv $(InstallDir)$(SysConfDir)/profile.d/bash_completion.sh \
