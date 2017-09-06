@@ -5,9 +5,9 @@ include ../../Library/GNU.mk
 
 Title=		Terminal Multiplexer
 Name=		tmux
-Version=	2.2
+Version=	2.5
 Site=		http://tmux.github.io/
-Source=		https://github.com/tmux/tmux/releases/download/2.2/tmux-$(Version).tar.gz
+Source=		https://github.com/tmux/tmux/releases/download/$(Version)/tmux-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README
