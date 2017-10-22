@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		bmake
 Name=		bmake
-Version=	20170413
+Version=	20170812
 Site=		http://www.crufty.net/help/sjg/bmake.htm
 Source=		http://www.crufty.net/ftp/pub/sjg/bmake-$(Version).tar.gz
 License=	BSD
