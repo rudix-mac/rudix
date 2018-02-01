@@ -2,13 +2,13 @@ include ../../Library/Rudix.mk
 
 Title=		P7ZIP
 Name=		p7zip
-Version=	9.20.1
+Version=	16.02
 Site=		http://p7zip.sourceforge.net/
 Site=		http://p7zip.sourceforge.net/
 Source=		http://sourceforge.net/projects/p7zip/files/p7zip/$(Version)//$(Name)_$(Version)_src_all.tar.bz2
 License=	LGPL
 
-LicenseFile=	$(SourceDir)/DOCS/License.txt
+LicenseFile=	$(SourceDir)/DOC/License.txt
 
 UncompressedName = $(Name)_$(Version)
 
@@ -19,15 +19,17 @@ cd $(BuildDir) ; $(make) $(MakeExtra)
 endef
 
 define install_hook
+cd $(BuildDir) ; cp makefile.macosx_llvm_64bits makefile.machine
 cd $(BuildDir) ; $(make) \
 	DEST_HOME="$(PortDir)/$(InstallDir)/$(Prefix)" \
 	DEST_MAN="$(PortDir)/$(InstallDir)/$(ManDir)" $(MakeInstallExtra) install
 $(install_base_documentation)
 rm -f $(InstallDir)/$(BinDir)/*
 chmod -R u+w $(InstallDir)
-ln -s ../lib/p7zip/7z $(InstallDir)/$(BinDir)/7z
+ln -s ../lib/p7zip/7za $(InstallDir)/$(BinDir)/7z
 ln -s ../lib/p7zip/7za $(InstallDir)/$(BinDir)/7za
 ln -s ../lib/p7zip/7zr $(InstallDir)/$(BinDir)/7zr
+
 endef
 
 define test_hook
