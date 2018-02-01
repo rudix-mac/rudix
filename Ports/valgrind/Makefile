@@ -9,11 +9,7 @@ Site=		http://valgrind.org/
 Source=		http://valgrind.org/downloads//$(Name)-$(Version).tar.bz2
 License=	GPL
 
-ifeq ($(OSXVersion),10.6)
-GnuConfigureExtra += --enable-only32bit
-else
 GnuConfigureExtra += --enable-only64bit
-endif
 
 define install_post_hook
 find $(InstallDir) -name '*.dSYM' | xargs rm -rf

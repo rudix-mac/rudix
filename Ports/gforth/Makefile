@@ -3,12 +3,7 @@ Requires += org.rudix.pkg.libtool,libtool,libtoolinstall.pkg
 
 include ../../Library/GNU.mk
 
-ifeq ($(OSXVersion),10.6)
-GnuConfigureExtra += --build=i386-apple-darwin
-RUDIX_UNIVERSAL=no
-else
 GnuConfigureExtra += --build=x86_64-apple-darwin
-endif
 
 Title=		Gforh
 Name=		gforth

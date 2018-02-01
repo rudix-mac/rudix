@@ -2,19 +2,6 @@ BuildRequires += $(LibDir)/libintl.la # static-gettext
 
 include ../../Library/GNU.mk
 
-ifeq ($(OSXVersion),10.8)
-PythonVersion=2.7
-PerlVersion=5.12.4
-endif
-ifeq ($(OSXVersion),10.7)
-PythonVersion=2.7
-PerlVersion=5.12.3
-endif
-ifeq ($(OSXVersion),10.6)
-PythonVersion=2.6
-PerlVersion=5.10.0
-endif
-
 Title=		Git
 Name=		git
 Version=	2.11.1

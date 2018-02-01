@@ -17,10 +17,6 @@ LicenseFile=	$(SourceDir)/COPYING.LESSER
 
 GnuConfigureExtra += --with-pic
 
-ifeq ($(OSXVersion),10.6)
-RUDIX_UNIVERSAL=no
-endif
-
 define test_hook
 test -f $(LibDir)/libmpc.la
 endef

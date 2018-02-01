@@ -1,7 +1,4 @@
 include ../../Library/GNU.mk
-ifeq ($(OSXVersion),10.6)
-RUDIX_UNIVERSAL=no
-endif
 
 Title=		Erlang/OTP
 Name=		erlang
@@ -19,10 +16,6 @@ define retrieve_post_hook
 $(fetch) http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
 $(fetch) http://www.erlang.org/download/otp_doc_man_$(Version).tar.gz
 endef
-
-ifneq ($(OSXVersion),10.6)
-GnuConfigureExtra += --enable-darwin-64bit
-endif
 
 define install_post_hook
 tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \

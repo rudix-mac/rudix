@@ -1,9 +1,6 @@
 BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libneon.la # static-neon
 BuildRequires += $(LibDir)/libintl.la # static-gettext
-ifeq ($(OSXVersion),10.6)
-BuildRequires += $(LibDir)/libsqlite3.la # static-sqlite
-endif
 
 include ../../Library/GNU.mk
 

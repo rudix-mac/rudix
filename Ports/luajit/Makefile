@@ -1,7 +1,4 @@
 include ../../Library/Unix.mk
-ifeq ($(OSXVersion),10.6)
-RUDIX_UNIVERSAL=
-endif
 
 Title=		LuaJIT
 Name=		luajit

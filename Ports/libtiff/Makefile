@@ -16,9 +16,3 @@ UncompressedName=tiff-$(Version)
 #GnuConfigureExtra += --with-apple-opengl-framework
 GnuConfigureExtra += --with-jpeg-include-dir=$(IncludeDir)
 GnuConfigureExtra += --with-jpeg-lib-dir=$(LibDir)
-
-ifeq ($(OSXVersion),$(filter $(OSXVersion),10.7 10.6))
-define prep_post_hook
-cd $(SourceDir) && patch -p0 < $(PortDir)/tiffgt.c.diff
-endef
-endif

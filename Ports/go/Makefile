@@ -1,7 +1,3 @@
-ifeq ($(OSXVersion),10.6)
-RUDIX_STRIP_PACKAGE=no
-endif
-
 BuildRequires += $(BinDir)/go  # go >= 1.4.2-1
 
 GoRoot=$(LibDir)/go

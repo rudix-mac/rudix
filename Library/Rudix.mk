@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2017 Rudá Moura (Rudix)
+# Copyright © 2005-2018 Rudix
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2017a
+BuildSystem = 2018
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -14,18 +14,12 @@ OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
-ifeq ($(OSXVersion),10.6)
-RUDIX_UNIVERSAL?=yes
-else # 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
 RUDIX_UNIVERSAL?=no
-endif
-
 ifeq ($(RUDIX_UNIVERSAL),yes)
 RUDIX_DISABLE_DEPENDENCY_TRACKING?=yes
 else
 RUDIX_DISABLE_DEPENDENCY_TRACKING?=no
 endif
-
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
@@ -80,26 +74,14 @@ EnvExtra = LANG=C LC_ALL=C
 #
 # Build flags options
 #
-ifeq ($(OSXVersion),10.5)
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch ppc -arch i386,-arch i386)
-else # 10.6, 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
 ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
-endif
-
 # Minimum OS X version supported
-ifeq ($(OSXVersion), 10.6)
-CompatFlags = -mmacosx-version-min=10.5
-else # 10.7, 10.8, 10.9, 10.10, 10.11, 10,.12...
-CompatFlags = -mmacosx-version-min=10.7
-endif
-
+CompatFlags = -mmacosx-version-min=10.11
 OptFlags = -Os
-
 CFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
 CxxFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
 CppFlags = -I$(IncludeDir)
 LdFlags = $(ArchFlags) $(CompatFlags)
-
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif
@@ -107,16 +89,8 @@ endif
 #
 # Select Python version
 #
-ifeq ($(OSXVersion),10.5)
-Python = /usr/bin/python2.5
-PythonSitePackages = /Library/Python/2.5/site-packages
-else ifeq ($(OSXVersion),10.6)
-Python = /usr/bin/python2.6
-PythonSitePackages = /Library/Python/2.6/site-packages
-else # 10.7, 10.8, 10.9, 10.10, 10.11, 10.12, ...
 Python = /usr/bin/python2.7
 PythonSitePackages = /Library/Python/2.7/site-packages
-endif
 
 #
 # Framework (hooks)

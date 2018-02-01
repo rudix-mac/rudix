@@ -10,12 +10,6 @@ Site=		http://lftp.yar.ru/
 Source=		http://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL
 
-ifeq ($(OSXVersion),$(filter $(OSXVersion),10.10 10.9 10.8))
-CFlags=
-CxxFlags=
-LdFLags=
-endif
-
 # readline
 CFlags += -I$(IncludeDir)
 CxxFlags += -I$(IncludeDir)
