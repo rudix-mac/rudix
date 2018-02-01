@@ -2,7 +2,7 @@ include ../../Library/Rudix.mk
 
 Title=		Ack!
 Name=		ack
-Version=	2.14
+Version=	2.20
 Site=		http://beyondgrep.com/
 Source=		http://beyondgrep.com/ack-$(Version)-single-file
 License=	Artistic License
