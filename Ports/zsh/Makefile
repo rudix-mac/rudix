@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Z shell
 Name=		zsh
-Version=	5.3
+Version=	5.4.2
 Site=		http://www.zsh.org
 Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
 License=	MIT-like
