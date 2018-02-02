@@ -1,6 +1,5 @@
 .DS_Store
 retrieve
-checksum
 prep
 build
 install
