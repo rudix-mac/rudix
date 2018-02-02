@@ -30,8 +30,9 @@ RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
 Vendor = org.rudix
+UncompressedName = $(Name)-$(Version)
 PortDir := $(shell pwd)
-SourceDir = $(Name)-$(Version)
+SourceDir = $(Name)-build
 BuildDir = $(SourceDir)
 InstallDir = $(Name)-install
 ResourcesDir = $(Name)-resources
@@ -273,7 +274,6 @@ case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-lzip) lunzip -c $(shell basename $(Source)) | tar xf - ;; \
 	*) $(call error_color,Unknown compression type) && false ;; \
 esac
-$(if $(UncompressedName),mv $(UncompressedName) $(SourceDir))
 endef
 
 define apply_patches
@@ -414,7 +414,7 @@ endef
 define prep_hook
 $(verify_checksum)
 $(uncompress_source)
-
+mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
