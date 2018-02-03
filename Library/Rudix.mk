@@ -79,7 +79,7 @@ retrieve:
 	@touch $@
 
 # Prepare source to compile
-prep: retrieve $(PrepRequires)
+prep: retrieve
 	@$(call info_color,Preparing $(DistName))
 	@$(call prep_pre_hook)
 	@$(call prep_hook)
@@ -88,7 +88,7 @@ prep: retrieve $(PrepRequires)
 	@touch $@
 
 # Build source
-build: prep $(BuildRequires)
+build: prep
 	@$(call info_color,Building $(DistName))
 	@$(call build_pre_hook)
 	@$(call build_hook)
@@ -242,6 +242,18 @@ if test -f checksum ; then \
 fi
 endef
 
+define verify_preprequires
+for x in $(PrepRequires) ; do \
+	test -f $$x && $(call info_color,Found $$x) \
+	|| $(call error_color,Preparation requires $$x) ; done
+endef
+
+define verify_buildrequires
+for x in $(BuildRequires) ; do \
+	test -f $$x && $(call info_color,Found $$x) \
+	|| $(call error_color,Build requires $$x) ; done
+endef
+
 define uncompress_source
 case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-tar) tar xf $(shell basename $(Source)) ;; \
@@ -291,11 +303,19 @@ define retrieve_hook
 $(fetch) $(FetchExtra) $(Source)
 endef
 
+define prep_pre_hook
+$(verify_preprequires)
+endef
+
 define prep_hook
 $(verify_checksum)
 $(uncompress_source)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
+endef
+
+define build_pre_hook
+$(verify_buildrequires)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
