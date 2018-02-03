@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		Tig
 Name=		tig
-Version=	2.2
-Site=		http://jonas.nitro.dk/tig/
-Source=		http://jonas.nitro.dk/tig/releases/$(Name)-$(Version).tar.gz
+Version=	2.3.3
+Site=		https://jonas.github.io/tig/
+Source=		https://github.com/jonas/tig/releases/download/tig-$(Version)/tig-$(Version).tar.gz
 License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README.adoc
