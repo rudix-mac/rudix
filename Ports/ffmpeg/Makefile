@@ -1,8 +1,7 @@
+include ../../Library/Configure.mk
+
 BuildRequires += $(BinDir)/yasm # yasm
 BuildRequires += $(LibDir)/libmp3lame.la # static-lame
-
-include ../../Library/Configure.mk
-RUDIX_UNIVERSAL=no
 
 Title=		FFmpeg
 Name=		ffmpeg

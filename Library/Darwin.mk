@@ -7,20 +7,13 @@
 
 OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 
-RUDIX_UNIVERSAL?=no
-ifeq ($(RUDIX_UNIVERSAL),yes)
-RUDIX_DISABLE_DEPENDENCY_TRACKING?=yes
-else
-RUDIX_DISABLE_DEPENDENCY_TRACKING?=no
-endif
-
 PkgId = $(Vendor).pkg.$(DistName)
 PkgFile = $(DistName)-$(Version).pkg
 
 #
 # Build flags options
 #
-ArchFlags = $(if $(findstring yes,$(RUDIX_UNIVERSAL)),-arch x86_64 -arch i386,-arch x86_64)
+ArchFlags = -arch x86_64
 # Minimum OS X version supported
 CompatFlags = -mmacosx-version-min=10.11
 OptFlags = -Os
@@ -82,22 +75,6 @@ define verify_universal
 ../../Library/fatty.py $1 || $(call warning_color,file $1 is not an Universal Binary)
 endef
 
-ifeq ($(RUDIX_UNIVERSAL),yes)
-define test_universal
-@$(call info_color,Testing for Universal Binaries)
-for x in $(wildcard $(DestDir)$(BinDir)/*) ; do \
-	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(DestDir)$(SBinDir)/*) ; do \
-	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(DestDir)$(LibDir)/*.dylib) ; do \
-	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(DestDir)$(LibDir)/*.a) ; do \
-	$(call verify_universal,$$x) ; done
-for x in $(wildcard $(DestDir)$(PythonSitePackages)/*/*.so) ; do \
-	$(call verify_universal,$$x) ; done
-endef
-endif
-
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
 for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
@@ -153,7 +130,6 @@ $(create_pkg)
 endef
 
 define test_pre_hook
-$(test_universal)
 $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
