@@ -71,65 +71,65 @@ all: pkg
 
 # Retrieve source
 retrieve:
-	@$(call info_color,*** Retrieving $(Source) ***)
+	@$(call info_color,Retrieving $(Source))
 	@$(call retrieve_pre_hook)
 	@$(call retrieve_hook)
 	@$(call retrieve_post_hook)
-	@$(call info_color,*** Done retrieve ***)
+	@$(call success_color,Retrieved)
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve $(PrepRequires)
-	@$(call info_color,*** Preparing $(DistName) ***)
+	@$(call info_color,Preparing $(DistName))
 	@$(call prep_pre_hook)
 	@$(call prep_hook)
 	@$(call prep_post_hook)
-	@$(call info_color,*** Done prep ***)
+	@$(call success_color,Prepared)
 	@touch $@
 
 # Build source
 build: prep $(BuildRequires)
-	@$(call info_color,*** Building $(DistName) ***)
+	@$(call info_color,Building $(DistName))
 	@$(call build_pre_hook)
 	@$(call build_hook)
 	@$(call build_post_hook)
-	@$(call info_color,*** Done build ***)
+	@$(call success_color,Built)
 	@touch $@
 
 # Check build
 check: build
-	@$(call info_color,*** Checking $(DistName) ***)
+	@$(call info_color,Checking $(DistName))
 	@$(call check_pre_hook)
 	@$(call check_hook)
 	@$(call check_post_hook)
-	@$(call info_color,*** Done check ***)
+	@$(call success_color,Checked)
 	@touch $@
 
 # Install into a temporary directory
 install: build
-	@$(call info_color,*** Installing $(DistName) ***)
+	@$(call info_color,Installing $(DistName))
 	@$(call install_pre_hook)
 	@$(call install_hook)
 	@$(call install_post_hook)
-	@$(call info_color,*** Done install ***)
+	@$(call success_color,Installed)
 	@touch $@
 
 # Create package
 pkg: install
-	@$(call info_color,*** Packing $(PkgFile) ***)
+	@$(call info_color,Packing $(PkgFile))
 	@$(call pkg_pre_hook)
 	@$(call pkg_hook)
 	@$(call pkg_post_hook)
-	@$(call info_color,*** Done pkg ***)
+	@$(call success_color,Packed)
 	@touch $@
 
 # Run all tests
 test: pkg check
-	@$(call info_color,*** Testing $(DistName) and $(PkgFile) ***)
+	@$(call info_color,Testing $(DistName) and $(PkgFile))
 	@$(call test_pre_hook)
 	@$(call test_hook)
 	@$(call test_post_hook)
-	@$(call info_color,*** Done test ***)
+	@$(call success_color,Tested)
 	@touch $@
 
 installclean:
@@ -174,7 +174,7 @@ help:
 	@echo "  static - Create package with static libraries"
 
 about:
-	@$(call info_color,*** $(Name)-$(Version) ***)
+	@$(call info_color,$(Name)-$(Version))
 	@echo "Title: $(Title)"
 	@echo "Name: $(Name)"
 	@echo "Version: $(Version)"
@@ -197,25 +197,33 @@ json:
 
 define info_color
 if test -t 1 ; then \
-printf "\033[32m$1\033[0m\n" ; \
+	printf "\033[34mRudix: Info: $1\033[0m\n" ; \
 else \
-printf "$1\n" ; \
+	printf "Rudix: Info: $1\n" ; \
+fi
+endef
+
+define success_color
+if test -t 1 ; then \
+	printf "\033[32mRudix: Success: $1\033[0m\n" ; \
+else \
+	printf "Rudix: Success: $1\n" ; \
 fi
 endef
 
 define warning_color
 if test -t 1 ; then \
-printf "\033[33mWarning: $1\033[0m\n" ; \
+	printf "\033[33mRudix: Warning: $1\033[0m\n" ; \
 else \
-printf "$1\n" ; \
+	printf "Rudix: Warning: $1\n" ; \
 fi
 endef
 
 define error_color
 if test -t 1 ; then \
-printf "\033[31mError: $1\033[0m\n" ; \
+	printf "\033[31mRudix: Error: $1\033[0m\n" ; \
 else \
-printf "$1\n" ; \
+	printf "Rudix: Error:$1\n" ; \
 fi
 endef
 
