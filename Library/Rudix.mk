@@ -146,6 +146,7 @@ distclean: clean pkgclean
 
 realdistclean: distclean
 	rm -f retrieve $(shell basename $(Source))
+	rm -f $(foreach file,$(Files),$(shell basename $(file)))
 
 static: prep installclean buildclean
 	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
@@ -295,12 +296,20 @@ test -d $(InstallDir)/usr/local/man && $(call error_color,Manual pages found in 
 test -d $(InstallDir)/usr/local/info && $(call error_color,Info pages found in old /usr/local/info/ place) || true
 endef
 
+define fetch_sources
+$(fetch) $(FetchExtra) $(Source)
+for x in $(Files) ; do \
+	$(call info_color,Retrieving $$x) ; \
+	$(fetch) $(FetchExtra) $$x ; \
+done
+endef
+
 #
 # Common inner hooks
 #
 
 define retrieve_hook
-$(fetch) $(FetchExtra) $(Source)
+$(fetch_sources)
 endef
 
 define prep_pre_hook
