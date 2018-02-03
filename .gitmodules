@@ -1,0 +1,3 @@
+[submodule "Packages"]
+	path = Packages
+	url = https://github.com/rudix-mac/pkg.git
