@@ -151,26 +151,26 @@ static: prep installclean buildclean
 	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
 
 help:
-	@echo "Rudix buildsystem options."
+	@echo "Rudix buildsystem $(BuildSystem) options."
 	@echo
-	@echo "Port phase rules"
+	@echo "Stages (a.k.a. hooks, phases, etc.):"
 	@echo "  retrieve - Retrieve source from the Internet"
-	@echo "  prep     - Prepare and uncompress source"
-	@echo "  build    - Build port from shource"
-	@echo "  check    - Check build (run internal tests)"
-	@echo "  install  - Install into a temporary directory"
+	@echo "  prep     - Prepare and uncompress the source"
+	@echo "  build    - Build port from the source"
+	@echo "  check    - Check build -- run source's tests"
+	@echo "  install  - Install into a temporary directory (for packing)"
 	@echo "  pkg      - Create package for distribution"
-	@echo "  test     - Run tests (install package and run more test)"
+	@echo "  test     - Run tests -- install package and run tests"
 	@echo
-	@echo "Clean-up rules:"
-	@echo "  clean - Clean but keep package"
-	@echo "  distclean - Clean package and original source"
+	@echo "Clean-up:"
+	@echo "  clean         - Clean but keep package"
+	@echo "  distclean     - Clean package and original source"
 	@echo "  realdistclean - Clean up everything"
 	@echo
-	@echo "Other rules:"
-	@echo "  help - This help message"
-	@echo "  about - Display information about the port"
-	@echo "  json - Display information in JSON format"
+	@echo "Other:"
+	@echo "  help   - This help message"
+	@echo "  about  - Display information about the port"
+	@echo "  json   - Display information in JSON format"
 	@echo "  static - Create package with static libraries"
 
 about:
@@ -183,7 +183,7 @@ about:
 	@echo "Source: $(Source)"
 
 json:
-
+	@$(call info_color,$(Name)-$(Version))
 	@echo "{ \"title\": \"$(Title)\","
 	@echo "  \"name\": \"$(Name)\","
 	@echo "  \"version\": \"$(Version)\","
