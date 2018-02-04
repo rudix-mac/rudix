@@ -71,10 +71,6 @@ productbuild \
 	$(PkgFile)
 endef
 
-define verify_universal
-../../Library/fatty.py $1 || $(call warning_color,file $1 is not an Universal Binary)
-endef
-
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
 for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
