@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Libxmp
 Name=		libxmp
-Version=	4.2.7
+Version=	4.4.1
 Site=		http://xmp.sourceforge.net
 Source=		http://downloads.sourceforge.net/xmp/$(Name)-$(Version).tar.gz
 License=	LGPL
