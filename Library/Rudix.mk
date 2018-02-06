@@ -237,12 +237,6 @@ curl \
 	--remote-name
 endef
 
-define verify_checksum
-if test -f checksum ; then \
-	shasum --warn --check checksum ; \
-fi
-endef
-
 define verify_preprequires
 for x in $(PrepRequires) ; do \
 	test -f $$x && $(call info_color,Found $$x) \
@@ -317,7 +311,6 @@ $(verify_preprequires)
 endef
 
 define prep_hook
-$(verify_checksum)
 $(uncompress_source)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
