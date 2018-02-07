@@ -11,15 +11,19 @@ EnvExtra += CFLAGS="$(CFlags)" \
 	    LDFLAGS="$(LdFlags)" \
 	    ARCHFLAGS="$(ArchFlags)"
 
+ifeq ($(RUDIX_QUIET),yes)
+SetupExtra+=--quiet
+endif
+
 define build_hook
 cd $(BuildDir) && \
-env $(EnvExtra) $(Python) setup.py $(SetupExtra) build
+env $(EnvExtra) $(Python) setup.py $(SetupExtra) build $(SetupBuildExtra)
 endef
 
 define install_hook
 cd $(BuildDir) && \
 $(Python) \
-	setup.py install $(SetupInstallExtra) \
+	setup.py $(SetupExtra) install $(SetupInstallExtra) \
 	--no-compile \
 	--root=$(DestDir) \
 	--prefix=$(Prefix) \
@@ -32,10 +36,10 @@ endef
 ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
 define check_hook
 cd $(BuildDir) && \
-$(Python) setup.py test || $(call error_color,One or more tests failed)
+$(Python) setup.py $(SetupExtra) test || $(call error_color,One or more tests failed)
 endef
 endif
 
 buildclean:
-	cd $(BuildDir) && $(Python) setup.py clean || $(call warning_color,Cannot clean)
-	rm -f build check
+	@cd $(BuildDir) && $(Python) setup.py $(SetupExtra) clean || $(call warning_color,Cannot clean)
+	@rm -f build check

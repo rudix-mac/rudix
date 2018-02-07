@@ -17,6 +17,10 @@ else ifeq ($(RUDIX_BUILD_STATIC_LIBS),no)
 GnuConfigureExtra += --enable-shared --disable-static
 endif
 
+ifeq ($(RUDIX_QUIET),yes)
+GnuConfigureExtra += --quiet
+endif
+
 define gnu_configure
 ./configure $(GnuConfigureExtra) \
 	--prefix=$(Prefix) \
