@@ -1,34 +1,27 @@
+include ../../Library/Configure.mk
+
+Title=		QEMU
+Name=		qemu
+Version=	2.11.1
+Site=		https://wiki.qemu.org/
+Source=		https://download.qemu.org/qemu-$(Version).tar.xz
+License=	GPLv2
+
+ReadMeFile=	$(SourceDir)/README
+LicenseFile=	$(SourceDir)/LICENSE
+
 BuildRequires += $(BinDir)/pkg-config             # pkg-config
 BuildRequires += $(LibDir)/libglib-2.0.la         # static-glib
 BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc  # static-pixman
 BuildRequires += $(LibDir)/libintl.la             # static-gettext
 BuildRequires += $(BinDir)/libtool                # static-libtool
 
-include ../../Library/Configure.mk
-
-Title=		QEMU
-Name=		qemu
-Version=	2.6.0
-Site=		http://wiki.qemu.org/
-Source=		http://wiki.qemu.org/download/$(Name)-$(Version).tar.bz2
-License=	GPL
-
-ReadMeFile=	$(SourceDir)/README
-LicenseFile=	$(SourceDir)/LICENSE
-
-ConfigureExtra += --with-system-pixman
-LdFlags += -framework Carbon
-
-# i686-apple-darwin11-llvm-gcc-4.2 global register variable and inline asm
-# is not very reliable, so it's better to use clang instead
-EnvExtra += CC=clang
-# Due an issue in make install
-EnvExtra += LIBTOOL=/usr/local/bin/libtool
-
 ConfigureExtra += --enable-cocoa
 #ConfigureExtra += --disable-vnc
 #ConfigureExtra += --disable-bsd-user
 #ConfigureExtra += --disable-darwin-user
+
+LdFlags += -framework Carbon	# FSFindFolder symbol for static-glib
 
 define install_post_hook
 rm -rf $(DestDir)$(SysConfDir)
