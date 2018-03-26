@@ -1,0 +1,10 @@
+--- src/frontend/input.cc.orig	2017-06-11 11:59:38.000000000 -0300
++++ src/frontend/input.cc	2018-03-26 15:47:08.000000000 -0300
+@@ -170,7 +170,6 @@
+ {
+ #ifdef HAVE_LIBREADLINE
+   if (isatty(STDIN_FILENO)) {
+-    rl_catch_signals = 0; /* Prevent readline from catching signals, e.g. SIGINT. */
+     get_line = getline_readline;
+     using_history();
+   } else {
