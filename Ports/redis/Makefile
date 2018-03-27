@@ -2,15 +2,13 @@ include ../../Library/Unix.mk
 
 Title=		Redis
 Name=		redis
-Version=	3.0.3
-Site=		http://redis.io/
-Source=		http://download.redis.io/releases/$(Name)-$(Version).tar.gz
+Version=	4.0.9
+Site=		https://redis.io
+Source=		http://download.redis.io/releases/redis-$(Version).tar.gz
 License=	BSD
+ReadMeFile=	$(SourceDir)/README.md
 
-BuildDir=	$(SourceDir)/src
-
-MakeExtra += ARCH="$(LdFlags)" CCLINK="$(LdFlags)"
-MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)/$(Prefix)
+MakeInstallExtra += PREFIX=$(DestDir)/$(Prefix)
 
 define test_hook
 $(BinDir)/redis-cli -v | grep $(Version)
