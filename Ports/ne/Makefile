@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		Nice Editor
 Name=		ne
-Version=	3.0.1
+Version=	3.1.1
 Site=		http://ne.di.unimi.it
 Source=		http://ne.di.unimi.it/$(Name)-$(Version).tar.gz
 License=	GPL
