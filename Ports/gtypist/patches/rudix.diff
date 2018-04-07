@@ -1,0 +1,165 @@
+diff -ru gtypist-2.9.5/configure gtypist-build/configure
+--- gtypist-2.9.5/configure	2014-08-12 08:41:04.000000000 +0200
++++ gtypist-build/configure	2018-04-02 06:36:03.000000000 +0200
+@@ -6302,9 +6302,9 @@
+ done
+ 
+ 
+-# check for libncursesw
++# check for libncurses
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "ncursesw/ncurses.h" "ac_cv_header_ncursesw_ncurses_h" "$ac_includes_default"
++ac_fn_c_check_header_mongrel "$LINENO" "ncurses.h" "ac_cv_header_ncursesw_ncurses_h" "$ac_includes_default"
+ if test "x$ac_cv_header_ncursesw_ncurses_h" = xyes; then :
+   HAVE_NCURSESW_H=1
+ fi
+@@ -6316,7 +6316,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncursesw  $LIBS"
++LIBS="-lncurses  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -6351,7 +6351,7 @@
+ fi
+ 
+ if test -n "$HAVE_NCURSESW_H" -a -n "$HAVE_LIBNCURSESW";  then
+-   LIBS="-lncursesw $LIBS"
++   LIBS="-lncurses $LIBS"
+ else
+    echo -e "Error:  both library and header files for the ncursesw library\n"\
+        "are required to build this package.  See INSTALL file for"\
+@@ -10554,4 +10554,3 @@
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
+diff -ru gtypist-2.9.5/src/cursmenu.c gtypist-build/src/cursmenu.c
+--- gtypist-2.9.5/src/cursmenu.c	2013-08-18 16:36:14.000000000 +0200
++++ gtypist-build/src/cursmenu.c	2018-04-02 06:36:03.000000000 +0200
+@@ -24,7 +24,7 @@
+ #ifdef HAVE_PDCURSES
+ #include <curses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ 
+ #include "error.h"
+diff -ru gtypist-2.9.5/src/error.c gtypist-build/src/error.c
+--- gtypist-2.9.5/src/error.c	2013-08-18 16:36:14.000000000 +0200
++++ gtypist-build/src/error.c	2018-04-02 06:36:03.000000000 +0200
+@@ -25,7 +25,7 @@
+ #ifdef HAVE_PDCURSES
+ #include <curses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ 
+ #include <stdlib.h>
+diff -ru gtypist-2.9.5/src/gtypist.c gtypist-build/src/gtypist.c
+--- gtypist-2.9.5/src/gtypist.c	2014-08-12 08:29:13.000000000 +0200
++++ gtypist-build/src/gtypist.c	2018-04-02 06:39:35.000000000 +0200
+@@ -32,7 +32,7 @@
+ #ifdef HAVE_PDCURSES
+ #include <curses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ 
+ #include <time.h>
+@@ -65,7 +65,7 @@
+ /* character to be display to represent "enter key" */
+ /* TODO: this requires beginner mode!
+ #define RETURN_CHARACTER 0x000023CE */
+-#define RETURN_CHARACTER 0x00000020 
++#define RETURN_CHARACTER 0x00000020
+ 
+ /* a definition of a boolean type */
+ #ifndef bool
+@@ -347,7 +347,7 @@
+           }
+         else
+           {
+-            cbreak(); 
++            cbreak();
+             get_widech(&return_char);
+           }
+         move( y, x );
+@@ -1027,7 +1027,7 @@
+                 wideaddch(rc);
+             }
+           }
+-          else 
++          else
+             { /* character is incorrect */
+               /* try to sync with typist behind */
+               if ( error_sync >= 0 && widep > wideData && rc == *(widep-1) )
+@@ -1067,7 +1067,7 @@
+                   while ( *(widep+1) == ASCII_SPACE
+                           && *(widep+1) != ASCII_NULL )
+                     {
+-                      widep++; 
++                      widep++;
+                       wideaddch(*widep);
+                     }
+                 }
+@@ -1089,7 +1089,7 @@
+               else if ( isalpha(*widep) && *(widep+1) == ASCII_DASH
+                         && *(widep+2) == ASCII_NL )
+                 {
+-                  widep++; 
++                  widep++;
+                   wideaddch(*widep);
+                   widep++;
+                   wideaddch(*widep);
+@@ -1999,16 +1999,19 @@
+ 
+   /* Internationalization */
+ 
+-#if defined(ENABLE_NLS) && defined(LC_ALL)
++#if defined(LC_ALL)
++  /* Make it work with RUDIX on MAC_OSX and maybe others */
+   setlocale (LC_ALL, "");
++#if defined(ENABLE_NLS)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   /* make gettext always return strings as UTF-8
+      => this makes programming easier because now _all_ strings
+      (from gettext and from script file) are encoded as UTF8!
+    */
+-  bind_textdomain_codeset(PACKAGE, "utf-8"); 
++  bind_textdomain_codeset(PACKAGE, "utf-8");
+   textdomain (PACKAGE);
+ #endif
++#endif
+ 
+ #ifdef MINGW
+   locale_encoding = "UTF-8";
+diff -ru gtypist-2.9.5/src/script.c gtypist-build/src/script.c
+--- gtypist-2.9.5/src/script.c	2013-08-18 16:36:14.000000000 +0200
++++ gtypist-build/src/script.c	2018-04-02 06:36:03.000000000 +0200
+@@ -24,7 +24,7 @@
+ #ifdef HAVE_PDCURSES
+ #include <curses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ 
+ #include "error.h"
+diff -ru gtypist-2.9.5/src/utf8.c gtypist-build/src/utf8.c
+--- gtypist-2.9.5/src/utf8.c	2013-08-18 16:36:14.000000000 +0200
++++ gtypist-build/src/utf8.c	2018-04-02 06:36:03.000000000 +0200
+@@ -23,7 +23,7 @@
+ #ifdef HAVE_PDCURSES
+ #include <curses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ 
+ #include <stdlib.h>
