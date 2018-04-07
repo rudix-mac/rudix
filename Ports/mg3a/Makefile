@@ -5,7 +5,7 @@ Name=		mg3a
 Version=	180101
 Site=		https://github.com/paaguti
 Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
-License=	GPL
+License=	Public Domain
 
 ReadMeFile=	$(SourceDir)/README
 

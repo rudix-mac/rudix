@@ -11,10 +11,6 @@ GnuConfigureExtra += --enable-widec
 GnuConfigureExtra += --without-tack
 GnuConfigureExtra += --without-tests
 
-define install_post_hook
-#rm -rf $(DestDir)$(DocDir)/gettext/csharpdoc
-endef
-
 define test_hook
-#$(BinDir)/gettext --version | grep $(Version)
+$(BinDir)/ncursesw6-config --version | grep $(Version)
 endef
