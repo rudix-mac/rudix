@@ -1,0 +1,175 @@
+--- Makefile.in.orig	2018-04-25 11:27:36.000000000 +0200
++++ Makefile.in	2018-04-25 11:31:11.000000000 +0200
+@@ -5,7 +5,7 @@
+ top_srcdir = @top_srcdir@
+ VPATH = @srcdir@
+ 
+-################################################################## 
++##################################################################
+ #
+ # tcptrace supports reading compressed files with a little help...
+ # 1) If your system has "gunzip", then uncomment the following line to
+@@ -24,61 +24,61 @@
+ 
+ 
+ 
+-################################################################## 
++##################################################################
+ #
+ # If you want to read tcpdump output (which you probably do),
+ # you'll need the LBL PCAP library.  I've just listed a bunch
+ # of places that it might be (other than the standard
+ # location).  If it's somewhere else, just add it into the
+ # list.
+-# 
+-################################################################## 
++#
++##################################################################
+ PCAP_LDLIBS = @V_PCAP_LDLIBS@
+ PCAP_INCS    = -I/usr/local/include -I. -I../pcap -I/usr/include/pcap
+ PCAP_LDFLAGS = -L/usr/local/lib -Llib -Lpcap -L../pcap -L./cygwin-libs
+ 
+ 
+ 
+-################################################################## 
+-# 
++##################################################################
++#
+ # Plug-in modules.
+ # There's no reason that I can think of to remove them, but
+ # here they are.  Just comment them out to omit them from
+ # the binary.
+-# 
+-################################################################## 
+-# 
++#
++##################################################################
++#
+ # Experimental HTTP analysis module
+-# 
++#
+ DEFINES += -DLOAD_MODULE_HTTP -DHTTP_SAFE -DHTTP_DUMP_TIMES
+-# 
++#
+ # Experimental overall traffic by port module
+-# 
++#
+ DEFINES += -DLOAD_MODULE_TRAFFIC
+-# 
++#
+ # Experimental traffic data by time slices module
+-# 
++#
+ DEFINES += -DLOAD_MODULE_SLICE
+-# 
++#
+ # Experimental round trip time graphs
+-# 
++#
+ DEFINES += -DLOAD_MODULE_RTTGRAPH
+-# 
++#
+ # Experimental tcplib-data generating module
+ #
+-# We are not going to compile in the antiquated TCPLIB module by default 
++# We are not going to compile in the antiquated TCPLIB module by default
+ # anymore.
+ # It seems to have quite some bugs, and being antiquated as it is, we thought
+ # it is not worth the time fixing them. Uncomment this line and ./configure
+ # and make again,  if you really need the module. - Mani, 15 Aug 2003.
+ # DEFINES += -DLOAD_MODULE_TCPLIB
+-# 
++#
+ # Experimental module for a friend
+-# 
++#
+ DEFINES += -DLOAD_MODULE_COLLIE
+-# 
+-# Example module for real-time mode 
+-# 
++#
++# Example module for real-time mode
++#
+ DEFINES += -DLOAD_MODULE_REALTIME
+ #
+ # INBOUNDS module implements the functionality required for the INBOUNDS
+@@ -87,15 +87,15 @@
+ # DEFINES += -DLOAD_MODULE_INBOUNDS
+ 
+ 
+-################################################################## 
+-# 
++##################################################################
++#
+ # File formats that we understand.
+ # The only reason that I can see to remove one is if you don't
+ # have the PCAP library, in which case you can comment out
+ # GROK_TCPDUMP and still compile, but then you can't read the
+ # output from tcpdump.
+-# 
+-################################################################## 
++#
++##################################################################
+ # define GROK_SNOOP if you want tcptrace to understand the output
+ # format of Sun's "snoop" packet sniffer.
+ DEFINES += -DGROK_SNOOP
+@@ -123,25 +123,25 @@
+ # format of the Endace Technology dagsnap program */
+ DEFINES += -DGROK_ERF
+ 
+-################################################################## 
+-# 
++##################################################################
++#
+ # Just a quick installation rule, not much to do
+-# 
+-################################################################## 
++#
++##################################################################
+ # Pathname of directory to install the binary
+ BINDIR = /usr/local/bin
+ MANDIR = /usr/local/man/
+ 
+ 
+-################################################################## 
+-################################################################## 
+-################################################################## 
+-# 
++##################################################################
++##################################################################
++##################################################################
++#
+ # You shouldn't need to change anything below this point
+-# 
+-################################################################## 
+-################################################################## 
+-################################################################## 
++#
++##################################################################
++##################################################################
++##################################################################
+ 
+ CC = @CC@
+ CCOPT = @V_CCOPT@
+@@ -161,7 +161,7 @@
+ #	LDLIBS = -lpcap -lstr -lm
+ # everybody else (that I know of) just needs:
+ #	LDLIBS = -lpcap -lm
+-# 
++#
+ LDFLAGS += ${PCAP_LDFLAGS}
+ 
+ 
+@@ -287,9 +287,9 @@
+ # just a quick installation rule
+ INSTALL = ./install-sh -c
+ install: tcptrace install-man
+-	$(INSTALL) -m 755 -o bin -g bin tcptrace ${BINDIR}/tcptrace
+-install-man: 
+-	$(INSTALL) -m 444 -o bin -g bin tcptrace.man $(MANDIR)/man1/tcptrace.1
++	$(INSTALL) -m 755 tcptrace ${DESTDIR}${BINDIR}/tcptrace
++install-man:
++	$(INSTALL) -m 444 tcptrace.man ${DESTDIR}$(MANDIR)/man1/tcptrace.1
+ 
+ 
+ 
