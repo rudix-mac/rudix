@@ -1,5 +1,5 @@
 --- Makefile.orig	2018-04-30 11:58:38.000000000 +0200
-+++ Makefile	2018-04-30 12:24:48.000000000 +0200
++++ Makefile	2018-04-30 12:54:27.000000000 +0200
 @@ -18,7 +18,7 @@
  
  #Base directory - adapt as needed
@@ -35,18 +35,22 @@
  OBJS=fonts.o direct.o encodings.o commands.o stack.o funct1.o tables.o \
  	chars.o ignore.o cfg.o main.o utils.o parser.o lengths.o counters.o \
  	preamble.o letterformat.o equations.o convert.o xrefs.o definitions.o graphics.o \
-@@ -151,16 +151,16 @@
+@@ -151,16 +151,20 @@
  	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS)	$(LIBS) -o $(BINARY_NAME)
  
  cfg.o: Makefile cfg.c
 -	$(CC) $(CFLAGS) -DCFGDIR=\"$(DESTDIR)$(CFGDIR)\" -c cfg.c -o cfg.o
-+	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" -DPATHSEP=\':\' -DENVSEP=\':\' -c cfg.c -o cfg.o
++	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" $(PLATFORM) -c $*.c
  
  main.o: Makefile main.c
 -	$(CC) $(CFLAGS) -DCFGDIR=\"$(DESTDIR)$(CFGDIR)\" -c main.c -o main.o
-+	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" -DPATHSEP=\':\' -DENVSEP=\':\' -c main.c -o main.o
++	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" $(PLATFORM) -c $*.c
++
++%.o: Makefile %.c
++	$(CC) $(CFLAGS) $(PLATFORM) -c $*.c
  
  check test: latex2rtf
++
  	cd test && $(MAKE) clean
  	cd test && $(MAKE)
  	cd test && $(MAKE) check
@@ -55,7 +59,7 @@
  fullcheck: latex2rtf
  	cd scripts && $(MAKE)
  	cd test && $(MAKE) clean
-@@ -223,12 +223,12 @@
+@@ -223,12 +227,12 @@
  	cp -p $(BINARY_NAME)     $(DESTDIR)$(BINDIR)
  	@echo "******************************************************************"
  	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
@@ -70,7 +74,7 @@
  	@echo "***"
  	@echo "*** If the configuration files are moved then either"
  	@echo "***   1) set the environment variable RTFPATH to this new location, or"
-@@ -249,10 +249,10 @@
+@@ -249,10 +253,10 @@
  appleclean:
  	sudo xattr -r -d com.apple.FinderInfo ../trunk
  	sudo xattr -r -d com.apple.TextEncoding ../trunk
