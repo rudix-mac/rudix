@@ -16,6 +16,9 @@ rm -rf $(SourceDir) && git clone $(Repository) $(SourceDir)
 endef
 
 define uncompress_source
-cd $(SourceDir) && git checkout v$(Version)
+cd $(SourceDir) && git checkout v$(Version) && cd -
+endef
+
+define prep_hook
 endef
 
