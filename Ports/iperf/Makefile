@@ -9,6 +9,12 @@ License=	BSD
 ReadMeFile=    $(SourceDir)/README.md
 LicenseFile=    $(SourceDir)/docs/_esnet/LICENSE
 
+LdFlags += -framework CoreFoundation -liconv
+
+define prep_post_hook
+patch -p1 -d $(SourceDir) < patches/01-tcp-n.diff
+endef
+
 define test_hook
 $(BinDir)/iperf
 endef
