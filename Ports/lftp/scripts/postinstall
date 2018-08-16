@@ -1,5 +1,0 @@
-#!/bin/sh
-[ ! -f $3/usr/local/etc/lftp.conf ] && \
-    install -m 644 $3/usr/local/etc/lftp.conf.default \
-        $3/usr/local/etc/lftp.conf
-exit 0
