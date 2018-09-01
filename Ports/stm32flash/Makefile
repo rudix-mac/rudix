@@ -11,14 +11,12 @@ SourceDir=	stm32flash-code
 ReadMeFile=	$(SourceDir)/HOWTO
 LicenseFile=	$(SourceDir)/gpl-2.0.txt
 
-define fetch
-rm -rf $(SourceDir) && git clone $(Repository) $(SourceDir) 
-endef
+UncompressedName=stm32flash-code
 
-define uncompress_source
-cd $(SourceDir) && git checkout v$(Version) && cd -
+define retrieve_hook
+rm -rf $(SourceDir) && git clone $(Repository) $(SourceDir)
 endef
 
 define prep_hook
+cd $(SourceDir) && git checkout v$(Version) && cd -
 endef
-

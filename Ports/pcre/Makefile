@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		PCRE
 Name=		pcre
-Version=	8.40
-Site=		http://www.pcre.org/
+Version=	8.42
+Site=		https://www.pcre.org
 Source=		https://ftp.pcre.org/pub/pcre/pcre-$(Version).tar.bz2
 License=	BSD
 

@@ -2,9 +2,9 @@ include ../../Library/Python.mk
 
 Title=		Python pip
 Name=		python-pip
-Version=	8.1.0
-Site=		https://pypi.python.org/pypi/pip/
-Source=		https://pypi.python.org/packages/source/p/pip/pip-$(Version).tar.gz
+Version=	9.0.3
+Site=		https://pip.pypa.io/
+Source=		https://github.com/pypa/pip/archive/$(Version).tar.gz
 License=	MIT
 
 ReadMeFile=	$(SourceDir)/README.rst

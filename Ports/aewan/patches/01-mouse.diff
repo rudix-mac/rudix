@@ -1,0 +1,762 @@
+--- a/bores/kurses.c
++++ b/bores/kurses.c
+@@ -77,13 +77,13 @@
+ 
+ void kurses_init() {
+    int fg, bg;
+-   
++
+    initscr();               /* enter screen-oriented mode */
+    raw();                   /* don't treat Ctrl+C, etc. as special. */
+    noecho();                /* don't echo typed characters back to terminal */
+    keypad(stdscr, TRUE);    /* convert ugly escape sequences to more
+                              * palatable curses KEY_* codes */
+-   
++
+    cur_fg = 7;
+    cur_bg = 0;
+    sss_top = NULL;
+@@ -93,17 +93,19 @@
+       exit(1);
+    }
+ 
+-   start_color(); 
++   start_color();
+ 
+    /* initialize all curses pairs */
+    for (fg = 0; fg < 8; fg++) for (bg = 0; bg < 8; bg++) {
+       int pair = kurses_pair_for(fg, bg);
+       if (!pair) continue; /* don't try to initialize pair 0,
+                             * that corresponds to color (7, 0). */
+-      
++
+       init_pair(pair, fg, bg);
+    }
+-   
++
++   mousemask(BUTTON1_PRESSED | BUTTON1_RELEASED | BUTTON1_CLICKED |
++			 BUTTON_SHIFT, NULL); /* Add basic mouse handling */
+    clear();
+    refresh();
+ }
+@@ -116,17 +118,17 @@
+ 
+ void kurses_color(int fg, int bg) {
+    int pair;
+-   
++
+    if (fg < 0) fg = cur_fg;
+    if (bg < 0) bg = cur_bg;
+ 
+    /* see what color pair corresponds to fg, bg */
+    pair = kurses_pair_for(fg, bg);
+-   
++
+    /* if that maps to 0, just reset attribute; otherwise set color pair */
+    if (pair) attrset(COLOR_PAIR(pair));
+    else      attrset(A_NORMAL);
+-   
++
+    /* now turn on A_BOLD and A_BLINK attribute as indicated by the most
+     * significant bit of fg and bg, respectively */
+    if (fg & 0x08) attron(A_BOLD);
+@@ -169,7 +171,7 @@
+    int pos = 0;
+    int ch;
+    const int *p;
+-   
++
+    while (1) {
+       refresh();
+       ch = getch();
+@@ -181,14 +183,14 @@
+       /* proceed to normal handling */
+       switch (ch) {
+          case 10: buf[pos] = 0; return 1; /* confirm input */
+-         case 3: 
+-         case 7: 
++         case 3:
++         case 7:
+          case 27: *buf = 0; return 0; /* cancel input */
+          case KEY_BACKSPACE: case 8: case 127: /* backspace */
+-            if (pos > 0) { --pos; addch('\b'); addch(' '); addch('\b'); } 
++            if (pos > 0) { --pos; addch('\b'); addch(' '); addch('\b'); }
+             break;
+          case 'U' - 0x40: /* kill */
+-            while (pos--) { addch('\b'); addch(' '); addch('\b'); } 
++            while (pos--) { addch('\b'); addch(' '); addch('\b'); }
+             pos = 0;
+             break;
+          default:
+@@ -205,11 +207,11 @@
+ void draw_window(int x0, int y0, int w, int h, const char *title) {
+    int x, y, x1, y1;
+    int gr_ch[3][3];
+-   
++
+    gr_ch[0][0]=ACS_ULCORNER, gr_ch[0][1]=ACS_HLINE, gr_ch[0][2]=ACS_URCORNER;
+    gr_ch[1][0]=ACS_VLINE,    gr_ch[1][1]=' ',       gr_ch[1][2]=ACS_VLINE;
+    gr_ch[2][0]=ACS_LLCORNER, gr_ch[2][1]=ACS_HLINE, gr_ch[2][2]=ACS_LRCORNER;
+-   
++
+    x1 = x0 + w - 1;
+    y1 = y0 + h - 1;
+ 
+@@ -232,13 +234,13 @@
+    draw_window(x0, y0, w, h, title);
+ }
+ 
+-void draw_hline(int x0, int y0, int w, 
++void draw_hline(int x0, int y0, int w,
+                 int left_endpt, int interim, int right_endpt)
+ {
+    int x;
+    if (!kurses_move(x0, y0)) return;
+    for (x = x0; x < x0 + w; x++)
+-      addch( (x == x0) ? left_endpt : 
++      addch( (x == x0) ? left_endpt :
+              (x == x0 + w - 1) ? right_endpt : interim);
+ }
+ 
+@@ -288,6 +290,3 @@
+    fg &= 0x07; bg &= 0x07;   /* only keep the three least significant bits */
+    return (bg << 3) + (7 - fg);
+ }
+-
+-
+-
+--- a/handlekey.c
++++ b/handlekey.c
+@@ -62,7 +62,7 @@
+ #define FAST_MOVE_AMOUNT 8  /* how much the cursor moves each time the fast
+                              * movent keys (Ctrl+Z, Ctrl+X) are pressed */
+ 
+-/* Interacts with the user in order to allow him to add a new layer to the 
++/* Interacts with the user in order to allow him to add a new layer to the
+  * document. If <interactive>, asks user for parameters; else just
+  * adds using the defaults. */
+ static void u_add_layer(bool interactive) {
+@@ -71,9 +71,9 @@
+ 
+    document_get_nom_dim(_doc, &nom_width, &nom_height);
+    if (interactive) {
+-      width = ui_ask_i("NEW LAYER: Enter width", 
++      width = ui_ask_i("NEW LAYER: Enter width",
+                         nom_width, 2, INT_MAX);  if (ui_cancel) return;
+-      height = ui_ask_i("NEW LAYER: Enter height", 
++      height = ui_ask_i("NEW LAYER: Enter height",
+                         nom_height, 2, INT_MAX); if (ui_cancel) return;
+       name = ui_ask_s("NEW LAYER: Name", "unnamed"); if (ui_cancel) return;
+    }
+@@ -91,7 +91,7 @@
+    else                   lyr->transp = false;
+ 
+    document_insert_layer(_doc, 0, lyr);
+-   
++
+    free(name);
+ }
+ 
+@@ -100,7 +100,7 @@
+ static void u_rename_layer(void) {
+    Layer *l = _doc->layers[_lyr];
+    char *new_name;
+-   
++
+    new_name = ui_ask_s("Rename layer to", l->name);
+    if (!ui_cancel)
+       dstrset(&l->name, new_name);
+@@ -114,10 +114,10 @@
+    Layer *l = _doc->layers[_lyr];
+    Layer *new_l;
+    int h, w, x, y;
+-   
+-   w = ui_ask_i("RESIZE LAYER: Enter new width", 
++
++   w = ui_ask_i("RESIZE LAYER: Enter new width",
+                      l->width,  2, INT_MAX); if (ui_cancel) return;
+-   h = ui_ask_i("RESIZE LAYER: Enter new height", 
++   h = ui_ask_i("RESIZE LAYER: Enter new height",
+                      l->height, 2, INT_MAX); if (ui_cancel) return;
+ 
+    new_l = layer_create(l->name, w, h);
+@@ -153,7 +153,7 @@
+    char msg[128];
+    char *home_dir;
+    struct passwd *pw;
+-   
++
+    if(name) {
+       pw = getpwnam(name);
+       if(!pw)
+@@ -184,29 +184,29 @@
+ static char *expand_tilde(char *filename) {
+    char *home_dir;
+    char *slash;
+-   
++
+    if(filename[1]) {
+       char *username, *filename_dup;
+       char *ret;
+-      
++
+       filename_dup = strdup(filename);
+       slash = strchr(filename_dup, '/');
+       username = filename_dup + 1;
+-      
++
+       if(!slash) {
+          /* Only "~user" was given, use it as a filename. */
+          free(filename_dup);
+          return filename;
+       }
+-      
++
+       *slash = '\0';
+-      
++
+       if(!strlen(username))
+          username = NULL;
+       home_dir = get_home_dir(username);
+       if(!home_dir)
+          return NULL;
+-      
++
+       slash++; /* Everything after the tilde and possible username. */
+       ret = malloc(strlen(home_dir) + strlen(slash) + 1);
+       sprintf(ret, "%s/%s", home_dir, slash);
+@@ -277,7 +277,7 @@
+       }
+    }
+ 
+-   if ( _filename && strcmp(_filename, filename) && 
++   if ( _filename && strcmp(_filename, filename) &&
+                            (tmpf = fopen(filename, "r")) ) {
+       /* file exists. Ask if user wants to overwrite */
+       fclose(tmpf); tmpf = 0;
+@@ -321,7 +321,7 @@
+ static void tint_sel(bool fg) {
+    int x0, y0, x1, y1, x, y;
+    get_norm_sel(&x0, &y0, &x1, &y1);
+-   
++
+    for (x = x0; x <= x1; x++)
+       for (y = y0; y <= y1; y++)
+          if (fg)
+@@ -347,7 +347,7 @@
+       case '3': return AEWAN_CHAR_LRCORNER;
+       case '-': return AEWAN_CHAR_HLINE;
+       case '|': return AEWAN_CHAR_VLINE;
+-      case '0': return AEWAN_CHAR_CKBOARD; 
++      case '0': return AEWAN_CHAR_CKBOARD;
+       default : return ch;
+    }
+ }
+@@ -357,7 +357,7 @@
+    int x0, y0, x1, y1;
+    int tmp;
+    get_norm_sel(&x0, &y0, &x1, &y1);
+-   
++
+    /* we are in SM_SELECT mode */
+    switch (ch) {
+       case 'm':
+@@ -385,8 +385,8 @@
+          /* swap the anchor with the cursor position *
+           * that will enable the user to manipulate the "other edge"
+           * of the rectangle */
+-         tmp = _x; _x = _ax; _ax = tmp; 
+-         tmp = _y; _y = _ay; _ay = tmp; 
++         tmp = _x; _x = _ax; _ax = tmp;
++         tmp = _y; _y = _ay; _ay = tmp;
+          break;
+    }
+ }
+@@ -415,7 +415,7 @@
+    int x0, y0, x, y, ch;
+    kurses_color(7, 0);
+    draw_centered_window(40, 5, "Edit Metainfo", &x0, &y0);
+-   
++
+    x = x0, y = y0;
+    kurses_move(x, y++);
+    addstr("You will now be taken into an editor");
+@@ -451,6 +451,97 @@
+    else if (_y < _svy) _svy = _y;
+ }
+ 
++static inline void put_at(Layer *layer, int x, int y, int ch) {
++	layer->cells[x][y].ch = ch;
++	layer->cells[x][y].attr = _fg << 4 | _bg;
++}
++
++static inline void put_at_cross (Layer *layer, int x, int y, int ch) {
++	if (' ' != layer->cells[x][y].ch)
++		ch = '+';
++	put_at(layer,x,y,ch);
++}
++
++static inline int min(int a, int b) {
++	return (a < b) ? a : b;
++}
++
++static inline int max(int a, int b) {
++	return (a > b) ? a : b;
++}
++
++static void draw_line(Layer *layer, int x1, int y1, int x2, int y2)
++{
++	int draw_char;
++	int _x0, _y0, _x1, _y1;
++	float m;
++	int __x, __y;
++#ifdef DEBUG
++	static char msg[128];
++
++	sprintf(msg,">  draw_line(lyr,%d,%d,%d,%d)\n",x1,y1,x2,y2);
++	write(2,msg,strlen(msg));
++#endif
++
++	if (x1 < x2) {
++		_x0 = x1; _x1 = x2;
++		_y0 = y1; _y1 = y2;
++	} else {
++		_x0 = x2; _x1 = x1;
++		_y0 = y2; _y1 = y1;
++	}
++
++#ifdef DEBUG
++	sprintf(msg,">> draw_line(lyr,%d,%d,%d,%d)\n", _x0, _y0, _x1, _y1);
++	write(2,msg,strlen(msg));
++#endif
++
++	if (_x0 == _x1) {
++		draw_char = '|';
++		__x = _x0;
++
++		for (__y = min(_y0,_y1); __y <= max(_y0,_y1); __y ++) {
++#ifdef DEBUG
++			sprintf(msg,">>>> %d %d\n", __x, __y);
++			write(2,msg,strlen(msg));
++#endif
++			put_at_cross (layer, __x, __y, draw_char);
++		}
++	} else {
++		m = (float)(_y1 - _y0) / (float)(_x1 - _x0);
++
++		if (m > 1.0) draw_char = '|';
++		else if (m == 1.0) draw_char = '/';
++		else if (m > -1.0) draw_char = '-';
++		else if (m == -1.0) draw_char = '\\';
++		else draw_char = '|';
++
++#ifdef DEBUG
++		sprintf(msg,">>>  draw_char ='%c'\n>>>   m = %.2f\n", draw_char, m);
++		write(2,msg,strlen(msg));
++#endif
++
++		if (m*m <= 1.0) {
++			for (__x = _x0; __x <= _x1; __x ++) {
++				__y = _y0 + (int) (m * (float)(__x - _x0));
++#ifdef DEBUG
++				sprintf(msg,">>>> %d %d\n", __x, __y);
++				write(2,msg,strlen(msg));
++#endif
++				put_at_cross (layer, __x, __y, draw_char);
++			}
++		} else {
++			for (__y = _y0; __y <= _y1; __y ++) {
++				__x = _x0 + (int) ((float)(__y - _y0) / m);
++#ifdef DEBUG
++				sprintf(msg,">>>> %d %d\n", __x, __y);
++				write(2,msg,strlen(msg));
++#endif
++				put_at_cross (layer, __x, __y, draw_char);
++			}
++		}
++	}
++}
+ 
+ void handle_key(int ch) {
+    int command;
+@@ -472,6 +563,7 @@
+       return;
+    }
+ 
++
+    if ( (command = keybind_translate(ch)) ) {
+       /* key triggers a command: execute command */
+       handle_command(command);
+@@ -479,11 +571,35 @@
+                              * below */
+    }
+ 
++
+    /* key does not trigger a command; handle it normally if there are
+     * layers in the document; ignore it if there aren't */
+    if (!_doc->layer_count) return;
+    lyr = _doc->layers[_lyr];
+ 
++   /* check for mouse */
++   if (KEY_MOUSE == ch) {
++	   MEVENT event;
++	   if (OK == getmouse (&event)) {
++
++		   if (event.bstate & BUTTON1_CLICKED) {
++			   /* CLICK is put mouse at position */
++			   _x = event.x;
++			   _y = event.y;
++		   } else if (event.bstate & BUTTON1_PRESSED) {
++			   _mx = event.x;
++			   _my = event.y;
++		   } else if (event.bstate & BUTTON1_RELEASED) {
++			   if (_mx > 0 && _my > 0) {
++					  draw_line (lyr, _mx, _my, event.x, event.y);
++			   }
++			   /* Clean-up  */
++			   _mx = _my = -1;
++		   }
++	   }
++	   return;
++   }
++
+    /* interpret character keys for no-selection mode */
+    if (printable_char(ch) && _selmode == SM_NONE) {
+       int ch_to_put = _lgmode ? lgmode_map_ch(ch) : ch;
+@@ -493,9 +609,10 @@
+          for (x = lyr->width - 1; x > _x; x--)
+             lyr->cells[x][_y] = lyr->cells[x-1][_y];
+       }
+-      
+-      lyr->cells[_x][_y].ch = ch_to_put;
+-      lyr->cells[_x][_y].attr = _fg << 4 | _bg;
++
++      /* lyr->cells[_x][_y].ch = ch_to_put; */
++      /* lyr->cells[_x][_y].attr = _fg << 4 | _bg; */
++	  put_at(lyr, _x, _y, ch_to_put);
+       _x++;
+    }
+ 
+@@ -504,8 +621,8 @@
+    else if (_selmode == SM_FLOAT) sm_float_handle_key(ch);
+ 
+    /* interpret the backspace and delete keys, also for no-sel mode  */
+-   if (_selmode == SM_NONE && 
+-            ((_x > 0 && (ch == 8 || ch == KEY_BACKSPACE || ch == 127)) 
++   if (_selmode == SM_NONE &&
++            ((_x > 0 && (ch == 8 || ch == KEY_BACKSPACE || ch == 127))
+                                                         || ch == KEY_DC)) {
+       int x;
+       _selmode = false;
+@@ -513,7 +630,7 @@
+                                * condition on the "if" above guarantees that */
+       for (x = _x; x < lyr->width - 1; x++)
+          lyr->cells[x][_y] = lyr->cells[x+1][_y];
+-      
++
+       lyr->cells[lyr->width - 1][_y] = BLANK_CELL;
+    }
+ 
+@@ -527,7 +644,7 @@
+ 
+    /* handle commands that work regardless of whether document is empty */
+    switch (command) {
+-      case COMMAND_QUIT: 
++      case COMMAND_QUIT:
+          ret = ui_ask_yn("Really quit aewan?", 0);
+          if (!ui_cancel && ret) exit(0);
+          break;
+@@ -538,7 +655,7 @@
+                                        * so that it makes sense */
+          return;
+       case COMMAND_SET_FOREGROUND:
+-         newfg = ui_ask_color("Foreground color"); 
++         newfg = ui_ask_color("Foreground color");
+          if (!ui_cancel) _fg = newfg;
+          return;
+       case COMMAND_SET_BACKGROUND:
+@@ -567,10 +684,10 @@
+     * is not empty */
+    if (doc_empty()) return;
+    lyr = _doc->layers[_lyr];
+-  
++
+    /* if clipboard exists and we are not in SM_FLOAT mode, delete it */
+    if (_clipboard && _selmode != SM_FLOAT) clear_clipboard();
+-  
++
+    switch (command) {
+       case COMMAND_MOVE_LEFT:  _x--; break;
+       case COMMAND_MOVE_RIGHT: _x++; break;
+@@ -593,7 +710,7 @@
+           lyr->cells[_x][_y].attr = _fg << 4 | _bg;
+           _x++;
+           break;
+-          
++
+       case COMMAND_TOGGLE_SELECTION: /* start or stop selection mode */
+           if (_selmode == SM_NONE) {
+              _selmode = SM_SELECT;
+@@ -604,7 +721,7 @@
+           break;
+ 
+       case COMMAND_CANCEL: _selmode = SM_NONE; break;
+-      case COMMAND_SHOW_LAYER_DLG: 
++      case COMMAND_SHOW_LAYER_DLG:
+                      show_layer_dlg(); /* bring up layer manager dialog */
+                      /* make sure current layer is still valid */
+                      if (_lyr > _doc->layer_count) _lyr = _doc->layer_count - 1;
+@@ -618,7 +735,6 @@
+       case COMMAND_TOGGLE_LINE_MODE:  _lgmode = !_lgmode; break;
+       case COMMAND_TOGGLE_COMPOSITE:  _compmode = !_compmode; break;
+    }
+-   
++
+    correct_coords();
+ }
+-
+--- a/aecat.c
++++ b/aecat.c
+@@ -63,7 +63,7 @@
+                      * This is a full 0-15 color code.*/
+ };
+ 
+-/* Extracts a cell from the appropriate layer (or build one, 
++/* Extracts a cell from the appropriate layer (or build one,
+  * if we are dealing with a composite). Returns it. */
+ void get_decoded_cell(int x, int y, DecodedCell *dec) {
+    if (lyr) decode_cell(&lyr->cells[x][y], dec);
+@@ -136,7 +136,7 @@
+  	    cur_state.bgcolor = dec.bg;
+   	    cur_state.font_tag_open = true;
+ 	 }
+-	 
++
+ 	 /* now render the character */
+          if (dec.ch >= 0 && dec.ch <= 32) fputs(" ", f);
+ 	 else if (dec.ch == '&')          fputs("&amp;", f);
+@@ -165,8 +165,9 @@
+    "Syntax: aecat [-b] [-c] [-{n|N}] [{-p | -l <layer_num>}]\n" \
+    "               [-f <format>] [-o <output_file>] inputfile\n" \
+    "\n" \
+-   "   -f : specifies output format - can be text, html or comment\n" \
++   "   -f : specifies output format - can be text, plain, html or comment\n" \
+    "        The 'comment' format extracts document metadata.\n" \
++   "        The 'plain' format is a shortcut for \"text\" with colour output disabled.\n" \
+    "   -c : prepend a 'clear screen' escape sequence (only valid when\n" \
+    "        outputting text)\n" \
+    "   -o : writes output to specified file rather than stdout\n" \
+@@ -191,12 +192,13 @@
+ #define FMT_HTML 2
+ #define FMT_COMMENT 3
+ #define FMT_LAYERS 4
++#define FMT_PLAIN 5
+ 
+ int main(int argc, char **argv) {
+    static char optstring[] = "o:chl:Lbpf:n";
+    char *inputfile;
+    int ch;
+-   
++
+    int out_fmt = 0; /* In what format to output. */
+ 
+    while (0 < (ch = getopt(argc, argv, optstring)) ) {
+@@ -215,6 +217,8 @@
+                out_fmt = FMT_HTML;
+             else if (strcmp(optarg, "comment") == 0)
+                out_fmt = FMT_COMMENT;
++            else if (strcmp(optarg, "plain") == 0)
++               out_fmt = FMT_PLAIN;
+             else {
+                fprintf(stderr, "Invalid format \"%s\"\n", optarg);
+                exit(1);
+@@ -226,19 +230,19 @@
+ 
+    if (!out_fmt)
+       out_fmt = FMT_TEXT;
+-   
+-   if (out_fmt != FMT_TEXT && clear_screen) 
++
++   if (out_fmt != FMT_TEXT && clear_screen)
+       fprintf(stderr, "Warning: -c option only valid when outputting text\n");
+ 
+    if (out_fmt != FMT_TEXT && suppress_newlines)
+       fprintf(stderr, "Warning: -n option only valid when "
+                       "outputting text\n");
+-   
++
+    if (optind >= argc) rtfm();
+    inputfile = strdup(argv[optind]);
+ 
+    if (! (doc = document_load_from(inputfile)) ) {
+-      fprintf(stderr, "Error loading document from %s (bad format?).\n", 
++      fprintf(stderr, "Error loading document from %s (bad format?).\n",
+                                                         inputfile);
+       fprintf(stderr, "Error description:\n   %s\n", aeff_get_error());
+       exit(1);
+@@ -256,13 +260,17 @@
+    width = doc->layers[0]->width;
+    height = doc->layers[0]->height;
+    lyr = layer_number >= 0 ? doc->layers[layer_number] : NULL;
+-   
++
+    if (outputfile && !(f = fopen(outputfile, "w"))) {
+       fprintf(stderr, "Error opening %s for writing.\n", outputfile);
+       exit(1);
+    }
+    else f = stdout; /* print to standard output if no output file specified */
+ 
++   if (FMT_PLAIN == out_fmt) {
++	   out_fmt = FMT_TEXT;
++	   use_color = false;
++   }
+    switch(out_fmt) {
+       case FMT_TEXT: output_text(); break;
+       case FMT_HTML: output_html(); break;
+--- a/psd.c
++++ b/psd.c
+@@ -40,15 +40,16 @@
+ struct _Document *_doc;
+ char *_filename;
+ int _lyr;
+-int _x, _y; 
++int _x, _y;
+ int _svx, _svy;
++int _mx, _my;					/* Store mouse position for lines */
+ int _fg, _bg;
+ int _selmode;
+ int _ax, _ay;
+ bool _insmode;
+ bool _lgmode;
+ bool _compmode;
+-struct _Layer *_clipboard; 
++struct _Layer *_clipboard;
+ 
+ 
+ void get_norm_sel(int *x0, int *y0, int *x1, int *y1) {
+@@ -69,6 +70,8 @@
+    _clipboard = 0;
+    _lgmode = false;
+    _compmode = false;
++   /* Mouse pressed... initially not pressed */
++   _mx = _my = -1;
+ }
+ 
+ void switch_to_layer(int l) {
+@@ -79,4 +82,3 @@
+    if (_x >= lyr->width)  _x = lyr->width - 1;
+    if (_y >= lyr->height) _y = lyr->height - 1;
+ }
+-
+--- a/psd.h
++++ b/psd.h
+@@ -56,6 +56,7 @@
+ extern int _lyr;      /* currently active layer. This is a valid layer
+                        * index if and only if _doc->layer_count >= 1 */
+ extern int _x, _y;    /* cursor position (logical coordinates) */
++extern int _mx, _my;  /* mouse pressed position (logical coordinates) */
+ extern int _svx, _svy;/* "smallest visible x" and "smallest visible y"
+                        * These are used in order to convert logical coordinates
+                        * to screen coordinates. Logical coordinates _svx,_svy
+--- a/aewan.c
++++ b/aewan.c
+@@ -70,7 +70,7 @@
+    kurses_move(0, kurses_height() - 1);
+    kurses_color(3, 0);
+    printw("[Lyr %2d] (%3d, %3d) ", _lyr, _x, _y);
+-   
++
+    if (_selmode == SM_NONE) {
+       printw("%-20s", _doc->layer_count ? _doc->layers[_lyr]->name : "[empty]");
+       kurses_color(3, 0);
+@@ -87,14 +87,14 @@
+          kurses_color(7, 0);
+       }
+       else printw("        ");
+-      
++
+       if (_lgmode) {
+          kurses_color(0, 4);
+          addstr(" LINES! ");
+          kurses_color(7, 0);
+       }
+       else printw("        ");
+-      
++
+       if (_compmode) {
+          kurses_color(0, 5);
+          addstr(" COMPOS ");
+@@ -131,7 +131,7 @@
+ 
+    scr_width = kurses_width();
+    scr_height = kurses_height();
+-   
++
+    erase();
+    paint_desktop();
+    paint_status_bar();
+@@ -150,8 +150,8 @@
+          Layer *l = _doc->layers[i];
+          if (l->visible)
+             layer_paint(l, -_svx, -_svy, 0, 0,
+-                        scr_width, scr_height - 1, 
+-                        (_selmode == SM_SELECT && i == _lyr) ? 
++                        scr_width, scr_height - 1,
++                        (_selmode == SM_SELECT && i == _lyr) ?
+                         layer_paint_callback : 0);
+       }
+    }
+@@ -159,7 +159,7 @@
+       /* paint only current layer regardless of visibility, and with no
+        * transparency */
+       layer_paint_opaque(_doc->layers[_lyr], -_svx, -_svy, 0, 0,
+-                         scr_width, scr_height - 1, 
++                         scr_width, scr_height - 1,
+                          _selmode == SM_SELECT ?  layer_paint_callback : 0);
+    }
+ 
+@@ -167,7 +167,7 @@
+       /* paint clipboard */
+       layer_paint(_clipboard, _x - _svx, _y - _svy, 0, 0,
+                   scr_width, scr_height - 1, NULL);
+-   
++
+    if (!kurses_move(_x - _svx, _y - _svy)) kurses_move(0, 0);
+    refresh();
+ }
+@@ -178,7 +178,7 @@
+ 
+    scr_width = kurses_width();
+    scr_height = kurses_height();
+-   
++
+    kurses_color(8, 0);
+    for (y = 0; y < scr_height - 1; y++) {
+       kurses_move(0, y);
+@@ -191,14 +191,15 @@
+ /* ----------------------------------------------------------------------- */
+ int main(int argc, char **argv) {
+    /* debug output to /tmp/aewan.log, or /dev/null */
+-   close(2);
+    #ifdef DEBUG
+-      if (2 != open("aewan.log", O_WRONLY | O_CREAT | O_TRUNC)) exit(13);
+-   #else
+-      if (2 != open("/dev/null", O_WRONLY)) exit(13);
++	close(2);
++	if (2 != open("aewan.log", O_WRONLY | O_CREAT | O_TRUNC)) exit(13);
++
++/*   #else
++	 if (2 != open("/dev/null", O_WRONLY)) exit(13); */
+    #endif
+-   
+-   zero_state();   
++
++   zero_state();
+    kurses_init();
+    atexit(kurses_finalize);
+    keys_init();
+@@ -215,4 +216,3 @@
+       handle_key(getch());
+    }
+ }
+-

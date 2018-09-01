@@ -1,14 +1,23 @@
-BuildRequires += $(LibDir)/libxmp.a # static-libxmp
-BuildRequires += $(BinDir)/pkg-config # pkg-config
-
 include ../../Library/GNU.mk
 
-Title=		Extended Module player
+BuildRequires += $(LibDir)/libxmp.a	# static-libxmp
+BuildRequires += $(BinDir)/pkg-config	# pkg-config
+BuildRequires += $(BinDir)/autoconf	# autoconf
+BuildRequires += $(BinDir)/automake	# automake
+
+Title=		xmp
 Name=		xmp
-Version=	4.0.7
+Version=	4.1.0
 Site=		http://xmp.sourceforge.net
-Source=		http://downloads.sourceforge.net/xmp/$(Name)-$(Version).tar.gz
+Source=		https://github.com/cmatsuoka/xmp-cli/archive/xmp-$(Version).tar.gz
 License=	GPL
+
+UncompressedName=xmp-cli-xmp-$(Version)
+
+define build_pre_hook
+$(verify_buildrequires)
+cd $(BuildDir) && ./autogen.sh
+endef
 
 define test_hook
 $(BinDir)/xmp --version | grep $(Version)

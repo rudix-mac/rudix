@@ -1,0 +1,5 @@
+#!/bin/sh
+install-info \
+    $3/usr/local/share/info/nano.info \
+    $3/usr/local/share/info/dir
+exit 0

@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		NcFTP Client
 Name=		ncftp
-Version=	3.2.5
+Version=	3.2.6
 Site=		http://www.ncftp.com/
-Source=		ftp://ftp.ncftp.com/ncftp/ncftp-$(Version)-src.tar.bz2
+Source=		ftp://ftp.ncftp.com/ncftp/ncftp-$(Version)-src.tar.xz
 License=	The Clarified Artistic License
 
 ReadMeFile=	$(SourceDir)/README.txt

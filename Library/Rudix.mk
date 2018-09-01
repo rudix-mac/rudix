@@ -14,6 +14,7 @@ System = $(shell uname)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
+RUDIX_QUIET?=no
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
@@ -237,11 +238,9 @@ curl \
 	--remote-name
 endef
 
-define verify_checksum
-if test -f checksum ; then \
-	shasum --warn --check checksum ; \
-fi
-endef
+ifeq ($(RUDIX_QUIET),yes)
+FetchExtra+=--silent
+endif
 
 define verify_preprequires
 for x in $(PrepRequires) ; do \
@@ -317,7 +316,6 @@ $(verify_preprequires)
 endef
 
 define prep_hook
-$(verify_checksum)
 $(uncompress_source)
 mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
