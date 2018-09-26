@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		Lua
 Name=		lua
-Version=	5.3.4
+Version=	5.3.5
 Site=		http://www.lua.org/
 Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
 License=	MIT
