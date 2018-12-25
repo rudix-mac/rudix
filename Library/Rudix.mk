@@ -255,9 +255,12 @@ for x in $(BuildRequires) ; do \
 endef
 
 define uncompress_source
+echo $(shell basename $(Source)); \
+echo `file -b --mime-type $(shell basename $(Source))`; \
 case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-tar) tar xf $(shell basename $(Source)) ;; \
 	application/x-gzip) tar zxf $(shell basename $(Source)) ;; \
+	application/gzip) tar zxf $(shell basename $(Source)) ;; \
 	application/x-bzip2) tar jxf $(shell basename $(Source)) ;; \
 	application/x-xz) tar zxf $(shell basename $(Source)) || unxz -c $(shell basename $(Source)) | tar xf - ;; \
 	application/zip) unzip -q $(shell basename $(Source)) ;; \
