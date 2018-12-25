@@ -6,12 +6,14 @@ Version=	2.3.0
 Site=		https://github.com/uclouvain/${Name}
 Source=		https://github.com/uclouvain/${Name}/archive/v${Version}.tar.gz
 License=    GPL
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/LICENSE
 
 define build_hook
 mkdir -p $(BuildDir)/build
 cd $(BuildDir)/build; \
 pwd ;\
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$(InstallDir)/usr/local;\
+cmake .. -DCMAKE_BUILD_TYPE=Release ;\
 make
 endef
 
@@ -20,5 +22,5 @@ mkdir -p $(InstallDir)/usr/local
 endef
 
 define install_hook
-make -C $(BuildDir)/build install
+make DESTDIR=$(InstallDir) -C $(BuildDir)/build install
 endef
