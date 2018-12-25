@@ -1,6 +1,0 @@
-[submodule "Packages"]
-	path = Packages
-	url = https://github.com/rudix-mac/pkg.git
-[submodule "Documents"]
-	path = Documents
-	url = https://github.com/rudix-mac/rudix-mac.github.io.git
