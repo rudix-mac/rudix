@@ -16,7 +16,7 @@ GnuConfigureExtra += --disable-wxwidgets
 GnuConfigureExtra += --with-x=no
 GnuConfigureExtra += --with-qt=no
 GnuConfigureExtra += --with-gd=no
-GnuConfigureExtra += --without-cairo
+GnuConfigureExtra += --with-cairo=yes
 GnuConfigureExtra += --without-tutorial
 
 define test_hook
