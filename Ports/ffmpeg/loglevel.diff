@@ -1,0 +1,67 @@
+diff -Naur ffmpeg-4.1/libavformat/dump.c ffmpeg-build/libavformat/dump.c
+--- ffmpeg-4.1/libavformat/dump.c	2017-10-15 17:59:38.000000000 +0200
++++ ffmpeg-build/libavformat/dump.c	2017-11-18 08:58:53.000000000 +0100
+@@ -130,32 +130,36 @@
+         av_log(NULL, AV_LOG_INFO, "%1.0fk %s", d / 1000, postfix);
+ }
+
+-static void dump_metadata(void *ctx, AVDictionary *m, const char *indent)
++static void dump_metadata_loglevel(int loglevel, void *ctx, AVDictionary *m, const char *indent)
+ {
+     if (m && !(av_dict_count(m) == 1 && av_dict_get(m, "language", NULL, 0))) {
+         AVDictionaryEntry *tag = NULL;
+
+-        av_log(ctx, AV_LOG_INFO, "%sMetadata:\n", indent);
++        av_log(ctx, loglevel, "%sMetadata:\n", indent);
+         while ((tag = av_dict_get(m, "", tag, AV_DICT_IGNORE_SUFFIX)))
+             if (strcmp("language", tag->key)) {
+                 const char *p = tag->value;
+-                av_log(ctx, AV_LOG_INFO,
++                av_log(ctx, loglevel,
+                        "%s  %-16s: ", indent, tag->key);
+                 while (*p) {
+                     char tmp[256];
+                     size_t len = strcspn(p, "\x8\xa\xb\xc\xd");
+                     av_strlcpy(tmp, p, FFMIN(sizeof(tmp), len+1));
+-                    av_log(ctx, AV_LOG_INFO, "%s", tmp);
++                    av_log(ctx, loglevel, "%s", tmp);
+                     p += len;
+-                    if (*p == 0xd) av_log(ctx, AV_LOG_INFO, " ");
+-                    if (*p == 0xa) av_log(ctx, AV_LOG_INFO, "\n%s  %-16s: ", indent, "");
++                    if (*p == 0xd) av_log(ctx, loglevel, " ");
++                    if (*p == 0xa) av_log(ctx, loglevel, "\n%s  %-16s: ", indent, "");
+                     if (*p) p++;
+                 }
+-                av_log(ctx, AV_LOG_INFO, "\n");
++                av_log(ctx, loglevel, "\n");
+             }
+     }
+ }
+
++static void __inline__ dump_metadata(void *ctx, AVDictionary *m, const char *indent) {
++	dump_metadata_loglevel(AV_LOG_INFO, ctx, m, indent);
++}
++
+ /* param change side data*/
+ static void dump_paramchange(void *ctx, AVPacketSideData *sd)
+ {
+@@ -615,12 +619,17 @@
+     if (ic->nb_programs) {
+         int j, k, total = 0;
+         for (j = 0; j < ic->nb_programs; j++) {
++			int loglevel = AV_LOG_INFO;
++			if (0 == ic->programs[j]->nb_stream_indexes)
++				loglevel = AV_LOG_VERBOSE;
++
+             AVDictionaryEntry *name = av_dict_get(ic->programs[j]->metadata,
+                                                   "name", NULL, 0);
+-            av_log(NULL, AV_LOG_INFO, "  Program %d %s\n", ic->programs[j]->id,
++            av_log(NULL, loglevel, "  Program %d %s\n", ic->programs[j]->id,
+                    name ? name->value : "");
+-            dump_metadata(NULL, ic->programs[j]->metadata, "    ");
++            dump_metadata_loglevel(loglevel, NULL, ic->programs[j]->metadata, "    ");
+             for (k = 0; k < ic->programs[j]->nb_stream_indexes; k++) {
++				/* use AV_LOG_INFO because ic->programs[j]->nb_stream_indixes != 0 here */
+                 dump_stream_format(ic, ic->programs[j]->stream_index[k],
+                                    index, is_output);
+                 printed[ic->programs[j]->stream_index[k]] = 1;
