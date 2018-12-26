@@ -16,7 +16,7 @@ GnuConfigureExtra += --disable-wxwidgets
 GnuConfigureExtra += --with-x=no
 GnuConfigureExtra += --with-qt=no
 GnuConfigureExtra += --with-gd=yes
-GnuConfigureExtra += --with-cairo=yes
+GnuConfigureExtra += --with-cairo=no
 GnuConfigureExtra += --with-mif=yes
 GnuConfigureExtra += --without-tutorial
 
