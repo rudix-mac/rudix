@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		LibJPEG
 Name=		libjpeg
-Version=	9a
+Version=	9c
 Site=		http://www.ijg.org/
 Source=		http://www.ijg.org/files/jpegsrc.v$(Version).tar.gz
 License=	BSD-like
