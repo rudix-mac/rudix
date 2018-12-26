@@ -1,14 +1,14 @@
 BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libidn.la # static-libidn
-BuildRequires += $(LibDir)/libssl.la # static-libressl
+BuildRequires += $(LibDir)/libidn2.la # static-libidn
+# BuildRequires += $(LibDir)/libssl.la # static-libressl
 
 include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.18
+Version=	1.20
 Site=		http://www.gnu.org/software/wget/
-Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.xz
+Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)
