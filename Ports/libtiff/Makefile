@@ -4,12 +4,13 @@ include ../../Library/GNU.mk
 
 Title=		LibTIFF
 Name=		libtiff
-Version=	4.0.3
+Version=	4.0.10
 Site=		http://www.remotesensing.org/libtiff
-Source=		ftp://ftp.remotesensing.org/pub/libtiff/tiff-$(Version).tar.gz
+Source=		http://download.osgeo.org/libtiff/tiff-$(Version).tar.gz
 License=	BSD
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
+ReadMeFile=	$(SourceDir)/README.md
 
 UncompressedName=tiff-$(Version)
 
