@@ -12,6 +12,10 @@ ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
 ConfigureExtra += --static
 endif
 
+ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
+ConfigureExtra += --static
+endif
+
 define test_hook
 $(BinDir)/idn --version | grep $(Version)
 endef
