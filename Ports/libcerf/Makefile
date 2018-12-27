@@ -12,5 +12,5 @@ mkdir -p $(BuildDir)/build; cd $(BuildDir)/build; cmake ..; make
 endef
 
 define install_hook
-mkdir -p $(InstallDir); cd $(BuildDir)/build; make DESTDIR=$(InstallDir) install
+mkdir -p $(InstallDir); make DESTDIR=$(shell pwd)/$(InstallDir) -C $(BuildDir)/build install
 endef
