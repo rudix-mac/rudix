@@ -1,3 +1,6 @@
+BuildRequires += $(BinDir)/aclocal	# automake
+BuildRequires += $(BinDir)/autoconf	# autoconf
+
 include ../../Library/GNU.mk
 
 Title=		Yasm
@@ -10,8 +13,14 @@ License=	BSD
 
 ReadMeFile=	README
 
+
+define build_pre_hook
+cd $(BuildDir); ./autogen.sh
+endef
+
 define install_post_hook
-install -m 644 $(BuildDir)/{GNU*,*.txt} $(InstallDir)/$(DocDir)/yasm/
+install -m 644 $(BuildDir)/GNU* $(InstallDir)/$(DocDir)/yasm/
+install -m 644 $(BuildDir)/*.txt $(InstallDir)/$(DocDir)/yasm/
 endef
 
 define test_hook
