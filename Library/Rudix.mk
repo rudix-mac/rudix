@@ -24,6 +24,14 @@ RUDIX_BUILD_STATIC?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
+RUDIX_MSG_RETRIEVE?=Retrieving $(Source)
+RUDIX_MSG_PREP?=Preparing $(DistName)
+RUDIX_MSG_BUILD?=Building $(DistName)
+RUDIX_MSG_CHECK?=Checking $(DistName)
+RUDIX_MSG_INSTALL?=Installing $(DistName)
+RUDIX_MSG_PKG?=Packing $(PkgFile)
+RUDIX_MSG_TEST?=Testing $(DistName) and $(PkgFile)
+
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
 PortDir := $(shell pwd)
@@ -72,65 +80,58 @@ all: pkg
 
 # Retrieve source
 retrieve:
-	@$(call info_color,Retrieving $(Source))
+	@$(call info_color,$(RUDIX_MSG_RETRIEVE))
 	@$(call retrieve_pre_hook)
 	@$(call retrieve_hook)
 	@$(call retrieve_post_hook)
-	@$(call success_color,Retrieved)
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve
-	@$(call info_color,Preparing $(DistName))
+	@$(call info_color,$(RUDIX_MSG_PREP))
 	@$(call prep_pre_hook)
 	@$(call prep_hook)
 	@$(call prep_post_hook)
-	@$(call success_color,Prepared)
 	@touch $@
 
 # Build source
 build: prep
-	@$(call info_color,Building $(DistName))
+	@$(call info_color,$(RUDIX_MSG_BUILD))
 	@$(call build_pre_hook)
 	@$(call build_hook)
 	@$(call build_post_hook)
-	@$(call success_color,Built)
 	@touch $@
 
 # Check build
 check: build
-	@$(call info_color,Checking $(DistName))
+	@$(call info_color,$(RUDIX_MSG_CHECK))
 	@$(call check_pre_hook)
 	@$(call check_hook)
 	@$(call check_post_hook)
-	@$(call success_color,Checked)
 	@touch $@
 
 # Install into a temporary directory
 install: build
-	@$(call info_color,Installing $(DistName))
+	@$(call info_color,$(RUDIX_MSG_INSTALL))
 	@$(call install_pre_hook)
 	@$(call install_hook)
 	@$(call install_post_hook)
-	@$(call success_color,Installed)
 	@touch $@
 
 # Create package
 pkg: install
-	@$(call info_color,Packing $(PkgFile))
+	@$(call info_color,$(RUDIX_MSG_PKG))
 	@$(call pkg_pre_hook)
 	@$(call pkg_hook)
 	@$(call pkg_post_hook)
-	@$(call success_color,Packed)
 	@touch $@
 
 # Run all tests
 test: pkg check
-	@$(call info_color,Testing $(DistName) and $(PkgFile))
+	@$(call info_color,$(RUDIX_MSG_TEST))
 	@$(call test_pre_hook)
 	@$(call test_hook)
 	@$(call test_post_hook)
-	@$(call success_color,Tested)
 	@touch $@
 
 installclean:
