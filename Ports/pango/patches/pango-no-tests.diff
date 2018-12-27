@@ -1,0 +1,26 @@
+Only in pango-build: config.log
+Only in pango-build: config.lt
+Only in pango-build: libtool
+diff -ru pango-1.42.4/Makefile.am pango-build/Makefile.am
+--- pango-1.42.4/Makefile.am	2018-07-28 17:15:06.000000000 +0200
++++ pango-build/Makefile.am	2018-12-27 16:35:46.447563985 +0100
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to create Makefile.in.
+ 
+-SUBDIRS= pango utils examples docs tools tests win32
++SUBDIRS= pango utils examples docs tools # tests win32
+ 
+ meson_dist_files = \
+ 	pango/pango-features.h.meson \
+diff -ru pango-1.42.4/Makefile.in pango-build/Makefile.in
+--- pango-1.42.4/Makefile.in	2018-08-20 17:06:51.000000000 +0200
++++ pango-build/Makefile.in	2018-12-27 16:36:16.421122870 +0100
+@@ -422,7 +422,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = pango utils examples docs tools tests win32
++SUBDIRS = pango utils examples docs tools # tests win32
+ meson_dist_files = \
+ 	pango/pango-features.h.meson \
+ 	utils/meson.build \

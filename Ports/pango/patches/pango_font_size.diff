@@ -1,7 +1,7 @@
-diff --git pango-1.30.1/pango/pangocairo-coretextfont.c pango-build/pango/pangocairo-coretextfont.c
+diff --git a/pango/pangocairo-coretextfont.c b/pango/pangocairo-coretextfont.c
 index 9dc33447..c07f1c77 100644
---- pango-1.30.1/pango/pangocairo-coretextfont.c
-+++ pango-build/pango/pangocairo-coretextfont.c
+--- a/pango/pangocairo-coretextfont.c
++++ b/pango/pangocairo-coretextfont.c
 @@ -36,7 +36,6 @@ struct _PangoCairoCoreTextFont
  {
    PangoCoreTextFont font;
@@ -49,10 +49,10 @@ index 9dc33447..c07f1c77 100644
    _pango_core_text_font_set_ctfont (cfont, font_ref);
  
    if (synthesize_italic)
-diff --git pango-1.30.1/pango/pangocairo-coretextfontmap.c pango-build/pango/pangocairo-coretextfontmap.c
+diff --git a/pango/pangocairo-coretextfontmap.c b/pango/pangocairo-coretextfontmap.c
 index 5054b7a8..ba5dcec0 100644
---- pango-1.30.1/pango/pangocairo-coretextfontmap.c
-+++ pango-build/pango/pangocairo-coretextfontmap.c
+--- a/pango/pangocairo-coretextfontmap.c
++++ b/pango/pangocairo-coretextfontmap.c
 @@ -186,5 +186,5 @@ static void
  pango_cairo_core_text_font_map_init (PangoCairoCoreTextFontMap *cafontmap)
  {
@@ -60,10 +60,10 @@ index 5054b7a8..ba5dcec0 100644
 -  cafontmap->dpi = 96.;
 +  cafontmap->dpi = 72.;
  }
-diff --git pango-1.30.1/pango/pangocoretext-fontmap.c pango-build/pango/pangocoretext-fontmap.c
+diff --git a/pango/pangocoretext-fontmap.c b/pango/pangocoretext-fontmap.c
 index c5cacab4..4d101847 100644
---- pango-1.30.1/pango/pangocoretext-fontmap.c
-+++ pango-build/pango/pangocoretext-fontmap.c
+--- a/pango/pangocoretext-fontmap.c
++++ b/pango/pangocoretext-fontmap.c
 @@ -806,7 +806,6 @@ get_context_matrix (PangoContext *context,
  /*
   * Helper functions for PangoCoreTextFontsetKey
@@ -100,10 +100,10 @@ index c5cacab4..4d101847 100644
  }
  
  
-diff --git pango-1.30.1/pango/pangocoretext-private.h pango-build/pango/pangocoretext-private.h
+diff --git a/pango/pangocoretext-private.h b/pango/pangocoretext-private.h
 index 76eb1ebc..c6c642cd 100644
---- pango-1.30.1/pango/pangocoretext-private.h
-+++ pango-build/pango/pangocoretext-private.h
+--- a/pango/pangocoretext-private.h
++++ b/pango/pangocoretext-private.h
 @@ -98,8 +98,6 @@ void                  _pango_core_text_font_set_ctfont           (PangoCoreTextF
  
  PangoFontDescription *_pango_core_text_font_description_from_ct_font_descriptor (CTFontDescriptorRef desc);
@@ -113,10 +113,10 @@ index 76eb1ebc..c6c642cd 100644
  _PANGO_EXTERN
  int                   pango_core_text_font_key_get_size    (const PangoCoreTextFontKey *key);
  _PANGO_EXTERN
-diff --git pango-1.30.1/pango/pangocoretext.c pango-build/pango/pangocoretext.c
+diff --git a/pango/pangocoretext.c b/pango/pangocoretext.c
 index 2aa1810a..8cba1aae 100644
---- pango-1.30.1/pango/pangocoretext.c
-+++ pango-build/pango/pangocoretext.c
+--- a/pango/pangocoretext.c
++++ b/pango/pangocoretext.c
 @@ -225,7 +225,10 @@ pango_core_text_font_class_init (PangoCoreTextFontClass *class)
    object_class->finalize = pango_core_text_font_finalize;
  
@@ -129,10 +129,10 @@ index 2aa1810a..8cba1aae 100644
    font_class->get_coverage = pango_core_text_font_get_coverage;
    font_class->find_shaper = pango_core_text_font_find_shaper;
    font_class->get_font_map = pango_core_text_font_get_font_map;
-diff --git pango-1.30.1/tests/test-layout.c pango-build/tests/test-layout.c
+diff --git a/tests/test-layout.c b/tests/test-layout.c
 index 4bce4439..07ca6909 100644
---- pango-1.30.1/tests/test-layout.c
-+++ pango-build/tests/test-layout.c
+--- a/tests/test-layout.c
++++ b/tests/test-layout.c
 @@ -265,9 +265,18 @@ test_file (const gchar *filename, GString *string)
    parse_params (contents, &width, &ellipsize_at, &ellipsize, &wrap);
  

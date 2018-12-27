@@ -15,6 +15,7 @@ GnuConfigureExtra += --without-xft
 GnuConfigureExtra += --disable-installed-tests
 
 define prep_post_hook
-pwd; patch -p0 < patches/pango_font_size.diff
+patch -p0 < patches/pango-no-tests.diff
+patch -p1 -d $(BuildDir) < patches/pango_font_size.diff
 endef
 
