@@ -108,7 +108,7 @@ check: build
 
 # Install into a temporary directory
 install: build
-	@$(call info_color,Installing $(DistName))
+	@$(call info_color,Installing $(DistName) from `pwd`)
 	@$(call install_pre_hook)
 	@$(call install_hook)
 	@$(call install_post_hook)
