@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		NASM
 Name=		nasm
-Version=	2.11.08
+Version=	2.14.02
 Site=		http://www.nasm.us
 Source=		http://www.nasm.us/pub/nasm/releasebuilds/$(Version)/$(Name)-$(Version).tar.bz2
 License=	BSD
