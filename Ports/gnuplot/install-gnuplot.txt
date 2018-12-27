@@ -7,7 +7,9 @@ freetype-2.9.1.pkg
 fribidi-1.0.5.pkg
 glib-2.54.3.pkg
 libcerf-1.10.pkg
+libjpeg-9c.pkg
 libpng-1.6.14.pkg
+libtiff-4.0.10.pkg
 ossp-uuid-1.6.2.pkg
 pango-1.42.4.pkg
 pixman-0.34.0.pkg
