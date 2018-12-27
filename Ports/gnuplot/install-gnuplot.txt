@@ -1,0 +1,16 @@
+To install gnuplot-5.2.5.pkg, you will need following additional packages to
+generate PDFs correctly
+
+cairo-1.16.0.pkg
+fontconfig-2.13.1.pkg
+freetype-2.9.1.pkg
+fribidi-1.0.5.pkg
+glib-2.54.3.pkg
+libcerf-1.10.pkg
+libpng-1.6.14.pkg
+ossp-uuid-1.6.2.pkg
+pango-1.42.4.pkg
+pixman-0.34.0.pkg
+poppler-0.72.0.pkg
+
+Plus extra dependecies that may arise for one of those packages
