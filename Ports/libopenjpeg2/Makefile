@@ -13,7 +13,7 @@ define build_hook
 mkdir -p $(BuildDir)/build
 cd $(BuildDir)/build; \
 pwd ;\
-cmake .. -DCMAKE_BUILD_TYPE=Release ;\
+cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_STATIC_LIBS=ON;\
 make
 endef
 
@@ -22,5 +22,5 @@ mkdir -p $(InstallDir)/usr/local
 endef
 
 define install_hook
-make DESTDIR=$(InstallDir) -C $(BuildDir)/build install
+make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
 endef

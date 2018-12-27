@@ -11,13 +11,13 @@ define build_hook
 mkdir -p $(BuildDir)/build
 cd $(BuildDir)/build; \
 pwd ;\
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$(InstallDir)/usr/local;\
+cmake .. -DCMAKE_BUILD_TYPE=Release ;\
 make
 endef
 
 define install_hook
-make -C $(BuildDir)/build install
+make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
 endef
 
 BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libopenjp2.la # libopenjpeg2
+BuildRequires += $(LibDir)/libopenjp2.a # libopenjpeg2
