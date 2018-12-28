@@ -5,11 +5,11 @@ include ../../Library/GNU.mk
 Title=		Lynx
 Name=		lynx
 Version=	2.8.9
-Site=		http://lynx.isc.org
-Source=		http://lynx.isc.org/current/$(Name)$(Version)dev.6.tar.bz2
+Site=		http://lynx.invisible-island.net
+Source=		https://invisible-mirror.net/archives/$(Name)/tarballs/$(Name)$(Version)rel.1.tar.bz2
 License=	GPL
 
-UncompressedName=lynx2-8-9
+UncompressedName=lynx2.8.9rel.1
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -liconv -framework CoreFoundation

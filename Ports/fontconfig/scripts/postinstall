@@ -1,2 +1,3 @@
 #!/bin/sh
-/usr/local/bin/fc-cache -frv
+$3/usr/local/bin/fc-cache -frv
+exit 0
