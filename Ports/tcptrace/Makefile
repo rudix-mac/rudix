@@ -14,6 +14,6 @@ patch -d $(SourceDir) < patches/00-install.diff
 endef
 # ReadMeFile=	$(SourceDir)/README
 
-# define test_hook
-# $(BinDir)/mg --help | grep $(Version)
-# endef
+define test_hook
+$(BinDir)/tcptrace -v | grep $(Version)
+endef

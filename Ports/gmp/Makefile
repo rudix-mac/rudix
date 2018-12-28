@@ -8,6 +8,7 @@ Source=		https://gmplib.org/download/gmp/gmp-$(Version).tar.xz
 License=	GPLv2/LGPLv3
 
 GnuConfigureExtra += --enable-cxx
+GnuConfigureExtra += --enable-static
 GnuConfigureExtra += --with-pic
 
 define test_hook
