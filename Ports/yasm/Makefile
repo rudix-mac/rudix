@@ -1,3 +1,6 @@
+BuildRequires += $(BinDir)/aclocal	# automake
+BuildRequires += $(BinDir)/autoconf	# autoconf
+
 include ../../Library/GNU.mk
 
 Title=		Yasm
