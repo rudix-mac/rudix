@@ -2,7 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		GnuTLS
 Name=		gnutls
-Version=	3.5.8
+MajorVersion=	3.6
+Version=	3.6.5
 Site=		http://gnutls.org
-Source=		ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/$(Name)-$(Version).tar.xz
+Source= 	https://www.gnupg.org/ftp/gcrypt/$(Name)/v$(MajorVersion)/$(Name)-$(Version).tar.xz
 License=	LGPLv2.1+
+
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/doc/COPYING.LESSER
