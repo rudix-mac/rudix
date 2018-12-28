@@ -1,0 +1,115 @@
+Index: commands.c
+===================================================================
+--- commands.c	(revision 1265)
++++ commands.c	(working copy)
+@@ -286,7 +286,7 @@
+     {"includeonly", CmdIgnoreParameter, No_Opt_One_NormParam},
+     {"nocite", CmdNoCite, No_Opt_One_NormParam},
+     {"stepcounter", CmdIgnoreParameter, No_Opt_One_NormParam},
+-    {"refstepcounter", CmdIgnoreParameter, No_Opt_One_NormParam},
++    {"refstepcounter", CmdCounter, COUNTER_INCR},
+     {"fnsymbol", CmdIgnoreParameter, No_Opt_One_NormParam},
+     {"Alph", CmdIgnoreParameter, No_Opt_One_NormParam},
+     {"alph", CmdIgnoreParameter, No_Opt_One_NormParam},
+Index: convert.c
+===================================================================
+--- convert.c	(revision 1265)
++++ convert.c	(working copy)
+@@ -827,6 +827,8 @@
+
+     if (TryConditionSet(cCommand))
+         return;
++	if (TryTheCounter (cCommand))
++		return;
+
+     diagnostics(WARNING, "Unknown command '\\%s'", cCommand);
+ }
+Index: counters.c
+===================================================================
+--- counters.c	(revision 1265)
++++ counters.c	(working copy)
+@@ -139,3 +139,28 @@
+             Counters[i].number = 0;
+     }
+ }
++
++int TryTheCounter(char *theCommand)
++/*
++  Purpose: see if this is a \the<counter> for a defined counter
++*/
++{
++	char *varCandidate = NULL;
++	int varValue;
++
++	if (strlen(theCommand) <= 3)
++		return FALSE;
++	if (strncmp(theCommand, "the", 3) != 0)
++		return FALSE;
++	varCandidate = &theCommand[3];
++	varValue = existsCounter(varCandidate);
++
++	if (varValue == -1) {
++		diagnostics(WARNING, "Can '%s' reference a variable?", varCandidate);
++	} else {
++		varValue = getCounter(varCandidate);
++		/* diagnostics(WARNING, "Assuming '%s' is a variable: [%d]", varCandidate, varValue); */
++		fprintRTF("%d", varValue);
++	}
++	return TRUE;
++}
+Index: counters.h
+===================================================================
+--- counters.h	(revision 1265)
++++ counters.h	(working copy)
+@@ -2,4 +2,4 @@
+ int getCounter(char * s);
+ void incrementCounter(char * s);
+ void zeroKeyCounters(char *key);
+-
++int TryTheCounter(char *theCommand);
+Index: funct1.c
+===================================================================
+--- funct1.c	(revision 1265)
++++ funct1.c	(working copy)
+@@ -761,9 +761,11 @@
+         else
+             setCounter(s, num);
+
+-    } else if (code == COUNTER_NEW)
++    } else if (code == COUNTER_NEW) {
+         setCounter(s, 0);
+-
++	} else if (code == COUNTER_INCR) {
++		incrementCounter(s);
++	}
+     free(s);
+ }
+
+Index: funct1.h
+===================================================================
+--- funct1.h	(revision 1265)
++++ funct1.h	(working copy)
+@@ -91,6 +91,7 @@
+ #define COUNTER_SET   2
+ #define COUNTER_ADD   3
+ #define COUNTER_VALUE 4
++#define COUNTER_INCR  5
+
+ void CmdCounter(int code);
+
+Index: xrefs.c
+===================================================================
+--- xrefs.c	(revision 1265)
++++ xrefs.c	(working copy)
+@@ -1639,9 +1639,9 @@
+
+     pretext = getBracketParam();
+     option = getBracketParam();
+-    if (!option) {
++    if (option == NULL) {
+         option = pretext;
+-        pretext = '\0';
++        pretext = NULL;
+     }
+     if (code != CITE_P && code != CITE_P_STAR && code != CITE_YEAR_P)
+         g_current_cite_paren = FALSE;
