@@ -12,5 +12,5 @@ LicenseFile=	$(SourceDir)/COPYING.LESSERv3
 # Examples, tests and tools requires static libs
 GnuConfigureExtra += --enable-static
 GnuConfigureExtra += --enable-fat
-GnuConfigureExtra += --disable-public-key
+GnuConfigureExtra += --enable-public-key
 GnuConfigureExtra += --disable-openssl
