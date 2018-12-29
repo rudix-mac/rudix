@@ -3,7 +3,9 @@
 # Copyright (c) 2011-2017 Rudá Moura (Rudix)
 # Authors: Pedro A. Aranda Gutiérrez
 #
+BuildRequires += $(BinDir)/cmake
 CMakeExtra = -DCMAKE_BUILD_TYPE=Release
+CMakeExtra += -DCMAKE_INSTALL_PREFIX=$(Prefix)
 
 ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
 CMakeExtra += -DBUILD_STATIC_LIBS=ON
