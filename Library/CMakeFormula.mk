@@ -4,8 +4,8 @@
 # Authors: Pedro A. Aranda Gutiérrez
 #
 
-define pre_build_hook
-mkdir-p $(BuildDir)/build && cd $(BuildDir)/build && cmake .. $(CMakeExtra)
+define build_pre_hook
+mkdir -p $(BuildDir)/build && cd $(BuildDir)/build && cmake .. $(CMakeExtra)
 endef
 
 define build_hook
