@@ -3,6 +3,11 @@
 # Copyright (c) 2011-2017 Rudá Moura (Rudix)
 # Authors: Pedro A. Aranda Gutiérrez
 #
+CMakeExtra = -DCMAKE_BUILD_TYPE=Release
+
+ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
+CMakeExtra += -DBUILD_STATIC_LIBS=ON
+endif
 
 define build_pre_hook
 mkdir -p $(BuildDir)/build && cd $(BuildDir)/build && cmake .. $(CMakeExtra)
