@@ -7,8 +7,9 @@ Site=		https://www.gnu.org/software/emacs/
 Source=		https://ftp.gnu.org/gnu/emacs/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
-GnuConfigureExtra += --without-x
-GnuConfigureExtra += --without-ns
+GnuConfigureExtra += --with-x=no
+GnuConfigureExtra += --with-ns=no
+GnuConfigureExtra += --with-gnutls=no
 
 define install_post_hook
 rm -rf $(InstallDir)$(LocalStateDir)

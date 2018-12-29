@@ -1,6 +1,6 @@
 include ../../Library/GNU.mk
 
-Title=		Nettle (low-level crypto library)
+Title=		Nettle
 Name=		nettle
 Version=	3.4.1
 Site=		http://www.lysator.liu.se/~nisse/nettle/
