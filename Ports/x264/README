@@ -1,0 +1,18 @@
+x264 is a free software library and application for encoding
+video streams into the H.264/MPEG-4 AVC compression format, 
+and is released under the terms of the GNU GPL.Features Overview
+
+Provides best-in-class performance, compression, and features.
+
+Achieves dramatic performance, encoding 4 or more 1080p streams in realtime 
+on a single consumer-level computer.
+
+Gives the best quality, having the most advanced psychovisual optimizations.
+
+Support features necessary for many different applications, 
+such as television broadcast, Blu-ray low-latency video applications,
+and web video.
+
+x264 forms the core of many web video services, such as 
+Youtube, Facebook, Vimeo, and Hulu. It is widely used by 
+television broadcasters and ISPs.
