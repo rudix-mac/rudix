@@ -7,5 +7,5 @@ Site=		https://gnutls.org
 Source=		ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/$(Name)-$(Version).tar.xz
 License=	LGPLv2.1+
 
-ReadMeFile=	$(SourceDir)/README.md
+ReadMeFile=		$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/doc/COPYING.LESSER
