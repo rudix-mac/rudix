@@ -9,9 +9,6 @@ License=	Public Domain
 
 BuildRequires += $(LibDir)/libpcap.a
 
-define prep_post_hook
-patch -d $(SourceDir) < patches/00-install.diff
-endef
 # ReadMeFile=	$(SourceDir)/README
 
 define test_hook
