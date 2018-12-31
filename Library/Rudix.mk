@@ -276,6 +276,7 @@ endef
 
 define apply_patches
 for x in $(wildcard *.patch patches/*.patch) ; do \
+    $(call info_color, Applying $$x); \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
