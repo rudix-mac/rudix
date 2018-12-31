@@ -19,9 +19,7 @@ ConfigureExtra += --enable-nonfree
 ConfigureExtra += --enable-libmp3lame
 ConfigureExtra += --enable-libfdk_aac
 
-define prep_post_hook
-patch -p1 -d $(SourceDir) < loglevel.diff
-endef
+PatchLevel = -p1
 
 define test_hook
 $(BinDir)/ffmpeg -version
