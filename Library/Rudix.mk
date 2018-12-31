@@ -274,8 +274,9 @@ application/gzip) tar zxf $(shell basename $(Source)) ;; \
 esac
 endef
 
+# Apply patches respecting order
 define apply_patches
-for x in $(wildcard *.patch patches/*.patch) ; do \
+for x in $(sort $(wildcard *.patch patches/*.patch)) ; do \
     $(call info_color, Applying $$x); \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
