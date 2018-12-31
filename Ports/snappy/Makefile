@@ -1,6 +1,6 @@
 include ../../Library/CMake.mk
 
-Title=		My Package
+Title=		Snappy: A fast compressor/decompressor
 Name=		snappy
 Version=	1.1.7
 Site=		http://google.github.io/snappy
