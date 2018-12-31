@@ -22,6 +22,8 @@ LdFlags += -lintl
 
 BuildRequires += $(LibDir)/libintl.la
 
+PatchLevel = -p1
+
 define install_post_hook
 install -m 755 xtras/mount_ntfs $(DestDir)/$(Prefix)/sbin
 uid=$(shell id -u); sed -i "s/@uid@/$(uid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs

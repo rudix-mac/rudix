@@ -1,0 +1,19 @@
+diff -pur a/src/lowntfs-3g.c b/src/lowntfs-3g.c
+--- a/src/lowntfs-3g.c	2017-03-23 10:42:44.000000000 +0100
++++ b/src/lowntfs-3g.c	2017-09-19 11:11:17.000000000 +0200
+@@ -1929,13 +1929,13 @@ static int ntfs_fuse_utimens(struct SECU
+ 			else
+ 				if (to_set & FUSE_SET_ATTR_ATIME)
+ 					ni->last_access_time
+-						= timespec2ntfs(stin->st_atim);
++						= timespec2ntfs(stin->st_atimespec);
+ 			if (to_set & FUSE_SET_ATTR_MTIME_NOW)
+ 				mask |= NTFS_UPDATE_MTIME;
+ 			else
+ 				if (to_set & FUSE_SET_ATTR_MTIME)
+ 					ni->last_data_change_time 
+-						= timespec2ntfs(stin->st_mtim);
++						= timespec2ntfs(stin->st_mtimespec);
+ 			ntfs_inode_update_times(ni, mask);
+ #if !KERNELPERMS | (POSIXACLS & !KERNELACLS)
+ 		} else
