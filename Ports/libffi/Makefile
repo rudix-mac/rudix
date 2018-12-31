@@ -1,6 +1,6 @@
 include ../../Library/GNU.mk
 
-Title=		LibFFI
+Title=		LibFFI: A Portable Foreign Function Interface Library
 Name=		libffi
 Version=	3.2.1
 Site=		https://sourceware.org/libffi/
