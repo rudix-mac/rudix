@@ -1,3 +1,18 @@
+From 60df2b006e5d4553abc7bb5fe9a99539c91b0022 Mon Sep 17 00:00:00 2001
+From: Tom Schoonjans <Tom.Schoonjans@diamond.ac.uk>
+Date: Fri, 20 Jul 2018 12:30:34 +0100
+Subject: [PATCH] Revert "Restore scaling of CoreText fonts."
+
+This reverts commit f661cdbf8cfbdb2ba7241d8dfa4a579c6dfe0a94.
+---
+ pango/pangocairo-coretextfont.c    | 17 +----------------
+ pango/pangocairo-coretextfontmap.c |  2 +-
+ pango/pangocoretext-fontmap.c      | 15 +++------------
+ pango/pangocoretext-private.h      |  2 --
+ pango/pangocoretext.c              |  5 ++++-
+ tests/test-layout.c                | 11 ++++++++++-
+ 6 files changed, 19 insertions(+), 33 deletions(-)
+
 diff --git a/pango/pangocairo-coretextfont.c b/pango/pangocairo-coretextfont.c
 index 9dc33447..c07f1c77 100644
 --- a/pango/pangocairo-coretextfont.c
@@ -8,18 +23,18 @@ index 9dc33447..c07f1c77 100644
    PangoCairoFontPrivate cf_priv;
 -  int abs_size;
  };
-
+ 
  struct _PangoCairoCoreTextFontClass
 @@ -163,17 +162,6 @@ pango_cairo_core_text_font_create_base_metrics_for_context (PangoCairoFont *font
    return metrics;
  }
-
+ 
 -static PangoFontDescription *
 -pango_cairo_core_text_font_describe_absolute (PangoFont *font)
 -{
 -  PangoCairoCoreTextFont *cafont = (PangoCairoCoreTextFont *)font;
 -  PangoFontDescription *desc = pango_font_describe (font);
--
+-  
 -  pango_font_description_set_absolute_size (desc, cafont->abs_size);
 -
 -  return desc;
@@ -30,7 +45,7 @@ index 9dc33447..c07f1c77 100644
  {
 @@ -191,10 +179,9 @@ pango_cairo_core_text_font_class_init (PangoCairoCoreTextFontClass *class)
    PangoFontClass *font_class = PANGO_FONT_CLASS (class);
-
+ 
    object_class->finalize = pango_cairo_core_text_font_finalize;
 -  /* font_class->describe defined by parent class PangoCoreTextFont. */
 +
@@ -38,16 +53,16 @@ index 9dc33447..c07f1c77 100644
    font_class->get_metrics = _pango_cairo_font_get_metrics;
 -  font_class->describe_absolute = pango_cairo_core_text_font_describe_absolute;
  }
-
+ 
  static void
 @@ -232,8 +219,6 @@ _pango_cairo_core_text_font_new (PangoCairoCoreTextFontMap  *cafontmap,
    cafont = g_object_new (PANGO_TYPE_CAIRO_CORE_TEXT_FONT, NULL);
    cfont = PANGO_CORE_TEXT_FONT (cafont);
-
+ 
 -  cafont->abs_size = pango_core_text_font_key_get_size (key);
 -
    _pango_core_text_font_set_ctfont (cfont, font_ref);
-
+ 
    if (synthesize_italic)
 diff --git a/pango/pangocairo-coretextfontmap.c b/pango/pangocairo-coretextfontmap.c
 index 5054b7a8..ba5dcec0 100644
@@ -69,17 +84,17 @@ index c5cacab4..4d101847 100644
   * Helper functions for PangoCoreTextFontsetKey
   */
 -static const double ppi = 72.0; /* typographic points per inch */
-
+ 
  static double
  pango_core_text_font_map_get_resolution (PangoCoreTextFontMap *fontmap,
 @@ -818,7 +817,7 @@ pango_core_text_font_map_get_resolution (PangoCoreTextFontMap *fontmap,
    /* FIXME: acquire DPI from CoreText using some deafault font */
    g_warning ("FIXME: returning default DPI");
-
+ 
 -  return ppi;
 +  return 72.0;
  }
-
+ 
  static int
 @@ -827,16 +826,8 @@ get_scaled_size (PangoCoreTextFontMap       *fontmap,
                   const PangoFontDescription *desc)
@@ -87,7 +102,7 @@ index c5cacab4..4d101847 100644
    double size = pango_font_description_get_size (desc);
 -  PangoMatrix *matrix = pango_context_get_matrix (context);
 -  double scale_factor = pango_matrix_get_font_scale_factor (matrix);
--
+-  
 -  if (!pango_font_description_get_size_is_absolute(desc))
 -  {
 -    double dpi = pango_core_text_font_map_get_resolution (fontmap, context);
@@ -98,16 +113,16 @@ index c5cacab4..4d101847 100644
 +
 +  return .5 + pango_matrix_get_font_scale_factor (pango_context_get_matrix (context)) * size;
  }
-
-
+ 
+ 
 diff --git a/pango/pangocoretext-private.h b/pango/pangocoretext-private.h
 index 76eb1ebc..c6c642cd 100644
 --- a/pango/pangocoretext-private.h
 +++ b/pango/pangocoretext-private.h
 @@ -98,8 +98,6 @@ void                  _pango_core_text_font_set_ctfont           (PangoCoreTextF
-
+ 
  PangoFontDescription *_pango_core_text_font_description_from_ct_font_descriptor (CTFontDescriptorRef desc);
-
+ 
 -_PANGO_EXTERN
 -int                   pango_core_text_font_key_get_size             (const PangoCoreTextFontKey *key);
  _PANGO_EXTERN
@@ -119,7 +134,7 @@ index 2aa1810a..8cba1aae 100644
 +++ b/pango/pangocoretext.c
 @@ -225,7 +225,10 @@ pango_core_text_font_class_init (PangoCoreTextFontClass *class)
    object_class->finalize = pango_core_text_font_finalize;
-
+ 
    font_class->describe = pango_core_text_font_describe;
 -  /* font_class->describe_absolute is left virtual for PangoCairoCoreTextFont. */
 +  /* In CoreText the device unit is points so describe_absoulute and
@@ -135,7 +150,7 @@ index 4bce4439..07ca6909 100644
 +++ b/tests/test-layout.c
 @@ -265,9 +265,18 @@ test_file (const gchar *filename, GString *string)
    parse_params (contents, &width, &ellipsize_at, &ellipsize, &wrap);
-
+ 
    layout = pango_layout_new (context);
 +/* The layout tests are predicated on scaling fonts to 90 DPI, but
 + * Apple's font APIs (CoreText and CoreGraphics) don't work that way
@@ -149,9 +164,10 @@ index 4bce4439..07ca6909 100644
 +#endif
    pango_layout_set_font_description (layout, desc);
 -  pango_font_description_free (desc);
-+  pango_font_description_free (desc);
-
++  pango_font_description_free (desc); 
+ 
    pango_layout_set_markup (layout, markup, length);
    g_free (contents);
---
+-- 
 2.17.1
+
