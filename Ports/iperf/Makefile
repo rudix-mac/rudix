@@ -11,9 +11,7 @@ LicenseFile=    $(SourceDir)/docs/_esnet/LICENSE
 
 LdFlags += -framework CoreFoundation -liconv
 
-define prep_post_hook
-patch -p1 -d $(SourceDir) < patches/01-tcp-n.diff
-endef
+PatchLevel = -p1
 
 define test_hook
 $(BinDir)/iperf
