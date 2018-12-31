@@ -11,11 +11,6 @@ LicenseFile=	$(SourceDir)/Copyright
 # GnuConfigureExtra += --with-readline=/usr/local
 # LdFlags += -framework CoreFoundation -liconv
 
-define prep_post_hook
-patch -p0 -d $(SourceDir) < patches/01-Makefile.diff
-patch -p0 -d $(SourceDir) < patches/02-thecounters.diff
-endef
-
 define test_hook
 $(BinDir)/$(latex2rtf) -V | grep $(Version)
 endef
