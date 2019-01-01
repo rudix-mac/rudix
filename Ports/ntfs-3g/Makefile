@@ -1,10 +1,10 @@
 include ../../Library/GNU.mk
 
 Title=		Tuxera Open Source: NTFS-3G
-Name=		ntfs-3g_ntfsprogs
+Name=		ntfs-3g
 Version=	2017.3.23
 Site=		https://www.tuxera.com/community/open-source-ntfs-3g/
-Source=		https://tuxera.com/opensource/$(Name)-$(Version).tgz
+Source=		https://tuxera.com/opensource/ntfs-3g_ntfsprogs-$(Version).tgz
 License=	LGPL/GPL
 
 # LicenseFile=	$(SourceDir)/COPYING.LESSERv3
@@ -24,8 +24,11 @@ BuildRequires += $(LibDir)/libintl.la
 
 PatchLevel = -p1
 
-define install_post_hook
-install -m 755 xtras/mount_ntfs $(DestDir)/$(Prefix)/sbin
-uid=$(shell id -u); sed -i "s/@uid@/$(uid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
-gid=$(shell id -g); sed -i "s/@gid@/$(gid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
-endef
+UncompressedName = ntfs-3g_ntfsprogs-$(Version)
+
+# Moving to scripts/postinstall
+# define install_post_hook
+# install -m 755 xtras/mount_ntfs $(DestDir)/$(Prefix)/sbin
+# uid=$(shell id -u); sed -i "s/@UID@/$(uid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
+# gid=$(shell id -g); sed -i "s/@GID@/$(gid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
+# endef
