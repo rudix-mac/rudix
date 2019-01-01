@@ -4,16 +4,22 @@
 # This comes from Homebrew, but is heavily adapted
 #
 
+# echo "HOME is $HOME" > /tmp/ntfs3g.install-log
+# echo "SUDO_USER = \"$SUDO_USER\"" >> /tmp/ntfs3g.install-log
+
 if [ -z "$SUDO_USER" ]; then
-	THISUID=$(id -u)
-	THISGID=$(id -g)
+	THISUID=$(id -u $(basename $HOME))
+	THISGID=$(id -g $(basename $HOME))
 else
-	THISUID=$SUDO_UID
-	THISGID=$SUDO_GID
+	THISUID=$(id -u $SUDO_USER)
+	THISGID=$(id -g $SUDO_USER)
 fi
 
+# echo "UID is $THISUID" >> /tmp/ntfs3g.install-log
+# echo "GID is $THISGID" >> /tmp/ntfs3g.install-log
+
 echo | sed "s/@THISUID@/$THISUID/g
-s/@THISGID@/$THISGID/g" > $3/usr/local/sbin/mount_ntfs.sh << EOHERE
+s/@THISGID@/$THISGID/g" > $3/usr/local/sbin/mount_ntfs << EOHERE
 #!/bin/bash
 
 VOLUME_NAME="\${@:$#}"
@@ -43,5 +49,5 @@ fi
 
 exit \$?;
 EOHERE
-
+chmod 0755 $3/usr/local/sbin/mount_ntfs
 exit 0
