@@ -22,7 +22,7 @@ echo | sed "s/@THISUID@/$THISUID/g
 s/@THISGID@/$THISGID/g" > $3/usr/local/sbin/mount_ntfs << EOHERE
 #!/bin/bash
 
-VOLUME_NAME="\${@:$#}"
+VOLUME_NAME="\${@:\$#}"
 VOLUME_NAME=\${VOLUME_NAME#/Volumes/}
 USER_ID=@THISUID@
 GROUP_ID=@THISGID@
