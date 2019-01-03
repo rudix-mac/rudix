@@ -1,0 +1,12 @@
+diff -ru csocks/darwin/Makefile csocks-build/darwin/Makefile
+--- csocks/darwin/Makefile	2008-02-20 15:33:31.000000000 +0100
++++ csocks-build/darwin/Makefile	2019-01-03 11:41:42.000000000 +0100
+@@ -9,5 +9,5 @@
+
+ # Flags to create a dynamic library.
+ #DYNLINKFLAGS = -shared -nostdlib
+-DYNLINKFLAGS = -fPIC -02 -fno-strict-aliasing -pipe -Wall -I. -dynamiclib -install_name libcsocks.0.dylib -o libcsocks.0.dylib
++DYNLINKFLAGS = -fPIC -O2 -fno-strict-aliasing -pipe -Wall -I. -dynamiclib -install_name libcsocks.0.dylib -o libcsocks.0.dylib
+ # on some platforms, use '-G' instead.
+
+ # files removal

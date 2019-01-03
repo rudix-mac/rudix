@@ -1,0 +1,30 @@
+--- csocks/install_darwin.sh	2008-02-20 16:25:44.000000000 +0100
++++ csocks-build/install_darwin.sh	2019-01-03 11:55:58.000000000 +0100
+@@ -1,18 +1,22 @@
+ #!/bin/sh
+ 
+-DEST_DIR="/usr/local/bin"
+-DEST_LIB="/usr/local/lib"
++DEST_DIR=${DESTDIR}"/usr/local/bin"
++DEST_LIB=${DESTDIR}"/usr/local/lib"
+ SRC_DIR="src"
+ LIBRARY="libcsocks.0.dylib"
+-CONF_PATH="/usr/local/etc"
+-MAN="/usr/local/share/man"
++CONF_PATH=${DESTDIR}"/usr/local/etc"
++MAN=${DESTDIR}"/usr/local/share/man"
+ OS="darwin"
+ MAKEFILE="$OS/Makefile"
+ 
++if [ -n "${DESTDIR}" ]; then
++	ginstall -m755 -d  ${DEST_DIR} ${DEST_LIB} ${CONF_PATH} ${MAN}/{man1,man5}
++fi
++
+ cp -p $MAKEFILE $SRC_DIR && cd $SRC_DIR && make
+ cd ..
+ cp -p $SRC_DIR/$LIBRARY $DEST_LIB/
+-cp -p $OS/csocks $DEST_DIR/csocks 
++cp -p $OS/csocks $DEST_DIR/csocks
+ cp -p csocks.conf $CONF_PATH/csocks.conf.sample
+ 
+ cp -p man/csocks.1 $MAN/man1/
