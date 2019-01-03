@@ -1,17 +1,17 @@
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libidn2.la # static-libidn
-# BuildRequires += $(LibDir)/libssl.la # static-libressl
+BuildRequires += $(LibDir)/libssl.la # static-libressl
 
 include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.20
+Version=	1.20.1
 Site=		http://www.gnu.org/software/wget/
 Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
-GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)
+GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)/ssl
 GnuConfigureExtra += --with-libidn=$(Prefix)
 
 define install_post_hook
