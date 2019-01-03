@@ -4,9 +4,9 @@ PrepRequires = $(BinDir)/lunzip # lunzip
 
 Title=		GNU ed
 Name=		ed
-Version=	1.14.2
-Site=		http://www.gnu.org/software/ed/
-Source=		http://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
+Version=	1.15
+Site=		https://www.gnu.org/software/ed/
+Source=		https://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
 License=	GPLv3
 
 ConfigureExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFLags)"
