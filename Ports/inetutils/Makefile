@@ -14,6 +14,13 @@ nm $(BinDir)/inetutils | grep -q idn
 nm $(BinDir)/inetutils | grep -q ssl
 endef
 
+ifeq ($(MISSING_ONLY),yes)
+GnuConfigureExtra += --disable-servers --disable-clients
+GnuConfigureExtra += --enable-telnet --enable-rsh
+GnuConfigureExtra += --enable-tftp --enable-ftp
+GnuConfigureExtra += --enable-rlogin --enable-rcp
+endif
+
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
