@@ -1,0 +1,9 @@
+include ../../Library/GNU.mk
+
+Title=		GNU bison
+Name=		bison
+Version=	3.2.4
+Site=		https://www.gnu.org/software/$(Name)
+Source=		ftp://ftp.gnu.org/gnu/bison/$(Name)-$(Version).tar.gz
+License=    GPL3
+
