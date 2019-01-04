@@ -3,11 +3,13 @@ include ../../Library/CMake.mk
 Title=		OpenJPEG
 Name=		openjpeg
 Version=	2.3.0
-Site=		http://www.openjpeg.org
-Source=		https://github.com/uclouvain/openjpeg/archive/v2.3.0.tar.gz
-License=    GPL
+Site=		https://github.com/uclouvain/${Name}
+Source=		https://github.com/uclouvain/${Name}/archive/v${Version}.tar.gz
+License=	BSD
+
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
-CmakeExtra += -DBUILD_STATIC_LIBS=ON
-
+define test_hook
+$(BinDir)/opj_compress -h | grep $(Version)
+endef

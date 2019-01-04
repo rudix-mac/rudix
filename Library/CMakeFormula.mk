@@ -1,8 +1,12 @@
-# Scons Formula
+# CMake Formula
 #
 # Copyright (c) 2011-2017 Rudá Moura (Rudix)
 # Authors: Pedro A. Aranda Gutiérrez
 #
+# Insisting on using $(BuildDir)/build to build the executable
+# after reading the build instructions for all the Ports we have that use cmake
+#
+
 BuildRequires += $(BinDir)/cmake
 CMakeExtra = -DCMAKE_BUILD_TYPE=Release
 CMakeExtra += -DCMAKE_INSTALL_PREFIX=$(Prefix)
@@ -25,6 +29,12 @@ $(install_base_documentation)
 $(strip_macho)
 endef
 
+ifeq ($(RUDIX_RUN_ALL_TESTS),yes)
+define check_hook
+cd $(BuildDir)/build && $(MAKE) test || $(call error_color,One or more tests failed)
+endef
+endif
+
 buildclean:
-	cd $(BuildDir) && rm -rf build
+	cd $(BuildDir)/build && $(MAKE) clean || $(call warning_color,Cannot clean)
 	rm -f build check
