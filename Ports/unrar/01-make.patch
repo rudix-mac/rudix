@@ -1,0 +1,160 @@
+--- unrar/makefile	2017-11-22 07:53:39.000000000 +0100
++++ unrar-build/makefile	2019-01-04 12:14:37.000000000 +0100
+@@ -9,7 +9,8 @@
+ STRIP=strip
+ AR=ar
+ LDFLAGS=-pthread
+-DESTDIR=/usr
++PREFIX =? /usr/local
++SO ?= so
+ 
+ # Linux using LCC
+ #CXX=lcc
+@@ -17,7 +18,7 @@
+ #DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr/local
+ 
+ # CYGWIN using GCC
+ #CXX=c++
+@@ -27,7 +28,7 @@
+ #STRIP=strip
+ #AR=ar
+ #LDFLAGS=-pthread
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # HP UX using aCC
+ #CXX=aCC
+@@ -35,15 +36,15 @@
+ #DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # IRIX using GCC
+ #CXX=g++
+-#CXXFLAGS=-O2 
++#CXXFLAGS=-O2
+ #DEFINES=-DBIG_ENDIAN -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_BSD_COMPAT -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # IRIX using MIPSPro (experimental)
+ #CXX=CC
+@@ -51,7 +52,7 @@
+ #DEFINES=-DBIG_ENDIAN -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_BSD_COMPAT -Dint64=int64_t
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # AIX using xlC (IBM VisualAge C++ 5.0)
+ #CXX=xlC
+@@ -60,7 +61,7 @@
+ #LIBS=-lbsd
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # Solaris using CC
+ #CXX=CC
+@@ -68,7 +69,7 @@
+ #DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ #STRIP=strip
+ #AR=ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # Solaris using GCC (optimized for UltraSPARC 1 CPU)
+ #CXX=g++
+@@ -76,7 +77,7 @@
+ #DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ #STRIP=/usr/ccs/bin/strip
+ #AR=/usr/ccs/bin/ar
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # Tru64 5.1B using GCC3
+ #CXX=g++
+@@ -84,7 +85,7 @@
+ #STRIP=strip
+ #AR=ar
+ #LDFLAGS=-rpath /usr/local/gcc/lib
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # Tru64 5.1B using DEC C++
+ #CXX=cxx
+@@ -92,7 +93,7 @@
+ #STRIP=strip
+ #AR=ar
+ #LDFLAGS=
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # QNX 6.x using GCC
+ #CXX=g++
+@@ -100,7 +101,7 @@
+ #STRIP=strip
+ #AR=ar
+ #LDFLAGS=-fexceptions
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ # Cross-compile
+ # Linux using arm-linux-g++
+@@ -110,7 +111,7 @@
+ #STRIP=arm-linux-strip
+ #AR=arm-linux-ar
+ #LDFLAGS=-static
+-#DESTDIR=/usr
++#PREFIX=/usr
+ 
+ ##########################
+ 
+@@ -142,7 +143,7 @@
+ 
+ unrar:	clean $(OBJECTS) $(UNRAR_OBJ)
+ 	@rm -f unrar
+-	$(LINK) -o unrar $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)	
++	$(LINK) -o unrar $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)
+ 	$(STRIP) unrar
+ 
+ sfx:	WHAT=SFX_MODULE
+@@ -154,20 +155,22 @@
+ lib:	WHAT=RARDLL
+ lib:	CXXFLAGS+=$(LIBFLAGS)
+ lib:	clean $(OBJECTS) $(LIB_OBJ)
+-	@rm -f libunrar.so
++	@rm -f libunrar.$(SO)
+ 	@rm -f libunrar.a
+-	$(LINK) -shared -o libunrar.so $(LDFLAGS) $(OBJECTS) $(LIB_OBJ)
++	$(LINK) -shared -o libunrar.$(SO) $(LDFLAGS) $(OBJECTS) $(LIB_OBJ)
+ 	$(AR) rcs libunrar.a $(OBJECTS) $(LIB_OBJ)
+ 
+ install-unrar:
+-			install -D unrar $(DESTDIR)/bin/unrar
++			install -d $(DESTDIR)$(PREFIX)/bin
++			install -m 755 unrar $(DESTDIR)$(PREFIX)/bin/unrar
+ 
+ uninstall-unrar:
+-			rm -f $(DESTDIR)/bin/unrar
++			rm -f $(DESTDIR)$(PREFIX)/bin/unrar
+ 
+ install-lib:
+-		install libunrar.so $(DESTDIR)/lib
+-		install libunrar.a $(DESTDIR)/lib
++		install -d $(DESTDIR)$(PREFIX)/lib
++		install libunrar.so $(DESTDIR)$(PREFIX)/lib
++		install libunrar.a $(DESTDIR)$(PREFIX)/lib
+ 
+ uninstall-lib:
+-		rm -f $(DESTDIR)/lib/libunrar.so
++		rm -f $(DESTDIR)$(PREFIX)/lib/libunrar.so
