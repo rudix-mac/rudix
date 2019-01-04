@@ -6,7 +6,7 @@ Test and report.
 =
 # Prerequisites
 
-Install OSXFuse 3.7.1
+Install OSXFuse 3.7.1 or greater
 
 ```
 sudo rudix install libintl
@@ -14,10 +14,10 @@ sudo rudix install libintl
 =
 # Installation process
 
-1. Install the package: 
+1. Install the package:
 
 ```
-sudo rudix install <TODO: package name
+sudo rudix install ntfs-3g
 ```
 
 2. Reboot into recovery mode
