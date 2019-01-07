@@ -12,9 +12,6 @@ GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
 
 PatchLevel = -p1
 define prep_post_hook
-# patch -p1 -d $(SourceDir) < patches/01-fileflags.patch
-# patch -p1 -d $(SourceDir) < patches/02-crtimes.patch
-# patch -p1 -d $(SourceDir) < patches/03-hfs-compression.patch
 cd $(BuildDir) && ./prepare-source
 endef
 
