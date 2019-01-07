@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Links
 Name=		links
-Version=	2.8
+Version=	2.18
 Site=		http://links.twibright.com/
 Source=		http://links.twibright.com/download/$(Name)-$(Version).tar.bz2
-License=	GPL
+License=	GPLv2
 
 define test_hook
 $(BinDir)/links -version | grep $(Version)
