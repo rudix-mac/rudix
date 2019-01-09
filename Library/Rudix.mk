@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2018 Rudá Moura (Rudix)
+# Copyright © 2005-2019 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.0.0
+BuildSystem = 1.0.1
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -24,13 +24,13 @@ RUDIX_BUILD_STATIC?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
-RUDIX_MSG_RETRIEVE?=Retrieving $(Source)
-RUDIX_MSG_PREP?=Preparing $(DistName)
-RUDIX_MSG_BUILD?=Building $(DistName)
-RUDIX_MSG_CHECK?=Checking $(DistName)
-RUDIX_MSG_INSTALL?=Installing $(DistName)
-RUDIX_MSG_PKG?=Packing $(PkgFile)
-RUDIX_MSG_TEST?=Testing $(DistName) and $(PkgFile)
+RUDIX_MSG_RETRIEVE?=Retrieving source from '$(Source)'
+RUDIX_MSG_PREP?=Preparing '$(DistName)' to build on '$(SourceDir)'
+RUDIX_MSG_BUILD?=Building '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
+RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
+RUDIX_MSG_TEST?=Testing '$(PkgFile)'
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -245,13 +245,13 @@ endif
 
 define verify_preprequires
 for x in $(PrepRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Preparation requires $$x) ; done
 endef
 
 define verify_buildrequires
 for x in $(BuildRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Build requires $$x) ; done
 endef
 
