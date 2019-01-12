@@ -5,6 +5,8 @@
 # Author: Rudá Moura <ruda.moura@gmail.com>
 #
 
+BuildRequires += $(BinDir)/cmake
+
 CMakeExtra += -DCMAKE_BUILD_TYPE=Release
 CMakeExtra += -DCMAKE_INSTALL_PREFIX=$(Prefix)
 
