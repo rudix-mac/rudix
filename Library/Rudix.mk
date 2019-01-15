@@ -267,9 +267,10 @@ case `file -b --mime-type $(shell basename $(Source))` in \
 esac
 endef
 
+PatchLevel=-p0
 define apply_patches
 for x in $(wildcard *.patch patches/*.patch) ; do \
-	patch -p0 -d $(SourceDir) < $$x ; done
+	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
 define configure
