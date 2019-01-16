@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2019 Rudá Moura (Rudix)
+# Copyright © 2005-2019 Rudix (Rudá Moura)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.0.1
+BuildSystem = 1.1.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
