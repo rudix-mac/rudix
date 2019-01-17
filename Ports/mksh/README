@@ -1,0 +1,10 @@
+mksh is the successor of the Public Domain Korn shell (pdksh),
+a Bourne/POSIX compatible shell which is largely similar to the
+original AT&T Korn Shell (ksh88/ksh93).
+It includes bug fixes and feature improvements, in order to produce a
+modern, robust shell good for interactive and especially script use.
+mksh has UTF-8 support (in string operations and the Emacs editing
+mode). The code has been cleaned up and simplified, bugs fixed,
+standards compliance added, and several enhancements (for extended
+compatibility to other modern shells, as well as a couple of its
+own) are available.

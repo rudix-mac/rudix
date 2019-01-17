@@ -3,7 +3,7 @@ include ../../Library/Configure.mk
 Description=	zlib is a general purpose data compression library
 Title=		Zlib
 Name=		zlib
-Version=	1.2.8
+Version=	1.2.11
 Site=		http://www.zlib.net
 Source=		http://zlib.net/$(Name)-$(Version).tar.gz
 License=	zlib License

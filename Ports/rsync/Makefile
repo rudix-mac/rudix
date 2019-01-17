@@ -10,10 +10,8 @@ License=	GPL
 GnuConfigureExtra += --with-included-popt
 GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
 
-define after_prep_hook
-patch -p1 -d $(SourceDir) < patches/fileflags.diff
-patch -p1 -d $(SourceDir) < patches/crtimes.diff
-patch -p1 -d $(SourceDir) < patches/hfs-compression.diff
+PatchLevel = -p1
+define prep_post_hook
 cd $(BuildDir) && ./prepare-source
 endef
 

@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		GNU Sed
 Name=		sed
-Version=	4.2.2
-Site=		http://www.gnu.org/software/sed/
-Source=		http://ftp.gnu.org/gnu/sed//$(Name)-$(Version).tar.gz
+Version=	4.7
+Site=		https://www.gnu.org/software/sed
+Source=		https://ftp.gnu.org/gnu/sed/$(Name)-$(Version).tar.xz
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

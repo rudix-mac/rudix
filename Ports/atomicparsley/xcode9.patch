@@ -1,0 +1,28 @@
+diff -pur a/src/nsfile.mm b/src/nsfile.mm
+--- a/src/nsfile.mm	2014-03-03 20:18:56.000000000 +0100
++++ b/src/nsfile.mm	2017-09-04 10:19:05.000000000 +0200
+@@ -145,10 +145,10 @@ void APar_SupplySelectiveTypeCreatorCode
+ 		return;
+ 	}
+ 	
+-	char* input_suffix = strrchr(inputPath, '.');
++	const char* input_suffix = strrchr(inputPath, '.');
+ 	//user-defined output paths may have the original file as ".m4a" & show up fine when output to ".m4a"
+ 	//output to ".mp4" and it becomes a generic (sans TYPE/CREATOR) file that defaults to Quicktime Player
+-	char* output_suffix = strrchr(outputPath, '.');
++	const char* output_suffix = strrchr(outputPath, '.');
+ 	
+ 	char* typecode = (char*)malloc( sizeof(char)* 4 );
+ 	memset(typecode, 0, sizeof(char)*4);
+diff -pur a/src/nsimage.mm b/src/nsimage.mm
+--- a/src/nsimage.mm	2014-03-03 20:18:56.000000000 +0100
++++ b/src/nsimage.mm	2017-09-04 10:18:40.000000000 +0200
+@@ -48,7 +48,7 @@ void DetermineType(const char *picfilePa
+ }
+ 
+ char* DeriveNewPath(const char *filePath, PicPrefs myPicPrefs, char* newpath) {
+-	char* suffix = strrchr(filePath, '.');
++	const char* suffix = strrchr(filePath, '.');
+ 	
+ 	size_t filepath_len = strlen(filePath);
+ 	memset(newpath, 0, MAXPATHLEN+1);
