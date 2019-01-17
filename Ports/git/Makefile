@@ -7,11 +7,8 @@ Name=		git
 Version=	2.11.1
 Site=		http://git-scm.com/
 Source=		http://git-core.googlecode.com/files/$(Name)-$(Version).tar.gz
+Files=		http://git-core.googlecode.com/files/git-manpages-$(Version).tar.gz
 License=	GPL
-
-define after_retrieve_hook
-$(fetch) http://git-core.googlecode.com/files/git-manpages-$(Version).tar.gz
-endef
 
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
