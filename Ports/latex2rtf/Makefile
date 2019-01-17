@@ -1,4 +1,4 @@
-include ../../Library/UNIX.mk
+include ../../Library/Unix.mk
 
 Title=		LaTex to RTF
 Name=		latex2rtf
@@ -11,9 +11,9 @@ LicenseFile=	$(SourceDir)/Copyright
 # GnuConfigureExtra += --with-readline=/usr/local
 # LdFlags += -framework CoreFoundation -liconv
 
-define after_prep_hook
-patch -p0 -d $(SourceDir) < patches/01-Makefile.diff
-endef
+# define after_prep_hook
+# patch -p0 -d $(SourceDir) < patches/01-Makefile.diff
+# endef
 
 define test_hook
 $(BinDir)/$(latex2rtf) -V | grep $(Version)
