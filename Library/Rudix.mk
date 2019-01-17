@@ -275,8 +275,13 @@ esac
 endef
 
 PatchLevel=-p0
+#
+# paaguti: make patch order reproducible
+#
+# Read http://docs.electric-cloud.com/accelerator_doc/8_1/Mobile/eMake/Advanced/Content/emake%20Guide/5_Make_Compatibility/8_Wildcard_Sort_Order.htm
+#
 define apply_patches
-for x in $(wildcard *.patch patches/*.patch) ; do \
+for x in $(sort $(wildcard *.patch patches/*.patch)) ; do \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
