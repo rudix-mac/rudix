@@ -125,7 +125,7 @@ $(create_distribution)
 $(create_pkg)
 endef
 
-define test_pre_hook
+define before_test_hook
 $(test_non_native_dylib)
 $(test_apache_modules)
 $(test_documentation)
@@ -137,7 +137,7 @@ sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
 sudo ../../Utils/darwin_installer.py $(PkgFile)
 endef
 
-define test_post_hook
+define after_test_hook
 @$(call info_color,Uninstalling package)
 @echo "Administrator (root) credentials required"
 sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || \

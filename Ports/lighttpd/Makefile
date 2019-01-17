@@ -15,7 +15,7 @@ GnuConfigureExtra += --with-libev
 GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --libdir=$(LibDir)/lighttpd
 
-define install_post_hook
+define after_install_hook
 install -d $(DestDir)$(SysConfDir)/lighttpd
 install -m 644 lighttpd.conf.default $(DestDir)$(SysConfDir)/lighttpd
 install -d $(DestDir)$(LocalStateDir)/{www/lighttpd,log/lighttpd,run}
@@ -25,7 +25,7 @@ define test_hook
 $(SBinDir)/lighttpd -V | grep "$(Version).*(ssl)"
 endef
 
-define pkg_pre_hook
+define before_pkg_hook
 @echo "root required: $(DestDir)$(LocalStateDir)/log/lighttpd must be set to _www:_www"
 sudo chown _www:_www $(DestDir)$(LocalStateDir)/log/lighttpd
 @echo "root required: $(DestDir)$(LocalStateDir)/www/lighttpd must be set to _www:_www and g+s"

@@ -12,7 +12,7 @@ License=	GPLv3
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes
 GnuConfigureExtra += --program-prefix=gnu
 
-define install_post_hook
+define after_install_hook
 $(PortDir)/mklinks.sh $(InstallDir)$(BinDir)
 $(PortDir)/mklinks.sh $(InstallDir)$(Prefix)/share/man/man1
 endef

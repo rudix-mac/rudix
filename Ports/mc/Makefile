@@ -26,7 +26,7 @@ define fetch
 curl -f -O -C - -L -k
 endef
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/doc/{FAQ,HACKING,TODO} $(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
 install -d $(InstallDir)/$(Prefix)/etc/mc

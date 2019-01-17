@@ -14,7 +14,7 @@ License=	GPL
 
 UncompressedName=xmp-cli-xmp-$(Version)
 
-define build_pre_hook
+define before_build_hook
 $(verify_buildrequires)
 cd $(BuildDir) && ./autogen.sh
 endef

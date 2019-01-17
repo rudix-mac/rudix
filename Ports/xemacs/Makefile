@@ -17,7 +17,7 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
 
-define install_post_hook
+define after_install_hook
 for x in b2m ctags ellcc etags gnuattach gnuclient gnudoit ootags ; do \
 	mv $(InstallDir)/$(BinDir)/$$x $(InstallDir)/$(BinDir)/xemacs-$$x ; done
 for x in ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 gnuserv.1 ; do \

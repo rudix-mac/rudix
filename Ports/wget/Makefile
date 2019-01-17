@@ -14,7 +14,7 @@ License=	GPLv3
 GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)
 GnuConfigureExtra += --with-libidn=$(Prefix)
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/$(Prefix)/etc/wgetrc \
 	$(InstallDir)/$(Prefix)/etc/wgetrc.default
 endef

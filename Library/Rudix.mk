@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.1.1
+BuildSystem = 1.2.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -81,57 +81,57 @@ all: pkg
 # Retrieve source
 retrieve:
 	@$(call info_color,$(RUDIX_MSG_RETRIEVE))
-	@$(call retrieve_pre_hook)
+	@$(call before_retrieve_hook)
 	@$(call retrieve_hook)
-	@$(call retrieve_post_hook)
+	@$(call after_retrieve_hook)
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve
 	@$(call info_color,$(RUDIX_MSG_PREP))
-	@$(call prep_pre_hook)
+	@$(call before_prep_hook)
 	@$(call prep_hook)
-	@$(call prep_post_hook)
+	@$(call after_prep_hook)
 	@touch $@
 
 # Build source
 build: prep
 	@$(call info_color,$(RUDIX_MSG_BUILD))
-	@$(call build_pre_hook)
+	@$(call before_build_hook)
 	@$(call build_hook)
-	@$(call build_post_hook)
+	@$(call after_build_hook)
 	@touch $@
 
 # Check build
 check: build
 	@$(call info_color,$(RUDIX_MSG_CHECK))
-	@$(call check_pre_hook)
+	@$(call before_check_hook)
 	@$(call check_hook)
-	@$(call check_post_hook)
+	@$(call after_check_hook)
 	@touch $@
 
 # Install into a temporary directory
 install: build
 	@$(call info_color,$(RUDIX_MSG_INSTALL))
-	@$(call install_pre_hook)
+	@$(call before_install_hook)
 	@$(call install_hook)
-	@$(call install_post_hook)
+	@$(call after_install_hook)
 	@touch $@
 
 # Create package
 pkg: install
 	@$(call info_color,$(RUDIX_MSG_PKG))
-	@$(call pkg_pre_hook)
+	@$(call before_pkg_hook)
 	@$(call pkg_hook)
-	@$(call pkg_post_hook)
+	@$(call after_pkg_hook)
 	@touch $@
 
 # Run all tests
 test: pkg check
 	@$(call info_color,$(RUDIX_MSG_TEST))
-	@$(call test_pre_hook)
+	@$(call before_test_hook)
 	@$(call test_hook)
-	@$(call test_post_hook)
+	@$(call after_test_hook)
 	@touch $@
 
 installclean:
@@ -313,7 +313,7 @@ define retrieve_hook
 $(fetch_sources)
 endef
 
-define prep_pre_hook
+define before_prep_hook
 $(verify_preprequires)
 endef
 
@@ -323,7 +323,7 @@ mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
-define build_pre_hook
+define before_build_hook
 $(verify_buildrequires)
 endef
 

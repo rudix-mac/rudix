@@ -13,12 +13,12 @@ MakeExtra += macosx
 MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
 MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 
-define check_post_hook
+define after_check_hook
 otool -L $(BuildDir)/src/lua | grep libedit
 nm $(BuildDir)/src/lua | grep _readline
 endef
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 

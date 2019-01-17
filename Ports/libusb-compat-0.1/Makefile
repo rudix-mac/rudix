@@ -10,6 +10,6 @@ Description=    A compatibility layer allowing applications written for libusb-0
 ReadMeFile=     $(SourceDir)/README
 LicenseFile=    $(SourceDir)/LICENSE
 
-define build_pre_hook
+define before_build_hook
 cd $(BuildDir) && ./bootstrap.sh 
 endef

@@ -21,7 +21,7 @@ LdFlags += -framework CoreFoundation -liconv
 GnuConfigureExtra += --enable-static
 endif
 
-define build_pre_hook
+define before_build_hook
 cd $(BuildDir); ./autogen.sh; ./configure
 -mkdir -p $(BuildDir)/list
 curl --output $(BuildDir)/list/public_suffix_list.dat https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat

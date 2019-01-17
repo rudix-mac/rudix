@@ -10,7 +10,7 @@ LicenseFile=	$(SourceDir)/Copyright
 # GnuConfigureExtra += --with-readline=/usr/local
 # LdFlags += -framework CoreFoundation -liconv
 
-define prep_post_hook
+define after_prep_hook
 patch -p0 -d $(SourceDir) < patches/01-Makefile.diff
 endef
 

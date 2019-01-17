@@ -2,7 +2,7 @@
 
 include ../../Library/Python.mk
 
-define build_pre_hook
+define before_build_hook
 cd $(BuildDir); \
 rm Setup; \
 python config.py; \
@@ -10,7 +10,7 @@ perl -p -i -e "s+-L/usr/local/lib *-lpng+/usr/local/lib/libpng.a+g; \
                s+-L/usr/local/lib *-ljpeg+/usr/local/lib/libjpeg.a+g" Setup
 endef
 
-define install_post_hook
+define after_install_hook
 mkdir $(InstallDir)/Library/Frameworks; \
 cd $(InstallDir)/Library/Frameworks; \
 cp -a /Library/Frameworks/SDL.framework ./; \

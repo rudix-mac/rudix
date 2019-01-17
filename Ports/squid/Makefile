@@ -18,14 +18,14 @@ GnuConfigureExtra += --datarootdir=$(DataDir)/squid
 GnuConfigureExtra += --with-maxfd=1024
 GnuConfigureExtra += --disable-eui
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(SysConfDir)/squid/cachemgr.conf \
 	$(DestDir)$(SysConfDir)/squid/cachemgr.conf.default
 rm -f $(DestDir)$(SysConfDir)/squid/*.conf
 rm -f $(DEstDir)$(SysConfDir)/squid/errorpage.css
 endef
 
-define pkg_pre_hook
+define before_pkg_hook
 @echo "root required: $(DestDir)$(LocalStateDir)/log/squid must be set to _www:_www"
 sudo chown _www:_www $(DestDir)$(LocalStateDir)/log/squid
 @echo "root required: $(DestDir)$(LocalStateDir)/cache/squid must be set to _www:_www"

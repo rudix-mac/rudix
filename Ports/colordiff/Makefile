@@ -7,7 +7,7 @@ Site=		http://www.colordiff.org
 Source=		http://www.colordiff.org/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define prep_post_hook
+define after_prep_hook
 cd $(BuildDir) ; mv INSTALL _INSTALL
 endef
 
@@ -17,7 +17,7 @@ endef
 define test_hook
 endef
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/usr/local/etc/colordiffrc \
 	$(InstallDir)/usr/local/etc/colordiffrc.default
 endef

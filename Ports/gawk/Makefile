@@ -12,7 +12,7 @@ License=	GPLv3
 
 GnuConfigureExtra += --with-readline=/usr/local
 
-define install_post_hook
+define after_install_hook
 rm -f $(InstallDir)/$(BinDir)/*-$(Version)
 endef
 

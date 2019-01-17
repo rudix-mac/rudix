@@ -7,7 +7,7 @@ Site=		http://www.nocrew.org/software/httptunnel/
 Source=		http://www.nocrew.org/software/httptunnel//$(Name)-$(Version).tar.gz
 License=	GPL
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{DISCLAIMER,FAQ,HACKING} $(InstallDir)/$(DocDir)/$(Name)
 install -m 644 $(SourceDir)/doc/*.txt $(InstallDir)/$(DocDir)/$(Name)
 endef

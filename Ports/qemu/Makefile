@@ -23,7 +23,7 @@ ConfigureExtra += --enable-cocoa
 
 LdFlags += -framework Carbon	# FSFindFolder symbol for static-glib
 
-define install_post_hook
+define after_install_hook
 rm -rf $(DestDir)$(SysConfDir)
 endef
 

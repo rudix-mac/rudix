@@ -14,7 +14,7 @@ UncompressedName=$(Name)_$(Version)
 
 MakeExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFlags)"
 
-define install_post_hook
+define after_install_hook
 install -d $(InstallDir)$(Prefix)/include/sexpr
 install -m 644 $(SourceDir)/src/*.h $(InstallDir)$(Prefix)/include/sexpr
 install -d $(InstallDir)$(LibDir)

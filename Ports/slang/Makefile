@@ -12,7 +12,7 @@ Source=		http://www.jedsoft.org/releases/slang/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 ifneq ($(RUDIX_BUILD_STATIC_LIBS),yes)
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)$(SysConfDir)/slsh.rc \
 	$(InstallDir)$(SysConfDir)/slsh.rc.default
 endef

@@ -14,7 +14,7 @@ LicenseFile=	$(SourceDir)/LICENSE
 GnuConfigureExtra += --enable-layout=Rudix
 StripExtra += -x # Due `Symbol not found' error
 
-define install_post_hook
+define after_install_hook
 for x in httpd.conf magic mime.types ; do \
 	mv $(InstallDir)/$(SysConfDir)/apache2/$$x $(InstallDir)/$(SysConfDir)/apache2/$$x.default ; \
 done

@@ -28,7 +28,7 @@ ConfigureExtra += --with-http_ssl_module
 ConfigureExtra += --with-ld-opt="-L /usr/local/lib"
 ConfigureExtra += --with-cc-opt="-I /usr/local/include"
 
-define install_post_hook
+define after_install_hook
 rm -f $(InstallDir)/$(SBinDir)/nginx.old
 rm -f $(InstallDir)/$(SysConfDir)/nginx/{fastcgi.conf,fastcgi_params,mime.types,nginx.conf,scgi_params,uwsgi_params}
 mv $(InstallDir)/$(DataDir)/nginx/html/index.html $(InstallDir)/$(DataDir)/nginx/html/index.html.default

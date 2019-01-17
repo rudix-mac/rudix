@@ -8,7 +8,7 @@ Source=     https://github.com/scop/$(Name)/releases/download/$(Version)/$(Name)
 License=	GPL
 ReadMeFile=	$(SourceDir)/README.md
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)$(SysConfDir)/profile.d/bash_completion.sh \
 	$(InstallDir)$(SysConfDir)/bash_completion.sh.default
 rmdir $(InstallDir)$(SysConfDir)/profile.d

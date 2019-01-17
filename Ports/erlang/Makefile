@@ -12,12 +12,12 @@ LicenseFile=	$(SourceDir)/LICENSE.txt
 
 UncompressedName=otp_src_$(Version)
 
-define retrieve_post_hook
+define after_retrieve_hook
 $(fetch) http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
 $(fetch) http://www.erlang.org/download/otp_doc_man_$(Version).tar.gz
 endef
 
-define install_post_hook
+define after_install_hook
 tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \
 	$(InstallDir)/$(LibDir)/erlang
 tar -zxf $(PortDir)/otp_doc_html_$(Version).tar.gz -C \

@@ -12,7 +12,7 @@ License=	LGPL
 
 UncompressedName=$(Name)-$(Version)-$(AltVersion)
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/samples/*.rc $(InstallDir)/$(DocDir)/$(Name)
 endef
 

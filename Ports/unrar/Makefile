@@ -14,7 +14,7 @@ UncompressedName=$(Name)
 
 MakeInstallExtra += DESTDIR=$(DestDir)$(Prefix)
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/acknow.txt $(InstallDir)$(DocDir)/$(Name)
 endef
 

@@ -7,7 +7,7 @@ Site=		http://www.mpg123.de/
 Source=		http://www.mpg123.de/download/$(Name)-$(Version).tar.bz2
 License=	LGPL
 
-define install_post_hook
+define after_install_hook
 rm -rf $(SourceDir)/doc/examples/
 install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef

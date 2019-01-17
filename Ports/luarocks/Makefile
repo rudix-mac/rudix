@@ -11,7 +11,7 @@ License=        MIT
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(SysConfDir)/luarocks/config-5.3.lua \
 	$(DestDir)$(SysConfDir)/luarocks/config-5.3.lua.default
 endef

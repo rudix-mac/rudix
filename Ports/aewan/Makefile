@@ -9,6 +9,6 @@ License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README
 
-define prep_post_hook
+define after_prep_hook
 patch -p1 -d $(SourceDir) < patches/01-mouse.diff
 endef

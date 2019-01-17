@@ -12,7 +12,7 @@ Description=	Versatile macro-assembler for several 8-bit microprocessors
 ReadMeFile=     $(SourceDir)/README
 LicenseFile=    $(SourceDir)/COPYING
 
-define build_pre_hook
+define before_build_hook
 mv dasm-$(Release) dasm-$(Version)
 endef
 
