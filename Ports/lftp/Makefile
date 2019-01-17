@@ -18,7 +18,7 @@ LdFlags += -L$(LibDir)
 GnuConfigureExtra += --with-openssl
 #GnuConfigureExtra += --with-modules
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} \
 	$(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf \

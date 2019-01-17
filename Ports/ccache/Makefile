@@ -13,7 +13,7 @@ ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE.adoc
 
 ifeq ($(CREATE_LIBEXEC_LINKS),yes)
-define install_post_hook
+define after_install_hook
 install -d $(DestDir)$(LibExecDir)/ccache
 cd $(DestDir)$(LibExecDir)/ccache && \
 for x in cc gcc clang g++ c++ llvm-gcc llvm-g++ ; do \

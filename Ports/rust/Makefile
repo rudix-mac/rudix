@@ -12,7 +12,7 @@ LicenseFile=	$(SourceDir)/COPYRIGHT
 
 UncompressedName=rustc-$(Version)
 
-define install_post_hook
+define after_install_hook
 rm -f $(DestDir)$(LibDir)/rustlib/install.log
 sed -i.bak "s_$(DestDir)__" $(DestDir)$(LibDir)/rustlib/manifest-rustc
 sed -i.bak "s_$(DestDir)__" $(DestDir)$(LibDir)/rustlib/manifest-rust-docs

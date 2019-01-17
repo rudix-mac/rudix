@@ -11,7 +11,7 @@ License=	GPLv3
 # GnuConfigureExtra += --enable-utf8
 # * checking whether to use slang... no (should we add support?)
 
-define install_post_hook
+define after_install_hook
 cd $(DestDir)$(BinDir) && ln -sf nano pico
 endef
 

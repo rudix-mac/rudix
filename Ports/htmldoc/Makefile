@@ -22,7 +22,7 @@ define test_hook
 $(BinDir)/htmldoc --version | grep $(Version)
 endef
 
-define install_post_hook
+define after_install_hook
 install -m 755 $(BuildDir)/htmldoc/htmldoc.app/Contents/MacOS/htmldoc \
 	$(DestDir)$(BinDir)/htmldoc
 endef

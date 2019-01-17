@@ -10,15 +10,14 @@ License=	GPL
 GnuConfigureExtra += --with-included-popt
 GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
 
-PatchLevel = -p1
-define prep_post_hook
-# patch -p1 -d $(SourceDir) < patches/01-fileflags.patch
-# patch -p1 -d $(SourceDir) < patches/02-crtimes.patch
-# patch -p1 -d $(SourceDir) < patches/03-hfs-compression.patch
+define after_prep_hook
+patch -p1 -d $(SourceDir) < patches/fileflags.diff
+patch -p1 -d $(SourceDir) < patches/crtimes.diff
+patch -p1 -d $(SourceDir) < patches/hfs-compression.diff
 cd $(BuildDir) && ./prepare-source
 endef
 
-define install_post_hook
+define after_install_hook
 cd $(InstallDir)/$(BinDir) ; ln -sf rsync rsync3
 cd $(InstallDir)/$(Prefix)/share/man/man1 ; ln -sf rsync.1 rsync3.1
 cd $(InstallDir)/$(Prefix)/share/man/man5 ; ln -sf rsyncd.conf.5 rsyncd3.conf.5

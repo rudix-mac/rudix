@@ -11,7 +11,7 @@ License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{doc/CONTRIBUTORS,doc/*.txt} $(InstallDir)/$(DocDir)/$(Name)
 endef
 

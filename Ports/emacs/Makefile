@@ -11,7 +11,7 @@ GnuConfigureExtra += --with-x=no
 GnuConfigureExtra += --with-ns=no
 GnuConfigureExtra += --with-gnutls=no
 
-define install_post_hook
+define after_install_hook
 rm -rf $(InstallDir)$(LocalStateDir)
 endef
 

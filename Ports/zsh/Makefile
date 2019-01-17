@@ -13,11 +13,11 @@ LicenseFile=	$(SourceDir)/LICENCE
 
 MakeInstallExtra+=install.info
 
-define retrieve_post_hook
+define after_retrieve_hook
 $(fetch) http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
 endef
 
-define install_post_hook
+define after_install_hook
 rm -f $(InstallDir)/$(BinDir)/zsh-$(Version)
 rm -f $(InstallDir)/$(BinDir)/zsh.old
 cd $(InstallDir)/$(BinDir) ; ln -sf zsh zsh5

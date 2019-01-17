@@ -9,12 +9,12 @@ License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README
 
-define retrieve_hook
-wget --no-check-certificate -O aewan-1.0.01.tar.gz https://sourceforge.net/projects/aewan/files/aewan/aewan-1.0.01/aewan-1.0.01.tar.gz/download
-endef
+#define after_prep_hook
+#patch -p1 -d $(SourceDir) < patches/01-mouse.diff
+#endef
 
-define uncompress_source
-tar -xvf aewan-$(Version).tar.gz || true
-endef
+#define uncompress_source
+#tar -xvf aewan-$(Version).tar.gz || true
+#endef
 
 PatchLevel = -p1

@@ -9,7 +9,7 @@ License=	GPLv3
 
 GnuConfigureExtra += --with-included-gettext
 
-define install_post_hook
+define after_install_hook
 cd $(DestDir)$(BinDir) ; ln -sf bash bash4
 cd $(DestDir)$(ManDir) ; ln -sf bash.1 bash4.1
 for x in COMPAT POSIX RBASH Y2K ; do \

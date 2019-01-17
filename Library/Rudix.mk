@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2018 Rudá Moura (Rudix)
+# Copyright © 2005-2019 Rudix (Rudá Moura)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.0.0
+BuildSystem = 1.2.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -24,13 +24,13 @@ RUDIX_BUILD_STATIC?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
-RUDIX_MSG_RETRIEVE?=Retrieving $(Source)
-RUDIX_MSG_PREP?=Preparing $(DistName)
-RUDIX_MSG_BUILD?=Building $(DistName)
-RUDIX_MSG_CHECK?=Checking $(DistName)
-RUDIX_MSG_INSTALL?=Installing $(DistName)
-RUDIX_MSG_PKG?=Packing $(PkgFile)
-RUDIX_MSG_TEST?=Testing $(DistName) and $(PkgFile)
+RUDIX_MSG_RETRIEVE?=Retrieving source from '$(Source)'
+RUDIX_MSG_PREP?=Preparing '$(DistName)' to build on '$(SourceDir)'
+RUDIX_MSG_BUILD?=Building '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
+RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
+RUDIX_MSG_TEST?=Testing '$(PkgFile)'
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -85,57 +85,57 @@ all: pkg
 # Retrieve source
 retrieve:
 	@$(call info_color,$(RUDIX_MSG_RETRIEVE))
-	@$(call retrieve_pre_hook)
+	@$(call before_retrieve_hook)
 	@$(call retrieve_hook)
-	@$(call retrieve_post_hook)
+	@$(call after_retrieve_hook)
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve
 	@$(call info_color,$(RUDIX_MSG_PREP))
-	@$(call prep_pre_hook)
+	@$(call before_prep_hook)
 	@$(call prep_hook)
-	@$(call prep_post_hook)
+	@$(call after_prep_hook)
 	@touch $@
 
 # Build source
 build: prep
 	@$(call info_color,$(RUDIX_MSG_BUILD))
-	@$(call build_pre_hook)
+	@$(call before_build_hook)
 	@$(call build_hook)
-	@$(call build_post_hook)
+	@$(call after_build_hook)
 	@touch $@
 
 # Check build
 check: build
 	@$(call info_color,$(RUDIX_MSG_CHECK))
-	@$(call check_pre_hook)
+	@$(call before_check_hook)
 	@$(call check_hook)
-	@$(call check_post_hook)
+	@$(call after_check_hook)
 	@touch $@
 
 # Install into a temporary directory
 install: build
 	@$(call info_color,$(RUDIX_MSG_INSTALL))
-	@$(call install_pre_hook)
+	@$(call before_install_hook)
 	@$(call install_hook)
-	@$(call install_post_hook)
+	@$(call after_install_hook)
 	@touch $@
 
 # Create package
 pkg: install
 	@$(call info_color,$(RUDIX_MSG_PKG))
-	@$(call pkg_pre_hook)
+	@$(call before_pkg_hook)
 	@$(call pkg_hook)
-	@$(call pkg_post_hook)
+	@$(call after_pkg_hook)
 	@touch $@
 
 # Run all tests
 test: pkg check
 	@$(call info_color,$(RUDIX_MSG_TEST))
-	@$(call test_pre_hook)
+	@$(call before_test_hook)
 	@$(call test_hook)
-	@$(call test_post_hook)
+	@$(call after_test_hook)
 	@touch $@
 
 installclean:
@@ -249,13 +249,13 @@ endif
 
 define verify_preprequires
 for x in $(PrepRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Preparation requires $$x) ; done
 endef
 
 define verify_buildrequires
 for x in $(BuildRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Build requires $$x) ; done
 endef
 
@@ -274,10 +274,9 @@ application/gzip) tar zxf $(shell basename $(Source)) ;; \
 esac
 endef
 
-# Apply patches respecting order
+PatchLevel=-p0
 define apply_patches
-for x in $(sort $(wildcard *.patch patches/*.patch)) ; do \
-    $(call info_color, Applying $$x); \
+for x in $(wildcard *.patch patches/*.patch) ; do \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
@@ -321,7 +320,7 @@ define retrieve_hook
 $(fetch_sources)
 endef
 
-define prep_pre_hook
+define before_prep_hook
 $(verify_preprequires)
 endef
 
@@ -331,7 +330,7 @@ mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
-define build_pre_hook
+define before_build_hook
 $(verify_buildrequires)
 endef
 

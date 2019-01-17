@@ -18,7 +18,7 @@ MakeExtra += USE_PCRE=1 USE_PCRE_JIT=1
 MakeExtra += USE_KQUEUE=1
 MakeInstallExtra += SBINDIR=$(BinDir)
 
-define install_post_hook
+define after_install_hook
 rm -f $(DestDir)$(BinDir)/haproxy-systemd-wrapper
 endef
 

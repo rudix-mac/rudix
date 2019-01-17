@@ -13,9 +13,7 @@ LicenseFile=    $(SourceDir)/LICENSE
 ConfigureExtra += --with-pcap-includes=/usr/include/pcap
 LdFlags += -lresolv
 
-PatchLevel = -p1
-
-define prep_post_hook
+define after_prep_hook
 rm -rf $(SourceDir)/autom4te.cache $(SourceDir)/{.deps,Makefile}
 endef
 

@@ -8,7 +8,8 @@
 #
 
 BuildRequires += $(BinDir)/cmake
-CMakeExtra = -DCMAKE_BUILD_TYPE=Release
+
+CMakeExtra += -DCMAKE_BUILD_TYPE=Release
 CMakeExtra += -DCMAKE_INSTALL_PREFIX=$(Prefix)
 
 ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)

@@ -9,7 +9,7 @@ Site=		http://git-scm.com/
 Source=		http://git-core.googlecode.com/files/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define retrieve_post_hook
+define after_retrieve_hook
 $(fetch) http://git-core.googlecode.com/files/git-manpages-$(Version).tar.gz
 endef
 
@@ -17,7 +17,7 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
 
-define install_post_hook
+define after_install_hook
 # Fix Perl module position
 install -d $(InstallDir)/Library/Perl/Updates/$(PerlVersion)
 mv $(InstallDir)$(LibDir)/perl5/site_perl/*.pm \

@@ -12,7 +12,7 @@ LicenseFile=	LICENSE
 
 ConfigureExtra += --without-gettext
 
-define install_post_hook
+define after_install_hook
 install -d $(InstallDir)/$(PythonSitePackages)
 mv $(InstallDir)$(LibDir)/python*/site-packages/talloc.so \
 	$(InstallDir)/$(PythonSitePackages)

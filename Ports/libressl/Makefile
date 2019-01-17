@@ -9,7 +9,7 @@ License=        OpenSSL License
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)$(SysConfDir)/ssl $(InstallDir)$(SysConfDir)/ssl.default
 endef
 

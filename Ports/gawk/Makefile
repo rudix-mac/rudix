@@ -6,13 +6,13 @@ include ../../Library/GNU.mk
 Title=		GNU awk
 Name=		gawk
 Version=	4.2.1
-Site=		http://www.gnu.org/software/gawk/
-Source=		http://ftp.gnu.org/gnu/gawk/$(Name)-$(Version).tar.xz
+Site=		https://www.gnu.org/software/gawk/
+Source=		https://ftp.gnu.org/gnu/gawk/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --with-readline=/usr/local
 
-define install_post_hook
+define after_install_hook
 rm -f $(InstallDir)/$(BinDir)/*-$(Version)
 endef
 

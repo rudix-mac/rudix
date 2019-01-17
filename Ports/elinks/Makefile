@@ -13,7 +13,7 @@ define make
 make
 endef
 
-define install_post_hook
+define after_install_hook
 rm -rf $(InstallDir)/$(LibDir)
 endef
 

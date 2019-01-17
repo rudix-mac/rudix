@@ -9,7 +9,7 @@ License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README.md
 
-define install_post_hook
+define after_install_hook
 for x in $(InstallDir)/$(SysConfDir)/joe/* ; do \
     mv $$x $$x.default ; done
 endef

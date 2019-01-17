@@ -7,7 +7,7 @@ Site=		http://www.methods.co.nz/asciidoc/
 Source=		http://sourceforge.net/projects/asciidoc/files/asciidoc/$(Version)//$(Name)-$(Version).tar.gz
 License=	GPL
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf \
    $(InstallDir)$(Prefix)/etc/asciidoc/asciidoc.conf.default
 endef

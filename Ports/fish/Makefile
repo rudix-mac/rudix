@@ -12,7 +12,7 @@ License=	GPLv2
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/COPYING
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(SysConfDir)/fish/config.fish \
 	$(DestDir)$(SysConfDir)/fish/config.fish.default
 endef

@@ -11,7 +11,7 @@ License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu
 
-define install_post_hook
+define after_install_hook
 ./links.sh $(InstallDir)$(BinDir)
 ./links.sh $(InstallDir)$(Prefix)/share/man/man1
 cd $(InstallDir)$(Prefix)/share/info ; ln -sf grep.info gnugrep.info

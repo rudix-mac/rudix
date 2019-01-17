@@ -14,7 +14,7 @@ LicenseFile=	$(SourceDir)/COPYING-LGPL
 #EnvExtra += PYCURL_SSL_LIBRARY=openssl
 SetupExtra += --with-darwinssl
 
-define check_post_hook
+define after_check_hook
 nm $(BuildDir)/build/*/pycurl.so | grep ssl
 endef
 

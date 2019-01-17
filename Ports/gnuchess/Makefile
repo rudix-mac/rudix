@@ -7,7 +7,7 @@ Site=		https://www.gnu.org/software/chess/
 Source=		https://ftp.gnu.org/gnu/chess/gnuchess-$(Version).tar.gz
 License=        GPLv3
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(DataDir)/gnuchess/gnuchess.ini \
 	$(DestDir)$(DataDir)/gnuchess/gnuchess.ini.default
 endef

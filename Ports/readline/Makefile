@@ -10,7 +10,7 @@ License=	GPLv3
 GnuConfigureExtra += --with-curses
 GnuMakeInstallExtra += install-doc
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/doc/*.html \
 	$(DestDir)/$(DocDir)/$(Name)
 chmod u+w $(DestDir)$(LibDir)/*.dylib || true

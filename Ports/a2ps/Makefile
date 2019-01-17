@@ -9,7 +9,7 @@ Site=		http://www.gnu.org/software/a2ps/
 Source=		http://ftp.gnu.org/gnu/a2ps/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/a2ps.cfg \
 	$(InstallDir)/$(SysConfDir)/a2ps.cfg.default
 mv $(InstallDir)/$(SysConfDir)/a2ps-site.cfg \

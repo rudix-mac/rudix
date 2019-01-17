@@ -16,7 +16,7 @@ GnuConfigureExtra += --disable-csharp
 GnuConfigureExtra += --disable-libasprintf
 GnuConfigureExtra += --with-included-glib
 
-define install_post_hook
+define after_install_hook
 rm -rf $(DestDir)$(DocDir)/gettext/csharpdoc
 rm -rf $(DestDir)$(DocDir)/gettext/examples
 rm -rf $(DestDir)$(DocDir)/gettext/javadoc2
