@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.1.0
+BuildSystem = 1.1.1
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf

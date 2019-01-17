@@ -1,7 +1,7 @@
 #
 # The Darwin part of the BuildSystem.
 #
-# Copyright © 2005-2018 Rudix
+# Copyright © 2005-2019 Rudix (Rudá Moura)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
@@ -36,7 +36,7 @@ PythonSitePackages = /Library/Python/2.7/site-packages
 #
 
 define create_distribution
-../../Utils/synthesize_distribution.py \
+../../Utils/darwin_synthesize_distribution.py \
 	--output $(ResourcesDir)/Distribution \
 	--title "$(Title) $(Version)" \
 	--pkgid $(PkgId) \
@@ -74,19 +74,19 @@ endef
 define test_non_native_dylib
 @$(call info_color,Testing for external linkage)
 for x in $(wildcard $(InstallDir)$(BinDir)/*) ; do \
-	if ../../Utils/display_dylibs.py \
+	if ../../Utils/darwin_display_dylibs.py \
 		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
 	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 for x in $(wildcard $(InstallDir)$(SBinDir)/*) ; do \
-	if  ../../Utils/display_dylibs.py \
+	if  ../../Utils/darwin_display_dylibs.py \
 		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
 	then $(call error_color,Binary $$x linked with non-native dynamic library) ; \
 	fi ; \
 done
 for x in $(wildcard $(InstallDir)$(LibDir)/*.dylib) ; do \
-	if ../../Utils/display_dylibs.py \
+	if ../../Utils/darwin_display_dylibs.py \
 		--exclude-from-path=$(InstallDir)$(LibDir) $$x | grep -q $(LibDir) ; \
 	then $(call error_color,Library $$x linked with non-native dynamic library) ; \
 	fi ; \
@@ -131,15 +131,15 @@ $(test_apache_modules)
 $(test_documentation)
 @$(call info_color,Uninstalling previous package)
 @echo "Administrator (root) credentials required"
-sudo ../../Utils/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
+sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || true
 @$(call info_color,Installing the new package)
 @echo "Administrator (root) credentials required"
-sudo ../../Utils/installer.py $(PkgFile)
+sudo ../../Utils/darwin_installer.py $(PkgFile)
 endef
 
 define test_post_hook
 @$(call info_color,Uninstalling package)
 @echo "Administrator (root) credentials required"
-sudo ../../Utils/remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || \
+sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(DistName) || \
 	$(call warning_color,Possible dirty uninstall)
 endef
