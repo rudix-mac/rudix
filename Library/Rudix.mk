@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.0
+BuildSystem = 1.2.1
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -281,7 +281,7 @@ PatchLevel=-p0
 # Read http://docs.electric-cloud.com/accelerator_doc/8_1/Mobile/eMake/Advanced/Content/emake%20Guide/5_Make_Compatibility/8_Wildcard_Sort_Order.htm
 #
 define apply_patches
-for x in $(sort $(wildcard *.patch patches/*.patch)) ; do \
+for x in $(sort $(wildcard *.diff patches/*.diff *.patch patches/*.patch)) ; do \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 

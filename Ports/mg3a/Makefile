@@ -2,10 +2,10 @@ include ../../Library/Unix.mk
 
 Title=		MG3a
 Name=		mg3a
-Version=	180101
+Version=	190113
 Site=		https://github.com/paaguti
 Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
-License=	Public Domain
+License=	GPL
 
 ReadMeFile=	$(SourceDir)/README
 
@@ -18,6 +18,6 @@ cd $(BuildDir) && $(MAKE) PREFIX="$(DestDir)/$(Prefix)" install
 cp COPYING $(BuildDir)
 endef
 
-# define test_hook
-# $(BinDir)/mg --help | grep $(Version)
-# endef
+define test_hook
+$(BinDir)/mg -v | grep $(Version)
+endef

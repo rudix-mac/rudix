@@ -5,17 +5,14 @@ Name=		erlang
 Version=	19.2
 Site=		http://www.erlang.org/
 Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
+Files=		http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
+Files+=		http://www.erlang.org/download/otp_doc_man_$(Version).tar.gz
 License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 UncompressedName=otp_src_$(Version)
-
-define after_retrieve_hook
-$(fetch) http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
-$(fetch) http://www.erlang.org/download/otp_doc_man_$(Version).tar.gz
-endef
 
 define after_install_hook
 tar -zxf $(PortDir)/otp_doc_man_$(Version).tar.gz -C \

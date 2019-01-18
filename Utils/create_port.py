@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2013-2017 Rudá Moura (Rudix)
+# Copyright © 2013-2019 Rudix (Rudá Moura)
 # Author: Rudá Moura <ruda.moura@gmail.com>
+#
 
-"""Create a new port for Rudix."""
+"""Create new port prototype."""
 
 Makefile = """include ../../Library/{formula}.mk
 
@@ -14,6 +15,10 @@ Version=	{version}
 Site=		{site}
 Source=		{source}
 License=        {license}
+
+define test_hook
+$(BinDir)/{name} --version | grep $(Version)
+endef
 """
 
 def create_makefile(params, path):
@@ -27,18 +32,18 @@ def create_makefile(params, path):
         return 0
 
 def process(args):
+    args.name = args.name.lower()
     if args.title is None:
         title = args.name.title()
     else:
         title = args.title
     params = {'formula': args.formula,
-              'name': args.name,
-              'title': title,
+              'title':   title,
+              'name':    args.name,
               'version': args.version,
-              'site': args.site,
-              'source': args.source,
-              'license': args.license,
-    }
+              'site':    args.site,
+              'source':  args.source,
+              'license': args.license}
     if args.create:
         import os
         os.mkdir(args.name)
@@ -47,25 +52,23 @@ def process(args):
         path = '/dev/stdout'
     return create_makefile(params, path)
 
-
-if __name__ == '__main__':
-    import sys
+def parse_arguments():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('name',
+    parser.add_argument('--name',
+                        default='noname',
                         help='the name of the port. Use all lowercase.')
     parser.add_argument('--version',
-                        default='1.2.3',
-                        help='set version.')
+                        default='1.0',
+                        help='set version. Default: 1.0')
     parser.add_argument('--title',
-                        default='My Package',
-                        help='set title. Default: equals to name.')
+                        help='set title. Default: name capitalized.')
     parser.add_argument('--site',
-                        default='http://example.org/',
+                        default='https://rudix.org/',
                         help='set home page.')
     parser.add_argument('--source',
-                        default='http://example.org/$(Name)-$(Version).tar.gz',
-                        help='set source name and version format.')
+                        default='https://rudix.org/download/$(Name)-$(Version).tar.gz',
+                        help='set source URL, name and version format.')
     parser.add_argument('--license',
                         default='GPL',
                         help='set license. Default: GPL.')
@@ -74,8 +77,11 @@ if __name__ == '__main__':
                         help='set build formula to use. Default: GNU.')
     parser.add_argument('--create',
                         action='store_true',
-                        help='create directory and Makefile.')
+                        help='Create directory (with port name) and put the Makefile there.')
     args = parser.parse_args()
-    sys.exit(process(args))
+    return args
 
-# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(process(parse_arguments()))

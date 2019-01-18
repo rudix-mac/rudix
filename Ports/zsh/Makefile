@@ -7,15 +7,12 @@ Name=		zsh
 Version=	5.5.1
 Site=		http://www.zsh.org
 Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
+Files=		http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
 License=	MIT-like
 
 LicenseFile=	$(SourceDir)/LICENCE
 
 MakeInstallExtra+=install.info
-
-define after_retrieve_hook
-$(fetch) http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
-endef
 
 define after_install_hook
 rm -f $(InstallDir)/$(BinDir)/zsh-$(Version)
