@@ -1,0 +1,79 @@
+diff -rc gtypist-2.9.5/src/cursmenu.c gtypist-build/src/cursmenu.c
+*** gtypist-2.9.5/src/cursmenu.c	2019-01-18 16:59:48.000000000 +0100
+--- gtypist-build/src/cursmenu.c	2019-01-18 16:52:37.000000000 +0100
+***************
+*** 34,39 ****
+--- 34,40 ----
+  #include <string.h>
+  #include <ctype.h>
+
++ #include "utf8.h"
+  #include "gettext.h"
+  #define _(String) gettext (String)
+
+diff -rc gtypist-2.9.5/src/getopt.c gtypist-build/src/getopt.c
+*** gtypist-2.9.5/src/getopt.c	2013-08-18 16:36:14.000000000 +0200
+--- gtypist-build/src/getopt.c	2019-01-18 16:54:10.000000000 +0100
+***************
+*** 695,701 ****
+  		optarg = nameend + 1;
+  	      else
+  		{
+! 		  if (opterr)
+  		   if (argv[optind - 1][1] == '-')
+  		    /* --option */
+  		    fprintf (stderr,
+--- 695,701 ----
+  		optarg = nameend + 1;
+  	      else
+  		{
+! 		  if (opterr) {
+  		   if (argv[optind - 1][1] == '-')
+  		    /* --option */
+  		    fprintf (stderr,
+***************
+*** 706,712 ****
+  		    fprintf (stderr,
+  		     _("%s: option `%c%s' doesn't allow an argument\n"),
+  		     argv[0], argv[optind - 1][0], pfound->name);
+!
+  		  nextchar += strlen (nextchar);
+
+  		  optopt = pfound->val;
+--- 706,712 ----
+  		    fprintf (stderr,
+  		     _("%s: option `%c%s' doesn't allow an argument\n"),
+  		     argv[0], argv[optind - 1][0], pfound->name);
+! 			}
+  		  nextchar += strlen (nextchar);
+
+  		  optopt = pfound->val;
+diff -rc gtypist-2.9.5/src/gtypist.c gtypist-build/src/gtypist.c
+*** gtypist-2.9.5/src/gtypist.c	2019-01-18 16:59:48.000000000 +0100
+--- gtypist-build/src/gtypist.c	2019-01-18 16:57:20.000000000 +0100
+***************
+*** 55,60 ****
+--- 55,64 ----
+  #include "gettext.h"
+  #define _(String) gettext (String)
+
++ /* from script.c */
++
++ extern void check_script_file_with_current_encoding( FILE *script );
++
+  /* VERSION and PACKAGE defined in config.h */
+
+  char *COPYRIGHT;
+diff -rc gtypist-2.9.5/src/utf8.c gtypist-build/src/utf8.c
+*** gtypist-2.9.5/src/utf8.c	2019-01-18 16:59:48.000000000 +0100
+--- gtypist-build/src/utf8.c	2019-01-18 16:55:06.000000000 +0100
+***************
+*** 19,24 ****
+--- 19,25 ----
+
+  #include "config.h"
+  #include "utf8.h"
++ #include "error.h"
+
+  #ifdef HAVE_PDCURSES
+  #include <curses.h>
