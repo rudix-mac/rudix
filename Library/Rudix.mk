@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.0
+BuildSystem = 1.2.1
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -269,7 +269,7 @@ endef
 
 PatchLevel=-p0
 define apply_patches
-for x in $(wildcard *.patch patches/*.patch) ; do \
+for x in $(wildcard *.patch *.diff patches/*.patch patches/*.diff) ; do \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
