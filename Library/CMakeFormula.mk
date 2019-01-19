@@ -19,6 +19,7 @@ define install_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 
