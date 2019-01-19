@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.2
+BuildSystem = 1.2.3
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -291,6 +291,13 @@ install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
 for x in $(Documentation) ; do \
 	cp -Rpv $$x $(DestDir)$(DocDir)/$(Name) ; \
+done
+endef
+
+define install_examples
+install -d $(DestDir)$(ExamplesDir)/$(Name)
+for x in $(Examples) ; do \
+	cp -Rpv $$x $(DestDir)$(ExamplesDir)/$(Name) ; \
 done
 endef
 
