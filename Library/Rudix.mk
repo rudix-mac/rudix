@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.1
+BuildSystem = 1.2.2
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -289,6 +289,9 @@ define install_base_documentation
 install -d $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
+for x in $(Documentation) ; do \
+	cp -Rpv $$x $(DestDir)$(DocDir)/$(Name) ; \
+done
 endef
 
 define test_documentation
