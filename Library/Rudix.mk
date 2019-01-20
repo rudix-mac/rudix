@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.3
+BuildSystem = 1.2.4
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -255,6 +255,12 @@ for x in $(BuildRequires) ; do \
 	|| $(call error_color,Build requires $$x) ; done
 endef
 
+define verify_buildsuggests
+for x in $(BuildSuggests) ; do \
+	test -f $$x && $(call success_color,Found $$x) \
+	|| $(call warning_color,Build suggests $$x) ; done
+endef
+
 define uncompress_source
 case `file -b --mime-type $(shell basename $(Source))` in \
 	application/x-tar) tar xf $(shell basename $(Source)) ;; \
@@ -335,6 +341,7 @@ endef
 
 define before_build_hook
 $(verify_buildrequires)
+$(verify_buildsuggests)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
