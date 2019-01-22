@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.5
+BuildSystem = 1.2.6
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -31,6 +31,7 @@ RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
 RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
 RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
 RUDIX_MSG_TEST?=Testing '$(PkgFile)'
+RUDIX_MSG_DONE?=Done!
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -84,6 +85,7 @@ retrieve:
 	@$(call before_retrieve_hook)
 	@$(call retrieve_hook)
 	@$(call after_retrieve_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Prepare source to compile
@@ -92,6 +94,7 @@ prep: retrieve
 	@$(call before_prep_hook)
 	@$(call prep_hook)
 	@$(call after_prep_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Build source
@@ -100,6 +103,7 @@ build: prep
 	@$(call before_build_hook)
 	@$(call build_hook)
 	@$(call after_build_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Check build
@@ -108,6 +112,7 @@ check: build
 	@$(call before_check_hook)
 	@$(call check_hook)
 	@$(call after_check_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Install into a temporary directory
@@ -116,6 +121,7 @@ install: build
 	@$(call before_install_hook)
 	@$(call install_hook)
 	@$(call after_install_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Create package
@@ -124,6 +130,7 @@ pkg: install
 	@$(call before_pkg_hook)
 	@$(call pkg_hook)
 	@$(call after_pkg_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Run all tests
@@ -132,6 +139,7 @@ test: pkg check
 	@$(call before_test_hook)
 	@$(call test_hook)
 	@$(call after_test_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 installclean:
