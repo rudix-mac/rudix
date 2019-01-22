@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.4
+BuildSystem = 1.2.5
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -177,23 +177,22 @@ help:
 	@echo "  static - Create package with static libraries"
 
 about:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "Title: $(Title)"
-	@echo "Name: $(Name)"
+	@echo "Title:   $(Title)"
+	@echo "Name:    $(Name)"
 	@echo "Version: $(Version)"
-	@echo "Site: $(Site)"
+	@echo "Site:    $(Site)"
+	@echo "Source:  $(Source)"
 	@echo "License: $(License)"
-	@echo "Source: $(Source)"
 
 json:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "{ \"title\": \"$(Title)\","
-	@echo "  \"name\": \"$(Name)\","
-	@echo "  \"version\": \"$(Version)\","
-	@echo "  \"site\": \"$(Site)\","
-	@echo "  \"license\": \"$(License)\","
-	@echo "  \"source\": \"$(Source)\" }"
-
+	@echo "{"
+	@echo "\t\"title\":   \"$(Title)\","
+	@echo "\t\"name\":    \"$(Name)\","
+	@echo "\t\"version\": \"$(Version)\","
+	@echo "\t\"site\":    \"$(Site)\","
+	@echo "\t\"source\":  \"$(Source)\","
+	@echo "\t\"license\": \"$(License)\""
+	@echo "}"
 #
 # Functions
 #
