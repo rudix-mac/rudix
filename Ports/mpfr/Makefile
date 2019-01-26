@@ -1,9 +1,6 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
-# Is there any patches to apply for this version?
-# curl http://www.mpfr.org/mpfr-3.1.3/allpatches
-
-BuildRequires += $(LibDir)/libgmp.la  # static-gmp
+BuildRequires += $(LibDir)/libgmp.la  # gmp | static-gmp
 
 include ../../Library/GNU.mk
 
@@ -18,4 +15,5 @@ GnuConfigureExtra += --with-pic
 
 define test_hook
 test -f $(LibDir)/libmpfr.la
+test -f $(LibDir)/pkgconfig/mpfr.pc
 endef

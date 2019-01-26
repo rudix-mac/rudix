@@ -1,7 +1,7 @@
 #
 # Unix Formula.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
+# Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Ruda Moura, Leonardo Santagada
 #
 
@@ -17,6 +17,7 @@ define install_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 

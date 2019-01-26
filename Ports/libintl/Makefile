@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU libintl
 Name=		libintl
 Version=	0.19.8.1
-Site=		http://www.gnu.org/software/gettext/
-Source=		http://ftp.gnu.org/gnu/gettext/gettext-$(Version).tar.xz
+Site=		https://www.gnu.org/software/gettext/
+Source=		https://ftp.gnu.org/gnu/gettext/gettext-$(Version).tar.xz
 License=	GPLv3
 
 UncompressedName=gettext-$(Version)

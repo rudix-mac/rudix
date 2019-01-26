@@ -1,7 +1,7 @@
 #
 # Python Formula.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
+# Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
@@ -30,6 +30,7 @@ $(Python) \
 	--install-lib=$(PythonSitePackages)
 cd $(BuildDir) && $(Python) -m compileall -d / $(DestDir)
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 

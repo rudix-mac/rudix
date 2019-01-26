@@ -1,17 +1,15 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
-BuildRequires += $(LibDir)/libgmp.la  # static-gmp
-BuildRequires += $(LibDir)/libmpfr.la  # static-mpfr
+BuildRequires += $(LibDir)/libgmp.la	# gmp | static-gmp
+BuildRequires += $(LibDir)/libmpfr.la	# mpfr | static-mpfr
 
 include ../../Library/GNU.mk
 
-Description=	C library for arbitrary precision arithmetic on complex numbers 
-Summary=	The GNU MPC library
 Title=		GNU MPC
 Name=		mpc
 Version=	1.1.0
-Site=		http://www.multiprecision.org/
-Source=		ftp://ftp.gnu.org/gnu/mpc//$(Name)-$(Version).tar.gz
+Site=		http://www.multiprecision.org/mpc/
+Source=		https://ftp.gnu.org/gnu/mpc/mpc-$(Version).tar.gz
 License=	LGPLv3
 LicenseFile=	$(SourceDir)/COPYING.LESSER
 

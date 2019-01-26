@@ -1,17 +1,28 @@
-#BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(BinDir)/autoconf	# autoconf
+BuildRequires += $(BinDir)/automake	# automake
+BuildRequires += $(BinDir)/libtool	# libtool
+BuildRequires += $(BinDir)/autopoint	# gettext | static-gettext
+BuildRequires += $(LibDir)/libintl.la	# gettext | static-gettext
+BuildRequires += $(LibDir)/pkgconfig/readline.pc	# readline
 
 include ../../Library/GNU.mk
 
 Title=		Hunspell
 Name=		hunspell
-Version=	1.6.0
-Site=           http://hunspell.sourceforge.net
+Version=	1.7.0
+Site=           https://hunspell.github.io
 Source=		https://github.com/hunspell/hunspell/archive/v$(Version).tar.gz
-License=        GPL
+License=        MPL
 
-GnuConfigureExtra += --with-included-gettext
-#GnuConfigureExtra += --with-readline
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/license.hunspell
+
+GnuConfigureExtra += --with-readline
 GnuConfigureExtra += --with-ui
+
+define before_build_hook
+cd $(BuildDir) && autoreconf -vfi
+endef
 
 define test_hook
 $(BinDir)/hunspell --version | grep $(Version)

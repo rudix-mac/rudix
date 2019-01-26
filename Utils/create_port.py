@@ -31,7 +31,20 @@ def create_makefile(params, path):
     else:
         return 0
 
+def process_json(jfile):
+    import json
+    try:
+        data = json.loads(jfile.read())
+    except Exception as err:
+        print jfile, err
+        return {}
+    return data
+
 def process(args):
+    if args.from_json:
+        j = process_json(args.from_json)
+        for val in j:
+            setattr(args, val, j[val])
     args.name = args.name.lower()
     if args.title is None:
         title = args.name.title()
@@ -78,7 +91,14 @@ def parse_arguments():
     parser.add_argument('--create',
                         action='store_true',
                         help='Create directory (with port name) and put the Makefile there.')
-    args = parser.parse_args()
+    parser.add_argument('--from-json',
+                        type=file,
+                        help='Read information from JSON')
+    try:
+        args = parser.parse_args()
+    except IOError as err:
+        print err
+        sys.exit(1)
     return args
 
 

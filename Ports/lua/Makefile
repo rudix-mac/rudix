@@ -7,6 +7,7 @@ Site=		http://www.lua.org/
 Source=		http://www.lua.org/ftp/$(Name)-$(Version).tar.gz
 License=	MIT
 LicenseFile=	license.txt
+Documentation=	$(SourceDir)/doc/*
 
 MakeExtra = MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
 MakeExtra += macosx
@@ -16,10 +17,6 @@ MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 define after_check_hook
 otool -L $(BuildDir)/src/lua | grep libedit
 nm $(BuildDir)/src/lua | grep _readline
-endef
-
-define after_install_hook
-install -m 644 $(SourceDir)/doc/* $(DestDir)$(DocDir)/$(Name)
 endef
 
 define test_hook
