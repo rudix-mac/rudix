@@ -8,3 +8,5 @@ Source=		https://github.com/libgd/libgd/releases/download/gd-${Version}/${Name}-
 License=    Freely distributable
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/COPYING
+
+ConfigureExtras += --without-xpm
