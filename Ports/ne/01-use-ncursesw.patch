@@ -1,0 +1,38 @@
+diff -ruN ne-3.1.2/src/makefile ne-build/src/makefile
+--- ne-3.1.2/src/makefile	2018-10-04 17:00:02.000000000 +0200
++++ ne-build/src/makefile	2019-01-28 08:06:47.000000000 +0100
+@@ -71,8 +71,6 @@
+ 		term.o \
+ 		undo.o \
+ 		utf8.o
+-		
+-
+ 
+ TERMCAPOBJS   = tparam.o \
+ 		info2cap.o \
+@@ -90,16 +88,23 @@
+ GCCFLAGS=-std=c99 -Wall -Wno-parentheses
+ endif
+ 
++CURSES_FLAGS=$(shell ncursesw6-config --cflags)
++
+ CFLAGS=$(OPTS) $(GCCFLAGS) \
+ 	-D_REGEX_LARGE_OFFSETS -D_GNU_SOURCE -DSTDC_HEADERS -Dinline=__inline__ \
+ 	$(if $(NE_NOWCHAR), -DNOWCHAR,) \
+ 	$(if $(NE_TEST),    -DNE_TEST -coverage,) \
+ 	$(if $(NE_DEBUG),   -g -fsanitize=address -fsanitize=undefined,-O3 -DNDEBUG) \
+ 	$(if $(NE_TERMCAP), -DTERMCAP,) \
+-	$(if $(NE_ANSI),    -DTERMCAP -DANSI,)
++	$(if $(NE_ANSI),    -DTERMCAP -DANSI,) \
++	$(if $(NE_ANSI)$(NE_TERMCAP),, $(CURSES_FLAGS))
+ 
++CURSES_LIBS=$(shell ncursesw6-config --libs)
++ifeq ($(CURSES_LIBS),)
++	CURSES_LIBS=-lcurses
++endif
+ 
+-LIBS=$(if $(NE_TERMCAP)$(NE_ANSI),,-lcurses)
++LIBS=$(if $(NE_TERMCAP)$(NE_ANSI),,$(CURSES_LIBS))
+ 
+ ne:	$(OBJS) $(if $(NE_TERMCAP)$(NE_ANSI),$(TERMCAPOBJS),)
+ 	$(CC) $(OPTS) $(LDFLAGS) $(if $(NE_TEST), -coverage,) $(if $(NE_DEBUG), -fsanitize=address -fsanitize=undefined,) $^ -lm $(LIBS) -o $(PROGRAM)

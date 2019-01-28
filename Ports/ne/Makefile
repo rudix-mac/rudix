@@ -9,6 +9,8 @@ License=	GPL
 
 ReadMeFile=	$(SourceDir)/README.md
 
+PatchLevel = -p1
+
 define build_hook
 cd $(BuildDir) && $(MAKE)
 endef
