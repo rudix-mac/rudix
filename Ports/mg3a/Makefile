@@ -8,6 +8,7 @@ Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README
+PatchLevel = -p1
 
 define build_hook
 cd $(BuildDir) && $(MAKE)
