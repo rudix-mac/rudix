@@ -1,4 +1,4 @@
-BuildRequies += $(LibDir)/libevent.la # static-libevent
+BuildRequires += $(LibDir)/libevent.la # static-libevent
 
 include ../../Library/GNU.mk
 

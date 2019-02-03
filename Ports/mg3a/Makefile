@@ -9,6 +9,7 @@ Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README
+PatchLevel = -p1
 
 GnuMakeExtras += COPT="-O3 $(shell ncursesw6-config --cflags)"
 GnuMakeExtras += LIBS="$(shell ncursesw6-config --libs)"

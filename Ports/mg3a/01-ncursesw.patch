@@ -1,0 +1,120 @@
+diff -ruN mg3a-190113/Makefile mg3a-190128/Makefile
+--- mg3a-190113/Makefile	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/Makefile	2019-01-28 07:38:15.000000000 +0100
+@@ -8,7 +8,13 @@
+ CC=cc
+ COPT=-O3
+ LD=cc
+-LIBS=-lcurses
++LIBS=$(shell ncursesw6-config --libs)
++ifeq ($(LIBS),)
++	LIBS=-lcurses
++else
++	COPT += $(shell ncursesw6-config --cflags)
++endif
++
+ # Try if -lncurses doesn't work
+ 
+ # For install entries
+diff -ruN mg3a-190113/def.h mg3a-190128/def.h
+--- mg3a-190113/def.h	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/def.h	2019-01-28 07:39:41.000000000 +0100
+@@ -846,7 +846,7 @@
+ INT	ttgetc(void);
+ int	ittputc(int c);
+ int	waitforinput(INT milliseconds);
+-int	typeahead(void);
++int	type_ahead(void);
+ void	panic(char *s, int error);
+ void	setttysize(void);
+ 
+diff -ruN mg3a-190113/display.c mg3a-190128/display.c
+--- mg3a-190113/display.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/display.c	2019-01-28 07:39:59.000000000 +0100
+@@ -734,7 +734,7 @@
+ 	static INT	shift_row = -1;
+ 	static INT	prev_shift = 0;
+ #endif
+-	if (typeahead()) return;
++	if (type_ahead()) return;
+ 
+ 	checkcache();
+ 
+diff -ruN mg3a-190113/echo.c mg3a-190128/echo.c
+--- mg3a-190113/echo.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/echo.c	2019-01-28 07:39:59.000000000 +0100
+@@ -430,7 +430,7 @@
+ 			break;
+ 		    default:
+ 		    	// All invalid escape sequences end up here
+-		    	while (typeahead()) ttgetc();
++		    	while (type_ahead()) ttgetc();
+ 			complt_msg(" [no binding]");
+ 			continue;
+ 		}
+diff -ruN mg3a-190113/help.c mg3a-190128/help.c
+--- mg3a-190113/help.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/help.c	2019-01-28 07:39:59.000000000 +0100
+@@ -83,7 +83,7 @@
+     if(funct == rescan) {
+     	estart();
+     	ewprintfc("%k");
+-	while (typeahead()) {
++	while (type_ahead()) {
+ 		ewprintfc(" %K", getkey(FALSE));
+ 	}
+ 	ewprintfc(" is not bound to any function");
+diff -ruN mg3a-190113/main.c mg3a-190128/main.c
+--- mg3a-190113/main.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/main.c	2019-01-28 07:39:59.000000000 +0100
+@@ -177,7 +177,7 @@
+ 	    switch(doin()) {
+ 		case TRUE: break;
+ 		case ABORT:
+-		    while (typeahead()) ttgetc();
++		    while (type_ahead()) ttgetc();
+ 		    if (!(thisflag & CFNOQUIT)) ewprintf("Quit");
+ 		    /* fallthrough */
+ 		case FALSE:
+diff -ruN mg3a-190113/search.c mg3a-190128/search.c
+--- mg3a-190113/search.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/search.c	2019-01-28 07:39:59.000000000 +0100
+@@ -413,7 +413,7 @@
+ 			curwp->w_markp = clp;
+ 			curwp->w_marko = cbo;
+ 			ewprintf("Mark set");
+-			if (typeahead()) ungetkey(c);	// Escape sequence
++			if (type_ahead()) ungetkey(c);	// Escape sequence
+ 			return (TRUE);
+ 
+ 		case CCHR('G'):
+@@ -793,7 +793,7 @@
+ 			goto stopsearch;
+ 
+ 		case CCHR('['): /* ESC */
+-			if (typeahead()) ungetkey(c);	// Escape sequence
++			if (type_ahead()) ungetkey(c);	// Escape sequence
+ 			goto stopsearch;
+ 
+ 		case '!':
+diff -ruN mg3a-190113/ttyio.c mg3a-190128/ttyio.c
+--- mg3a-190113/ttyio.c	2019-01-13 17:45:44.000000000 +0100
++++ mg3a-190128/ttyio.c	2019-01-28 07:41:19.000000000 +0100
+@@ -202,6 +202,8 @@
+  *
+  * Mg3a: New dealing with typeahead. Deal with window change. Deal
+  * severely with read errors other than EINTR (which is not an error).
++ * using type_ahead instead of typeahead to avoid possible collisions
++ * with ncurses
+  */
+ 
+ INT
+@@ -246,7 +248,7 @@
+  */
+ 
+ int
+-typeahead()
++type_ahead()
+ {
+ #if SELECT_FOR_TYPEAHEAD
+ 	fd_set readset;
