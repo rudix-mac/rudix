@@ -1,4 +1,5 @@
 include ../../Library/Unix.mk
+BuildDepends += /usr/local/bin/ncursesw6-config
 
 Title=		MG3a
 Name=		mg3a
@@ -8,6 +9,9 @@ Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
 License=	GPL
 
 ReadMeFile=	$(SourceDir)/README
+
+GnuMakeExtras += COPT="-O3 $(shell ncursesw6-config --cflags)"
+GnuMakeExtras += LIBS="$(shell ncursesw6-config --libs)"
 
 define build_hook
 cd $(BuildDir) && $(MAKE)

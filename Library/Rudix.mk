@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.1
+BuildSystem = 1.2.6
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -31,6 +31,7 @@ RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
 RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
 RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
 RUDIX_MSG_TEST?=Testing '$(PkgFile)'
+RUDIX_MSG_DONE?=Done!
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -88,6 +89,7 @@ retrieve:
 	@$(call before_retrieve_hook)
 	@$(call retrieve_hook)
 	@$(call after_retrieve_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Prepare source to compile
@@ -96,6 +98,7 @@ prep: retrieve
 	@$(call before_prep_hook)
 	@$(call prep_hook)
 	@$(call after_prep_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Build source
@@ -104,6 +107,7 @@ build: prep
 	@$(call before_build_hook)
 	@$(call build_hook)
 	@$(call after_build_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Check build
@@ -112,6 +116,7 @@ check: build
 	@$(call before_check_hook)
 	@$(call check_hook)
 	@$(call after_check_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Install into a temporary directory
@@ -120,6 +125,7 @@ install: build
 	@$(call before_install_hook)
 	@$(call install_hook)
 	@$(call after_install_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Create package
@@ -128,6 +134,7 @@ pkg: install
 	@$(call before_pkg_hook)
 	@$(call pkg_hook)
 	@$(call after_pkg_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Run all tests
@@ -136,6 +143,7 @@ test: pkg check
 	@$(call before_test_hook)
 	@$(call test_hook)
 	@$(call after_test_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 installclean:
@@ -181,23 +189,22 @@ help:
 	@echo "  static - Create package with static libraries"
 
 about:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "Title: $(Title)"
-	@echo "Name: $(Name)"
+	@echo "Title:   $(Title)"
+	@echo "Name:    $(Name)"
 	@echo "Version: $(Version)"
-	@echo "Site: $(Site)"
+	@echo "Site:    $(Site)"
+	@echo "Source:  $(Source)"
 	@echo "License: $(License)"
-	@echo "Source: $(Source)"
 
 json:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "{ \"title\": \"$(Title)\","
-	@echo "  \"name\": \"$(Name)\","
-	@echo "  \"version\": \"$(Version)\","
-	@echo "  \"site\": \"$(Site)\","
-	@echo "  \"license\": \"$(License)\","
-	@echo "  \"source\": \"$(Source)\" }"
-
+	@echo "{"
+	@echo "\t\"title\":   \"$(Title)\","
+	@echo "\t\"name\":    \"$(Name)\","
+	@echo "\t\"version\": \"$(Version)\","
+	@echo "\t\"site\":    \"$(Site)\","
+	@echo "\t\"source\":  \"$(Source)\","
+	@echo "\t\"license\": \"$(License)\""
+	@echo "}"
 #
 # Functions
 #
@@ -259,6 +266,12 @@ for x in $(BuildRequires) ; do \
 	|| $(call error_color,Build requires $$x) ; done
 endef
 
+define verify_buildsuggests
+for x in $(BuildSuggests) ; do \
+	test -f $$x && $(call success_color,Found $$x) \
+	|| $(call warning_color,Build suggests $$x) ; done
+endef
+
 define uncompress_source
 echo $(shell basename $(Source)); \
 echo `file -b --mime-type $(shell basename $(Source))`; \
@@ -301,6 +314,16 @@ define install_base_documentation
 install -d $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
+for x in $(Documentation) ; do \
+	cp -Rpv $$x $(DestDir)$(DocDir)/$(Name) ; \
+done
+endef
+
+define install_examples
+install -d $(DestDir)$(ExamplesDir)/$(Name)
+for x in $(Examples) ; do \
+	cp -Rpv $$x $(DestDir)$(ExamplesDir)/$(Name) ; \
+done
 endef
 
 define test_documentation
@@ -337,6 +360,7 @@ endef
 
 define before_build_hook
 $(verify_buildrequires)
+$(verify_buildsuggests)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about

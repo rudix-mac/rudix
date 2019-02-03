@@ -1,6 +1,5 @@
 include ../../Library/Configure.mk
 
-Description=	zlib is a general purpose data compression library
 Title=		Zlib
 Name=		zlib
 Version=	1.2.11

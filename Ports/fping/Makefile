@@ -5,7 +5,9 @@ Name=		fping
 Version=	4.1
 Site=           http://fping.org
 Source=		http://fping.org/dist/$(Name)-$(Version).tar.gz
-License=        BSD?
+License=        MIT?
+
+ReadMeFile =	$(SourceDir)/CHANGELOG.md
 
 ReadMeFile =	$(BuildDir)/CHANGELOG.md
 
