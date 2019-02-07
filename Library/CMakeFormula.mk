@@ -17,15 +17,19 @@ CMakeExtra += -DBUILD_STATIC_LIBS=ON
 endif
 
 define build_pre_hook
-mkdir -p $(BuildDir)/build && cd $(BuildDir)/build && cmake .. $(CMakeExtra)
+mkdir -p $(BuildDir)/build && \
+cd $(BuildDir)/build && \
+env $(EnvExtra) cmake .. $(CMakeExtra)
 endef
 
 define build_hook
-cd $(BuildDir)/build && make $(MakeExtra)
+cd $(BuildDir)/build && \
+env $(EnvExtra) make $(MakeExtra)
 endef
 
 define install_hook
-cd $(BuildDir)/build && make DESTDIR="$(DestDir)" install $(MakeInstallExtra)
+cd $(BuildDir)/build && \
+$(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
 $(install_examples)
 $(strip_macho)
