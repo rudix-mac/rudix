@@ -5,11 +5,7 @@ Name=		sed
 Version=	4.7
 Site=		https://www.gnu.org/software/sed
 Source=		https://ftp.gnu.org/gnu/sed/$(Name)-$(Version).tar.xz
-<<<<<<< HEAD
-License=	GPL
-=======
 License=	GPLv3
->>>>>>> upstream/master
 
 GnuConfigureExtra += --program-prefix=gnu
 
