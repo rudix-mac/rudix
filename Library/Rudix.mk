@@ -52,10 +52,6 @@ DistName = $(Name)
 endif
 
 #
-# Patch level: default 0
-#
-PatchLevel = -p0
-#
 # Install dir options
 #
 Prefix        = /usr/local
