@@ -2,7 +2,7 @@ include ../../Library/Configure.mk
 
 Title=		CMake
 Name=		cmake
-Version=	3.13.2
+Version=	3.13.4
 Site=		https://cmake.org
 Source=		https://cmake.org/files/v3.13/cmake-${Version}.tar.gz
 License=        BSD
