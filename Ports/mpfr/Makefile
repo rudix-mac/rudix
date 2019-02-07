@@ -7,9 +7,9 @@ include ../../Library/GNU.mk
 Title=		GNU MPFR
 Name=		mpfr
 Version=	4.0.1
-Site=		http://www.mpfr.org/
-Source=		https://www.mpfr.org/mpfr-current/$(Name)-$(Version).tar.xz
-License=	LGPLv3
+Site=		https://www.mpfr.org/
+Source=		https://www.mpfr.org/mpfr-current/mpfr-$(Version).tar.xz
+License=	LGPLv3/GPLv3
 
 GnuConfigureExtra += --with-pic
 
