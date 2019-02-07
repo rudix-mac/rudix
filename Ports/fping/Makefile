@@ -7,7 +7,7 @@ Site=           http://fping.org
 Source=		http://fping.org/dist/$(Name)-$(Version).tar.gz
 License=        MIT?
 
-ReadMeFile =	$(BuildDir)/CHANGELOG.md
+ReadMeFile =	$(SourceDir)/CHANGELOG.md
 
 GnuConfigureExtra += --sbindir=$(BinDir)
 GnuConfigureExtra += --enable-ipv4 --enable-ipv6
