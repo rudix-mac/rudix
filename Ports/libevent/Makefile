@@ -1,12 +1,20 @@
+WITH_SSL?=yes
+ifeq ($(WITH_SSL),yes)
+BuildRequires += $(LibDir)/libssl.la	# libressl | openssl
+else
+GnuConfigureExtra += --disable-openssl
+endif
+
 include ../../Library/GNU.mk
 
-Title=		Asynchronous Event Library
+Title=		LibEvent
 Name=		libevent
-Version=	2.0.22
-Site=		http://libevent.org/
-Source=		http://downloads.sourceforge.net/levent/$(Name)-$(Version)-stable.tar.gz
+Version=	2.1.8
+Site=		https://libevent.org
+Source=		https://github.com/libevent/libevent/releases/download/release-$(Version)-stable/libevent-$(Version)-stable.tar.gz
 License=	BSD
 LicenseFile=	$(SourceDir)/LICENSE
+ReadMeFile=	$(PortDir)/README.txt
 UncompressedName=$(Name)-$(Version)-stable
 
 define test_hook
