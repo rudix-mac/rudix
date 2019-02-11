@@ -1,6 +1,4 @@
-BuildRequires += $(BinDir)/cmake
-
-include ../../Library/GNU.mk
+include ../../Library/CMake.mk
 
 Title=		YAJL
 Name=		yajl

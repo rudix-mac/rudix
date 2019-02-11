@@ -1,5 +1,3 @@
-BuildRequires += $(BinDir)/cmake
-
 include ../../Library/CMake.mk
 
 Title=		OpenJPEG

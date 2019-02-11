@@ -4,9 +4,9 @@ include ../../Library/GNU.mk
 
 Title=		Memcached
 Name=		memcached
-Version=	1.4.30
-Site=		http://memcached.org/
-Source=		http://www.memcached.org/files/$(Name)-$(Version).tar.gz
+Version=	1.5.12
+Site=		https://memcached.org/
+Source=		https://www.memcached.org/files/$(Name)-$(Version).tar.gz
 License=	BSD
 
 ReadMeFile=	$(SourceDir)/README.md
