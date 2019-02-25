@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Title=		xorg-libSM
 Name=		libSM
 Version=	1.2.3
-Site=		https://rudix.org/
+Site=		https://gitlab.freedesktop.org/xorg
 Source=		https://gitlab.freedesktop.org/xorg/lib/libsm/-/archive/${Name}-${Version}/libsm-${Name}-${Version}.tar.bz2
 License=    GPL
 
