@@ -308,8 +308,8 @@ done
 endef
 
 define install_examples
-install -d $(DestDir)$(ExamplesDir)/$(Name)
 for x in $(Examples) ; do \
+	install -d $(DestDir)$(ExamplesDir)/$(Name) ; \
 	cp -Rpv $$x $(DestDir)$(ExamplesDir)/$(Name) ; \
 done
 endef
