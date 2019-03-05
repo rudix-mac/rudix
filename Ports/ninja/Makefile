@@ -1,14 +1,17 @@
-include ../../Library/Rudix.mk
+# Ninja build system
 
-Title=		Ninja Build System
+include ../../Library/Rudix.mk
+include ../../Library/$(System).mk
+
+Title=		Ninja
 Name=		ninja
-Version=	1.5.3
-Site=		http://martine.github.com/ninja/
-Source=		https://github.com/martine/ninja/archive/v$(Version).tar.gz
-License=	Apache License
+Version=	1.9.0
+Site=		https://ninja-build.org
+Source=		https://github.com/ninja-build/ninja/archive/v$(Version).tar.gz
+License=	Apache License 2.0
 
 define build_hook
-cd $(BuildDir) && ./bootstrap.py
+cd $(BuildDir) && ./configure.py --bootstrap
 endef
 
 define install_hook
