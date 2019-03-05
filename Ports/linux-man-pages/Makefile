@@ -1,6 +1,6 @@
 RUDIX_STRIP_PACKAGE=no
 
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Title=		Linux manual pages
 Name=		linux-man-pages

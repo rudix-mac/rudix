@@ -1,7 +1,6 @@
 # Ninja build system
 
-include ../../Library/Rudix.mk
-include ../../Library/$(System).mk
+include ../../Library/Custom.mk
 
 Title=		Ninja
 Name=		ninja
