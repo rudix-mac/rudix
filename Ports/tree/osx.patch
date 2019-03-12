@@ -1,23 +1,25 @@
---- Makefile.orig	2014-04-18 14:35:39.000000000 -0300
-+++ Makefile	2014-09-21 17:07:02.000000000 -0300
+--- tree-1.8.0/Makefile	2018-01-18 21:02:20.000000000 +0100
++++ tree-build/Makefile	2019-03-12 10:33:44.000000000 +0100
 @@ -30,7 +30,7 @@
  # Uncomment options below for your particular OS:
  
  # Linux defaults:
--CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
-+#CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+-CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++#CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
  #CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
  #LDFLAGS=-s
  
-@@ -53,11 +53,11 @@
- #OBJS+=strverscmp.o
+@@ -61,12 +61,12 @@
  
  # Uncomment for OS X:
+ # It is not allowed to install to /usr/bin on OS X any longer (SIP):
+-#prefix = /usr/local
 -#CC=cc
 -#CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
 -#LDFLAGS=
 -#MANDIR=/usr/share/man/man1
 -#OBJS+=strverscmp.o
++prefix = /usr/local
 +CC=cc
 +CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
 +LDFLAGS=
@@ -26,3 +28,12 @@
  
  # Uncomment for HP/UX:
  #CC=cc
+@@ -119,7 +119,7 @@
+ distclean:
+ 	if [ -f tree.o ]; then rm *.o; fi
+ 	rm -f *~
+-	
++
+ 
+ dist:	distclean
+ 	tar zcf ../tree-$(VERSION).tgz -C .. `cat .tarball`
