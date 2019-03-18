@@ -12,7 +12,6 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	$(SourceDir)/LICENSE
 
-GnuConfigureExtra += --sbindir=$(BinDir)
 GnuConfigureExtra += --with-user=root
 
 define after_install_hook

@@ -12,8 +12,6 @@ Source=		ftp://www.bitwizard.nl/mtr/mtr-$(Version).tar.gz
 License=	GPLv2
 
 ConfigureExtra += --without-gtk
-ConfigureExtra += --sbindir=$(BinDir)
-MakeInstallExtra += sbindir=$(BinDir)
 
 define after_install_hook
 install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)

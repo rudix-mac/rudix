@@ -9,7 +9,6 @@ License=        MIT?
 
 ReadMeFile =	$(SourceDir)/CHANGELOG.md
 
-GnuConfigureExtra += --sbindir=$(BinDir)
 GnuConfigureExtra += --enable-ipv4 --enable-ipv6
 
 define test_hook
