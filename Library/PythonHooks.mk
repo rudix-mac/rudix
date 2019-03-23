@@ -1,5 +1,5 @@
 #
-# Python Formula.
+# Python Hooks.
 #
 # Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada

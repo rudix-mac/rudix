@@ -1,5 +1,5 @@
 #
-# CMake Formula.
+# CMake Hooks.
 #
 # Copyright © 2019 Rudix
 # Author: Rudá Moura <ruda.moura@gmail.com>

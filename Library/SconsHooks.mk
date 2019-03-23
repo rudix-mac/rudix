@@ -1,4 +1,4 @@
-# Scons Formula
+# Scons Hooks
 #
 # Copyright (c) 2011-2019 Rudá Moura (Rudix)
 # Authors: Caio Begotti
