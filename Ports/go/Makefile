@@ -2,7 +2,7 @@ BuildRequires += $(BinDir)/go  # go >= 1.4.2-1
 
 GoRoot=$(LibDir)/go
 
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Description=	The Go Programming Language
 Title=		Go Language

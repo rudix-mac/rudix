@@ -1,1 +1,4 @@
-Netscape Portable Runtime (NSPR) provides a platform-neutral API for system level and libc like functions. The API is used in the Mozilla clients and many of Red Hat's, Sun's, and other software offerings.
+Netscape Portable Runtime (NSPR) provides a platform-neutral API
+for system level and libc-like functions. The API is used in the
+Mozilla clients, many of Red Hat's and Oracle's server applications,
+and other software offerings.

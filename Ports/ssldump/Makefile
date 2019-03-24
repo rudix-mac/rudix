@@ -12,7 +12,6 @@ License=	BSD
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 GnuConfigureExtra += --host=i386-freebsd
-GnuConfigureExtra += --sbindir=$(BinDir)
 
 MakeInstallExtra += -B
 MakeInstallExtra += prefix=$(PortDir)/$(InstallDir)/$(Prefix)

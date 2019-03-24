@@ -1,5 +1,5 @@
 RUDIX_STRIP_PACKAGE=no
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Title=		Apache Cassandra
 Name=		cassandra

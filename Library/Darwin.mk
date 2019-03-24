@@ -5,22 +5,18 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-OSXVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
+MacOSVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 
 PkgId = $(Vendor).pkg.$(DistName)
-PkgFile = $(DistName)-$(Version).pkg
+PkgFile = $(DistName)-$(Version)-macos$(MacOSVersion).pkg
 
 #
 # Build flags options
 #
-ArchFlags = -arch x86_64
-# Minimum OS X version supported
-CompatFlags = -mmacosx-version-min=10.11
-OptFlags = -Os
-CFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
-CxxFlags = $(ArchFlags) $(OptFlags) $(CompatFlags)
+CFlags   = -arch x86_64 -Os
+CxxFlags = -arch x86_64 -Os
 CppFlags = -I$(IncludeDir)
-LdFlags = $(ArchFlags) $(CompatFlags)
+LdFlags  = -arch x86_64
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif

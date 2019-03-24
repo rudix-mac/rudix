@@ -12,7 +12,6 @@ License=	BSD
 LicenseFile=	$(SourceDir)/LICENSE
 
 ConfigureExtra += --prefix=$(DataDir)/nginx
-ConfigureExtra += --sbin-path=$(BinDir)/nginx
 ConfigureExtra += --conf-path=$(SysConfDir)/nginx/nginx.conf
 ConfigureExtra += --error-log-path=$(LocalStateDir)/log/nginx/error.log
 ConfigureExtra += --http-log-path=$(LocalStateDir)/log/nginx/access.log

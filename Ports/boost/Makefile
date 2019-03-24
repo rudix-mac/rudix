@@ -1,4 +1,4 @@
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Title=		Boost C++ Libraries
 Name=		boost

@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.2.6
+BuildSystem = 1.3.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -316,8 +316,8 @@ done
 endef
 
 define install_examples
-install -d $(DestDir)$(ExamplesDir)/$(Name)
 for x in $(Examples) ; do \
+	install -d $(DestDir)$(ExamplesDir)/$(Name) ; \
 	cp -Rpv $$x $(DestDir)$(ExamplesDir)/$(Name) ; \
 done
 endef

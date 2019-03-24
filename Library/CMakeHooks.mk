@@ -1,7 +1,6 @@
 # CMake Formula
 #
-# Copyright (c) 2011-2017 Rudá Moura (Rudix)
-# Authors: Pedro A. Aranda Gutiérrez
+# CMake Hooks.
 #
 # Insisting on using $(BuildDir)/build to build the executable
 # after reading the build instructions for all the Ports we have that use cmake

@@ -7,7 +7,7 @@
 
 """Create new port prototype."""
 
-Makefile = """include ../../Library/{formula}.mk
+Makefile = """include ../../Library/{build}.mk
 
 Title=		{title}
 Name=		{name}
@@ -50,7 +50,7 @@ def process(args):
         title = args.name.title()
     else:
         title = args.title
-    params = {'formula': args.formula,
+    params = {'build': args.build,
               'title':   title,
               'name':    args.name,
               'version': args.version,
@@ -85,9 +85,9 @@ def parse_arguments():
     parser.add_argument('--license',
                         default='GPL',
                         help='set license. Default: GPL.')
-    parser.add_argument('--formula',
+    parser.add_argument('--build',
                         default='GNU',
-                        help='set build formula to use. Default: GNU.')
+                        help='set build style to use. Default: GNU.')
     parser.add_argument('--create',
                         action='store_true',
                         help='Create directory (with port name) and put the Makefile there.')

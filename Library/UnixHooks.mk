@@ -1,5 +1,5 @@
 #
-# Unix Formula.
+# Unix Hooks.
 #
 # Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Ruda Moura, Leonardo Santagada
