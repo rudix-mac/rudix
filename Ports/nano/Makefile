@@ -2,13 +2,13 @@ include ../../Library/GNU.mk
 
 Title=		GNU nano
 Name=		nano
-Version=	2.9.4
+Version=	4.1
 Site=		https://www.nano-editor.org
-Source=		https://www.nano-editor.org/dist/v2.9/nano-$(Version).tar.xz
+Source=		https://www.nano-editor.org/dist/v4/nano-$(Version).tar.xz
 License=	GPLv3
 
 # FIXME:
-# GnuConfigureExtra += --enable-utf8
+GnuConfigureExtra += --enable-utf8
 # * checking whether to use slang... no (should we add support?)
 
 define after_install_hook
