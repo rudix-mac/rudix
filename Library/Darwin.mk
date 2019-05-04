@@ -22,12 +22,6 @@ MakeFlags = -j $(NumCPU)
 endif
 
 #
-# Select Python version
-#
-Python = /usr/bin/python2.7
-PythonSitePackages = /Library/Python/2.7/site-packages
-
-#
 # Functions
 #
 

@@ -5,6 +5,13 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
+#
+# Select Python interpreter
+#
+PythonVersion = 2.7
+Python = /usr/bin/python$(PythonVersion)
+PythonSitePackages = /Library/Python/$(PythonVersion)/site-packages
+
 EnvExtra += CFLAGS="$(CFlags)" \
 	    CXXFLAGS="$(CxxFlags)" \
 	    CPPFLAGS="$(CppFlags)" \
