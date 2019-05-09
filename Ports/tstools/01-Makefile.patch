@@ -1,0 +1,115 @@
+*** Makefile.orig	2019-05-09 13:14:02.000000000 +0200
+--- Makefile	2019-05-09 13:45:19.000000000 +0200
+*************** endif
+*** 75,81 ****
+  ifdef PROFILE
+  PROFILE_FLAGS = -pg
+  else
+! PROFILE_FLAGS =
+  endif
+  
+  # On Linux, large file support is not necessarily enabled. To make programs
+--- 75,81 ----
+  ifdef PROFILE
+  PROFILE_FLAGS = -pg
+  else
+! PROFILE_FLAGS = 
+  endif
+  
+  # On Linux, large file support is not necessarily enabled. To make programs
+*************** PROG_OBJS = \
+*** 162,169 ****
+  
+  TS2PS_OBJS = $(OBJDIR)/ts2ps.o
+  
+! TEST_PES_OBJS = $(OBJDIR)/test_pes.o
+! TEST_PRINTING_OBJS = $(OBJDIR)/test_printing.o
+  
+  TEST_OBJS = \
+    $(OBJDIR)/test_nal_unit_list.o \
+--- 162,169 ----
+  
+  TS2PS_OBJS = $(OBJDIR)/ts2ps.o
+  
+! TEST_PES_OBJS = $(OBJDIR)/test_pes.o 
+! TEST_PRINTING_OBJS = $(OBJDIR)/test_printing.o 
+  
+  TEST_OBJS = \
+    $(OBJDIR)/test_nal_unit_list.o \
+*************** STATIC_LIB = $(LIBDIR)/libtstools.a
+*** 174,180 ****
+  LIBOPTS = $(ARCH_FLAGS) $(STATIC_LIB)
+  
+  ifeq ($(shell uname -s), Darwin)
+! SHARED_LIB_NAME = libtstools.$(TSTOOLS_VERSION).dylib
+  else
+  SHARED_LIB_NAME = libtstools.so
+  endif
+--- 174,180 ----
+  LIBOPTS = $(ARCH_FLAGS) $(STATIC_LIB)
+  
+  ifeq ($(shell uname -s), Darwin)
+! SHARED_LIB_NAME = libtstools.xxx
+  else
+  SHARED_LIB_NAME = libtstools.so
+  endif
+*************** PROGS = \
+*** 207,214 ****
+  TS2PS_PROG = $(BINDIR)/ts2ps
+  
+  # Is test_pes still useful?
+! TEST_PES_PROG = $(BINDIR)/test_pes
+! TEST_PRINTING_PROG = $(BINDIR)/test_printing
+  
+  # And then the testing programs (which we only build if we are
+  # running the tests)
+--- 207,214 ----
+  TS2PS_PROG = $(BINDIR)/ts2ps
+  
+  # Is test_pes still useful?
+! TEST_PES_PROG = $(BINDIR)/test_pes 
+! TEST_PRINTING_PROG = $(BINDIR)/test_printing 
+  
+  # And then the testing programs (which we only build if we are
+  # running the tests)
+*************** ts2ps:	$(TS2PS_PROG)
+*** 225,236 ****
+  ifeq ($(shell uname -s), Darwin)
+  # Make libraries containing universal objects on Mac
+  $(STATIC_LIB): $(OBJS)
+! 	ar rcs $(STATIC_LIB) $(OBJS)
+! 	ranlib	$(STATIC_LIB)
+  $(SHARED_LIB): $(OBJS)
+! 	$(CC) -dynamiclib $(OBJS) -o $(SHARED_LIB) \
+! 		-current_version $(TSTOOLS_LIB_VERSION).0 \
+! 		-compatibility_version $(TSTOOLS_LIB_VERSION).0
+  else
+  $(STATIC_LIB): $(OBJS)
+  	rm -f $(STATIC_LIB)
+--- 225,233 ----
+  ifeq ($(shell uname -s), Darwin)
+  # Make libraries containing universal objects on Mac
+  $(STATIC_LIB): $(OBJS)
+! 	libtool -static $(OBJS) -o $(STATIC_LIB)
+  $(SHARED_LIB): $(OBJS)
+! 	libtool -dynamic $(OBJS) -o $(SHARED_LIB)
+  else
+  $(STATIC_LIB): $(OBJS)
+  	rm -f $(STATIC_LIB)
+*************** $(OBJDIR)/tsreport.o:     tsreport.c $(T
+*** 389,395 ****
+  	$(CC) -c $< -o $@ $(CFLAGS)
+  $(OBJDIR)/tsserve.o:     tsserve.c $(TS_H) $(PS_H) $(ES_H) misc_fns.h $(PES_H) version.h
+  	$(CC) -c $< -o $@ $(CFLAGS)
+! $(OBJDIR)/ts_packet_insert.o:     ts_packet_insert.c
+  	$(CC) -c $< -o $@ $(CFLAGS)
+  $(OBJDIR)/tsplay.o:       tsplay.c $(TS_H) misc_fns.h $(PS_H) $(PES_H) version.h tsplay_fns.h
+  	$(CC) -c $< -o $@ $(CFLAGS)
+--- 386,392 ----
+  	$(CC) -c $< -o $@ $(CFLAGS)
+  $(OBJDIR)/tsserve.o:     tsserve.c $(TS_H) $(PS_H) $(ES_H) misc_fns.h $(PES_H) version.h
+  	$(CC) -c $< -o $@ $(CFLAGS)
+! $(OBJDIR)/ts_packet_insert.o:     ts_packet_insert.c 
+  	$(CC) -c $< -o $@ $(CFLAGS)
+  $(OBJDIR)/tsplay.o:       tsplay.c $(TS_H) misc_fns.h $(PS_H) $(PES_H) version.h tsplay_fns.h
+  	$(CC) -c $< -o $@ $(CFLAGS)

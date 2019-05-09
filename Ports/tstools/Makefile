@@ -7,6 +7,7 @@ Site=		https://github.com/kynesim/tstools
 Source=		https://github.com/kynesim/tstools/archive/master.zip
 License=        MPL 1.1
 
+PatchLevel = -R -p0
 
 UncompressedName = $(Name)-master
 LdFlags += -lm
