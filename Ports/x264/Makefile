@@ -7,7 +7,8 @@ Site=		https://www.videolan.org/developers/x264.html
 Source=		https://download.videolan.org/pub/videolan/x264/snapshots/last_stable_x264.tar.bz2
 License=        GPL
 
-GnuConfigureExtra += --bit-depth=10
+GnuConfigureExtra += --bit-depth=all
+GnuConfigureExtra += --disable-cli
 GnuConfigureExtra += --disable-lsmash
 GnuConfigureExtra += --enable-static
 
