@@ -26,9 +26,3 @@ PatchLevel = -p1
 
 UncompressedName = ntfs-3g_ntfsprogs-$(Version)
 
-# Moving to scripts/postinstall
-# define install_post_hook
-# install -m 755 xtras/mount_ntfs $(DestDir)/$(Prefix)/sbin
-# uid=$(shell id -u); sed -i "s/@UID@/$(uid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
-# gid=$(shell id -g); sed -i "s/@GID@/$(gid)/g" $(DestDir)/$(Prefix)/sbin/mount_ntfs
-# endef
