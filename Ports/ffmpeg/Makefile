@@ -7,8 +7,7 @@ BuildRequires += $(LibDir)/libx264.a # static x264
 
 Title=		FFmpeg
 Name=		ffmpeg
-#Version=	4.1
-Version=	3.4.6
+Version=	4.1.3
 Site=		http://ffmpeg.mplayerhq.hu/
 Source=		http://ffmpeg.org/releases/$(Name)-$(Version).tar.xz
 License=	GPL
