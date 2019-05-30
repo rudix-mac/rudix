@@ -1,12 +1,12 @@
-include ../../Library/GNU.mk
+include ../../Library/Unix.mk
 
 Title=		Vim
 Name=		vim
-Version=	8.1
+Version=	8.1.1421
 Site=		https://www.vim.org
-Source=		ftp://ftp.vim.org/pub/vim/unix/vim-$(Version).tar.bz2
+Source=		https://github.com/vim/vim/archive/v$(Version).tar.gz
 License=	Charityware (GPL-compatible)
-UncompressedName=vim81
+UncompressedName=vim-$(Version)
 
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	LICENSE
