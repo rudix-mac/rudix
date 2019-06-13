@@ -5,6 +5,9 @@ else
 GnuConfigureExtra += --disable-openssl
 endif
 
+
+GnuConfigureExtra += --disable-samples
+
 include ../../Library/GNU.mk
 
 Title=		LibEvent
