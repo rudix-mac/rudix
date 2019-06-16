@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		LibreSSL
 Name=		libressl
-Version=	2.8.3
+Version=	2.9.2
 Site=		https://www.libressl.org
 Source=		https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-$(Version).tar.gz
 License=        OpenSSL License
-
 ReadMeFile=	$(SourceDir)/README.md
 
 define after_install_hook
