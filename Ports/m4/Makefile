@@ -8,7 +8,7 @@ Site=		https://www.gnu.org/software/m4/
 Source=		https://ftp.gnu.org/gnu/m4/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
-define install_post_hook
+define after_install_hook
 cd $(InstallDir)$(BinDir) ; ln -sf m4 gm4
 cd $(InstallDir)$(ManDir)/man1 ; ln -sf m4.1 gm4.1
 endef

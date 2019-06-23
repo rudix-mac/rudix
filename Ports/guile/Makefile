@@ -20,7 +20,7 @@ ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
 endef
 

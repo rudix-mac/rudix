@@ -10,7 +10,7 @@ License=	GPLv3
 GnuConfigureExtra += --program-prefix=gnu
 GnuConfigureExtra += --with-included-regex
 
-define install_post_hook
+define after_install_hook
 ./links.sh $(InstallDir)$(BinDir)
 ./links.sh $(InstallDir)$(Prefix)/share/man/man1
 ./links.sh $(InstallDir)$(Prefix)/share/man/man5

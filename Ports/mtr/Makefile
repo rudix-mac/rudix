@@ -12,10 +12,8 @@ Source=		ftp://www.bitwizard.nl/mtr/mtr-$(Version).tar.gz
 License=	GPLv2
 
 ConfigureExtra += --without-gtk
-ConfigureExtra += --sbindir=$(BinDir)
-MakeInstallExtra += sbindir=$(BinDir)
 
-define install_post_hook
+define after_install_hook
 install $(SourceDir)/{FORMATS,SECURITY,TODO} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
@@ -28,7 +26,7 @@ chmod +w $(DestDir)$(BinDir)/mtr
 endef
 
 ifeq ($(MTR_SETUID),yes)
-define pkg_pre_hook
+define before_pkg_hook
 @echo "mtr binary has setuid on"
 sudo chown root:wheel $(DestDir)$(BinDir)/mtr
 sudo chmod +s $(DestDir)$(BinDir)/mtr

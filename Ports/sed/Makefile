@@ -2,16 +2,16 @@ include ../../Library/GNU.mk
 
 Title=		GNU Sed
 Name=		sed
-Version=	4.2.2
-Site=		http://www.gnu.org/software/sed/
-Source=		http://ftp.gnu.org/gnu/sed//$(Name)-$(Version).tar.gz
-License=	GPL
+Version=	4.7
+Site=		https://www.gnu.org/software/sed
+Source=		https://ftp.gnu.org/gnu/sed/$(Name)-$(Version).tar.xz
+License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu
 
-define install_post_hook
+define after_install_hook
 cd $(InstallDir)$(BinDir) ; ln -sf gnused sed
-cd $(InstallDir)$(Prefix)/share/man/man1 ; ln -sf gnused.1 sed.1
+cd $(InstallDir)$(ManDir)/man1 ; ln -sf gnused.1 sed.1
 endef
 
 define test_hook

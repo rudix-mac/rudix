@@ -12,11 +12,11 @@ LicenseFile=	LICENSE
 GnuConfigureExtra += i386-unknown-freebsd
 GnuConfigureExtra += --mandir=$(ManDir)
 
-define install_pre_hook
+define before_install_hook
 mkdir -p $(DestDir)$(ManDir)/man1
 endef
 
-define pkg_pre_hook
+define before_pkg_hook
 @echo "root required: $(DestDir)$(LocalStateDir)/www/thttpd must be set to _www:_www and g+s"
 sudo chown _www:_www $(DestDir)$(LocalStateDir)/www/thttpd
 sudo chown _www:_www $(DestDir)$(LocalStateDir)/www/thttpd/cgi-bin

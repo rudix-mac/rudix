@@ -1,0 +1,3 @@
+#!/bin/sh
+libtool --finish /usr/local/lib
+exit 0

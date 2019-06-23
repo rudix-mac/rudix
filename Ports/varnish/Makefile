@@ -12,7 +12,7 @@ License=	BSD
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-define install_post_hook
+define after_install_hook
 cd $(InstallDir)/$(Prefix)/etc/varnish ; mv default.vcl default.vcl.default
 endef
 

@@ -10,7 +10,7 @@ License=	The Clarified Artistic License
 ReadMeFile=	$(SourceDir)/README.txt
 LicenseFile=	$(SourceDir)/doc/LICENSE.txt
 
-define install_post_hook
+define after_install_hook
 rmdir $(DestDir)$(SysConfDir)
 endef
 

@@ -3,10 +3,10 @@ BuildRequires += $(BinDir)/pkg-config	# pkg-config
 
 include ../../Library/GNU.mk
 
-Title=		Terminal Multiplexer
+Title=		TMux
 Name=		tmux
-Version=	2.5
-Site=		http://tmux.github.io/
+Version=	2.9
+Site=		https://github.com/tmux/tmux/wiki
 Source=		https://github.com/tmux/tmux/releases/download/$(Version)/tmux-$(Version).tar.gz
 License=	BSD
 

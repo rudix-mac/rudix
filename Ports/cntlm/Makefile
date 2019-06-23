@@ -9,7 +9,7 @@ License=	GPLv2
 
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/cntlm.conf \
 	$(InstallDir)/$(SysConfDir)/cntlm.conf.default
 endef

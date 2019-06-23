@@ -10,7 +10,7 @@ License=	GPLv3
 # GnuConfigureExtra += --with-readline=/usr/local
 LdFlags += -framework CoreFoundation -liconv
 
-define prep_post_hook
+define after_prep_hook
 patch -p1 -d $(SourceDir) < patches/rudix.diff
 endef
 

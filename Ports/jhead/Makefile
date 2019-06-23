@@ -10,7 +10,7 @@ License=	Public Domain
 ReadMeFile=	$(SourceDir)/readme.txt
 LicenseFile=	LICENSE
 
-define install_pre_hook
+define before_install_hook
 install -d $(DestDir)$(BinDir)
 install -d $(DestDir)$(DocDir)
 endef

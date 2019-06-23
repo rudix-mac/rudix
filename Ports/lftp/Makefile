@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 
 Title=		LFTP
 Name=		lftp
-Version=	4.8.3
+Version=	4.8.4
 Site=		http://lftp.yar.ru/
 Source=		http://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL
@@ -18,7 +18,7 @@ LdFlags += -L$(LibDir)
 GnuConfigureExtra += --with-openssl
 #GnuConfigureExtra += --with-modules
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} \
 	$(InstallDir)/$(DocDir)/$(Name)
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf \

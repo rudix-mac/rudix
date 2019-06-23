@@ -18,7 +18,7 @@ unzip $(shell basename $(Source)) -d $(SourceDir)
 $(apply_patches)
 endef
 
-define prep_post_hook
+define after_prep_hook
 mkdir -p $(BuildDir)/BIN
 endef
 

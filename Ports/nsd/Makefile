@@ -12,10 +12,9 @@ License=	BSD
 ReadMeFile=	$(SourceDir)/doc/README
 LicenseFile=	$(SourceDir)/LICENSE
 
-GnuConfigureExtra += --sbindir=$(BinDir)
 GnuConfigureExtra += --with-user=root
 
-define install_post_hook
+define after_install_hook
 rmdir $(InstallDir)/tmp
 endef
 

@@ -11,7 +11,7 @@ MakeInstallExtra += PREFIX=$(PortDir)/$(InstallDir)$(Prefix)
 MakeInstallExtra += MAN_PREFIX=$(PortDir)/$(InstallDir)$(ManDir)
 MakeInstallExtra += install_dumb
 
-define install_post_hook
+define after_install_hook
 install $(SourceDir)/{AUTHORS,ChangeLog,HOW_TO_PLAY,TODO,doc/*.conf*} \
 	$(PortDir)/$(InstallDir)$(DocDir)
 endef

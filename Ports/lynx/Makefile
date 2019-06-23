@@ -18,7 +18,7 @@ endif
 GnuConfigureExtra += --enable-ipv6
 GnuConfigureExtra += --with-ssl
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)$(Prefix)/etc/lynx.cfg $(InstallDir)$(Prefix)/etc/lynx.cfg.default
 mv $(InstallDir)$(Prefix)/etc/lynx.lss $(InstallDir)$(Prefix)/etc/lynx.lss.default
 install -m 644 $(SourceDir)/{CHANGES,COPYHEADER*,PROBLEMS} $(InstallDir)/$(DocDir)/$(Name)

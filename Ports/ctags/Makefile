@@ -11,7 +11,7 @@ GnuConfigureExtra = --enable-etags
 MakeInstallExtra += prefix=$(DestDir)/$(Prefix)
 MakeInstallExtra += mandir=$(DestDir)/$(ManDir)
 
-define install_post_hook
+define after_install_hook
 install	-m 644 $(SourceDir)/{FAQ,*.html} $(DestDir)/$(DocDir)/$(Name)
 cd $(DestDir)/$(BinDir) ; ln -sf ctags exuberant-ctags ; ln -sf etags exuberant-etags
 cd $(DestDir)/$(ManDir)/man1 ; ln -sf ctags.1 exuberant-ctags.1 ; ln -sf etags.1 exuberant-etags.1

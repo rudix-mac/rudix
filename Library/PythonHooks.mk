@@ -1,9 +1,16 @@
 #
-# Python Formula.
+# Python Hooks.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
+# Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
+
+#
+# Select Python interpreter
+#
+PythonVersion = 2.7
+Python = /usr/bin/python$(PythonVersion)
+PythonSitePackages = /Library/Python/$(PythonVersion)/site-packages
 
 EnvExtra += CFLAGS="$(CFlags)" \
 	    CXXFLAGS="$(CxxFlags)" \
@@ -30,6 +37,7 @@ $(Python) \
 	--install-lib=$(PythonSitePackages)
 cd $(BuildDir) && $(Python) -m compileall -d / $(DestDir)
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 

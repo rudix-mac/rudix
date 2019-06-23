@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2018 Rudix
+# Copyright © 2005-2019 Rudix (Rudá Moura)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 2018
+BuildSystem = 1.3.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -23,6 +23,15 @@ RUDIX_BUILD_STATIC_LIBS?=no
 RUDIX_BUILD_STATIC?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
+
+RUDIX_MSG_RETRIEVE?=Retrieving source from '$(Source)'
+RUDIX_MSG_PREP?=Preparing '$(DistName)' to build on '$(SourceDir)'
+RUDIX_MSG_BUILD?=Building '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
+RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
+RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
+RUDIX_MSG_TEST?=Testing '$(PkgFile)'
+RUDIX_MSG_DONE?=Done!
 
 Vendor = org.rudix
 UncompressedName = $(Name)-$(Version)
@@ -72,65 +81,65 @@ all: pkg
 
 # Retrieve source
 retrieve:
-	@$(call info_color,Retrieving $(Source))
-	@$(call retrieve_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_RETRIEVE))
+	@$(call before_retrieve_hook)
 	@$(call retrieve_hook)
-	@$(call retrieve_post_hook)
-	@$(call success_color,Retrieved)
+	@$(call after_retrieve_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Prepare source to compile
 prep: retrieve
-	@$(call info_color,Preparing $(DistName))
-	@$(call prep_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_PREP))
+	@$(call before_prep_hook)
 	@$(call prep_hook)
-	@$(call prep_post_hook)
-	@$(call success_color,Prepared)
+	@$(call after_prep_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Build source
 build: prep
-	@$(call info_color,Building $(DistName))
-	@$(call build_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_BUILD))
+	@$(call before_build_hook)
 	@$(call build_hook)
-	@$(call build_post_hook)
-	@$(call success_color,Built)
+	@$(call after_build_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Check build
 check: build
-	@$(call info_color,Checking $(DistName))
-	@$(call check_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_CHECK))
+	@$(call before_check_hook)
 	@$(call check_hook)
-	@$(call check_post_hook)
-	@$(call success_color,Checked)
+	@$(call after_check_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Install into a temporary directory
 install: build
-	@$(call info_color,Installing $(DistName))
-	@$(call install_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_INSTALL))
+	@$(call before_install_hook)
 	@$(call install_hook)
-	@$(call install_post_hook)
-	@$(call success_color,Installed)
+	@$(call after_install_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Create package
 pkg: install
-	@$(call info_color,Packing $(PkgFile))
-	@$(call pkg_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_PKG))
+	@$(call before_pkg_hook)
 	@$(call pkg_hook)
-	@$(call pkg_post_hook)
-	@$(call success_color,Packed)
+	@$(call after_pkg_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 # Run all tests
 test: pkg check
-	@$(call info_color,Testing $(DistName) and $(PkgFile))
-	@$(call test_pre_hook)
+	@$(call info_color,$(RUDIX_MSG_TEST))
+	@$(call before_test_hook)
 	@$(call test_hook)
-	@$(call test_post_hook)
-	@$(call success_color,Tested)
+	@$(call after_test_hook)
+	@$(call info_color,$(RUDIX_MSG_DONE))
 	@touch $@
 
 installclean:
@@ -176,23 +185,22 @@ help:
 	@echo "  static - Create package with static libraries"
 
 about:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "Title: $(Title)"
-	@echo "Name: $(Name)"
+	@echo "Title:   $(Title)"
+	@echo "Name:    $(Name)"
 	@echo "Version: $(Version)"
-	@echo "Site: $(Site)"
+	@echo "Site:    $(Site)"
+	@echo "Source:  $(Source)"
 	@echo "License: $(License)"
-	@echo "Source: $(Source)"
 
 json:
-	@$(call info_color,$(Name)-$(Version))
-	@echo "{ \"title\": \"$(Title)\","
-	@echo "  \"name\": \"$(Name)\","
-	@echo "  \"version\": \"$(Version)\","
-	@echo "  \"site\": \"$(Site)\","
-	@echo "  \"license\": \"$(License)\","
-	@echo "  \"source\": \"$(Source)\" }"
-
+	@echo "{"
+	@echo "\t\"title\":   \"$(Title)\","
+	@echo "\t\"name\":    \"$(Name)\","
+	@echo "\t\"version\": \"$(Version)\","
+	@echo "\t\"site\":    \"$(Site)\","
+	@echo "\t\"source\":  \"$(Source)\","
+	@echo "\t\"license\": \"$(License)\""
+	@echo "}"
 #
 # Functions
 #
@@ -244,14 +252,20 @@ endif
 
 define verify_preprequires
 for x in $(PrepRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Preparation requires $$x) ; done
 endef
 
 define verify_buildrequires
 for x in $(BuildRequires) ; do \
-	test -f $$x && $(call info_color,Found $$x) \
+	test -f $$x && $(call success_color,Found $$x) \
 	|| $(call error_color,Build requires $$x) ; done
+endef
+
+define verify_buildsuggests
+for x in $(BuildSuggests) ; do \
+	test -f $$x && $(call success_color,Found $$x) \
+	|| $(call warning_color,Build suggests $$x) ; done
 endef
 
 define uncompress_source
@@ -266,9 +280,10 @@ case `file -b --mime-type $(shell basename $(Source))` in \
 esac
 endef
 
+PatchLevel=-p0
 define apply_patches
-for x in $(wildcard *.patch patches/*.patch) ; do \
-	patch -p0 -d $(SourceDir) < $$x ; done
+for x in $(wildcard *.patch *.diff patches/*.patch patches/*.diff) ; do \
+	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
 define configure
@@ -287,6 +302,16 @@ define install_base_documentation
 install -d $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(ReadMeFile) $(DestDir)$(DocDir)/$(Name)
 install -m 644 $(LicenseFile) $(DestDir)$(DocDir)/$(Name)
+for x in $(Documentation) ; do \
+	cp -Rpv $$x $(DestDir)$(DocDir)/$(Name) ; \
+done
+endef
+
+define install_examples
+for x in $(Examples) ; do \
+	install -d $(DestDir)$(ExamplesDir)/$(Name) ; \
+	cp -Rpv $$x $(DestDir)$(ExamplesDir)/$(Name) ; \
+done
 endef
 
 define test_documentation
@@ -311,7 +336,7 @@ define retrieve_hook
 $(fetch_sources)
 endef
 
-define prep_pre_hook
+define before_prep_hook
 $(verify_preprequires)
 endef
 
@@ -321,8 +346,9 @@ mv -v $(UncompressedName) $(SourceDir)
 $(apply_patches)
 endef
 
-define build_pre_hook
+define before_build_hook
 $(verify_buildrequires)
+$(verify_buildsuggests)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realdistclean help about

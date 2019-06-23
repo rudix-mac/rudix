@@ -1,6 +1,6 @@
-# Scons Formula
+# Scons Hooks
 #
-# Copyright (c) 2011-2017 Rudá Moura (Rudix)
+# Copyright (c) 2011-2019 Rudá Moura (Rudix)
 # Authors: Caio Begotti
 #
 
@@ -16,6 +16,7 @@ endef
 define install_hook
 cd $(BuildDir) && $(Scons) install --prefix=$(DestDir)$(Prefix) --full
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 

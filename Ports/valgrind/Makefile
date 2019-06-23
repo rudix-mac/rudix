@@ -11,7 +11,7 @@ License=	GPL
 
 GnuConfigureExtra += --enable-only64bit
 
-define install_post_hook
+define after_install_hook
 find $(InstallDir) -name '*.dSYM' | xargs rm -rf
 endef
 

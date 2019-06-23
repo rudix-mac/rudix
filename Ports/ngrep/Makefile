@@ -13,7 +13,7 @@ LicenseFile=    $(SourceDir)/LICENSE.txt
 ConfigureExtra += --with-pcap-includes=/usr/include/pcap
 LdFlags += -lresolv
 
-define prep_post_hook
+define after_prep_hook
 rm -rf $(SourceDir)/autom4te.cache $(SourceDir)/{.deps,Makefile}
 endef
 

@@ -10,7 +10,7 @@ License=	GPLv3
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 GnuConfigureExtra += --program-prefix=gnu
 
-define install_post_hook
+define after_install_hook
 cd $(InstallDir)$(BinDir) && ln -sf gnumake make
 cd $(InstallDir)$(ManDir)/man1 && ln -sf gnumake.1 make.1
 endef

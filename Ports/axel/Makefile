@@ -8,7 +8,7 @@ Site=		http://axel.alioth.debian.org/
 Source=		http://alioth.debian.org/frs/download.php/3015/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/axelrc \
 	$(InstallDir)/$(SysConfDir)/axelrc.default
 endef

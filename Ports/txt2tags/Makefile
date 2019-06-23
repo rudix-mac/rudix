@@ -9,7 +9,7 @@ Site=		http://txt2tags.org/
 Source=		http://txt2tags.googlecode.com/files//$(Name)-$(Version).tgz
 License=	GPL
 
-define prep_post_hook
+define after_prep_hook
 cp txt2tags.Makefile $(SourceDir)/Makefile
 endef
 

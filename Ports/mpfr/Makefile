@@ -1,21 +1,19 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
-# Is there any patches to apply for this version?
-# curl http://www.mpfr.org/mpfr-3.1.3/allpatches
-
-BuildRequires += $(LibDir)/libgmp.la  # static-gmp
+BuildRequires += $(LibDir)/libgmp.la  # gmp | static-gmp
 
 include ../../Library/GNU.mk
 
 Title=		GNU MPFR
 Name=		mpfr
-Version=	3.1.3
-Site=		http://www.mpfr.org/
-Source=		http://www.mpfr.org/mpfr-current/$(Name)-$(Version).tar.xz
-License=	LGPLv3
+Version=	4.0.1
+Site=		https://www.mpfr.org/
+Source=		https://www.mpfr.org/mpfr-current/mpfr-$(Version).tar.xz
+License=	LGPLv3/GPLv3
 
 GnuConfigureExtra += --with-pic
 
 define test_hook
 test -f $(LibDir)/libmpfr.la
+test -f $(LibDir)/pkgconfig/mpfr.pc
 endef

@@ -2,12 +2,13 @@ include ../../Library/GNU.mk
 
 Title=		Fping
 Name=		fping
-Version=	3.15
+Version=	4.1
 Site=           http://fping.org
 Source=		http://fping.org/dist/$(Name)-$(Version).tar.gz
-License=        BSD?
+License=        MIT?
 
-GnuConfigureExtra += --sbindir=$(BinDir)
+ReadMeFile =	$(SourceDir)/CHANGELOG.md
+
 GnuConfigureExtra += --enable-ipv4 --enable-ipv6
 
 define test_hook

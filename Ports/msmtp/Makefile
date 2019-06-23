@@ -19,7 +19,7 @@ endif
 EnvExtra += PKG_CONFIG_PATH=/usr/lib/pkgconfig
 GnuConfigureExtra += --with-ssl=openssl
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/doc/msmtp* $(InstallDir)/$(DocDir)/$(Name)  
 endef
 

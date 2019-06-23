@@ -1,4 +1,4 @@
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Title=		P7ZIP
 Name=		p7zip

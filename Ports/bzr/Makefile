@@ -5,9 +5,9 @@ include ../../Library/Python.mk
 Title=		Bazaar
 Name=		bzr
 Version=	2.7.0
-Site=		http://bazaar-vcs.org/
-Source=		http://launchpad.net/bzr/2.6/$(Version)/+download/$(Name)-$(Version).tar.gz
-License=	GPL
+Site=		https://bazaar.canonical.com/
+Source=		https://launchpad.net/bzr/2.7/$(Version)/+download/bzr-$(Version).tar.gz
+License=	GPLv2
 
 LicenseFile=	$(SourceDir)/COPYING.txt
 

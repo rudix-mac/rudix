@@ -7,7 +7,7 @@ Site=		http://www.stunnel.org/
 Source=		https://www.stunnel.org/downloads/$(Name)-$(Version).tar.gz
 License=	GPL
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(SysConfDir)/stunnel/stunnel.conf-sample \
 	$(DestDir)$(SysConfDir)/stunnel/stunnel.conf.default
 endef

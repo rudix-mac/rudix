@@ -10,8 +10,6 @@ Source=     $(Site)/releases/download/$(Name)-$(Version)/$(Name)-$(Version).tar.
 License=    MIT
 
 GnuConfigureExtra += --disable-maintainer-mode
-ConfigureExtra += --sbindir=$(BinDir)
-MakeInstallExtra += sbindir=$(BinDir)
 
 define test_hook
 sudo $(BinDir)/jq --version | grep $(Version)

@@ -26,7 +26,7 @@ GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += -enable-pop --enable-imap --enable-smtp
 GnuConfigureExtra += --with-ssl
 
-define install_post_hook
+define after_install_hook
 mv $(DestDir)$(SysConfDir)/mutt/Muttrc $(DestDir)$(SysConfDir)/mutt/Muttrc.default
 mv $(DestDir)$(SysConfDir)/mutt/mime.types $(DestDir)$(SysConfDir)/mutt/mime.types.default
 rm -rf $(DestDir)/$(LibDir)
@@ -43,7 +43,7 @@ endef
 endif
 
 ifeq ($(SET_MUTT_DOTLOCK),yes)
-define pkg_pre_hook
+define before_pkg_hook
 @echo "mutt_dotlock must be set to root:mail and g+s"
 sudo chown root:mail $(DestDir)$(BinDir)/mutt_dotlock
 sudo chmod g+s $(DestDir)$(BinDir)/mutt_dotlock

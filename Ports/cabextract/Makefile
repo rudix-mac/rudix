@@ -10,7 +10,7 @@ License=	GPL
 # Avoid HTTP error 406
 FetchExtra += -A Mozilla/4.0
 
-define install_post_hook
+define after_install_hook
 install -m 755 $(SourceDir)/src/cabinfo $(InstallDir)$(BinDir)
 install -m 644 $(SourceDir)/doc/{magic,*.html} $(InstallDir)/$(DocDir)/$(Name)
 endef

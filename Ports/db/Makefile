@@ -1,4 +1,4 @@
-include ../../Library/Rudix.mk
+include ../../Library/Custom.mk
 
 Title=		Berkeley DB
 Name=		db
@@ -27,7 +27,7 @@ env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
 		--enable-cxx ; $(make)
 endef
 
-define install_post_hook
+define after_install_hook
 cd $(SourceDir)/build_unix && \
 make DESTDIR=$(PortDir)/$(InstallDir) \
 	docdir=$(DocDir)/db install

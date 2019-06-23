@@ -4,14 +4,14 @@ include ../../Library/GNU.mk
 
 Title=		GNU Grep
 Name=		grep
-Version=	2.28
-Site=		http://www.gnu.org/software/grep/
-Source=		http://ftp.gnu.org/gnu/grep//$(Name)-$(Version).tar.xz
-License=	GPL
+Version=	3.3
+Site=		https://www.gnu.org/software/grep/
+Source=		https://ftp.gnu.org/gnu/grep/$(Name)-$(Version).tar.xz
+License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu
 
-define install_post_hook
+define after_install_hook
 ./links.sh $(InstallDir)$(BinDir)
 ./links.sh $(InstallDir)$(Prefix)/share/man/man1
 cd $(InstallDir)$(Prefix)/share/info ; ln -sf grep.info gnugrep.info

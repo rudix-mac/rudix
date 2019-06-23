@@ -7,7 +7,7 @@ Site=		http://mmonit.com/monit/
 Source=		http://mmonit.com/monit/dist//$(Name)-$(Version).tar.gz
 License=	AGPL
 
-define install_post_hook
+define after_install_hook
 chmod +w $(PortDir)/$(InstallDir)/$(BinDir)/monit
 install -d $(InstallDir)/$(SysConfDir)
 install -m 644 $(SourceDir)/monitrc $(InstallDir)/$(SysConfDir)/monitrc.default

@@ -1,7 +1,7 @@
 #
-# GNU Configure Formula.
+# GNU Configure Hooks.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
+# Copyright © 2011-2019 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
@@ -62,6 +62,7 @@ define install_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
+$(install_examples)
 $(install_gnu_documentation)
 $(strip_macho)
 endef

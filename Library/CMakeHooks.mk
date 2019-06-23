@@ -1,22 +1,25 @@
 #
-# Unix Formula.
+# CMake Hooks.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
-# Authors: Ruda Moura, Leonardo Santagada
+# Copyright © 2019 Rudix
+# Author: Rudá Moura <ruda.moura@gmail.com>
 #
 
-MakeExtra += CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)"
-MakeExtra += CPPFLAGS="$(CppFlags)" LDFLAGS="$(LdFlags)"
+BuildRequires += $(BinDir)/cmake
+
+CMakeExtra += -DCMAKE_BUILD_TYPE=Release
+CMakeExtra += -DCMAKE_INSTALL_PREFIX=$(Prefix)
 
 define build_hook
 cd $(BuildDir) && \
-env $(EnvExtra) $(make) $(MakeExtra)
+env $(EnvExtra) cmake $(CMakeExtra)
 endef
 
 define install_hook
 cd $(BuildDir) && \
 $(make_install) DESTDIR="$(DestDir)" $(MakeInstallExtra)
 $(install_base_documentation)
+$(install_examples)
 $(strip_macho)
 endef
 

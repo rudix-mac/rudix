@@ -17,7 +17,7 @@ pushd $(BuildDir)/lib/intl ; $(make) $(MakeExtra) ; popd # hack
 cd $(BuildDir) ; $(make) $(MakeExtra)
 endef
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(SourceDir)/{FAQ,INTEROP} $(InstallDir)/$(DocDir)/$(Name)
 endef
 

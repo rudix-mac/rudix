@@ -12,7 +12,7 @@ LicenseFile=	$(BuildDir)/LICENSE
 GnuConfigureExtra += --with-installbuilddir=/usr/local/share/apr-1/build-1
 GnuConfigureExtra += --enable-threads
 
-define install_post_hook
+define after_install_hook
 install -m 644 $(BuildDir)/docs/* $(InstallDir)/$(DocDir)/$(Name)
 rm $(InstallDir)$(LibDir)/apr.exp
 endef

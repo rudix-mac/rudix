@@ -19,7 +19,7 @@ LdFlags += -framework CoreFoundation -liconv   # static-get
 LdFlags += -framework Carbon           # FSFindFolder
 endif
 
-define install_post_hook
+define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/irssi.conf \
 	$(InstallDir)/$(SysConfDir)/irssi.conf.default
 endef
