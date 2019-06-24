@@ -7,7 +7,7 @@ Site=		http://gputils.sourceforge.net
 Source=		http://downloads.sourceforge.net/gputils/$(Name)-$(Version)-1.tar.gz
 License=	GPL
 
-UncompressedName=$(Name)-$(Version)-1
+UncompressedName=$(Name)-$(Version)
 
 GnuConfigureExtra += --disable-html-doc
 
