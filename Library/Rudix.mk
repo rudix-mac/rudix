@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.3.0
+BuildSystem = 1.4.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -18,9 +18,9 @@ RUDIX_QUIET?=no
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
-RUDIX_BUILD_WITH_STATIC_LIBS?=yes
-RUDIX_BUILD_STATIC_LIBS?=no
 RUDIX_BUILD_STATIC?=no
+RUDIX_BUILD_WITH_STATIC_LIBS?=no
+RUDIX_BUILD_ONLY_STATIC_LIBS?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
@@ -45,7 +45,8 @@ ReadMeFile = $(SourceDir)/README
 LicenseFile = $(SourceDir)/COPYING
 
 ifeq ($(RUDIX_BUILD_STATIC),yes)
-RUDIX_BUILD_STATIC_LIBS=yes
+RUDIX_BUILD_WITH_STATIC_LIBS=yes
+RUDIX_BUILD_ONLY_STATIC_LIBS=yes
 DistName = static-$(Name)
 else
 DistName = $(Name)
@@ -179,10 +180,10 @@ help:
 	@echo "  realdistclean - Clean up everything"
 	@echo
 	@echo "Other:"
-	@echo "  help   - This help message"
-	@echo "  about  - Display information about the port"
-	@echo "  json   - Display information in JSON format"
-	@echo "  static - Create package with static libraries"
+	@echo "  help       - This help message"
+	@echo "  about      - Display information about the port"
+	@echo "  json       - Display information in JSON format"
+	@echo "  static     - Build package static and with static libraries"
 
 about:
 	@echo "Title:   $(Title)"

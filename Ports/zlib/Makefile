@@ -8,7 +8,3 @@ Source=		http://zlib.net/$(Name)-$(Version).tar.gz
 License=	zlib License
 
 LicenseFile=	LICENSE
-
-ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
-ConfigureExtra += --static
-endif

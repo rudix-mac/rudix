@@ -1,8 +1,3 @@
-# Nmap bundles with the libraries it requires
-
-# BUG: libdnet won't build as shared library
-RUDIX_BUILD_STATIC_LIBS=
-
 include ../../Library/GNU.mk
 
 Title=		Nmap

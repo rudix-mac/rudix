@@ -10,12 +10,6 @@ License=	AGPLv3
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
-ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
-ConfigureExtra += --disable-shared --enable-static
-else ifeq ($(RUDIX_BUILD_STATIC_LIBS),no)
-ConfigureExtra += --enable-shared --disable-static
-endif
-
 define build_hook
 cd $(SourceDir)/build_unix && \
 env CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
