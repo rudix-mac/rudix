@@ -182,7 +182,6 @@ help:
 	@echo "Other:"
 	@echo "  help       - This help message"
 	@echo "  about      - Display information about the port"
-	@echo "  json       - Display information in JSON format"
 	@echo "  static     - Build package static and with static libraries"
 
 about:
@@ -193,15 +192,6 @@ about:
 	@echo "Source:  $(Source)"
 	@echo "License: $(License)"
 
-json:
-	@echo "{"
-	@echo "\t\"title\":   \"$(Title)\","
-	@echo "\t\"name\":    \"$(Name)\","
-	@echo "\t\"version\": \"$(Version)\","
-	@echo "\t\"site\":    \"$(Site)\","
-	@echo "\t\"source\":  \"$(Source)\","
-	@echo "\t\"license\": \"$(License)\""
-	@echo "}"
 #
 # Functions
 #
