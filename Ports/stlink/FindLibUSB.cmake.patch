@@ -1,0 +1,11 @@
+--- cmake/modules/FindLibUSB.cmake.orig	2019-06-30 10:38:39.000000000 +0200
++++ cmake/modules/FindLibUSB.cmake	2019-06-30 10:39:03.000000000 +0200
+@@ -23,7 +23,7 @@
+ endif()
+ 
+ if (APPLE)
+-	set(LIBUSB_NAME libusb-1.0.a)
++	set(LIBUSB_NAME libusb-1.0.dylib)
+ elseif(MSYS OR MINGW)
+ 	set(LIBUSB_NAME usb-1.0)
+ elseif(MSVC)
