@@ -1,21 +1,21 @@
 include ../../Library/Configure.mk
 
 BuildRequires += $(BinDir)/yasm # yasm
-BuildRequires += $(LibDir)/libmp3lame.la # static-lame
+#BuildRequires += $(LibDir)/libmp3lame.la # static-lame
 
 Title=		FFmpeg
 Name=		ffmpeg
-Version=	3.2.3
-Site=		http://ffmpeg.mplayerhq.hu/
-Source=		http://ffmpeg.org/releases/$(Name)-$(Version).tar.bz2
-License=	GPL
+Version=	4.1.3
+Site=		http://ffmpeg.org
+Source=		http://ffmpeg.org/releases/ffmpeg-$(Version).tar.xz
+License=	LGPLv2.1+
 
-ReadMeFile=	README
-LicenseFile=	$(SourceDir)/LICENSE
+ReadMeFile=	$(SourceDir)/README.md
+LicenseFile=	$(SourceDir)/LICENSE.md
 
-ConfigureExtra += --enable-gpl
-ConfigureExtra += --enable-libmp3lame
+#ConfigureExtra += --enable-gpl
+#ConfigureExtra += --enable-libmp3lame
 
 define test_hook
-$(BinDir)/ffmpeg -version
+$(BinDir)/ffmpeg -version | grep $(Version)
 endef
