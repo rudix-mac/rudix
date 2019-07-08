@@ -25,5 +25,5 @@ ConfigureExtra += --enable-libx264
 PatchLevel = -p1
 
 define test_hook
-$(BinDir)/ffmpeg -version
+$(BinDir)/ffmpeg -version | grep $(Version)
 endef

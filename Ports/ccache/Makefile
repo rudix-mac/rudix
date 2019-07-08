@@ -1,12 +1,12 @@
-CREATE_LIBEXEC_LINKS?=yes
-
 include ../../Library/GNU.mk
 
-Title=		ccache
+CREATE_LIBEXEC_LINKS?=yes
+
+Title=		Ccache
 Name=		ccache
-Version=	3.6
-Site=		https://ccache.samba.org
-Source=		https://samba.org/ftp/ccache/$(Name)-$(Version).tar.bz2
+Version=	3.7.1
+Site=		https://ccache.dev
+Source=		https://github.com/ccache/ccache/releases/download/v$(Version)/ccache-$(Version).tar.bz2
 License=	GPLv3+
 
 ReadMeFile=	$(SourceDir)/README.md

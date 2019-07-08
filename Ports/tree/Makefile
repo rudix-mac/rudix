@@ -20,6 +20,10 @@ MakeInstallExtra += MANDIR=$(DestDir)$(ManDir)
 
 PatchLevel=-p1
 
+define after_retrieve_hook
+cp tree-1.8.0.tgz tree-1.8.0.tar.gz
+endef
+
 define check_hook
 $(BuildDir)/tree
 endef
