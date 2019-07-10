@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libusb-1.0.la # static-libusb
+BuildRequires += $(LibDir)/libusb-1.0.la # libusb
 
 include ../../Library/GNU.mk
 

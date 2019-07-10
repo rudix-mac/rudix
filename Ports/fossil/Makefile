@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libssl.la # static-libressl
+BuildRequires += $(LibDir)/libssl.la # libressl
 
 include ../../Library/Configure.mk
 

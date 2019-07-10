@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/msgfmt # static-gettext
+BuildRequires += $(BinDir)/msgfmt # gettext
 
 include ../../Library/Unix.mk
 

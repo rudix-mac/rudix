@@ -1,7 +1,7 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
-BuildRequires += $(LibDir)/libgmp.la	# gmp | static-gmp
-BuildRequires += $(LibDir)/libmpfr.la	# mpfr | static-mpfr
+BuildRequires += $(LibDir)/libgmp.la	# gmp | gmp
+BuildRequires += $(LibDir)/libmpfr.la	# mpfr | mpfr
 
 include ../../Library/GNU.mk
 

@@ -2,7 +2,7 @@ WITH_HCACHE?=yes
 SET_MUTT_DOTLOCK?=yes
 
 ifeq ($(WITH_HCACHE),yes)
-BuildRequires += $(LibDir)/libdb.a # static-db
+BuildRequires += $(LibDir)/libdb.a # db
 endif
 
 include ../../Library/GNU.mk

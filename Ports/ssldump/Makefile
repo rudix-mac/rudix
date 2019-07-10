@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libpcap.a # static-libpcap
+BuildRequires += $(LibDir)/libpcap.a # libpcap
 
 include ../../Library/GNU.mk
 

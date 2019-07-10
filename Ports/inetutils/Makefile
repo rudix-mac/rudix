@@ -13,7 +13,3 @@ nm $(BinDir)/inetutils | grep -q intl
 nm $(BinDir)/inetutils | grep -q idn
 nm $(BinDir)/inetutils | grep -q ssl
 endef
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif

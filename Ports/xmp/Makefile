@@ -1,6 +1,6 @@
 include ../../Library/GNU.mk
 
-BuildRequires += $(LibDir)/libxmp.a	# static-libxmp
+BuildRequires += $(LibDir)/libxmp.a	# libxmp
 BuildRequires += $(BinDir)/pkg-config	# pkg-config
 BuildRequires += $(BinDir)/autoconf	# autoconf
 BuildRequires += $(BinDir)/automake	# automake

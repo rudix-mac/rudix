@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.4.0
+BuildSystem = 1.5.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -18,17 +18,14 @@ RUDIX_QUIET?=no
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
-RUDIX_BUILD_STATIC?=no
-RUDIX_BUILD_WITH_STATIC_LIBS?=no
-RUDIX_BUILD_ONLY_STATIC_LIBS?=no
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
 
 RUDIX_MSG_RETRIEVE?=Retrieving source from '$(Source)'
-RUDIX_MSG_PREP?=Preparing '$(DistName)' to build on '$(SourceDir)'
-RUDIX_MSG_BUILD?=Building '$(DistName)' from '$(BuildDir)'
-RUDIX_MSG_CHECK?=Checking '$(DistName)' from '$(BuildDir)'
-RUDIX_MSG_INSTALL?=Installing '$(DistName)' into '$(InstallDir)'
+RUDIX_MSG_PREP?=Preparing '$(Name)' to build on '$(SourceDir)'
+RUDIX_MSG_BUILD?=Building '$(Name)' from '$(BuildDir)'
+RUDIX_MSG_CHECK?=Checking '$(Name)' from '$(BuildDir)'
+RUDIX_MSG_INSTALL?=Installing '$(Name)' into '$(InstallDir)'
 RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
 RUDIX_MSG_TEST?=Testing '$(PkgFile)'
 RUDIX_MSG_DONE?=Done!
@@ -43,14 +40,6 @@ ResourcesDir = $(Name)-resources
 DestDir= $(PortDir)/$(InstallDir)
 ReadMeFile = $(SourceDir)/README
 LicenseFile = $(SourceDir)/COPYING
-
-ifeq ($(RUDIX_BUILD_STATIC),yes)
-RUDIX_BUILD_WITH_STATIC_LIBS=yes
-RUDIX_BUILD_ONLY_STATIC_LIBS=yes
-DistName = static-$(Name)
-else
-DistName = $(Name)
-endif
 
 #
 # Install dir options
@@ -159,9 +148,6 @@ realdistclean: distclean
 	rm -f retrieve $(shell basename $(Source))
 	rm -f $(foreach file,$(Files),$(shell basename $(file)))
 
-static: prep installclean buildclean
-	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
-
 help:
 	@echo "Rudix buildsystem $(BuildSystem) options."
 	@echo
@@ -182,7 +168,6 @@ help:
 	@echo "Other:"
 	@echo "  help       - This help message"
 	@echo "  about      - Display information about the port"
-	@echo "  static     - Build package static and with static libraries"
 
 about:
 	@echo "Title:   $(Title)"

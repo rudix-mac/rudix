@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libgc.la # static-gc
+BuildRequires += $(LibDir)/libgc.la # gc
 BuildRequires += $(BinDir)/pkg-config # pkg-config
 
 include ../../Library/GNU.mk

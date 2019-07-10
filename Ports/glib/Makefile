@@ -8,8 +8,8 @@ Source=		http://ftp.gnome.org/pub/gnome/sources/glib/2.54/glib-$(Version).tar.xz
 License=	GPLv2
 
 BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libpcre.la # static-pcre
+BuildRequires += $(LibDir)/libintl.la # gettext
+BuildRequires += $(LibDir)/libpcre.la # pcre
 
 EnvExtra += LIBFFI_CFLAGS="-I/usr/include/ffi"
 EnvExtra += LIBFFI_LIBS="-L/usr/lib -lffi"

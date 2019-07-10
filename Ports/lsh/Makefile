@@ -1,6 +1,6 @@
-BuildRequires += $(LibDir)/libgmp.la # static-gmp
-BuildRequires += $(LibDir)/liboop.la # static-liboop
-BuildRequires += $(LibDir)/libnettle.a # static-libnettle
+BuildRequires += $(LibDir)/libgmp.la # gmp
+BuildRequires += $(LibDir)/liboop.la # liboop
+BuildRequires += $(LibDir)/libnettle.a # libnettle
 
 include ../../Library/GNU.mk
 

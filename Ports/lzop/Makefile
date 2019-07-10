@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/liblzo2.la # static-lzo
+BuildRequires += $(LibDir)/liblzo2.la # lzo
 
 include ../../Library/GNU.mk
 

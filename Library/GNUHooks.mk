@@ -11,10 +11,6 @@ else ifeq ($(RUDIX_ENABLE_NLS),no)
 GnuConfigureExtra += --disable-nls
 endif
 
-ifeq ($(RUDIX_BUILD_ONLY_STATIC_LIBS),yes)
-GnuConfigureExtra += --disable-shared --enable-static
-endif
-
 ifeq ($(RUDIX_QUIET),yes)
 GnuConfigureExtra += --quiet
 endif

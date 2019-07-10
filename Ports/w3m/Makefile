@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libgc.la # static-gc
+BuildRequires += $(LibDir)/libintl.la # gettext
+BuildRequires += $(LibDir)/libgc.la # gc
 
 include ../../Library/GNU.mk
 
@@ -13,10 +13,6 @@ License=	GPL
 LicenseFile=	LICENSE
 
 GnuConfigureExtra += --enable-cplusplu
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -liconv -framework CoreFoundation
-endif
 
 define test_hook
 $(BinDir)/w3m -version | grep $(Version)

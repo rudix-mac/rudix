@@ -1,6 +1,6 @@
 BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libneon.la # static-neon
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libneon.la # neon
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 include ../../Library/GNU.mk
 

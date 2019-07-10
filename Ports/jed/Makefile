@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libslang.a # static-slang
+BuildRequires += $(LibDir)/libslang.a # slang
 
 include ../../Library/GNU.mk
 

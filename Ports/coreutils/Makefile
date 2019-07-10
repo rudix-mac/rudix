@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libintl.la	# gettext | static-gettext
+BuildRequires += $(LibDir)/libintl.la	# gettext | gettext
 
 include ../../Library/GNU.mk
 

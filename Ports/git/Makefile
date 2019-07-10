@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 include ../../Library/GNU.mk
 
@@ -9,10 +9,6 @@ Site=		http://git-scm.com/
 Source=		http://git-core.googlecode.com/files/$(Name)-$(Version).tar.gz
 Files=		http://git-core.googlecode.com/files/git-manpages-$(Version).tar.gz
 License=	GPL
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif
 
 define after_install_hook
 # Fix Perl module position

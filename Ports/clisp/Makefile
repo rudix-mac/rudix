@@ -1,6 +1,6 @@
-BuildRequires += $(LibDir)/libsigsegv.la
-
 include ../../Library/Configure.mk
+
+BuildRequires += $(LibDir)/libsigsegv.la
 
 Title=		CLISP
 Name=		clisp
@@ -13,10 +13,6 @@ ReadMeFile=	$(SourceDir)/SUMMARY
 LicenseFile=	$(SourceDir)/COPYRIGHT
 
 BuildDir=$(SourceDir)/src
-
-#ifdef WITH_STATIC_NLS
-#LDFLAGS+=	-framework CoreFoundation -liconv
-#endif
 
 #FIXME:
 #DEPENDS=	$(LibDir)/libreadline.la

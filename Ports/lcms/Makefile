@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
-BuildRequires += $(LibDir)/libtiff.la # static-libtiff
+BuildRequires += $(LibDir)/libjpeg.la # libjpeg
+BuildRequires += $(LibDir)/libtiff.la # libtiff
 
 include ../../Library/GNU.mk
 

@@ -1,7 +1,7 @@
-BuildRequires += $(LibDir)/libmp3lame.la # static-lame
-BuildRequires += $(LibDir)/libFLAC.la # static-flac
-BuildRequires += $(LibDir)/libogg.la # static-libogg
-BuildRequires += $(LibDir)/libvorbis.la # static-libvorbis
+BuildRequires += $(LibDir)/libmp3lame.la # lame
+BuildRequires += $(LibDir)/libFLAC.la # flac
+BuildRequires += $(LibDir)/libogg.la # libogg
+BuildRequires += $(LibDir)/libvorbis.la # libvorbis
 
 include ../../Library/GNU.mk
 

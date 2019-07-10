@@ -1,6 +1,6 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libintl.la # gettext
 BuildRequires += $(LibDir)/libntlm.la # libntlm
-BuildRequires += $(LibDir)/libidn.la  # static-libidn
+BuildRequires += $(LibDir)/libidn.la  # libidn
 
 Requires += org.rudix.pkg.libntlm,libntlm,libntlminstall.pkg
 

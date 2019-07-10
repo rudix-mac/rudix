@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libpng.la # static-libpng
+BuildRequires += $(LibDir)/libpng.la # libpng
 
 include ../../Library/Configure.mk
 

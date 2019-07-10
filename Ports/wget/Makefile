@@ -1,6 +1,6 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libidn.la # static-libidn
-BuildRequires += $(LibDir)/libssl.la # static-libressl
+BuildRequires += $(LibDir)/libintl.la # gettext
+BuildRequires += $(LibDir)/libidn.la # libidn
+BuildRequires += $(LibDir)/libssl.la # libressl
 
 include ../../Library/GNU.mk
 
@@ -25,7 +25,3 @@ nm $(BinDir)/wget | grep -q intl
 nm $(BinDir)/wget | grep -q idn
 nm $(BinDir)/wget | grep -q ssl
 endef
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif

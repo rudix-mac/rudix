@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libogg.la # static-libogg
+BuildRequires += $(LibDir)/libogg.la # libogg
 
 include ../../Library/GNU.mk
 

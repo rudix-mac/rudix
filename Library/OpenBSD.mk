@@ -1,4 +1,4 @@
-PkgFile = $(DistName)-$(Version).tgz
+PkgFile = $(Name)-$(Version).tgz
 
 define pkg_hook
 cd $(InstallDir)$(Prefix) && tar -zcvf $(PortDir)/$(PkgFile) .

@@ -1,7 +1,7 @@
-BuildRequires += $(LibDir)/libjpeg.la # static-libjeg
-BuildRequires += $(LibDir)/libpng.la # static-libpng > 1.5.10
-BuildRequires += $(LibDir)/libtiff.la # static-libtiff
-BuildRequires += $(LibDir)/liblcms2.la # static-lcms (>=2)
+BuildRequires += $(LibDir)/libjpeg.la # libjeg
+BuildRequires += $(LibDir)/libpng.la # libpng > 1.5.10
+BuildRequires += $(LibDir)/libtiff.la # libtiff
+BuildRequires += $(LibDir)/liblcms2.la # lcms (>=2)
 
 include ../../Library/GNU.mk
 

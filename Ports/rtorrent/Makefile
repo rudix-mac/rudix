@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libtorrent.la # static-libtorrent
-BuildRequires += $(LibDir)/libsigc-2.0.la # static-libsigcpp
+BuildRequires += $(LibDir)/libtorrent.la # libtorrent
+BuildRequires += $(LibDir)/libsigc-2.0.la # libsigcpp
 BuildRequires += $(BinDir)/pkg-config # pkg-config
 
 include ../../Library/GNU.mk

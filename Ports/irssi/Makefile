@@ -1,8 +1,8 @@
-BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-
 include ../../Library/GNU.mk
+
+BuildRequires += $(BinDir)/pkg-config # pkg-config
+BuildRequires += $(LibDir)/libglib-2.0.la # glib
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 Title=		Irssi
 Name=		irssi
@@ -13,11 +13,6 @@ License=	GPL
 ReadMeFile=	$(SourceDir)/README.md
 
 GnuConfigureExtra += --with-perl=no # disabled for now
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv   # static-get
-LdFlags += -framework Carbon           # FSFindFolder
-endif
 
 define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/irssi.conf \

@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 include ../../Library/GNU.mk
 
@@ -15,10 +15,6 @@ UncompressedName=$(Name)-$(Version)-$(AltVersion)
 define after_install_hook
 install -m 644 $(SourceDir)/samples/*.rc $(InstallDir)/$(DocDir)/$(Name)
 endef
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += /usr/local/lib/libintl.a -liconv -framework CoreFoundation
-endif
 
 define test_hook
 $(BinDir)/dialog --version

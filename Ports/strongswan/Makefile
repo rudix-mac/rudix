@@ -1,5 +1,5 @@
-BuildRequires += $(LibDir)/libvstr.la # static-vstr
-BuildRequires += $(LibDir)/libgmp.la # static-gmp
+BuildRequires += $(LibDir)/libvstr.la # vstr
+BuildRequires += $(LibDir)/libgmp.la # gmp
 
 include ../../Library/GNU.mk
 
