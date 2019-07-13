@@ -2,7 +2,7 @@ include ../../Library/Unix.mk
 
 Title=		Redis
 Name=		redis
-Version=	4.0.11
+Version=	5.0.5
 Site=		https://redis.io
 Source=		http://download.redis.io/releases/redis-$(Version).tar.gz
 License=	BSD
