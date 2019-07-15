@@ -6,7 +6,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Wget
 Name=		wget
-Version=	1.20.1
+Version=	1.20.3
 Site=		http://www.gnu.org/software/wget/
 Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.gz
 License=	GPLv3
