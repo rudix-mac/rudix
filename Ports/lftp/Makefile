@@ -1,4 +1,5 @@
 BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libiconv.la # static-gettext
 BuildRequires += $(LibDir)/libreadline.a # static-readline
 
 include ../../Library/GNU.mk
@@ -16,7 +17,9 @@ CxxFlags += -I$(IncludeDir)
 LdFlags += -L$(LibDir)
 
 GnuConfigureExtra += --with-openssl
-#GnuConfigureExtra += --with-modules
+GnuConfigureExtra += --with-libiconv-prefix=/usr/local
+GnuConfigureExtra += --with-libintl-prefix=/usr/local
+GnuConfigureExtra += --without-modules
 
 define after_install_hook
 install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} \
