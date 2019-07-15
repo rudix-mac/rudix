@@ -7,6 +7,7 @@ Site=		https://www.libressl.org
 Source=		https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-$(Version).tar.gz
 License=        OpenSSL License
 ReadMeFile=	$(SourceDir)/README.md
+ConfigureFlags += --enable-extratests
 
 define after_install_hook
 mv $(InstallDir)$(SysConfDir)/ssl $(InstallDir)$(SysConfDir)/ssl.default
