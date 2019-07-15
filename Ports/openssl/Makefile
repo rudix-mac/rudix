@@ -2,7 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		OpenSSL
 Name=		openssl
-Version=	1.1.0j
+# Version=	1.1.0k
+Version=	1.1.1c
 Site=		https://www.openssl.org
 Source=		https://www.openssl.org/source/$(Name)-$(Version).tar.gz
 License=        GPL
