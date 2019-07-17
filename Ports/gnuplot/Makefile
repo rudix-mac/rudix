@@ -9,6 +9,7 @@ License=	Gnuplot license
 LicenseFile=	$(SourceDir)/Copyright
 
 BuildRequires += $(BinDir)/lua # lua
+BuildRequires += $(LibDir)/liblua.a # lua
 
 GnuConfigureExtra += --with-readline=builtin
 GnuConfigureExtra += --with-aquaterm
@@ -19,6 +20,9 @@ GnuConfigureExtra += --with-gd=yes
 GnuConfigureExtra += --with-cairo=yes
 # GnuConfigureExtra += --with-mif=yes
 GnuConfigureExtra += --without-tutorial
+
+MakeExtra += LUA_CFLAGS="-I/usr/local/include"
+MakeExtra += LUA_LIBS="-L/usr/local/lib -llua"
 
 define test_hook
 $(BinDir)/gnuplot --version | grep $(Version)
