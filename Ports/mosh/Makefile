@@ -1,6 +1,6 @@
 # Thanks fbl!
 
-BuildRequires += $(LibDir)/libprotobuf.la # static-protobuf
+BuildRequires += $(LibDir)/libprotobuf.la # protobuf
 BuildRequires += $(BinDir)/pkg-config # pkgconfig
 
 include ../../Library/GNU.mk

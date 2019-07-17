@@ -1,5 +1,5 @@
 BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libpixman-1.la # static-pixman
+BuildRequires += $(LibDir)/libpixman-1.la # pixman
 BuildRequires += $(LibDir)/libpng.la
 BuildRequires += $(BinDir)/xz # xz
 

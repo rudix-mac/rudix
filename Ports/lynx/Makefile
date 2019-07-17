@@ -1,6 +1,6 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-
 include ../../Library/GNU.mk
+
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 Title=		Lynx
 Name=		lynx
@@ -10,10 +10,6 @@ Source=		https://invisible-mirror.net/archives/$(Name)/tarballs/$(Name)$(Version
 License=	GPL
 
 UncompressedName=lynx2.8.9rel.1
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -liconv -framework CoreFoundation
-endif
 
 GnuConfigureExtra += --enable-ipv6
 GnuConfigureExtra += --with-ssl

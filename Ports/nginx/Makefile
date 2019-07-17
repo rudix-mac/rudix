@@ -1,4 +1,4 @@
-BuildRequires += $(BinDir)/pcre-config # static-pcre
+BuildRequires += $(BinDir)/pcre-config # pcre
 
 include ../../Library/Configure.mk
 

@@ -1,6 +1,6 @@
 # Author: Qichang Liang <kcleung@cs.otago.ac.nz>
 
-BuildRequires += $(LibDir)/libgmp.la  # gmp | static-gmp
+BuildRequires += $(LibDir)/libgmp.la  # gmp | gmp
 
 include ../../Library/GNU.mk
 

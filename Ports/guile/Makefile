@@ -1,8 +1,8 @@
-BuildRequires += $(LibDir)/libgmp.la	# static-gmp
-BuildRequires += $(LibDir)/libintl.la	# static-gettext
-BuildRequires += $(LibDir)/libltdl.la	# static-libtool
-
 include ../../Library/GNU.mk
+
+BuildRequires += $(LibDir)/libgmp.la	# gmp
+BuildRequires += $(LibDir)/libintl.la	# gettext
+BuildRequires += $(LibDir)/libltdl.la	# libtool
 
 Title=		GNU Guile
 Name=		guile
@@ -16,14 +16,10 @@ LicenseFile=	$(SourceDir)/LICENSE
 EnvExtra += 	LIBFFI_CFLAGS="-I/usr/include/ffi"
 EnvExtra +=	LIBFFI_LIBS="-L/usr/local/lib -lffi"
 
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif
-
 define after_install_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
 endef
 
-define final_post_hook
+define test_hook
 $(BinDir)/guile -v | grep $(Version)
 endef

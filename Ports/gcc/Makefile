@@ -1,7 +1,7 @@
-BuildRequires += $(LibDir)/libgmp.la	# gmp | static-gmp
-BuildRequires += $(LibDir)/libmpfr.la	# mpfr | static-mpfr
-BuildRequires += $(LibDir)/libmpc.la	# mpc | static-mpc
-BuildRequires += $(LibDir)/libisl.la	# isl | static-isl
+BuildRequires += $(LibDir)/libgmp.la	# gmp | gmp
+BuildRequires += $(LibDir)/libmpfr.la	# mpfr | mpfr
+BuildRequires += $(LibDir)/libmpc.la	# mpc | mpc
+BuildRequires += $(LibDir)/libisl.la	# isl | isl
 
 include ../../Library/GNU.mk
 

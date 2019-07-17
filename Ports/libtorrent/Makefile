@@ -1,5 +1,5 @@
 BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(LibDir)/libsigc-2.0.la # static-libsigcpp
+BuildRequires += $(LibDir)/libsigc-2.0.la # libsigcpp
 
 include ../../Library/GNU.mk
 

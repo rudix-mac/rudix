@@ -1,6 +1,6 @@
-BuildRequires += $(IncludeDir)/zlib.h # static-zlib
-BuildRequires += $(LibDir)/libpcre.la # static-pcre
-BuildRequires += $(LibDir)/libpng.la  # static-libpng
+BuildRequires += $(IncludeDir)/zlib.h # zlib
+BuildRequires += $(LibDir)/libpcre.la # pcre
+BuildRequires += $(LibDir)/libpng.la  # libpng
 
 include ../../Library/GNU.mk
 

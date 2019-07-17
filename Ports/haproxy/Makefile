@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libpcre.la # static-pcre
+BuildRequires += $(LibDir)/libpcre.la # pcre
 
 include ../../Library/Unix.mk
 

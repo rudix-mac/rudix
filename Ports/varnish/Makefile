@@ -1,5 +1,5 @@
 BuildRequires += $(BinDir)/pkg-config # pkg-config
-BuildRequires += $(BinDir)/pcre-config # static-pcre
+BuildRequires += $(BinDir)/pcre-config # pcre
 
 include ../../Library/GNU.mk
 

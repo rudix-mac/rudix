@@ -1,8 +1,8 @@
 BuildRequires += $(BinDir)/autoconf	# autoconf
 BuildRequires += $(BinDir)/automake	# automake
 BuildRequires += $(BinDir)/libtool	# libtool
-BuildRequires += $(BinDir)/autopoint	# gettext | static-gettext
-BuildRequires += $(LibDir)/libintl.la	# gettext | static-gettext
+BuildRequires += $(BinDir)/autopoint	# gettext | gettext
+BuildRequires += $(LibDir)/libintl.la	# gettext | gettext
 BuildRequires += $(LibDir)/pkgconfig/readline.pc	# readline
 
 include ../../Library/GNU.mk

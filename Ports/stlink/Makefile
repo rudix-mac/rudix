@@ -8,4 +8,4 @@ Source=		https://github.com/texane/stlink/archive/v$(Version).tar.gz
 License=        BSD
 
 BuildRequires += $(BinDir)/pkg-config	# pkgconfig
-BuildRequires += $(LibDir)/libusb-*.la	# libusb | static-libusb
+BuildRequires += $(LibDir)/libusb-*.la	# libusb | libusb

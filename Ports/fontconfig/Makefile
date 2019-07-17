@@ -1,5 +1,6 @@
 include ../../Library/GNU.mk
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 Title=		Fontconfig
 Name=		fontconfig
@@ -17,7 +18,3 @@ GnuConfigureExtra += --with-add-fonts=/System/Library/fonts,/Library/Fonts,~/Lib
 ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
 LdFlags += -framework CoreFoundation -liconv
 endif
-
-# define test_hook
-# $(BinDir)/gnuplot --version | grep $(Version)
-# endef

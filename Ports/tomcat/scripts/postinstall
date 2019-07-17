@@ -1,5 +1,0 @@
-#!/bin/sh
-for x in $3/usr/local/lib/tomcat/conf/*.default ; do
-    [ ! -f ${x%.default} ] && install -m 600 $x ${x%.default}
-done
-exit 0

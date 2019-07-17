@@ -11,17 +11,17 @@ ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
 
 BuildRequires += $(BinDir)/pkg-config             # pkg-config
-BuildRequires += $(LibDir)/libglib-2.0.la         # static-glib
-BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc  # static-pixman
-BuildRequires += $(LibDir)/libintl.la             # static-gettext
-BuildRequires += $(BinDir)/libtool                # static-libtool
+BuildRequires += $(LibDir)/libglib-2.0.la         # glib
+BuildRequires += $(LibDir)/pkgconfig/pixman-1.pc  # pixman
+BuildRequires += $(LibDir)/libintl.la             # gettext
+BuildRequires += $(BinDir)/libtool                # libtool
 
 ConfigureExtra += --enable-cocoa
 #ConfigureExtra += --disable-vnc
 #ConfigureExtra += --disable-bsd-user
 #ConfigureExtra += --disable-darwin-user
 
-LdFlags += -framework Carbon	# FSFindFolder symbol for static-glib
+LdFlags += -framework Carbon	# FSFindFolder symbol for glib
 
 define after_install_hook
 rm -rf $(DestDir)$(SysConfDir)

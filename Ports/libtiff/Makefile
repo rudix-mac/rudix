@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libjpeg.la # static-libjpeg
+BuildRequires += $(LibDir)/libjpeg.la # libjpeg
 
 include ../../Library/GNU.mk
 

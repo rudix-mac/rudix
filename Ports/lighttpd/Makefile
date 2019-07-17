@@ -1,5 +1,5 @@
-BuildRequires += $(BinDir)/pcre-config # static-pcre
-BuildRequires += $(LibDir)/libev.la # static-libev
+BuildRequires += $(BinDir)/pcre-config # pcre
+BuildRequires += $(LibDir)/libev.la # libev
 
 include ../../Library/GNU.mk
 

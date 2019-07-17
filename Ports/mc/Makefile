@@ -1,9 +1,9 @@
-BuildRequires += $(BinDir)/pkg-config		# pkg-config
-BuildRequires += $(LibDir)/libintl.la		# static-gettext
-BuildRequires += $(LibDir)/libglib-2.0.la	# static-glib
-BuildRequires += $(LibDir)/libgmodule-2.0.la	# static-glib
-
 include ../../Library/GNU.mk
+
+BuildRequires += $(BinDir)/pkg-config		# pkg-config
+BuildRequires += $(LibDir)/libintl.la		# gettext
+BuildRequires += $(LibDir)/libglib-2.0.la	# glib
+BuildRequires += $(LibDir)/libgmodule-2.0.la	# glib
 
 Title=		Midnight Commander
 Name=		mc
@@ -17,10 +17,6 @@ GnuConfigureExtra += --with-screen=ncurses
 GnuConfigureExtra += --without-x
 #GnuConfigureExtra += --enable-vfs-smb
 #GnuConfigureExtra += --with-glib-static # Bogus?
-
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv -framework CoreServices
-endif
 
 define fetch
 curl -f -O -C - -L -k

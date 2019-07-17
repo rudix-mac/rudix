@@ -1,4 +1,4 @@
-BuildRequires=	$(LibDir)/librsync.la # static-librsync
+BuildRequires=	$(LibDir)/librsync.la # librsync
 
 include ../../Library/Python.mk
 

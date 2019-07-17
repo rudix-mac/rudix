@@ -1,6 +1,5 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libiconv.la # static-gettext
-BuildRequires += $(LibDir)/libreadline.a # static-readline
+BuildRequires += $(LibDir)/libintl.la # gettext
+BuildRequires += $(LibDir)/libreadline.a # readline
 
 include ../../Library/GNU.mk
 

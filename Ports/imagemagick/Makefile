@@ -1,3 +1,8 @@
+BuildRequires += $(LibDir)/libjpeg.la # libjeg
+BuildRequires += $(LibDir)/libpng.la # libpng > 1.5.10
+BuildRequires += $(LibDir)/libtiff.la # libtiff
+BuildRequires += $(LibDir)/liblcms2.la # lcms (>=2)
+
 include ../../Library/GNU.mk
 
 Title=		ImageMagick

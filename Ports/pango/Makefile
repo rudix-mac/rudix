@@ -2,7 +2,7 @@
 
 include ../../Library/GNU.mk
 
-BuildRequires += $(LibDir)/libglib-2.0.la # static-glib
+BuildRequires += $(LibDir)/libglib-2.0.la # glib
 
 Title=		Pango
 Name=		pango

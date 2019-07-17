@@ -1,4 +1,4 @@
-BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libintl.la # gettext
 
 include ../../Library/Configure.mk
 
@@ -11,11 +11,6 @@ License=	GPL
 
 
 ConfigureExtra += --with-mule
-
-# Due static-gettext
-ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
-LdFlags += -framework CoreFoundation -liconv
-endif
 
 define after_install_hook
 for x in b2m ctags ellcc etags gnuattach gnuclient gnudoit ootags ; do \
