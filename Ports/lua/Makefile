@@ -10,7 +10,8 @@ LicenseFile=	license.txt
 Documentation=	$(SourceDir)/doc/*
 
 MakeExtra = MYCFLAGS="$(CFlags)" MYCXXFLAGS="$(CxxFlags)" MYLDFLAGS="$(LdFlags)"
-MakeExtra += macosx
+MakeExtra += PLAT=macosx
+MakeExtra += all pc
 MakeInstallExtra += INSTALL_TOP=$(DestDir)$(Prefix)
 MakeInstallExtra += INSTALL_MAN=$(DestDir)$(ManDir)/man1
 
