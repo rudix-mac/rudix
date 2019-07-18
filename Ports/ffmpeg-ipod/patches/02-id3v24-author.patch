@@ -1,0 +1,21 @@
+--- a/libavformat/id3v2.c
++++ b/libavformat/id3v2.c
+@@ -65,6 +65,7 @@
+     { "TDRC", "date"          },
+     { "TDRL", "date"          },
+     { "TDEN", "creation_time" },
++    { "TEXT", "author"        },
+     { "TSOA", "album-sort"    },
+     { "TSOP", "artist-sort"   },
+     { "TSOT", "title-sort"    },
+@@ -93,8 +94,8 @@
+ };
+ 
+ const char ff_id3v2_4_tags[][4] = {
+-    "TDEN", "TDOR", "TDRC", "TDRL", "TDTG", "TIPL", "TMCL", "TMOO",
+-    "TPRO", "TSOA", "TSOP", "TSOT", "TSST",
++    "TDEN", "TDOR", "TDRC", "TDRL", "TDTG", "TEXT", "TIPL", "TMCL",
++	"TMOO", "TPRO", "TSOA", "TSOP", "TSOT", "TSST",
+     { 0 },
+ };
+ 
