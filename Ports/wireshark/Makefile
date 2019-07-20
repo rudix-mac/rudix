@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		tshark
 Name=		tshark
-Version=	2.6.5
+Version=	2.6.9
 Site=		https://www.wireshark.org/
 Source=		https://1.eu.dl.wireshark.org/src/wireshark-$(Version).tar.xz
 License=	GPLv3
