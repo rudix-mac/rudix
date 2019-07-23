@@ -1,10 +1,8 @@
-# Zsh is a shell designed for interactive use and powerful scripting language
-
 include ../../Library/GNU.mk
 
 Title=		Z shell
 Name=		zsh
-Version=	5.5.1
+Version=	5.7.1
 Site=		http://www.zsh.org
 Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
 Files=		http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
