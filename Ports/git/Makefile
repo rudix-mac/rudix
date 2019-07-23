@@ -35,5 +35,5 @@ perl -e 'use Git'
 python -c 'import git_remote_helpers'
 endef
 
-realdistclean: distclean
+realclean: distclean
 	rm -f retrieve $(shell basename $(Source)) git-manpages-$(Version).tar.gz

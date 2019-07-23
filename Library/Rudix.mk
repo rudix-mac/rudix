@@ -5,7 +5,7 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.5.0
+BuildSystem = 1.5.1
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -144,7 +144,7 @@ clean: installclean
 distclean: clean pkgclean
 	rm -f config.cache
 
-realdistclean: distclean
+realclean: distclean
 	rm -f retrieve $(shell basename $(Source))
 	rm -f $(foreach file,$(Files),$(shell basename $(file)))
 
@@ -161,9 +161,9 @@ help:
 	@echo "  test     - Run tests -- install package and run tests"
 	@echo
 	@echo "Clean-up:"
-	@echo "  clean         - Clean but keep package"
-	@echo "  distclean     - Clean package and original source"
-	@echo "  realdistclean - Clean up everything"
+	@echo "  clean     - Clean but keep package"
+	@echo "  distclean - Clean package and original source"
+	@echo "  realclean - Clean up everything"
 	@echo
 	@echo "Other:"
 	@echo "  help       - This help message"
@@ -327,4 +327,4 @@ $(verify_buildrequires)
 $(verify_buildsuggests)
 endef
 
-.PHONY: buildclean installclean pkgclean clean distclean realdistclean help about
+.PHONY: buildclean installclean pkgclean clean distclean realclean help about
