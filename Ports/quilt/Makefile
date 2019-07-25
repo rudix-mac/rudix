@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 
 Title=		Quilt
 Name=		quilt
-Version=	0.65
+Version=	0.66
 Site=		https://savannah.nongnu.org/projects/quilt
 Source=		https://git.savannah.nongnu.org/cgit/quilt.git/snapshot/quilt-$(Version).tar.gz
 License=        GPLv2
