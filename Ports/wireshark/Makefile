@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		tshark
 Name=		tshark
-Version=	2.6.9
+Version=	2.6.10
 Site=		https://www.wireshark.org/
-Source=		https://1.eu.dl.wireshark.org/src/wireshark-$(Version).tar.xz
+Source=		https://www.wireshark.org/download/src/all-versions/wireshark-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --disable-guides --disable-wireshark
