@@ -8,6 +8,13 @@ Site=		https://www.gnu.org/software/m4/
 Source=		https://ftp.gnu.org/gnu/m4/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
+# From Homebrew,
+# Fix crash from usage of %n in dynamic format strings on High Sierra
+# Patch credit to Jeremy Huddleston Sequoia <jeremyhu@apple.com>
+# https://raw.githubusercontent.com/macports/macports-ports/edf0ee1e2cf/devel/m4/files/secure_snprintf.patch
+
+PatchLevel=-p0
+
 define after_install_hook
 cd $(InstallDir)$(BinDir) ; ln -sf m4 gm4
 cd $(InstallDir)$(ManDir)/man1 ; ln -sf m4.1 gm4.1
