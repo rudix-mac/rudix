@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	19.2
+Version=	22.0
 Site=		http://www.erlang.org/
 Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
 Files=		http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
@@ -27,7 +27,7 @@ $(BinDir)/erlc
 $(BinDir)/erl -version
 endef
 
-realdistclean: distclean
+realclean: distclean
 	rm -f retrieve $(Source)
 	rm -f otp_doc_html_$(Version).tar.gz
 	rm -f otp_doc_man_$(Version).tar.gz
