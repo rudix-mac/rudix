@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Texinfo
 Name=		texinfo
-Version=	6.5
+Version=	6.6
 Site=		http://savannah.gnu.org/projects/texinfo
 Source=		https://ftp.gnu.org/gnu/texinfo/texinfo-$(Version).tar.xz
 License=	GPLv3+
