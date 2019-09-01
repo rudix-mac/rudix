@@ -7,7 +7,7 @@ Version=	2016.12.13
 Source=		https://github.com/rudix-mac/rpm/archive/$(Version).tar.gz
 License=	BSD
 
-UncompressedName=rpm-$(Version)
+UncompressedName=rudix-utility-$(Version)
 
 ReadMeFile=	$(SourceDir)/README
 LicenseFile=	$(SourceDir)/LICENSE
