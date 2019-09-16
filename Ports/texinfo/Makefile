@@ -4,7 +4,7 @@ Title=		Texinfo
 Name=		texinfo
 Version=	6.6
 Site=		http://savannah.gnu.org/projects/texinfo
-Source=		https://ftp.gnu.org/gnu/texinfo/texinfo-$(Version).tar.xz
+Source=		http://ftpmirror.gnu.org/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3+
 
 ReadMeFile=	$(SourceDir)/README
