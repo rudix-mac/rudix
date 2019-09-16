@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		GNU Emacs
 Name=		emacs
-Version=	26.2
-Site=		https://www.gnu.org/software/emacs/
-Source=		https://ftp.gnu.org/gnu/emacs/$(Name)-$(Version).tar.xz
+Version=	26.3
+Site=		https://www.gnu.org/software/$(Name)
+Source=		https://ftpmirror.gnu.org/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --with-x=no
