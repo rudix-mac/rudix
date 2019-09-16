@@ -5,8 +5,8 @@ include ../../Library/GNU.mk
 Title=		GNU Automake
 Name=		automake
 Version=	1.16.1
-Site=		https://www.gnu.org/software/automake/
-Source=		https://ftp.gnu.org/gnu/automake/$(Name)-$(Version).tar.xz
+Site=		https://www.gnu.org/software/$(Name)
+Source=		http://ftpmirror.gnu.org/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv2
 
 EnvExtra += AUTOCONF=$(BinDir)/autoconf
