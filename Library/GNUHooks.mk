@@ -5,6 +5,12 @@
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
+#
+# Define servers
+#
+GnuHome = https://www.gnu.org/software
+GnuMirror = https://ftpmirror.gnu.org
+
 ifeq ($(RUDIX_ENABLE_NLS),yes)
 GnuConfigureExtra += --enable-nls
 else ifeq ($(RUDIX_ENABLE_NLS),no)
