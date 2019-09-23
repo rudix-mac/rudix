@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Apache Portable Runtime
 Name=		apr
-Version=	1.5.2
+Version=	1.7.0
 Site=		http://apr.apache.org/
 Source=		http://www.apache.org/dist/apr/$(Name)-$(Version).tar.bz2
 License=	Apache License
