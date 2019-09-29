@@ -6,8 +6,8 @@ include ../../Library/GNU.mk
 Title=		LFTP
 Name=		lftp
 Version=	4.8.4
-Site=		http://lftp.yar.ru/
-Source=		http://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
+Site=		https://lftp.yar.ru/
+Source=		https://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 # readline
@@ -21,10 +21,11 @@ GnuConfigureExtra += --with-libintl-prefix=/usr/local
 GnuConfigureExtra += --without-modules
 
 define after_install_hook
-install -m 644 $(SourceDir)/{FAQ,FEATURES,TODO} \
-	$(InstallDir)/$(DocDir)/$(Name)
+for x in FAQ FEATURES TODO ; do \
+    install -m 644 $(SourceDir)/$$x $(InstallDir)/$(DocDir)/$(Name) ; \
+done
 mv $(InstallDir)/$(Prefix)/etc/lftp.conf \
-	$(InstallDir)/$(Prefix)/etc/lftp.conf.default
+    $(InstallDir)/$(Prefix)/etc/lftp.conf.default
 #cd $(InstallDir)/$(LibDir)/lftp/$(Version) && \
 #	for x in *.so ; do ln -sf $$x $${x%.so}.bundle ; done
 endef
