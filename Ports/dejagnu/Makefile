@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		DejaGnu
 Name=		dejagnu
-Version=	1.6
-Site=		https://gnu.org/software/dejagnu/
-Source=		https://ftp.gnu.org/pub/gnu/dejagnu/dejagnu-$(Version).tar.gz
+Version=	1.6.2
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=        GPLv3
 
 define test_iner_hook
