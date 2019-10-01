@@ -4,8 +4,8 @@ Description=	ID database utilities
 Title=		GNU ID Utils
 Name=		idutils
 Version=	4.6
-Site=		https://www.gnu.org/software/idutils/
-Source=		http://ftp.gnu.org/gnu/idutils//$(Name)-$(Version).tar.xz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/idutils//$(Name)-$(Version).tar.xz
 License=	GPL
 
 define test_hook

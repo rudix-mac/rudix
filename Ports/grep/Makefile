@@ -5,8 +5,8 @@ include ../../Library/GNU.mk
 Title=		GNU Grep
 Name=		grep
 Version=	3.3
-Site=		https://www.gnu.org/software/grep/
-Source=		https://ftp.gnu.org/gnu/grep/$(Name)-$(Version).tar.xz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/grep/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu

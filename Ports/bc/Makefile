@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		bc
 Name=		bc
 Version=	1.07.1
-Site=		https://www.gnu.org/software/bc/
-Source=		https://ftp.gnu.org/gnu/bc/bc-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/bc/bc-$(Version).tar.gz
 License=        GPLv3
 
 GnuConfigureExtra += --with-libedit

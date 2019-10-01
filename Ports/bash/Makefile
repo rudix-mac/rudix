@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Bash
 Name=		bash
 Version=	4.4
-Site=		http://www.gnu.org/software/bash/
-Source=		http://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/bash//bash-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-included-gettext

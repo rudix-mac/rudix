@@ -4,6 +4,6 @@ include ../../Library/GNU.mk
 Title=		Autoconf archive 
 Name=		autoconf-archive
 Version=	2019.01.06
-Site=		https://www.gnu.org/software/$(Name)
-Source=		http://ftpmirror.gnu.org/$(Name)/$(Name)-$(Version).tar.xz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=        GPL

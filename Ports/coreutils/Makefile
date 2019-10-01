@@ -5,8 +5,8 @@ include ../../Library/GNU.mk
 Title=		GNU Core Utilities
 Name=		coreutils
 Version=	8.30
-Site=		https://www.gnu.org/software/coreutils/
-Source=		https://ftp.gnu.org/gnu/coreutils/$(Name)-$(Version).tar.xz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/coreutils/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes

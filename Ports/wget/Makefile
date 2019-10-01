@@ -7,8 +7,8 @@ include ../../Library/GNU.mk
 Title=		GNU Wget
 Name=		wget
 Version=	1.20.3
-Site=		http://www.gnu.org/software/wget/
-Source=		http://ftp.gnu.org/gnu/wget/$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/wget/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)/ssl

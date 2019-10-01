@@ -5,8 +5,8 @@ include ../../Library/GNU.mk
 Title=		GNU a2ps
 Name=		a2ps
 Version=	4.14
-Site=		http://www.gnu.org/software/a2ps/
-Source=		http://ftp.gnu.org/gnu/a2ps/$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/a2ps/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 define after_install_hook

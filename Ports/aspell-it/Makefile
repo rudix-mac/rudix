@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Aspell IT Dictionary
 Name=		aspell6-it
 Version=	2.2_20050523-0
-Site=		ftp://ftp.gnu.org/gnu/aspell/dict/it/
-Source=		ftp://ftp.gnu.org/gnu/aspell/dict/it/$(Name)-$(Version).tar.bz2
+Site=		$(GnuMirror)/aspell/dict/it/
+Source=		$(GnuMirror)/aspell/dict/it/$(Name)-$(Version).tar.bz2
 License=        GPL
 LicenseFile=	$(BuildDir)/Copyright
 

@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Sed
 Name=		sed
 Version=	4.7
-Site=		https://www.gnu.org/software/sed
-Source=		https://ftp.gnu.org/gnu/sed/$(Name)-$(Version).tar.xz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/sed/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu

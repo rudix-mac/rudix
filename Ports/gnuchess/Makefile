@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Chess
 Name=		gnuchess
 Version=	6.2.5
-Site=		https://www.gnu.org/software/chess/
-Source=		https://ftp.gnu.org/gnu/chess/gnuchess-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/chess/gnuchess-$(Version).tar.gz
 License=        GPLv3
 
 define after_install_hook

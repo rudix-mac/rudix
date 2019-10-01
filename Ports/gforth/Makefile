@@ -8,7 +8,7 @@ GnuConfigureExtra += --build=x86_64-apple-darwin
 Title=		Gforh
 Name=		gforth
 Version=	0.7.3
-Site=		http://www.gnu.org/software/gforth/
+Site=		$(GnuHome)/$(Name)
 Source=		http://www.complang.tuwien.ac.at/forth/gforth//$(Name)-$(Version).tar.gz
 License=	GPL
 

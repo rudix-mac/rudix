@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Make
 Name=		make
 Version=	4.2.1
-Site=		https://www.gnu.org/software/make/
-Source=		https://ftp.gnu.org/gnu/make/$(Name)-$(Version).tar.bz2
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/make/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
 BuildRequires += $(LibDir)/libintl.la # gettext

@@ -6,7 +6,7 @@ Title=          GNU Aspell
 Name=           aspell
 Version=        0.60.6.1
 Site=		http://aspell.net/
-Source=		http://ftp.gnu.org/gnu/aspell//$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/aspell//$(Name)-$(Version).tar.gz
 License=	LGPL
 
 define test_hook

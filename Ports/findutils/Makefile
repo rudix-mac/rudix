@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Find Utilities
 Name=		findutils
 Version=	4.6.0
-Site=		http://www.gnu.org/software/findutils/
-Source=		http://ftp.gnu.org/gnu/findutils/$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/findutils/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu

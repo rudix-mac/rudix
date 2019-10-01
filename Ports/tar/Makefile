@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Tar
 Name=		tar
 Version=	1.30
-Site=		http://www.gnu.org/software/tar/
-Source=		http://ftp.gnu.org/gnu/tar//$(Name)-$(Version).tar.bz2
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/tar//$(Name)-$(Version).tar.bz2
 License=	GPL
 
 # GnuConfigureExtra += --program-prefix=gnu

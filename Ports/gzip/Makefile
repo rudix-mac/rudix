@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Gzip
 Name=		gzip
 Version=	1.8
-Site=		http://www.gnu.org/software/gzip/
-Source=		http://ftp.gnu.org/gnu/gzip//$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/gzip//$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

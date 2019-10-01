@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU bison
 Name=		bison
 Version=	3.4
-Site=		https://www.gnu.org/software/$(Name)
-Source=		ftp://ftp.gnu.org/gnu/bison/$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/bison/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 define test_hook

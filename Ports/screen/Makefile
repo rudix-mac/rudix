@@ -3,8 +3,8 @@ include ../../Library/GNU.mk
 Title=		GNU Screen
 Name=		screen
 Version=	4.4.0
-Site=		http://www.gnu.org/software/screen/
-Source=		http://ftp.gnu.org/gnu/screen//$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/screen//$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-sys-screenrc=/usr/local/etc

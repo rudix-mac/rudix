@@ -3,6 +3,6 @@ include ../../Library/GNU.mk
 Title=		GNU libsigsegv
 Name=		libsigsegv
 Version=	2.10
-Site=		http://www.gnu.org/software/libsigsegv/
-Source=		http://ftp.gnu.org/gnu/libsigsegv/$(Name)-$(Version).tar.gz
+Site=		$(GnuHome)/$(Name)
+Source=		$(GnuMirror)/libsigsegv/$(Name)-$(Version).tar.gz
 License=	GPL
