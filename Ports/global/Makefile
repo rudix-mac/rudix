@@ -4,7 +4,7 @@ Title=		GNU Global
 Name=		global
 Version=	6.6.3
 Site=		$(GnuHome)/$(Name)
-Source=		https://ftp.gnu.org/pub/gnu/global/global-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 LicenseFile=	$(SourceDir)/LICENSE
 
