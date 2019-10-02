@@ -2,8 +2,8 @@ include ../../Library/GNU.mk
 
 Title=		Texinfo
 Name=		texinfo
-Version=	6.6
-Site=		http://savannah.gnu.org/projects/texinfo
+Version=	6.7
+Site=		$(GnuHome)/$(Name)
 Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3+
 
