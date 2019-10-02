@@ -7,9 +7,10 @@ BuildRequires += $(LibDir)/libgmodule-2.0.la	# glib
 
 Title=		Midnight Commander
 Name=		mc
-Version=	4.8.7
+Version=	4.8.23
 Site=		http://www.midnight-commander.org/
-Source=		http://www.midnight-commander.org/downloads/$(Name)-$(Version).tar.bz2
+#Source=	http://www.midnight-commander.org/downloads/$(Name)-$(Version).tar.bz2
+Source=		http://ftp.midnight-commander.org/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 #GnuConfigureExtra += --with-included-gettext
@@ -23,7 +24,9 @@ curl -f -O -C - -L -k
 endef
 
 define after_install_hook
-install -m 644 $(SourceDir)/doc/{FAQ,HACKING,TODO} $(InstallDir)/$(DocDir)/$(Name)
+for f in FAQ HACKING TODO; do \
+    install -m 644 $(SourceDir)/doc/$$f $(InstallDir)/$(DocDir)/$(Name); \
+done
 mv $(InstallDir)$(Prefix)/etc/mc $(InstallDir)$(Prefix)/etc/mc.default
 install -d $(InstallDir)/$(Prefix)/etc/mc
 endef
