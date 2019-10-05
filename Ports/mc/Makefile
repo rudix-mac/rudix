@@ -1,5 +1,7 @@
 include ../../Library/GNU.mk
-
+#
+# TODO: check stim atim issues
+#
 BuildRequires += $(BinDir)/pkg-config		# pkg-config
 BuildRequires += $(LibDir)/libintl.la		# gettext
 BuildRequires += $(LibDir)/libglib-2.0.la	# glib
@@ -7,7 +9,7 @@ BuildRequires += $(LibDir)/libgmodule-2.0.la	# glib
 
 Title=		Midnight Commander
 Name=		mc
-Version=	4.8.23
+Version=	4.8.7
 Site=		http://www.midnight-commander.org/
 #Source=	http://www.midnight-commander.org/downloads/$(Name)-$(Version).tar.bz2
 Source=		http://ftp.midnight-commander.org/$(Name)-$(Version).tar.xz
@@ -16,8 +18,11 @@ License=	GPLv3
 #GnuConfigureExtra += --with-included-gettext
 GnuConfigureExtra += --with-screen=ncurses
 GnuConfigureExtra += --without-x
+GnuConfigureExtra += --disable-vfs
 #GnuConfigureExtra += --enable-vfs-smb
 #GnuConfigureExtra += --with-glib-static # Bogus?
+
+PatchLevel=-p1
 
 define fetch
 curl -f -O -C - -L -k
