@@ -2,15 +2,15 @@ include ../../Library/GNU.mk
 
 Title=		GNU Tar
 Name=		tar
-Version=	1.30
+Version=	1.32
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/tar//$(Name)-$(Version).tar.bz2
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.bz2
 License=	GPL
 
-# GnuConfigureExtra += --program-prefix=gnu
+GnuConfigureExtra += --program-prefix=gnu
 
 define after_install_hook
-cd $(InstallDir)/$(BinDir) && ln -sf gnutar tar
+ cd $(InstallDir)/$(BinDir); ln -sf gnutar tar
 endef
 
 define test_hook
