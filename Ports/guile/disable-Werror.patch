@@ -5,16 +5,7 @@
        # Since GCC only issues a warning for missing braces, so we need
        # `-Werror' to catch it.
 -      CFLAGS="-Werror -Wmissing-braces $CFLAGS"
-+      CFLAGS="-Wmissing-braces $CFLAGS"
++      CFLAGS="-Werror=missing-braces $CFLAGS"
      fi
- 
+
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether PTHREAD_ONCE_INIT needs braces" >&5
-@@ -19916,7 +19916,7 @@
-     # not be "warning free"
-     if test "${GUILE_ERROR_ON_WARNING}" = yes
-     then
--	CFLAGS="${CFLAGS} -Werror"
-+	CFLAGS="${CFLAGS}"
- 	enable_compile_warnings=no
-     fi
-     ;;
