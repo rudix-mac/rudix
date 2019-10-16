@@ -3,6 +3,7 @@ include ../../Library/GNU.mk
 BuildRequires += $(LibDir)/libgmp.la	# gmp
 BuildRequires += $(LibDir)/libintl.la	# gettext
 BuildRequires += $(LibDir)/libltdl.la	# libtool
+BuildRequires += $(LibDir)/libffi.la	# libffi
 
 Title=		GNU Guile
 Name=		guile
@@ -13,8 +14,8 @@ License=	LGPLv2
 
 LicenseFile=	$(SourceDir)/LICENSE
 
-EnvExtra += 	LIBFFI_CFLAGS="-I/usr/include/ffi"
-EnvExtra +=	LIBFFI_LIBS="-L/usr/local/lib -lffi"
+EnvExtra += 	LIBFFI_CFLAGS="$(shell --cflags libffi)"
+EnvExtra +=	LIBFFI_LIBS="$(shell --libs libffi)"
 
 define after_install_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
