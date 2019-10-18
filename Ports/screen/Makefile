@@ -4,7 +4,7 @@ Title=		GNU Screen
 Name=		screen
 Version=	4.4.0
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/screen//$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-sys-screenrc=/usr/local/etc

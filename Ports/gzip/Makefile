@@ -4,7 +4,7 @@ Title=		GNU Gzip
 Name=		gzip
 Version=	1.8
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gzip//$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL
 
 GnuConfigureExtra += --program-prefix=gnu

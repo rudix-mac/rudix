@@ -5,6 +5,6 @@ Title=		GNU Common Lisp
 Name=		gcl
 Version=	2.6.12
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gcl//$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 
 UncompressedName=gcl

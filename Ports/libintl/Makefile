@@ -4,11 +4,11 @@ Title=		GNU libintl
 Name=		libintl
 Version=	0.20.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gettext/gettext-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
-UncompressedName=gettext-$(Version)
-BuildDir=$(SourceDir)/gettext-runtime
+UncompressedName=$(Name)-$(Version)
+BuildDir=$(SourceDir)/$(Name)-runtime
 
 GnuConfigureExtra += --enable-threads
 GnuConfigureExtra += --disable-java
@@ -23,5 +23,5 @@ rm -rf $(DestDir)$(DocDir)/gettext/javadoc2
 endef
 
 define test_hook
-$(BinDir)/gettext --version | grep $(Version)
+$(BinDir)/$(Name) --version | grep $(Version)
 endef

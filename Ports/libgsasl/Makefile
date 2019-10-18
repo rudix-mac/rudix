@@ -8,5 +8,5 @@ Title=		GNU SASL Library
 Name=		libgsasl
 Version=	1.8.0
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gsasl//$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL

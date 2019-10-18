@@ -5,7 +5,7 @@ Title=		GNU ID Utils
 Name=		idutils
 Version=	4.6
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/idutils//$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPL
 
 define test_hook

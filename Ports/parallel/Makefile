@@ -4,7 +4,7 @@ Title=		GNU Parallel
 Name=		parallel
 Version=	20141122
 Site=		http://savannah.gnu.org/projects/parallel/
-Source=		$(GnuMirror)/parallel//${Name}-${Version}.tar.bz2
+Source=		$(GnuMirror)/$(Name)/${Name}-${Version}.tar.bz2
 License=	GPL
 
 define test_hook

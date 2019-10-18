@@ -4,7 +4,7 @@ Title=		GNU Bash
 Name=		bash
 Version=	4.4
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/bash//bash-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-included-gettext
