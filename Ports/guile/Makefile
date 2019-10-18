@@ -16,7 +16,7 @@ LicenseFile=	$(SourceDir)/LICENSE
 
 EnvExtra += LIBFFI_CFLAGS="$(shell --cflags libffi)"
 EnvExtra += LIBFFI_LIBS="$(shell --libs libffi)"
-GnuConfigureExtra += "--disable-error-on-warning"
+# GnuConfigureExtra += "--disable-error-on-warning"
 
 define after_install_hook
 install -m 644 $(SourceDir)/{GUILE-Version,HACKING} $(InstallDir)/$(DocDir)/$(Name)
