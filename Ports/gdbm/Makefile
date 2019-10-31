@@ -4,7 +4,7 @@ Title=		GNU dbm
 Name=		gdbm
 Version=	1.12
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gdbm/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL
 
 define test_hook

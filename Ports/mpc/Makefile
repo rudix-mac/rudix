@@ -9,7 +9,7 @@ Title=		GNU MPC
 Name=		mpc
 Version=	1.1.0
 Site=		http://www.multiprecision.org/mpc/
-Source=		$(GnuMirror)/mpc/mpc-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	LGPLv3
 LicenseFile=	$(SourceDir)/COPYING.LESSER
 

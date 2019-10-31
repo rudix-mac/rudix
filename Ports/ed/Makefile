@@ -6,7 +6,7 @@ Title=		GNU ed
 Name=		ed
 Version=	1.15
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/ed/$(Name)-$(Version).tar.lz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.lz
 License=	GPLv3
 
 ConfigureExtra += CFLAGS="$(CFlags)" LDFLAGS="$(LdFLags)"

@@ -5,7 +5,7 @@ Title=		GNU M4
 Name=		m4
 Version=	1.4.18
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/m4/$(Name)-$(Version).tar.bz2
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
 # From Homebrew,

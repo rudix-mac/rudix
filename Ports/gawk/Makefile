@@ -8,7 +8,7 @@ Name=		gawk
 Version=	4.2.1
 #Version=	5.0.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gawk/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --with-readline=/usr/local

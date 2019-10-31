@@ -6,7 +6,7 @@ Title=		GNU a2ps
 Name=		a2ps
 Version=	4.14
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/a2ps/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 define after_install_hook

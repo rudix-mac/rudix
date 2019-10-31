@@ -4,7 +4,7 @@ Title=		PSPP
 Name=		pspp
 Version=	1.2.0
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/pspp/pspp-1.2.0.tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-1.2.0.tar.gz
 License=        GPL3
 
 BuildRequires += $(LibDir)/pkgconfig/libxml-2.0.pc

@@ -4,7 +4,7 @@ Title=		bc
 Name=		bc
 Version=	1.07.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/bc/bc-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=        GPLv3
 
 GnuConfigureExtra += --with-libedit

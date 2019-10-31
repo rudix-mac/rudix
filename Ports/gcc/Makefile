@@ -9,7 +9,7 @@ Title=		GCC
 Name=		gcc
 Version=	8.2.0
 Site=		https://gcc.gnu.org
-Source=		$(GnuMirror)/gcc/gcc-8.2.0/gcc-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version)/$(Name)-$(Version).tar.xz
 License=        GPL/LGPL
 
 define test_hook

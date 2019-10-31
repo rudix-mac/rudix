@@ -4,5 +4,5 @@ Title=		GNU libsigsegv
 Name=		libsigsegv
 Version=	2.10
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/libsigsegv/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL

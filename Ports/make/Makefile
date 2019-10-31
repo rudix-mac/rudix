@@ -4,7 +4,7 @@ Title=		GNU Make
 Name=		make
 Version=	4.2.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/make/$(Name)-$(Version).tar.bz2
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
 BuildRequires += $(LibDir)/libintl.la # gettext

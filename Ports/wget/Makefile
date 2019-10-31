@@ -8,7 +8,7 @@ Title=		GNU Wget
 Name=		wget
 Version=	1.20.3
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/wget/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-ssl=openssl --with-libssl-prefix=$(Prefix)/ssl

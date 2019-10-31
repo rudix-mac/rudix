@@ -4,7 +4,7 @@ Title=		GNU Datamash
 Name=		datamash
 Version=	1.4
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/datamash/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 define test_hook

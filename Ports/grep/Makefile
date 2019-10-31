@@ -6,7 +6,7 @@ Title=		GNU Grep
 Name=		grep
 Version=	3.3
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/grep/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu

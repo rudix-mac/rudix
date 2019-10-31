@@ -4,7 +4,7 @@ Title=		GNU Chess
 Name=		gnuchess
 Version=	6.2.5
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/chess/gnuchess-$(Version).tar.gz
+Source=		$(GnuMirror)/chess/$(Name)-$(Version).tar.gz
 License=        GPLv3
 
 define after_install_hook
