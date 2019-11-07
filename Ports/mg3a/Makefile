@@ -3,7 +3,7 @@ BuildDepends += /usr/local/bin/ncursesw6-config
 
 Title=		MG3a
 Name=		mg3a
-Version=	190113
+Version=	191107
 Site=		https://github.com/paaguti
 Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
 License=	GPL
