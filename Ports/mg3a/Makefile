@@ -1,10 +1,9 @@
 include ../../Library/Unix.mk
 BuildDepends += /usr/local/bin/ncursesw6-config
 
-#https://github.com/paaguti/mg3a/archive/191198.tar.gz
 Title=		MG3a
 Name=		mg3a
-Version=	191106
+Version=	191107
 Site=		https://github.com/paaguti
 Source=		https://github.com/paaguti/$(Name)/archive/$(Version).tar.gz
 License=	GPL
