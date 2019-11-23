@@ -25,6 +25,6 @@ make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
 endef
 
 BuildRequires += $(LibDir)/libintl.la # static-gettext
-BuildRequires += $(LibDir)/libjpeg.a # rudix libjpeg
-BuildRequires += $(LibDir)/libtiffxx.a # rudix libtiff
+BuildRequires += $(LibDir)/libjpeg.dylib # rudix libjpeg
+BuildRequires += $(LibDir)/libtiff.dylib # rudix libtiff
 BuildRequires += $(LibDir)/libopenjp2.a # libopenjpeg2
