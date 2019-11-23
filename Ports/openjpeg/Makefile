@@ -18,7 +18,16 @@ cmake .. -DCMAKE_BUILD_TYPE=Release \
         -DTIFF_INCLUDE_DIR=/usr/local/include/ -DTIFF_LIBRARY=/usr/local/lib/libtiff.dylib
 endef
 
+define build_hook
+make -C $(BuildDir)/build
+endef
+
+define install_hook
+make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
+endef
 
 define test_hook
 $(BinDir)/opj_compress -h | grep $(Version)
 endef
+
+BuildRequires = $(LibDir)/libtiff.dylib # rudix libtiff
