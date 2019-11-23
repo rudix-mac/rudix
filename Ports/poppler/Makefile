@@ -12,8 +12,10 @@ mkdir -p $(BuildDir)/build
 cd $(BuildDir)/build; \
 pwd ;\
 cmake .. -DCMAKE_BUILD_TYPE=Release \
-	-DWITH_JPEG=ON -DBUILD_JPEG=OFF -DJPEG_INCLUDE_DIR=/usr/local/include/ -DJPEG_LIBRARY=/usr/local/lib/libjpeg.a \
-	-DWITH_TIFF=ON -DBUILD_TIFF=OFF -DTIFF_INCLUDE_DIR=/usr/local/include/ -DTIFF_LIBRARIES="/usr/local/lib/libtiff.a /usr/local/lib/libtiffxx.a" \
+	-DWITH_JPEG=ON -DBUILD_JPEG=OFF \
+	-DJPEG_INCLUDE_DIR=/usr/local/include/ -DJPEG_LIBRARY=/usr/local/lib/libjpeg.dylib \
+	-DWITH_TIFF=ON -DBUILD_TIFF=OFF \
+	-DTIFF_INCLUDE_DIR=/usr/local/include/ -DTIFF_LIBRARY="/usr/local/lib/libtiff.dylib" \
 ;\
 make
 endef
