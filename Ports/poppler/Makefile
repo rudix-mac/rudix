@@ -11,7 +11,10 @@ define build_hook
 mkdir -p $(BuildDir)/build
 cd $(BuildDir)/build; \
 pwd ;\
-cmake .. -DCMAKE_BUILD_TYPE=Release ;\
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+	-DWITH_JPEG=ON -DBUILD_JPEG=OFF -DJPEG_INCLUDE_DIR=/usr/local/include/ -DJPEG_LIBRARY=/usr/local/lib/libjpeg.a \
+	-DWITH_TIFF=ON -DBUILD_JPEG=OFF -DTIFF_INCLUDE_DIRs=/usr/local/include/ -DTIFF_LIBRARIES="/usr/local/lib/libtiff.a /usr/local/lib/libtiffxx.a" \
+;\
 make
 endef
 
@@ -20,4 +23,6 @@ make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
 endef
 
 BuildRequires += $(LibDir)/libintl.la # static-gettext
+BuildRequires += $(LibDir)/libjpeg.a # rudix libjpeg
+BuildRequires += $(LibDir)/libtiffxx.a # rudix libtiff
 BuildRequires += $(LibDir)/libopenjp2.a # libopenjpeg2
