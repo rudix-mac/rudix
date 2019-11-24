@@ -15,7 +15,7 @@ ifeq ($(RUDIX_BUILD_STATIC_LIBS),yes)
 CMakeExtra += -DBUILD_STATIC_LIBS=ON
 endif
 
-define build_pre_hook
+define before_build_hook
 mkdir -p $(BuildDir)/build && \
 cd $(BuildDir)/build && \
 env $(EnvExtra) cmake .. $(CMakeExtra)
