@@ -1,4 +1,4 @@
-include ../../Library/Unix.mk
+include ../../Library/CMake.mk
 
 Title=		libopenjpeg2
 Name=		openjpeg
@@ -9,18 +9,8 @@ License=    GPL
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/LICENSE
 
-define build_hook
-mkdir -p $(BuildDir)/build
-cd $(BuildDir)/build; \
-pwd ;\
-cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_STATIC_LIBS=ON;\
-make
-endef
-
-define install_pre_hook
-mkdir -p $(InstallDir)/usr/local
-endef
-
-define install_hook
-make DESTDIR=`pwd`/$(InstallDir) -C $(BuildDir)/build install
-endef
+#
+# Use rudix compiled libtiff
+#
+CMakeExtra += -DTIFF_INCLUDE_DIR=/usr/local/include/
+CMakeExtra += -DTIFF_LIBRARY=/usr/local/lib/libtiff.dylib
