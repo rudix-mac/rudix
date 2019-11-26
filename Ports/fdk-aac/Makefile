@@ -2,8 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		FDK-AAC
 Name=		fdk-aac
-#Version=	2.0.0
-Version=	0.1.6
+Version=	2.0.0
 Site=		https://sourceforge.net/projects/opencore-amr
 Source=		https://github.com/mstorsjo/fdk-aac/archive/v$(Version).tar.gz
 LicenseFile=	$(SourceDir)/NOTICE
