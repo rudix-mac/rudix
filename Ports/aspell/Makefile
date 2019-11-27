@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=          GNU Aspell
 Name=           aspell
-Version=        0.60.6.1
+Version=        0.60.8
 Site=		http://aspell.net/
 Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	LGPL
