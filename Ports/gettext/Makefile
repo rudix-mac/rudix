@@ -4,7 +4,7 @@ Title=		GNU gettext
 Name=		gettext
 Version=	0.20.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gettext/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --enable-threads

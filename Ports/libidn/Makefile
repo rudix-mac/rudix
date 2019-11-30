@@ -4,7 +4,7 @@ Title=		GNU IDN Library
 Name=		libidn
 Version=	1.35
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/libidn/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPL+LGPL
 ReadMeFile=	$(SourceDir)/README
 

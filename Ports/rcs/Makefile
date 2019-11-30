@@ -4,7 +4,7 @@ Title=		GNU RCS
 Name=		rcs
 Version=	5.9.4
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/rcs/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 define test_hook

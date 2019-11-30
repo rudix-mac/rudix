@@ -6,7 +6,7 @@ Title=		GNU Core Utilities
 Name=		coreutils
 Version=	8.30
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/coreutils/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += jm_cv_func_svid_putenv=yes

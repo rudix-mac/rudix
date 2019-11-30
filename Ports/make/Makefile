@@ -4,16 +4,10 @@ Title=		GNU Make
 Name=		make
 Version=	4.2.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/make/$(Name)-$(Version).tar.bz2
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.bz2
 License=	GPLv3
 
-BuildRequires += $(LibDir)/libintl.la # gettext
-GnuConfigureExtra += --program-prefix=gnu
-
-define after_install_hook
-cd $(InstallDir)$(BinDir) && ln -sf gnumake make
-cd $(InstallDir)$(ManDir)/man1 && ln -sf gnumake.1 make.1
-endef
+BuildRequires += $(LibDir)/libintl.a # gettext
 
 define test_hook
 $(BinDir)/make --version | grep $(Version)

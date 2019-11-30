@@ -4,7 +4,7 @@ Title=		Nettle
 Name=		nettle
 Version=	3.4.1
 Site=		http://www.lysator.liu.se/~nisse/nettle/
-Source=		$(GnuMirror)/nettle/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	LGPL/GPL
 
 LicenseFile=	$(SourceDir)/COPYING.LESSERv3

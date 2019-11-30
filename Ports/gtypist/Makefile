@@ -4,7 +4,7 @@ Title=		GNU Typist
 Name=		gtypist
 Version=	2.9.5
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/gtypist/gtypist-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 # GnuConfigureExtra += --with-readline=/usr/local

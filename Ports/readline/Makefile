@@ -4,7 +4,7 @@ Title=		GNU Readline
 Name=		readline
 Version=	8.0
 Site=		https://tiswww.case.edu/php/chet/readline/rltop.html
-Source=		$(GnuMirror)/readline/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-curses

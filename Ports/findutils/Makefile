@@ -4,7 +4,7 @@ Title=		GNU Find Utilities
 Name=		findutils
 Version=	4.6.0
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/findutils/$(Name)-$(Version).tar.gz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu

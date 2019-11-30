@@ -1,5 +1,3 @@
-BuildRequires += $(LibDir)/libintl.la # gettext
-
 include ../../Library/GNU.mk
 
 Title=		XZ Utils
@@ -12,3 +10,5 @@ License=	GPLv2+, LGPLv2.1+, Public Domain
 define test_hook
 $(BinDir)/xz --version | grep $(Version)
 endef
+
+BuildRequires += $(LibDir)/libintl.a

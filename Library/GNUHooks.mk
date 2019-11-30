@@ -10,6 +10,7 @@
 #
 GnuHome = https://www.gnu.org/software
 GnuMirror = https://ftpmirror.gnu.org
+#GnuMirror = https://ftp.gnu.org/gnu
 
 ifeq ($(RUDIX_ENABLE_NLS),yes)
 GnuConfigureExtra += --enable-nls

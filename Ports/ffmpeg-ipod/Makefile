@@ -1,9 +1,9 @@
 include ../../Library/Configure.mk
 
 BuildRequires += $(BinDir)/yasm # yasm
-BuildRequires += $(LibDir)/libmp3lame.a # static-lame
-BuildRequires += $(LibDir)/libfdk-aac.a # static FDK-AAC
-BuildRequires += $(LibDir)/libx264.a # static x264
+BuildRequires += $(LibDir)/libmp3lame.a # lame
+BuildRequires += $(LibDir)/libfdk-aac.a # FDK-AAC
+BuildRequires += $(LibDir)/libx264.a # x264
 
 Title=		FFmpeg
 Name=		ffmpeg

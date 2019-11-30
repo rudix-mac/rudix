@@ -4,7 +4,7 @@ Title=		GNU Sed
 Name=		sed
 Version=	4.7
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/sed/$(Name)-$(Version).tar.xz
+Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
 License=	GPLv3
 
 GnuConfigureExtra += --program-prefix=gnu
