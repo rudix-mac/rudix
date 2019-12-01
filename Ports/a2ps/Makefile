@@ -9,6 +9,9 @@ Site=		$(GnuHome)/$(Name)
 Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
+GnuConfigureExtras += --with-libiconv-prefix=/usr/local
+GnuConfigureExtras += --with-libintl-prefix=/usr/local
+
 define after_install_hook
 mv $(InstallDir)/$(SysConfDir)/a2ps.cfg \
 	$(InstallDir)/$(SysConfDir)/a2ps.cfg.default
@@ -19,3 +22,6 @@ endef
 define test_hook
 $(BinDir)/a2ps --version | grep $(Version)
 endef
+
+BuildRequires += /usr/local/lib/libiconv.a
+BuildRequires += /usr/local/lib/libintl.a
