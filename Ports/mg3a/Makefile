@@ -11,17 +11,9 @@ License=	GPL
 ReadMeFile=	$(SourceDir)/README
 PatchLevel = -p1
 
-#GnuMakeExtras += COPT="-O3 $(shell ncursesw6-config --cflags)"
-#GnuMakeExtras += LIBS="$(shell ncursesw6-config --libs)"
-
-define after_prep_hook
+define before_build_hook
 cd $(BuildDir) && ./bootstrap.sh
 endef
-
-# define install_hook
-# cd $(BuildDir) && $(MAKE) DESTDIR=$(DestDir) PREFIX="$(Prefix)" install
-# cp COPYING $(BuildDir)
-# endef
 
 define test_hook
 $(BinDir)/mg -v | grep $(Version)

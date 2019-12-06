@@ -1,8 +1,0 @@
---- mg3a-build/bootstrap.sh	2019-12-06 10:56:41.000000000 +0100
-+++ mg3a-191206/bootstrap.sh	2019-12-06 11:35:16.499902677 +0100
-@@ -1,5 +1,4 @@
- #!/bin/bash
- aclocal
--autoreconf
- automake --add-missing
- autoconf
