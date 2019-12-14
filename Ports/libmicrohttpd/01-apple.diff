@@ -1,0 +1,16 @@
+diff -rC 3 libmicrohttpd-0.9.68/src/microhttpd/mhd_sockets.c libmicrohttpd-build/src/microhttpd/mhd_sockets.c
+*** libmicrohttpd-0.9.68/src/microhttpd/mhd_sockets.c	2019-10-17 23:10:22.000000000 +0200
+--- libmicrohttpd-build/src/microhttpd/mhd_sockets.c	2019-12-14 12:05:52.000000000 +0100
+***************
+*** 518,523 ****
+--- 518,526 ----
+  #if defined(__FreeBSD__) &&  __FreeBSD__ + 0 >= 9
+    /* FreeBSD do not need zero-send for flushing starting from version 9 */
+    return 1;
++ #elif defined(__APPLE__)
++   // Apple woulr need 4 arguments in the send() call
++   return 1;
+  #elif defined(TCP_NOPUSH) && ! defined(TCP_CORK)
+    {
+      const int dummy = 0;
+
