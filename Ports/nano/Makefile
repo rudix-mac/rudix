@@ -4,7 +4,7 @@ BuildRequires += $(IncludeDir)/ncursesw/curses.h	# ncurses
 
 Title=		GNU nano
 Name=		nano
-Version=	4.3
+Version=	4.7
 Site=		https://www.nano-editor.org
 Source=		https://www.nano-editor.org/dist/v4/nano-$(Version).tar.xz
 License=	GPLv3
