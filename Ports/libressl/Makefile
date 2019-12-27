@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		LibreSSL
 Name=		libressl
-Version=	2.9.2
+Version=	3.0.2
 Site=		https://www.libressl.org
 Source=		https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-$(Version).tar.gz
 License=        OpenSSL License
