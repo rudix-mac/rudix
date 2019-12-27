@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 Description=	Full-featured and high-performance event loop
 Title=		Libev
 Name=		libev
-Version=	4.22
+Version=	4.31
 Site=		http://software.schmorp.de/pkg/libev.html
 Source=		http://dist.schmorp.de/libev/$(Name)-$(Version).tar.gz
 License=	BSD|GPLv2
