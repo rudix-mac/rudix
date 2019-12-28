@@ -1,0 +1,17 @@
+diff --git a/sbin/Makefile b/sbin/Makefile
+index a9658e7..16ba951 100644
+--- a/sbin/Makefile
++++ b/sbin/Makefile
+@@ -3,9 +3,11 @@
+ #
+ #
+ 
++PREFIX=/usr
++
+ all:
+ 
+ clean:
+ 
+ install:
+-	install -m755 update-ca-certificates $(DESTDIR)/usr/sbin/
++	install -m755 update-ca-certificates $(DESTDIR)$(PREFIX)/sbin/
