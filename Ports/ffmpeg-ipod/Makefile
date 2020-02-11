@@ -7,7 +7,7 @@ BuildRequires += $(LibDir)/libx264.a # x264
 
 Title=		FFmpeg
 Name=		ffmpeg
-Version=	4.2.1
+Version=	4.2.2
 Site=		http://ffmpeg.mplayerhq.hu/
 Source=		http://ffmpeg.org/releases/$(Name)-$(Version).tar.xz
 License=	GPL
@@ -21,6 +21,9 @@ ConfigureExtra += --enable-nonfree
 ConfigureExtra += --enable-libmp3lame
 ConfigureExtra += --enable-libfdk_aac
 ConfigureExtra += --enable-libx264
+ConfigureExtra += --enable-static
+ConfigureExtra += --disable-shared
+ConfigureExtra += --disable-ffplay
 
 PatchLevel = -p1
 
