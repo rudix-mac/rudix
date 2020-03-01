@@ -1,12 +1,14 @@
+# Ccache (or ccache) is a compiler cache
+
 include ../../Library/GNU.mk
 
 CREATE_LIBEXEC_LINKS?=yes
 
 Title=		Ccache
 Name=		ccache
-Version=	3.7.1
+Version=	3.7.7
 Site=		https://ccache.dev
-Source=		https://github.com/ccache/ccache/releases/download/v$(Version)/ccache-$(Version).tar.bz2
+Source=		https://github.com/ccache/ccache/releases/download/v$(Version)/ccache-$(Version).tar.xz
 License=	GPLv3+
 
 ReadMeFile=	$(SourceDir)/README.md
