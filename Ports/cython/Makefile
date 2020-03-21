@@ -2,13 +2,13 @@ include ../../Library/Python.mk
 
 Title=		Cython
 Name=		cython
-Version=	0.27.3
+Version=	0.29.15
 Site=		http://www.cython.org/
 Source=		http://www.cython.org/release/Cython-$(Version).tar.gz
-Source=		https://pypi.python.org/packages/ee/2a/c4d2cdd19c84c32d978d18e9355d1ba9982a383de87d0fcb5928553d37f4/Cython-$(Version).tar.gz
+Source=		https://files.pythonhosted.org/packages/d9/82/d01e767abb9c4a5c07a6a1e6f4d5a8dfce7369318d31f48a52374094372e/Cython-$(Version).tar.gz
 License=	Apache License
 
-ReadMeFile=	$(SourceDir)/README.txt
+ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE.txt
 
 define test_hook
