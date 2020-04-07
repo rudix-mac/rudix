@@ -1,3 +1,5 @@
+# The Revision Control System (RCS) manages multiple revisions of files
+
 include ../../Library/GNU.mk
 
 Title=		GNU RCS
@@ -9,4 +11,5 @@ License=	GPLv3
 
 define test_hook
 $(BinDir)/rcs --version | grep $(Version)
+$(BinDir)/rcs clean
 endef

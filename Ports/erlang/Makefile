@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	22.0
+Version=	22.3
 Site=		http://www.erlang.org/
 Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
 Files=		http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz

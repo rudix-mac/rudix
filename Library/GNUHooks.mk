@@ -36,13 +36,10 @@ for x in $(wildcard \
 	$(BuildDir)/AUTHORS* \
 	$(BuildDir)/ACKS* \
 	$(BuildDir)/CHANGES* \
-	$(BuildDir)/COPYING* \
 	$(BuildDir)/CREDITS* \
 	$(BuildDir)/NOTICE* \
-	$(BuildDir)/README* \
 	$(BuildDir)/INSTALL* \
 	$(BuildDir)/NEWS* \
-	$(BuildDir)/LICENSE* \
 	$(BuildDir)/ChangeLog*) ; do \
 	install -m 644 $$x $(DestDir)$(DocDir)/$(Name) ; \
 done

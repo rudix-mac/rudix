@@ -2,10 +2,11 @@ include ../../Library/Custom.mk
 
 Title=		Boost C++ Libraries
 Name=		boost
-Version=	1.63.0
-AltVersion=	1_63_0
+Version=	1.72.0
+AltVersion=	1_72_0
 Site=		http://www.boost.org/
 Source=		https://sourceforge.net/projects/boost/files/boost/$(Version)/$(Name)_$(AltVersion).tar.bz2
+Source=		https://dl.bintray.com/boostorg/release/$(Version)/source/boost_$(AltVersion).tar.bz2
 License=	Boost Software License
 
 ReadMeFile=	README
