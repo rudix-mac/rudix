@@ -12,6 +12,7 @@ BuildRequires += /usr/local/lib/pkgconfig/libxml-2.0.pc
 
 GnuConfigureExtra += --with-x=no
 GnuConfigureExtra += --with-ns=no
+GnuConfigureExtra += --with-modules
 
 define after_install_hook
 rm -rf $(InstallDir)$(LocalStateDir)
