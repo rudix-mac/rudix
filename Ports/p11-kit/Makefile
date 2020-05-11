@@ -4,7 +4,7 @@ Title=		p11-glue
 Name=		p11-kit
 Version=	0.23.20
 Site=		https://p11-glue.github.io/p11-glue/p11-kit.html
-Source=		https://github.com/p11-glue/p11-kit/archive/0.23.14.tar.gz
+Source=		https://github.com/p11-glue/p11-kit/archive/$(Version).tar.gz
 License=        GPL2
 
 GnuConfigureExtra += --disable-nls
@@ -14,5 +14,5 @@ define gnu_configure
 ./autogen.sh $(GnuConfigureExtra) \
        --prefix=$(Prefix) \
        --mandir=$(ManDir) \
-       --infodir=$(InfoDir) 
+       --infodir=$(InfoDir)
 endef
