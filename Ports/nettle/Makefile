@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Nettle
 Name=		nettle
-Version=	3.4.1
+Version=	3.6
 Site=		http://www.lysator.liu.se/~nisse/nettle/
 Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.gz
 License=	LGPL/GPL
