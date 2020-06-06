@@ -9,6 +9,7 @@ License=	LGPLv2.1+
 
 GnuConfigureExtra += --with-included-libtasn1
 GnuConfigureExtra += --disable-tools
+GnuConfigureExtra += --disable-guile
 
 ReadMeFile=	$(SourceDir)/README.md
 LicenseFile=	$(SourceDir)/doc/COPYING.LESSER
