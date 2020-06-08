@@ -1,0 +1,33 @@
+--- a/handlekey.c	18 Jan 2006 20:48:22 -0000	1.19
++++ b/handlekey.c	8 Jun 2020 05:14:38 -0000
+@@ -531,12 +531,14 @@
+          ret = ui_ask_yn("Really quit aewan?", 0);
+          if (!ui_cancel && ret) exit(0);
+          break;
++#if 0
+       case COMMAND_ADD_LAYER_DEFAULTS:
+       case COMMAND_ADD_LAYER_SPECIFY:
+          u_add_layer(command == COMMAND_ADD_LAYER_SPECIFY);
+          if (!doc_empty()) _lyr = 0;  /* now we have a layer, so correct _lyr
+                                        * so that it makes sense */
+          return;
++#endif
+       case COMMAND_SET_FOREGROUND:
+          newfg = ui_ask_color("Foreground color");
+          if (!ui_cancel) _fg = newfg;
+@@ -559,6 +561,15 @@
+          }
+          AEWAN_document_destroy(_doc);
+          zero_state();
++#if 1
++		 /* fall through => add a default layer */
++      case COMMAND_ADD_LAYER_DEFAULTS:
++      case COMMAND_ADD_LAYER_SPECIFY:
++         u_add_layer(command == COMMAND_ADD_LAYER_SPECIFY);
++         if (!doc_empty()) _lyr = 0;  /* now we have a layer, so correct _lyr
++                                       * so that it makes sense */
++
++#endif
+          return;
+       case COMMAND_EDIT_META: u_edit_meta(); return;
+    }
