@@ -11,6 +11,8 @@ Site=		http://www.jedsoft.org/slang/
 Source=		http://www.jedsoft.org/releases/slang/$(Name)-$(Version).tar.bz2
 License=	GPL
 
+GnuConfigureExtra += --without-x
+
 define after_install_hook
 mv $(InstallDir)$(SysConfDir)/slsh.rc \
 	$(InstallDir)$(SysConfDir)/slsh.rc.default
