@@ -5,7 +5,7 @@ include ../../Library/GNU.mk
 
 Title=		TMux
 Name=		tmux
-Version=	2.9
+Version=	3.1b
 Site=		https://github.com/tmux/tmux/wiki
 Source=		https://github.com/tmux/tmux/releases/download/$(Version)/tmux-$(Version).tar.gz
 License=	BSD
