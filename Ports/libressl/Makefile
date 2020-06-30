@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		LibreSSL
 Name=		libressl
-Version=	3.0.2
+Version=	3.2.0
 Site=		https://www.libressl.org
 Source=		https://ftp.openbsd.org/pub/OpenBSD/$(Title)/$(Name)-$(Version).tar.gz
 License=        OpenSSL License
@@ -17,5 +17,5 @@ mv $(InstallDir)$(SysConfDir)/ssl $(InstallDir)$(SysConfDir)/ssl.default
 endef
 
 define test_hook
-$(BinDir)/openssl version | grep $(Version)
+$(BinDir)/libressl version | grep $(Version)
 endef
