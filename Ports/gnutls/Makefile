@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GnuTLS
 Name=		gnutls
-Version=	3.6.13
+Version=	3.6.14
 Site=		https://gnutls.org
 Source=		https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-$(Version).tar.xz
 License=	LGPLv2.1+
