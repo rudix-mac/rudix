@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Vim
 Name=		vim
-Version=	8.1.2238
+Version=	8.2.1139
 Site=		https://www.vim.org
 Source=		https://github.com/vim/vim/archive/v$(Version).tar.gz
 License=	Charityware
