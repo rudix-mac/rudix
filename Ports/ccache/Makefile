@@ -6,7 +6,7 @@ CREATE_LIBEXEC_LINKS?=yes
 
 Title=		Ccache
 Name=		ccache
-Version=	3.7.7
+Version=	3.7.10
 Site=		https://ccache.dev
 Source=		https://github.com/ccache/ccache/releases/download/v$(Version)/ccache-$(Version).tar.xz
 License=	GPLv3+
