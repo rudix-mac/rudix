@@ -2,12 +2,12 @@ include ../../Library/Configure.mk
 
 Title=		QEMU
 Name=		qemu
-Version=	2.11.1
+Version=	5.0.0
 Site=		https://wiki.qemu.org/
 Source=		https://download.qemu.org/qemu-$(Version).tar.xz
 License=	GPLv2
 
-ReadMeFile=	$(SourceDir)/README
+ReadMeFile=	$(SourceDir)/README.rst
 LicenseFile=	$(SourceDir)/LICENSE
 
 BuildRequires += $(BinDir)/pkg-config             # pkg-config
