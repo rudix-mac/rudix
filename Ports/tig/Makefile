@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Tig
 Name=		tig
-Version=	2.4.1
+Version=	2.5.1
 Site=		https://jonas.github.io/tig/
 Source=		https://github.com/jonas/tig/releases/download/tig-$(Version)/tig-$(Version).tar.gz
 License=	GPLv2
