@@ -1,0 +1,145 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "FLOCK" "1" "December 2015" "Discoteq" "User Commands"
+.
+.SH "NAME"
+\fBflock\fR \- lock file during command
+.
+.SH "SYNOPSIS"
+\fBflock\fR [\fB\-suno\fR] [\fB\-w\fR secs] \fIfile\fR \fIcommand\fR [\fIargument\fR \.\.\.]
+.
+.P
+\fBflock\fR [\fB\-suno\fR] [\fB\-w\fR secs] \fIfile\-descriptor\-number\fR
+.
+.SH "DESCRIPTION"
+This utility manages flock(2) locks from within shell scripts or the command line\.
+.
+.P
+The first forms wrap the lock around the executing a command, in a manner similar to su(1) or newgrp(1)\. It locks a specified file or directory, which is created (assuming appropriate permissions), if it does not already exist\. By default, if the lock cannot be immediately acquired, \fBflock\fR waits until the lock is available\. By default, \fBflock\fR uses an exclusive lock, sometimes called a write lock\.
+.
+.P
+The second form uses open file by file descriptor number\. See \fBEXAMPLES\fR for how that can be used\.
+.
+.SH "OPTIONS"
+.
+.IP "\(bu" 4
+\fB\-e\fR,\fB\-x\fR,\fB\-\-exclusive\fR: Obtain an exclusive lock, sometimes called a write lock\. This is the default\.
+.
+.IP "\(bu" 4
+\fB\-s\fR, \fB\-\-shared\fR: Obtain a shared lock, sometimes called a read lock, instead of the default exclusive lock\.
+.
+.IP "\(bu" 4
+\fB\-o\fR, \fB\-\-close\fR: Close the file descriptor on which the lock is held before executing \fBcommand\fR\. This is useful if \fBcommand\fR spawns a child process which should not be holding the lock\.
+.
+.IP "\(bu" 4
+\fB\-n\fR, \fB\-\-nb\fR, \fB\-\-nonblock\fR: Fail rather than wait if the lock cannot be immediately acquired\.
+.
+.IP "\(bu" 4
+\fB\-w\fR \fIseconds\fR, \fB\-\-timeout\fR: Fail if the lock cannot be acquired within \fBseconds\fR\. Decimal fractional values are allowed\.
+.
+.IP "\(bu" 4
+\fB\-E\fR, \fB\-\-conflict\-exit\-code\fR: The exit code used when the \-n option is in use, and the conflicting lock exists, or the \-w option is in use, and the time‐out is reached\. The default value is 1\.
+.
+.IP "\(bu" 4
+\fB\-u\fR, \fB\-\-unlock\fR: Drop a lock\. This is usually not required, since a lock is automatically dropped when the file is closed\. However, it may be required in special cases, for example if the enclosed command group may have forked a background process which should not be holding the lock\.
+.
+.IP "\(bu" 4
+\fB\-\-verbose\fR
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+Lock \fB/tmp\fR while running the utility \fBcat\fR:
+.
+.IP "" 4
+.
+.nf
+
+  flock /tmp cat
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Lock \fBlocal\-lock\-file\fR exclusively while running the utility \fBecho\fR with \fB\'a b c\'\fR\.
+.
+.IP "" 4
+.
+.nf
+
+  flock local\-lock\-file echo \'a b c\'
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Set exclusive lock to directory \fB/tmp\fR and the second command will fail\.
+.
+.IP "" 4
+.
+.nf
+
+  flock \-w \.007 /tmp echo; /bin/echo $?
+  flock \-s /tmp \-c cat
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Set shared lock to directory \fB/tmp\fR and the second command will not fail\. Notice that attempting to get exclusive lock with second command would fail\.
+.
+.IP "" 4
+.
+.nf
+
+  flock \-s \-w \.007 /tmp \-c echo; /bin/echo $?
+  flock \-s /tmp \-c cat
+.
+.fi
+.
+.IP "" 0
+.
+.P
+This is useful boilerplate code for shell scripts\. Put it at the top of the shell script you want to lock and it\'ll automatically lock itself on the first run\. If the env var \fBFLOCKER\fR is not set to the shell script that is being run, then execute flock and grab an exclusive non\-blocking lock (using the script itself as the lock file) before re\-execing itself with the right arguments\. It also sets \fBFLOCKER\fR to the right value so it doesn\'t run again\.
+.
+.IP "" 4
+.
+.nf
+
+  [ "${FLOCKER}" != "$0" ] && exec env FLOCKER="$0" flock \-n "$0" "$0" "$@" || :
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Using a file descriptor with a shell block is useful for locking critical regions inside shell scripts\. If the shell process has permission to write or create the lockfile, \fB>\fR allows the lockfile to be created if it does not exist\. If the process only has read permission, \fB<\fR allows the file to already exist but only read permission is required\.
+.
+.IP "" 4
+.
+.nf
+
+  (
+        flock \-n 8 || exit 1
+        # commands executed under lock \.\.\.
+  ) 8> /var/lock/mylockfile
+.
+.fi
+.
+.IP "" 0
+.
+.SH "EXIT STATUS"
+The command uses \fBsysexits\.h\fR return values for everything, except when using either of the options \fB\-n\fR or \fB\-w\fR which report a failure to acquire the lock with a return value of \fBEXIT_FAILURE\fR\.
+.
+.P
+When using the \fBcommand\fR variant, and executing the child worked, then the exit status is that of the child command\.
+.
+.SH "SEE ALSO"
+flock(2), fcntl(2), setpgrp(1), nohup(1), nice(1), su(1)
+.
+.SH "HISTORY"
+A flock(1) command was almost simultaneously created by Adam J\. Richter \fIadam@yggdrasil\.com\fR sometime before 2004\-11 and H\. Peter Anvin \fIhpa@zytor\.com\fR in 2003\-03\.
