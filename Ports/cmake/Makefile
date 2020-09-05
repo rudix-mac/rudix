@@ -2,9 +2,9 @@ include ../../Library/Configure.mk
 
 Title=		CMake
 Name=		cmake
-Version=	3.13.4
+Version=	3.18.2
 Site=		https://cmake.org
-Source=		https://cmake.org/files/v3.13/cmake-${Version}.tar.gz
+Source=		https://cmake.org/files/v3.18/cmake-${Version}.tar.gz
 License=        BSD
 
 ReadMeFile=	$(SourceDir)/README.rst
