@@ -5,10 +5,9 @@ include ../../Library/GNU.mk
 
 Title=		LFTP
 Name=		lftp
-Version=	4.9.1
+Version=	4.9.2
 Site=		https://lftp.yar.ru/
-# Source=	https://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
-Source=		https://github.com/lavv17/lftp/archive/v$(Version).tar.gz
+Source=	https://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 License=	GPL
 
 # readline
@@ -20,10 +19,6 @@ GnuConfigureExtra += --with-openssl
 GnuConfigureExtra += --with-libiconv-prefix=/usr/local
 GnuConfigureExtra += --with-libintl-prefix=/usr/local
 GnuConfigureExtra += --without-modules
-
-define before_build_hook
-	cd $(BuildDir); ./bootstrap
-endef
 
 define after_install_hook
 for x in FAQ FEATURES TODO ; do \
