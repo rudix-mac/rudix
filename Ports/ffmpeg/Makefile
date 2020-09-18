@@ -4,7 +4,7 @@ BuildRequires += $(BinDir)/yasm # yasm
 
 Title=		FFmpeg
 Name=		ffmpeg
-Version=	4.1.4
+Version=	4.3.1
 Site=		http://ffmpeg.mplayerhq.hu/
 Source=		http://ffmpeg.org/releases/$(Name)-$(Version).tar.xz
 License=	GPL
