@@ -3,8 +3,11 @@ include ../../Library/GNU.mk
 Title=		Tuxera Open Source: NTFS-3G
 Name=		ntfs-3g
 Version=	2017.3.23
-Site=		https://www.tuxera.com/community/open-source-ntfs-3g/
-Source=		https://tuxera.com/opensource/ntfs-3g_ntfsprogs-$(Version).tgz
+Site=	https://www.tuxera.com/community/open-source-ntfs-3g/
+Source=	https://tuxera.com/opensource/ntfs-3g_ntfsprogs-$(Version).tgz
+#Version=	2017.3.23AR.5
+#Site=		https://jp-andre.pagesperso-orange.fr/
+#Source=	https://jp-andre.pagesperso-orange.fr/ntfs-3g_ntfsprogs-$(Version).tgz
 License=	LGPL/GPL
 
 # LicenseFile=	$(SourceDir)/COPYING.LESSERv3
@@ -25,4 +28,3 @@ BuildRequires += $(LibDir)/libintl.la
 PatchLevel = -p1
 
 UncompressedName = ntfs-3g_ntfsprogs-$(Version)
-
