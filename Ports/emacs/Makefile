@@ -2,11 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		GNU Emacs
 Name=		emacs
-Version=	26.3
+Version=	27.1
 Site=		$(GnuHome)/$(Name)
-Source=		$(GnuMirror)/$(Name)/$(Name)-$(Version).tar.xz
+Source=		https://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-$(Version).tar.gz
 License=	GPLv3
-
 BuildRequires += /usr/local/lib/pkgconfig/gnutls.pc
 BuildRequires += /usr/local/lib/pkgconfig/libxml-2.0.pc
 
