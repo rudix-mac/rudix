@@ -7,7 +7,6 @@ Title=		LFTP
 Name=		lftp
 Version=	4.9.1
 Site=		https://lftp.yar.ru/
-# Source=	https://lftp.yar.ru/ftp/$(Name)-$(Version).tar.bz2
 Source=		https://github.com/lavv17/lftp/archive/v$(Version).tar.gz
 License=	GPL
 
