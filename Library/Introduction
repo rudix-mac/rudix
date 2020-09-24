@@ -1,11 +1,11 @@
-The package you are installing is part of Rudix.
+The software you are installing now is brought to you by Rudix!
 
-Rudix is a collection of pre-built Unix-like software delivered as packages for Macintoshes.
+Rudix is a collection of pre-built software delivered as packages for Macs.
+For more information, please, visit https://rudix.org.
+
 This package is self-contained and has everything it needs to work.
+The binaries, libraries and documentation will be installed under
 
-The binaries, libraries and documentation will be installed in /usr/local/
-Python modules will be installed in /Library/Python/*/site-packages/
+/usr/local/
 
 You will now be guided through the steps necessary to install this software.
-
-Thank you for choosing Rudix! For more information, visit rudix.org.
