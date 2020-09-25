@@ -1,11 +1,11 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2019 Rudix (Rudá Moura)
+# Copyright © 2005-2020 Rudix (Rudá Moura)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 
-BuildSystem = 1.6.0
+BuildSystem = 1.7.0
 
 # Get user preferences (if defined)
 -include ~/.rudix.conf
@@ -246,6 +246,7 @@ endef
 
 define uncompress_source
 case `file -b --mime-type $(shell basename $(Source))` in \
+	application/gzip) tar zxf $(shell basename $(Source)) ;; \
 	application/x-tar) tar xf $(shell basename $(Source)) ;; \
 	application/x-gzip) tar zxf $(shell basename $(Source)) ;; \
 	application/x-bzip2) tar jxf $(shell basename $(Source)) ;; \
