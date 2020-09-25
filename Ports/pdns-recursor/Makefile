@@ -4,9 +4,9 @@ include ../../Library/GNU.mk
 
 Title=		PowerDNS Recursor
 Name=		pdns-recursor
-Version=	3.5.2
-Site=		http://www.powerdns.com/
-Source=		http://downloads.powerdns.com/releases//$(Name)-$(Version).tar.bz2
+Version=	4.3.4
+Site=		https://www.powerdns.com/
+Source=		https://downloads.powerdns.com/releases/pdns-recursor-$(Version).tar.bz2
 License=	GPL
 
 define test_hook
