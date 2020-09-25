@@ -6,10 +6,10 @@ include ../../Library/GNU.mk
 
 Title=		PowerDNS
 Name=		pdns
-Version=	3.2
-Site=		http://www.powerdns.com/
-Source=		http://downloads.powerdns.com/releases//$(Name)-$(Version).tar.gz
-License=	GPL
+Version=	4.3.1
+Site=		https://www.powerdns.com/
+Source=		https://downloads.powerdns.com/releases/pdns-$(Version).tar.bz2
+License=	GPLv2
 
 define test_hook
 $(SBinDir)/pdns_recursor --version || [ $$? == 99 ]
