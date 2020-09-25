@@ -6,7 +6,7 @@ BuildRequires += $(LibDir)/libltdl.la	# libtool
 
 Title=		GNU Guile
 Name=		guile
-Version=	2.0.13
+Version=	2.2.7
 Site=		https://www.gnu.org/software/guile/
 Source=		https://ftp.gnu.org/gnu/guile/guile-$(Version).tar.gz
 License=	LGPLv2
