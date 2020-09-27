@@ -1,4 +1,4 @@
-# Copyright (c) 2005-2019 Ruda Moura (Rudix)
+# Copyright (c) 2005-2020 Rudá Moura (Rudix)
 
 Rules  = retrieve prep build check install test pkg about
 Rules += installclean clean distclean realclean pkgclean

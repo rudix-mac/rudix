@@ -1,7 +1,7 @@
 #
 # CMake Hooks.
 #
-# Copyright © 2019 Rudix
+# Copyright © 2019-2020 Rudá Moura (Rudix)
 # Author: Rudá Moura <ruda.moura@gmail.com>
 #
 

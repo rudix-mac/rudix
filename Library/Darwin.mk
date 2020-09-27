@@ -1,7 +1,7 @@
 #
 # The Darwin part of the BuildSystem.
 #
-# Copyright © 2005-2019 Rudix (Rudá Moura)
+# Copyright © 2005-2020 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
 

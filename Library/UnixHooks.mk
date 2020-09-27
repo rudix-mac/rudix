@@ -1,8 +1,8 @@
 #
 # Unix Hooks.
 #
-# Copyright © 2011-2019 Rudá Moura (Rudix)
-# Authors: Ruda Moura, Leonardo Santagada
+# Copyright © 2011-2020 Rudá Moura (Rudix)
+# Authors: Rudá Moura, Leonardo Santagada
 #
 
 MakeExtra += CFLAGS="$(CFlags)" CXXFLAGS="$(CxxFlags)"
