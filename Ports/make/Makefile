@@ -2,12 +2,12 @@ include ../../Library/GNU.mk
 
 Title=		GNU Make
 Name=		make
-Version=	4.2.1
+Version=	4.3
 Site=		https://www.gnu.org/software/make/
-Source=		https://ftp.gnu.org/gnu/make/$(Name)-$(Version).tar.bz2
+Source=		https://ftp.gnu.org/gnu/make/$(Name)-$(Version).tar.gz
 License=	GPLv3
 
-BuildRequires += $(LibDir)/libintl.la # gettext
+BuildSuggests += $(LibDir)/libintl.la # gettext
 GnuConfigureExtra += --program-prefix=gnu
 
 define after_install_hook
