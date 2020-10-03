@@ -20,12 +20,15 @@ RUDIX_STRIP_PACKAGE?=yes
 RUDIX_ENABLE_NLS?=yes
 RUDIX_PARALLEL_EXECUTION?=yes
 RUDIX_RUN_ALL_TESTS?=yes
+RUDIX_BUILD_STATIC?=no
+RUDIX_BUILD_ONLY_STATIC_LIBS?=no
+RUDIX_BUILD_WITH_STATIC_LIBS?=no
 
 RUDIX_MSG_RETRIEVE?=Retrieving source from '$(Source)'
-RUDIX_MSG_PREP?=Preparing '$(Name)' to build on '$(SourceDir)'
-RUDIX_MSG_BUILD?=Building '$(Name)' from '$(BuildDir)'
-RUDIX_MSG_CHECK?=Checking '$(Name)' from '$(BuildDir)'
-RUDIX_MSG_INSTALL?=Installing '$(Name)' into '$(InstallDir)'
+RUDIX_MSG_PREP?=Preparing '$(PkgName)' to build on '$(SourceDir)'
+RUDIX_MSG_BUILD?=Building '$(PkgName)' from '$(BuildDir)'
+RUDIX_MSG_CHECK?=Checking '$(PkgName)' from '$(BuildDir)'
+RUDIX_MSG_INSTALL?=Installing '$(PkgName)' into '$(InstallDir)'
 RUDIX_MSG_PKG?=Packing '$(PkgFile)' from '$(InstallDir)'
 RUDIX_MSG_TEST?=Testing '$(PkgFile)'
 RUDIX_MSG_DONE?=Done!
@@ -40,6 +43,14 @@ ResourcesDir = $(Name)-resources
 DestDir= $(PortDir)/$(InstallDir)
 ReadMeFile = $(SourceDir)/README
 LicenseFile = $(SourceDir)/COPYING
+
+ifeq ($(RUDIX_BUILD_STATIC),yes)
+PkgName = static-$(Name)
+RUDIX_BUILD_ONLY_STATIC_LIBS=yes
+RUDIX_BUILD_WITH_STATIC_LIBS=yes
+else
+PkgName = $(Name)
+endif
 
 #
 # Install dir options
@@ -176,6 +187,9 @@ about:
 	@echo "Site:    $(Site)"
 	@echo "Source:  $(Source)"
 	@echo "License: $(License)"
+
+static: prep pkgclean installclean buildclean
+	$(MAKE) RUDIX_BUILD_STATIC=yes pkg
 
 #
 # Functions

@@ -7,8 +7,8 @@
 
 MacOSVersion=$(shell sw_vers -productVersion | cut -d '.' -f 1,2)
 
-PkgId = $(Vendor).pkg.$(Name)
-PkgFile = $(Name)-$(Version)-macos$(MacOSVersion).pkg
+PkgId = $(Vendor).pkg.$(PkgName)
+PkgFile = $(PkgName)-$(Version)-macos$(MacOSVersion).pkg
 
 #
 # Build flags options
@@ -20,6 +20,9 @@ LdFlags  = -arch x86_64
 ifeq ($(RUDIX_PARALLEL_EXECUTION),yes)
 MakeFlags = -j $(NumCPU)
 endif
+ifeq ($(RUDIX_BUILD_WITH_STATIC_LIBS),yes)
+LdFlags += -framework CoreFoundation
+endif
 
 #
 # Functions
@@ -30,7 +33,7 @@ define create_distribution
 	--output $(ResourcesDir)/Distribution \
 	--title "$(Title) $(Version)" \
 	--pkgid $(PkgId) \
-	--name $(Name) \
+	--name $(PkgName) \
 	--installpkg $(Name)install.pkg \
 	$(if $(Requires),$(foreach req,$(Requires),--requires $(req)))
 endef
@@ -121,7 +124,7 @@ $(test_apache_modules)
 $(test_documentation)
 @$(call info_color,Uninstalling previous package)
 @echo "Administrator (root) credentials required"
-sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(Name) || true
+sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(PkgName) || true
 @$(call info_color,Installing the new package)
 @echo "Administrator (root) credentials required"
 sudo ../../Utils/darwin_installer.py $(PkgFile)
@@ -130,6 +133,6 @@ endef
 define after_test_hook
 @$(call info_color,Uninstalling package)
 @echo "Administrator (root) credentials required"
-sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(Name) || \
+sudo ../../Utils/darwin_remover.py 2>/dev/null $(Vendor).pkg.$(PkgName) || \
 	$(call warning_color,Possible dirty uninstall)
 endef

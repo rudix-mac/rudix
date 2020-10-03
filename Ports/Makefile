@@ -1,6 +1,6 @@
 # Copyright (c) 2005-2020 Rudá Moura (Rudix)
 
-Rules  = retrieve prep build check install test pkg about
+Rules  = retrieve prep build check install test pkg about static
 Rules += installclean clean distclean realclean pkgclean
 
 Ports := $(wildcard [a-z]*)
