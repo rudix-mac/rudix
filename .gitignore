@@ -11,7 +11,7 @@ final
 static
 *~
 \#*\#
-master
+*.swp
 *.pmdoc
 *.pkg
 *-install
@@ -28,3 +28,5 @@ master
 *.orig
 *.py?
 config.cache
+FIXME
+TODO
