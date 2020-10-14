@@ -11,7 +11,10 @@ BuildRequires += $(BinDir)/pkg-config # pkg-config
 BuildRequires += $(LibDir)/libintl.la # static-gettext
 BuildRequires += $(LibDir)/libpcre.la # static-pcre
 
+SdkVersion = $(shell xcrun --sdk macosx --show-sdk-version)
+ifneq ($(SdkVersion),10.12)
 SdkPath = $(shell xcrun --sdk macosx --show-sdk-path)
+endif
 EnvExtra += LIBFFI_CFLAGS="-I$(SdkPath)/usr/include/ffi"
 EnvExtra += LIBFFI_LIBS="-L$(SdkPath)/usr/lib -lffi"
 
