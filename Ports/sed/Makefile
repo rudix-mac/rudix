@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Sed
 Name=		sed
-Version=	4.7
+Version=	4.8
 Site=		https://www.gnu.org/software/sed
 Source=		https://ftp.gnu.org/gnu/sed/$(Name)-$(Version).tar.xz
 License=	GPLv3
