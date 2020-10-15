@@ -4,7 +4,7 @@ PrepRequires = $(BinDir)/lunzip # lunzip
 
 Title=		GNU ed
 Name=		ed
-Version=	1.15
+Version=	1.16
 Site=		https://www.gnu.org/software/ed/
 Source=		https://ftp.gnu.org/gnu/ed/$(Name)-$(Version).tar.lz
 License=	GPLv3
