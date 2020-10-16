@@ -1,0 +1,4 @@
+#!/bin/sh
+[ ! -d $3/usr/local/etc/openssl ] && \
+  cp -a $3/usr/local/etc/openssl.default $3/usr/local/etc/openssl
+exit 0
