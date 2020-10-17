@@ -1,3 +1,5 @@
+include ../../Library/GNU.mk
+
 WITH_SSL?=yes
 ifeq ($(WITH_SSL),yes)
 BuildRequires += $(LibDir)/libssl.la	# libressl | openssl
@@ -5,11 +7,9 @@ else
 GnuConfigureExtra += --disable-openssl
 endif
 
-include ../../Library/GNU.mk
-
 Title=		LibEvent
 Name=		libevent
-Version=	2.1.8
+Version=	2.1.12
 Site=		https://libevent.org
 Source=		https://github.com/libevent/libevent/releases/download/release-$(Version)-stable/libevent-$(Version)-stable.tar.gz
 License=	BSD
