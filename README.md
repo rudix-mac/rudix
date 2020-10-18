@@ -1,3 +1,13 @@
+	O O O O     O       O   O O O O      O O O    O       O
+	O       O   O       O   O       O      O      O       O
+	O       O   O       O   O       O      O      O       O
+	O       O   O       O   O       O      O        O   O
+	O O O O     O       O   O       O      O          O
+	O   O       O       O   O       O      O        O   O
+	O     O     O       O   O       O      O      O       O
+	O     O     O       O   O       O      O      O       O
+	O     O       O O O     O O O O      O O O    O       O
+
 Rudix is a build system target on macOS (formerly known as Mac OS X) with minor support to OpenBSD, FreeBSD, NetBSD and Linux.
 The build system (also called "ports") provides step-by-step instructions for building third-party software, entirely from source code.
 
