@@ -1,15 +1,15 @@
 include ../../Library/GNU.mk
 
-Title=		Apache Portable Runtime Utility
+Title=		APR Utility
 Name=		apr-util
-Version=	1.5.4
-Site=		http://apr.apache.org/
-Source=		http://www.apache.org/dist/apr//$(Name)-$(Version).tar.bz2
+Version=	1.6.1
+Site=		https://apr.apache.org/
+Source=		https://downloads.apache.org/apr/apr-util-$(Version).tar.bz2
 License=	Apache License
+LicenseFile=	$(SourceDir)/LICENSE
 
-LicenseFile=	$(BuildDir)/LICENSE
-
-GnuConfigureExtra += --with-apr=/usr/bin/apr-1-config
+BuildRequires += $(BinDir)/apr-1-config	# static-apr
+GnuConfigureExtra += --with-apr=$(BinDir)/apr-1-config
 
 define test_hook
 $(BinDir)/apu-1-config --version
