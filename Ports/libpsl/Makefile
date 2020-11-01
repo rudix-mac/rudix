@@ -1,23 +1,17 @@
-include ../../Library/Unix.mk
+include ../../Library/GNU.mk
 
-BuildRequires += $(BinDir)/autoreconf	# autoconf
-BuildRequires += $(BinDir)/autopoint	# gettext
-BuildRequires += $(BinDir)/aclocal	# automake
+BuildRequires += $(BinDir)/pkg-config		# pkg-config
+BuildRequires += $(LibDir)/libunistring.la	# static-libunistring
+BuildRequires += $(LibDir)/libidn2.la		# static-libidn2
 
-Title=		LibPSL
+Title=		Libpsl
 Name=		libpsl
-Version=	0.20.2
+Version=	0.21.1
 Site=		https://github.com/rockdaboot/libpsl
-Source=		https://github.com/rockdaboot/libpsl/archive/libpsl-0.20.2.tar.gz
+Source=		https://github.com/rockdaboot/libpsl/releases/download/$(Version)/libpsl-$(Version).tar.gz
 License=        MIT
+ReadMeFile=	README.md
 
-UncompressedName= libpsl-libpsl-$(Version)
-
-LicenseFile=	$(BuildDir)/LICENSE
-ReadMeFile=	$(BuildDir)/README.md
-
-define before_build_hook
-cd $(BuildDir); ./autogen.sh; ./configure
--mkdir -p $(BuildDir)/list
-curl --output $(BuildDir)/list/public_suffix_list.dat https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
+define test_hook
+$(BinDir)/psl --version | grep $(Version)
 endef
