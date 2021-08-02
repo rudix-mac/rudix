@@ -1,8 +1,10 @@
+# LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014
+
 include ../../Library/GNU.mk
 
 Title=		LibreSSL
 Name=		libressl
-Version=	3.1.4
+Version=	3.3.3
 Site=		https://www.libressl.org
 Source=		https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-$(Version).tar.gz
 License=        OpenSSL License
