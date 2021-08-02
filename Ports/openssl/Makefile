@@ -1,8 +1,10 @@
+# Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
+
 include ../../Library/Configure.mk
 
 Title=		OpenSSL
 Name=		openssl
-Version=	1.1.1h
+Version=	1.1.1k
 Site=		https://www.openssl.org/
 Source=		https://www.openssl.org/source/openssl-$(Version).tar.gz
 License=        OpenSSL License
