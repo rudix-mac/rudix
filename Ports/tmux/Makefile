@@ -1,11 +1,13 @@
+# tmux is a terminal multiplexer.
+
 BuildRequires += $(LibDir)/libevent.la	# libevent
 BuildRequires += $(BinDir)/pkg-config	# pkg-config
 
 include ../../Library/GNU.mk
 
-Title=		TMux
+Title=		tmux
 Name=		tmux
-Version=	3.1b
+Version=	3.2a
 Site=		https://github.com/tmux/tmux/wiki
 Source=		https://github.com/tmux/tmux/releases/download/$(Version)/tmux-$(Version).tar.gz
 License=	BSD
