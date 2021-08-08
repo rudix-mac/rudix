@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		Vim
 Name=		vim
-Version=	8.2.1845
+Version=	8.2.3313
 Site=		https://www.vim.org
-Source=		https://github.com/vim/vim/archive/v8.2.1845.tar.gz
+Source=		https://github.com/vim/vim/archive/v${Version}.tar.gz
 License=	Vim License
 
 ReadMeFile=	$(SourceDir)/README.txt
