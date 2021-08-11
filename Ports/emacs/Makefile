@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Emacs
 Name=		emacs
-Version=	27.1
+Version=	27.2
 Site=		https://www.gnu.org/software/emacs/
 Source=		https://ftp.gnu.org/gnu/emacs/$(Name)-$(Version).tar.xz
 License=	GPLv3
