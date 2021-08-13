@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Bash
 Name=		bash
-Version=	4.4
+Version=	4.4.18
 Site=		http://www.gnu.org/software/bash/
 Source=		http://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
 License=	GPLv3
