@@ -9,7 +9,7 @@ System = $(shell uname)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
-RUDIX_VERSION=21.8.0
+RUDIX_VERSION=21.8.1
 RUDIX_QUIET?=no
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
@@ -269,7 +269,7 @@ endef
 
 PatchLevel=-p0
 define apply_patches
-for x in $(wildcard *.patch *.diff patches/*.patch patches/*.diff) ; do \
+for x in $(sort $(wildcard *.patch *.diff patches/*.patch patches/*.diff)) ; do \
 	patch $(PatchLevel) -d $(SourceDir) < $$x ; done
 endef
 
