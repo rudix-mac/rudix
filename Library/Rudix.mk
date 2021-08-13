@@ -1,19 +1,15 @@
 #
 # The Rudix BuildSystem itself.
 #
-# Copyright © 2005-2020 Rudá Moura (Rudix)
+# Copyright © 2005-2021 Rudá Moura (Rudix)
 # Authors: Rudá Moura, Leonardo Santagada
 #
-
-BuildSystem = 1.7.0
-
-# Get user preferences (if defined)
--include ~/.rudix.conf
 
 System = $(shell uname)
 Arch = $(shell sysctl -n hw.machine)
 NumCPU = $(shell sysctl -n hw.ncpu)
 
+RUDIX_VERSION=21.8.0
 RUDIX_QUIET?=no
 RUDIX_SAVE_CONFIGURE_CACHE?=yes
 RUDIX_STRIP_PACKAGE?=yes
@@ -160,7 +156,7 @@ realclean: distclean
 	rm -f $(foreach file,$(Files),$(shell basename $(file)))
 
 help:
-	@echo "Rudix buildsystem $(BuildSystem) options."
+	@echo "Rudix version $(RUDIX_VERSION) options."
 	@echo
 	@echo "Stages (a.k.a. hooks, phases, etc.):"
 	@echo "  retrieve - Retrieve source from the Internet"
@@ -343,3 +339,10 @@ $(verify_buildsuggests)
 endef
 
 .PHONY: buildclean installclean pkgclean clean distclean realclean help about
+
+
+#
+# Get user preferences (if defined)
+#
+-include ~/.rudix.conf
+-include ~/.rudix.mk
