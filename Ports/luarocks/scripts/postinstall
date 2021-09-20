@@ -1,5 +1,6 @@
 #!/bin/sh
-[ ! -f $3/usr/local/etc/luarocks/config-5.3.lua ] && install -m 644 \
-    $3/usr/local/etc/luarocks/config-5.3.lua.default \
-    $3/usr/local/etc/luarocks/config-5.3.lua
+[ ! -f $3/usr/local/etc/luarocks/config-5.4.lua ] && \
+    install -m 644 \
+    $3/usr/local/etc/luarocks/config-5.4.lua.default \
+    $3/usr/local/etc/luarocks/config-5.4.lua
 exit 0
