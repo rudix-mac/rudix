@@ -4,10 +4,12 @@ include ../../Library/Custom.mk
 
 Title=		Ninja
 Name=		ninja
-Version=	1.9.0
+Version=	1.10.2
 Site=		https://ninja-build.org
 Source=		https://github.com/ninja-build/ninja/archive/v$(Version).tar.gz
 License=	Apache License 2.0
+
+ReadMeFile=	$(SourceDir)/README.md
 
 define build_hook
 cd $(BuildDir) && ./configure.py --bootstrap
@@ -20,5 +22,5 @@ $(install_base_documentation)
 endef
 
 define test_hook
-cd $(BuildDir) && ./ninja
+cd $(BuildDir) && ./ninja --version | grep $(Version)
 endef
