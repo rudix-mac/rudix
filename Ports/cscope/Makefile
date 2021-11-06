@@ -2,9 +2,9 @@ include ../../Library/GNU.mk
 
 Title=		Cscope
 Name=		cscope
-Version=	15.8b
+Version=	15.9
 Site=		http://cscope.sourceforge.net/
-Source=		http://sourceforge.net/projects/cscope/files/cscope/$(Version)/$(Name)-$(Version).tar.gz
+Source=		https://sourceforge.net/projects/cscope/files/cscope/v$(Version)/cscope-$(Version).tar.gz
 License=	BSD
 
 define test_hook
