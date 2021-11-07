@@ -3,7 +3,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU M4
 Name=		m4
-Version=	1.4.18
+Version=	1.4.19
 Site=		https://www.gnu.org/software/m4/
 Source=		https://ftp.gnu.org/gnu/m4/$(Name)-$(Version).tar.bz2
 License=	GPLv3
