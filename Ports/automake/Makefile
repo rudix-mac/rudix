@@ -4,7 +4,7 @@ include ../../Library/GNU.mk
 
 Title=		GNU Automake
 Name=		automake
-Version=	1.16.3
+Version=	1.16.5
 Site=		https://www.gnu.org/software/automake/
 Source=		https://ftp.gnu.org/gnu/automake/$(Name)-$(Version).tar.xz
 License=	GPLv2
