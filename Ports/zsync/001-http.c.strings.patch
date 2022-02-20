@@ -1,0 +1,10 @@
+--- http.c.orig	2010-09-19 17:51:53.000000000 -0300
++++ http.c	2022-02-20 16:39:10.000000000 -0300
+@@ -22,6 +22,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <strings.h>
+ #include <errno.h>
+ #include <unistd.h>
+ 
