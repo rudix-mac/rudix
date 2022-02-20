@@ -1,0 +1,13 @@
+--- wscript.orig	2021-07-15 04:04:32.000000000 -0300
++++ wscript	2022-02-20 17:07:10.000000000 -0300
+@@ -172,9 +172,7 @@
+ 
+     magic_ret = samba_utils.RUN_COMMAND(magic_cmd + " " +  magic_helper_cmd)
+     print("magic differs test returned %d" % magic_ret)
+-    pyret = samba_utils.RUN_PYTHON_TESTS(['test_pytalloc.py'])
+-    print("python testsuite returned %d" % pyret)
+-    sys.exit(ret or magic_ret or pyret)
++    sys.exit(ret or magic_ret)
+ 
+ # WAF doesn't build the unit tests for this, maybe because they don't link with talloc?
+ # This forces it
