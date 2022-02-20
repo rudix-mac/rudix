@@ -1,0 +1,41 @@
+name: Rudix CI
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    strategy:
+      max-parallel: 5
+      fail-fast: false
+      matrix:
+        port:
+          - jsonc
+          - hello
+          - libintl
+          - lua
+          - neofetch
+          - talloc
+          - zsync
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get source and prepare to build
+        run: |
+          cd Ports/${{ matrix.port }}
+          make prep
+      - name: Build, install and create package
+        run: |
+          cd Ports/${{ matrix.port }}
+          make
+      - name: Check build from source
+        run: |
+          cd Ports/${{ matrix.port }}
+          make check
+      - name: Install and test package as admin
+        run: |
+          cd Ports/${{ matrix.port }}
+          make test
