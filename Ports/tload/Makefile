@@ -5,8 +5,9 @@ Title=		Tload
 Name=		tload
 Version=	3.2.8
 Site=		https://github.com/ruda/tload/
-Source=		https://github.com/ruda/tload/archive//$(Version).tar.gz
-License=	GPL
+Source=		https://github.com/ruda/tload/archive/v$(Version).tar.gz
+License=	GPLv2
+LicenseFile=	$(SourceDir)/LICENSE
 
 define install_hook
 install -d $(DestDir)$(BinDir)
