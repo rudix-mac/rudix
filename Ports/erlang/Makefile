@@ -2,11 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Erlang/OTP
 Name=		erlang
-Version=	22.3
+Version=	24.3.2
 Site=		http://www.erlang.org/
-Source=		http://www.erlang.org/download/otp_src_$(Version).tar.gz
-Files=		http://www.erlang.org/download/otp_doc_html_$(Version).tar.gz
-Files+=		http://www.erlang.org/download/otp_doc_man_$(Version).tar.gz
+Source=		https://github.com/erlang/otp/releases/download/OTP-$(Version)/otp_src_$(Version).tar.gz
+Files+=		https://github.com/erlang/otp/releases/download/OTP-$(Version)/otp_doc_html_$(Version).tar.gz
+Files+=		https://github.com/erlang/otp/releases/download/OTP-$(Version)/otp_doc_man_$(Version).tar.gz
 License=	Apache License
 
 ReadMeFile=	$(SourceDir)/README.md
