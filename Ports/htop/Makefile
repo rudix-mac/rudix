@@ -5,9 +5,9 @@ BuildRequires += $(BinDir)/automake	# automake
 
 Title=		htop
 Name=		htop
-Version=	3.0.5
+Version=	3.2.1
 Site=		https://htop.dev/
-Source=		https://github.com/htop-dev/htop/archive/refs/tags/$(Version).tar.gz
+Source=		https://github.com/htop-dev/htop/releases/download/$(Version)/htop-$(Version).tar.xz
 License=	GPLv2
 
 define before_build_hook
