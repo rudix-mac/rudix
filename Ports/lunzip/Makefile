@@ -2,7 +2,7 @@ include ../../Library/GNU.mk
 
 Title=		Lunzip
 Name=		lunzip
-Version=	1.11
+Version=	1.13
 Site=           https://www.nongnu.org/lzip/
 Source=		https://download.savannah.gnu.org/releases/lzip/lunzip/$(Name)-$(Version).tar.gz
 License=        GPLv2
