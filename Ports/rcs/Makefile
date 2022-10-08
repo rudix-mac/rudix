@@ -1,12 +1,12 @@
-# The Revision Control System (RCS) manages multiple revisions of files
-
 include ../../Library/GNU.mk
+
+PrepRequires = $(BinDir)/lunzip	# lunzip
 
 Title=		GNU RCS
 Name=		rcs
-Version=	5.10.0
+Version=	5.10.1
 Site=		https://www.gnu.org/software/rcs/
-Source=		https://ftp.gnu.org/gnu/rcs/$(Name)-$(Version).tar.xz
+Source=		https://ftp.gnu.org/gnu/rcs/$(Name)-$(Version).tar.lz
 License=	GPLv3+
 
 define test_hook
