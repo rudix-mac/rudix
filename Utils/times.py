@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # Take times created from each build stage and display like a table (CSV),
@@ -7,8 +7,7 @@
 # Usage: go to any port, type 'make check' and then
 # run ../../Library/times.py
 #
-# Copyright © 2018 Rudix
-# Author: Rudá Moura <ruda.moura@gmail.com>
+# Copyright © 2022 Rudá Moura <ruda.moura@gmail.com>
 #
 
 import os, sys, time
