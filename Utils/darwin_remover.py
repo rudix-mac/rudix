@@ -1,10 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # Remove packages.
 #
-# Copyright © 2011-2017 Rudá Moura (Rudix)
-# Author: Rudá Moura <ruda.moura@gmail.com>
+# Copyright © 2011-2022 Rudá Moura <ruda.moura@gmail.com>
 
 """Remove one or more packages."""
 

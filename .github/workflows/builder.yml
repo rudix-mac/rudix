@@ -1,0 +1,48 @@
+name: builder
+on:
+  workflow_dispatch:
+    inputs:
+      portName:
+        description: 'Name of the port'
+        required: true
+        default: 'hello'
+      useSDK:
+        description: 'Use SDK'
+        type: boolean
+        default: false
+      macOS:
+        description: 'macOS Version'
+        type: choice
+        default: 'macos-12'
+        options:
+        - macos-12
+        - macos-11
+jobs:
+  run:
+    name: ${{ github.event.inputs.portName }}
+    runs-on: ${{ github.event.inputs.macOS }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install SDK
+        if: ${{ github.event.inputs.useSDK == 'true' }}
+        run: |
+          curl -LRO https://github.com/rudix-mac/rudix/releases/download/v2022/autoconf-2.71-macos12.6.pkg
+          curl -LRO https://github.com/rudix-mac/rudix/releases/download/v2022/automake-1.16.5-macos12.6.pkg
+          curl -LRO https://github.com/rudix-mac/rudix/releases/download/v2022/pkg-config-0.29.2-macos12.6.pkg
+          curl -LRO https://github.com/rudix-mac/rudix/releases/download/v2022/lunzip-1.13-macos12.6.pkg
+          sudo Utils/darwin_installer.py *.pkg
+      - name: Build package
+        run: |
+          cd Ports/${{ github.event.inputs.portName }}
+          make pkg
+      - name: Test package
+        run: |
+          cd Ports/${{ github.event.inputs.portName }}
+          make test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.event.inputs.portName }}
+          path: Ports/${{ github.event.inputs.portName }}/*macos*.pkg
+      - uses: actions/download-artifact@v3
+        with:
+          name: ${{ github.event.inputs.portName }}
