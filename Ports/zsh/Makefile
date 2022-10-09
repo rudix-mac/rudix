@@ -2,10 +2,11 @@ include ../../Library/GNU.mk
 
 Title=		Z shell
 Name=		zsh
-Version=	5.8
-Site=		http://www.zsh.org
-Source=		http://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
-Files=		http://downloads.sourceforge.net/zsh/zsh-$(Version)-doc.tar.xz
+Version=	5.9
+Site=		https://www.zsh.org
+Source=		https://downloads.sourceforge.net/zsh/$(Name)-$(Version).tar.xz
+Source=		https://www.zsh.org/pub/zsh-$(Version).tar.xz
+Files=		https://www.zsh.org/pub/zsh-$(Version)-doc.tar.xz
 License=	MIT-like
 
 LicenseFile=	$(SourceDir)/LICENCE
