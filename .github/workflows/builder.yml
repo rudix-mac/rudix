@@ -1,0 +1,22 @@
+---
+name: builder
+on:
+  workflow_dispatch:
+    inputs:
+      portName:
+        description: 'Name of the port'
+        required: true
+        default: 'hello'
+jobs:
+  run:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build package ${{ github.event.inputs.portName }}
+        run: |
+          cd Ports/${{ github.event.inputs.portName }}
+          make pkg
+      - name: Test package ${{ github.event.inputs.portName }}
+        run: |
+          cd Ports/${{ github.event.inputs.portName }}
+          make test
