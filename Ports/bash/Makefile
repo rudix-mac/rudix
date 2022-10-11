@@ -2,24 +2,22 @@ include ../../Library/GNU.mk
 
 Title=		GNU Bash
 Name=		bash
-Version=	4.4.18
-Site=		http://www.gnu.org/software/bash/
-Source=		http://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
+Version=	5.2
+Site=		https://www.gnu.org/software/bash/
+Source=		https://ftp.gnu.org/gnu/bash//bash-$(Version).tar.gz
 License=	GPLv3
 
 GnuConfigureExtra += --with-included-gettext
 
 define after_install_hook
-cd $(DestDir)$(BinDir) ; ln -sf bash bash4
-cd $(DestDir)$(ManDir) ; ln -sf bash.1 bash4.1
+cd $(DestDir)$(BinDir) ; ln -sf bash bash5
+cd $(DestDir)$(ManDir) ; ln -sf bash.1 bash5.1
+cd $(DestDir)$(ManDir) ; ln -sf bashbug bashbug5
 for x in COMPAT POSIX RBASH Y2K ; do \
 	install -m 644 $(SourceDir)/$$x $(DestDir)/$(DocDir)/$(Name) ; \
 done
-rm -f $(DestDir)$(BinDir)/bashbug
 endef
 
 define test_hook
 $(BinDir)/bash --version | grep $(Version)
-# CVE-2014-6271
-env X="() { :;} ; echo CVE-2014-6271 ; exit 1" $(BinDir)/bash -c true
 endef

@@ -1,10 +1,10 @@
 #!/bin/sh
 
-BASH_PATCHES="http://ftp.gnu.org/gnu/bash/bash-4.4-patches/"
+BASH_PATCHES="https://ftp.gnu.org/gnu/bash/bash-5.2-patches/"
 
-for i in `jot 30`
+for i in `jot 2`
 do
     N=`printf "%0.3d" $i`
-    curl -O $BASH_PATCHES/bash44-$N
-    curl -O $BASH_PATCHES/bash44-$N.sig
+    curl -LRO $BASH_PATCHES/bash52-$N
+    mv bash52-$N patches/bash52-$N.patch
 done
