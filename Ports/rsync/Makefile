@@ -2,10 +2,10 @@ include ../../Library/GNU.mk
 
 Title=		Rsync
 Name=		rsync
-Version=	3.2.3
+Version=	3.2.6
 Site=		https://rsync.samba.org/
 Source=		https://download.samba.org/pub/rsync/src/rsync-$(Version).tar.gz
-License=	GPL
+License=	GPLv3
 
 GnuConfigureExtra += --with-included-popt
 GnuConfigureExtra += --with-rsyncd-conf=$(Prefix)/etc
