@@ -2,10 +2,10 @@ include ../../Library/Unix.mk
 
 Title=		Artistic Style
 Name=		astyle
-Version=	2.06
+Version=	3.1
 Site=		http://astyle.sourceforge.net
 Source=		https://sourceforge.net/projects/astyle/files/astyle/$(Name)%20$(Version)/$(Name)_$(Version)_macosx.tar.gz
-License=	LGPL
+License=	MIT
 
 ReadMeFile=	$(SourceDir)/doc/index.html
 LicenseFile=	$(SourceDir)/doc/license.html
