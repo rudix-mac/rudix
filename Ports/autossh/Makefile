@@ -4,10 +4,10 @@ include ../../Library/Configure.mk
 
 Title=		autossh
 Name=		autossh
-Version=	1.4e
-Site=		http://www.harding.motd.ca/autossh/
-Source=		http://www.harding.motd.ca/autossh//$(Name)-$(Version).tgz
-License=	Unknown (Freeware)
+Version=	1.4g
+Site=		https://www.harding.motd.ca/autossh/
+Source=		https://www.harding.motd.ca/autossh/autossh-$(Version).tgz
+License=	BSD
 
 LicenseFile=	LICENSE
 
