@@ -1,10 +1,10 @@
-/*
- *	Start an ssh session (or tunnel) and monitor it.
- *	If it fails or blocks, restart it.
+/*                                                                              
+ *      Start an ssh session (or tunnel) and monitor it.
+ *      If it fails or blocks, restart it.
  *
- * 	From the example of rstunnel.
+ *      From the example of rstunnel.
  *
- * Copyright (c) Carson Harding, 2002-2008.
+ * Copyright (c) Carson Harding, 2002-2018.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -20,5 +20,7 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * $Id: autossh.c,v 1.91 2019/01/05 01:23:39 harding Exp $
  *
  */
