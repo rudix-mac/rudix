@@ -6,7 +6,7 @@ Title=		Fish Shell
 Name=		fish
 Version=	3.5.1
 Site=		https://fishshell.com/
-Source=		https://github.com/fish-shell/fish-shell/releases/download/$(Version)/fish-$(Version).tar.gz
+Source=		https://github.com/fish-shell/fish-shell/releases/download/$(Version)/fish-$(Version).tar.xz
 License=	GPLv2
 
 ReadMeFile=	$(SourceDir)/README.md
